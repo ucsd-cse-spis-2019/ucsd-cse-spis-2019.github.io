@@ -19,4 +19,4 @@ This allows the SPIS staff to be of better help to SPIS 2016 participants, and t
 
 ----
 
-![SPIS_logo]({{ site.url }}/images/SPIS_logo.jpg)
+![SPIS_logo](images/SPIS_logo.jpg)
