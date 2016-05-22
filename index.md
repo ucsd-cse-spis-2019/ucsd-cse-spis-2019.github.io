@@ -16,3 +16,7 @@ This allows the SPIS staff to be of better help to SPIS 2016 participants, and t
 
 * [UCSD CSE SPIS 2016 main web site](https://sites.google.com/a/eng.ucsd.edu/spis/)
 * Github organization for [ucsd-cse-spis-2015](https://github.com/ucsd-cse-spis-2015)
+
+----
+
+![SPIS_logo]({{ site.url }}/images/SPIS_logo.jpg)
