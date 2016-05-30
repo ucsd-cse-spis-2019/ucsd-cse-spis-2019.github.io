@@ -64,14 +64,16 @@ There may or may not be time for this during SPIS.  If not, these are some topic
 * The flask Mega-tutorial  http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
 ## Database stuff:
-* You can run sqlite3 by running `~spis15t7/bin/sqlite3`
-** NOTE: That was installed for SPIS 2015, but would have to be reinstalled for SPIS 2016.
 
+
+`sqlite3` is an implementation of an SQL compatible database.
+* On the ACMS machines for SPIS 2015, you can run sqlite3 by running `~spis15t7/bin/sqlite3`
+* NOTE: That was installed for SPIS 2015, but would have to be reinstalled for SPIS 2016.
 * You can also download precompiled binaries for sqlite3 for windows, mac, linux
 
-* On Heroku, you need Postgres.  
- - Info is here: <https://devcenter.heroku.com/articles/heroku-postgresql>
- - To bring up the cli, you type heroku db:psql
+On Heroku, you need Postgres.   If you are testing on your own machine (Windows/Mac/Linux), it is easier to just stick with Postgres and skip sqlite altogether.
+* Info is here: <https://devcenter.heroku.com/articles/heroku-postgresql>
+* To bring up the cli, you type heroku db:psql
 
 ## OAuth Stuff (e.g. to login with your Google, Facebook, or Twitter account...)
 
