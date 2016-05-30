@@ -23,9 +23,9 @@ Some useful example webapps:
 
 | Description | Link |
 |-------------|------|
-| This one illustrates basic templates for pages, CSS, and basic navigation |  https://github.com/pconrad/flask-practice-web-app |
-| This one illustrates how to use session |  https://github.com/ucsd-cse-spis-2015/flask-webapp-session-example |
-| This one illustrates uploading files | https://github.com/pconrad/heroku-try-file-upload |
+| basic templates for pages, CSS, and navigation |  <https://github.com/pconrad/flask-practice-web-app> |
+| using sessions |  <https://github.com/ucsd-cse-spis-2015/flask-webapp-session-example> |
+| uploading files | <https://github.com/pconrad/heroku-try-file-upload> |
 
 ## Steps to making an app from scratch—the summary (details elsewhere)
 * Make a github repo
