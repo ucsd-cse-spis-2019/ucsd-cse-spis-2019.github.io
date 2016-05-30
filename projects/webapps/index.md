@@ -59,8 +59,8 @@ There may or may not be time for this during SPIS.  If not, these are some topic
 
 * The main Flask website: <http://flask.pocoo.org/>
 * Book: Flask Web Development By: Miguel Grinberg Publisher: O'Reilly Media, Inc. Pub. Date: May 8, 2014  Print ISBN-13: 978-1-4493-7262-0
-** Full text from on campus at UCSD: <http://proquest.safaribooksonline.com/book/programming/python/9781491947586>
-** From off campus, use the VPN
+ - Full text from on campus at UCSD: <http://proquest.safaribooksonline.com/book/programming/python/9781491947586>
+ - From off campus, use the VPN
 * The flask Mega-tutorial  http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
 ## Database stuff:
@@ -70,8 +70,8 @@ There may or may not be time for this during SPIS.  If not, these are some topic
 * You can also download precompiled binaries for sqlite3 for windows, mac, linux
 
 * On Heroku, you need Postgres.  
-** Info is here: <https://devcenter.heroku.com/articles/heroku-postgresql>
-** To bring up the cli, you type heroku db:psql
+ - Info is here: <https://devcenter.heroku.com/articles/heroku-postgresql>
+ - To bring up the cli, you type heroku db:psql
 
 ## OAuth Stuff (e.g. to login with your Google, Facebook, or Twitter account...)
 
