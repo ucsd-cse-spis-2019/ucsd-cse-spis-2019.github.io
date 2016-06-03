@@ -19,4 +19,5 @@ Some commonly used types that involve collections of things are:
 There are additional types that are less commonly discussed in "introductory programming", but that may end up being useful.
 
 * `Unicode` for sequences of a [larger set of characters](http://www.unicode.org) (e.g. `u'四'`, `u'piñata'`).
- - A python file that contains these characters may need to have a [special comment at the top](https://www.python.org/dev/peps/pep-0263/), such as `# -*- coding: utf-8 -*-` to avoid errors when compiling. 
+ - A python file that contains these characters may need to have a [special comment at the top](https://www.python.org/dev/peps/pep-0263/) to avoid errors when compiling. 
+ - Example special comment for unicode: `# -*- coding: utf-8 -*-` 
