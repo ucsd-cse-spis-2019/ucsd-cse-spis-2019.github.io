@@ -19,6 +19,10 @@ Any repo created under the [github.com/ucsd-cse-spis-2016](https://github.com/uc
 
 * [Web Apps](projects/webapps)
 
+# Resources
+
+* [Github](resources/github.md)
+
 ----
 
 ![SPIS_logo](images/SPIS_logo.jpg)
