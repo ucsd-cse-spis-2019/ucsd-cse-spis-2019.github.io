@@ -21,7 +21,7 @@ Any repo created under the [github.com/ucsd-cse-spis-2016](https://github.com/uc
 
 # Resources
 
-* [Github](resources/github.md)
+* [Github](resources/github)
 
 ----
 
