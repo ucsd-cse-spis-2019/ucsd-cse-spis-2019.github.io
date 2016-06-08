@@ -10,3 +10,7 @@ Github based web page for UCSD CSE SPIS 2016
 # Projects
 
 * [Webapps](projects/webapps)
+
+# Resources
+
+* [Github](/resources/github)
