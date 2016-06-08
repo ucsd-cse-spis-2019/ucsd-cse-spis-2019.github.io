@@ -15,9 +15,15 @@ Some commonly used types that involve collections of things are:
  - `[6, 10, 4, 17]`
  - `['Revelle', 'Muir', 'Marshall', 'Warren', 'Roosevelt', 'Sixth']`
  - `['Chris','Diaz',9876544,True]`
-
+* `dict` for dictionarires of items, which are associations of *keys* and *values*.  Examples:
+ - { 'one' : 'uno', 'two' : 'dos', 'three' : 'tres' }
+ - { 'fname' : 'Phill', 'lname' : 'Conrad', 'pid' : 1234567, 'gpa': 3.77, 'isHappy' : True }
+ 
 There are additional types that are less commonly discussed in "introductory programming", but that may end up being useful.
+
+Here are a few of them:
 
 * `Unicode` for sequences of a [larger set of characters](http://www.unicode.org) (e.g. `u'四'`, `u'piñata'`).
  - A python file that contains these characters may need to have a [special comment at the top](https://www.python.org/dev/peps/pep-0263/) to avoid errors when compiling. 
  - Example special comment for unicode: `# -*- coding: utf-8 -*-` 
+* `tuple` is similar to list, but the object created is *immutable*, meaning it cannot be changed after it is initially created. 
