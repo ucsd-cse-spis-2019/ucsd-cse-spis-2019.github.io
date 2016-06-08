@@ -1,3 +1,8 @@
+---
+layout: post
+title: Github resources
+---
+
 # Github
 
 * Create your account at github.com.  
