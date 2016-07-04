@@ -1,27 +1,72 @@
 ---
-layout: post
+layout: default
 title: UCSD CSE 2016 SPIS Github files
 ---
 
-# UCSD CSE 2016 SPIS Github
+# {{site.course}}, {{site.year}}
 
-* [Github Organization: ucsd-cse-spis-2016](https://github.com/ucsd-cse-spis-2016)
-* [CSE SPIS 2016 Github.io home page](https://ucsd-cse-spis-2016.github.io)
+<div id="info" data-role="collapsible" data-collapsed="false">
+<h2>Course Information</h2>
+<ul>
+{% for item in site.info %}
+<li><a href="{{item.url}}"  data-ajax="false">{{item.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
 
-Any repo created under the [github.com/ucsd-cse-spis-2016](https://github.com/ucsd-cse-spis-2016) organization is automatically readable and editable by the SPIS 2016 instructors and mentors.     This allows the SPIS staff to be of better help to SPIS 2016 participants, and to efficiently collaborate on developing curriculum.
+<div data-role="collapsible" data-collapsed="false">
+<h2 id="homework">Homework</h2>
+{% include hwk_table.html %}
+</div>
 
-# Helpful Links
+<div data-role="collapsible" data-collapsed="false">
+<h2 id="labs">Labs</h2>
+{% include lab_table.html %}
+</div>
 
-* [UCSD CSE SPIS 2016 main web site](https://sites.google.com/a/eng.ucsd.edu/spis/)
-* Github organization for [ucsd-cse-spis-2015](https://github.com/ucsd-cse-spis-2015)
+<div data-role="collapsible" data-collapsed="false">
+<h2 id="labs">Topics</h2>
+ <ul>
+ {% for item in site.topics %}
+   <li><a href="{{item.url}}">{{item.topic}}&mdash;{{item.desc}}</a></li>
+ {% endfor %}
+ </ul>
+</div>
 
-# Projects
 
-* [Web Apps](projects/webapps)
+<div data-role="collapsible" data-collapsed="false">
+<h2 id="labs">Projects</h2>
 
-# Resources
+ <div data-role="collapsible" data-collapsed="false">
+ <h3>Big Data</h3>
+ <ul>
+ {% for item in site.bigdata %}
+   <li><a href="{{item.url}}">{{item.topic}}&mdash;{{item.desc}}</a></li>
+ {% endfor %}
+ </ul>
+ </div>
 
-* [Github](resources/github)
+ <div data-role="collapsible" data-collapsed="false">
+ <h3>Robotics</h3>
+ <ul>
+ {% for item in site.robotics %}
+   <li><a href="{{item.url}}">{{item.topic}}&mdash;{{item.desc}}</a></li>
+ {% endfor %}
+ </ul>
+ </div>
+ 
+ <div data-role="collapsible" data-collapsed="false">
+ <h3>Big Data</h3>
+ <ul>
+ {% for item in site.webapps %}
+   <li><a href="{{item.url}}">{{item.topic}}&mdash;{{item.desc}}</a></li>
+ {% endfor %}
+ </ul>
+ </div>
+ 
+</div>
+
+
 
 ----
 

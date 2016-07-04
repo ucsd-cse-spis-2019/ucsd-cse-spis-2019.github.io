@@ -1,6 +1,6 @@
 ---
-layout: post
-title: Github resources
+topic: Github resources
+desc: "Resource for using github"
 ---
 
 # Github

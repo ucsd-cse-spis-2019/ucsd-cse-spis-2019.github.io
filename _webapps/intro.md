@@ -1,6 +1,6 @@
 ---
-layout: post
-title: UCSD CSE SPIS 2016: projects: webapps
+topic: "Intro"
+desc: "What are Web Applications all about?"
 ---
 
 # UCSD CSE SPIS 2016

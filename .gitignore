@@ -1,3 +1,10 @@
+_site/
+
+*~
+
+vendor/bundle
+.bundle
+
 # Logs
 logs
 *.log

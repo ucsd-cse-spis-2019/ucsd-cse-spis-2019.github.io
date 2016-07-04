@@ -1,3 +1,7 @@
+---
+topic: "Python: Types"
+desc: "`int`, `float`, `bool`, `str`, `list`, etc."
+
 # Types in Python
 
 In Python, every piece of data we deal with has a type.

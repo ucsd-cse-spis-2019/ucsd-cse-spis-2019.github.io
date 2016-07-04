@@ -1,0 +1,60 @@
+github_url: https://github.com/ucsd-cse-spis-2016/ucsd-cse-spis-2016.github.io
+mentor_url: mentor.html
+
+num_weeks: 5
+start_date: 2016-07-31 00:00:00.00-7:00
+
+course: "UCSD CSE SPIS"
+year: "Summer 2016"
+
+kramdown:
+   parse_block_html: true
+
+exclude: [vendor]
+
+timezone: America/Los_Angeles
+
+collections:
+  hwk:
+    output: true
+    permalink: /hwk/:path/
+    last_before: false
+  lab:
+    output: true
+    permalink: /lab/:path/
+    last_before: false
+  info:
+    output: true
+    permalink: /info/:path/
+  topics:
+    output: true
+    permalink: /topics/:path/
+  webapps:
+    output: true
+    permalink: /webapps/:path/
+  bigdata:
+    output: true
+    permalink: /bigdata/:path/
+  robotics:
+    output: true
+    permalink: /robotics/:path/
+
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: default
+  - 
+    scope:
+      path: ""
+      type: hwk
+    values:
+      layout: hwk
+  - 
+    scope:
+      path: ""
+      type: lab
+    values:
+      layout: lab

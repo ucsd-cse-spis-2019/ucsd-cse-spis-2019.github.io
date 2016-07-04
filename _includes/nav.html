@@ -1,0 +1,25 @@
+<div data-role="header" class="header">
+ <nav data-role="navbar" data-grid-"d">
+  <ul>
+    <li><a href="//sites.google.com/a/eng.ucsd.edu/spis/">CSE SPIS</a></li>
+    <li><a href="/" >ucsd-cse-spis-2016.github.io</a></li>
+    <li><a href="//sites.google.com/site/ucsdcsespis2016focs/">FOCS</a></li>
+  </ul>
+ </nav>
+ <nav data-role="navbar" data-grid-"d">
+  <ul>
+   <li><a href="//piazza.com/class/ioizytqm23v67l">Piazza</a></li>
+   <li><a href="//github.com/UCSB-CS56-M16">UCSD SPIS github</a></li>
+   <li><a href="//gradescope.com/courses/3559">Gradescope</a></li>
+  </ul>
+ </nav>
+ {% if page.layout == "hwk" %}
+ <nav data-role="navbar" data-grid-"d">
+  <ul class="hwk-nav-bar">
+  {% for asn in site.hwk %}
+    <li><a href="{{asn.url}}">{{asn.num}}</a></li>
+  {% endfor %}
+  </ul>
+ </nav>
+{% endif %}
+</div>
