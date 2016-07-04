@@ -2,9 +2,9 @@
 layout: lab
 num: lab03
 ready: false
-desc: "placeholder for lab 3 assignment by Diba"
-assigned: 2016-08-06 09:30:00.00-7
-due: 2016-08-07 17:00:00.00-7
+desc: "lab03 placeholder, Guttag Ch. 3, by Phill"
+assigned: 2016-08-03 09:30:00.00-7
+due: 2016-08-05 15:45:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza

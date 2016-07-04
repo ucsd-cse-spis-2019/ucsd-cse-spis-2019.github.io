@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab02
+num: lab07
 ready: false
-desc: "lab02, Guttag 2, Phill"
-assigned: 2016-08-03 09:30:00.00-7
-due: 2016-08-04 20:00:00.00-7
+desc: "lab07 covering Guttag Ch7, by TBA"
+assigned: 2016-08-15 09:30:00.00-7
+due: 2016-08-17 14:45:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
