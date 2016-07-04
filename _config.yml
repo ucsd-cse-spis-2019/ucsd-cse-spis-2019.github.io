@@ -8,7 +8,7 @@ num_weeks: 5
 start_date: 2016-07-31 00:00:00.00-7:00
 
 course: "UCSD CSE SPIS"
-year: "Summer 2016"
+year: "2016"
 
 kramdown:
    parse_block_html: true

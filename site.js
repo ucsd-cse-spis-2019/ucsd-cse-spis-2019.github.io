@@ -39,10 +39,16 @@ $(document).ready(function(){
 	$(this).html($('<a href="' + href + '">HFJ Chapter ' + $(this).data('hfj') + '</a>'));
     });
 
-    $('.pagebreak').each(function() {
-	$('.hwk-page-header-template').first().clone().appendTo($(this));
+    $('.page-break-before').each(function() {
+	var prev = $(this).prev();
+	var $div = $("<div>", {class: "pagebreak"});
+	prev.css('background-color','pink');
+	prev.append($div);
+	$('.hwk-page-header-template').first().clone().appendTo($div);
+	prev.css('margin-bottom','0');	
     });
 
+    
     $('td.page-num').each(function(i) {
 	$(this).html(i+1); // re-calculate page numbers
     });
