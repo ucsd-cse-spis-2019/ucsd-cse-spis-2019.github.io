@@ -31,7 +31,6 @@ div.handwriting-table table * td {
 
 div.hwk-page-header {
     page-break-before:always;
-    background-color: pink;
     font-family: Arial Narrow,sans-serif;
     font-size: 18px; font-weight: bold; text-align:right;
     page-break-before:always; float:right;
