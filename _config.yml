@@ -41,7 +41,9 @@ collections:
   robotics:
     output: true
     permalink: /robotics/:path/
-
+  lectures:
+    output: true
+    permalink: /lectures/:path/
 
 defaults:
   -
@@ -61,3 +63,9 @@ defaults:
       type: lab
     values:
       layout: lab
+  - 
+    scope:
+      path: ""
+      type: lectures
+    values:
+      layout: lecture

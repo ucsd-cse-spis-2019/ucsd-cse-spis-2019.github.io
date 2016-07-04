@@ -1,0 +1,14 @@
+<div data-role="collapsible" data-collapsed="{{ include.collapsed }}">
+<h3>Week {{ include.week }} </h3>
+<ul>
+  {% for item in site.lectures %}
+  {% if item.week == include.week %}
+  <li {% if item.indent %} style="margin-left:3em;" {% endif %} >
+    <a href="{{ item.url }}">
+      {{ item.lecture_date |  date: "%a %m/%d" }}</a>&mdash;
+    {{ item.topic }}&mdash;{{ item.desc }}
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+</div>
