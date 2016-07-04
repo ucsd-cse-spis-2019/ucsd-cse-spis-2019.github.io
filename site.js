@@ -42,7 +42,6 @@ $(document).ready(function(){
     $('.page-break-before').each(function() {
 	var prev = $(this).prev();
 	var $div = $("<div>", {class: "pagebreak"});
-	prev.css('background-color','pink');
 	prev.append($div);
 	$('.hwk-page-header-template').first().clone().appendTo($div);
 	prev.css('margin-bottom','0');	
