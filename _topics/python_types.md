@@ -1,6 +1,7 @@
 ---
 topic: "Python: Types"
 desc: "`int`, `float`, `bool`, `str`, `list`, etc."
+---
 
 # Types in Python
 
