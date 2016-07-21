@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UCSD CSE 2016 SPIS Github files
+title: UCSD CSE 2016 SPIS: Foundations of Computer Science
 ---
 
 # {{site.course}}, {{site.year}}
