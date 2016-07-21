@@ -7,7 +7,7 @@ course_github_url: https://github.com/ucsd-cse-spis-2016
 num_weeks: 5
 start_date: 2016-07-31 00:00:00.00-7:00
 
-course: "UCSD CSE SPIS"
+course: "UCSD CSE SPIS: Foundations of Computer Science (FOCS)"
 year: "2016"
 
 kramdown:
