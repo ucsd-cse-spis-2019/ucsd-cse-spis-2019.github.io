@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  {% include head.html %} 
+    {% assign yyyymmdd = page.lecture_date | date: "%Y%m%d" %}
+    {% assign day_mm_dd = page.lecture_date | date: "%a %m/%d" %}    
+    {% include head.html %} 
   <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
   </head>
   <body id="page-top">
     <div id="container" data-role="page">
     {% include nav.html %}
     <div id="content"  class="ui-content">
-      <h1>Lecture Notes, {{ page.lecture_date | date: "%a %m/%d " }}</h1>
+      <h1>Lecture Notes, {{ day_mm_dd }}</h1>
+
       <h2>Week: {{page.week}}&nbsp;&mdash; {{page.topic}}&nbsp;&mdash; {{page.desc}}</h2>
+
+      <div id="agenda" data-role="collapsible" data-collapsed="true">
+	<h2>Agenda for {{day_mm_dd}} (from SPIS Google Calendar)</h2>
+<iframe src="{{ site.google_calendar_embed }}&amp;dates={{yyyymmdd}}%2F{{yyyymmdd}}" style="border:solid 1px #777" width="800" height="300" frameborder="0" scrolling="no"></iframe>
+      </div>
       
     {{ content }}
     </div><!-- content -->

@@ -1,23 +1,30 @@
-<div data-role="collapsible" data-collapsed="{{ include.collapsed }}">
-  <h3>Week {{ include.week }}
-    {% if include.section_title %} &mdash; {{include.section_title}}{% endif %}
-  </h3>
-<ul>
-  {% for item in site.lectures %}
-    {% if item.omit_from_collection %}
-    {% else %}  
-      {% if item.week == include.week %}
-        <li {% if item.indent %} style="margin-left:3em;" {% endif %} >
-        {% if item.link_topic_desc_only %}
-          <a href="{{ item.url }}">{{ item.topic }}</a>&mdash;{{ item.desc }}
-        {% else %}
-          <a href="{{ item.url }}">
-          {{ item.lecture_date |  date: "%a %m/%d" }}</a>&mdash;
-          {{ item.topic }}&mdash;{{ item.desc }}
-        {% endif %}
-        </li>
-      {% endif %}
+{% if include.collapsible %}
+  <div data-role="collapsible" data-collapsed="{{ include.collapsed }}" markdown="0">
+{% else %}
+  <div markdown="0">
+{% endif %}
+    <h2>Week {{ include.week }}
+    {% if include.section_title %}
+      &mdash;{{include.section_title}}
     {% endif %}
-  {% endfor %}
-</ul>
-</div>
+    </h2>
+    <ul>
+      {% for item in site.lectures %}
+        {% unless item.omit_from_collection %}
+          {% if item.week == include.week %}
+            <li {% if item.indent %} style="margin-left:3em;" {% endif %} >
+            {% if item.link_topic_desc_only %}
+               <a href="{{ item.url }}">{{ item.topic }}</a>
+	       &mdash;{{ item.desc }}
+            {% else %}
+              <a href="{{ item.url }}">
+                {{ item.lecture_date |  date: "%a %m/%d" }}
+	      </a>&mdash;
+              {{ item.topic }}&mdash;{{ item.desc }}
+            {% endif %}
+            </li>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>

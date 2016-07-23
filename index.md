@@ -14,13 +14,18 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
 </ul>
 </div>
 
-<div data-role="collapsible" data-collapsed="false">
+<div data-role="collapsible" data-collapsed="false" markdown="0">
 <h2 id="labs">Lectures</h2>
-  {% include lectures_for_week.html week="1" collapsed="false" %}
-  {% include lectures_for_week.html week="2" collapsed="true" %}
-  {% include lectures_for_week.html week="3" collapsed="true" %}
-  {% include lectures_for_week.html week="4" collapsed="true" %}
-  {% include lectures_for_week.html week="5" section_title="Projects" collapsed="true" %}
+  {% include lectures_for_week.html week="1"
+    collapsible="true" collapsed="false" %}
+  {% include lectures_for_week.html week="2"
+    collapsible="true" collapsed="true" %}
+  {% include lectures_for_week.html week="3"
+    collapsible="true" collapsed="true" %}
+  {% include lectures_for_week.html week="4"
+    collapsible="true" collapsed="true" %}
+  {% include lectures_for_week.html week="5" section_title="Projects"
+    collapsible="true" collapsed="true" %}
 </div>
 
 <div data-role="collapsible" data-collapsed="false">

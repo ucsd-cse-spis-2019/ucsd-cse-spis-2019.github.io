@@ -123,18 +123,23 @@ function setUpCalendar() {
 
 function weekLabel(weekNum) {
  // returns HTML content of <td> element at start of week
-    return '<a href="{{site.weekly_google_calendar_prefix}}' + weekNum + '">Week ' + weekNum + '</a>';
+    return 'Week ' + weekNum +  
+	'<ul>' +
+	'<li><a href="{{site.weekly_google_calendar_prefix}}' +
+	weekNum + '">agenda</a></li>' +
+	'<li><a href="/lectures/week' + weekNum + '">lectures</a></li>' +
+	'</ul>';
 }
 
 function addCalendarTable(cal) {
     
     $('#calendar').append(  '<table >' );
-    $('#calendar table').append( '<tr><th>Week</th><th>S</th><th>M</th><th>T</th><th>W</th><th>R</th><th>F</th><th>S</th></tr>');
+    $('#calendar table').append( '<tr><th>&nbsp;</th><th>S</th><th>M</th><th>T</th><th>W</th><th>R</th><th>F</th><th>S</th></tr>');
     var thisDay = new moment(cal.startDate);
     for(var i=1;i<=cal.numWeeks; i++){
 	$('#calendar table').append( '<tr data-week-num="' + i +'" />')
 	var thisWeeksTrSelector = '#calendar table tr[data-week-num="' + i + '"]';
-	$(thisWeeksTrSelector).append('<td>' + weekLabel(i) + '</td>');
+	$(thisWeeksTrSelector).append('<td class="week">' + weekLabel(i) + '</td>');
 	for (var day=1; day<=7; day++) {
 	    var thisDateFormatted = thisDay.format("MM/DD");
 	    var cal_mmdd = $('<div class="cal_mmdd">'+ thisDateFormatted + '</div>');
