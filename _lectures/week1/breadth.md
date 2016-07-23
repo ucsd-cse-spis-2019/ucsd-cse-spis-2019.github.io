@@ -4,6 +4,7 @@ topic: "Breadth: Week 1"
 desc: "Topic TBD"
 week: "1"
 indent: true
+link_topic_desc_only: true
 ---
 
 

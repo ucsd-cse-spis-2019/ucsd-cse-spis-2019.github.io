@@ -8,7 +8,9 @@
     <div id="container" data-role="page">
     {% include nav.html %}
     <div id="content"  class="ui-content">
-<h1>Lecture Notes, {{ page.date | date: "%a %m/%d " }}</h1>
+      <h1>Lecture Notes, {{ page.lecture_date | date: "%a %m/%d " }}</h1>
+      <h2>Week: {{page.week}}&nbsp;&mdash; {{page.topic}}&nbsp;&mdash; {{page.desc}}</h2>
+      
     {{ content }}
     </div><!-- content -->
     {% include footer.html %}

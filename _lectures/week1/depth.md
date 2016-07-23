@@ -1,9 +1,10 @@
 ---
 lecture_date: 2016-08-05 09:00:00.00-7:00
-topic: "Depth for week 1"
+topic: "Depth: Week 1"
 desc: "Guttag Chapters 1-4"
 week: "1"
 indent: true
+link_topic_desc_only: true
 ---
 
 

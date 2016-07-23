@@ -4,6 +4,7 @@ topic: "Breadth: Week 4"
 desc: "Topic TBD"
 week: "4"
 indent: true
+link_topic_desc_only: true
 ---
 
 Note: This is the final breadth/depth lecture of SPIS 2016. Next
