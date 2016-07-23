@@ -65,7 +65,7 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
  </div>
  
  <div data-role="collapsible" data-collapsed="false">
- <h3>Big Data</h3>
+ <h3>Web Apps</h3>
  <ul>
  {% for item in site.webapps %}
    <li><a href="{{item.url}}">{{item.topic}}&mdash;{{item.desc}}</a></li>
