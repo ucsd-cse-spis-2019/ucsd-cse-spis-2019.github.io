@@ -1,6 +1,6 @@
 ---
 lecture_date: 2016-08-26 09:00:00.00-7:00
-topic: "Breadth: Week 4"
+topic: "Week 4: Breadth"
 desc: "Topic TBD"
 week: "4"
 indent: true

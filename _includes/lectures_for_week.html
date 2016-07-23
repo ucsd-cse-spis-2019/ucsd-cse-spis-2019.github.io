@@ -10,20 +10,17 @@
     </h2>
     <ul>
       {% for item in site.lectures %}
-        {% unless item.omit_from_collection %}
+        {% unless item.omit_from_collection %}     
           {% if item.week == include.week %}
-            <li {% if item.indent %} style="margin-left:3em;" {% endif %} >
-            {% if item.link_topic_desc_only %}
-               <a href="{{ item.url }}">{{ item.topic }}</a>
-	       &mdash;{{ item.desc }}
-            {% else %}
-              <a href="{{ item.url }}">
-                {{ item.lecture_date |  date: "%a %m/%d" }}
-	      </a>&mdash;
-              {{ item.topic }}&mdash;{{ item.desc }}
-            {% endif %}
-            </li>
-          {% endif %}
+            {% include lecture_link.html
+               link_topic_desc_only=item.link_topic_desc_only
+               indent=item.indent
+               topic=item.topic
+               desc=item.desc
+               url=item.url
+               lecture_date=item.lecture_date
+             %}
+      {% endif %}
         {% endunless %}
       {% endfor %}
     </ul>

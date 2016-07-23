@@ -25,6 +25,20 @@ var dates = {
 	},
 	{% endfor %}
     ],
+
+    "lectures": [
+	{% for lecture in site.lectures %}
+	{
+	    "url" : "{{ lecture.url }}",
+	    "path" : "{{ lecture.path }}",
+	    "week" : "{{ lecture.week }}",
+	    "lecture_date" :  "{{ lecture.lecture_date }}",
+	    "topic" :  "{{ lecture.topic }}",
+	    "desc" :  "{{ lecture.desc }}",
+	},
+	{% endfor %}
+    ],
+
     
 };
 
@@ -131,18 +145,40 @@ function weekLabel(weekNum) {
 	'</ul>';
 }
 
+function linkToLecture(mm,dd,week) {
+    return '<a href="/lectures/week' + week + '/' + mm + dd +'/">' +
+	mm + '/' + dd +
+	'</a>';
+}
+
+function dayLabel(thisDay, week) {
+    // thisDay is a momentjs instance
+    mm = thisDay.format("MM");
+    dd = thisDay.format("DD");    
+    ddd = thisDay.format("ddd");
+    if  ( ["Mon","Tue","Wed","Thu","Fri"].indexOf(ddd) == -1 &&
+	  ! ( thisDay.isSame(moment(cal.startDate))) )
+	return mm + "/" + dd; // plain old date
+    else
+	return linkToLecture(mm,dd,week);
+
+}
+
+
 function addCalendarTable(cal) {
     
     $('#calendar').append(  '<table >' );
     $('#calendar table').append( '<tr><th>&nbsp;</th><th>S</th><th>M</th><th>T</th><th>W</th><th>R</th><th>F</th><th>S</th></tr>');
     var thisDay = new moment(cal.startDate);
-    for(var i=1;i<=cal.numWeeks; i++){
-	$('#calendar table').append( '<tr data-week-num="' + i +'" />')
-	var thisWeeksTrSelector = '#calendar table tr[data-week-num="' + i + '"]';
-	$(thisWeeksTrSelector).append('<td class="week">' + weekLabel(i) + '</td>');
+    for(var week=1;week<=cal.numWeeks; week++){
+	$('#calendar table').append( '<tr data-week-num="' + week +'" />')
+	var thisWeeksTrSelector = '#calendar table tr[data-week-num="' + week + '"]';
+	$(thisWeeksTrSelector).append('<td class="week">' + weekLabel(week) + '</td>');
 	for (var day=1; day<=7; day++) {
 	    var thisDateFormatted = thisDay.format("MM/DD");
-	    var cal_mmdd = $('<div class="cal_mmdd">'+ thisDateFormatted + '</div>');
+	    var cal_mmdd = $('<div class="cal_mmdd">' +
+			     dayLabel(thisDay,week) +
+			     '</div>');
 	    var assignments = getAssignments(cal,thisDateFormatted);
 	    $('<td/>')
 		.append(cal_mmdd)

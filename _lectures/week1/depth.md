@@ -1,6 +1,6 @@
 ---
-lecture_date: 2016-08-05 09:00:00.00-7:00
-topic: "Depth: Week 1"
+lecture_date: "2016-08-05 09:00:00.00-7:00"
+topic: "Week 1: Depth"
 desc: "Guttag Chapters 1-4"
 week: "1"
 indent: true

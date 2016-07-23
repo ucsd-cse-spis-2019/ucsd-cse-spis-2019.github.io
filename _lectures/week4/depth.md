@@ -1,6 +1,6 @@
 ---
 lecture_date: 2016-08-26 09:00:00.00-7:00
-topic: "Depth: Week 4"
+topic: "Week 4: Depth"
 desc: "TBD"
 week: "4"
 indent: true
