@@ -1,3 +1,5 @@
+var weekly_google_calendar_prefix = ""
+
 var dates = {
     "hwk": [
 	{% for asn in site.hwk %}
@@ -121,7 +123,7 @@ function setUpCalendar() {
 
 function weekLabel(weekNum) {
  // returns HTML content of <td> element at start of week
-    return '<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/2016-foundations#week' + weekNum + '">Week ' + weekNum + '</a>';
+    return '<a href="{{site.weekly_google_calendar_prefix}}' + weekNum + '">Week ' + weekNum + '</a>';
 }
 
 function addCalendarTable(cal) {
