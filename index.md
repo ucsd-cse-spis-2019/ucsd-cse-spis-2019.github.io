@@ -25,7 +25,7 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
   {% include lectures_for_week.html week="4"
     collapsible="true" collapsed="true" %}
   {% include lectures_for_week.html week="5" section_title="Projects"
-    collapsible="true" collapsed="true" %}
+    collapsible="true" collapsed="true" extra_item="0902" %}
 </div>
 
 <div data-role="collapsible" data-collapsed="false">

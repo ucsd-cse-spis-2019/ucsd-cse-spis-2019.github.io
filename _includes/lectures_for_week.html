@@ -21,7 +21,24 @@
                lecture_date=item.lecture_date
              %}
       {% endif %}
-        {% endunless %}
+      {% endunless %}
       {% endfor %}
+      
+<!-- separate for loop to ensure it gets placed at the end -->
+      {% if include.extra_item %}
+      {% for item in site.lectures %}
+      {% assign mmdd = item.lecture_date | date: "%m%d" %}
+      {% if mmdd == include.extra_item %}
+      {% include lecture_link.html
+               link_topic_desc_only=item.link_topic_desc_only
+               indent=item.indent
+               topic=item.topic
+               desc=item.desc
+               url=item.url
+               lecture_date=item.lecture_date
+             %}
+      {% endif %}
+      {% endfor %}
+      {% endif %}
     </ul>
   </div>
