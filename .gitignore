@@ -1,11 +1,23 @@
+# .DS_Store is a Mac OS thing that we don't want in our repo
+.DS_Store
+
+# _site/ is the generated HTML for the site, calculated each time.
+# don't store in the repo
+
 _site/
 
+# *~ are emacs backup files.  Don't store in the repo
+
 *~
+
+# vendor/bundle and .bundle are cached Ruby Gems.
+# Should be downloaded fresh, and not stored in the repo.
 
 vendor/bundle
 .bundle
 
 # Logs
+
 logs
 *.log
 npm-debug.log*
