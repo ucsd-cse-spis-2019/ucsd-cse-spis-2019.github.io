@@ -13,7 +13,6 @@ var dates = {
     ],
     "lab": [
 	{% for asn in site.lab %}
-	{% if asn.num %}
 	{
 	    "num" : "{{ asn.num }}",
 	    "ready" :  "{{ asn.ready }}",
@@ -22,7 +21,6 @@ var dates = {
 	    "due" :  "{{ asn.due }}",
 	    "url" :  "{{ asn.url }}",
 	},
-	{% endif %}
 	{% endfor %}
     ],
     
@@ -121,6 +119,11 @@ function setUpCalendar() {
 
 }
 
+function weekLabel(weekNum) {
+ // returns HTML content of <td> element at start of week
+    return '<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/2016-foundations#week' + weekNum + '">Week ' + weekNum + '</a>';
+}
+
 function addCalendarTable(cal) {
     
     $('#calendar').append(  '<table >' );
@@ -129,7 +132,7 @@ function addCalendarTable(cal) {
     for(var i=1;i<=cal.numWeeks; i++){
 	$('#calendar table').append( '<tr data-week-num="' + i +'" />')
 	var thisWeeksTrSelector = '#calendar table tr[data-week-num="' + i + '"]';
-	$(thisWeeksTrSelector).append('<td>' + i + '</td>');
+	$(thisWeeksTrSelector).append('<td>' + weekLabel(i) + '</td>');
 	for (var day=1; day<=7; day++) {
 	    var thisDateFormatted = thisDay.format("MM/DD");
 	    var cal_mmdd = $('<div class="cal_mmdd">'+ thisDateFormatted + '</div>');
@@ -222,6 +225,8 @@ function reportDaysOutsideCalendar(cal) {
 }
 
 $(document).ready(function() {
+    console.log("calendar.js: document is ready");
     setUpCalendar();
+    console.log("calendar.js: done");
 });
 
