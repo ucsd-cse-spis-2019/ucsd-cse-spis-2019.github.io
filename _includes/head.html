@@ -1,19 +1,13 @@
-<!-- head.html; common header items for all layouts -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+<!-- head.html  default -->
+
+{% include head_base.html %}
+{% include jquery_mobile.html %}
+
 <link rel="stylesheet" href="{{site.baseurl}}/site.css" />
 <link rel="stylesheet" href="{{site.baseurl}}/calendar.css" />
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
 <script>
   {% include moment.min.js %}
   {% include dates.js %}
   {% include calendar.js %}
 </script>
-<script src="{{site.baseurl}}/site.js"></script>

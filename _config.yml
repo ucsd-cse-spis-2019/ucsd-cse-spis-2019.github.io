@@ -2,6 +2,8 @@ name: UCSD CSE SPIS 2016 FOCS
 github_url: https://github.com/ucsd-cse-spis-2016/ucsd-cse-spis-2016.github.io
 mentor_url: mentor.html
 
+url: https://ucsd-cse-spis-2016.github.io/
+
 weekly_google_calendar_prefix: "https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/2016-foundations#week"
 
 google_calendar_embed: "https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=eng.ucsd.edu_vpkdu3a26k3alf8rt2m19054ug%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles"
@@ -14,6 +16,7 @@ course_github_url: https://github.com/ucsd-cse-spis-2016
 num_weeks: 5
 start_date: 2016-07-31 00:00:00.00-7:00
 
+hwk_course: "CSE SPIS"
 course: "UCSD CSE SPIS: Foundations of Computer Science (FOCS)"
 year: "2016"
 

@@ -1,6 +1,4 @@
----
-layout: null
----
+// asn.js
 
 // TODO: Rewrite in JQuery.  Add unit tests
 function pointCount(n) {
@@ -28,26 +26,35 @@ function countPoints(n) {                     // n is a Node
 }
 
 
-$(document).on('pageinit','[data-role=page]', function(){
+$(document).ready(function(){
 
-    console.log("site.js: pageinit");
+    console.log("asn.js: ready");
 
-    $(this).find('.page-break-before').each(function() {
+
+    $('.page-break-before').each(function() {
 	var prev = $(this).prev();
 	var $div = $("<div>", {class: "pagebreak"});
 	prev.append($div);
-	$(this).find('.hwk-page-header-template').first().clone().appendTo($div);
-	prev.css('margin-bottom','0');	
+	$('.hwk-page-header-template').first().clone().appendTo($div);
+	$('.hwk-name-header-template').first().clone().appendTo($div);
+	prev.css('margin-bottom','0');
+    });
+
+
+    $('td.page-num').each(function(i) {
+	var pageNum = i+1;
+	$(this).html(pageNum); // re-calculate page numbers
+	$(this).data("pageNum",pageNum);
+	if (pageNum % 2==0) {
+	    $(this).parents(".pagebreak").find(".hwk-name-header-table").css("display","none");
+	}
     });
     
-    $(this).find('td.page-num').each(function(i) {
-	$(this).html(i+1); // re-calculate page numbers
-    });
     
     if ($(this).find(".pointCount").length > 0 ) {
       var total = countPoints(document.body);
       $(this).find(".pointCount").html(total);
     }
     
-    console.log("site.js: pageinit done");
+    console.log("asn.js: done");
 });
