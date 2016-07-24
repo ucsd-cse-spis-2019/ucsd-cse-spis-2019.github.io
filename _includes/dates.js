@@ -125,7 +125,7 @@ function setUpDates() {
 }
 
 function getAssignments(cal,mmdd) {
-    console.log("getAssignments, mmdd=" + mmdd);
+    // console.log("getAssignments, mmdd=" + mmdd);
     var div = $("<div />")
 	.addClass("cal-assignments")
 	.attr("data-mmdd",mmdd);
@@ -144,7 +144,8 @@ function getAssignments(cal,mmdd) {
 		.appendTo(div);
 	}
     }
-    return div;
+    // console.log("getAssignments done... mmdd=" + mmdd);    
+    return div;    
 }
 
 function setUpAssignments(page,mm_slash_dd) {
@@ -154,9 +155,9 @@ function setUpAssignments(page,mm_slash_dd) {
     console.log("setUpAssignments: done");
 }
 
-function populateAssignmentElements(page) {
+function populateAssignmentElements(elem) {
 
-    page.find('.cal-assignments div[data-asn-type="hwk"]').each(function() {
+    elem.find('.cal-assignments div[data-asn-type="hwk"]').each(function() {
 	var hwk = ($(this).data("date-value"));
 	if (hwk.ready=="true") {
 	    $(this).addClass("ready");
@@ -171,7 +172,7 @@ function populateAssignmentElements(page) {
 	$(this).addClass("hwk");
     });
     
-    page.find('.cal-assignments div[data-asn-type="lab"]').each(function() {
+    elem.find('.cal-assignments div[data-asn-type="lab"]').each(function() {
 	var asn = $(this).data("date-value");
 	if (asn.ready=="true") {
 	    $(this).addClass("ready");
@@ -187,12 +188,12 @@ function populateAssignmentElements(page) {
     });
 
     
-    page.find('.cal-assignments div[data-date-type="due"]').each(function() {
+    elem.find('.cal-assignments div[data-date-type="due"]').each(function() {
 	var asn = ($(this).data("date-value"));
 	$(this).append(" due " + moment(asn.due).format("hh:mma") );
     });
     
-    page.find('.cal-assignments div[data-date-type="assigned"]').each(function() {
+    elem.find('.cal-assignments div[data-date-type="assigned"]').each(function() {
 	$(this).append(" assigned");
     });
     
