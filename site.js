@@ -28,34 +28,26 @@ function countPoints(n) {                     // n is a Node
 }
 
 
-  
+$(document).on('pageinit','[data-role=page]', function(){
 
+    console.log("site.js: pageinit");
 
-$(document).ready(function(){
-    console.log("site.js: document is ready");
-    $('[data-hfj]').each(function() {
-	var chapter_num = $(this).data('hfj');
-	var href = "{{ site.hfj_chapter_url_prefix }}" + chapter_num;
-	$(this).html($('<a href="' + href + '">HFJ Chapter ' + $(this).data('hfj') + '</a>'));
-    });
-
-    $('.page-break-before').each(function() {
+    $(this).find('.page-break-before').each(function() {
 	var prev = $(this).prev();
 	var $div = $("<div>", {class: "pagebreak"});
 	prev.append($div);
-	$('.hwk-page-header-template').first().clone().appendTo($div);
+	$(this).find('.hwk-page-header-template').first().clone().appendTo($div);
 	prev.css('margin-bottom','0');	
     });
-
     
-    $('td.page-num').each(function(i) {
+    $(this).find('td.page-num').each(function(i) {
 	$(this).html(i+1); // re-calculate page numbers
     });
     
-    if ($(".pointCount").length > 0 ) {
+    if ($(this).find(".pointCount").length > 0 ) {
       var total = countPoints(document.body);
-      $(".pointCount").html(total);
+      $(this).find(".pointCount").html(total);
     }
     
-    console.log("site.js: done");
+    console.log("site.js: pageinit done");
 });
