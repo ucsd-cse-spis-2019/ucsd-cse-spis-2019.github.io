@@ -157,6 +157,11 @@ function setUpAssignments(page,mm_slash_dd) {
 
 function populateAssignmentElements(elem) {
 
+    elem.find('.cal-assignments div').each(function() {
+	console.log(".cal-assignments empty()...");
+	$(this).empty();
+    });
+    
     elem.find('.cal-assignments div[data-asn-type="hwk"]').each(function() {
 	var hwk = ($(this).data("date-value"));
 	if (hwk.ready=="true") {

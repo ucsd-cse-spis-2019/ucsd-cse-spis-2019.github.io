@@ -10,7 +10,7 @@ omit_from_collection: true
 
 {% include lectures_for_week.html week="5" section_title="Projects" collapsed="false"
    extra_item="0902"%}
-<div class='calendar' data-start-weeks="{{page.week}}" data-num-weeks="1" ></div>
+<div class='calendar' data-start-week="{{page.week}}" data-num-weeks="1" ></div>
 
 ----
 

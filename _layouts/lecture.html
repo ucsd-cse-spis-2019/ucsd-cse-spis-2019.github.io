@@ -32,9 +32,9 @@
 	<h2>Agenda for {{day_mm_dd}} (from SPIS Google Calendar)</h2>
 <iframe src="{{ site.google_calendar_embed }}&amp;dates={{yyyymmdd}}%2F{{yyyymmdd}}" style="border:solid 1px #777" width="800" height="300" frameborder="0" scrolling="no"></iframe>
       </div>
-      <div data-role="collapsible" data-collapsed="false">
-	<h2>Assignments for {{day_mm_dd}}</h2>
-	<div id="add-assignments-here">None</div>
+      <div id="Calendar" data-role="collapsible" data-collapsed="true">
+	<h2>Assignment Calendar for Week {{page.week}}</h2>
+          <div class='calendar' data-start-weeks="{{page.week}}" data-num-weeks="1" ></div>
       </div>
       {% endunless %}
       
