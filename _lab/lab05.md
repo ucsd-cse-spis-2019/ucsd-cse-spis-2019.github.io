@@ -9,5 +9,4 @@ due: 2016-08-12 15:45:00.00-7
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
-
 TODO: Fill in details of {{page.num}}
