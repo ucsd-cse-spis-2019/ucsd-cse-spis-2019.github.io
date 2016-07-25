@@ -11,7 +11,11 @@ If you find typos or problems with the lab instructions, please report them on [
 
 # Your first lab in SPIS
 
-For your first lab, you'll be using the computers in FILL IN NAME OF ROOM HERE.
+For your first lab, you'll be using the computers in either B230 or B240, the basement of the CSE building.
+
+These computer run the Linux operating system, and you'll log into them with your SPIS ACMS account.
+
+
 
 
 TODO: Fill in details of {{page.num}}
