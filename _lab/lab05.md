@@ -104,7 +104,7 @@ Think about what happens with the empty string.
 
 To test your code create a new file named `test_scrabble.py` and implement your test cases in this file. to help you with the testing we have provided you with a file named 'reference.txt'. This file contains a list of words and the scrabble score for each word as computed by our reference implementation. Your test code should read this file, extract each word and its corresponding scrabble score. Then check that the output of your scrabbleScore() implementation matches that provided to you in the reference file. Create your own test files and do some more testing. Once you have your scabbleScore() tested, submit your code to gradescope. You may submit it as many times as you like. Then go on to make the following enhancements.
 
-As a second part to this exercise we ask that you additionally check for valid words before computing the scrabble score of that word. Specifically, implement the function `scrabbleScoreDict(word, dictionary)` that takes as input a dictionary parameter and returns the appropriate score. The parameter 'dictionary' is a list of valid scrabble words and not the dictionary data structure that Guttag talks about in Chapter 5. The function should return a score of 0 if the dictionary is empty or if 'word' is not a word in the given dictionary. Other than checking for these two conditions `scrabbleScoreDict()` should behave exactly as the function `scrabbleScore()`. Remember that reusing functions that you have already tested is good coding practice. So, we recommend that you use your `scrabbleScore()` function in your implementation of `scrabbleScoreDict()`, without duplicating the code. If you are wondering where the 'dictionary' parameter is going to come from, worry not. As a final piece of this exercise, you will write the code to read and store a dictionary in your Python program.
+As a second part to this exercise we ask that you additionally check for valid words before computing the scrabble score of that word. Specifically, implement the function `scrabbleScoreDict(word, dictionary)` that takes as input a dictionary parameter and returns the appropriate score. The parameter 'dictionary' is a list of valid scrabble words and not the dictionary data type that Guttag talks about in Chapter 5. The function should return a score of 0 if the dictionary is empty or if 'word' is not a word in the given dictionary. Other than checking for these two conditions `scrabbleScoreDict()` should behave exactly as the function `scrabbleScore()`. Remember that reusing functions that you have already tested is good coding practice. So, we recommend that you use your `scrabbleScore()` function in your implementation of `scrabbleScoreDict()`, without duplicating the code. If you are wondering where the 'dictionary' parameter is going to come from, worry not. As a final piece of this exercise, you will write the code to read and store a dictionary in your Python program.
 
 To build your own dictionary we have given you a file named dictionary.txt in the starter code. This file contains 235,886 words, one on each line of the file. You are required to read each word in dictionary.txt and store it in a list of words.
 The function that does this has the following outline:
@@ -113,7 +113,8 @@ The function that does this has the following outline:
 
 def buildDictionary(filename):
 
-    # creates a dictionary as a list of words by reading the words in the given file. Assumes the file contains one word per line
+    # Creates a dictionary as a list of words by reading the words in the given file. 
+    # Assumes the file contains one word per line
 
     dict =[]    # Creates an empty list that represents a dictionary
     
@@ -136,8 +137,12 @@ A correct implementation of `buildDictionary()` would populate the 'dict' variab
 ## Testing your code with the latest additions
 Its time to test the two new functions that you just wrote. Add your test cases to the file `test_scrabble_score.py`. You can reuse the reference.txt file provided to you as before. You should also add additional test cases, for example, checking for invalid words that are not in the 'dictionary.txt' file provided to you.
 
-Once you are confident of your implementation, submit your code to gradescope.
+To test your implementation against our test cases, submit your code to gradescope.
 As always, make sure you commit and push your code to github frequently. 
+
+You have gained experience with text files and lists. We will now progress to working with media files (specifically pictures). Just like lists, images are represented in your program as mutable types, which means you can change them in place. Look for this common trait in the following exercises on image manipulation
+
+
 
 
 
