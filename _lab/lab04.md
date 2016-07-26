@@ -199,7 +199,7 @@ For example, the following is an example screenshot from the call to tree(200, 4
 
 <p align="center">
 ![Tree](/lab/images/tree.gif){:height="200px" width="200px"} 
-</p>p>
+</p>
 
 The tree "grows" from the ground of the world, with initial length of the first trunk 200 pixels. At the end of the first segment, the trunk forks into two directions. The forked trunk in each direction has a shorter length and continues to fork at the end, until the tree has forked 4 times.
 
