@@ -1,6 +1,6 @@
 ---
 topic: "Learning Strategies"
-desc: "Eight strategies for generative learning (Fiorella and Mayer)
+desc: "Eight strategies for generative learning (Fiorella and Mayer)"
 ---
 
 What are some good learning strategies that have proven, in multiple studies, to be effective and promoting learning?
