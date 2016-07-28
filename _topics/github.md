@@ -10,7 +10,7 @@ desc: "Resource for using github"
 
 * Configure git on the ieng6 servers and setup your ssh key following [these instructions](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/). Refer to the next section for using github to complete lab assignments
 
-# Using github for completing lab assignments
+# Using github to complete lab assignments
 
 Git is a version control system that allows you to keep a historical record of all the changes you make to your code and have access to your programs on any computer!
 
