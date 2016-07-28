@@ -38,8 +38,9 @@ You and your partner will share the same repo by following these instructions
 
 ```
 
+## Submitting your code
 
+We recommend that you keep your repo on the git server up to date with the latest version of your code. This allows your mentor to give you timely feedback as you progress through the assignments. To submit your code first stage all the files that have changed using the command `git add .`. Then commit your changes using the command `git commit -m "Message that summarizes your latest changes" `. Your changes will not be visible to your mentor unless you push them to the remote server. To go this use the command `git push`. For more information on git commands refer to [this resource](http://zeroturnaround.com/rebellabs/git-commands-and-best-practices-cheat-sheet/) and the cheat sheet given below:
 
-* http://zeroturnaround.com/rebellabs/git-commands-and-best-practices-cheat-sheet/
 
 ![http://zeroturnaround.com/wp-content/uploads/2016/05/Git-Cheat-Sheet-by-RebelLabs.png](http://zeroturnaround.com/wp-content/uploads/2016/05/Git-Cheat-Sheet-by-RebelLabs.png){:height="1000px" width="1000px"}
