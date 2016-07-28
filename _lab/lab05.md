@@ -39,6 +39,7 @@ Remember: Developing code is an iterative process. Your code will probably not w
 
 We will start with an exercise that reviews recursion and introduces lists for maintaining a dictionary.
 
+# Programming Exercises
 
 ## Part 1: Warm up with scrabble  
 

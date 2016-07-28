@@ -26,16 +26,15 @@ This includes writing parameterized functions, developing test code and solving 
 
 * Step 1: Read Chapter 4 of Guttag
 
-* Step 2: Get the starter code by cloning the github repo called spis16-lab4-Pair_Name1_Name2 (where Name1 and Name2 are the first names of the pair partners.)
-If you don't recall how to do this, refer to the instructions on using git to complete the labs: TO DO: Add link
+* Step 2: Create a new github repo under the "ucsd-cse-spis-2016" organization. Your github repo should be called spis16-lab4-Name1_Name2 (where Name1 and Name2 are the first names of the pair partners). Get the starer code from the repo lab04-startercode. If you don't recall how to do this, refer to the [instructions on using git to complete the labs](/topics/github/)
 
-* Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy and your first steps.
+* Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy.
 
 * Step 4: Unit test your code as you write new code using the pytest framework
 
-* Step 5: Once you feel you have sufficiently tested your code, submit it to gradescope (remember you can submit multiple times). Refer to this link for instructions on how to submit your code using git: TO DO: Add link
+* Step 5: Commit and push your code to github frequently. Once you feel you have sufficiently tested your code, additionally submit it to gradescope (remember you can submit multiple times). Only select exercises need to be submitted to gradescope. Refer to this link for instructions on how to submit your code to git and gradescope: TO DO: Add link
 
-Remember: Developing code is an iterative process. Your code will probably not work as expected on the very first try. Don't be dismayed. Work through your code to identify bugs, test new code frequently and seek help if you feel you are stuck!
+Developing code is an iterative process. Your code will probably not work as expected on the very first try. Don't be dismayed. Work through your code to identify bugs, test new code frequently and seek help if you feel you are stuck!
 
 # Programming Exercises
 Let's begin with our very first exercise which is a warmup on recursion.
