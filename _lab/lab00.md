@@ -55,7 +55,8 @@ There are some online tools for doing this.    You may need to go to a workstati
 
 But if someone else (a mentor or instructor) has a web browser, then the following tools can be used to lookup your account information:
 
-* DIBA PASTE LINKS HERE.
+* [ACMS Account Lookup](https://sdacs.ucsd.edu/~icc/index.php)
+* [ACMS Account Password Change](https://acms.ucsd.edu/students/gpasswd.html)
 
 
 # A note about pair programming
