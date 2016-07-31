@@ -26,7 +26,8 @@ You and your partner will share the same repo by following these instructions
 2. Click on the "New repository" button to create a new repo as shown below: 
 
    ![new repo](/images/new-repo-begin.png)
-   Enter the name of your repo following the naming convention `spis16-labXX-<pair name>`. Enter your pair name exactly as listed under the `Pair_Name` column [at this link](http://ucsd-cse-spis-2016.github.io/info/pairs/). For example, if the repo is for lab04, and the pair name is Phill-Diba, then name your repo "spis16-lab04-Phill-Diba". Select the "private" option when creating your repo to make sure your repo is only visible to the collaborators of the repo (you and your partner) and the course instructors. Click on the "Create repository" button. See the screenshot below:
+   
+   When creating your repo use the naming convention `spis16-labXX-<pair name>`. Enter your pair name exactly as listed under the `Pair_Name` column [at this link](http://ucsd-cse-spis-2016.github.io/info/pairs/). For example, if you are creating a repo for lab04, and the name of your pair is Phill-Diba, then your repo should be named "spis16-lab04-Phill-Diba". Select the "private" option when creating your repo to make sure your repo is only visible to the collaborators of the repo (you and your partner) and the course instructors. Click on the "Create repository" button. See the screenshot below:
 	
    ![new repo](/images/create-new-repo.png)
 
