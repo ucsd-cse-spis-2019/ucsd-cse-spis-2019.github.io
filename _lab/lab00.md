@@ -58,6 +58,60 @@ But if someone else (a mentor or instructor) has a web browser, then the followi
 * [ACMS Account Lookup](https://sdacs.ucsd.edu/~icc/index.php)
 * [ACMS Account Password Change](https://acms.ucsd.edu/students/gpasswd.html)
 
+## Step 3: Log in and bring up web browser and a terminal
+
+This step should be straightforward, but if you need assistance, ask a mentor or instructor for help.
+
+(TODO: consider adding some more detail or screenshots here.)
+
+## Step 4: Open a web browser, and access your UCSD Email
+
+Each pair partner should take a turn doing this step a
+
+In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
+
+Then visit [https://piazza.com](piazza.com) to log in to Piazza
+
+Find the UCSD CSE SPIS 2016 course.  There is a thread on Piazza where you'll be asked to post your github.com id.    (NOT your password, just your login id.)  Find this thread.    
+
+If you already have a github.com id, post that id here.  If you don't have one, create one--the next step tells you how.
+
+## Step 5: Visit github.com
+
+Open a web browser, and navigate to github.com
+
+At the github.com page, if you don't already have a github.com account, using your UCSD email address, create one on the "free plan".   
+
+Or, if you already have a github.com account, log in to it, and add your ucsd.edu email address to the list of email addresses associated with the account.
+
+## Step 6: Post your github id to the thread on Piazza
+
+Now, make a post on Piazza with your github.com id.   A mentor or instructor will need to add you to the UCSD-CSE-SPIS-2016 organization on github.com.  Being a part of that organization allows you to share your work with the instructional team so that we can give you feedback.
+
+Once you've made the post, it may be several minutes before the mentors get around to noticing it and inviting you to the team.  In the meantime, we'll work with some other tools available to you via your ACMS account.
+
+## Step 7:  Bringing up IDLE
+
+IDLE is the program we'll use to do Python programming during SPIS.
+
+In IDLE, you you create, edit, and run Python code.
+
+To bring up idle, type `idle` at the bash shell prompt.
+
+It should look something like this:
+
+* TODO INSERT ACMS IDLE SCREENSHOT HERE.
+
+* TODO: INSERT STEPS TO MAKE HELLO WORLD IN IDLE HERE
+
+## Step 8:  Accept invitation to UCSD-CSE-SPIS-2016 github organization
+
+By now, the mentors/instructors should have inivited you to the UCSD-CSE-SPIS-2016 github organization.
+
+You should find an place where you can accept this invitation if you click on this link and look near the top of the page:
+
+<https://github.com/organizations/ucsd-cse-spis-2016>
+
 
 # A note about pair programming
 
