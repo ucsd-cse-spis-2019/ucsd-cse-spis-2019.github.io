@@ -59,6 +59,7 @@ We recommend that you keep your repo on the git server up to date with the lates
 
 3. Push your changes to github by typing the command `git push`. Your changes will not be visible to your mentor unless you do this final step.
 
+## Git cheatsheet
 
 For more information on git commands refer to [this resource](http://zeroturnaround.com/rebellabs/git-commands-and-best-practices-cheat-sheet/) and the cheat sheet given below:
 
