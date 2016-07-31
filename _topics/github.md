@@ -8,7 +8,7 @@ desc: "Resource for using github"
 * Create your account at github.com.  
  - To get the educational discount (free access to private repos), use an email that ends in .edu
 
-* Configure git on the ieng6 servers and setup your ssh key following [these instructions](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/). Refer to the next section for using github to complete lab assignments
+* Refer to the next section for using github to complete lab assignments
 
 # Using github to complete lab assignments
 
