@@ -41,7 +41,21 @@ After completing this lab, you should be able to
 * Submit that program for testing on Gradescope.com
 * Access the test results to know that your submission was successful.
 
-# TODO: Insert step by step instructions for the admin steps and learning goals...
+# {{page.num}}, step-by-step 
+
+## Step 1: Sit down at a workstation with your SPIS pair partner
+
+You will share a single workstation with your pair partner, and alternate being the "driver" and the "navigator".
+
+The "driver" is the one typing, and the "navigator" provides guidance to the driver as to what to do.
+
+## Step 2: Obtain your ACMS username and password.
+
+There are some online tools for doing this.    You may need to go to a workstation where a mentor or instructor has already logged into the system, because you can't even *get* to web browser without a username and password.
+
+But if someone else (a mentor or instructor) has a web browser, then the following tools can be used to lookup your account information:
+
+* DIBA PASTE LINKS HERE.
 
 
 # A note about pair programming
