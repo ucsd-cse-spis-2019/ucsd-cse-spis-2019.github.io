@@ -11,19 +11,40 @@ If you find typos or problems with the lab instructions, please report them on [
 
 # Your first lab in SPIS
 
-For your first lab, you'll be using the computers in either B230 or B240, the basement of the CSE building.
+For your first lab, you'll be using the computers in B230, a lab in the basement of the CSE building.
 
 These computer run the Linux operating system, and you'll log into them with your SPIS ACMS account.
 
+# Administrative one-time tasks for lab00
+
+During this lab you will acheive the following administrative one-time steps
+
+* Learn what your ACMS username/password for SPIS is
+* Access your UCSD email account to get your invitation to Piazza
+* Activate your Piazza account
+* Create an account on github.com using your UCSD email address
+* Ask a mentor to invite you to the UCSD-CSE-SPIS-2016 organization
+* Accept the invitation
+
+# Learning Goals
+
+After completing this lab, you should be able to
+
+* Login to your SPIS ACMS account on the Linux Systems in B230 of the CSE Building
+* Bring up a web browser on those machines
+* Bring up a terminal window to access the "bash shell prompt"
+* Use a few basic Unix commands 
+* Create a Github repository under the UCSD-CSE-SPIS-2016 organization, and clone it to your ACMS account
+* Work with the `git add`, `git commit`, `git push` commands
+* Bring up IDLE, the programming environment for Python
+* Create a short Python program and run it
+* Submit that program for testing on Gradescope.com
+* Access the test results to know that your submission was successful.
+
+# TODO: Insert step by step instructions for the admin steps and learning goals...
 
 
-
-TODO: Fill in details of {{page.num}}
-
-
-
-
-A note about pair programming
+# A note about pair programming
 
 Throughout SPIS you will be working closely with a partner.  This is something you will be asked to do repeatedly in your courses at UCSD, as well as in your career.  At first this might be uncomfortable.  You might feel like your partner is holding you back, or like you are holding your partner back.  This is natural--different people work at different speeds, and someone who works a little faster is not "better" or "smarter" than someone who works a little slower.   Even in the face of these differences, we want you to work together.   In particular, it is not OK to abandon your partner and simply work on your own.  If you and your partner both agree, you can do small pieces of the project individually, but you must synch up again regularly, and we discourage this style of work.
 
@@ -31,7 +52,7 @@ If you find that you and your partner work at vastly different speeds or have st
 
 For your project work, you need not work with the same partner you use for labs.  But for at least the first two weeks of lab work, you'll be with your same partner, so you might as well get to know each other!
 
-To "learn the do’s and don’ts" of pair programming and to see pairs in action, view this entertaining video about pair programming from North Carolina State University: An Introduction to Pair Programming for Students.
+To "learn the do’s and don’ts" of pair programming and to see pairs in action, view this entertaining (if a bit corny/cheesey) video about pair programming from North Carolina State University: [An Introduction to Pair Programming for Students](https://www.youtube.com/watch?v=rG_U12uqRhE).
 
 # A note about assignment deadlines
 
@@ -46,4 +67,3 @@ You can also submit earlier if you like.
 However, please know that while we want to encouage you to try to complete assignments by the given deadlines, if you find that you are working at a slower pace, just keep working.  Because SPIS is not graded, it's OK if you don't get everything done, but we'd like you to do as much as you can.   If you aren't finished, submit what you have, but then *keep working on the assignment* as long as it is helping you learn the material.
 
 Periodically, you'll get feedback from your mentors and instructors about your progress on the assignments.     Trying to stay ahead of the deadlines is good practice for the regular quarter, and it will help you get the most out of SPIS.  But the most important thing is to work at the pace at which you will learn the material best.
-
