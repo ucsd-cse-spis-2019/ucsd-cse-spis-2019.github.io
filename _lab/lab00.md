@@ -33,13 +33,9 @@ After completing this lab, you should be able to
 * Login to your SPIS ACMS account on the Linux Systems in B230 of the CSE Building
 * Bring up a web browser on those machines
 * Bring up a terminal window to access the "bash shell prompt"
-* Use a few basic Unix commands 
-* Create a Github repository under the UCSD-CSE-SPIS-2016 organization, and clone it to your ACMS account
-* Work with the `git add`, `git commit`, `git push` commands
 * Bring up IDLE, the programming environment for Python
 * Create a short Python program and run it
-* Submit that program for testing on Gradescope.com
-* Access the test results to know that your submission was successful.
+* Create a Github repository under the UCSD-CSE-SPIS-2016 organization
 
 # {{page.num}}, step-by-step 
 
@@ -85,8 +81,7 @@ At the github.com page, if you don't already have a github.com account, using yo
 Or, if you already have a github.com account, log in to it, and add your ucsd.edu email address to the list of email addresses associated with the account.
 
 Then, fill out the following form to let us know what your github id is:
-
-TODO: Create Google form where we ask for first from spis name tag, last, preferred first name if different, githubid.
+[https://goo.gl/forms/sgehc2hlH8pSkUEp1](https://goo.gl/forms/sgehc2hlH8pSkUEp1)
 
 ## Step 4:  Bringing up IDLE
 
