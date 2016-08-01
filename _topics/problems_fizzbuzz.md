@@ -9,6 +9,7 @@ The fizzbuzz problem takes it name from a game where the players take turns, goi
 upwards from 1: that is, 1, 2, 3, etc.
 
 Except that there are three rules:
+
 * If the number is divisble by 3, you say "fizz" instead of the number.  
     * For example, 1, 2, fizz, 4, ...
 * If the number is divisible by 5, you say "buzz" instead of the number.  
