@@ -64,6 +64,7 @@ Continuing with the Roomba vacuum cleaner analogy, you might know that the edges
 
 Submit your code using the following table
 
+```
 # Filename: PicobotMaze
 # Name 1  :
 # PID 1   :
@@ -79,6 +80,7 @@ Submit your code using the following table
 #Put your code below for Room 2
 
 # Add headers for any additional code you want to add to this file
+```
 
 Fill in the template with your information (names/PIDs/Date)
 
