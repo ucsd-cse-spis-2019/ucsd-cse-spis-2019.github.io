@@ -65,20 +65,26 @@ The "driver" is the one typing, and the "navigator" provides guidance to the dri
 
 Please take a moment to visit this link and learn more about [Pair Programming](/topics/pair_programming/).
 
+To "learn the do’s and don’ts" of pair programming and to see pairs in action, you may also want to check out this entertaining (if a bit corny/cheesey) video about pair programming from North Carolina State University: [An Introduction to Pair Programming for Students](https://www.youtube.com/watch?v=rG_U12uqRhE).
 
-## Step 3: Log in and bring up web browser and a terminal
+## Step 2: Log in and bring up web browser and a terminal
 
 This step should be straightforward, but if you need assistance, ask a mentor or instructor for help.
 
-(TODO: consider adding some more detail or screenshots here.)
+## Step 3: Visit github.com to create or update your account
 
-## Step 5: Visit github.com
 
-Open a web browser, and navigate to github.com
+<div class="redbox">
+Each pair partner should take a turn completing this step separately.
+</div>
+
+Open a web browser, and navigate to github.com.
 
 At the github.com page, if you don't already have a github.com account, using your UCSD email address, create one on the "free plan".   
 
 Or, if you already have a github.com account, log in to it, and add your ucsd.edu email address to the list of email addresses associated with the account.
+
+Then, 
 
 ## Step 6: Post your github id to the thread on Piazza
 
@@ -121,10 +127,8 @@ Find the UCSD CSE SPIS 2016 course.  There is a thread on Piazza where you'll be
 
 If you already have a github.com id, post that id here.  If you don't have one, create one--the next step tells you how.
 
-# A note about pair programming
 
 
-To "learn the do’s and don’ts" of pair programming and to see pairs in action, view this entertaining (if a bit corny/cheesey) video about pair programming from North Carolina State University: [An Introduction to Pair Programming for Students](https://www.youtube.com/watch?v=rG_U12uqRhE).
 
 # A note about assignment deadlines
 
