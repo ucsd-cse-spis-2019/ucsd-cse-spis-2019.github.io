@@ -21,14 +21,15 @@ Recast as a programming problem, fizzbuzz goes like this:
 > Write a function that takes an single integer parameter, and returns a string.
 > The parameter x is an integer greater than or equal to 1.
 > The return value should be either the number x formatted as a string, or the word "fizz", "buzz", or "fizzbuzz" as appropriate.
-> 
-> For example: 
->     * `fizzbuzz(1)` should return `"1"`
->     * `fizzbuzz(2)` should return `"2"`
->     * `fizzbuzz(3)` should return `"fizz"`
->     * `fizzbuzz(4)` should return `"4"`
->     * `fizzbuzz(5)` should return `"buzz"`
->     * `fizzbuzz(6)` should return `"fizz"`
->     * `fizzbuzz(7)` should return `"7"`
->     * ...
->     * `fizzbuzz(15)` should return `"fizzbuzz"`
+
+For example: 
+
+* `fizzbuzz(1)` should return `"1"`
+* `fizzbuzz(2)` should return `"2"`
+* `fizzbuzz(3)` should return `"fizz"`
+* `fizzbuzz(4)` should return `"4"`
+* `fizzbuzz(5)` should return `"buzz"`
+* `fizzbuzz(6)` should return `"fizz"`
+* `fizzbuzz(7)` should return `"7"`
+* ...
+* `fizzbuzz(15)` should return `"fizzbuzz"`
