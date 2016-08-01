@@ -1,9 +1,10 @@
 ---
 topic: "Python: Functions"
-desc: "resusable units of code"
+desc: "reusable units of code"
 ---
 
 Many scientific fields have a basic unit of study:
+
 * Biology has the *cell*
 * Chemistry has *atoms* and *molecules*
 
