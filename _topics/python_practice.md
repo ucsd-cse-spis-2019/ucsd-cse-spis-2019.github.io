@@ -24,7 +24,14 @@ Most of the Cyber Dojo sessions are set up with generic programming problems, an
 The "initial solution" to the problem is actually just some dummy code that has nothing to do with the problem given.  It is just a 
 sample of some code written in that language.
 
+## Cyber Dojo Sessions for SPIS
+
 We have set up a few cyber-dojo sessions specially for SPIS where the starter code is a bit closer to the actual solution, 
-to give you a head start.  Here are links to a few of those:
+to give you a head start.    You can enter these sessions by clicking on "Enter a Practice Session" and entering the number of the session.
+
+Here are some sessions for you to explore:
+
+* 3CFC090:  isPrime
+
 
 
