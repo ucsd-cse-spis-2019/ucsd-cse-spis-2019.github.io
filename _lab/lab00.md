@@ -88,15 +88,7 @@ Then, fill out the following form to let us know what your github id is:
 
 TODO: Create Google form where we ask for first from spis name tag, last, preferred first name if different, githubid.
 
-
-
-## Step 6: Post your github id to the thread on Piazza
-
-Now, make a post on Piazza with your github.com id.   A mentor or instructor will need to add you to the UCSD-CSE-SPIS-2016 organization on github.com.  Being a part of that organization allows you to share your work with the instructional team so that we can give you feedback.
-
-Once you've made the post, it may be several minutes before the mentors get around to noticing it and inviting you to the team.  In the meantime, we'll work with some other tools available to you via your ACMS account.
-
-## Step 7:  Bringing up IDLE
+## Step 4:  Bringing up IDLE
 
 IDLE is the program we'll use to do Python programming during SPIS.
 
@@ -110,7 +102,7 @@ It should look something like this:
 
 * TODO: INSERT STEPS TO MAKE HELLO WORLD IN IDLE HERE
 
-## Step 8:  Accept invitation to UCSD-CSE-SPIS-2016 github organization
+## Step 5:  Accept invitation to UCSD-CSE-SPIS-2016 github organization
 
 By now, the mentors/instructors should have inivited you to the UCSD-CSE-SPIS-2016 github organization.
 
@@ -118,18 +110,22 @@ You should find an place where you can accept this invitation if you click on th
 
 <https://github.com/organizations/ucsd-cse-spis-2016>
 
+Click on the invitation so that you are part of the ucsd-cse-spis-2016 organization.
 
-## Step 4: Accept your invitation to Piazza (if you haven't yet done it.)
+## Step 6:  Create your first github repo, a practice repo.
 
-Each pair partner should take a turn doing this step.
+<div class="redbox">
+Each pair partner should take a turn at this step.
+</div>
 
-In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
+Your next step will be to create a github *repository* or repo for short.
 
-Then visit [https://piazza.com](piazza.com) to log in to Piazza
+TODO Continue from here...   describe how to create the repo.
 
-Find the UCSD CSE SPIS 2016 course.  There is a thread on Piazza where you'll be asked to post your github.com id.    (NOT your password, just your login id.)  Find this thread.    
+Describe how to put some text in the repo using only the web interface...
 
-If you already have a github.com id, post that id here.  If you don't have one, create one--the next step tells you how.
+
+
 
 
 
