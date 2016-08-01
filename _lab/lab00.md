@@ -84,7 +84,11 @@ At the github.com page, if you don't already have a github.com account, using yo
 
 Or, if you already have a github.com account, log in to it, and add your ucsd.edu email address to the list of email addresses associated with the account.
 
-Then, 
+Then, fill out the following form to let us know what your github id is:
+
+TODO: Create Google form where we ask for first from spis name tag, last, preferred first name if different, githubid.
+
+
 
 ## Step 6: Post your github id to the thread on Piazza
 
