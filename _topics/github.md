@@ -16,9 +16,9 @@ Git is a version control system that allows you to keep a historical record of a
 
 Below are a set of instructions that are common to completing all of the lab assignments
 
-## Creating your github repo
+## Creating a github repo for a lab assignment.
 
-We ask that you create a new private github repo for each lab assignment.
+We ask that you create a new private github repo *inside the ucsd-cse-spis-2016 organization* for each lab assignment.
 You and your partner will share the same repo by following these instructions
 
 1. Navigate to the [ucsd-cse-spis-2016 organization](https://github.com/ucsd-cse-spis-2016)
@@ -26,6 +26,9 @@ You and your partner will share the same repo by following these instructions
 2. Click on the "New repository" button to create a new repo as shown below: 
 
    ![new repo](/images/new-repo-begin.png)
+   
+   Be sure that you create the repository *under the ucsd-cse-spis-2016 organization* and not under your own github
+   account.    You will need to select ucsd-cse-spis-2016 from the pull down menu.
    
    When creating your repo use the naming convention `spis16-labXX-<pair name>`. Enter your pair name exactly as listed under the `Pair_Name` column [at this link](http://ucsd-cse-spis-2016.github.io/info/pairs/). For example, if you are creating a repo for lab04, and the name of your pair is Phill-Diba, then your repo should be named "spis16-lab04-Phill-Diba". Select the "private" option when creating your repo to make sure your repo is only visible to the collaborators of the repo (you and your partner) and the course instructors. Click on the "Create repository" button. See the screenshot below:
 	
