@@ -43,38 +43,34 @@ After completing this lab, you should be able to
 
 # {{page.num}}, step-by-step 
 
-## Step 1: Sit down at a workstation with your SPIS pair partner
+## Step 0: Obtain your ACMS username and password.
+
+Before you can even sit down and begin using a workstation in B230, even to surf the web, you need to know your ACMS username and password.
+
+And to obtain those, you'll need to be able to access a web browser.   Catch-22!
+
+But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to lookup your ACMS username, and reset your password:
+
+[https://ucsd-cse-spis-2016.github.io/topics/acms/](/topics/acms/)
+
+Once you know your username and password, please sit down at a workstation with your pair partner.
+
+## Step 1: Choose initial "driver" and "navigator"
+
+During SPIS, we'll be using *Pair Programming*, a system where two people collaborate on a single solution to a problem.
 
 You will share a single workstation with your pair partner, and alternate being the "driver" and the "navigator".
 
 The "driver" is the one typing, and the "navigator" provides guidance to the driver as to what to do.
 
-## Step 2: Obtain your ACMS username and password.
+Please take a moment to visit this link and learn more about [Pair Programming](/topics/pair_programming/).
 
-There are some online tools for doing this.    You may need to go to a workstation where a mentor or instructor has already logged into the system, because you can't even *get* to web browser without a username and password.
-
-But if someone else (a mentor or instructor) has a web browser, then the following tools can be used to lookup your account information:
-
-* [ACMS Account Lookup](https://sdacs.ucsd.edu/~icc/index.php)
-* [ACMS Account Password Change](https://acms.ucsd.edu/students/gpasswd.html)
 
 ## Step 3: Log in and bring up web browser and a terminal
 
 This step should be straightforward, but if you need assistance, ask a mentor or instructor for help.
 
 (TODO: consider adding some more detail or screenshots here.)
-
-## Step 4: Open a web browser, and access your UCSD Email
-
-Each pair partner should take a turn doing this step a
-
-In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
-
-Then visit [https://piazza.com](piazza.com) to log in to Piazza
-
-Find the UCSD CSE SPIS 2016 course.  There is a thread on Piazza where you'll be asked to post your github.com id.    (NOT your password, just your login id.)  Find this thread.    
-
-If you already have a github.com id, post that id here.  If you don't have one, create one--the next step tells you how.
 
 ## Step 5: Visit github.com
 
@@ -112,6 +108,18 @@ You should find an place where you can accept this invitation if you click on th
 
 <https://github.com/organizations/ucsd-cse-spis-2016>
 
+
+## Step 4: Accept your invitation to Piazza (if you haven't yet done it.)
+
+Each pair partner should take a turn doing this step.
+
+In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
+
+Then visit [https://piazza.com](piazza.com) to log in to Piazza
+
+Find the UCSD CSE SPIS 2016 course.  There is a thread on Piazza where you'll be asked to post your github.com id.    (NOT your password, just your login id.)  Find this thread.    
+
+If you already have a github.com id, post that id here.  If you don't have one, create one--the next step tells you how.
 
 # A note about pair programming
 
