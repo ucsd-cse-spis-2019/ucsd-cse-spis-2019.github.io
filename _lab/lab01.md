@@ -9,24 +9,7 @@ due: 2016-08-03 17:00:00.00-7
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
-This lab is in two parts.  
 
-* The first part is simply an administrative detail: accepting your invitation to your Piazza account.   
-* The second part provides an exploration in problem solving using a tool called Picobot.
-
-# Part 1: Piazza Invitation
-
-Each pair partner should take a turn doing this step.
-
-In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
-
-Then visit [https://piazza.com](piazza.com) to log in to Piazza
-
-Find the UCSD CSE SPIS 2016 course.  There is a thread on Piazza where you'll be asked to post your github.com id.    (NOT your password, just your login id.)  Find this thread.    
-
-If you already have a github.com id, post that id here.  If you don't have one, create one--the next step tells you how.
-
-# Part 2: Picobot
 
 The learning goals associated with this lab and milestone project are the following:
 
