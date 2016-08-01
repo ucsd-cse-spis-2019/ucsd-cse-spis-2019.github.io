@@ -26,7 +26,7 @@ This includes writing parameterized functions, developing test code and solving 
 
 * Step 1: Read Chapter 4 of Guttag
 
-* Step 2: Create a new github repo under the "ucsd-cse-spis-2016" organization. Your github repo should be called spis16-lab4-Name1_Name2 (where Name1 and Name2 are the first names of the pair partners). Get the starer code from the repo lab04-startercode. If you don't recall how to do this, refer to the [instructions on using git to complete the labs](/topics/github/)
+* Step 2: Create a new github repo under the "ucsd-cse-spis-2016" organization. Your github repo should be called spis16-lab04-Name1_Name2 (where Name1 and Name2 are the first names of the pair partners). Get the starer code from the repo lab04-startercode. If you don't recall how to do this, refer to the [instructions on using git to complete the labs](/topics/github/)
 
 * Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy.
 

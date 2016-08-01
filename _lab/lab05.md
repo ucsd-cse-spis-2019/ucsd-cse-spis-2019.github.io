@@ -9,7 +9,7 @@ due: 2016-08-12 15:45:00.00-7
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
-# Learning Goals
+# Learning Goals 
 In this lab you will practice the use of lists and other mutable data structures following Chapter 5 of Guttag. We will also review concepts from Chapter 4 of Guttag: recursion, interacting with text files and media files (pictures). 
 Note that while media files are not covered in Guttag, working with media requires many of the concepts covered in lecture and in the book. To top it all you will manipulate and transform images.
 

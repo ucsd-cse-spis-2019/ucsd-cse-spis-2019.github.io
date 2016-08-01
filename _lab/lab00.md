@@ -125,7 +125,7 @@ By now, the mentors/instructors should have inivited you to the UCSD-CSE-SPIS-20
 
 You should find an place where you can accept this invitation if you click on this link and look near the top of the page:
 
-<https://github.com/organizations/ucsd-cse-spis-2016>
+<https://github.com/ucsd-cse-spis-2016>
 
 Click on the invitation so that you are part of the ucsd-cse-spis-2016 organization.
 
