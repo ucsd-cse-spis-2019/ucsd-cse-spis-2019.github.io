@@ -9,3 +9,6 @@ If you find that you and your partner work at vastly different speeds or have st
 
 For your project work, you need not work with the same partner you use for labs.  But for at least the first two weeks of lab work, you'll be with your same partner, so you might as well get to know each other!
 
+# An Introduction to Pair Programming for Students (video)
+
+To "learn the do’s and don’ts" of pair programming and to see pairs in action, view this entertaining (if a bit corny/cheesey) video about pair programming from North Carolina State University: [An Introduction to Pair Programming for Students](https://www.youtube.com/watch?v=rG_U12uqRhE).
