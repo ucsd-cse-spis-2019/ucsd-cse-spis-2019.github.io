@@ -35,9 +35,11 @@ Sections 1.2.1-1.2.3:
 
 Sections 1.2.4-1.2.6:
 * Describe the following rules in English:
+
+```
 	0 N*x* --> W 0
 	1 x**x --> N 2
-
+```
 * What is the difference between the "*" and the "x" in the description of Picobot's surroundings?
 
 * Write a Picobot rule that would cause Picobot to crash into a wall (Picobot will report an error if you try this)
