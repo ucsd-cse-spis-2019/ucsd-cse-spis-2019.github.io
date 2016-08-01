@@ -1,6 +1,6 @@
 ---
 topic: Picobot
-desc: "insert description"
+desc: "A web-based robot simulator"
 ---
 
 The learning goals associated with this lab and milestone project are the following:
