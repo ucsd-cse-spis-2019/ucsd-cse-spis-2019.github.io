@@ -12,6 +12,7 @@ The learning goals associated with this lab and milestone project are the follow
 * Save and submit your files for feedback
 
 The basic end-goals for this part of the lab are (and remember, these are minimal goals, eager for extensions):
+
 * Write a program that directs your robot, Picobot, to completely "cover" (i.e., visit all the non-wall spaces) first an empty room, and then a maze.  
 
 # Picobot Simulator: Feel free to jump right in...
