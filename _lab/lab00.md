@@ -21,10 +21,10 @@ During this lab you will acheive the following administrative one-time steps
 
 * Learn what your ACMS username/password for SPIS is
 * Access your UCSD email account to get your invitation to Piazza
-* Activate your Piazza account
 * Create an account on github.com using your UCSD email address
-* Ask a mentor to invite you to the UCSD-CSE-SPIS-2016 organization
-* Accept the invitation
+* Fill out a Google Form so that we know your github id
+* Accept an invitation to the ucsb-cse-spis-2016 github organization
+* Activate your Piazza account
 
 # Learning Goals
 
@@ -36,6 +36,7 @@ After completing this lab, you should be able to
 * Bring up IDLE, the programming environment for Python
 * Create a short Python program and run it
 * Create a Github repository under the UCSD-CSE-SPIS-2016 organization
+* Use the github web interface to upload files and edit text in a README.md file
 
 # {{page.num}}, step-by-step 
 
