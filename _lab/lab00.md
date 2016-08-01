@@ -96,11 +96,32 @@ In IDLE, you you create, edit, and run Python code.
 
 To bring up idle, type `idle` at the bash shell prompt.
 
-It should look something like this:
+For this step, there is one goal: write a Python 2.7 program that prints the string `Hello, World!` as its output.
 
-* TODO INSERT ACMS IDLE SCREENSHOT HERE.
+In this sense, we are following a long tradition: for [more than 40 years](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) it has been a tradition to make printing `Hello, World!` be the first thing you do when learning a new programming language.
 
-* TODO: INSERT STEPS TO MAKE HELLO WORLD IN IDLE HERE
+In Python, this program is very short.  It looks like this:
+
+```Python
+print 'Hello, World!'
+```
+
+That's it!   Now, you can also add, on the first line, a *comment* with your name, your pair partner's name,
+and the reason you wrote the program.
+
+```Python
+# Alex Triton and Chris La Jolla for CSE SPIS 2016
+print 'Hello, World!'
+```
+You are encouraged to do that, because it helps someone looking at your code know that *you* wrote it.  But, other than that, it isn't necessary.  In general, in computer programming, a *comment* is something that is intended only for human readers of the code, and is otherwise "ignored by the system".   Nearly every programming language has some way to express comments, though the exact rules for formatting of comments--that is, the *syntax* of comments--differs from one language to another.
+
+In Python, a `#` starts a comment.  Everything from the `#` to the end of that line is part of the comment.
+
+As far as how to create, save and run this program in IDLE, it's easier to just watch someone do it than to try 
+to read an explanation.  So, we'll demonstrate this in Lecture.  But if you need a refresher, this [Youtube video
+explains Hello World in IDLE](http://www.youtube.com/watch?v=Cdk20r2dgFU)
+
+Once you've run your "Hello World!" program, you are ready to move on to the next step.
 
 ## Step 5:  Accept invitation to UCSD-CSE-SPIS-2016 github organization
 
@@ -124,7 +145,53 @@ TODO Continue from here...   describe how to create the repo.
 
 Describe how to put some text in the repo using only the web interface...
 
+Your first repository will have a name that corresponds to your first name and last initial such as:
 
+* `ucsd-cse-spis-2016/practice-alex-t`
+* `ucsd-cse-spis-2016/practice-chris-l`
+* `ucsd-cse-spis-2016/practice-diba-m`
+
+To create this repo, navigate to github.com, and find the button at upper right to create a repository.
+
+On the next screen:
+
+* Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2016`, NOT your own github id.
+* Click the box to create a README.md file in the repo
+* Select a .gitignore file for Python
+* You don't need to select a license file.
+
+Then, once you've entered all of this information, click to create the repository.
+
+After you've done that, logout of github.com, and let your pair partner take a turn doing the same thing.
+
+## Step 6:  Add a message and a photo to your `ucsd-cse-spis-2016/practice-alex-t` repo.
+
+For this step, please ask one of the mentors to take a photo of you, with your face and your name tag visible, and
+then email the photo to you.
+
+* If you, your pair partner, or a fellow SPISer happen to have a phone with a camera and email capability, you can also
+    just take the photo yourself.
+
+Once you have the photo in your email, access your email from the web browser of the ACMS linux machine at which you are
+seated.   Save the photo (i.e. the .png, .jpg, or whatever) to a file.    Depending on the browser you are using, this 
+file may end up in your "home directory", or in some other directory (e.g. `~/Downloads`, `~/Desktop`, etc.)
+
+Once you've located it, your next job will be to upload it to your github practice repository.  We'll discuss how
+in the next step.
+
+# Step 7: Upload your photo to your `ucsd-cse-spis-2016/practice-alex-t` repo.
+
+Navigate to the web page for your repo.  It will be something like:
+
+`https://github.com/ucsd-cse-spis-2016/practice-alex-t`
+
+except it will be your name instead of `alex-t`.
+
+On the right hand side, there is a great big green button labelled "Clone or Download".   Eventually, we'll be using that button a lot.  But for now, look just a few buttons to the left, and you'll find a button that says "Upload files".
+
+Click that button, and upload your photo from the place where you saved it out of your email.
+
+Once you've uploaded it, you should be able to change the name to `alex-t.jpg` or `alex-t.png` or whatever.   You need to keep the .jpg or .png exactly as it is, but change the first part of the filename to match your first name and last initial, in lowercase, separated by a hyphen (`-`).     The naming convention is important, because the SPIS staff is going to access all of these images to create a SPIS photo album so that we can all learn your names more quickly.
 
 
 
