@@ -9,6 +9,24 @@ due: 2016-08-03 17:00:00.00-7
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
+This lab is in two parts.  
+
+* The first part is simply an administrative detail: accepting your invitation to your Piazza account.   
+* The second part provides an exploration in problem solving using a tool called Picobot.
+
+# Part 1: Piazza Invitation
+
+Each pair partner should take a turn doing this step.
+
+In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
+
+Then visit [https://piazza.com](piazza.com) to log in to Piazza
+
+Find the UCSD CSE SPIS 2016 course.  There is a thread on Piazza where you'll be asked to post your github.com id.    (NOT your password, just your login id.)  Find this thread.    
+
+If you already have a github.com id, post that id here.  If you don't have one, create one--the next step tells you how.
+
+# Part 2: Picobot
 
 The learning goals associated with this lab and milestone project are the following:
 
@@ -22,7 +40,7 @@ The basic end-goals for this part of the lab are (and remember, these are minima
 
 * Write a program that directs your robot, Picobot, to completely "cover" (i.e., visit all the non-wall spaces) first an empty room, and then a maze.  
 
-# Picobot Simulator: Feel free to jump right in...
+## Picobot Simulator: Feel free to jump right in...
 
 Once you have logged on to your account on a terminal in the computer lab and managed to open a web browser (which we assume you have done if you are reading this), you are ready to dive into Picobot. You may already feel comfortable with Picobot from the exercises we did in the interactive portion of this lab.  If that's the case and you're ready to start writing your code, you can jump right to the Picobot simulator and start writing programs:
 
@@ -74,7 +92,7 @@ When you've mastered the maze and you're ready for more, try these SUPER-challen
 Scroll through the different maps and see if you can write Picobot programs to solve these other rooms.  Can you write a single program that works for ALL provided mazes?
 Continuing with the Roomba vacuum cleaner analogy, you might know that the edges of a room get dirtier than the middle of the room (dust kicked up accumulates near the walls).  Can you program Picobot to cover the cells that are adjacent to walls at least twice and cover interior cells exactly once?  Can you formulate other criteria you might want to solve?  Are there unsolvable requirements?
 
-# Submitting your code
+## Submitting your code
 
 Please create a private github repo with the name spis16-lab01-pair1name-pair2name.
 
