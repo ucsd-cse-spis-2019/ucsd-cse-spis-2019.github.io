@@ -31,9 +31,11 @@ Read [Chapter 1.2 of the book CS for All](https://www.cs.hmc.edu/csforall/Introd
 As you read, make sure you can answer the following questions.  Discuss the answers with your partner.  Ask a tutor if you're stuck or want to check your answers:
 
 Sections 1.2.1-1.2.3: 
+
 * Draw the environments for the following descriptions: xxWx, NxWS
 
 Sections 1.2.4-1.2.6:
+
 * Describe the following rules in English:
 
 ```
