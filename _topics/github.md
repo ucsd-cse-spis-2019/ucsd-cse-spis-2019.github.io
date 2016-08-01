@@ -27,8 +27,8 @@ You and your partner will share the same repo by following these instructions
 
    ![new repo](/images/new-repo-begin.png)
    
-   Be sure that you create the repository *under the ucsd-cse-spis-2016 organization* and not under your own github
-   account.    You will need to select ucsd-cse-spis-2016 from the pull down menu.
+   Be sure that the "owner" of the repository is *ucsd-cse-spis-2016* as shown in the image, and NOT your own github account.  If the owner shows as your own github id, you may have to change the pull down menu on the left
+   where it says owner.
    
    When creating your repo use the naming convention `spis16-labXX-<pair name>`. Enter your pair name exactly as listed under the `Pair_Name` column [at this link](http://ucsd-cse-spis-2016.github.io/info/pairs/). For example, if you are creating a repo for lab04, and the name of your pair is Phill-Diba, then your repo should be named "spis16-lab04-Phill-Diba". Select the "private" option when creating your repo to make sure your repo is only visible to the collaborators of the repo (you and your partner) and the course instructors. Click on the "Create repository" button. See the screenshot below:
 	
