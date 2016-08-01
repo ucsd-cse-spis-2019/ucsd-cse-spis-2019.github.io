@@ -139,11 +139,7 @@ Click on the invitation so that you are part of the ucsd-cse-spis-2016 organizat
 Each pair partner should take a turn at this step.
 </div>
 
-Your next step will be to create a github *repository* or repo for short.
-
-TODO Continue from here...   describe how to create the repo.
-
-Describe how to put some text in the repo using only the web interface...
+Your next step will be to create a github *repository* or repo for short.  
 
 Your first repository will have a name that corresponds to your first name and last initial such as:
 
@@ -151,13 +147,19 @@ Your first repository will have a name that corresponds to your first name and l
 * `ucsd-cse-spis-2016/practice-chris-l`
 * `ucsd-cse-spis-2016/practice-diba-m`
 
-To create this repo, navigate to github.com, and find the button at upper right to create a repository.
+To create this repo:
+* Navigate to [https://github.com](https://github.com)
+* Login to your github.com account, and 
+* Then and find the button at upper right to create a repository.  
+    * That button looks like a + sign with a triangle next to it.  
+    * When you click that button, there are three choices.  Select "New Repository"
 
 On the next screen:
 
 * Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2016`, NOT your own github id.
-* Click the box to create a README.md file in the repo
-* Select a .gitignore file for Python
+* Put `practice-alex-t` as the name (BUT PUT YOUR OWN NAME AND FIRST INITIAL, not literally `alex-t` :-) )
+* Click the box to create a `README.md` file in the repo
+* Select a `.gitignore` file for Python
 * You don't need to select a license file.
 
 Then, once you've entered all of this information, click to create the repository.
@@ -194,8 +196,34 @@ Click that button, and upload your photo from the place where you saved it out o
 Once you've uploaded it, you should be able to change the name to `alex-t.jpg` or `alex-t.png` or whatever.   You need to keep the .jpg or .png exactly as it is, but change the first part of the filename to match your first name and last initial, in lowercase, separated by a hyphen (`-`).     The naming convention is important, because the SPIS staff is going to access all of these images to create a SPIS photo album so that we can all learn your names more quickly.
 
 
+# Step 8: Edit your README.md file to add some information about you, and a link to your photo
 
+Navigate again to the main page for your repo, e.g. 
 
+`https://github.com/ucsd-cse-spis-2016/practice-alex-t`
+
+You'll see a file called README.md.  Click on the filename.  This should take you a page for just that file,
+where you'll see, among other things, a pencil icon that allows you to make changes to the file.
+
+In that file, add a few lines of text that introduces yourself to the SPIS 2016 instructional staff. 
+Tell us where you are from, some of things you are hoping to learn during SPIS, and perhaps some
+outside interests and activities you might like to participate in during our non-academic sessions
+(e.g. sports, musical instruments you play, board games, etc.)
+
+Then, add the following, on a line by itself, with a blank line before it and after it. 
+
+Copying it exactly, except for changing the `alex-t.jpg` part to whatever the name
+of your image file is:
+
+```
+
+![me](alex-t.jpg)
+
+```
+
+Save it, and take a look at your README.md file.  You should see your photo embedded in the README.md text.
+
+If so, you are finished with lab00!
 
 # A note about assignment deadlines
 
