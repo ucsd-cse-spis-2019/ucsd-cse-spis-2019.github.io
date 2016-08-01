@@ -221,6 +221,18 @@ Save it, and take a look at your README.md file.  You should see your photo embe
 
 If so, you are finished with lab00!
 
+# Step 8: Piazza Invitation
+
+<div class="redbox">
+Each pair partner should take a turn doing this step.
+</div>
+
+In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
+
+Then visit [https://piazza.com](piazza.com) to log in to Piazza
+
+Find the UCSD CSE SPIS 2016 course and familiarize yourself with the Piazza site.
+
 # A note about assignment deadlines
 
 SPIS will use a series of deadlines to help you stay on track with your work as well as to allow us to keep track of your progress. 
