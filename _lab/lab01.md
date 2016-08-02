@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab01
-ready: false
+ready: true
 desc: "Picobot"
 assigned: 2016-08-02 09:30:00.00-7
 due: 2016-08-03 17:00:00.00-7
@@ -79,9 +79,14 @@ Think carefully about your states.  You will likely want to use 4 states where e
 Consider carefully which wall your hand will be on if you are heading in each direction, and this will help you figure out which direction to move, and when to change states.  For example, if you are heading north, your hand is on the east wall.  So as long as there is a wall to your east, and no wall to the north, you keep going north,  dragging your hand on the wall.  If the wall to the east suddenly disappears, then you turn in that direction to follow the wall. If you suddenly hit a wall to the north, then your hand sweeps around the corner between the eastern and northern walls and you turn in the process so that you are facing west and your hand is now on the northern wall.  Make sure you understand ALL of the possible turns and transitions before you start writing rules.  If anything is unclear, ask a tutor.  We repeat: do not write rules until you have a firm understanding of what each state means, and how different environments affect your direction and forward progress.  It's all about keeping your right hand on the wall...
 Before continuing, save your code for the maze solution in the file `maze.txt` in your github repo.  You can use the same file to solve the maze for multiple rooms. 
 
+## SUPER-challenge problems
+
 When you've mastered the maze and you're ready for more, try these SUPER-challenge problems:
+
 * for the empty room, see if you can use only 6 rules 
+
 * for the empty room, can you build a machine that covers each cell in the room exactly once? 
+
 * for the maze, see if you can use only 8 rules 
 
 Scroll through the different maps and see if you can write Picobot programs to solve these other rooms. Can you write a single program that works for ALL provided mazes?
