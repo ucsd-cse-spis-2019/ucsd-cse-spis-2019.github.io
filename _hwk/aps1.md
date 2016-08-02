@@ -10,7 +10,7 @@ Insert description here OR insert link here enclosed in <>
 
 e.g. 
 
-<//scc_counterexample.pdf>
+[scc file](scc_counterexample.pdf)
 
 or
 
