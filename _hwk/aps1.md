@@ -10,7 +10,7 @@ Insert description here OR insert link here enclosed in <>
 
 e.g. 
 
-<http://spis.ucsd.edu/aps/assignment1.html>
+<scc_counterexample.pdf>
 
 or
 
