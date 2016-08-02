@@ -63,12 +63,14 @@ As you read, make sure you can answer the following questions.  Discuss the answ
 6. In the Picobot simulator, what will happen if we replace the "X"s in the second and fourth starting rule with a W.  First try to predict, and then run the simulation to see what happens.
 
 
-## Program Picobot: Solve the empty room
+## Program Picobot to solve the empty room
 
 When you are finished reading (or even before you finish), solve the empty room problem.  That is, write a Picobot program to make Picobot visit every cell in the empty room, no matter where it starts.  Here are some hints to get you started:
 As you saw if you answered the last question above, simply changing the X's to W's gets you a good part of the way there.  But there are some problems.  The first is that Picobot crashes into walls.  Picbobot should only be allowed to move West if there is no wall to the West.  Modify the existing rules so that Picobot moves West whenever it is against a N or S wall and there is no wall to the west.
 Now Picobot successfully covers the room to the West of where it started, but it gets stuck when it reaches either the NW or SW corner, because it doesn't have a rule that applies to this surrounding.  You'll need to add one.  However, before you do, you should think carefully about your algorithm.  What is it that you want Picobot to do when it reaches the NW or SW corner?  One option is to immediately head all the way east, and then start moving N, S and W again as it was doing before.  Another option is to begin a N, S, and E sweep back the other way.  Either way you are going to need at least one new state.  We encourage you to think carefully about what this state or states will mean before you start implementing rules. 
 Before continuing, save your code for the empty room solution in the file `emptyroom.txt` in your git repo. 
+
+## Program Picobot to solve the maze
 
 Finally, once you have successfully covered the empty room, use the MAP "-->" button to find the maze, and implement the maze covering program using the "right hand rule" as described in the book in Section 1.2.8.  Again, we provide some hints to get you started:
 
