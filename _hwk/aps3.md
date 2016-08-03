@@ -4,6 +4,7 @@ desc: "Iterative Improvement"
 ready: false
 assigned: 2016-08-17 08:45:00.00-7:00
 due: 2016-08-20 21:00:00.00-7:00
+layout: default
 ---
 
 Please create an APS repo with a Week3.md file, following these instructions:
