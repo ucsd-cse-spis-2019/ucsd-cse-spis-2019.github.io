@@ -14,3 +14,4 @@ Then, in your Week1.md file, please write a solution to these problems:
 
 [APS Divide And Conquer problems (pdf)](aps_dc_problems.pdf)
 
+See also: [Main SPIS 2016 APS Page](https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/2016_aps)
