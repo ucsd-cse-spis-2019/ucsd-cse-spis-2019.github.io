@@ -6,13 +6,11 @@ assigned: 2016-08-03 08:00:00.00-7:00
 due: 2016-08-07 22:00:00.00-7:00
 ---
 
-Insert description here OR insert link here enclosed in <>
+Please create an APS repo with a Week1.md file, following these instructions:
 
-e.g. 
+[Github: Creating Repos for APS writeups](/topics/github_aps_writeups/)
 
-[scc file](scc counterexample.pdf)
+Then, in your Week1.md file, please write a solution to these problems:
 
-or
-
-<http://spis.ucsd.edu/aps/assignment1.pdf>
+<http://spis.ucsd.edu/aps/aps_dc_problems.pdf>
 
