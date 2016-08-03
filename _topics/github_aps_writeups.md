@@ -162,3 +162,7 @@ To create this with Google Drawings:
 
 2.  Select the option, as shown here, to create a new drawing:  ![Google Drive New Drawing](/topics/github_aps_writeups/google-drawing-embed.png)
 
+
+
+
+<div style="display:none;">https://ucsd-cse-spis-2016.github.io/topics/github_aps_writeups/</div>
