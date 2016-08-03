@@ -1,0 +1,120 @@
+---
+topic: "Github: Creating a repo"
+desc: "Creating repos in various ways"
+---
+
+* [Github: Setup](/topics/github_setup/)
+* [Github: Introduction](/topics/github_introduction/)
+* [Github: Creating Repos](/topics/github_create_repo/)
+
+
+## Creating a github repo with starter code: Method 1
+
+We ask that you create a new private github repo *inside the
+ucsd-cse-spis-2016 organization* for each lab assignment.  You and
+your partner will share the same repo by following these instructions
+
+1. Navigate to 
+   the [ucsd-cse-spis-2016 organization](https://github.com/ucsd-cse-spis-2016)
+
+1. Click on the "New repository" button to create a new repo as shown below: 
+
+   ![new repo](/images/new-repo-begin.png)
+   
+   Be sure that the "owner" of the repository is *ucsd-cse-spis-2016*
+   as shown in the image, and NOT your own github account.  If the
+   owner shows as your own github id, you may have to change the pull
+   down menu on the left where it says owner.
+   
+   When creating your repo use the naming convention
+   `spis16-labXX-<pair name>`. Enter your pair name exactly as listed
+   under the `Pair_Name` column [at this
+   link](http://ucsd-cse-spis-2016.github.io/info/pairs/). For
+   example, if you are creating a repo for lab04, and the name of your
+   pair is Phill-Diba, then your repo should be named
+   "spis16-lab04-Phill-Diba". Select the "private" option when
+   creating your repo to make sure your repo is only visible to the
+   collaborators of the repo (you and your partner) and the course
+   instructors. Click on the "Create repository" button. See the
+   screenshot below:
+	
+   ![new repo](/images/create-new-repo.png)
+
+3. For each lab we have provided you with some starter code. To obtain
+    the starter code, click on the "import code" button on the screen that
+    follows right after you create a new repo. Then provide the url of the
+    repository that contains the starter code. This url should be
+    specified in the assignment writeup. The screenshot below shows what
+    you should expect to see if you were importing the starter code for
+    lab04:
+	
+    ![new repo](/images/import-code1.png)![new repo](/images/import-code2.png)
+
+4. Set up your ssh key. You need to do this step only once and should
+    not repeat it for each assignment. Log into your account on ieng6 and
+    setup your ssh key by following these tutorials in order: 
+
+    1.  [Generate a new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+        Note: Don't enter a passphrase for now 
+    1. [Copy your ssh key to github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+5. Its now time to make a copy of your repo on the computer where you
+    intend to work. We strongly recommend that you create this copy on one
+    of the ieng6 servers (e.g. ieng6-240.ucsd.edu). The process of
+    creating a copy of your repo is called cloning because you not only
+    get a replica of your code on a difference machine but can reflect
+    changes made in one clone repo to any other clone using the mechanisms
+    that Git provides. This is a key feature that essentially allows you
+    to work on the same version of your code from any computer. For now,
+    we are interested in working on the ieng6 servers, so that's where you
+    will create the clone. To clone your repo navigate to your repo on
+    github and click on the green "clone or download" button on the top
+    right corner. Clicking on this link gives you either an ssh or https
+    address that you will need in the cloning process clone. Copy the ssh
+    address with starts with a `git@`. See the screenshot below:
+	
+    ![new repo](/images/get-repo-url.png) 
+    
+    Log into your account on ieng6 and clone your newly created repo
+    using the git clone command as in the following example:
+
+    ```
+    $ git clone git@github.com:ucsd-cse-spis-2016/spis16-lab04-Phill-Diba.git
+
+    ```
+    
+    Make sure you provide the address to your repo instead of the one
+    provided above. To check if your repo has been cloned correctly, type
+    `ls` on the command prompt and you should see a directory with your
+    repo name. Navigate into that directory using the `cd` command. For
+    example if the directory name is `spis16-lab04-Phill-Diba`, at the
+    command prompt type `cd spis16-lab04-Phill-Diba`
+
+
+## Submitting your code via github
+
+We recommend that you keep your repo on the git server up to date with
+the latest version of your code. This allows your mentor to give you
+timely feedback as you progress through the assignments. To do this
+follow these steps:
+
+1.  Stage all the files that have changed using the command
+
+    ```
+    git add file1.py file2.py ... filen.py
+    ```
+
+2.  Commit your changes using the command `git commit -m "message"`
+
+    `"message"` should be a descriptive message about your commit.   
+
+3.  Push your changes to github by typing the command
+
+    ```
+    git push origin master
+    ```
+
+    Your changes will not be visible to your mentor unless you do this final
+    step.
+
+
