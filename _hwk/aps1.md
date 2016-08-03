@@ -12,5 +12,5 @@ Please create an APS repo with a Week1.md file, following these instructions:
 
 Then, in your Week1.md file, please write a solution to these problems:
 
-<http://spis.ucsd.edu/aps/aps_dc_problems.pdf>
+[APS Divide And Conquer problems (pdf)(aps_dc_problems.pdf)
 
