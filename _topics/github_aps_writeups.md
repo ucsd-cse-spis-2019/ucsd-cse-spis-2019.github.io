@@ -26,7 +26,7 @@ Use the names and initials from the [pairs list](/info/pairs/), which we have up
 
 This image shows how to set up the repo at the [github.com/new](https://github.com/new) page:
 
-![new aps repo](create-github-repo-for-spis-aps.png)
+![new aps repo](create-github-repo-for-spis-aps-50pct.png)
 
 In this repository, we'll invite you to create files called `Week1.md`,
 `Week2.md`, `Week3.md` and `Week4.md` for each of the four APS homework
@@ -44,12 +44,11 @@ Then enter the name `Week1.md`, and type the first line of your solution (basica
 
 Finally, scroll down the web page, and find the button for "Commit New File".
 
-<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickHereToCreateANewFile.png?attredirects=0" imageanchor="1"><img border="0" height="200" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickHereToCreateANewFile.png" width="400"></a>&nbsp; <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/CreatingWeek1.png?attredirects=0" imageanchor="1" style="font-size:10pt"><img alt="type Week1.md in box and type first line of file content" border="0" height="189" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/CreatingWeek1.png" width="400"></a>
+<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickHereToCreateANewFile.png?attredirects=0" imageanchor="1"><img border="0" height="200" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickHereToCreateANewFile.png" width="400"></a>
 
-
+<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/CreatingWeek1.png?attredirects=0" imageanchor="1" style="font-size:10pt"><img alt="type Week1.md in box and type first line of file content" border="0" height="189" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/CreatingWeek1.png" width="400"></a>
 
 <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/Screen%20Shot%202015-08-10%20at%204.13.10%20PM.png?attredirects=0" imageanchor="1"><img alt="click here to commit a new file" border="0" height="225" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/Screen%20Shot%202015-08-10%20at%204.13.10%20PM.png" width="320"></a>
-
 
 ## Editing the Week1.md file
 
@@ -57,9 +56,11 @@ You should then be able to click on your Week1.md file and see the content in th
 
 You can click the pencil icon to make further edits.
 
-<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickWeek1.md.to.see.the.file.you.created.png?attredirects=0" imageanchor="1"><img alt="click Week1.md to see the file you created" border="0" height="300" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickWeek1.md.to.see.the.file.you.created.png" width="400"></a>&nbsp; &nbsp; &nbsp;<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickThePencilIconToMakeFurtherEdits.png?attredirects=0" imageanchor="1" style="font-size:10pt"><img border="0" height="186" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickThePencilIconToMakeFurtherEdits.png" width="400"></a>
+<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickWeek1.md.to.see.the.file.you.created.png?attredirects=0" imageanchor="1"><img alt="click Week1.md to see the file you created" border="0" height="300" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickWeek1.md.to.see.the.file.you.created.png" width="400"></a>
 
-<h2 style="display:block;text-align:left">Editing a Markdown File
+<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickThePencilIconToMakeFurtherEdits.png?attredirects=0" imageanchor="1" style="font-size:10pt"><img border="0" height="186" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickThePencilIconToMakeFurtherEdits.png" width="400"></a>
+
+## Editing a Markdown File
 
 In the github.com interface, any filename that ends with .md is treated as a "Markdown" file. 
 
@@ -115,7 +116,6 @@ To see if your text is being formatted the way you want before you save, you can
 
 <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickPreviewChanges.png?attredirects=0" imageanchor="1"><img alt="click preview changes to see how changes will look" border="0" height="166" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickPreviewChanges.png" width="400"></a>
 
-<div style="display:none;"> </div>
 To save those changes, click Commit:
 
 <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickCommitChangesToSaveYourWork.png?attredirects=0" imageanchor="1"><img alt="click commit to save your work" border="0" height="352" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickCommitChangesToSaveYourWork.png" width="400"></a>
