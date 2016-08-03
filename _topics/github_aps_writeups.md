@@ -150,8 +150,15 @@ If you want an image, as long as it is already on the web, its
 easy. Just paste in the URL of the image, and it will appear in the
 Markdown file as an image.
 
-If you don't already have a picture, one easy way to create one is with Google Drawings.
+If you don't already have a picture, one easy way to create one is with Google Drawings.  Here's how.
 
-For example, suppose you are solving an APS problem related to making change, and you want to include a diagram that shows two nickels (5 cent coins) and three pennies (1 cent coins).  You might create this picture:
+As an example, suppose you are solving an APS problem related to making change, and you want to include a diagram that shows two nickels (5 cent coins) and three pennies (1 cent coins).  You might create this picture:
 
 <img src="https://docs.google.com/drawings/d/1ylTKc_xZq4Zq982vhqlbZ03vA3I-5rIcw5-SdCx43-w/pub?w=867&amp;h=278">
+
+To create this with Google Drawings:
+
+1. Open [drive.google.com](https://drive.google.com) in a web browser.  You may need to create a Google Account if you do     not already have one.    
+
+2.  Select the option, as shown here, to create a new drawing:  ![Google Drive New Drawing](google-drawing-embed.png)
+
