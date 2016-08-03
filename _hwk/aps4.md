@@ -4,6 +4,7 @@ desc: "Backtracking"
 ready: false
 assigned: 2016-08-24 08:45:00.00-7:00
 due: 2016-08-27 21:00:00.00-7:00
+layout: default
 ---
 
 Please create an APS repo with a Week4.md file, following these instructions:
