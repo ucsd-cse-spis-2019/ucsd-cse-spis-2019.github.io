@@ -154,3 +154,4 @@ Markdown file as an image.
 On the other hand, if you do NOT already have the image on the web, you may need to upload the image to the github repo. &nbsp;That's what the next page of this tutorial, <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-images">Git Images</a>, is all about.
 
 
+<div style="display:none;">http://ucsd-cse-spis-2016.github.io/topics/github_aps_writeups/</div>
