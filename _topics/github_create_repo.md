@@ -127,7 +127,9 @@ follow these steps:
     step.
 
 
-# [](){:name="method1"} Method 2: Create private repo with README.md and Python .gitignore
+# Method 2
+
+Method 2: Create private repo with README.md and Python .gitignore
 
 TBD
 
