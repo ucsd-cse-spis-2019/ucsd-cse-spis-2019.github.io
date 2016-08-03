@@ -115,7 +115,7 @@ To see if your text is being formatted the way you want before you save, you can
 
 <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickPreviewChanges.png?attredirects=0" imageanchor="1"><img alt="click preview changes to see how changes will look" border="0" height="166" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickPreviewChanges.png" width="400"></a>
 
-
+<div style="display:none;"> </div>
 To save those changes, click Commit:
 
 <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickCommitChangesToSaveYourWork.png?attredirects=0" imageanchor="1"><img alt="click commit to save your work" border="0" height="352" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickCommitChangesToSaveYourWork.png" width="400"></a>
