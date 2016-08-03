@@ -150,7 +150,9 @@ If you want an image, as long as it is already on the web, its
 easy. Just paste in the URL of the image, and it will appear in the
 Markdown file as an image.
 
-On the other hand, if you do NOT already have the image on the web, you may need to upload the image to the github repo. &nbsp;That's what the next page of this tutorial, <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-images">Git Images</a>, is all about.
+If you don't already have a picture, one easy way to create one is with Google Drawings.
 
+For example, suppose you are solving an APS problem related to making change, and you want to include a diagram that shows two nickels (5 cent coins) and three pennies (1 cent coins).  You might create this picture:
 
-<div style="display:none;">http://ucsd-cse-spis-2016.github.io/topics/github_aps_writeups/</div>
+https://docs.google.com/drawings/d/1ylTKc_xZq4Zq982vhqlbZ03vA3I-5rIcw5-SdCx43-w/pub?w=433&h=139
+
