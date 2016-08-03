@@ -14,7 +14,7 @@ Other github topics
 * [Github: Introduction](/topics/github_introduction/)
 * [Github: Creating Repos](/topics/github_aps_writeup/)
 
-# [Method 1]{:name="method1"}: Create empty private repo, optionally adding starter code from a link
+# [Method 1](){:name="method1"} Create empty private repo, optionally adding starter code from a link
 
 We ask that you create a new private github repo *inside the
 ucsd-cse-spis-2016 organization* for each lab assignment.  You and
