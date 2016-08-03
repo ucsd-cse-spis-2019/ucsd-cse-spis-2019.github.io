@@ -3,12 +3,18 @@ topic: "Github: Creating a repo"
 desc: "Creating repos in various ways"
 ---
 
+There are several different scenarios for creating a github repo that you may need to use during SPIS.
+
+This page contains an outline of several of these.
+
+* [Method 1](#method1): Create empty private repo, optionally adding starter code from a link
+
+Other github topics
 * [Github: Setup](/topics/github_setup/)
 * [Github: Introduction](/topics/github_introduction/)
-* [Github: Creating Repos](/topics/github_create_repo/)
+* [Github: Creating Repos](/topics/github_aps_writeup/)
 
-
-## Creating a github repo with starter code: Method 1
+# [Method 1]{:name="method1"}: Create empty private repo, optionally adding starter code from a link
 
 We ask that you create a new private github repo *inside the
 ucsd-cse-spis-2016 organization* for each lab assignment.  You and
