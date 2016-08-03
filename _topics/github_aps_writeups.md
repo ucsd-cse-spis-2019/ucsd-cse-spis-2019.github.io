@@ -14,14 +14,14 @@ We'll invite you to use github.com to create, edit and submit your solutions to 
 
 To get started, create a private github repo under the ucsd-cse-spis-2016 organization that has this name:
 
-* APS-yourfirstname-yourlastinitial
+* spis16-aps-yourfirstname-yourlastinitial
 
 Use the names and initials from the [pairs list](/info/pairs/), which we have updated with the preferred first name you gave us on the github survey.  For example:
 
-* APS-Lavanya-S
-* APS-Njambi-N
-* APS-Andrew-T
-* APS-Anthony-V
+* spis16-aps-Lavanya-S
+* spis16-aps-Njambi-N
+* spis16-aps-Andrew-T
+* spis16-aps-Anthony-V
 * etc.
 
 In this repository, we'll invite you to create files called Week1.md, Week2.md, Week3.md and Week4.md for each of the four APS homework assignments you'll complete during the SPIS Program. &nbsp;We'll explain how to create each of those below.
@@ -29,6 +29,8 @@ In this repository, we'll invite you to create files called Week1.md, Week2.md, 
 # Creating Week1.md
 
 To create Week1.md, click on the + sign at the location shown in the image below.
+
+(Note: these images are from last year, and show the repo being called 
 
 Then enter the name Week1.md, and type the first line of your solution (basically, an introduction).
 
