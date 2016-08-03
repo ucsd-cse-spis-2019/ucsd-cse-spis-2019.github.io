@@ -8,13 +8,14 @@ There are several different scenarios for creating a github repo that you may ne
 This page contains an outline of several of these.
 
 * [Method 1](#method1): Create empty private repo, optionally adding starter code from a link
+* [Method 2](#method2): Create private repo with README.md and Python .gitignore
 
 Other github topics
 * [Github: Setup](/topics/github_setup/)
 * [Github: Introduction](/topics/github_introduction/)
 * [Github: Creating Repos](/topics/github_aps_writeup/)
 
-# [Method 1](){:name="method1"} Create empty private repo, optionally adding starter code from a link
+# [](){:name="method1"} Method 1: Create empty private repo, optionally adding starter code from a link
 
 We ask that you create a new private github repo *inside the
 ucsd-cse-spis-2016 organization* for each lab assignment.  You and
@@ -123,5 +124,9 @@ follow these steps:
     Your changes will not be visible to your mentor unless you do this final
     step.
 
+
+# [](){:name="method1"} Method 2: Create private repo with README.md and Python .gitignore
+
+TBD
 
 <div style="display:none">http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/</div>
