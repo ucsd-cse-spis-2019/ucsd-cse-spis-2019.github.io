@@ -110,7 +110,7 @@ There are a few special characters though. &nbsp;This is not a complete list&mda
 
 To see if your text is being formatted the way you want before you save, you can switch back and forth between: <b>Edit</b> and <b>Preview Changes:</b>
 
-<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/switchBetweenEditAndPreviewChanges.png?attredirects=0" imageanchor="1"><img alt="edit and preview changes" border="0" height="145" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/switchBetweenEditAndPreviewChanges.png" width="400"></a>&nbsp;&nbsp;<b style="font-size:10pt;background-color:transparent">
+<a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/switchBetweenEditAndPreviewChanges.png?attredirects=0" imageanchor="1"><img alt="edit and preview changes" border="0" height="145" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/switchBetweenEditAndPreviewChanges.png" width="400"></a>
 
 
 <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickPreviewChanges.png?attredirects=0" imageanchor="1"><img alt="click preview changes to see how changes will look" border="0" height="166" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickPreviewChanges.png" width="400"></a>
@@ -150,7 +150,15 @@ If you want an image, as long as it is already on the web, its
 easy. Just paste in the URL of the image, and it will appear in the
 Markdown file as an image.
 
-On the other hand, if you do NOT already have the image on the web, you may need to upload the image to the github repo. &nbsp;That's what the next page of this tutorial, <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-images">Git Images</a>, is all about.
+If you don't already have a picture, one easy way to create one is with Google Drawings.  Here's how.
 
+As an example, suppose you are solving an APS problem related to making change, and you want to include a diagram that shows two nickels (5 cent coins) and three pennies (1 cent coins).  You might create this picture:
 
-<div style="display:none;">http://ucsd-cse-spis-2016.github.io/topics/github_aps_writeups/</div>
+<img src="https://docs.google.com/drawings/d/1ylTKc_xZq4Zq982vhqlbZ03vA3I-5rIcw5-SdCx43-w/pub?w=867&amp;h=278">
+
+To create this with Google Drawings:
+
+1. Open [drive.google.com](https://drive.google.com) in a web browser.  You may need to create a Google Account if you do     not already have one.    
+
+2.  Select the option, as shown here, to create a new drawing:  ![Google Drive New Drawing](google-drawing-embed.png)
+
