@@ -160,7 +160,7 @@ To create this with Google Drawings:
 
 1. Open [drive.google.com](https://drive.google.com) in a web browser.  You may need to create a Google Account if you do     not already have one.    
 
-2.  Select the option, as shown here, to create a new drawing:  ![Google Drive New Drawing](/topics/github_aps_writeups/google-drawing-embed.png)
+2.  Select the option, as shown here, to create a new drawing:  ![Google Drive New Drawing](/topics/github_aps_writeups/google-drawing-embed-50pct.png)
 
 
 
