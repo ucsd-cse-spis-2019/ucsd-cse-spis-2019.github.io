@@ -7,8 +7,8 @@ There are several different scenarios for creating a github repo that you may ne
 
 This page contains an outline of several of these.
 
-* [Method 1](#Method-1): Create empty private repo, optionally adding starter code from a link
-* [Method 2](#Method-2): Create private repo with README.md and Python .gitignore
+* [Method 1](#Method-1){:data-ajax="false" } Create empty private repo, optionally adding starter code from a link
+* [Method 2](#Method-2){:data-ajax="false" } Create private repo with README.md and Python .gitignore
 
 Other github topics
 * [Github: Setup](/topics/github_setup/)
