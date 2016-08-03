@@ -10,7 +10,8 @@ This page contains an outline of several of these.
 * [Method 1]({{site.url}}/topics/github_create_repo#method1){:data-ajax="false" } Create empty private repo, optionally adding starter code from a link
 * [Method 2]({{site.url}}/topics/github_create_repo#method2){:data-ajax="false" } Create private repo with README.md and Python .gitignore
 
-Other github topics
+Other github topics:
+
 * [Github: Setup](/topics/github_setup/)
 * [Github: Introduction](/topics/github_introduction/)
 * [Github: Creating Repos](/topics/github_aps_writeup/)
