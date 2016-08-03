@@ -7,7 +7,6 @@ During SPIS, you'll be given four APS problem sets: [APS1](/hwk/aps1/), [APS2](/
 
 You can use github to create and submit your solutions to these problems.
 
-
 One of the most basic ways to get started with using git and github is to simply create and edit files and directories directly at the github.com web page.
 
 We'll invite you to use github.com to create, edit and submit your solutions to the APS Homework assignments.
