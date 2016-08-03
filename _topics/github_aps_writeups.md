@@ -7,19 +7,14 @@ During SPIS, you'll be given four APS problem sets: [APS1](/hwk/aps1/), [APS2](/
 
 You can use github to create and submit your solutions to these problems.
 
-<div><span style="font-size:13.3333330154419px">Return to:&nbsp;</span><a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources" style="font-size:13.3333330154419px">Git Resources</a><br>
-<hr>
-<br>
-</div>
-<div>One of the most basic ways to get started with using git and github is to simply create and edit files and directories directly at the github.com web page.</div>
-<div><br>
-</div>
-<div>We'll invite you to use github.com to create, edit and submit your solutions to the APS Homework assignments.</div>
-<div><br>
-</div>
-<div>We have created a special private github repo for each SPIS participant with his/her name, e.g.</div>
-<div><font size="3"><br>
-</font></div>
+
+One of the most basic ways to get started with using git and github is to simply create and edit files and directories directly at the github.com web page.
+
+We'll invite you to use github.com to create, edit and submit your solutions to the APS Homework assignments.
+
+We have created a special private github repo for each SPIS participant with his/her name, e.g.
+
+
 <div>
 <h1 style="margin:0px;padding-left:34px;font-family:Helvetica,arial,nimbussansl,liberationsans,freesans,clean,sans-serif,Segoe UI Emoji,Segoe UI Symbol"><strong style="font-size:medium;color:rgb(102,102,102);font-weight:normal;line-height:28px"><font color="#4078c0"><span>spis15-aps-A</span></font>lex</strong><font color="#666666" style="font-size:medium"><span style="font-weight:normal;line-height:28px">&nbsp;</span></font><span style="display:inline-block;padding:4px 5px 3px;vertical-align:middle;border-radius:3px"><font color="#a1882b"><span style="font-weight:normal;line-height:11px;text-transform:uppercase;background-color:rgb(255,239,198)"><font size="2">PRIVATE</font><br>
 </span></font></span><span style="font-size:medium"><font color="#a1882b"><span style="font-weight:normal;line-height:11px;text-transform:uppercase;background-color:rgb(255,239,198)"><br>
