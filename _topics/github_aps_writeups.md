@@ -12,52 +12,28 @@ One of the most basic ways to get started with using git and github is to simply
 
 We'll invite you to use github.com to create, edit and submit your solutions to the APS Homework assignments.
 
-We have created a special private github repo for each SPIS participant with his/her name, e.g.
+To get started, create a private github repo under the ucsd-cse-spis-2016 organization that has this name:
 
+* APS-yourfirstname-yourlastinitial
 
-<div>
-<h1 style="margin:0px;padding-left:34px;font-family:Helvetica,arial,nimbussansl,liberationsans,freesans,clean,sans-serif,Segoe UI Emoji,Segoe UI Symbol"><strong style="font-size:medium;color:rgb(102,102,102);font-weight:normal;line-height:28px"><font color="#4078c0"><span>spis15-aps-A</span></font>lex</strong><font color="#666666" style="font-size:medium"><span style="font-weight:normal;line-height:28px">&nbsp;</span></font><span style="display:inline-block;padding:4px 5px 3px;vertical-align:middle;border-radius:3px"><font color="#a1882b"><span style="font-weight:normal;line-height:11px;text-transform:uppercase;background-color:rgb(255,239,198)"><font size="2">PRIVATE</font><br>
-</span></font></span><span style="font-size:medium"><font color="#a1882b"><span style="font-weight:normal;line-height:11px;text-transform:uppercase;background-color:rgb(255,239,198)"><br>
-</span></font><span style="font-weight:normal"><font color="#4078c0"><span style="line-height:28px">spis15-aps-Bob</span></font></span></span><font color="#666666" style="font-size:medium"><span style="font-weight:normal;line-height:28px">&nbsp;</span></font><span style="font-weight:normal;display:inline-block;padding:4px 5px 3px;vertical-align:middle;border-radius:3px"><font color="#a1882b" size="2"><span style="line-height:11px;text-transform:uppercase;background-color:rgb(255,239,198)">PRIVATE<br>
-</span></font></span><span style="font-size:medium;font-weight:normal"><font><span><font color="#a1882b"><span style="line-height:11px;text-transform:uppercase;background-color:rgb(255,239,198)"><br>
-</span></font><font color="#4078c0"><span style="line-height:28px">spis15-aps-Chris</span></font></span></font></span><font color="#666666" style="font-size:medium;font-weight:normal"><span style="line-height:28px">&nbsp;</span></font><span style="color:rgb(161,136,43);font-weight:normal;line-height:11px;display:inline-block;padding:4px 5px 3px;text-transform:uppercase;vertical-align:middle;border-radius:3px;background-color:rgb(255,239,198)"><font size="2">PRIVATE</font></span></h1>
-</div>
-<div><br>
-</div>
-<div>etc.</div>
-<div><br>
-</div>
-<div>You can find your repo by logging into github.com, visiting&nbsp;<a href="https://github.com/ucsd-cse-spis-2015">https://github.com/ucsd-cse-spis-2015</a>, and then searching for a repo with your name in it.</div>
-<div><br>
-</div>
-<div>When you find it, it should look something like the image below. &nbsp;&nbsp;</div>
-<div><br>
-</div>
-<div>
-<div style="display:block;margin-top:5px;margin-right:auto;margin-bottom:0px;text-align:left"><a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/Screen%20Shot%202015-08-10%20at%204.03.15%20PM.png?attredirects=0" imageanchor="1"><img alt="Screenshot of APS repo for Bob (not a real SPIS student)" border="0" height="273" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/Screen%20Shot%202015-08-10%20at%204.03.15%20PM.png" width="400"></a></div>
-<br>
-</div>
-<div><br>
-</div>
-<div><br>
-</div>
-<div>
-<div style="font-size:13.3333330154419px">In this repository, we'll invite you to create files called Week1.md, Week2.md, Week3.md and Week4.md for each of the four APS homework assignments you'll complete during the SPIS Program. &nbsp;We'll explain how to create each of those below.</div>
-</div>
-<div style="font-size:13.3333330154419px"><br>
-</div>
-<h2>Creating Week1.md</h2>
-<div>To create Week1.md, click on the + sign at the location shown in the image below.<br>
-<br>
-Then enter the name Week1.md, and type the first line of your solution (basically, an introduction).</div>
-<div><br>
-</div>
-<div>Finally, scroll down the web page, and find the button for "Commit New File".</div>
-<div><br>
-</div>
-<div style="font-size:13.3333330154419px"><br>
-</div>
-<div>
+Use the names and initials from the [pairs list](/info/pairs/), which we have updated with the preferred first name you gave us on the github survey.  For example:
+
+* APS-Lavanya-S
+* APS-Njambi-N
+* APS-Andrew-T
+* APS-Anthony-V
+* etc.
+
+In this repository, we'll invite you to create files called Week1.md, Week2.md, Week3.md and Week4.md for each of the four APS homework assignments you'll complete during the SPIS Program. &nbsp;We'll explain how to create each of those below.
+
+# Creating Week1.md
+
+To create Week1.md, click on the + sign at the location shown in the image below.
+
+Then enter the name Week1.md, and type the first line of your solution (basically, an introduction).
+
+Finally, scroll down the web page, and find the button for "Commit New File".
+
 <div style="display:block;text-align:left"><a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickHereToCreateANewFile.png?attredirects=0" imageanchor="1"><img border="0" height="200" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/clickHereToCreateANewFile.png" width="400"></a>&nbsp; <a href="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/CreatingWeek1.png?attredirects=0" imageanchor="1" style="font-size:10pt"><img alt="type Week1.md in box and type first line of file content" border="0" height="189" src="https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/git-resources/git-aps-writeups/CreatingWeek1.png" width="400"></a></div>
 <div style="display:block;text-align:left"><br>
 </div>
