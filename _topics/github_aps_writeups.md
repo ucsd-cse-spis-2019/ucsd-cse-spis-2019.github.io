@@ -154,5 +154,4 @@ If you don't already have a picture, one easy way to create one is with Google D
 
 For example, suppose you are solving an APS problem related to making change, and you want to include a diagram that shows two nickels (5 cent coins) and three pennies (1 cent coins).  You might create this picture:
 
-https://docs.google.com/drawings/d/1ylTKc_xZq4Zq982vhqlbZ03vA3I-5rIcw5-SdCx43-w/pub?w=433&h=139
-
+<img src="https://docs.google.com/drawings/d/1ylTKc_xZq4Zq982vhqlbZ03vA3I-5rIcw5-SdCx43-w/pub?w=867&amp;h=278">
