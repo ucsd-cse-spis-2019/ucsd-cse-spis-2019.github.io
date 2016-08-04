@@ -190,9 +190,27 @@ Note that `cd /foo` does NOT go one level down from the current directory. Inste
 
 When are are finished exploring, use `cd ~/github` to change into the github directory under your home directory.
 
-## Step 2: Create a private repo with a README.md and a .gitignore file for Python.
+## Step 2: Create your shared lab02 repo 
 
-TBD
+One of the two pair partners should log into github.com to create the repo.  The second pair partner
+will add the first as a collaborator.
+
+### Step 2a: Create a private repo with a README.md and a .gitignore file for Python.
+
+Follow the instructions here to create a private github repo for lab02 under the ucsd-cse-spis-2016 github organizaiton,
+with the name
+
+Follow [Method 2](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method2) on the page that describes
+how to create github repos.
+
+The name should be `spis16-lab02-Name-Name`, e.g. `spis16-lab02-Alex-Chris`.
+
+### Step 2b: Add the other pair as a collaborator
+
+The pair partner that created the repo will automatically have access.  That partner needs to add the second
+partner as a collaborator.  
+
+The instructions to do that are found here: [Github: Adding a collaborator](/topics/github_add_collaborator)
 
 ## Step 3: Cloning a private repo at the bash (Unix) command line
 
