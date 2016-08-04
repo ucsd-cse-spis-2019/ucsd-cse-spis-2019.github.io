@@ -112,7 +112,7 @@ theta,residuals,rank,s = numpy.linalg.lstsq(X, y)
 
 This piece of Julian McAuley's code is called a Generator.  The Guttag textbook discusses generators in (insert section here.)
 
-```
+```python
 def parseData(fname):
   for l in urllib.urlopen(fname):
     yield eval(l)
