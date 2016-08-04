@@ -44,31 +44,97 @@ Here's a more complete list of our learning objectives:
 Bring up a bash terminal shell.  As a reminder, you can do this by selecting "Applications", then either "Terminal" or "Konsole" from the menu that pops up.  (Your Applications menu may have only Terminal, or only Konsole, or may have both.
 For our purposes, they work equally well.)
 
+On the ACMS machines the bash terminal prompt typically looks like this:
+
+```
+[spis16t3@ieng6-240]:~:32$ 
+```
+
+It is called a *prompt* because it *prompts* you to enter some a command.  One of the most basic commands you can enter is
+the `date` command.  Try it: type in `date` and press return *Enter*.
+
+```
+[spis16t3@ieng6-240]:~:32$ date
+Thu Aug  4 13:56:29 PDT 2016
+[spis16t3@ieng6-240]:~:33$ 
+```
+
+The date is printed, and you get a new prompt.  Note that the last number in that prompt keeps increasing by 1.   These numbers refer to your "command history".  If you type the command `history`, you'll see a list of all the recent commands you have typed.  Try it:
+
+```
+[spis16t3@ieng6-240]:~:33$ history
+    1  idle
+    2  idle
+    3  pwd
+```
+(I left some out here...)
+```
+   31  exit
+   32  date
+   33  history
+[spis16t3@ieng6-240]:~:34$ 
+```
+
+You can see that the next command I type will be "number 34" in my history.
+
+There are a few others parts of the prompt.  
+* The `spis16t3` part is my account name. Your's will be something like `spis16xy` where `xy` are two letters
+* The `ieng6-240` part is the machine I'm logged into.  It's full name is `ieng6-240.ucsd.edu`
+* Finally, the `~` part is a symbol for your *home directory*.  That home directory is a very important concept.
+
+Your *home directory* is a folder (called a *directory* on Unix) that stores all of the information you keep on the ACMS
+systems.     When you first log on, you always start in your home directory.   
+
+You can return to your home directory at any time by typing `cd`, all by itself on the command line.  The letters `cd` stand for *change directory*.    Try it:
+
+```
+[spis16t3@ieng6-240]:~:34$ cd
+[spis16t3@ieng6-240]:~:35$ 
+```
+
+In this case, nothing changed, because we were already in our home directory. But, we can try changing into a different directory, and then returning to our home directory.
+
+To see what other directories exist, we can type the `ls` command, which is the *list files* command. Try it:
+
+```
+[spis16t3@ieng6-240]:~:39$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[spis16t3@ieng6-240]:~:40$ 
+```
+
+You can see that there are eight folders (directories) under our home directory.  We are going to create one more.
+We'll do that with the `mkdir` command for *make directory*.  
+
+Type this at the bash prompt: `mkdir github` and the press enter.  Then type `ls` again and press enter:
+
+```
+[spis16t3@ieng6-240]:~:40$ mkdir github
+[spis16t3@ieng6-240]:~:41$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  github
+[spis16t3@ieng6-240]:~:42$ 
+```
+
+Now you see that there is an additional directory.  Do you see it? It's called github, and its the last one listed.
+
+To change our current directory 
 
 
-
-
-
-# Unix commands
-
-Our first step today is to bring up the bash shell.    You 
-
-# Cloning a private repo at the bash (Unix) command line
+## Step 2: Cloning a private repo at the bash (Unix) command line
 
 TBD
 
-# How to store a Python file in a repo
+## Step 3:  How to store a Python file in a repo
 
 TBD
 
-# The basic git workflow of `git add...`, `git commit...`, `git push...`
+## Step 4:  The basic git workflow of `git add...`, `git commit...`, `git push...`
 
 TBD
 
-# Testing of Python functions
+## Step 5: Testing of Python functions
 
 TBD
 
-# Submitting a Python function for autograding using Gradescope
+## Step 6:  Submitting a Python function for autograding using Gradescope
 
 TBD
