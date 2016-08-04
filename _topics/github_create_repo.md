@@ -7,8 +7,8 @@ There are several different scenarios for creating a github repo that you may ne
 
 This page contains an outline of several of these.
 
-* [Method 1]({{site.url}}/topics/github_create_repo#method1){:data-ajax="false" }: Create empty private repo, optionally adding starter code from a link
-* [Method 2]({{site.url}}/topics/github_create_repo#method2){:data-ajax="false" }: Create private repo with README.md and Python .gitignore
+* [Method 1]({{site.url}}/topics/github_create_repo#method1){:data-ajax="false" }: Create empty private repo for a lab, optionally adding starter code from a link
+* [Method 2]({{site.url}}/topics/github_create_repo#method2){:data-ajax="false" }: Create private repo for a lab, with README.md and Python .gitignore
 * [Method 3](/topics/github_aps_writeup/): Create private repo for APS Writeups
 
 Other github topics:
@@ -126,8 +126,21 @@ follow these steps:
     step.
 
 
-# <a name="method2"></a>Method 2: Create private repo with README.md and Python .gitignore
+# <a name="method2"></a>Method 2: Create private repo for a lab with README.md and Python .gitignore
 
-TBD
+Sometimes when creating a repo from scratch for a lab, we want to set it up with a README.md and a .gitignore
+for Python, right from the start.   The following diagram illustrates the steps involved.
+
+You create a repo by selecting the small + sign with the triangle at the upper left corner of the github.com page, 
+or simply by logging into github, then navigating to [github.com/new](https://github.com/new)
+
+Then you see this screen, where you fill in the values as shown.
+
+![private-repo-method-2.png](private-repo-method-2.png)
+
+
+
+
+
 
 <div style="display:none">http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/</div>
