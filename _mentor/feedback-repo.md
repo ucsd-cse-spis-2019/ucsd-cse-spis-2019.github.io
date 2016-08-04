@@ -8,6 +8,7 @@ instructions below.   This involves creating either six or nine repos
 (depending on whether your team is four or six people).
 
 Please create:
+
 * An individual feedback repo for each of your team members (4-6 repos)
 * A pair feedback repo for each of your pairs (2-3 pairs)
 
