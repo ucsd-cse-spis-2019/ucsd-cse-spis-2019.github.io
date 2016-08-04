@@ -58,6 +58,9 @@ collections:
   lectures:
     output: true
     permalink: /lectures/:path/
+  mentor:
+    output: true
+    permalink: /mentor/:path/
 
 defaults:
   -
