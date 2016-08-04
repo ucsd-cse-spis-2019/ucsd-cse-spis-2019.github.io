@@ -145,7 +145,7 @@ Your first repository will have a name that corresponds to your first name and l
 
 To create this repo:
 
-* Navigate to [https://github.com](https://github.com)
+* In your web browser, navigate to [https://github.com](https://github.com)
 
 * Login to your github.com account, and 
 
