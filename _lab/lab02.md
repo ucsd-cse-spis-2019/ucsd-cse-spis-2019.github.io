@@ -159,7 +159,36 @@ These files and directories, though exist in the context of a larger directory t
 
 This output `/home/linux/ieng6/spis16/spis16t3/github` from the pwd command is called a *path*, since it shows the path from the root directory of the disk space on our machine, which is represented by the symbol `/`, all the way down to the directory `github` that we just created.
 
-The path in this direct
+Our home directories for spis are all located inside `/home/linux/ieng6/spis16`.   They are, for example:
+
+* /home/linux/ieng6/spis16/spis16aa
+* /home/linux/ieng6/spis16/spis16ab
+* /home/linux/ieng6/spis16/spis16ac
+* /home/linux/ieng6/spis16/spis16ad
+* /home/linux/ieng6/spis16/spis16ae
+* etc...
+
+Each of you has their own home directory.  
+
+### Various navigation commands
+
+As a reminder:
+
+* The command `pwd` tells us where we are by printing the current working directory.
+* The command `ls` lists the files in the current directory
+
+You can change the current working directory in a variety of ways.  Try changing your directory in various ways,
+exploring the directory tree shown in the diagram above, and using `pwd` and `ls` to show the effect.
+
+* `cd ~` or `cd` to go your home directory
+* `cd ~spis16t1` or `cd ~spis16t2` to go to a specific user's home directory
+* `cd ..` to go *up one level in the tree* from where you are now.  
+* `cd /` to go to the root of teh directory
+* `cd foo` to go into a directory foo that is located in the current directory
+
+Note that `cd /foo` does NOT go one level down from the current directory. Instead, it goes into the foo directory directly under the root directory.   
+
+When are are finished exploring, use `cd ~/github` to change into the github directory under your home directory.
 
 ## Step 2: Cloning a private repo at the bash (Unix) command line
 
