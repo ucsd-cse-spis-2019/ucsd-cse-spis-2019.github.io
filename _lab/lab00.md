@@ -146,7 +146,9 @@ Your first repository will have a name that corresponds to your first name and l
 To create this repo:
 
 * Navigate to [https://github.com](https://github.com)
+
 * Login to your github.com account, and 
+
 * Then and find the button at upper right to create a repository.  
     * That button looks like a + sign with a triangle next to it.  
     * When you click that button, there are three choices.  Select "New Repository"
