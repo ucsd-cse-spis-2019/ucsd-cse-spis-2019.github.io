@@ -5,7 +5,7 @@ desc: "Feedback on lab00"
 
 Before you can give feedback on lab00, please create individual feedback repos, [as described here](/mentor/feedback-repo/)
 
-Once you've done that, here are some things to check for lab00.
+Once you've done that, here are some things to check for [lab00](/lab/lab00/).
 
 # Does the repo they created have the correct name?
 
