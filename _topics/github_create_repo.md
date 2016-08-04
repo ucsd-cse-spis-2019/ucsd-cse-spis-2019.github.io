@@ -9,8 +9,8 @@ This page contains an outline of several of these.
 
 * [Method 1]({{site.url}}/topics/github_create_repo#method1){:data-ajax="false" }: Create empty private repo for a lab, optionally adding starter code from a link
 * [Method 2]({{site.url}}/topics/github_create_repo#method2){:data-ajax="false" }: Create private repo for a lab, with README.md and Python .gitignore
-* [Method 3](/topics/github_aps_writeup/): Create private repo for APS Writeups
-
+* [Method 3](/topics/github_aps_writeups/) Create private repo for APS writeups
+ 
 Other github topics:
 
 * [Github: Setup](/topics/github_setup/)
