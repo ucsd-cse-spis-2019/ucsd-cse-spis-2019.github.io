@@ -147,11 +147,19 @@ You see that this command prints out our "working directory".   *Current directo
 
 Lets look more closely at what was printed: `/home/linux/ieng6/spis16/spis16t3/github`
 
-The way to understand this is as a tree:
+This is a list of parent directories (or folders), each of which contains the one below it.
 
+A simplified view is this:
 
+<img src="https://docs.google.com/drawings/d/1-V6Unovl04bGPHKQF4XwyLsp5BoSfIshJFM2nxdr_Gw/pub?w=121&amp;h=571">
 
+These files and directories, though exist in the context of a larger directory tree that contains many other directories and folders.
 
+<img src="https://docs.google.com/drawings/d/18JSwrUBKVmKx9fIL7vX3eexCJI35AMpzIO7g_azldkM/pub?w=853&amp;h=578"
+
+This output `/home/linux/ieng6/spis16/spis16t3/github` from the pwd command is called a *path*, since it shows the path from the root directory of the disk space on our machine, which is represented by the symbol `/`, all the way down to the directory `github` that we just created.
+
+The path in this direct
 
 ## Step 2: Cloning a private repo at the bash (Unix) command line
 
