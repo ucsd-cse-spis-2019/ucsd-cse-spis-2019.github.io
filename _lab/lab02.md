@@ -155,7 +155,7 @@ A simplified view is this:
 
 These files and directories, though exist in the context of a larger directory tree that contains many other directories and folders.
 
-<img src="https://docs.google.com/drawings/d/18JSwrUBKVmKx9fIL7vX3eexCJI35AMpzIO7g_azldkM/pub?w=853&amp;h=578"
+<img src="https://docs.google.com/drawings/d/18JSwrUBKVmKx9fIL7vX3eexCJI35AMpzIO7g_azldkM/pub?w=853&amp;h=578">
 
 This output `/home/linux/ieng6/spis16/spis16t3/github` from the pwd command is called a *path*, since it shows the path from the root directory of the disk space on our machine, which is represented by the symbol `/`, all the way down to the directory `github` that we just created.
 
