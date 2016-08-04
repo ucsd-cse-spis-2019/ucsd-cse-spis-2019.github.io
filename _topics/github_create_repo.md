@@ -136,7 +136,7 @@ or simply by logging into github, then navigating to [github.com/new](https://gi
 
 Then you see this screen, where you fill in the values as shown.
 
-![private-repo-method-2.png](private-repo-method-2.png)
+![Create repo method 2](private-repo-method-2-50.png)
 
 
 
