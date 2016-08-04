@@ -1,5 +1,5 @@
 ---
-topic:" Feedback Repos"
+topic: "Feedback Repos"
 desc: "Creating feedback repos for your team"
 ---
 
