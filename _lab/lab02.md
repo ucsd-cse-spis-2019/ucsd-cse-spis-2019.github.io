@@ -190,22 +190,26 @@ Note that `cd /foo` does NOT go one level down from the current directory. Inste
 
 When are are finished exploring, use `cd ~/github` to change into the github directory under your home directory.
 
-## Step 2: Cloning a private repo at the bash (Unix) command line
+## Step 2: Create a private repo with a README.md and a .gitignore file for Python.
 
 TBD
 
-## Step 3:  How to store a Python file in a repo
+## Step 3: Cloning a private repo at the bash (Unix) command line
 
 TBD
 
-## Step 4:  The basic git workflow of `git add...`, `git commit...`, `git push...`
+## Step 4:  How to store a Python file in a repo
 
 TBD
 
-## Step 5: Testing of Python functions
+## Step 5:  The basic git workflow of `git add...`, `git commit...`, `git push...`
 
 TBD
 
-## Step 6:  Submitting a Python function for autograding using Gradescope
+## Step 6: Testing of Python functions
+
+TBD
+
+## Step 7:  Submitting a Python function for autograding using Gradescope
 
 TBD
