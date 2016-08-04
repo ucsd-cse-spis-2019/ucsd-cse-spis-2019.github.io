@@ -44,6 +44,8 @@ Here's a more complete list of our learning objectives:
 Bring up a bash terminal shell.  As a reminder, you can do this by selecting "Applications", then either "Terminal" or "Konsole" from the menu that pops up.  (Your Applications menu may have only Terminal, or only Konsole, or may have both.
 For our purposes, they work equally well.)
 
+### The bash prompt, date, `~` for home directory, and `history`
+
 On the ACMS machines the bash terminal prompt typically looks like this:
 
 ```
@@ -77,6 +79,8 @@ The date is printed, and you get a new prompt.  Note that the last number in tha
 
 You can see that the next command I type will be "number 34" in my history.
 
+### Your account and machine in the prompt
+
 There are a few others parts of the prompt.  
 * The `spis16t3` part is my account name. Your's will be something like `spis16xy` where `xy` are two letters
 * The `ieng6-240` part is the machine I'm logged into.  It's full name is `ieng6-240.ucsd.edu`
@@ -84,6 +88,8 @@ There are a few others parts of the prompt.
 
 Your *home directory* is a folder (called a *directory* on Unix) that stores all of the information you keep on the ACMS
 systems.     When you first log on, you always start in your home directory.   
+
+### The `cd`, `mkdir`, and `ls` commands
 
 You can return to your home directory at any time by typing `cd`, all by itself on the command line.  The letters `cd` stand for *change directory*.    Try it:
 
@@ -127,6 +133,8 @@ Our current directory is our home directory, as we can see from the `~` in our p
 You can see that the second part of the prompt changes to `github` to show that we are our in our github directory.
 Since this directory is located "under" our home directory, we sometimes call this a "subdirectory".
 
+### The `pwd` command
+
 The next command we are going to learn is the `pwd` command, for *print working directory*.  Try it:
 
 ```
@@ -136,6 +144,12 @@ The next command we are going to learn is the `pwd` command, for *print working 
 ```
 
 You see that this command prints out our "working directory".   *Current directory* and *working directory* are just two different ways to say the same thing.
+
+Lets look more closely at what was printed: `/home/linux/ieng6/spis16/spis16t3/github`
+
+The way to understand this is as a tree:
+
+
 
 
 
