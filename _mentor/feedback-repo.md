@@ -24,3 +24,7 @@ Apart from the naming convention, this diagram illustrates what it should
 look like:
 
 ![create-feedback-repo.png](create-feedback-repo-50.png)
+
+# Add the individual or pairs as read-only collaborators
+
+TODO: Insert instructions here.
