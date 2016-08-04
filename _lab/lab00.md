@@ -144,6 +144,7 @@ Your first repository will have a name that corresponds to your first name and l
 * `ucsd-cse-spis-2016/practice-diba-m`
 
 To create this repo:
+
 * Navigate to [https://github.com](https://github.com)
 * Login to your github.com account, and 
 * Then and find the button at upper right to create a repository.  
