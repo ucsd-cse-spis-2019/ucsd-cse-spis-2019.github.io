@@ -116,7 +116,27 @@ Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  githu
 
 Now you see that there is an additional directory.  Do you see it? It's called github, and its the last one listed.
 
-To change our current directory 
+Our current directory is our home directory, as we can see from the `~` in our prompt.    We can change our current directory to be the github directory by typing `cd github`, as shown here.  Try it, and try typing `ls` right after that.
+
+```
+[spis16t3@ieng6-240]:~:42$ cd github
+[spis16t3@ieng6-240]:github:43$ ls
+[spis16t3@ieng6-240]:github:44$ 
+```
+
+You can see that the second part of the prompt changes to `github` to show that we are our in our github directory.
+Since this directory is located "under" our home directory, we sometimes call this a "subdirectory".
+
+The next command we are going to learn is the `pwd` command, for *print working directory*.  Try it:
+
+```
+[spis16t3@ieng6-240]:github:44$ pwd
+/home/linux/ieng6/spis16/spis16t3/github
+[spis16t3@ieng6-240]:github:45$ 
+```
+
+You see that this command prints out our "working directory".   *Current directory* and *working directory* are just two different ways to say the same thing.
+
 
 
 ## Step 2: Cloning a private repo at the bash (Unix) command line
