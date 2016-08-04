@@ -22,4 +22,4 @@ The feedback repos should be
 Apart from the naming convention, this diagram illustrates what it should
 look like:
 
-![create-feedback-repo.png](create-feedback-repo.png)
+![create-feedback-repo.png](create-feedback-repo-50.png)
