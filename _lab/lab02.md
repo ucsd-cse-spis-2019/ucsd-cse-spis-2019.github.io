@@ -205,12 +205,12 @@ how to create github repos.
 
 The name should be `spis16-lab02-Name-Name`, e.g. `spis16-lab02-Alex-Chris`.
 
-### Step 2b: Add the other pair as a collaborator
+### Step 2b: Add the other pair partner as a collaborator
 
 The pair partner that created the repo will automatically have access.  That partner needs to add the second
 partner as a collaborator.  
 
-The instructions to do that are found here: [Github: Adding a collaborator](/topics/github_add_collaborator)
+The instructions to do that are found here: [Github: Adding collaborators](/topics/github_add_collaborators)
 
 ## Step 3: Cloning a private repo at the bash (Unix) command line
 
