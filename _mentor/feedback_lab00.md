@@ -11,7 +11,7 @@ Once you've done that, here are some things to check for [lab00](/lab/lab00/).
 
 The should have created a repo with the name listed in this spreadsheet (private to mentors only):
 
-https://docs.google.com/spreadsheets/d/1YPx3YtYVFCgCFAZU7wqZBAS7n2UUHhbc2J8odHyoQZk/edit?usp=sharing
+<https://docs.google.com/spreadsheets/d/1YPx3YtYVFCgCFAZU7wqZBAS7n2UUHhbc2J8odHyoQZk/edit?usp=sharing>
 
 If the name is not correct, you won't be able to find it by clicking on the link.
 
