@@ -120,6 +120,7 @@ def parseData(fname):
 ```
 #Incomplete code from Miles's Lecture
 
+```python
 Reading data...
 done
 >>> len(data)
@@ -190,3 +191,4 @@ LinAlgError: 1-dimensional array given. Array must be two-dimensional
 >>> plt.scatter(X,y)
 <matplotlib.collections.PathCollection object at 0x00000000285F7080>
 >>> plt.show()
+```
