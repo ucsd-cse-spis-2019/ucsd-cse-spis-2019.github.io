@@ -1,6 +1,8 @@
 # .DS_Store is a Mac OS thing that we don't want in our repo
 .DS_Store
 
+\#*\#
+
 # _site/ is the generated HTML for the site, calculated each time.
 # don't store in the repo
 
