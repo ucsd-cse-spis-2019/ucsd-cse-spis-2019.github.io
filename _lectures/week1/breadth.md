@@ -13,6 +13,7 @@ A second look at the Data Mining code from Julian McAuley's Facet's presentation
 
 * <http://jmcauley.ucsd.edu/data/spis.py>
 * <http://jmcauley.ucsd.edu/data/amazon/>
+* [Breadth Lecture slides (miles)](/_lectures/week1/Breadth week 1.pdf)
 
 # Complete Code
 
