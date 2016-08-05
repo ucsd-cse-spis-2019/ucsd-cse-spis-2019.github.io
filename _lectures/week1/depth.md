@@ -8,7 +8,7 @@ link_topic_desc_only: true
 ---
 
 
-# Depth for week 1
+# Depth for week 1 (Diba)
 
 Review of the material in Guttag Chapters 1-4
 
