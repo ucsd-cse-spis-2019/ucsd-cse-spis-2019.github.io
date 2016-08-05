@@ -1,7 +1,7 @@
 ---
 lecture_date: "2016-08-05 09:00:00.00-7:00"
 topic: "Week 1: Breadth"
-desc: "Topic: A second look at data mining and intro to list comprehension"
+desc: "A second look at data mining and intro to list comprehension"
 week: "1"
 indent: true
 link_topic_desc_only: true
@@ -9,7 +9,7 @@ link_topic_desc_only: true
 
 # Breadth lecture from 08/05: Miles
 
-Topic: A second look at the Data Mining code from Julian McAuley's Facet's presentation.
+A second look at the Data Mining code from Julian McAuley's Facet's presentation.
 
 * <http://jmcauley.ucsd.edu/data/spis.py>
 * <http://jmcauley.ucsd.edu/data/amazon/>
