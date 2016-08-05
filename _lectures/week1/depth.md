@@ -10,5 +10,11 @@ link_topic_desc_only: true
 
 # Depth for week 1 (Diba)
 
-Review of the material in Guttag Chapters 1-4
+Review of the material in Guttag Chapters 1-4- [Slides](https://drive.google.com/file/d/0B__7284Jee0fY0ZVMDJOUlF3RXM/view?usp=sharing)
+ 
+ * Binary and decimal review - play around the world game
+ * Exercises with strings, print vs return
+ * Identifying the base case in recursive functions
+ * Tracing recursive code
+ * Designing functions that contain the if-elif-else construct
 
