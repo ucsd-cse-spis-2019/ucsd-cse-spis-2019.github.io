@@ -3,6 +3,7 @@ topic: "Github: Addding members to an organization"
 desc: "SPIS instructors, mentors and students must be added to ucsd-cse-spis-2016 github organization"
 ---
 
+
 SPIS instructors, mentors and students must be added to ucsd-cse-spis-2016 github organization.
 
 * Instructors and mentors should be added with "Owner" access.
@@ -10,7 +11,7 @@ SPIS instructors, mentors and students must be added to ucsd-cse-spis-2016 githu
 * In addition, it is very important the default access be set to 
 
 
-# Making sure the default access is "None"
+# First, make sure the default access is "None"
 
 Before adding anyone to the organization as a member, be sure that the default repo permission is set to None.
 
