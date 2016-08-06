@@ -3,7 +3,7 @@ topic: ACMS Disk Quota Issues
 desc: "Disk or file quota exceeded, or what to do when you have weird issues and can't save files"
 ---
 
-# How to diagnose a disk quota problem<
+# How to diagnose a disk quota problem
 
 If you suddenly are finding that multiple things that usually work on your ACMS account are not working, e.g. IDLE locks up, web browser locks up, can't open new windows, commands fail with strange error messages, etc., it may be a sign that you are over disk quota.
 
