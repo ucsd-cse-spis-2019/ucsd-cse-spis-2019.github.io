@@ -3,6 +3,7 @@ topic: "Github: Addding members to an organization"
 desc: "SPIS instructors, mentors and students must be added to ucsd-cse-spis-2016 github organization"
 ---
 
+# Adding member to a github organization
 
 SPIS instructors, mentors and students must be added to ucsd-cse-spis-2016 github organization.
 
