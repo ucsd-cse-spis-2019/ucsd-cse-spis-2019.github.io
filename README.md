@@ -14,3 +14,7 @@ Github based web page for UCSD CSE SPIS 2016
 # Resources
 
 * [Github](/resources/github)
+ 
+# Travis-CI:
+
+https://travis-ci.org/ucsd-cse-spis-2016/ucsd-cse-spis-2016.github.io
