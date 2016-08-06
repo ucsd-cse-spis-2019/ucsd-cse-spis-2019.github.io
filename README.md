@@ -14,3 +14,4 @@ Github based web page for UCSD CSE SPIS 2016
 # Resources
 
 * [Github](/resources/github)
+ 
