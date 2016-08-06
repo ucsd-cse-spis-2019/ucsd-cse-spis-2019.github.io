@@ -1,9 +1,8 @@
 ---
 lecture_date: 2016-08-05 16:00:00.00-7:00
-topic: "Closing Circle"
+topic: "Week 1 Closing Circle"
 desc: "Reflect on Awesome moments, meet the mentors, appreciations"
 week: "1"
-indent: true
 link_topic_desc_only: true
 ---
 
