@@ -31,8 +31,11 @@ The most important thing we want you to get out of this lab is the ability to
 Here's a more complete list of our learning objectives:
 
 * A few Unix commands: `pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, `rmdir`, `rm`
+* Some new options for creating a private github repo for a lab
+   * Creating it with a README.md and .gitignore for Python
+   * Adding a pair partner as a collaborator.
 * How to clone a private repo at the Bash (Unix) command line
-* How to store a Python file in a repo
+* How to store a Python file in that repo
 * The basic git workflow of `git add...`, `git commit...`, `git push...`
 * Testing of Python functions
 * Submitting a Python function for autograding using Gradescope
