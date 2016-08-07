@@ -1,5 +1,5 @@
 ---
-topic: git: basic workflow
+topic: "git: basic workflow"
 desc: "git clone; git status; git add ...; git commit ... ; git push origin master "
 ---
 
