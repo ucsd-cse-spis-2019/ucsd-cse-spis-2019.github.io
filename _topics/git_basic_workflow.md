@@ -11,7 +11,7 @@ Consider this as a kind of "cheat sheet", rather than as a full tutorial on the 
 
 # One time setup per project:
 
-Short version: 
+## Short version: 
 
 ```
 cd ~/github
@@ -19,7 +19,8 @@ git clone ssh-clone-url-of-your-repo
 cd repo-name
 ```
 
-Longer version:
+## Longer version:
+
 * Find the repository's web page on github.com
 * Find the SSH clone URL on the right hand side, about half way down.
 * If the link says HTTPS clone URL instead of SSH clone URL, click the blue SSH link.
@@ -50,7 +51,7 @@ git commit -m "AB/CD describe your changes"
 git push origin master
 ```
 
-Troubleshooting:
+# Troubleshooting:
 
 * If push is rejected because the remote has work you do not have locally, do a `git pull origin master` first.
 * If you are thrown into vim, use escape `:wq` then press Enter/Return  to save the automatic commit message.)
