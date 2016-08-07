@@ -102,9 +102,14 @@ div.not-ready-warning {
    text-align: left;
 }
 
-div.not-ready-warning h2, h3 {
+div.not-ready-warning h2 {
  text-align:center;
 }
+
+div.not-ready-warning h3 {
+ text-align:center;
+}
+
 
 div.redbox {
  padding: 0.5em;
