@@ -27,3 +27,10 @@ you may use your first name and last initial.     Also, change the email address
 git config --global user.name "Alex Triton"
 git config --global user.email "atriton@ucsd.edu"
 ```
+
+# Creating an ssh public/private key pair for your ACMS account
+
+
+
+
+# Uploading the public key for your ACMS account to your github.com account.
