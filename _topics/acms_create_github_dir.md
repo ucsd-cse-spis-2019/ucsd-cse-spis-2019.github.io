@@ -254,3 +254,6 @@ from anywhere with a single command: `cd ~/github`, as shown here:
 As shown above, use `pwd` to verify that you are indeed in your `~/github directory`.
 
 Your output won't say `spis16t3`, but instead will show your own ACMS username in place of that.
+
+If you were doing these steps as part of SPIS 2016 lab02,<br>
+you can use this link to return there now: [SPIS 2016 lab02](/lab/lab02/)
