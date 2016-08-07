@@ -20,19 +20,19 @@ throughout all of the courses that use the ACMS unix accounts during your entire
 
 Here is a table of the Unix commands covered in this brief tutorial:
 
-    | Unix Command   | Brief explanation                                               |
-    |----------------|-----------------------------------------------------------------|
-    | `date`         | Show current date and time                                      |
-    | `history`      | Show history of recent unix commands                            |
-    | `pwd`          | Print working directory                                         |
-    | `ls `          | List files                                                      |
-    | `mkdir foo`    | Create subdirectory (folder) `foo` in  current directory        |
-    | `mkdir ~/bar`  | Create subdirectory (folder) `bar` under home directory (`~`)   |
-    | `cd`           | Change directory to home directory (1st option)                 |
-    | `cd ~`         | Change directory to home directory (2nd option)                 |
-    | `cd foo`       | Change directory to `foo` inside current directory              |
-    | `cd `..`       | Change directory to parent of current directory (go up)         |
-    | `cd ~/fum`     | Change directory to `foo` inside home directory (`~`)           |
+| Unix Command   | Brief explanation                                               |
+|----------------|-----------------------------------------------------------------|
+| `date`         | Show current date and time                                      |
+| `history`      | Show history of recent unix commands                            |
+| `pwd`          | Print working directory                                         |
+| `ls `          | List files                                                      |
+| `mkdir foo`    | Create subdirectory (folder) `foo` in  current directory        |
+| `mkdir ~/bar`  | Create subdirectory (folder) `bar` under home directory (`~`)   |
+| `cd`           | Change directory to home directory (1st option)                 |
+| `cd ~`         | Change directory to home directory (2nd option)                 |
+| `cd foo`       | Change directory to `foo` inside current directory              |
+| `cd `..`       | Change directory to parent of current directory (go up)         |
+| `cd ~/fum`     | Change directory to `foo` inside home directory (`~`)           |
 
 You should also learn the following concepts:
 
