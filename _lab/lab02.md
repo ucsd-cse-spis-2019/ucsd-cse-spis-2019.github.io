@@ -30,7 +30,7 @@ The most important thing we want you to get out of this lab is the ability to
 
 Here's a more complete list of our learning objectives:
 
-* A few Unix commands: `pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, `rmdir`, `rm`
+* A few Unix commands, including:  `pwd`, `ls`, `cd`, `mkdir`
 * Some new options for creating a private github repo for a lab
    * Creating it with a README.md and .gitignore for Python
    * Adding a pair partner as a collaborator.
@@ -42,178 +42,96 @@ Here's a more complete list of our learning objectives:
 
 # Step-by-Step through {{page.num}}
 
-## Step 1: Bring up a bash terminal shell
+## Step 1: Create a `~/github` directory on your ACMS account
 
-Bring up a bash terminal shell.  As a reminder, you can do this by selecting "Applications", then either "Terminal" or "Konsole" from the menu that pops up.  (Your Applications menu may have only Terminal, or only Konsole, or may have both.
-For our purposes, they work equally well.)
+The following article explains how to create a `~/github` directory on your ACMS account.
 
-### The bash prompt, date, `~` for home directory, and `history`
+* [Creating `~/github` and learning some shell commands in the process](/topics/acms_create_github_dir/)
 
-On the ACMS machines the bash terminal prompt typically looks like this:
+It also covers some basics of the commands you can use at the bash shell prompt&mdash;commands such as
+`pwd`, `cd`, `mkdir`, and others that you'll need to know for SPIS (and in your later UCSD CSE courses) for working
+with your ACMS account.
 
-```
-[spis16t3@ieng6-240]:~:32$ 
-```
+If *both* you *and* your pair partner are already thoroughly familiar with Unix command basics&mdash;that is, you know how to create `~/github`, and you are *throughly* familiar with everything in the table below, you can just create ~/mkdir, and skip the tutorial.
 
-It is called a *prompt* because it *prompts* you to enter some a command.  One of the most basic commands you can enter is
-the `date` command.  Try it: type in `date` and press return *Enter*.
+But if either or both of you has any doubt, you are strongly encourage to go through this page carefully and slowly,
+to learn some of the basics of working with Unix commands at the bash shell.  That is one of the most fundamental skills you'll need throughout all of the courses that use the ACMS unix accounts during your entire stay at UCSD.
 
-```
-[spis16t3@ieng6-240]:~:32$ date
-Thu Aug  4 13:56:29 PDT 2016
-[spis16t3@ieng6-240]:~:33$ 
-```
+I would encourage you to go through the entire tutorial at least once in one pair partner's account, and then repeat it briefly in the second pair partner's account so that each partner has a ~/github subdirectory.
 
-The date is printed, and you get a new prompt.  Note that the last number in that prompt keeps increasing by 1.   These numbers refer to your "command history".  If you type the command `history`, you'll see a list of all the recent commands you have typed.  Try it:
+To help you review whether you got all of the necessary learning from the tutorial, here is a brief overview (it is contained in the tutorial as well.)
 
-```
-[spis16t3@ieng6-240]:~:33$ history
-    1  idle
-    2  idle
-    3  pwd
-```
-(I left some out here...)
-```
-   31  exit
-   32  date
-   33  history
-[spis16t3@ieng6-240]:~:34$ 
-```
+Unix shell commmands:
 
-You can see that the next command I type will be "number 34" in my history.
+    | Unix Command   | Brief explanation                                               |
+    |----------------|-----------------------------------------------------------------|
+    | `date`         | Show current date and time                                      |
+    | `history`      | Show history of recent unix commands                            |
+    | `pwd`          | Print working directory                                         |
+    | `ls `          | List files                                                      |
+    | `mkdir foo`    | Create subdirectory (folder) `foo` in  current directory        |
+    | `mkdir ~/bar`  | Create subdirectory (folder) `bar` under home directory (`~`)   |
+    | `cd`           | Change directory to home directory (1st option)                 |
+    | `cd ~`         | Change directory to home directory (2nd option)                 |
+    | `cd foo`       | Change directory to `foo` inside current directory              |
+    | `cd `..`       | Change directory to parent of current directory (go up)         |
+    | `cd ~/fum`     | Change directory to `foo` inside home directory (`~`)           |
 
-### Your account and machine in the prompt
+You should also learn the following concepts:
 
-There are a few others parts of the prompt.  
-* The `spis16t3` part is my account name. Your's will be something like `spis16xy` where `xy` are two letters
-* The `ieng6-240` part is the machine I'm logged into.  It's full name is `ieng6-240.ucsd.edu`
-* Finally, the `~` part is a symbol for your *home directory*.  That home directory is a very important concept.
+* Home directory (`~`), directory, and subdirectory
+* Unix/Linux directory tree, rooted at `/`
+* Bash Shell
+* Shell prompt
 
-Your *home directory* is a folder (called a *directory* on Unix) that stores all of the information you keep on the ACMS
-systems.     When you first log on, you always start in your home directory.   
-
-### The `cd`, `mkdir`, and `ls` commands
-
-You can return to your home directory at any time by typing `cd`, all by itself on the command line.  The letters `cd` stand for *change directory*.    Try it:
-
-```
-[spis16t3@ieng6-240]:~:34$ cd
-[spis16t3@ieng6-240]:~:35$ 
-```
-
-In this case, nothing changed, because we were already in our home directory. But, we can try changing into a different directory, and then returning to our home directory.
-
-To see what other directories exist, we can type the `ls` command, which is the *list files* command. Try it:
-
-```
-[spis16t3@ieng6-240]:~:39$ ls
-Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
-[spis16t3@ieng6-240]:~:40$ 
-```
-
-You can see that there are eight folders (directories) under our home directory.  We are going to create one more.
-We'll do that with the `mkdir` command for *make directory*.  
-
-Type this at the bash prompt: `mkdir github` and the press enter.  Then type `ls` again and press enter:
-
-```
-[spis16t3@ieng6-240]:~:40$ mkdir github
-[spis16t3@ieng6-240]:~:41$ ls
-Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  github
-[spis16t3@ieng6-240]:~:42$ 
-```
-
-Now you see that there is an additional directory.  Do you see it? It's called github, and its the last one listed.
-
-Our current directory is our home directory, as we can see from the `~` in our prompt.    We can change our current directory to be the github directory by typing `cd github`, as shown here.  Try it, and try typing `ls` right after that.
-
-```
-[spis16t3@ieng6-240]:~:42$ cd github
-[spis16t3@ieng6-240]:github:43$ ls
-[spis16t3@ieng6-240]:github:44$ 
-```
-
-You can see that the second part of the prompt changes to `github` to show that we are our in our github directory.
-Since this directory is located "under" our home directory, we sometimes call this a "subdirectory".
-
-### The `pwd` command
-
-The next command we are going to learn is the `pwd` command, for *print working directory*.  Try it:
-
-```
-[spis16t3@ieng6-240]:github:44$ pwd
-/home/linux/ieng6/spis16/spis16t3/github
-[spis16t3@ieng6-240]:github:45$ 
-```
-
-You see that this command prints out our "working directory".   *Current directory* and *working directory* are just two different ways to say the same thing.
-
-Lets look more closely at what was printed: `/home/linux/ieng6/spis16/spis16t3/github`
-
-This is a list of parent directories (or folders), each of which contains the one below it.
-
-A simplified view is this:
-
-<img src="https://docs.google.com/drawings/d/1-V6Unovl04bGPHKQF4XwyLsp5BoSfIshJFM2nxdr_Gw/pub?w=121&amp;h=571">
-
-These files and directories, though exist in the context of a larger directory tree that contains many other directories and folders.
-
-<img src="https://docs.google.com/drawings/d/18JSwrUBKVmKx9fIL7vX3eexCJI35AMpzIO7g_azldkM/pub?w=853&amp;h=578">
-
-This output `/home/linux/ieng6/spis16/spis16t3/github` from the pwd command is called a *path*, since it shows the path from the root directory of the disk space on our machine, which is represented by the symbol `/`, all the way down to the directory `github` that we just created.
-
-Our home directories for spis are all located inside `/home/linux/ieng6/spis16`.   They are, for example:
-
-* /home/linux/ieng6/spis16/spis16aa
-* /home/linux/ieng6/spis16/spis16ab
-* /home/linux/ieng6/spis16/spis16ac
-* /home/linux/ieng6/spis16/spis16ad
-* /home/linux/ieng6/spis16/spis16ae
-* etc...
-
-Each of you has their own home directory.  
-
-### Various navigation commands
-
-As a reminder:
-
-* The command `pwd` tells us where we are by printing the current working directory.
-* The command `ls` lists the files in the current directory
-
-You can change the current working directory in a variety of ways.  Try changing your directory in various ways,
-exploring the directory tree shown in the diagram above, and using `pwd` and `ls` to show the effect.
-
-* `cd ~` or `cd` to go your home directory
-* `cd ~spis16t1` or `cd ~spis16t2` to go to a specific user's home directory
-* `cd ..` to go *up one level in the tree* from where you are now.  
-* `cd /` to go to the root of teh directory
-* `cd foo` to go into a directory foo that is located in the current directory
-
-Note that `cd /foo` does NOT go one level down from the current directory. Instead, it goes into the foo directory directly under the root directory.   
-
-When are are finished exploring, use `cd ~/github` to change into the github directory under your home directory.
+When both partners have a `~/github` directory and are comfortable with shell basics, move on to Step 2.
 
 ## Step 2: Create your shared lab02 repo 
 
-One of the two pair partners should log into github.com to create the repo.  The second pair partner
-will add the first as a collaborator.
+There are three steps involved here.  First, I'll give you an overview, and then the details:
 
+1. One of the two pair partners should log into github.com to create an empty private repo *in a particular way*, namely,    pre-populated only with a README.md, and a .gitignore for Python.  
+
+2. The first pair partner will then invite the second to be a collaborator with <b>Admin</b> access.   
+3. Finally, the second pair partner needs to accept the invitation to be a collaborator.    
+
+
+Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2016 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
+
+For purposes of the rest of these insructions, though, I'll refer to "first" as the partner
+under whose github account the repo is initially created, and "second" as the partner that gets invited to collaborate.
+
+And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2016 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
+   
 ### Step 2a: Create a private repo with a README.md and a .gitignore file for Python.
 
-Follow the instructions here to create a private github repo for lab02 under the ucsd-cse-spis-2016 github organizaiton,
-with the name
+Choose which pair partner is going to create the repo&mdash;that pair partner should be the one that is logged into github.com.
 
-Follow [Method 2](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method2) on the page that describes
-how to create github repos.
+To create the repo follow the instructions at the link: [github create repo Method 2](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method2).
 
-The name should be `spis16-lab02-Name-Name`, e.g. `spis16-lab02-Alex-Chris`.
+As you follow these instructions, create:
+* a private github repo under the `ucsd-cse-spis-2016` github organizaiton,
+* with the name `spis16-lab02-Name1-Name2` where,
+    * `Name1` is the first pair partner's preferred first name
+    * `Name2` is the second pair partner's preferred first name
 
-### Step 2b: Add the other pair partner as a collaborator
+The <b>Pair Name</b> column in the [SPIS 2016 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
 
-The pair partner that created the repo will automatically have access.  That partner needs to add the second
-partner as a collaborator.  
+An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be: `spis16-lab02-Alex-Chris`.
+
+### Step 2b: First pair partner invites second pair partner to be a collaborator
+
+The pair partner that created the repo will automatically have access.  That partner needs to invite the second
+partner to be a collaborator with admin access.
 
 The instructions to do that are found here: [Github: Adding collaborators](/topics/github_add_collaborators)
+
+### Step 2c: Second pair partner accepts the invitation
+
+The second pair partner should accept the invitation.  This is usually straightforward: there is an invitation in the second pair partner's incoming email with a link to click, and it is clear what to do.
+
+If the email doesn't arrive, though, or anything is not clear, there are troubleshooting instructions later on the same page you accessed in the previous step to add the partner as a collaborator:  Github: Adding collaborators](/topics/github_add_collaborators)
+
 
 ## Step 3: Cloning a private repo at the bash (Unix) command line
 
