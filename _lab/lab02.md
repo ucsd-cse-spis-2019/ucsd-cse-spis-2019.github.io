@@ -117,7 +117,9 @@ As you follow these instructions, create:
 
 The <b>Pair Name</b> column in the [SPIS 2016 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
 
-An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be:\\ `spis16-lab02-Alex-Chris`.
+An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be: 
+
+`spis16-lab02-Alex-Chris`.
 
 ### Step 2b: First pair partner invites second pair partner to be a collaborator
 
