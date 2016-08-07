@@ -3,7 +3,17 @@ topic: "ACMS Account: github one-time setup steps"
 desc: "ssh-key generation, configure user.name, etc. "
 ---
 
-# One time configuration commands
+# Using git from your ACMS account: one-time setup steps
+
+There are two things you need to do to make your ACMS account work smoothly with git.  
+
+* Setting your global `user.name` and `user.email` values
+* Creating an ssh public/private key pair for your ACMS account
+* Uploading the public key for your ACMS account to your github.com account.
+
+Instructions for each of these steps appear below.
+
+# Setting your global `user.name` and `user.email` values
 
 You will need to type the following commands just once for each separate ACMS account you have.
 
