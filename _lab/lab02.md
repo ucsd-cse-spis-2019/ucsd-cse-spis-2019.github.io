@@ -145,7 +145,7 @@ Those steps are outlined here.  Please repeat these steps under each pair partne
 
 <b>TIME-SAVING TIP:</b> You do not have to log "all the way out" and log back in to be able to do these steps for both pair partners.    Instead, if the first pair partner is logged in, they can just allow the second pair partner to drive for a moment, and ssh into their account from a terminal window.  This article explains how:
 
-* [ACMS: ssh'ing to access another account](/topics/acms_ssh_to_another_account)
+* [ACMS: ssh'ing to access another account](/topics/acms_ssh_into_another_account/)
  
 
 
