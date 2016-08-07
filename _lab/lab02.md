@@ -132,7 +132,8 @@ The instructions to do that are found here: [Github: Adding collaborators](/topi
 
 The second pair partner should accept the invitation.  This is usually straightforward: there is an invitation in the second pair partner's incoming email with a link to click, and it is clear what to do.
 
-If the email doesn't arrive, though, or anything is not clear, there are troubleshooting instructions later on the same page you accessed in the previous step to add the partner as a collaborator:  Github: Adding collaborators](/topics/github_add_collaborators)
+If the email doesn't arrive, though, or anything is not clear, there are troubleshooting instructions later on the same page you accessed in the previous step to add the partner as a collaborator:  
+[Github: Adding collaborators](/topics/github_add_collaborators)
 
 
 ## Step 3: Cloning a private repo at the bash (Unix) command line
