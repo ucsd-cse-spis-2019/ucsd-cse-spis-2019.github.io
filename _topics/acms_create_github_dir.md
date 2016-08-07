@@ -3,6 +3,9 @@ topic: "ACMS Account: Creating ~/github"
 desc: "Bash shell command intro, and creating your ~/github directory"
 ---
 
+# Creating ~/github
+## And learning some shell commands in the process
+
 This brief tutorial has two purposes.
 
 1.  By the time you are finished, you should have a `github` directory immediately under the home directory of your
@@ -17,6 +20,8 @@ the rest of this page.
 But if either or both of you has any doubt, you are strongly encourage to go through this page carefully and slowly,
 to learn some of the basics of working with Unix commands at the bash shell.  That is one of the most fundamental skills you'll need
 throughout all of the courses that use the ACMS unix accounts during your entire stay at UCSD.
+
+# Unix commands covered in this tutorial
 
 Here is a table of the Unix commands covered in this brief tutorial:
 
@@ -61,7 +66,7 @@ So, during SPIS, when we refer to Unix or Linux, these are, again more
 or less interchangable terms.  The fine grained distinctions between
 the two can be saved for later.
 
-## The bash prompt, date, `~` for home directory, and `history`
+# Step 2: Learn about the bash prompt, date, `~` for home directory, and `history`
 
 When you open up a terminal session on the ACMS machines the bash terminal prompt typically looks like this:
 
@@ -102,7 +107,7 @@ have typed.  Try it:
 
 You can see that the next command I type will be "number 34" in my history.
 
-### Your account and machine in the prompt
+# Step 3: Your account and machine in the prompt
 
 There are a few others parts of the prompt.  
 
@@ -116,7 +121,7 @@ Your *home directory* is a folder (called a *directory* on Unix) that
 stores all of the information you keep on the ACMS systems.  When you
 first log on, you always start in your home directory.
 
-### The `cd`, `mkdir`, and `ls` commands
+# Step 4:  The `cd`, `mkdir`, and `ls` commands
 
 You can return to your home directory at any time by typing `cd`, all
 by itself on the command line.  The letters `cd` stand for *change
@@ -144,6 +149,8 @@ You can see that there are eight folders (directories) under our home
 directory.  We are going to create one more.  We'll do that with the
 `mkdir` command for *make directory*.
 
+# Step 5: The `mkdir` command
+
 Type this at the bash prompt: `mkdir github` and the press enter.  Then type `ls` again and press enter:
 
 ```
@@ -154,6 +161,8 @@ Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  githu
 ```
 
 Now you see that there is an additional directory.  Do you see it? It's called github, and its the last one listed.
+
+# Step 6: More on `cd` and `ls`
 
 Our current directory is our home directory, as we can see from the
 `~` in our prompt.  We can change our current directory to be the
@@ -171,7 +180,7 @@ show that we are our in our github directory.  Since this directory is
 located "under" our home directory, we sometimes call this a
 "subdirectory".
 
-### The `pwd` command
+# Step 7: The `pwd` command, and Unix paths
 
 The next command we are going to learn is the `pwd` command, for *print working directory*.  Try it:
 
@@ -208,7 +217,7 @@ Our home directories for spis are all located inside `/home/linux/ieng6/spis16`.
 
 Each of you has their own home directory.  
 
-### Various navigation commands
+# Step 8: Various directory navigation commands
 
 As a reminder:
 
@@ -229,6 +238,8 @@ You should be able to use the `pwd` command at each level
 Note that `cd /foo` does NOT go one level down from the current
 directory. Instead, it goes into the foo directory directly under the
 root directory.
+
+# Step 8: Finishing up in `~/github`
 
 When you are all finished, cd into your `~/github` directory.  Note that you can do this
 from anywhere with a single command: `cd ~/github`, as shown here:
