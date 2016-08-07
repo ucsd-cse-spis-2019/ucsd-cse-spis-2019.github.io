@@ -3,12 +3,11 @@ layout: lab
 num: lab02
 ready: false
 desc: "lab02, Next steps with github, Python functions, testing"
-assigned: 2016-08-07 13:15:00.00-7
-due: 2016-08-09 15:00:00.00-7
+assigned: 2016-08-08 13:15:00.00-7
+due: 2016-08-08 17:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
-
 
 # Overview
 
