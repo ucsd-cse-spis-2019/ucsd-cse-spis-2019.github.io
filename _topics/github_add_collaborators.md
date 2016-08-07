@@ -87,7 +87,7 @@ under <b>Collaborators and Teams<b>, as shown here:
 
 # Changing Access Levels for Collaborators
 
-Invitations can be issued for different levels of access:
+Invitations can be issued for different levels of access.  
 
 * <b>Read</b> access means "Read Only".  It signifies that the contents of a private repo can be read, but not changed.
    In SPIS, we use this for the FEEDBACK repos: Mentors and Instructors have write
@@ -116,6 +116,8 @@ If you've been invited to a repo, you can check your level of access:
     "fork" of the repo, then you have read only access.    
 
 Here are some examples of what it looks like to invite a user with various kinds of access.
+These examples are found
+on the repository settings page under <b>Collaborators &amp; teams</b>.
 
 Here, `atriton` has invited `chrislajolla` with admin access:
 
