@@ -200,7 +200,8 @@ def ftoc(fTemp):
 
 In the second window, enter this code.   Don't just copy and paste it; read through it and try to understand it.
 
-After the code block, there is an explanation of each line.
+If you would like a more detailed, line-by-line explanation of this code, plus some background on unit testing in general,
+read the article [Python: Unit Testing](/topics/python_unittest/).sy
 
 ```
 # test_tempFuncs.py
@@ -221,7 +222,41 @@ class Test_tempFuncs(unittest.TestCase):
 
    def test_ftoc_4(self):
       self.assertAlmostEqual(ftoc(67.0),19.4444,places=3)
+
+if __name__ == '__main__':
+    unittest.main()      
 ```
+
+Save each of the files by choosing 'File -> Save' from the Idle menu.  
+
+Save them with the *exact* names: `tempFuncs.py` and `test_tempFuncs.py`.  It is important to get the upper vs. lowercase, and the punctuation correct.
+
+When you save, the save dialog should indicate that they are being saved inside the ~/github/spis16-lab02-Name-Name folder that corresponds to your local github repo.   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
+
+Onve you have saved both files, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis16-lab02-Name-Name` folder, and do an ls command as shown here.  You should see both the files, with names exactly as shown here.
+
+# What if the names are not exactly right? `mv` and `rm` to the rescue
+
+If the names are not exactly right, you can use the unix `mv` command, which functions both as a *move* command as as a *rename* command.    The syntax is:
+
+```
+mv oldname newname
+```
+
+For example to change `temp_funcs.py` to `tempFuncs.py`, you would type:
+
+```
+mv temp_funcs.py tempFuncs.py
+```
+
+If you end up with extra files, you can use the rm command to delete files you dont want.  For example, to remove the file `temp_Fenks.py` that you perhaps saved by mistake, you can type:
+
+```
+rm temp_Fenks.py
+```
+
+
+
 
 
 
