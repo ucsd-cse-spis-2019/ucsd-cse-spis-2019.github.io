@@ -170,7 +170,11 @@ if __name__ == "__main__":
 {% endhighlight %}
 
 <style>
-div.nicer-table table * td { padding: 2px; }
+div.nicer-table table * td:first-child { 
+   text-align:center;
+   font-family: Courier New, fixed;
+}
+div.nicer-table table * td { padding: 4px; }
 </style>
 
 
@@ -178,13 +182,13 @@ div.nicer-table table * td { padding: 2px; }
 
 | line | explanation  |   
 |------|--------------|
-|  1   | 	This code pulls in the definition of a new datatype called Flask (note the uppercase F) from a module called flask (note the lowercase f.) In Python, when you import something, you are telling the Python interpreter that you want to build your software on top of some software already written by someone else. |
+|  1   | 	This code pulls in the definition of a new datatype called `Flask` (note the uppercase `F`) from a module called `flask` (note the lowercase `f`.) In Python, when you import something, you are telling the Python interpreter that you want to build your software on top of some software already written by someone else. |
 |  2   |	This line of code is an assignment statement. The right hand side is evaluated, and then the variable on the left is set to the result of the right hand side. The right hand side, Flask(__name__) creates a new object of type Flask. The `__name__` parameter is explained further in the box "About the First Parameter" on this page of the api documentation. We'll defer the details for now, and just say: for very simple Flask applications, __name__ is always the correct choice. |
 | 4	| The `@` signals that what follows is a Python annotation. It indicates that there is some special way the following function definition should be handled. In this case, the annotation `app.route("/")` indicates that this function is called whenever we ask for the main page on this web server (i.e. `"/"`. This will make more sense when we add other pages later. |
 | 5	 | Lines 5 and 6 are a regular plain old Python function definition. We can see that the function is called `"hello"`, and takes no parameters.
-| 6	 |  	This function returns a string, "Hello World!", which is used as the page to display for the main page of the web server ("/").
-| 8	| Line 8 has an if test that checks the special variable __name__ to see if it has the special value "__main__". This is the mysterious "conditional script stanza", which we aren't going to explain in detail here. Instead, we'll just say that whatever "main thing" a Python code is supposed to do when you select "Run" in IDLE, or type python filename.py, in this case python hello.py, should typically be wrapped in this if test. That makes your file much more useful, because then the definitions it contains can be included as a module in another file.
-| 9	 | 	Line 9 is the line that actually causes our web server to start running. The dot-notation app.run() tells us that run is a method of the object app. By putting () after it, we are making a function call to that method, and starting things in motion.   The port=5000 part indicates the port number we are going to listen for connections on.   By default, web servers listen for connections on port 80, and web browsers send requests to port 80.  We don't have the necessary permissions to set up a server on port 80 (port numbers lower than 1024 are restricted to system administrators), but we can set up a server on a "high numbered port", basically anywhere between 1024 and 65536.  For various reasons, its better to choose a number starting at 5000 (less likely to conflict with some other network service.)   Being able to specify a port number both on the server side and the browser side allows many users to set up servers and connect to them all on the same machine. |
+| 6	 |  	This function returns a string, `"Hello World!"`, which is used as the page to display for the main page of the web server (`"/"`).
+| 8	| Line 8 has an if test that checks the special variable `__name__` to see if it has the special value "__main__". This is the mysterious "conditional script stanza", which we aren't going to explain in detail here. Instead, we'll just say that whatever "main thing" a Python code is supposed to do when you select "Run" in IDLE, or type python filename.py, in this case python hello.py, should typically be wrapped in this if test. That makes your file much more useful, because then the definitions it contains can be included as a module in another file.
+| 9	 | 	Line 9 is the line that actually causes our web server to start running. The dot-notation app.run() tells us that run is a method of the object app. By putting () after it, we are making a function call to that method, and starting things in motion.   The `port=5000` part indicates the port number we are going to listen for connections on.   By default, web servers listen for connections on port 80, and web browsers send requests to port 80.  We don't have the necessary permissions to set up a server on port 80 (port numbers lower than 1024 are restricted to system administrators), but we can set up a server on a "high numbered port", basically anywhere between 1024 and 65536.  For various reasons, its better to choose a number starting at 5000 (less likely to conflict with some other network service.)   Being able to specify a port number both on the server side and the browser side allows many users to set up servers and connect to them all on the same machine. |
 
 </div>
 
