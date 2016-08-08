@@ -1,6 +1,11 @@
+.calendar {
+    overflow: scroll;
+}
+
 .calendar table {
     border-collapse: collapse;
     width: 100%;
+    overflow: scroll;
 }
 
 .calendar table tr th,td {
