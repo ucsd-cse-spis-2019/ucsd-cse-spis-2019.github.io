@@ -450,7 +450,15 @@ Now, you should write a correct version of the ctof function so that tests pass.
 That will be a line of code that starts with `return` and ends with an expression involving the variable
 `cTemp`, and some math operations to convert that to an equivalent Fahrenheit value. 
 
-Try running the tests, and when all of your tests pass, you are ready to commit.
+Try running the tests, and when all of your tests pass, you are ready to commit.  What you are looking for is this:
+
+```
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
+
+OK
+```
 
 If you get part-way done, and *some* of your tests pass, but not others, or you are in the middle of working
 when it is time for a break, that is STILL a good time to do a commit.   Add the letters "WIP" to the start of your
