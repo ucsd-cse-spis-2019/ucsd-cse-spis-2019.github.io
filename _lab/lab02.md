@@ -369,10 +369,28 @@ After adding this code, save the file `tempFuncs.py`.  Then at the command promp
  
 Then check the repo's page on github.com to see that the changes appear.
 
-## Step 7b: Add test cases for `ctof` to `test_tempFuncs.py`
+## Step 7b: Add import, and test cases for `ctof` to `test_tempFuncs.py`
         
-Now add some test cases for the cToF function.   You simply add these test cases immediately below the ones for
-fToC.  
+Next, edit the `test_tempFuncs.py` file in IDLE, and after the line
+
+```
+from tempFuncs import ftoc
+```
+
+add this line:
+
+```
+from tempFuncs import ctof
+```
+
+This line is needed so that we can pull the definition of `ctof` from the file `tempFuncs.py` and run our tests
+on it.    
+
+Now add some test cases for the cToF function.   
+* You simply add the function definitions for these test cases immediately below the ones for
+fToC.    
+* Be sure they are indented inside the `class`, just like the ones for `ftoc`.
+* Also, be sure that each one has a different name from all of the others.
 
 I'll give you the first one, but the rest you must come up with on your own:
 
@@ -381,7 +399,7 @@ I'll give you the first one, but the rest you must come up with on your own:
       self.assertAlmostEqual(ctof(100.0),212.0)
 ```
 
-Add at least five more.  
+Add at least four more so that you have a total of five tests.
 
 Once you are done, its time to commit the changes:
 
