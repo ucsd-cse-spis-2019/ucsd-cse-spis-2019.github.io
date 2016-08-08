@@ -111,8 +111,15 @@ Once you have set up the repo, you can run `make clean; make` to generate
 the autograder.zip file.  What do you do with this?  The text and images below
 explain the process.
 
-First, navigate to either the practice course, or the real course.  I strongly 
-recommend trying new assigments in the practice course first.
+* The ["real" SPIS 2016 Gradescope course](https://gradescope.com/courses/3559)
+* A [SPIS-Autograder-Development test course](https://gradescope.com/courses/3670) for testing out new autograded assignments before they are released to students.
+
+
+First, navigate to either:
+* the [SPIS 2016 autograder practice course](https://gradescope.com/courses/3670), OR
+* the real [SPIS 2016 course](https://gradescope.com/courses/3670) page on Gradescope.  
+
+(I strongly  recommend trying new assigments in the practice course first.)
 
 Navigate to the assignments page.  There may be a "Create Assignment" button on the first
 page that pops up, but that only works for traditional assignments:
