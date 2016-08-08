@@ -8,6 +8,12 @@ desc: "Creating autograded assignments"
 The website [gradescope.com](https://gradescope.com) provides the capability
 to set up autograded assignments.
 
+We have two courses set up in Gradescope for SPIS 2016:
+
+* The ["real" SPIS 2016 Gradescope course](https://gradescope.com/courses/3559)
+* A [SPIS-Autograder-Development test course](https://gradescope.com/courses/3670) for testing out new autograded assignments before they are released to students.
+
+
 The private repo
 <https://github.com/ucsd-cse-spis-2016/PRIVATE-autograder-try01>
 contains an example of an autograded assignment.  This assignment is
