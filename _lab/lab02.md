@@ -294,8 +294,8 @@ a third step to update the `origin` repo on github.com with that code.
 
 The process is described in two articles: 
 
-* a longer version that goes into more detail: [Github: basic workflow](/topics/github_basic_workflow/)
-* a shorter version that is more handy reference: [Github: worflow explained](/topics/github_workflow_explained/)
+* a longer version that goes into more detail: [Git: basic workflow](/topics/git_basic_workflow/)
+* a shorter version that is more handy reference: [Git: worflow explained](/topics/git_workflow_explained/)
 
 Essentially, though here's what you are going to do:
 
