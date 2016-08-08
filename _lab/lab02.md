@@ -243,7 +243,7 @@ README.md  tempFuncs.py  tempFuncs.pyc  test_tempFuncs.py
 [spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:170$ 
 ```
 
-# Now try running the test_tempFuncs.py file.
+### Now try running the test_tempFuncs.py file.
 
 Now, in the window with the `test_tempFuncs.py` file, try selecting "Run -> Run Module" from the menu.
 
@@ -260,7 +260,7 @@ OK
 >>> 
 ```
 
-# What if the names are not exactly right? `mv` and `rm` to the rescue
+### What if the names are not exactly right? `mv` and `rm` to the rescue
 
 If the names of your `tempFuncs.py` and `test_tempFuncs.py` are not exactly right, you can use the unix `mv` command, which functions both as a *move* command as as a *rename* command.    The syntax is:
 
@@ -315,7 +315,109 @@ of hundreds or thousands you'll do during your four years at UCSD.
 
 ## Step 7: Testing of Python functions
 
-TBD
+Now, in this case, we had some code that already worked right out of the gate.   But the normal case is that we 
+
+1. Start with a *stub*, and some test cases and make sure they fail.
+2. Replace the stub with working code so that the test cases pass.
+3. See if there is any way to refactor the code to improve it.
+
+In this step, you'll:
+
+* add a stub for a second function to the `tempFuncs.py` file
+    * after doing so, you'll commit this change to practice the sequence:
+        ```
+        git add ... ; git commit -m "message"; git push origin master
+        ```
+* add some additioal test cases
+    * you'll commit this change too with the same sequence:
+        ```
+        git add ... ; git commit -m "message"; git push origin master
+        ```
+* see the test cases fail
+    * you won't have to commit at this step, because you won't have changed anything
+* then add code to make the tests cases pass
+    * You guessed it: yet another round of
+        ```
+        git add ... ; git commit -m "message"; git push origin master
+        ```
+
+Ok, so let's get started:
+
+
+
+## Step 7a: Add a stub for `ctof(cTemp)` to `tempFuncs.py`
+
+Add a stub for a second function to the `tempFuncs.py` file by adding this code to the file:
+
+```
+def ctof(cTemp):
+   return "stub"
+```
+
+This code is "always" the wrong answer, so it should fail every test.  That's what we want from a stub. It helps us
+"test the test" to make sure that it is successful at detecting bad code.
+
+After adding this code, save the file `tempFuncs.py`.  Then at the command prompt, inside the ~/github/spis16-lab02-Name-Name` direcory, type:
+
+* `git status`
+* `git add tempFuncs.py`
+* `git status`
+* `git commit -m "stub for ctof"
+* `git status`
+* `git push origin master`
+* `git status`
+ 
+Then check the repo's page on github.com to see that the changes appear.
+
+## Step 7b: Add test cases for `ctof` to `test_tempFuncs.py`
+        
+Now add some test cases for the cToF function.   You simply add these test cases immediately below the ones for
+fToC.  
+
+I'll give you the first one, but the rest you must come up with on your own:
+
+```
+   def test_ctof_1(self):
+      self.assertAlmostEqual(ctof(100.0),212.0)
+```
+
+Add at least five more.  
+
+Once you are done, its time to commit the changes:
+
+* `git status`
+* `git add test_tempFuncs.py`
+* `git status`
+* `git commit -m "tests for ctof"
+* `git status`
+* `git push origin master`
+* `git status`
+
+Then check the repo's page on github.com to see that the changes appear.
+
+## Step 7c: See the test cases fail
+
+Now, run the test cases by selecting "Run -> Run Module" from the menu in the window for `test_tempFuncs.py`.
+
+If you see that the correct number of test cases failed because the expected output didn't equal "stub", that's good.  
+You can move on to the next step.
+
+If on the other hand, there were errors of another kind (e.g. indentation errors, missing :, etc.) then you'll want to 
+fix those.  And if that involves change either, or both of the two files, you'll want to do another round of the steps to do a commit.
+
+If the commit involves changes to both files, you can combine those into a single commit.  Here's how:
+
+* EITHER:  `git add tempFuncs.py` followed by a separate `git add test_tempFuncs.py` 
+* OR: `git add *.py` which adds all files ending in .py from the current directory to the next commit (but only if they      are new or have changed.)
+* Then continue with the `git status`, git commit...` as before.
+
+## Step 7d: Replace the stub in ctof with correct code so that the tests pass
+
+Now, you should write a correct version of the ctof function so that tests pass.
+
+Then do one more commit so that your repo has the correct code that passes all of its tests. 
+
+Congratulations!  You are *almost* finished.
 
 ## Step 8:  Submitting a Python function for autograding using Gradescope
 
