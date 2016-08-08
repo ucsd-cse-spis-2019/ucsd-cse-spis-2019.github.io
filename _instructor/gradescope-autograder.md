@@ -114,6 +114,11 @@ explain the process.
 First, navigate to either the practice course, or the real course.  I strongly 
 recommend trying new assigments in the practice course first.
 
+Navigate to the assignments page.  There may be a "Create Assignment" button on the first
+page that pops up, but that only works for traditional assignments:
+
+![Access assignments page](gradescope-access-assignments-page-50.png)
+
 Then, click the "Create Programming Assignment" button as shown in the image below.
 
 It is near the bottom of the instructor UI, and is NOT the same as the regular
