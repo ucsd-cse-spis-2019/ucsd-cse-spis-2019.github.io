@@ -479,6 +479,7 @@ git push origin master
 When you have *all* the tests passing, do one more commit with the commit message `"CL/AT all tests passing"`. 
 * Of course, you should use your own initials, not `CL/AT`
 
+### A note about the exclamation point (`!`) in commit messages 
 One note: You may be tempted to put exclamation points in your commit messages, because getting the tests to pass is so 
 very, very exciting.  If you do, though, you'll have to remember to put a backslash in front of them, like this:
    
@@ -486,9 +487,20 @@ very, very exciting.  If you do, though, you'll have to remember to put a backsl
 git commit -m "CL/AT All tests passing \!"
 ```
     
-Otherwise, the bash shell may get confused about the meaning of the `!` symbol.    We can go into why that's the case
-some other time.    For now, though it may be better to just avoid the `!` symbol in your commit messages unless you remember the backslash.
-  
+Otherwise, the bash shell may get confused about the meaning of the `!` symbol, and you'll get this error:
+
+```
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:140$ git commit -m "CL/AT All tests passing!"
+-bash: !": event not found
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:141$
+```
+
+We can go into why that's the case some other time (what is this "event" that is not found?)    
+
+For now, though it may be better to just avoid the `!` symbol in your commit messages unless you remember the backslash.
+
+### All tests passing? Then you are almost done!
+
 Congratulations!  You are *almost* finished.   The last step involves submitting your code for "automatic grading".
 This way, you can be (reasonably) sure that you did the assignment correctly.
 
