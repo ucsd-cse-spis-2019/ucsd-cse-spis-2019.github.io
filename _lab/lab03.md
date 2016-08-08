@@ -13,7 +13,7 @@ If you find typos or problems with the lab instructions, please report them on P
 Goal
 ====
 
-The goal of this exercise is to practice with Turtle Graphics in Python by producing somewhere between two and nine Python functions that use Turtle Graphics to make particular shapes.
+The goal of this exercise is to practice with Turtle Graphics in Python by producing somewhere between two and six Python functions that use Turtle Graphics to make particular shapes.
 
 
 Work with your assigned pair programming partner on this lab. If you do not have one, consult with the instructors before starting.
@@ -59,9 +59,7 @@ The initial driver will be the one that is typing on the computer.
 Step 1: PLAN your letters on paper
 ----------------------------------
 
-In Lecture, we went over an example of a function that draws the letter A.
-
-You should plan out your drawings in much the same way. For each letter that you and your pair partner are going to draw, start by drawing a bounding box like this on on a piece of paper. Trade off: each of you should do the planning for the letters for your OWN name, with your pair partner watching and making helpful suggestions.
+Plan your drawing. For each letter that you and your pair partner are going to draw, start by drawing a bounding box like this on on a piece of paper. Trade off: each of you should do the planning for the letters for your OWN name, with your pair partner watching and making helpful suggestions.
 
 <img src="/lab/images/turtle/BoundingBox.png" title="BoundingBox.png" alt="BoundingBox.png" height="200" />
 
