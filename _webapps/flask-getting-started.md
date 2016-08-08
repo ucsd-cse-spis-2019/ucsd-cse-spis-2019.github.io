@@ -157,11 +157,27 @@ Explaining all the lines of code
 
 Ok, here is an explanation of each of the lines of code.   Then, we'll walk through how to do a few things that are a bit more interesting.
 
+{% highlight python linenos %}
+from flask import Flask
+app = Flask(__name__)
 
-1	from flask import Flask	This code pulls in the definition of a new datatype called Flask (note the uppercase F) from a module called flask (note the lowercase f.) In Python, when you import something, you are telling the Python interpreter that you want to build your software on top of some software already written by someone else./td>
-2	app = Flask(__name__)	This line of code is an assignment statement. The right hand side is evaluated, and then the variable on the left is set to the result of the right hand side. The right hand side, Flask(__name__) creates a new object of type Flask. The __name__ parameter is explained further in the box "About the First Parameter" on this page of the api documentation. We'll defer the details for now, and just say: for very simple Flask applications, __name__ is always the correct choice.
-3	
-4	@app.route("/")	The @ signals that what follows is a Python annotation. It indicates that there is some special way the following function definition should be handled. In this case, the annotation app.route("/") indicates that this function is called whenever we ask for the main page on this web server (i.e. ("/"). This will make more sense when we add other pages later.
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    app.run(port=5000)
+{% endhighlight %}
+
+
+|   |  |   |
+|---|--|---|
+| 1 |	`from flask import Flask` |	This code pulls in the definition of a new datatype called Flask (note the uppercase F) from a module called flask (note the lowercase f.) In Python, when you import something, you are telling the Python interpreter that you want to build your software on top of some software already written by someone else. |
+| 2	 | `app = Flask(__name__)` |	This line of code is an assignment statement. The right hand side is evaluated, and then the variable on the left is set to the result of the right hand side. The right hand side, Flask(__name__) creates a new object of type Flask. The __name__ parameter is explained further in the box "About the First Parameter" on this page of the api documentation. We'll defer the details for now, and just say: for very simple Flask applications, __name__ is always the correct choice. |
+| 3	|  |  |
+| 4	| `@app.route("/")`	| The `@` signals that what follows is a Python annotation. It indicates that there is some special way the following function definition should be handled. In this case, the annotation app.route("/") indicates that this function is called whenever we ask for the main page on this web server (i.e. ("/"). This will make more sense when we add other pages later. |
+
+
 5	def hello():	Lines 5 and 6 are a regular plain old Python function definition. We can see that the function is called "hello", and takes no parameters.
 6	   return "Hello World!"	This function returns a string, "Hello World!", which is used as the page to display for the main page of the web server ("/").
 7	
