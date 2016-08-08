@@ -32,23 +32,35 @@ cd repo-name
 
 # Each time you make a change
 
-It is recommended, but not required, to do a `git status` first, and after each command below:
+It is recommended, but not required, to do a `git status` before and after each git command,
+as shown below.    
+
+To add files into the "next commit" you are going to do:
 
 ```
 git status
-```
-
-Then:
-
-```
 git add  names-of-files-you-changed
+git status
+```
+
+To make that commit permanent and add a comment:
+
+```
+git status
 git commit -m "AB/CD describe your changes"
+git status
 ```
 
-(When pairing, AB is the initials of the driver, CD are the initials of the navigator)
+* When pairing, AB is the initials of the driver, CD are the initials of the navigator
+* If you leave off the `-m "comment"` part, you'll be thrown into vim.  
+    * To get out, press the escape key once, type a colon `:`, then type `wq` and press enter.
+
+To push those commits from your local directory on ACMS up to the github.com server:
 
 ```
+git status
 git push origin master
+git status
 ```
 
 # Troubleshooting:
