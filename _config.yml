@@ -61,6 +61,9 @@ collections:
   mentor:
     output: true
     permalink: /mentor/:path/
+  instructor:
+    output: true
+    permalink: /instructor/:path/
 
 defaults:
   -
