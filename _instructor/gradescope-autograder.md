@@ -92,3 +92,11 @@ To get started:
     # for mac os
     .DS_Store
     ```
+
+
+
+
+----
+<div style="display:none;" data-note="This element provides link to generated page from github.com web interface">
+Generated page: https://ucsd-cse-spis-2016.github.io/instructors/gradescope-autograder
+</div>
