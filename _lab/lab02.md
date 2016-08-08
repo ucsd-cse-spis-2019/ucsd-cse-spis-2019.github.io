@@ -158,7 +158,72 @@ When you've done that, we are finally ready for some Python programming!
 
 ## Step 5:  How to store a Python file in a repo
 
-TBD
+To review what you've done so far:
+
+* You create a repo called `spis16-lab02-Name1-Name2` on github.com
+* You cloned that repo into your ACMS account under the `~/github` directory.
+* That means you actually have *two* repos now. 
+    * The repo on github.com and the repo on your ACMS account are *separate*, but *linked*
+    * More specifically, the one on ACMS points to the one on github.com as its `origin` repo
+    
+What you will do now is put some Python code into the local repo&mdash;or more precisely, you'll put some Python
+code into the directory that corresponds to that repo.   You won't actually commit it to the repo until the next step.
+
+So, what we want to do first is make `~/github/spis16-lab02-Name-Name` (except with your pair's names, not literally `Name-Name`) be your current directory.     Use the `cd` command to make that happen.  
+
+When you've done it, you 
+should be able to type `pwd` and see that your current directory path ends in `github/spis16-lab02-Name-Name`, just like in the example output below:
+
+```
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:118$ pwd
+/home/linux/ieng6/spis16/spis16t3/github/spis16-lab02-Alex-Chris
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:119$ 
+```
+
+Then, start up idle by typing `idle`:
+
+```
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:119$ idle
+```
+
+Once you do, use the `File -> New File` menu item to open *two* windows in which you can type Python code.
+
+In the first window, enter this function definition.  This function converts Fahrenheit temperatures to Celsius.
+
+It should make sense to you based on what you've learned about Python functions so far.
+
+```
+# tempFuncs.py
+def ftoc(fTemp):
+   return (fTemp - 32)*(5.0/9.0)
+```
+
+In the second window, enter this code.   Don't just copy and paste it; read through it and try to understand it.
+
+After the code block, there is an explanation of each line.
+
+```
+# test_tempFuncs.py
+
+import unittest
+from tempFuncs import ftoc
+
+class Test_tempFuncs(unittest.TestCase):
+
+   def test_ftoc_1(self):
+      self.assertAlmostEqual(ftoc(212.0),100.0)
+
+   def test_ftoc_2(self):
+      self.assertAlmostEqual(ftoc(32.0),0.0)
+
+   def test_ftoc_3(self):
+      self.assertAlmostEqual(ftoc(-40.0),-40.0)
+
+   def test_ftoc_4(self):
+      self.assertAlmostEqual(ftoc(67.0),19.4444,places=3)
+```
+
+
 
 ## Step 6:  The basic git workflow of `git add...`, `git commit...`, `git push...`
 
