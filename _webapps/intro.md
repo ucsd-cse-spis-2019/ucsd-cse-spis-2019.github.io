@@ -11,10 +11,12 @@ Projects: Web Applications (webapps) in Python using Flask
 ## Intro to webapps with Flask, in four parts
 
 
-* Part 1: [Getting Started with Flask](https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/foundations/week-3-resources/web-apps-intro-notes-week-3)
-* Part 2: [Input from URL/pass to function, creating your Heroku Account](https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/foundations/week-3-resources/web-apps-intro-part-2)
-* Part 3: [Deploying Code on Heroku](https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/foundations/week-3-resources/web-apps-intro-part-3)
-* Part 4: [Using Templates with your Flask App](https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/foundations/week-3-resources/web-apps-intro-part-4)
+* Part 1: [Getting Started with Flask](/webapps/flask-getting-started/)
+    * [old stuff](https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/week-3-resources/web-apps-intro-notes-week-3)
+    
+* Part 2: [Input from URL/pass to function, creating your Heroku Account](https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_AcademicProgram/foundations/week-3-resources/web-apps-intro-part-2)
+* Part 3: [Deploying Code on Heroku](https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_AcademicProgram/foundations/week-3-resources/web-apps-intro-part-3)
+* Part 4: [Using Templates with your Flask App](https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_AcademicProgram/foundations/week-3-resources/web-apps-intro-part-4)
 
 
 ## Learning More about HTML

@@ -192,7 +192,7 @@ In the first window, enter this function definition.  This function converts Fah
 
 It should make sense to you based on what you've learned about Python functions so far.
 
-```
+```python
 # tempFuncs.py
 def ftoc(fTemp):
    return (fTemp - 32)*(5.0/9.0)
@@ -203,7 +203,7 @@ In the second window, enter this code.   Don't just copy and paste it; read thro
 If you would like a more detailed, line-by-line explanation of this code, plus some background on unit testing in general,
 read the article [Python: Unit Testing](/topics/python_unittest/).sy
 
-```
+```python
 # test_tempFuncs.py
 
 import unittest
@@ -362,7 +362,7 @@ After adding this code, save the file `tempFuncs.py`.  Then at the command promp
 * `git status`
 * `git add tempFuncs.py`
 * `git status`
-* `git commit -m "stub for ctof"
+* `git commit -m "stub for ctof"`
 * `git status`
 * `git push origin master`
 * `git status`
@@ -406,7 +406,7 @@ Once you are done, its time to commit the changes:
 * `git status`
 * `git add test_tempFuncs.py`
 * `git status`
-* `git commit -m "tests for ctof"
+* `git commit -m "tests for ctof"`
 * `git status`
 * `git push origin master`
 * `git status`
