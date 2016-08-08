@@ -235,9 +235,34 @@ When you save, the save dialog should indicate that they are being saved inside 
 
 Onve you have saved both files, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis16-lab02-Name-Name` folder, and do an ls command as shown here.  You should see both the files, with names exactly as shown here.
 
+Note that if you also have a .pyc file, that's fine.  You don't need to worry about that one, or remove it.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
+
+```
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:170$ ls
+README.md  tempFuncs.py  tempFuncs.pyc  test_tempFuncs.py
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:170$ 
+```
+
+# Now try running the test_tempFuncs.py file.
+
+Now, in the window with the `test_tempFuncs.py` file, try selecting "Run -> Run Module" from the menu.
+
+You should get output that looks like this:
+
+```
+>>> ================================ RESTART ================================
+>>> 
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.310s
+
+OK
+>>> 
+```
+
 # What if the names are not exactly right? `mv` and `rm` to the rescue
 
-If the names are not exactly right, you can use the unix `mv` command, which functions both as a *move* command as as a *rename* command.    The syntax is:
+If the names of your `tempFuncs.py` and `test_tempFuncs.py` are not exactly right, you can use the unix `mv` command, which functions both as a *move* command as as a *rename* command.    The syntax is:
 
 ```
 mv oldname newname
@@ -255,14 +280,38 @@ If you end up with extra files, you can use the rm command to delete files you d
 rm temp_Fenks.py
 ```
 
+Ok, so now you have a Python file with a function definition in it, and you have some test cases.
 
-
-
+What's next?  We want to get this Python code into your local git repo, and then push the changes up to github.com.
 
 
 ## Step 6:  The basic git workflow of `git add...`, `git commit...`, `git push...`
 
-TBD
+So, having the code in the directory isn't enough to get it into the git repo.
+
+You actually have to go through a series of two steps to get the code into your local repo, and then
+a third step to update the `origin` repo on github.com with that code.
+
+The process is described in two articles: 
+
+* a longer version that goes into more detail: [Github: basic workflow](/topics/github_basic_workflow/)
+* a shorter version that is more handy reference: [Github: worflow explained](/topics/github_workflow_explained/)
+
+Essentially, though here's what you are going to do:
+
+1.  Make sure you are in your ~/github/spis16-lab02-Name-Name directory
+2.  Type `git status` and read what it says
+3.  Type `git add tempFuncs.py test_tempFuncs.py` to *stage* these two files (get them ready to be added to the repo)
+4.  Type `git status` and read what it says
+5.  Type `git commit -m "ftoc function and tests"` to commit the changes and provide an explanation of what you did
+6.  Type `git status` and read the messages
+7.  Type `git push origin master` to push the changes from your local repo to the origin repo (on github.com)
+8.  Type `git status` and read the messages
+9.  Navigate to your repo's page at https://github.com and see that the two files now appear there, along
+    with your commit message.
+
+Congratulations, you've just done your first of many dozens of git commits you'll do during SPIS, and the first
+of hundreds or thousands you'll do during your four years at UCSD.
 
 ## Step 7: Testing of Python functions
 
