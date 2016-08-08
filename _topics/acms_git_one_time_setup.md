@@ -157,5 +157,22 @@ You'll have to generate a separate public/private ssh key pair for each computer
 
 On Mac and Linux, the ssh-keygen command should work.
 
-The ssh-keygen command is also available in the "git shell" that comes with the Windows version of git.
+For Windows, the easiest solution by far is to install the `git-shell` that comes with the
+basic version of "git" for windows (and I mean the *basic* version, not a fancy GUI version.)
 
+You can get that here: <https://git-scm.com/download/win>
+
+This `git-shell` is pretty awesome.  It's basically, a minimalist subset of the Unix command line environment,
+but it runs on your Windows machine.  You get:
+
+* all the `git` command line stuff
+* typical unix commands: `ls`, `cp`, `mv`, `mkdir`, `pwd`, `cd`, etc.
+* `ssh` for ssh-ing into remote systems such as CSIL
+* `scp` for secure copies of files
+* and, most importantly for us: `ssh-keygen` that works just like it does on Mac and Linux.
+
+So now, you can ssh-keygen away, even on Windows.
+
+# References:
+
+* <https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/>
