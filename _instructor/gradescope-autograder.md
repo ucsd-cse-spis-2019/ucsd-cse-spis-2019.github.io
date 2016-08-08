@@ -8,6 +8,12 @@ desc: "Creating autograded assignments"
 The website [gradescope.com](https://gradescope.com) provides the capability
 to set up autograded assignments.
 
+We have two courses set up in Gradescope for SPIS 2016:
+
+* The ["real" SPIS 2016 Gradescope course](https://gradescope.com/courses/3559)
+* A [SPIS-Autograder-Development test course](https://gradescope.com/courses/3670) for testing out new autograded assignments before they are released to students.
+
+
 The private repo
 <https://github.com/ucsd-cse-spis-2016/PRIVATE-autograder-try01>
 contains an example of an autograded assignment.  This assignment is
@@ -80,6 +86,25 @@ To get started:
     instructor.   
 
 
+8.  optional, but helpful: add these lines to the .gitignore file in the main directory of the repo
+
+    ```
+    # for gradescope autograder
+    autograder.zip
+
+    # for emacs
+    *~
+    \#*\#
+
+    # for mac os
+    .DS_Store
+    ```
+
+
+
+
+
+
 # Once you have set up the repo
 
 Once you have set up the repo, you can run `make clean; make` to generate
@@ -97,3 +122,9 @@ as a web app, Gradscope's UI is subject to change at any time.)
 
 ![Click create programming assignment](gradescope-click-create-programming-assignment-50.png)
 
+
+----
+
+<div style="display:none;" data-note="This element provides link to generated page from github.com web interface">
+Generated page: https://ucsd-cse-spis-2016.github.io/instructors/gradescope-autograder
+</div>

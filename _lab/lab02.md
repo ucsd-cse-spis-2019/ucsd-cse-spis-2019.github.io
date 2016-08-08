@@ -369,10 +369,28 @@ After adding this code, save the file `tempFuncs.py`.  Then at the command promp
  
 Then check the repo's page on github.com to see that the changes appear.
 
-## Step 7b: Add test cases for `ctof` to `test_tempFuncs.py`
+## Step 7b: Add import, and test cases for `ctof` to `test_tempFuncs.py`
         
-Now add some test cases for the cToF function.   You simply add these test cases immediately below the ones for
-fToC.  
+Next, edit the `test_tempFuncs.py` file in IDLE, and after the line
+
+```
+from tempFuncs import ftoc
+```
+
+add this line:
+
+```
+from tempFuncs import ctof
+```
+
+This line is needed so that we can pull the definition of `ctof` from the file `tempFuncs.py` and run our tests
+on it.    
+
+Now add some test cases for the cToF function.   
+* You simply add the function definitions for these test cases immediately below the ones for
+fToC.    
+* Be sure they are indented inside the `class`, just like the ones for `ftoc`.
+* Also, be sure that each one has a different name from all of the others.
 
 I'll give you the first one, but the rest you must come up with on your own:
 
@@ -381,7 +399,7 @@ I'll give you the first one, but the rest you must come up with on your own:
       self.assertAlmostEqual(ctof(100.0),212.0)
 ```
 
-Add at least five more.  
+Add at least four more so that you have a total of five tests.
 
 Once you are done, its time to commit the changes:
 
@@ -399,10 +417,24 @@ Then check the repo's page on github.com to see that the changes appear.
 
 Now, run the test cases by selecting "Run -> Run Module" from the menu in the window for `test_tempFuncs.py`.
 
-If you see that the correct number of test cases failed because the expected output didn't equal "stub", that's good.  
-You can move on to the next step.
+What you want to see is that the test cases for ftoc passed, but that the ones you added for ctof fail.
+In general, test cases where you have a "stub" function should fail either because:
 
-If on the other hand, there were errors of another kind (e.g. indentation errors, missing :, etc.) then you'll want to 
+* the expected output didn't equal "stub", or
+* in the case of `assertAlmostEqual`, a message like this:
+    ```
+    TypeError: unsupported operand type(s) for -: 'float' and 'str'
+    ```
+The second type of error comes because the `assertAlmostEqual` function tries to subtract the expected result from the actual result, and then take the absolute value.  It can't subtract from a string value such as `"stub"`, hence the error.
+
+You could also use a stub with a value of something like `return -99999.999` if you like; then you'll get a slightly
+different error, but the test will still fail&mdash;which is want you want for a stub.
+
+### Are the tests *failing* the expected way?
+
+If the tests are failing in the way we are *hoping for*, you can move on to the next step.
+
+If on the other hand, there were *errors of another kind* (e.g. indentation errors, missing :, etc.) then you'll want to 
 fix those.  And if that involves change either, or both of the two files, you'll want to do another round of the steps to do a commit.
 
 If the commit involves changes to both files, you can combine those into a single commit.  Here's how:
@@ -411,13 +443,66 @@ If the commit involves changes to both files, you can combine those into a singl
 * OR: `git add *.py` which adds all files ending in .py from the current directory to the next commit (but only if they      are new or have changed.)
 * Then continue with the `git status`, git commit...` as before.
 
-## Step 7d: Replace the stub in ctof with correct code so that the tests pass
+## Step 7d: Replace the stub in `ctof` with correct code so that the tests pass
 
 Now, you should write a correct version of the ctof function so that tests pass.
 
-Then do one more commit so that your repo has the correct code that passes all of its tests. 
+That will be a line of code that starts with `return` and ends with an expression involving the variable
+`cTemp`, and some math operations to convert that to an equivalent Fahrenheit value. 
 
-Congratulations!  You are *almost* finished.
+Try running the tests, and when all of your tests pass, you are ready to commit.  What you are looking for is this:
+
+```
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
+
+OK
+```
+
+If you get part-way done, and *some* of your tests pass, but not others, or you are in the middle of working
+when it is time for a break, that is STILL a good time to do a commit.   Add the letters "WIP" to the start of your
+commit message so you know that this is not a finished product.  "WIP" stands for "Work in Progress".  For example:
+
+```
+git status
+git add tempFuncs.py
+git status
+git commit -m "WIP CL/AT  Some ctof tests passing, others failing"
+git status
+git push origin master
+```
+
+* As a reminder, the `CL/AT` is used to indicate that you were working as a pair, with `CL` (Chris La Jolla) driving, 
+    and `AT` (Alex Triton) navigating.
+
+When you have *all* the tests passing, do one more commit with the commit message `"CL/AT all tests passing"`. 
+* Of course, you should use your own initials, not `CL/AT`
+
+### A note about the exclamation point (`!`) in commit messages 
+One note: You may be tempted to put exclamation points in your commit messages, because getting the tests to pass is so 
+very, very exciting.  If you do, though, you'll have to remember to put a backslash in front of them, like this:
+   
+```
+git commit -m "CL/AT All tests passing \!"
+```
+    
+Otherwise, the bash shell may get confused about the meaning of the `!` symbol, and you'll get this error:
+
+```
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:140$ git commit -m "CL/AT All tests passing!"
+-bash: !": event not found
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:141$
+```
+
+We can go into why that's the case some other time (what is this "event" that is not found?)    
+
+For now, though it may be better to just avoid the `!` symbol in your commit messages unless you remember the backslash.
+
+### All tests passing? Then you are almost done!
+
+Congratulations!  You are *almost* finished.   The last step involves submitting your code for "automatic grading".
+This way, you can be (reasonably) sure that you did the assignment correctly.
 
 ## Step 8:  Submitting a Python function for autograding using Gradescope
 
