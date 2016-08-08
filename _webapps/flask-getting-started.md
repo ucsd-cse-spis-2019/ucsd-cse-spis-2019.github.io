@@ -169,6 +169,12 @@ if __name__ == "__main__":
     app.run(port=5000)
 {% endhighlight %}
 
+<style>
+div.nicer-table table * td { padding: 2px; }
+</style>
+
+
+<div class="nicer-table">
 
 | line | explanation  |   
 |------|--------------|
@@ -180,5 +186,6 @@ if __name__ == "__main__":
 | 8	| Line 8 has an if test that checks the special variable __name__ to see if it has the special value "__main__". This is the mysterious "conditional script stanza", which we aren't going to explain in detail here. Instead, we'll just say that whatever "main thing" a Python code is supposed to do when you select "Run" in IDLE, or type python filename.py, in this case python hello.py, should typically be wrapped in this if test. That makes your file much more useful, because then the definitions it contains can be included as a module in another file.
 | 9	 | 	Line 9 is the line that actually causes our web server to start running. The dot-notation app.run() tells us that run is a method of the object app. By putting () after it, we are making a function call to that method, and starting things in motion.   The port=5000 part indicates the port number we are going to listen for connections on.   By default, web servers listen for connections on port 80, and web browsers send requests to port 80.  We don't have the necessary permissions to set up a server on port 80 (port numbers lower than 1024 are restricted to system administrators), but we can set up a server on a "high numbered port", basically anywhere between 1024 and 65536.  For various reasons, its better to choose a number starting at 5000 (less likely to conflict with some other network service.)   Being able to specify a port number both on the server side and the browser side allows many users to set up servers and connect to them all on the same machine. |
 
+</div>
 
 Click to access:  Web Apps Intro, Part 2.
