@@ -506,4 +506,32 @@ This way, you can be (reasonably) sure that you did the assignment correctly.
 
 ## Step 8:  Submitting a Python function for autograding using Gradescope
 
-TBD
+### Step 8a: Login to gradescope and find lab02
+
+The first step is to open up Gradescope, and find lab02.
+
+Navigate to gradescope.com and login.
+
+Your login id is your `____@ucsd.edu` email address, with the full `@ucsd.edu` at the end.
+
+You may have received an email to retrieve your password, or you might need to ask that the password reset email
+be resent.
+
+Once you are logged in, locate the place to submit lab02.  It should ask you to upload a .zip file with your submission.
+
+### Step 8b: Generate a .zip file for your submission
+
+As long as you have pushed all of your changes to github.com, generating a .zip file for your submission is easy.
+
+Just navigate to the page for your repo, use the "Clone or download" button, and then the "Download zip" button, as shown in the image below:
+
+![Download zip](github-download-zip-for-gradescope-50.png)
+
+### Step 8c: Upload the zip, and wait for the results
+
+Upload the zip and wait for the results: hopefully a perfect 100%.
+
+And that's it for lab02!
+
+
+If you have difficulties with the Gradescope submission, ask a mentor or instructor for assistance.
