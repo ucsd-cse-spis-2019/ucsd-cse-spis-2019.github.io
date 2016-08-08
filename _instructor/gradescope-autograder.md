@@ -79,3 +79,21 @@ To get started:
     submission from an
     instructor.   
 
+
+# Once you have set up the repo
+
+Once you have set up the repo, you can run `make clean; make` to generate
+the autograder.zip file.  What do you do with this?  The text and images below
+explain the process.
+
+First, navigate to either the practice course, or the real course.  I strongly 
+recommend trying new assigments in the practice course first.
+
+Then, click the "Create Programming Assignment" button as shown in the image below.
+
+It is near the bottom of the instructor UI, and is NOT the same as the regular
+"Create Assignment" button (at least as of this writing, August 2016.  Note that
+as a web app, Gradscope's UI is subject to change at any time.)
+
+![Click create programming assignment](gradescope-click-create-programming-assignment-50.png)
+
