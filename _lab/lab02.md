@@ -192,7 +192,7 @@ In the first window, enter this function definition.  This function converts Fah
 
 It should make sense to you based on what you've learned about Python functions so far.
 
-```
+```python
 # tempFuncs.py
 def ftoc(fTemp):
    return (fTemp - 32)*(5.0/9.0)
@@ -203,7 +203,7 @@ In the second window, enter this code.   Don't just copy and paste it; read thro
 If you would like a more detailed, line-by-line explanation of this code, plus some background on unit testing in general,
 read the article [Python: Unit Testing](/topics/python_unittest/).sy
 
-```
+```python
 # test_tempFuncs.py
 
 import unittest
