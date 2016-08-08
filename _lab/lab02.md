@@ -406,7 +406,7 @@ Once you are done, its time to commit the changes:
 * `git status`
 * `git add test_tempFuncs.py`
 * `git status`
-* `git commit -m "tests for ctof"
+* `git commit -m "tests for ctof"`
 * `git status`
 * `git push origin master`
 * `git status`
