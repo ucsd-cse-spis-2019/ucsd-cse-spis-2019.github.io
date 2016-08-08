@@ -362,7 +362,7 @@ After adding this code, save the file `tempFuncs.py`.  Then at the command promp
 * `git status`
 * `git add tempFuncs.py`
 * `git status`
-* `git commit -m "stub for ctof"
+* `git commit -m "stub for ctof"`
 * `git status`
 * `git push origin master`
 * `git status`
