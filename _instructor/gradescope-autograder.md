@@ -79,3 +79,15 @@ To get started:
     submission from an
     instructor.   
 
+8.  optional, but helpful: add these lines to the .gitignore file in the main directory of the repo
+    ```
+    # for gradescope autograder
+    autograder.zip
+
+    # for emacs
+    *~
+    \#*\#
+
+    # for mac os
+    .DS_Store
+    ```
