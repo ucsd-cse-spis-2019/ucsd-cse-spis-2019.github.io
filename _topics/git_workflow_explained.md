@@ -1,6 +1,6 @@
 ---
-topic: "git: basic workflow"
-desc: "The basics: git add..., git commit..., git push ... "
+topic: "git: workflow explained"
+desc: "The details behind git add..., git commit..., git push ... "
 ---
 
 This page explains the typical workflow that is used with git.
