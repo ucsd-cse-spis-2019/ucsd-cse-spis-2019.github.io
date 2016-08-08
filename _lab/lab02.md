@@ -150,7 +150,11 @@ Those steps are outlined here.  Please repeat these steps under each pair partne
 
 ## Step 4: Cloning a private repo at the bash (Unix) command line
 
-TBD
+Next, you need to clone your private repo into the `~/github` directory of one of your ACMS accounts (either one will do.)
+
+The instructions to do that are here: [cloning your first repo](/topics/git_cloning_your_first_repo/).
+
+When you've done that, we are finally ready for some Python programming!
 
 ## Step 5:  How to store a Python file in a repo
 
