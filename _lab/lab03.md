@@ -286,7 +286,7 @@ You are invited to create a *public* github repo under the ucsd-cse-spis-2016 or
 
 In this repo, you can add files that provide drawing routines to draw whatever you like.
 
-You can use the code from https://github.com/ucsd-cse-spis-2016/spis2016-lectures-0809 as a model.
+You can use the code from [https://github.com/ucsd-cse-spis-2016/spis2016-lecture-0809](https://github.com/ucsd-cse-spis-2016/spis2016-lecture-0809) as a model.
 
 Then, try looking at the code from some of your fellow classmates public `spis16-drawings...` repos.
 
