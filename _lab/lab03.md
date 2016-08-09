@@ -273,3 +273,33 @@ Step 7: Submit to github
 To submit, use the command line tools `git add`, `git commit` and `git push`. You must only push working versions of your code. Make sure your code is pushed to git by navigating to your repo on github.com and viewing your latest changes.
 
 Congratulations on finishing lab 3!!! Hope you had fun with turtle graphics!
+
+
+# Additional Fun with Turtle
+
+When you are finished with the main part of lab03, here is an extension that you can start working on, and continue
+to contribute to throughout SPIS.
+
+You are invited to create a *public* github repo under the ucsd-cse-spis-2016 organization with this naming convention:
+
+* `spis16-drawings-Name-Name`  (e.g. `spis16-drawings-Alex-Chris` )
+
+In this repo, you can add files that provide drawing routines to draw whatever you like.
+
+You can use the code from https://github.com/ucsd-cse-spis-2016/spis2016-lectures-0809 as a model.
+
+Then, try looking at the code from some of your fellow classmates public `spis16-drawings...` repos.
+
+See if you can copy some of their files into your repo (add a comment indicating where the code came from,
+e.g.
+
+```python
+# This file copied from spis16-drawings-Alex-Chris
+```
+
+Then try using `import` to get access to those functions, and use them in your own drawings.
+
+See how creative you can get in terms of combining different drawings together from many other fellow SPISers.
+
+Put the code for these additional "mash-ups" in the same `spis16-drawings-Name-Name` repo, just perhaps in a different python file, e.g. `mashups.py`.
+
