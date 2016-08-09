@@ -13,10 +13,15 @@ If you find typos or problems with the lab instructions, please report them on P
 Goal
 ====
 
-The goal of this exercise is to practice with Turtle Graphics in Python by producing somewhere between two and six Python functions that use Turtle Graphics to make particular shapes.
+The goal of this exercise is to practice test-driven code development using the unittest framework as well as making cool drawings with Turtle Graphics in Python to make particular shapes.
 
 
 Work with your assigned pair programming partner on this lab. If you do not have one, consult with the instructors before starting.
+
+# Setting up your git repo for lab03
+
+Create a joint git repo for you and your partner for lab03, following Step 2 in the lab02 writeup. Assuming that you have done the one time configurations related to your ACMS account, clone your newly created private repo following Step 4 of lab02.
+
 
 What you'll be drawing
 ----------------------
@@ -43,7 +48,7 @@ You'll also write a function called go() that draws each members of the pair ini
 Programming, Step-by-Step
 =========================
 
-You should be sitting WITH YOUR PAIR PARTNER to start this assignment.
+You should be sitting WITH YOUR PAIR PARTNER to start this part of the assignment.
 
 Follow these steps to complete the assignment
 
@@ -59,7 +64,7 @@ The initial driver will be the one that is typing on the computer.
 Step 1: PLAN your letters on paper
 ----------------------------------
 
-Plan your drawing. For each letter that you and your pair partner are going to draw, start by drawing a bounding box like this on on a piece of paper. Trade off: each of you should do the planning for the letters for your OWN name, with your pair partner watching and making helpful suggestions.
+Plan your drawing. For each letter that you and your pair partner are going to draw, start by drawing a bounding box like this on a piece of paper. Trade off: each of you should do the planning for the letters for your OWN name, with your pair partner watching and making helpful suggestions.
 
 <img src="/lab/images/turtle/BoundingBox.png" title="BoundingBox.png" alt="BoundingBox.png" height="200" />
 
@@ -82,13 +87,11 @@ Once you've planned your letters on paper, you are ready to start coding.
 Step 2: Driver gets things started on first letter 
 -----------------------------------------------------------------
 
-Create a git repo for lab03 following the instructions in lab02
-
-Then, bring up IDLE.
+Bring up IDLE. Create a new file called "lab03.py" in your repo. To do this, in IDLE go to the menu option File-> New. Then continue with the following steps
 
 ### Step 2c: Start a function definition for first letter
 
-Use "file new" to open a new file, and start typing a function definition for your first inital.
+Open the file "lab03.py" provided in the starter code, and start typing a function definition for your first inital.
 
 -   If the initial is A, the function should be called drawA. If it is a C, it should be called drawC, etc.
 -   The function should take there parameters: the name of a turtle, a width, and a height.
@@ -267,4 +270,6 @@ NOTE: Only one member of each pair has to submit, but BOTH members of the pair a
 Step 7: Submit to github
 -----------------------------
 
-Follow the instructions on submitting to github via the command line as delineated in lab02 to submit your code. Make sure your code is pushed to git by navigating to your repo on github.com and viewing your latest changes.
+To submit, use the command line tools `git add`, `git commit` and `git push`. You must only push working versions of your code. Make sure your code is pushed to git by navigating to your repo on github.com and viewing your latest changes.
+
+Congratulations on finishing lab 3!!! Hope you had fun with turtle graphics!
