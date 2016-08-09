@@ -7,7 +7,8 @@ desc: "Various sites for Practicing Coding in Python"
 If you want to practice coding in Python, there are a few sites where you can do that
 
 * [Coding Bat](http://codingbat.com/python)
-* [Cyber Dojo](https://cyber-dojo.org)
+* [Cyber Dojo](http://cyber-dojo.org)
+* [Project Euler](https://projecteuler.net/)
 
 # Coding Bat 
 
