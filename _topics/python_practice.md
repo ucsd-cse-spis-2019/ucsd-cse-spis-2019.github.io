@@ -17,7 +17,7 @@ You are given a series of exercises and some hints for getting the test cases to
 
 # Cyber Dojo
 
-Cyber Dojo, [https://cyber-dojo.org](https://cyber-dojo.org), is a site where you can practice with a number of programming languages including Python.
+Cyber Dojo, [http://cyber-dojo.org](http://cyber-dojo.org), is a site where you can practice with a number of programming languages including Python.
 
 Most of the Cyber Dojo sessions are set up with generic programming problems, and a "generic" test framework.
 
