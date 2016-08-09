@@ -2,7 +2,7 @@
 layout: lab
 num: lab04
 ready: false
-desc: "lab04 covering Guttag Ch4, by Diba"
+desc: "Recursion with turtle and intro to the Python Imaging Library, by Diba"
 assigned: 2016-08-10 09:30:00.00-7
 due: 2016-08-12 15:45:00.00-7
 ---
@@ -284,6 +284,108 @@ L_(n+1) = (4/3) * L_n .
 Modify your implementation of snowflake(sideLength, levels) so that the function returns the length of the line being drawn Run snowflake(1, n) for some small values of n to confirm the equation above.
 
 How does this quantity change as n gets very very large?  What does that say about this shape for very, very large n?
+
+## Part 2: Introduction to the Python Imaging Library (PIL)
+
+Turtle is a great drawing tool but when it comes to manipulating existing image files, python's imaging library is the module. 
+
+But what is a image file and how is it different other types of data?
+
+Our computers encode all data (pictures, games, files) as sequences of 0s and 1s.  They are just a digital kingdom of bits! Some of the text below is review, but be sure to read it over (quickly) anyway.
+
+In your computer, images (pictures) are files stored on your hard disk. An digital image is logically a rectangular grid of pixels, which appear as squares when enlarged; each pixel then typically consists of 1 byte (8 bits) for a Black-and-White image or 3 bytes (24 bits) for a color image, where one byte (a value between 0 and 255) each is for Red (R), Green (G), and Blue (B). R, G, B are three ingredients for all visible colors; for example: blue is 0 redness + 0 greenness + 255 blueness, white is 255 redness + 255 greenness + 255 blueness, and brown is 165 redness + 42 greenness + 42 blueness, etc.. The following figure by Wikipedia shows a color image with enlarged pixels.
+
+![](/lab/images/Pixel-example.gif)
+
+In this lab we'll work with the Python Imaging Library (PIL) which is a graphics library like turle designed for working with image files. So let's warm up!
+
+## Getting familiar with PIL
+
+Download the  "stone bear" picture below and save it in your github repo working directory. You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "stoneteddybear.jpg".
+
+![](/lab/images/stoneteddybear.jpg)
+
+
+Next, launch IDLE in the same directory that you stored the stone bear image.
+
+Before we can manipulate a picture in PIL, we will need to tell Python and PIL where to find it.  To do this, you will need to specify the exact path to the picture on your computer.  You also need to tell Python about the PIL Image library.  We'll start by playing around with the teddy bear image in the shell.  In the shell, type the following to load the Image library into the shell (later you'll put this line at the top of your file).  
+
+```
+>>> from PIL import Image
+
+```
+
+Then, you can open the picture you just downloaded as an image as follows:
+
+```
+>>> stonebear = Image.open( "stoneteddybear.jpg" )
+
+```
+
+The argument to the open function tells Python where to find the image. If you are getting an error here it's probably because of a typo in your filename, or because you either placed the file in the wrong place or launched IDLE from a directory different from where the image was stored. 
+
+To ensure that the command you just executed works you can show the image you just created:
+
+```
+>>> stonebear.show()
+```
+
+Logically, an image is a grid of pixels. The size of the "stone bear" picture is 600 x 800, i.e., 480,000 pixels. You can pick a specific pixel from the image by using the `getpixel()` function. The arguments of this function are a picture object and the pixel's X position and its Y position; the function returns the pixel object at the coordinate(X, Y) of the image. Note that in the image grid, the axis is a little different from the usual 2D Cartesian axis, in that it counts from upper left to bottom right. For example, in the following 18 x 18 image grid, the coordinate (11, 7) is the grey block. Note the index starts at 0.
+
+![](/lab/images/coordinates.gif)
+
+So, if you call
+
+```
+>>> pixel = stonebear.getpixel( ( 100, 200) )
+
+```
+
+The pixel returned is a tuple representing the RGB values of the pixel on the 200th row from top, 100th column from left, in the stonebear image. You can see this by looking at the value stored in pixel.
+
+```
+>>> pixel
+(166, 201, 239)
+```
+
+Now, let's see how to modify the colors of individual pixels in the image.  We'll be using the ImageDraw library to modify the image.  First, tell Python about the ImageDraw library as follows:
+
+```
+>>> from PIL import ImageDraw
+
+```
+
+Now you can create a Draw object that will act on the stonebear image as follows:
+
+```
+>>> beardraw = ImageDraw.Draw( stonebear )
+
+```
+
+You can now use all of the ImageDraw functions to modify the stonebear image. For more information refer to the [documentation on ImageDraw](http://pillow.readthedocs.io/en/latest/reference/ImageDraw.html). Most of your work in this lab involves modifying the colors of individual pixels, so the function we will use is the `point()` function.  Here's an example of how it works.  Try it in the shell:
+
+```
+>>> beardraw.point( [(100, 200)], (0, 0, 0) )
+```
+
+The point function takes two arguments: 
+
+* a list of pixel coordinates each represented by an (x, y) tuple.  In the example below our first argument is: [ (100, 200) ], which is a list of a single pixel. Typically using this function, you will be modifying one pixel at a time.
+
+* a tuple representing the RGB color to set the pixel to.  In the example above, this color is (0, 0, 0), i.e. black.
+
+After running the command above, show the bear image again and see if you can find the modified pixel.  It's there!
+
+If you have a hard time seeing the modified pixel, try the following code to turn a range of pixels black.
+
+```
+for i in range(100):
+    beardraw.point( [(i, 200)] , (0, 0, 0) )
+
+```
+
+
+
 
 
 
