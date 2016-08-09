@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab03
-ready: false
+ready: true
 desc: "More functions and drawing with Turtle Graphics"
 assigned: 2016-08-09 13:15:00.00-7
 due: 2016-08-10 15:00:00.00-7
@@ -20,7 +20,7 @@ Work with your assigned pair programming partner on this lab. If you do not have
 
 # Setting up your git repo for lab03
 
-Create a joint git repo for you and your partner for lab03, following Step 2 in the lab02 writeup. Assuming that you have done the one time configurations related to your ACMS account, clone your newly created private repo following Step 4 of lab02.
+Create a joint git repo for you and your partner for lab03, following Step 2 in the [lab02](/lab/lab02/) writeup. Assuming that you have done the one time configurations related to your ACMS account, clone your newly created private repo following Step 4 of lab02.
 
 
 What you'll be drawing
