@@ -33,5 +33,11 @@ Here are some sessions for you to explore:
 
 * 3CFC090:  isPrime
 
+# Project Euler
 
+The Project Euler website has a large and growing number of programming challenges that you can try.
+
+They can be solved in any programming language, including Python.
+
+* [Project Euler website](https://projecteuler.net/)
 
