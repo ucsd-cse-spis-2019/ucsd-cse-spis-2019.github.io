@@ -11,7 +11,7 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Please visit Piazza for a one question survey
 
-At the top of every page on the wiki there is a link to Piazza. Please visit that link, and log into Piazza. There is a  one question survey about laptops. Please answer the question, then log out, and have your peer partner login and take the survey.
+At the top of every page on the website there is a link to Piazza. Please visit that link, and log into Piazza. There is a  one question survey about laptops. Please answer the question, then log out, and have your peer partner login and take the survey.
 
 It will take less than five minutes, and it will help us plan for Friday's SPIS activities.
 
@@ -116,12 +116,13 @@ You've already started playing with Python's Turtle library in the previous lab.
 
 But let's start simple. We will draw a square. In your git repo create a file called "recursiveDrawings.py". Write code to import the turtle library as follows:
 
-```import turtle
+```python
+import turtle
 ```
 
 This above line tells Python about the turtle library and allows you to call its functions. The function below does the actually drawing. Copy the following code into your file.
 
-```
+```python
 def drawPicture():
 
 	''' Draw a simple picture using a turtle '''
@@ -163,7 +164,7 @@ Here's the entry in the documentation for the function that lets us move forward
 
 ****
 
-```
+```python
  turtle.forward(distance) turtle.fd(distance)
 ```
 
@@ -181,7 +182,7 @@ To complete the remaining exercises create the file "recursiveDrawings.py" and a
 ## Draw a Spiral
 In the file "recursiveDrawings.py" add a stub for the spiral function which has the following signature. 
 
-```
+```python
  spiral(initialLength, angle, multiplier)
 ```
 
@@ -213,7 +214,7 @@ Help!  Stack Overflow!  Do not be alarmed if you find you are getting stack over
 
 Next, you will write the tree function.  It has the following signature:
  
-```
+```python
  tree(trunkLength, height)
 ```
 The function takes as arguments:
@@ -250,7 +251,7 @@ As the animation shows, the Koch snowflake begins with an equilateral triangle; 
 
 We will draw the Koch Snowflake by first defining the snowflake function with the following signature:
 
-```
+```python
 snowflake(sideLength, levels)
 ```
 
@@ -261,7 +262,7 @@ Observe that the base case is simply an equilateral triangle with side length eq
 
 Hint: It might be useful to write a helper function with the following signature:
 
-```
+```python
 snowflakeSide(sideLength, levels)
 ```
 
