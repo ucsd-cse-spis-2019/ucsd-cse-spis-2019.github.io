@@ -9,6 +9,13 @@ due: 2016-08-12 15:45:00.00-7
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
+# Please visit Piazza for a one question survey
+
+At the top of every page on the wiki there is a link to Piazza. Please visit that link, and log into Piazza. There is a  one question survey about laptops. Please answer the question, then log out, and have your peer partner login and take the survey.
+
+It will take less than five minutes, and it will help us plan for Friday's SPIS activities.
+
+If you already filled out the survey, thanks!
 
 # Learning Goals
 
