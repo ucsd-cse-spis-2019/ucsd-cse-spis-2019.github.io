@@ -141,6 +141,13 @@ The process consists of:
     
 You'll repeat this process for each of the files pyfuncs01.py, pyfuncs02.py, etc.
 
+* As a reminder, the `CL/AT` is used to indicate that you were working as a pair, with:
+    * `CL` (Chris La Jolla) driving (driver's initials first)
+    * `AT` (Alex Triton) navigating (navigator's initials second).
+    * Of course, you should use your own pair's initials, not `CL/AT`
+    
+* When you have *all* the tests passing,<br> do one more commit with the commit message `"CL/AT all tests passing"`. 
+
 For each, there some additional hints below.
 
 # TODO: Insert additional hints here
@@ -154,7 +161,36 @@ TODO: Insert instructions
 
 # Step 8: Submit your solution on Gradescope
 
-TODO: Insert Gradescope submission instructions here
+Navigate to gradescope.com and login.
+
+Your login id is your `____@ucsd.edu` email address, with the full `@ucsd.edu` at the end.
+
+You may have received an email to retrieve your password, or you might need to ask that the password reset email
+be resent.
+
+Once you are logged in, locate the place to submit  {{page.num}}.  It should ask you to upload a .zip file with your submission.
+
+### Step 8b: Generate a .zip file for your submission
+
+As long as you have pushed all of your changes to github.com, generating a .zip file for your submission is easy.
+
+Just navigate to the page for your repo, use the "Clone or download" button, and then the "Download zip" button, as shown in the image below:
+
+![Download zip](github-download-zip-for-gradescope-50.png)
+
+IMPORTANT: If your browser give you the option to: either (a) open the downloaded .zip file or (b) save it to disk,
+you *need to select SAVE TO DISK*.   
+
+If you open the downloaded .zip file, it may change the structure to one that the Gradescope autograder is not expecting.
+
+The Gradescope autograder expects a .zip file with the name `spis16-`<tt>{{page.num}}</tt>`-Name-Name-master.zip` that contains the Python files that were in your starter code repo.    If you change the names of functions, or of the files,
+things may not work correctly.
+
+### Step 8c: Upload the zip, and wait for the results
+
+Upload the zip and wait for the results: hopefully a perfect 100%.
+
+And that's it for {{page.num}}!
 
 
 
