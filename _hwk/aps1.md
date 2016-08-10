@@ -17,7 +17,7 @@ Please create an APS repo with a Week1.md file, following these instructions:
 
 Then, in your Week1.md file, please write a solution to these problems:
 
-[APS Divide And Conquer problems (pdf)](aps_dc_problems.pdf)
+[APS Divide And Conquer problems (pdf)](aps_dc_problems.pdf){: data-ajax="false" }
 
 You may find it helpful to refer to these notes from the [APS lecture on Divide and Conquer](aps_dc_lecture.pdf).
 
