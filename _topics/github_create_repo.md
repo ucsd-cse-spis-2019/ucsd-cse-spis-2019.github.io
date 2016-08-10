@@ -65,28 +65,32 @@ your partner will share the same repo by following these instructions
     into the box labelled "Your old repository's clone URL".    Then click
     the button labeled "begin import".
 
-    ![import code screen](/images/import-code-screen.png)
+    ![import code screen](/images/import-starter-code.png)
 
 
-5. Its now time to make a copy of your repo on the computer where you
-    intend to work. We strongly recommend that you create this copy on one
+5. Its now time to clone a copy of your repo on the computer where you
+    intend to work. We strongly recommend that you create this clone on one
     of the ieng6 servers (e.g. ieng6-240.ucsd.edu). The process of
     creating a copy of your repo is called cloning because you not only
     get a replica of your code on a difference machine but can reflect
     changes made in one clone repo to any other clone using the mechanisms
     that Git provides. This is a key feature that essentially allows you
-    to work on the same version of your code from any computer. For now,
-    we are interested in working on the ieng6 servers, so that's where you
+    to work on the same version of your code from any computer. 
+
+    For now,
+    we are interested in working on the `ieng6` servers, so that's where you
     will create the clone. To clone your repo navigate to your repo on
     github and click on the green "clone or download" button on the top
-    right corner. Clicking on this link gives you either an ssh or https
+    right corner. 
+
+    Clicking on this link gives you either an ssh or https
     address that you will need in the cloning process clone. Copy the ssh
     address with starts with a `git@`. See the screenshot below:
 	
     ![new repo](/images/get-repo-url.png) 
     
     Log into your account on ieng6 and clone your newly created repo
-    using the git clone command as in the following example:
+    using the `git clone` command as in the following example:
 
     ```
     $ git clone git@github.com:ucsd-cse-spis-2016/spis16-lab04-Phill-Diba.git
