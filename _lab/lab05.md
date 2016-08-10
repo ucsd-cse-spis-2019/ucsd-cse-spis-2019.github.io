@@ -24,20 +24,13 @@ Your learning goals are:
 
 * Step 1: Review Chapters 4 and Chapter 5 (Sections 5.1-5.2 and 5.4) of Guttag
 
-* Step 2: Get the starter code by cloning the github repo called spis16-lab05-Pair_Name1_Name2 (where Name1 and Name2 are the first names of the pair partners.) Keep your github repo up to date by committing and pushing your changes frequently.  
-If you don't recall how to do this, refer to the instructions on using git to complete the labs: TO DO: Add link
+* Step 2: Create a private github repo called spis16-lab05-Name1-Name2 (following the naming convention in past labs). 
 
 * Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy and your first steps.
 
-* Step 4: Unit test your code as you write new code using the pytest framework
+* Step 4: Unit test your code as much as possible (In most cases you should be able to inspect the outcome of your code visually but we encourage you to use the unittest fraemwork as much as possible)
 
-* Step 5: Once you feel you have sufficiently tested your code, submit it to gradescope (remember you can submit multiple times). Only certain exercises require submitting your code to gradescope Refer to this link for instructions on how to submit your code using git: TO DO: Add link
-
-Remember: Developing code is an iterative process. Your code will probably not work as expected on the very first try. Don't be dismayed. Work through your code to identify bugs, test new code frequently and seek help if you feel you are stuck!
-
-We will start with an exercise that reviews recursion and introduces lists for maintaining a dictionary.
-
-# Programming Exercises
+* Step 5: Track your progress by committing your code frequently to git. Submit your code bu pushing it to git. You may do this multiple times.
 
 
 
@@ -49,7 +42,7 @@ In your computer, images (pictures) are files stored on your hard disk. A digita
 
 ![](/lab/images/Pixel-example.gif)
 
-In this exercise (and the subsequent lab) we'll work with the Python Imaging Library (PIL) which is a graphics library like turle designed for working with image files. So let's warm up!
+In this lab we'll work with the Python Imaging Library (PIL) which is a graphics library like turle designed for working with image files. So let's warm up!
 
 ## Getting familiar with PIL
 
@@ -100,29 +93,14 @@ The pixel returned is a tuple representing the RGB values of the pixel on the 20
 (166, 201, 239)
 ```
 
-Now, let's see how to modify the colors of individual pixels in the image.  We'll be using the ImageDraw library to modify the image.  First, tell Python about the ImageDraw library as follows:
-
+Now, let's see how to modify the colors of individual pixels in the image.  To modify a pixel use the putpixel function
 ```
->>> from PIL import ImageDraw
-
+>>> stonebear.putpixel( (100, 200), (0, 0, 0) )
 ```
 
-Now you can create a Draw object that will act on the stonebear image as follows:
+The `putpixel` function takes two arguments: 
 
-```
->>> beardraw = ImageDraw.Draw( stonebear )
-
-```
-
-You can now use all of the ImageDraw functions to modify the stonebear image. For more information refer to the [documentation on ImageDraw](http://pillow.readthedocs.io/en/latest/reference/ImageDraw.html). Most of your work in this lab involves modifying the colors of individual pixels, so the function we will use is the `point()` function.  Here's an example of how it works.  Try it in the shell:
-
-```
->>> beardraw.point( [(100, 200)], (0, 0, 0) )
-```
-
-The point function takes two arguments: 
-
-* a list of pixel coordinates each represented by an (x, y) tuple.  In the example below our first argument is: [ (100, 200) ], which is a list of a single pixel. Typically using this function, you will be modifying one pixel at a time.
+* a pixel coordinate  represented by an (x, y) tuple.  In the example below our first argument is: (100, 200) , which is a tuple representing a single pixel. Using this function, can modify one pixel at a time.
 
 * a tuple representing the RGB color to set the pixel to.  In the example above, this color is (0, 0, 0), i.e. black.
 
@@ -132,44 +110,30 @@ If you have a hard time seeing the modified pixel, try the following code to tur
 
 ```
 for i in range(100):
-    beardraw.point( [(i, 200)] , (0, 0, 0) )
+    stonebear.putpixel( (i, 200) , (0, 0, 0) )
 
 ```
 
-The point function takes two arguments: 
-(1) a list of pixel coordinates each represented by an (x, y) tuple.  In the example below our first argument is:
-  [ (100, 200) ]
-which is a list of a single pixel.  Typically in these function, you will be modifying one pixel at a time.
-(2) a tuple representing the RGB color to set the pixel to.  In the example above, this color is (0, 0, 0), i.e. black.
+After running the command above, show the bear image again and see if you can find the modified pixels.  It should be easier to see your modification this time around.
 
-After running the command above, show the bear image again and see if you can find the modified pixel.  It's there!
-Hiding the stone bear's face
+## Hiding the stone bear's face
 
-Now we are going to start working in a file so that we can save our work.  If you haven't done so already, create a new Python file, and place the appropriate header comment at the top.  Don't forget your header comment!  Really.  You will lose points for not having your header comments, and these are the most frustrating points to lose!
+Now we are going to start working in a file so that we can save our work.  If you haven't done so already, create a new Python file called "imaging.py", and place the appropriate header comment at the top that descibes the content of the file.  Don't forget your header comment!  
 
-Now, after the header comment, tell Python that you want to use the Image and ImageDraw modules from the PIL library, as follows:
+Now, after the header comment, tell Python that you want to use the Image module from the PIL library, as follows:
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
-Next save your file in your Assignments folder as week3Python.py.  Now you're ready to write your first function for this lab.
+Save your work and commit your change to git using the `git add .` , `git commit -m ""` commands.  Now you're ready to write your first function for this lab.
 
 The stone bear is shy, and he wants you to cover his face using a dark rectangular area. To do this, you will write a function called blockHead which will transform the color of a specified range of the picture to be all black. The header for this function is 
 
 def blockHead( im, startx, starty, endx, endy ):
 
-im is the image to modify (not the Draw object, but the Image), startx and starty represent the x and y coordinates of the upper left corner of the box to paint black and endx and endy represent the x and y coordinates of the lower right corner of the image to paint black.  Your function will not return anything.  For reasons we will discuss in the next week or two, the image will be modified even after the function returns!
+im is the image to modify, startx and starty represent the x and y coordinates of the upper left corner of the box to paint black and endx and endy represent the x and y coordinates of the lower right corner of the image to paint black.  Your function will not return anything.  For reasons we will discuss in the next week or two, the image will be modified even after the function returns!
 
-You might notice that blockHead is in fact not specific to blocking the head in the stone bear image, but rather will block any rectangle in any image, according to the parameters passed in.
-
-Notes and hints:
-
-In your implementation, the first thing you will need to do is create an ImageDraw.Draw object that will work on im.  For example, the first line of your function will probably be something like:
-
-draw = ImageDraw.Draw( im )
-
-Then you can use this draw object to paint on the image.
-Because this is the warmup, you may use the rectangle function in the ImageDraw module to paint the black rectangle.   However, for the rest of this lab, we'll ask you to use nested loops and the paint method, so feel free to try this here.
-Don't forget you can access the documentation for the ImageDraw module here
+You might notice that blockHead is in fact not specific to blocking the head in the stone bear image, but rather will block any rectangle in any image, according to the parameters passed in. For the rest of this lab, we'll ask you to use nested loops and the putpixel method, so feel free to try this here.
+Don't forget you can access the [documentation for the Image module](http://pillow.readthedocs.io/en/3.1.x/reference/Image.html)
 When you have finished writing your function, test it by calling it in the shell to block the stone bear's face.  Note, to do this you will need to do the following as commands in the shell:
 Create an image from the stone bear file (if you haven't done so already)
 Call your blockHead method, passing in the appropriate arguments  The coordinates of the four corners of the rectangle are (240, 130), (450, 130), (450, 290), and (240, 290), starting from upper left, clockwise.  
@@ -182,9 +146,9 @@ If your blockHead is implemented correctly, you should have the shy bear's head 
 
 The last step of our warm-up: be aware you just changed a COPY of the stone bear image! Even though you see the change in the stone bear image, that change will not be saved when you exit Python.  What? What does that mean? 
 
-Even after all your work playing with colors and hiding the bear's face in the previous activities, the original picture file has not changed!  To see this, open your "stone bear" file by opening up your Assignments directory on the Desktop and double clicking on the image file. You will find nothing changed. It looks like nothing has been done to it. Why?
+Even after all your work playing with colors and hiding the bear's face in the previous activities, the original picture file has not changed!  To see this, open your "stone bear" file by opening the picture in your git directory and double clicking on the image file. You will find nothing changed. It looks like nothing has been done to it. Why?
 
-Basically, the Python functions you've used are not directly processing the stone bear image on the hard disc.  Rather,  when you open an image, PIL makes a duplicate of that image and loads that duplicate copy into  memory. The copy, as you can imagine, is exactly what was assigned to stonebear, so whatever you have done to stonebear only happened to the copy of your "stone bear" image. 
+Basically, the Python functions you've used are not directly processing the stone bear image on the hard disk.  Rather,  when you open an image, PIL makes a duplicate of that image and loads that duplicate copy into  memory. The copy, as you can imagine, is exactly what was assigned to stonebear, so whatever you have done to stonebear only happened to the copy of your "stone bear" image. 
 
 As a programmer, you should always have the concept of the computer memory in your mind. This technique of loading a copy of a file to memory (which is relatively fast) rather than directly handing a file on the disk (slow) is very common. 
 
