@@ -37,7 +37,7 @@ Your learning goals are:
 
 * Step 1: Read Chapter 4 of Guttag, Sections 4.1 -4.5
 
-* Step 2: Create a new private github repo under the "ucsd-cse-spis-2016" organization. Your github repo should be called spis16-lab04-Name1_Name2 (where Name1 and Name2 are the first names of the pair partners). Your repo should contain a README and .gitignore 
+* Step 2: Create a new private github repo under the "ucsd-cse-spis-2016" organization. Your github repo should be called spis16-lab04-Name1-Name2 (where Name1 and Name2 are the first names of the pair partners). Your repo should contain a README and .gitignore 
 
 * Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy.
 
@@ -317,14 +317,14 @@ Here are some pictures for inspiration:
 
 # Additional exercises
 
-When you have completed lab 4, you can continue working on the fun group drawing project that you stared in lab 3. 
+When you have completed lab 4, you can continue working on the fun group drawing project that you started in lab 3. 
 
 We presume that you have already created the public repo `spis16-drawings-Name1-Name2`.
-If you haven't refer to the instructions at the end of lab 3 to do so.
+If you haven't refer to the instructions at the end of lab 3.
 
-Continue adding new files and functions that draw interesting fractals to that repo. Please DO NOT include the code for the (spiral, tree and snowflake) in this public repo. We don't want spoilers for the SPISERS who may still be working on the core lab 4 exercises.
+Continue adding new files and functions that draw interesting fractals to that repo. Please DO NOT include the code for the (spiral, tree and snowflake) in your public repo. We don't want spoilers for the SPISERS who may still be working on the core lab 4 exercises.
 
-We also encourage you to continue creating interesting mashup art from the routines that you and your peers have created in your public drawing repo.
+We also encourage you to continue creating interesting mashup art from the routines that you and your peers have implemented in your public drawing repo.
 
 Great job working through lab 4! Feel free to move on to the next lab.
 
