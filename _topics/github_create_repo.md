@@ -48,7 +48,8 @@ your partner will share the same repo by following these instructions
 	
    ![new repo](/images/create-new-repo.png)
 
-3. For each lab we have provided you with some starter code. To obtain
+3. After you click "Create Repository", you'll see the following screen.
+   You will want to click the For each lab we have provided you with some starter code. To obtain
     the starter code, click on the "import code" button on the screen that
     follows right after you create a new repo. Then provide the url of the
     repository that contains the starter code. This url should be
@@ -56,15 +57,16 @@ your partner will share the same repo by following these instructions
     you should expect to see if you were importing the starter code for
     lab04:
 	
-    ![new repo](/images/import-code1.png)![new repo](/images/import-code2.png)
+    ![click import code](/images/click-import-code.png)
 
-4. Set up your ssh key. You need to do this step only once and should
-    not repeat it for each assignment. Log into your account on ieng6 and
-    setup your ssh key by following these tutorials in order: 
+4.  After you click  the *import code* button,
+    a screen will come up similar to the one below.    You should have been
+    given the URL of a repo for your *starter code*.   Copy and paste that URL
+    into the box labelled "Your old repository's clone URL".    Then click
+    the button labeled "begin import".
 
-    1.  [Generate a new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-        Note: Don't enter a passphrase for now 
-    1. [Copy your ssh key to github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+    ![import code screen](/images/import-code-screen.png)
+
 
 5. Its now time to make a copy of your repo on the computer where you
     intend to work. We strongly recommend that you create this copy on one
