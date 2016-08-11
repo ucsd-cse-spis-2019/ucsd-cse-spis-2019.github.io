@@ -299,7 +299,7 @@ Now it's time to create your own effects!! Please be sure to include a comment o
 
 ## Submission
 
-Submit your code to github using the usual `git add` `git commit` `git push` commands
+Submit your code to github using the usual `git add`, `git commit`, `git push` commands
 
 Congratulations on finishing lab 5!!
 
