@@ -21,6 +21,8 @@ If you find that they are using significantly more states or rules than the refe
 
 Feel free to give more concrete suggestions if it is apparent to you.
 
+If they have attempted the challenge part run it. If it runs correctly include a encouraging comment acknowledging their achievement.
+
 You don't have to grade the written part of the lab.
 
 
