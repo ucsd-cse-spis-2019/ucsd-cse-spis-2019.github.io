@@ -3,7 +3,7 @@ layout: lab
 num: lab05
 ready: true
 desc: "Image Manipulation, covering Guttag Ch5"
-assigned: 2016-08-12 09:30:00.00-7
+assigned: 2016-08-11 09:30:00.00-7
 due: 2016-08-15 17:00:00.00-7
 ---
 
