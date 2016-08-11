@@ -9,6 +9,10 @@ due: 2016-08-15 17:00:00.00-7
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
+Before you begin the lab please check your feedback repo on git.
+You should have received an email asking you to accept an invite to the repo.
+If you haven't received the email, please contact your mentor.
+
 # Learning Goals
 
 In this lab you will apply your knowledge from Chapters 2-5 to manipulate and transform images. A key focus of this lab is to give you lots of practice with using loops in your python code. Note that while media files are not covered in Guttag, working with media requires many of the concepts and data types covered in lecture and in the book. 
