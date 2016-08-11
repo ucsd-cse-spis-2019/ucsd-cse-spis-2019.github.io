@@ -21,3 +21,8 @@ The installation instructions for Mac, Windows and Linux are on this page (you h
 
 * [Page with good installation instructions for PyGame](http://programarcadegames.com/index.php?chapter=foreword&lang=en#section_0)
 
+That site has a .zip file with examples.   I've made those available here as a github repo in case you want to browse the code.  Note that some programs may rely on other files that are in that directory (e.g. specific sound files, images, etc.)
+
+* [https://github.com/ucsd-cse-spis-2016/program-arcade-games-python-examples](https://github.com/ucsd-cse-spis-2016/program-arcade-games-python-examples).    
+
+
