@@ -134,6 +134,18 @@ as a web app, Gradscope's UI is subject to change at any time.)
 
 ![Click create programming assignment](gradescope-click-create-programming-assignment-50.png)
 
+# When its all done, what do you see?
+
+The setup process takes a while.    How do you know when its finished?  It seems to be the following 
+message at the end of the log:
+
+```
+Successfully installed subprocess32 gradescope-utils
+Cleaning up...
+ ---> c33181bc2151
+Removing intermediate container 60d1982dedf1
+Successfully built c33181bc2151
+```
 
 ----
 
