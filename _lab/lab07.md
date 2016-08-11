@@ -150,7 +150,26 @@ You'll repeat this process for each of the files pyfuncs01.py, pyfuncs02.py, etc
 
 For each, there some additional hints below.
 
-# TODO: Insert additional hints here
+## `pyfuncs01.py`: Simple Python functions
+
+In pyfuncs01.py, we have two simple python functions that just return a value based on their parameters.
+
+Here, you are just calculating a result by using the arithmetic operators (such as `+`,`-`,`*`,`/`,`**`,`%` etc.) and returning it.  
+
+You are also asked to add a few test cases for one of the functions.
+
+## `pyfuncs02.py`: Checking types
+
+These functions return True or False based on whether their parameter is of a certain type.
+
+You can read more about types in Python here: [Python: types](/topics/python_types/)
+
+You are given one example of a function that checks for type, and you are asked to write another one.
+
+You are also asked to write some test cases for a function.  Note that if you don't write those test cases, your
+`test_pyfuncs02.py` may appear to pass even when you haven't yet replaced the stub for one of the functions
+you are supposed to write.
+
 
 
 # Step 7: Final check of all your tests
