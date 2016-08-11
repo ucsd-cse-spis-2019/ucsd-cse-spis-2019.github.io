@@ -19,6 +19,6 @@ Please create an APS repo with a Week2.md file, following these instructions:
 
 Then, in your Week2.md file, please write a solution to these problems:
 
-[APS Greedy Method problems (pdf)](/hwk/aps2/spis_gr_problems.pdf)
+[APS Greedy Method problems (pdf)](spis_gr_problems.pdf){: data-ajax="false" }
 
 See also: [Main SPIS 2016 APS Page](https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/2016_aps)
