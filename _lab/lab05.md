@@ -1,8 +1,8 @@
 ---
 layout: lab
 num: lab05
-ready: false
-desc: "lab05 covering Guttag Ch5, by Diba"
+ready: true
+desc: "Image Manipulation, covering Guttag Ch5"
 assigned: 2016-08-12 09:30:00.00-7
 due: 2016-08-15 17:00:00.00-7
 ---
@@ -40,7 +40,9 @@ Our computers encode all data (pictures, games, files) as sequences of 0s and 1s
 
 In your computer, images (pictures) are files stored on your hard disk. A digital image is logically a rectangular grid of pixels, which appear as squares when enlarged; each pixel then typically consists of 1 byte (8 bits) for a Black-and-White image or 3 bytes (24 bits) for a color image, where one byte (a value between 0 and 255) each is for Red (R), Green (G), and Blue (B). R, G, B are three ingredients for all visible colors; for example: blue is 0 redness + 0 greenness + 255 blueness, white is 255 redness + 255 greenness + 255 blueness, and brown is 165 redness + 42 greenness + 42 blueness, etc.. The following figure by Wikipedia shows a color image with enlarged pixels.
 
+<p align="center">
 ![](/lab/images/Pixel-example.gif)
+</p>
 
 In this lab we'll work with the Python Imaging Library (PIL) which is a graphics library like turle designed for working with image files. So let's warm up!
 
@@ -48,8 +50,11 @@ In this lab we'll work with the Python Imaging Library (PIL) which is a graphics
 
 Download the  "stone bear" picture below and save it in your github repo working directory. You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "stoneteddybear.jpg".
 
-![](/lab/images/stoneteddybear.jpg)
+<p align="center">
 
+![](/lab/images/stoneteddybear.jpg){:height="400px"}
+
+</p>
 
 Next, launch IDLE in the same directory that you stored the stone bear image.
 
@@ -77,16 +82,18 @@ To ensure that the command you just executed works you can show the image you ju
 
 Logically, an image is a grid of pixels. The size of the "stone bear" picture is 600 x 800, i.e., 480,000 pixels. You can pick a specific pixel from the image by using the `getpixel()` function. The arguments of this function are a picture object and the pixel's X position and its Y position; the function returns the pixel object at the coordinate(X, Y) of the image. Note that in the image grid, the axis is a little different from the usual 2D Cartesian axis, in that it counts from upper left to bottom right. For example, in the following 18 x 18 image grid, the coordinate (11, 7) is the grey block. Note the index starts at 0.
 
-![](/lab/images/coordinates.gif)
+<p align="center">
+![](/lab/images/coordinates.gif){:height="400px"}
+</p>
 
-So, if you call
+So, if you make the following statement:
 
 ```
 >>> pixel = stonebear.getpixel( ( 100, 200) )
 
 ```
 
-The pixel returned is a tuple representing the RGB values of the pixel on the 200th row from top, 100th column from left, in the stonebear image. You can see this by looking at the value stored in pixel.
+the pixel returned is a tuple representing the RGB values of the pixel on the 200th row from top, 100th column from left, in the stonebear image. You can see this by looking at the value stored in pixel.
 
 ```
 >>> pixel
@@ -157,3 +164,149 @@ What if we we want to save the changes we've made to the file on disk? We will n
 Let's get back to the shy stone bear. If you correctly changed the stonebear, and you want the actual file of "stone bear" picture to be changed accordingly, you should use the Image.save function. Read the documentation to see how it works (HINT: It takes one argument, which is a string specifying where you want the file saved including its name) and save your modified stonebear picture now.  A word of advice: we recommend you don't apply the changes to the original "stone bear" image, but to a different file (let's say, "shystonebear.jpg" somewhere). This way you won't lose your original picture in case you blocked a wrong area of the shy bear.  
 
 That is all for our warm-ups. Make sure you understand how all this works before launching into your tasks below.
+
+## Invert Function
+
+Way back in the days of film cameras and chemical processing of photo images, one step in the processing process produced a negative image.
+
+We can achieve the negative (aka inverted) effect digitally by subtracting each of the original RGB values of a pixel from 255.
+
+For example, if the pixel RGB values are 34, 67, 87, the new RGB values of that same pixel will be 255-34, 255-67, 255-87. Or 221, 188, 168.
+
+But that is only for one pixel and an image consists of thousands, or even millions, of pixels. Here we will use for loops to traverse through the list of pixels in an image. 
+
+Read over this function to get a sense of how to we will use nested loops to modify pictures
+
+```
+def invert( im ):
+    ''' Invert the colors in the input image, im '''
+    
+    imsize = im.size
+    width = imsize[0]
+    height = imsize[1]
+    # Note that the previous 3 lines could be replaced by the single line:
+    # (width, height) = im.size()
+    # We will use this shorthand below.  Ask a tutor if you are confused.
+
+    for x in range(width ):
+        for y in range( height ):
+            (red, green, blue) = im.getpixel((x, y))
+            newRed = 255-red
+            newGreen = 255-green
+            newBlue = 255-blue
+            im.putpixel((x, y), (newRed, newGreen, newBlue))
+
+```
+
+Copy this function into your "imaging.py" file, load it and run it.  Again, you will need to follow the three steps from above to run this function:
+Create the stone bear image
+Run the function, passing in the image
+Show the image after running the function
+Tired of typing these lines into the shell? You can actually place the lines that will execute the three steps above into your "imaging.py" file, outside of any function (below all the function definitions). Then, every time you press F5, you will automatically run these lines!
+When you execute the invert function on the stone bear picture given to you. Your result should look similar to this.
+
+<p align="center">
+![](/lab/images/PIL/invertedbear.jpg){:height="400px"}
+</p>
+
+Functions for you to write
+
+NOTES: 
+
+In all of the functions below, we would like you to use (nested) loops and the putpixel() function on the Image object. PIL already implements many of the things we're asking you to do below. However, we ask that you use the putpixel() function to re-implement this functionality so that you get practice implementing these more complex functions.
+
+You should also test your functions after writing each one.  You should test them on the stone bear image, and AT LEAST ONE OTHER IMAGE. We suggest using your own picture available in one your earlier git hub repos :)
+
+## Greyscale
+
+Now that we have some experience changing the colors in a picture, we'll write functions to make greyscale and black and white (binary) images.  The concept of image luminance will help us out. In layman's terms, luminance is how bright or dark the colors in a pixel are (compared to white).
+
+As (the almighty) Wikipedia calculates it, luminance is 21% red, 72% green, and 7% blue. Intuitively, this makes sense because if you think of standard red, green, and blue, green is the lightest and thus has highest positive impact luminance, while blue is darker and has a lower value for luminance. This is useful! You're going to calculate luminance for pixel operations.
+
+Write a function called greyscale that takes an image as a parameter and modifies it to make it greyscale. For this, you'll want to do something similar to invert, except that we will first calculate the luminance of a pixel and then set each of the three color channels to this value.  Since luminance is an indication of how white/black a pixel is, just insert the same value in each of the three color channels!
+
+
+<p align="center">
+
+![alt-bear1](/lab/images/PIL/originalbear.jpg){:height="400px"} 
+![alt-bear2](/lab/images/PIL/grayscalebear.png){:height="400px"}
+
+</p>
+
+
+Hint: Getting an OverflowError: unsigned byte integer is greater than maximum? This might be because your luminance calculation results in RGB values higher than 255. Make sure that all of your percentages add up to 1.
+
+## Binarize
+
+Now, write a function called `binarize( im, thresh)`, which makes modifies im to be black and white based on a threshold luminance value (thresh) specified by the user. This threshold is a brightness value between 0 and 255 - if a pixel's RGB average is greater than the threshold value, then it should turn white, and if it is less than the threshold value, then it should turn black.
+
+What is the expected behavior of binarize(im, 0) (for any image)?
+
+What is the expected behavior of binarize(im, 255) (for any image)?
+
+<p align="center">
+
+![](/lab/images/PIL/binarizedbear.png){:height="400px"}
+
+</p>
+
+## Geometric Transformations!
+
+The following four functions take an image as an argument and modify that image.  They don't return anything.  
+Write `mirrorVert`: This function takes an image and modifies the image to mirror the photo across its horizontal axis (i.e., so that the top part is mirrored upside down on the bottom of the image). Hint: Think carefully about which pixels you need to loop over, and where each pixel in the top half needs to be copied to create the mirror effect.  Start with concrete examples as we will see in class.   Then derive the general formula based on the pixel's location (x, y) and the height and width of the image.
+
+<p align="center">
+
+![](/lab/images/PIL/vertmirror.jpg){:height="400px"}
+
+</p>
+
+`mirrorHoriz`: Same as above, but mirroring across the vertical axis. Hint:  Instead of replacing the bottom rows with the reversed top rows (as you did in `mirrorVert`), you'll replace the last half of the pixels in every row with the reversed first half of the pixels.
+
+<p align="center">
+
+![](/lab/images/PIL/horizmirror.jpg){:height="400px"}
+
+</p>
+
+Write `flipVert`, a function which flips the image in a picture along its horizontal axis (so the result is that the bottom is on the top and the top is on the bottom). Again, think carefully about where each pixel needs to end up, how far your loop needs to run, and be careful not to overwrite the pixels in the bottom half of your image before you've copied them over into the top!
+
+<p align="center">
+
+![](/lab/images/PIL/flipvert.jpg){:height="400px"}
+
+</p>
+
+Next up, `flipHoriz`, flip the image on its vertical axis. This should work in the same way as flipVert but the flip occurs in the horizontal direction. 
+
+<p align="center">
+
+![](/lab/images/PIL/fliphoriz.jpg){:height="400px"}
+
+</p>
+
+
+The next three methods create and return a copy of the image passed in.  They should NOT modify the original image.
+
+* scale: Take an image as a parameter and create a copy of that image that is scaled to be half its original size.  Then return this scale copy. Hint: one way to do this is to skip every other pixel when copying from one image to the other.  Be careful with youir coordinates so that you do not go out of bounds in the smaller image.
+
+* blur: Again create and return a copy of the image that is passed in.  This copy will be a blur of the original image, created by combining neighboring pixels in some way (entirely up to you). You might consider averaging the RGB values of a designated 'square' of pixels, then changing each of these pixels' values to the average.
+
+* randomGrid: Creates and returns a copy of the original image.  To create this copy it divides the image into an NxN grid (where the N is up to you, or make it an argument of the function) and randomly sorts the pieces of the grid across the image - "sliding puzzle"-style.
+
+Now it's time to create your own effects!! Please be sure to include a comment or note to the tutors explaining what you did. Be creative!  There is literally no end to this assignment. Add any creative routines that you come up with to your public repo and continue working on the joint group mashup project.
+
+
+## Submission
+
+Submit your code to github using the usual `git add` `git commit` `git push` commands
+
+Congratulations on finishing lab 5!!
+
+
+
+
+
+
+
+
