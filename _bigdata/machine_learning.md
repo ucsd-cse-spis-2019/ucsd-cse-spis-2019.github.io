@@ -3,7 +3,7 @@ topic: "Collaborative Filtering "
 desc: " A Quick Look at Stalking People Online"
 ---
 
-<h1> Some Topics </h1>
+<h1> Topics Covered in this DOPE GUIDE </h1>
 Manhattan distance<br>
 Euclidean distance<br>
 Minkowski distance<br>
