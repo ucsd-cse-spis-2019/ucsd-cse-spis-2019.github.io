@@ -21,6 +21,12 @@ But seriously, hopefully you have fun. It really is beautiful that we can deal w
 
 CHEERS LMAO. XD 
 
+<h1>W-wait, what are you talking about and why does this matter?</h1>
+
+I'll explain through a section of a book called The Ancient Art of the Numerati by Ron Zacharski.
+
+"There's lots of stuff out there (movies, music,books, rice cookers). There's going to be a huge growth in the amount of stuff out there. Theproblem with having all this stuff available is finding the stuff that is relevant to us. Of all the movies out there, what movie should I watch. What's the next book I should read? This problem of identifying relevant stuff is what data mining is about. Most websites will have some component dealing with 'finding stuff'. In addition to the movies, music, books, and rice cookers mentioned above, you might want recommendations about what friends to follow. How about a personalized newspaper showing just the news you are most interested in? If you are a programmer, particularly a web developer, it would be useful to know data mining techniques."
+
 <p>─────────▄──────────────▄
 ────────▌▒█───────────▄▀▒▌
 ────────▌▒▒▀▄───────▄▀▒▒▒▐
