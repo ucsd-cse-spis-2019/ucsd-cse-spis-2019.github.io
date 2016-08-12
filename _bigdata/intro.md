@@ -9,7 +9,7 @@ So, to start this, please excuse my english skills. I was born and raised in Cal
 
 To start, Data Science is a big, beautiful thing. It allows for complex systems of measurement: Pandora Song Reccomendations, Amazon, NSA Wire Tapping, Targetted Advertisement, Determining Political Elections, Turning Water to Wine, The Miracle of Child Birth, etc, etc. Okay, some of those things may have been overstatements. However, it isn't rocket science. Over the course of these bite-sized tutorials hopefully I can take some of that magic away, and if you do the Data Mining project come week 5, we can convince you that Big Data really is "Nothing Special".
 
-<h1>Finding the Good $%#!</h1>
+<h1>Finding the Good Stuff</h1>
 
 The problem in the 21st century is finding what we need. iTunes has 11 million tracks to choose from,Spotify has over 15 million songs, Amazon has 2 million books. Netflix has over 100,000 movies, Hulu has 50,000, Amazon Prime has another 100,000. Geez la Wheez, just look at Youtube. GEEEZ. How does it work? Magic? Mice? Employees? Spies? Unicorns!? NO!!! 
 
