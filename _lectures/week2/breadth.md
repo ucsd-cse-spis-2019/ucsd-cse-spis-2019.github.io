@@ -26,3 +26,11 @@ That site has a .zip file with examples.   I've made those available here as a g
 * [https://github.com/ucsd-cse-spis-2016/program-arcade-games-python-examples](https://github.com/ucsd-cse-spis-2016/program-arcade-games-python-examples).    
 
 
+# Example tutorial
+
+* Starting code [pygame-base-template.py](https://github.com/ucsd-cse-spis-2016/pygame-base-template)
+* [Drawing a moving rectangle](https://www.youtube.com/watch?v=-GmKoaX2iMs)
+
+
+
+
