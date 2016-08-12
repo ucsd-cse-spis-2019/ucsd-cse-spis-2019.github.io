@@ -2,51 +2,12 @@
 topic: "Introduction "
 desc: " Big Data and You"
 ---
-<p>─────────▄──────────────▄
-────────▌▒█───────────▄▀▒▌
-────────▌▒▒▀▄───────▄▀▒▒▒▐
-───────▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
-─────▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
-───▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀██▀▒▌
-──▐▒▒▒▄▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▒▌
-──▌▒▒▐▄█▀▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
-─▐▒▒▒▒▒▒▒▒▒▒▒▌██▀▒▒▒▒▒▒▒▒▀▄▌
-─▌▒▀▄██▄▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
-─▌▀▐▄█▄█▌▄▒▀▒▒▒▒▒▒░░░░░░▒▒▒▐
-▐▒▀▐▀▐▀▒▒▄▄▒▄▒▒▒▒▒░░░░░░▒▒▒▒▌
-▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒░░░░░░▒▒▒▐
-─▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
-─▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐
-──▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▌
-────▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
-───▐▀▒▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
-──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▀</p>
 
 <h1>Nothing Special</h1>
 
 So, to start this, please excuse my english skills. I was born and raised in California, and have never left the state, however, it is common that I find myself incapable of expression, or the communication of thought.
 
 To start, Data Science is a big, beautiful thing. It allows for complex systems of measurement: Pandora Song Reccomendations, Amazon, NSA Wire Tapping, Targetted Advertisement, Determining Political Elections, Turning Water to Wine, The Miracle of Child Birth, etc, etc. Okay, some of those things may have been overstatements. However, it isn't rocket science. Over the course of these bite-sized tutorials hopefully I can take some of that magic away, and if you do the Data Mining project come week 5, we can convince you that Big Data really is "Nothing Special".
-
-<p>─────────▄──────────────▄
-────────▌▒█───────────▄▀▒▌
-────────▌▒▒▀▄───────▄▀▒▒▒▐
-───────▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
-─────▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
-───▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀██▀▒▌
-──▐▒▒▒▄▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▒▌
-──▌▒▒▐▄█▀▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
-─▐▒▒▒▒▒▒▒▒▒▒▒▌██▀▒▒▒▒▒▒▒▒▀▄▌
-─▌▒▀▄██▄▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
-─▌▀▐▄█▄█▌▄▒▀▒▒▒▒▒▒░░░░░░▒▒▒▐
-▐▒▀▐▀▐▀▒▒▄▄▒▄▒▒▒▒▒░░░░░░▒▒▒▒▌
-▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒░░░░░░▒▒▒▐
-─▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
-─▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐
-──▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▌
-────▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
-───▐▀▒▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
-──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▀</p>
 
 <h1>Finding the Good $%#!</h1>
 
