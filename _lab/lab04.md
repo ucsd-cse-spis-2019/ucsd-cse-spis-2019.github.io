@@ -268,7 +268,7 @@ snowflakeSide(sideLength, levels)
 
 The above functions should draw just one side of the underlying equilateral triangle -- along with all of its squiggles or bumps, recursively! 
 
-All of the recursion will then be in snowflakeSide. So, first try creating snowflakeSide and make sure that it works and draws a single side of the snowflake curve at the appropriate level of recursion. Once snowflakeSide works, then your snowflake function will call snowflakeSide four times, with appropriate angles between them.
+All of the recursion will then be in snowflakeSide. So, first try creating snowflakeSide and make sure that it works and draws a single side of the snowflake curve at the appropriate level of recursion. Once snowflakeSide works, then your snowflake function will call snowflakeSide three times, with appropriate angles between them.
 
 Again, in this strategy, all of the recursion occurs in snowflakeSide. Remember that 
 if levels is zero, then snowflakeSide should produce a single line segment (this will be the base case of the recursion);
