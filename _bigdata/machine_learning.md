@@ -12,7 +12,7 @@ Cosine similarity<br>
 Implementing k-nearest neighbors in Python<br>
 
 <h1> Now to get into some real cool stuff, familia </h1>
-<img src='http://static1.zipso.net/wp-content/uploads/2014/03/doge-mining.jpg'></img>
+<img src='http://static1.zipso.net/wp-content/uploads/2014/03/doge-mining.jpg'>
 <p> A Data Mining Expert </p>
 
 <h1> So what is Collaborative Filtering, anyway, other than "just a data mining technique"? </h1>
