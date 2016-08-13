@@ -176,7 +176,42 @@ you are supposed to write.
 
 As one last check, run all of your tests in IDLE, or at the command line.
 
-TODO: Insert instructions
+Here is an example of running each one of your tests at the command line.  Here the bash shell prompt is replaced by simply `$ ` to make the output easier to read.    If your output looks like this, it means all of your tests are passing, and you
+are ready to try submitting on Gradescope.
+
+```
+$ python test_pyfuncs01.py 
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK
+$ python test_pyfuncs02.py 
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+$ python test_pyfuncs03.py 
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK
+$ python test_pyfuncs04.py 
+....................
+----------------------------------------------------------------------
+Ran 20 tests in 0.000s
+
+OK
+$ python test_pyfuncs05.py 
+................................................
+----------------------------------------------------------------------
+Ran 48 tests in 0.001s
+
+OK
+$ 
+```
 
 # Step 8: Submit your solution on Gradescope
 
@@ -210,8 +245,3 @@ things may not work correctly.
 Upload the zip and wait for the results: hopefully a perfect 100%.
 
 And that's it for {{page.num}}!
-
-
-
-
-
