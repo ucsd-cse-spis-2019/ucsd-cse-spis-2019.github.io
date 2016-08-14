@@ -8,6 +8,9 @@ var dates = {
 	    "assigned" :  "{{ asn.assigned }}",
 	    "due" :  "{{ asn.due }}",
 	    "url" :  "{{ asn.url }}",
+		{% if asn.resubmit %}
+		"resubmit" : "{{ asn.resubmit }}",
+		{% endif %}
 	},
 	{% endfor %}
     ],
@@ -86,11 +89,23 @@ function processHwkOrLab(item,which) {
     mmdd_assigned = moment(item.assigned).format("MM/DD");
     mmdd_due = moment(item.due).format("MM/DD");
 
+	mmdd_resubmit = null;
+	if (item.resubmit) {
+		mmdd_resubmit = moment(item.resubmit).format("MM/DD");
+
+		var resubmit = {"asn_type" : which, "date_type" : "resubmit", "value": JSON.stringify(item)};
+		pushToFirstIfArrayElseSecond(resubmit,
+									 cal.days[mmdd_resubmit],
+									 cal.days_outside_calendar);
+	}
+
     var assigned = {"asn_type" : which, "date_type" : "assigned", "value": JSON.stringify(item) };
     pushToFirstIfArrayElseSecond(assigned,cal.days[mmdd_assigned],cal.days_outside_calendar);
 
     var due = {"asn_type" : which, "date_type" : "due", "value": JSON.stringify(item)};
     pushToFirstIfArrayElseSecond(due,cal.days[mmdd_due],cal.days_outside_calendar);
+
+
     
 }
 
@@ -194,12 +209,17 @@ function populateAssignmentElements(elem) {
 
     
     elem.find('.cal-assignments div[data-date-type="due"]').each(function() {
-	var asn = ($(this).data("date-value"));
-	$(this).append(" due " + moment(asn.due).format("hh:mma") );
+			var asn = ($(this).data("date-value"));
+			$(this).append(" due " + moment(asn.due).format("hh:mma") );
     });
     
     elem.find('.cal-assignments div[data-date-type="assigned"]').each(function() {
-	$(this).append(" assigned");
+			$(this).append(" assigned");
+    });
+
+    elem.find('.cal-assignments div[data-date-type="resubmit"]').each(function() {
+			var asn = ($(this).data("date-value"));
+			$(this).append(" resubmission<br>due " + moment(asn.resubmit).format("hh:mma") );
     });
     
 }
