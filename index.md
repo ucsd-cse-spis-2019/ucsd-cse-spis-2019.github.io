@@ -19,9 +19,9 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
   {% include lectures_for_week.html week="1"
     collapsible="true" collapsed="true" %}
   {% include lectures_for_week.html week="2"
-    collapsible="true" collapsed="false" %}
-  {% include lectures_for_week.html week="3"
     collapsible="true" collapsed="true" %}
+  {% include lectures_for_week.html week="3"
+    collapsible="true" collapsed="false" %}
   {% include lectures_for_week.html week="4"
     collapsible="true" collapsed="true" %}
   {% include lectures_for_week.html week="5" section_title="Projects"
