@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab06
-ready: false
+ready: true
 desc: "Python skill builder (functions, types, if/else, strings, recursion)"
 assigned: 2016-08-15 08:45:00.00-7
 due: 2016-08-19 15:45:00.00-7
