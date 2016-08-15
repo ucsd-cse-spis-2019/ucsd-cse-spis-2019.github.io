@@ -143,7 +143,8 @@ Now try some things on your own
 * Then, add a function with a decorator `@app.route('/mtokm/<milesString>')` that will convert the `milesString` into a number, pass it into the function, and produce output.  You can use the `convertFtoC` function as an example to build on.
 * If that works, then see if you can write your own function.  Note that you can use a route such as `@app.route('someroute/<a>/<b>/<c>')` if you wanted to have a function that took three inputs instead of just one.   
 
-# What comes next?
+# Templates
+
 
 Our next steps will be to learn a bit about:
 
@@ -158,6 +159,46 @@ If you want to get started on learning HTML and CSS now though, one of the best 
 
 * Visit their HTML tutorial to get started
 * After learning some HTML, learn a bit of CSS
+
+# Using Templates
+
+Now that we know a bit about HTML, we can try building a multi page application that uses HTML
+on each page.
+
+Here is an example of how that would look.  You need to create a subdirectory called `templates`.
+
+Into that directory, you can put some HTML files, as in this example:
+
+* [flask-practice-web-app](https://github.com/pconrad/flask-practice-web-app)
+
+Then, you instead of just returning a string, you can use the `render-template` function as illustrated
+in this example.  Note the additional `import` statements that are needed:
+
+```python
+import os
+from flask import Flask, url_for, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def renderMain():
+    return render_template('home.html')
+
+@app.route('/page1')
+def renderPage1():
+    return render_template('page1.html')
+
+@app.route('/page2')
+def renderPage2():
+    return render_template('page2.html')
+
+@app.route('/page3')
+def renderPage3():
+    return render_template('page3.html')
+    
+if __name__=="__main__":
+    app.run(debug=False,host="0.0.0.0",port=54321)
+```
 
 
 # The next lesson
