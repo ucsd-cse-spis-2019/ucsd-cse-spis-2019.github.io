@@ -177,6 +177,6 @@ However, you won't necessarily want to start their Python tutorial immediately, 
 
 # The next lesson
 
-The next lesson is Web Apps Intro (part 3)
+The next lesson is [Web Apps Intro (part 3)](/webapps/webapps-intro-part-3.md)
 
  
