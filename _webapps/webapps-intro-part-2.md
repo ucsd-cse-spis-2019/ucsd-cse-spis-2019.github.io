@@ -1,6 +1,6 @@
 ---
 topic: "Webapps Intro, Part 2"
-desc: ""
+desc: "ftoc (from url), and intro to templates"
 ---
 
 # Keeping your ACMS Account Safe
