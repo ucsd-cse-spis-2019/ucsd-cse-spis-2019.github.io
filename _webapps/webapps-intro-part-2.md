@@ -18,13 +18,13 @@ This is not a show-stopper of a problem.  There are some reasonable things you c
 To use Flask safely on ACMS, do NOT enable debug mode:
 
 ```python
-app.run(debug=True)  # DO NOT do this on your ACMS ACCOUNT
+app.run(port=5000,debug=True)  # DO NOT do this on your ACMS ACCOUNT
 ```
 
 If you do set `debug=True`, that allows anyone that can bring up your web app to execute any line of Python code they want, but as you, in your account.  That means they could launch a spambot, delete all your files, or do something even more awful.
 
 ```
-app.run(debug=False)   # ALWAYS DO THIS when  RUNNING ON ACMS, THIS IS THE SAFE THING TO DO
+app.run(port=5000,debug=False)   # ALWAYS DO THIS when  RUNNING ON ACMS, THIS IS THE SAFE THING TO DO
 ```
 This is the safe thing to do when running on ACMS.
 
