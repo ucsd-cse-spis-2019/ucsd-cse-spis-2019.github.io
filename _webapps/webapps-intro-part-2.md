@@ -76,7 +76,7 @@ First, we'll just do it and see what it does, then we'll unpack each line of cod
 
 
 
-```python
+{% highlight python linenos %}
 from flask import Flask
 app = Flask(__name__)
 
@@ -98,7 +98,7 @@ def convertFtoC(ftempString):
 
 if __name__ == "__main__":
     app.run(port=5000)
-```
+{% endhighlight %}
 
 Now try running that.   
 
