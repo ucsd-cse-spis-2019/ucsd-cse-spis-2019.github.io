@@ -15,7 +15,7 @@ We'll be add parts to it as we progress.
 
 # Part 1:
 
-Please create a private repo called `spis16_lab07_part1_Name_Name` using [Method 2](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method2)
+Please create a private repo called `spis16_lab07_part1_Name_Name` using [Method 2](/topics/github_create_repo/#method2)
 
 Then clone that repo into your `~/github` directory, cd into it, and then try all the steps in this tutorial:
 
