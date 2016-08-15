@@ -1,6 +1,6 @@
 ---
-topic: "Flask: Getting Started"
-desc: "First steps for working with Flask to create webapps using Python"
+topic: "Webapps Intro, Part 1"
+desc: "Getting Started with Flask"
 ---
 
 The content below is "raw" pasted from <https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/week-3-resources/web-apps-intro-notes-week-3>.
