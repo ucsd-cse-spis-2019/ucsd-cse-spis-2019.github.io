@@ -3,10 +3,6 @@ topic: "Webapps Intro, Part 1"
 desc: "Getting Started with Flask"
 ---
 
-The content below is "raw" pasted from <https://sites.google.com/a/eng.ucsd.edu/spis/home/2015_academicprogram/foundations/week-3-resources/web-apps-intro-notes-week-3>.
-
-It still needs lots of cleanup!
-
 This page describes how to get started with Flask, a "Python Microframework" for building web apps.
 
 More specifically, this page describes how to get started with Flask on your ACMS accounts, which requires a few adjustments to the standard tutorial.
