@@ -221,4 +221,4 @@ div.nicer-table table * td { padding: 4px; }
 
 </div>
 
-Click to access:  Web Apps Intro, Part 2.
+Click to access:  [Web Apps Intro, Part 2](/webapps/webapps-intro-part-2/).
