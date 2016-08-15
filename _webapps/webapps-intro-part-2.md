@@ -148,7 +148,6 @@ Now try some things on your own
 Our next steps will be to learn a bit about:
 
 * HTML and CSS, the languages we use to make our web pages look like "real web pages" instead of just plain text.
-* Heroku, a service that lets us run our web apps in the cloud.
 * Both of those are for our next lesson, but we can at least get a head start if you've finished this material early.
 
 # HTML and CSS
@@ -160,20 +159,6 @@ If you want to get started on learning HTML and CSS now though, one of the best 
 * Visit their HTML tutorial to get started
 * After learning some HTML, learn a bit of CSS
 
-# Heroku
-
-If you want to proceed with the web app lessons and learn how to put your Python web app on the "real" web so that everyone in the world can access it, one of the easiest ways to do that is with a free Heroku account.
-
-Visit [`heroku.com`](http://heroku.com) to sign up for the free plan.
-
-However, you won't necessarily want to start their Python tutorial immediately, because:
-
-* Their default tutorial assumes you are using Django instead of Flask.
-* Django is a  more complicated web framework for Python.  
-* We are starting with Flask instead of Django, because it is much easier to learn for folks just getting used to Python.
-* Their tutorial assumes you are using your own laptop and have the ability to install software
-* My tutorial will assume that you are using ACMS and have many of the things you already need pre-installed.
-* So, for now, just create your account on their "free plan" so that you are ready to go with the next steps when that material is put online.
 
 # The next lesson
 
