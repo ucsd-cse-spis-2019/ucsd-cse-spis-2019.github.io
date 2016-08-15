@@ -60,7 +60,7 @@ Ok, let's get started!
 The way that you create the repo will be a little different, since we have "starter code" available for you.
 
 Instead of creating the repo from scratch, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
-importing the starter code from this link:  {{ page.starter-code-url }}
+importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
 
 The name of your repo should be `spis16-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2016.github.io/info/pairs/)
 
