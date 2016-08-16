@@ -280,7 +280,7 @@ Each of the LED segments has one of its connection pins out of the package. Thes
 * Now combine your current circuit with the LED and button circuit from the previous exercise and modify your program to display the number of button presses so far on the 7 segment display. You can only count till 8 and have to reset back to zero once the button is pressed more than 8 times.
 
 
-Congratuations on finishing lab 8. You now have some real hands on experience with building and controlling circuits via computers and we will build on this knowledge as we venture deeper into hardware and robotics!
+Congratulations on finishing lab 8!! You now have successfully built and controlled circuits via programs. We will build on this knowledge as we venture deeper into hardware and robotics!
 
 
 
