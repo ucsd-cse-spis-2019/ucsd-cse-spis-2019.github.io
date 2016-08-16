@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab08
-ready: false
+ready: true
 desc: "Basics of electronics with Raspberry Pi, by Diba"
 assigned: 2016-08-17 09:30:00.00-7
 due: 2016-08-19 15:45:00.00-7
