@@ -193,4 +193,57 @@ We can represent what we've learned about `rdata` so far by drawing a diagram.  
 
 <img src="https://docs.google.com/drawings/d/1zRIQIeaTI3-AZskqwvYvtwv_3Q_EPQnGtZqi-HdTtBE/pub?w=966&amp;h=422">
 
+The four question marks represent: what is under each of those four keys ( `u'modhash'`,`u'children'`,`u'after'`, and `u'before'`)?
+
+How can we tell?
+
+The first thing we might want to do is examine each of their types.    From this we see that two of them
+are unicode strings, one is a list, and one has `NoneType`, meaning that is is a missing value.
+
+```python
+>>> type(rdata[u'data'][u'modhash'])
+<type 'unicode'>
+>>> type(rdata[u'data'][u'children'])
+<type 'list'>
+>>> type(rdata[u'data'][u'after'])
+<type 'unicode'>
+>>> type(rdata[u'data'][u'before'])
+<type 'NoneType'>
+>>> 
+```
+
+We can quickly check the values of the two unicode strings:
+
+```python
+>>> rdata[u'data'][u'modhash']
+u''
+>>> rdata[u'data'][u'after']
+u't3_4xnf96'
+>>> 
+```
+
+The interesting part is under the `u'children'` key.   That turns out to be a list.  Let's find out how long
+the list is:
+
+```python
+>>> len(rdata[u'data'][u'children'])
+27
+>>>
+```
+
+Ah, so let's just look at the first element of that list.    We might assume that each of the others probably
+has a similar structure.  Unfortunately, we are right back at the stage where the thing we get is "too big":
+
+```python
+>>> rdata[u'data'][u'children'][0]
+{u'kind': u't3', u'data': {u'domain': u'self.UCSD', u'banned_by': None, u'media_embed': {}, u'subreddit': u'UCSD', u'selftext_html': u'&lt;!-- SC_OFF --&gt;&lt;div class="md"&gt;&lt;p&gt;I&amp;#39;m basically just copying this directly from last year&amp;#39;s Q&amp;amp;A, but I don&amp;#39;t think m
+```
+<em>much too many lines of output here...</em>
+```
+r/UCSD/comments/4cgr1w/new_student_qa_2016/', u'author_flair_text': u'History (B.A.)', u'quarantine': False, u'title': u'New Student Q&amp;A 2016', u'created_utc': 1459275768.0, u'ups': 51, u'num_comments': 277, u'visited': False, u'num_reports': None, u'distinguished': None}}
+>>>
+```
+
+So, the solution is NOT to give up!  But rather, to keep going in the direction we are going, documenting our progress
+with a diagram.  Eventually, we *will* get to a structure that makes sense, that we can do some computation over, that, is some thing that represents a single reddit post, or a single comment on a single reddit post, etc.
 
