@@ -16,7 +16,7 @@ In this lab you will be introduced to the basics of electronics using a a credit
 # Getting started
 
 ## Create a git repo and get the starter code
-Use your laptop to create a new repo called `spis16-lab07-part1-Name-Name` using [Method 1](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab08-startercode.git 
+Use your laptop to create a new repo called `spis16-lab08-part1-Name-Name` using [Method 1](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab08-startercode.git 
 
 Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group.
 
