@@ -15,9 +15,10 @@ In this lab you will be introduced to the basics of electronics using a a credit
 
 # Getting started
 
-## Create a git repo
-Use your laptop to create a new repo called `spis16-lab07-part1-Name-Name`. 
-Note that you must keep your git repo updated with your latest code because your code will be erased from the Pi at the end of the lab to ensure that the hardware is ready for use by the next group.
+## Create a git repo and get the starter code
+Use your laptop to create a new repo called `spis16-lab07-part1-Name-Name` using [Method 1](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab08-startercode.git 
+
+Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group.
 
 ## Observe your Raspberry Pi
 Take a look at the Raspberry Pi on your workbench. You are looking at the insides of a computer. The Pi is not shy about exposing its true self. You would see a similar circuit if you cracked open the shiny shell of your laptop (which is probably not a great idea to quench your curiosity). As you stare down at your Pi, you see an all-encompassing circuit. Your gut feeling may be that it all looks very complex. Your premonitions are not misplaced. The circuit that you are looking at is not called the motherboard for nothing! 
@@ -45,17 +46,74 @@ We will focus on a few important components on the diagram:
 
 3. SD card slot: All the software that runs on the Pi, which includes the Operating System (more on the OS later) as well as your programs, will be stored on the SD card that goes into the SD card slot. The Pi without the SD card is all hardware.
 
-4. GPIO pins: These pins can be configured to send/receive signals through your python programs. You will control and sense the world around you through these pins!!
+4. GPIO pins: This stands for General Purpose Input / Output. You won’t be able to observe the GPIO pins on the Raspberry Pi on your workbench because they are hidden under the gray/black ribbon cable that connects them to the white breadboard. These pins can be configured to send/receive signals through your python programs. You will control and sense the world around you through these pins!!
 
 5.	Power Input: Using this input you can power up your Pi using a charger or a batteries. 
 
-In the setup provided to you, the Pi has been wired to work as a desktop computer!
-Next week we will operate it in a untethered fashion (as a robot) but for now observe the following four wired connections from the Pi to other peripherals:
+## Observe the connections from your Pi to other peripherals
 
-* The Pi is connected to a monitor via the HDMI port.
+In the setup provided to you, the Pi has been wired to work as a desktop computer! Actually its more than a desktop because it is setup to connect to an electronic circuit that you will soon create (something you can't do with standard desktops)
+Next week we will operate the Pi in a untethered fashion (as a mobile robot) but for now observe the following wired connections from the Pi to other peripherals:
+
+* The Pi has a connection to a monitor via the HDMI port.
 * The keyboard and mouse are connected to the in-built USB hub of your monitor. A single USB cable from the monitor connects the keyboard and mouse to the Pi.
 * The Pi is powered up using a charger that is plugged into the wall.
-* The GPIO pins on the Pi are routed to a breadboard via a ribbon cable and a breakout board that is plugged into the breadboard.
+* The GPIO pins on the Pi are routed to a breadboard via a black ribbon cable.
+
+Let's take a closer look at the breadboard and the GPIO breakout board that sits on it. You will need this information to complete the later exercises in this lab
+
+## The breadboard
+
+The RPi chip itself is very small, so we will be attaching an electronic component called a breadboard  -- which is designed to make it possible to experiment with circuits by extending the available space.  For electricity to flow you need connections.  Think of a breadboard as a way of giving you more space to make those connections.  The main feature of the breadboard is that it comes with a set of in-built electrical connections which significantly simplifies the wiring involved in complicated circuits. Let's try to understand the electrical connections on the breadboard using the figures below:
+
+<p align="center">
+![RPi-desktop](/lab/images/RPi/breadboard.png){:height="400px"} 
+</p>
+
+The figure on the left shows a picture of the breadboard as visible to you, while the one on the right shows in internal electrical connections when the back of the breadboard is uncovered. The rows are numbered 1 through 30 and the columns 'a' through 'j'. In the figure on the right observe how the conductive metal strips run across the rows.  This means that any two grids that are on columns 'a' through 'e' are at the same *potential* as long as they are also on the same row. Similarly, any two grids that are on columns 'f' through 'j' are at the same potential as long as they are also on the same row. However, the two halves of a row are electronically disconnected.  As you will see, this helps you out a lot! 
+
+Are each of the following grids internally connected on the above shown breadboard?
+
+* a1 and a2
+* a1 and b2
+* a1 and b1
+* c14 and f14
+* j1 and j2
+* a1 and e1
+
+
+Finally, the breadboard has two vertical lines running up and down on both sides.  The pins on each of these lines are electrically connected but the lines are electrically disconnected from each other. The convention is to connect a positive voltage to the line that has a '+' sign above it and connect the 'ground' to the line with the '-' sign above it.
+
+
+## The GPIO pin numbering conventions
+
+The Raspberry Pi 1, model B (which is the one we are using) has 26 GPIO pins that are laid out as two rows of 13 pins each, also depicted in the diagram below:
+
+<p align="center">
+![GPIO-numbering](/lab/images/RPi/GPIO-numbering.png){:height="400px"} 
+</p>
+
+The pins that are colored in green are available for any general purpose and can be referred to and configured in your python programs! There are two different conventions used to refer to these pins:
+
+1. Physical location: One way is to just refer to the pins based on their physical location. These numbers are indicated in the circles (representing the pins) in the above diagram. All pins on the left half have odd number locations while all pins on the right half have even numbered locations.
+
+2. BRCM (broadcom convention): You can also use the broadcomm convention where the numbering is not based on the physical location. For example the pin at physical location 12 is referred to as pin number 18 as per the BRCM convention.
+
+Either of the above conventions is okay to use in your programs as long as you define which scheme you are using before you start referring to the pins.
+
+Note that physical pins 1 and 17 provide 3.3V, while physical pins 2 and 4 provide 5V. Physical pins 6, 9, 14, 20 and 25 provide the ground signal which is also very important in your circuits. We will talk about pins 3, 5, 8 and 10 in later labs.
+
+The GPIO breakout board shown below makes all these pins available to you on a breadboard where you will be doing your electrical wiring.
+
+<p align="center">
+![GPIO-breakout](/lab/images/RPi/GPIO-breakout.png){:height="400px"} 
+</p>
+
+Notice that the labels on the breakout board use the BRCM naming convention. However, we have connected the breakout board in such a way that you can easily derive the physical pin number of any pin by looking at the row number that it is connected to on the breadboard. Answer the following questions based on your understanding of the breadboard and the GPIO numbering scheme:
+
+* What is the physical number for a pin on the left half of the breadboard on row number 'r'? 
+* What is the physical number for a pin on the right half of the breadboard on row number 'r'? 
+
 
 ## Getting to know your desktop environment
 
@@ -76,7 +134,8 @@ When you open LXTerminal notice the prompt says `pi@spispi-XX`. This means that 
 All the unix commands that you have learned so far can be used to navigate through the file system on your Pi. You can also use command line git just like how you would on the ieng6 machines!
 
 
-## Clone your git repo
+## Setup your programming environment
+
 In the home directory `/home/pi` clone the git repo that you created earlier in this lab. Navigate into your repo and open up idle by typing the following at the command line
 
 ` sudo idle &`
@@ -84,3 +143,104 @@ In the home directory `/home/pi` clone the git repo that you created earlier in 
 *A word on sudo*
 
 You might be wondering why we use the word sudo to open idle. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, “OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.”  This command to the operating system is “sudo”.  It stands for “super user do” or “substitute user do”.  In any case, it is a command to Raspbian to go ahead and run a command that you don’t really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We use the word `sudo` to open idle because we will be soon running programs in idle that use the Python GPIO library
+
+You are now ready to start working on your first exercise where you would create your own circuit and control it using the starter code given to you. 
+
+# Blinking LEDs
+
+In this exercise you will create a circuit consisting of an LED and a resistor connected to the Pi. You will then periodically blink the LED using the example program provided to you in the starter code. Let's begin by trying to understand the given code.
+
+## Understanding the code
+
+In idle open the file `01_blinking_led.py`
+
+The very first line is the shebang `#!/usr/bin/env python` which tells the unix shell that this is a python file and if it were executed from the command line it should be run with the python interpreter. So, you can run the program from the command line by simply typing `sudo ./01_blinking_led.py`. Since we are running the program in idle, this is irrelevant.
+
+The next two statements import the modules needed for this exercise:
+
+``` 
+import RPi.GPIO as GPIO
+import time
+
+```
+
+The `RPi.GPIO` module provides routines for configuring the GPIO pins on the Pi and for sending and receiving signals on these pins. Since the GPIO pins are digital we can only send high or low voltages. The `time` module provides routines that make use of the clock on the Pi. Using the time module you can make the Pi wait for sometime before executing the next python command in your program, for saying `time.sleep(0.5)`makes your program wait for half a second before moving on to the next line of code. 
+
+The main routine in the file consists of three function calls: `setup()`, `loop()` and `destroy()`. For now ignore the try ...except structure in the main and focus on the other functions.
+
+The `setup()` function takes care of the one time configurations related to using the GPIO pins. Recall the two different numbering schemes that we discussed in an earlier section. The very first line in the 'setup()' function specifies which numbering scheme we will be using. 
+
+
+```
+GPIO.setmode(GPIO.BOARD) # Uses the physical numbering scheme
+```
+
+
+```
+GPIO.setmode(GPIO.BRCM) # Uses the BRCM numbering scheme 
+```
+
+Based on the code, we are using the physical numbering scheme. Can you identify the location of pin number 11 on your breadboard? You will need to do this when wiring your circuit.
+
+
+The Python GPIO library allows configuring certain pins to be either input or output pins using the `setup(Pin, mode)` function, where Pin is the pin number and mode is either GPIO.OUT (for output) or GPIO.IN (for input). If we want our program to generate high or low voltages on a pin that potentially drives other electronic components (such as LEDs or servos), then configure the pin to be an OUTPUT pin. If we want to read the signal generated by sensors into our program, then configure the pin to be an INPUT pin. The code in setup() configures pin number 11 to be an output pin using the command `GPIO.setup(LedPin, GPIO.OUT)`. It also sets the initial state of that pin to be high via the command `GPIO.output(LedPin, GPIO.HIGH)`. GPIO.HIGH essentially evaluates to a True.
+
+Now look at the code in the 'loop()' function. You may notice that unlike any of the programs that you have written thus far the code in the 'loop()' function repeats forever because it is in a `while True` loop. Any ideas why that is?
+
+## Wiring the circuit 
+
+To create the circuit you will need the following components
+
+* One LED (any color)
+* Two wires
+* One 220 ohm resistor (the resistor with ring colors red, red, black, black, brown)
+Refer to the chart provided to you to decipher how these color codes represent the value 220 ohms
+
+The electrical connection for this circuit is represented using the following circuit diagram. Ask an instructor or mentor is you don't understand the diagram. Note that the longer leg of the LED is called the 'anode' and should be connected to a positive voltage (via a resistor), the shorter leg, called the 'cathode' should be connected to GPIO pin 11. When there is a positive voltage difference between the anode and the cathode, the LED is in forward biased and current flows through the circuit lighting up the LED, otherwise the LED is in the "off state". 
+
+Now, run the `01_blinking_led.py` program in idle. Hopefully you should have a blinking LED. If you were successful reason about why your program outputs a low voltage on GPIO pin 11 to turn on the LED and a high voltage to turn it off.
+
+Modify the program to double the frequency at which the LED blinks. Run it again to check if your program works.
+
+# Controlling an LED using a button
+
+Buttons are switches that are used to connect or disconnect circuits. In this exercise you will control an LED using a button. Your program should toggle the state of the LED everytime the button is pressed. So, if the LED was ON and the button is pressed, it should turn OFF. If the LED is OFF and the button is pressed, it should turn ON. 
+
+For the circuit you will need the following components:
+
+* A button
+* A LED
+* A 220 ohm resistor
+* Wires
+
+Start with wiring the circuit as per the circuit diagram below:
+
+Keep the LED circuit from the previous exercise. Just add another circuit that places a button between GPIO pin 15 and GND.
+
+Create a new file called `02_buttonLED.py` in your git repo.
+
+Import the RPi.GPIO and time modules as before.
+Configure pin 15 to be an input pin. To read the status of an input pin use the command:
+
+```
+button = GPIO.input(pin)       # read status of pin and assigns it to variable button
+```
+
+* What do you expect the value of `button` to be when the button in your circuit is pressed?
+
+* What should the value be when the button is released?
+
+First write code to make sure you can detect each of the above cases. Then add logic to toggle the state of the LED (from ON to OFF or OFF to ON) everytime the button is pressed and released.
+
+# Driving a 7-segment display
+A seven segment display packages seven LEDs, each LED is called a segment, which when energized forms part of a numeral. An additional eight LED is sometimes used within the same package to indicate a decimal point. By correctly energizing the individual segments of the 7-segment display you can display numbers 0 through 8.
+
+The figure below shows the common-cathode 7-segment display:
+
+Each of the LED segments has one of its connection pins out of the package. These connection pins are labeled 'a' through 'g' representing each of the individual segments. The other pin for each LED is connected together to a common pin. In this experiment we will use a common cathod 7-segment display, which means that the all the cathodes of the LEDs are connected together and this common connection should be in turn connected to the ground in our circuit. An individual segment (a-g) us turned on by applying a high voltage to the corresponging pin via a current limiting resistor. This is known as forward biasing. By forward biasing the appropriate pins of the LED segments, some will brighten up while others will remain dim, thereby displaying a numeral value of choice.
+
+
+
+
+
+
