@@ -111,8 +111,8 @@ The GPIO breakout board shown below makes all these pins available to you on a b
 
 Notice that the labels on the breakout board use the BRCM naming convention. However, we have connected the breakout board in such a way that you can easily derive the physical pin number of any pin by looking at the row number that it is connected to on the breadboard. Answer the following questions based on your understanding of the breadboard and the GPIO numbering scheme:
 
-* What is the physical number for a pin on the left half of the breadboard on row number 'r'? 
-* What is the physical number for a pin on the right half of the breadboard on row number 'r'? 
+* What is the physical number for a pin on the left half of the breadboard on the nth row number, for any 'n'? 
+* What is the physical number for a pin on the right half of the breadboard on the nth row number, for any 'n'? 
 
 
 ## Getting to know your desktop environment
@@ -136,7 +136,7 @@ All the unix commands that you have learned so far can be used to navigate throu
 
 ## Setup your programming environment
 
-In the home directory `/home/pi` clone the git repo that you created earlier in this lab. Navigate into your repo and open up idle by typing the following at the command line
+In the home directory `/home/pi` clone the git repo that you created earlier in this lab. Navigate to the directory of your repo and open up idle by typing the following command
 
 ` sudo idle &`
 
@@ -196,24 +196,50 @@ To create the circuit you will need the following components
 * One 220 ohm resistor (the resistor with ring colors red, red, black, black, brown)
 Refer to the chart provided to you to decipher how these color codes represent the value 220 ohms
 
-The electrical connection for this circuit is represented using the following circuit diagram. Ask an instructor or mentor is you don't understand the diagram. Note that the longer leg of the LED is called the 'anode' and should be connected to a positive voltage (via a resistor), the shorter leg, called the 'cathode' should be connected to GPIO pin 11. When there is a positive voltage difference between the anode and the cathode, the LED is in forward biased and current flows through the circuit lighting up the LED, otherwise the LED is in the "off state". 
+The picture of a LED and the symbol used for it in circuits is shown below:
 
-Now, run the `01_blinking_led.py` program in idle. Hopefully you should have a blinking LED. If you were successful reason about why your program outputs a low voltage on GPIO pin 11 to turn on the LED and a high voltage to turn it off.
+<p align="center">
+![RPi-desktop](/lab/images/RPi/LED.jpg){:height="200px"} 
+</p>
 
-Modify the program to double the frequency at which the LED blinks. Run it again to check if your program works.
+ The longer leg of the LED is called the 'anode' and the shorter leg is called the 'cathode'. When there is a positive voltage difference between the anode and the cathode, the LED is in forward biased or "on state" and current flows through the circuit lighting it up, otherwise the LED is in the "off state". 
+
+Wire up the circuit shown by the following diagram. We will use the physical pin numbering in all the subsequent diagrams. 
+
+<p align="center">
+![RPi-desktop](/lab/images/RPi/led_circuit.png){:height="100px"} 
+</p>
+
+Ask an instructor or mentor is you don't understand the diagram.
+
+Now, run the `01_blinking_led.py` program in idle. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is probably in your wiring. If you were successful reason about why your program outputs a low voltage on pin 11 to turn the LED on and a high voltage to turn it off.
+
+Modify the program to double the frequency at which the LED blinks. Run it to check your code.
 
 # Controlling an LED using a button
 
-Buttons are switches that are used to connect or disconnect circuits. In this exercise you will control an LED using a button. Your program should toggle the state of the LED everytime the button is pressed. So, if the LED was ON and the button is pressed, it should turn OFF. If the LED is OFF and the button is pressed, it should turn ON. 
+Buttons are switches that are used to connect or disconnect circuits. In the figure below, pins pointed out by the arrows of the same color are internally connected. When the button is pressed, the pins pointed by the blue arrow will connect to the pins pointed by the red arrow.
+
+
+<p align="center">
+![RPi-desktop](/lab/images/RPi/button.png){:height="100px"} 
+</p>
+
+In this exercise you will control an LED using a button. Your program should toggle the state of the LED everytime the button is pressed. So, if the LED is ON and the button is pressed, it should turn OFF. If the LED is OFF and the button is pressed, it should turn ON. 
 
 For the circuit you will need the following components:
 
 * A button
-* A LED
+* An LED (any color)
 * A 220 ohm resistor
 * Wires
 
 Start with wiring the circuit as per the circuit diagram below:
+
+<p align="center">
+![RPi-desktop](/lab/images/RPi/button_circuit.png){:height="200px"} 
+</p>
+
 
 Keep the LED circuit from the previous exercise. Just add another circuit that places a button between GPIO pin 15 and GND.
 
@@ -242,16 +268,20 @@ The figure below shows the common-cathode 7-segment display:
 </p>
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/7seg-pinouts.png){:height="200px"} 
+![RPi-desktop](/lab/images/RPi/7seg-pinouts.gif){:height="200px"} 
 </p>
 
-Each of the LED segments has one of its connection pins out of the package. These connection pins are labeled 'a' through 'g' representing each of the individual segments. The other pin for each LED is connected together to a common pin. In this experiment we will use a common cathod 7-segment display, which means that the all the cathodes of the LEDs are connected together and this common connection should be in turn connected to the ground in our circuit. An individual segment (a-g) us turned on by applying a high voltage to the corresponging pin via a current limiting resistor. This is known as forward biasing. By forward biasing the appropriate pins of the LED segments, some will brighten up while others will remain dim, thereby displaying a numeral value of choice.
+Each of the LED segments has one of its connection pins out of the package. These connection pins are labeled 'a' through 'g' representing each of the individual segments. The other pin for each LED is connected together to a common pin. In this experiment we will use a common cathod 7-segment display, which means that the all the cathodes of the LEDs are connected together to the "common pins" that are marked as zero volts in the above diagram. Each individual segment (a-g) is turned on by applying a high voltage to the corresponging pin via a current limiting resistor (forward biasing that segment). By forward biasing the appropriate pins of the LED segments, you can display any numeral value in decimal from 0 to 8.
 
-* Draw a circuit that connects the 7 segment display to the RPi. Note that the center pins should be connected to the ground via a 220 ohm resistor.
+* Draw a circuit that connects the 7 segment display to the RPi. Note that the center pins should be connected to the ground via a 220 ohm resistor. The other pins can be directed connected to the GPIO pins on the Pi.
 * Once you have a drawing of your circuit get it verified by an instructor or mentor.
-* Then wire your circuit
-* Create a file called `03_7seg.py` in your git repo and write a program that displays the numerals 0 - 8 in order then cycles back to 0. 
-* As a challenge combine your current circuit with the LED and button circuit from the previous exercise and modify your program to display the number of button presses on the 7 segment display. You can only count till 8 and have to cycle back to zero.
+* Then wire your circuit.
+* Create a file called `03_7seg.py` in your git repo and write a program that displays the numerals 0 - 8 in sequence then cycles back to 0. Each numeral should be displayed for 1 second.
+* Now combine your current circuit with the LED and button circuit from the previous exercise and modify your program to display the number of button presses so far on the 7 segment display. You can only count till 8 and have to reset back to zero once the button is pressed more than 8 times.
+
+
+Congratuations on finishing lab 8. You now have some real hands on experience with building and controlling circuits via computers and we will build on this knowledge as we venture deeper into hardware and robotics!
+
 
 
 
