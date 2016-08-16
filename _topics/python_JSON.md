@@ -247,3 +247,5 @@ r/UCSD/comments/4cgr1w/new_student_qa_2016/', u'author_flair_text': u'History (B
 So, the solution is NOT to give up!  But rather, to keep going in the direction we are going, documenting our progress
 with a diagram.  Eventually, we *will* get to a structure that makes sense, that we can do some computation over, that, is some thing that represents a single reddit post, or a single comment on a single reddit post, etc.
 
+Let's update our diagram with what we know about the next level:
+
