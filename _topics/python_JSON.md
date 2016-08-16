@@ -114,3 +114,82 @@ Now, `rdata` is a Python dictionary that contains the data from the UCSD subredd
 
 This opens up many possibilities for processing the data using Python code.
 
+But what?
+
+One of the problems with this `rdata` dictionary is that it is so big.   If we try to see all of it, it goes
+on for pages and page:
+
+```python
+>>> rdata
+{u'kind': u'Listing', u'data': {u'modhash': u'', u'children': [{u'kind': u't3', u'data': {u'domain': u'self.UCSD', u'banned_by': None, u'media_embed': {}, u'subreddit': u'UCSD', u'selftext_html': u'&
+```
+<em>... dozens of lines omitted ... </em>
+```
+se, u'created': 1471193347.0, u'url': u'https://www.reddit.com/r/UCSD/comments/4xnf96/fraternities_or_dance_groups/', u'author_flair_text': None, u'quarantine': False, u'title': u'Fraternities or dance groups?', u'created_utc': 1471164547.0, u'ups': 3, u'num_comments': 4, u'visited': False, u'num_reports': None, u'distinguished': None}}], u'after': u't3_4xnf96', u'before': None}}
+>>>
+```
+
+So, what can we do?   One possibility is to just find out: what keys are at the top level of this dictionary?
+
+We can do that by typing `rdata.keys()`.   (Note that the `u` in front of `kind` and `data` just indicates
+that it is a unicode string instead of a regular string.)
+
+```python
+>>> rdata.keys()
+[u'kind', u'data']
+>>> 
+```
+
+So, we know that, at the top level, the dictionary `rdict` contains two key value pairs.  That is, 
+it is of the form `rdata = { u'kind': `<em>something</em>`, u'data': `<em>something-else</em>` }`
+
+So, we can try to next figure out, what is the <em>something</em> and the <em>something-else</em>.
+
+The first <em>something</em> is going to accessed by `rdata[u'kind']`:
+
+```python
+>>> rdata[u'kind']
+u'Listing'
+>>> 
+```
+
+We see that it is a `Listing'.   So, let's figure out what the <em>something-else</em> is.  We type
+`rdata[u'data']` and we get another super long listing:
+
+```python
+>>> rdata[u'data']
+```
+<em>way too much output here...</em>
+```
+>>> 
+```
+
+So, instead of listing the whole thing, we
+can try to ask another question: what <em>type</em> thing is it?
+
+```python
+>>> type(rdata[u'data'])
+<type 'dict'>
+>>> 
+```
+
+Ah, that is better.  We see that it is a dictionary object. So we can repeat the process we used before with
+a "too big" dictionary, that is, asking what its keys are:
+
+```python
+>>> rdata[u'data'].keys()
+[u'modhash', u'children', u'after', u'before']
+>>>
+```
+
+What we get back is a python list of the keys for `rdata[u'data']`.    We see that there are four of them:
+
+1. `u'modhash'`
+1. `u'children'` 
+1. `u'after'` 
+1. `u'before'`
+
+We can represent what we've learned about `rdata` so far by drawing a diagram.  It looks like this:
+
+
+
