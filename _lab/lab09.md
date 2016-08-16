@@ -8,3 +8,16 @@ due: 2016-08-22 16:45:00.00-7
 ---
 
 # Working With Data
+
+In this lab you will 
+
+* TODO: Fill this in
+
+
+# Step 1: Create a lab09 repo with the starter code.
+
+Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab09-startercode.git
+
+
+
+
