@@ -16,7 +16,8 @@ In this lab you will be introduced to the basics of electronics using a a credit
 # Getting started
 
 ## Create a git repo and get the starter code
-Use your laptop to create a new repo called `spis16-lab08-part1-Name-Name` using [Method 1](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab08-startercode.git 
+Use your laptop to create a new repo called `spis16-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab08-startercode.git 
+You may also also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
 
 Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group.
 
@@ -136,7 +137,23 @@ All the unix commands that you have learned so far can be used to navigate throu
 
 ## Setup your programming environment
 
-In the home directory `/home/pi` clone the git repo that you created earlier in this lab. Navigate to the directory of your repo and open up idle by typing the following command
+* Configure your git credentials on the Pi. In the home directory `/home/pi` type the following commands replacing my name and email credentials with yours.
+``` git config --global user.name "Diba Mirza"
+    git config --global user.email dimirza@eng.ucsd.edu
+
+```
+
+* Clone your git repo over https into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop (not the Pi) and navigate to your repo on github which should be called `spis16-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The https address should be something like `https://github.com/ucsd-cse-spis-2016/spis16-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
+
+Make sure you have the starter code which are the files `01_blinking_led.py` and `02_buttonLED.py` in your repo. If you did not import the starter code when creating the repo, you can copy it over from the directory /home/pi/lab08-startercode/  on the Pi
+To do this type the following command replacing the second argument by the name of your repo
+
+```
+cp ~/lab08-startercode/*.py ~/spis16-lab08-Name-Name/
+```
+
+
+On the Pi's terminal navigate to the your local git repo (~/spis16-lab08-Name-Name/ and NOT the lab08-startercode directory) and open up idle by typing the following command
 
 ` sudo idle &`
 
@@ -146,17 +163,18 @@ You might be wondering why we use the word sudo to open idle. Unix / Raspbian ha
 
 You are now ready to start working on your first exercise where you would create your own circuit and control it using the starter code given to you. 
 
+
+
 # Blinking LEDs
 
-In this exercise you will create a circuit consisting of an LED and a resistor connected to the Pi. You will then periodically blink the LED using the example program provided to you in the starter code. Let's begin by trying to understand the given code.
+In this exercise you will create a circuit consisting of an LED and a resistor connected to the Pi. You will then periodically blink the LED using the example program provided to you in the starter code. 
 
 ## Understanding the code
 
-In idle open the file `01_blinking_led.py`
+In idle open the file `01_blinking_led.py`. Let's begin by trying to understand the given code.
 
-The very first line is the shebang `#!/usr/bin/env python` which tells the unix shell that this is a python file and if it were executed from the command line it should be run with the python interpreter. So, you can run the program from the command line by simply typing `sudo ./01_blinking_led.py`. Since we are running the program in idle, this is irrelevant.
 
-The next two statements import the modules needed for this exercise:
+The first two statements import the modules needed for this exercise:
 
 ``` 
 import RPi.GPIO as GPIO
@@ -164,26 +182,36 @@ import time
 
 ```
 
-The `RPi.GPIO` module provides routines for configuring the GPIO pins on the Pi and for sending and receiving signals on these pins. Since the GPIO pins are digital we can only send high or low voltages. The `time` module provides routines that make use of the clock on the Pi. Using the time module you can make the Pi wait for sometime before executing the next python command in your program, for saying `time.sleep(0.5)`makes your program wait for half a second before moving on to the next line of code. 
+The `RPi.GPIO` module provides routines for configuring the GPIO pins on the Pi and for sending and receiving signals on these pins. Since the GPIO pins are digital we can only send high or low voltages. 
+
+The `time` module provides routines that make use of the clock on the Pi. Using the time module you can make the Pi wait for sometime before executing the next python command in your program, for saying `time.sleep(0.5)`makes your program wait for half a second before moving on to the next line of code. 
 
 The main routine in the file consists of three function calls: `setup()`, `loop()` and `destroy()`. For now ignore the try ...except structure in the main and focus on the other functions.
 
-The `setup()` function takes care of the one time configurations related to using the GPIO pins. Recall the two different numbering schemes that we discussed in an earlier section. The very first line in the 'setup()' function specifies which numbering scheme we will be using. 
+The `setup()` function takes care of the one time configurations related to using the GPIO pins. The Python GPIO library allows configuring certain pins to be either input or output pins using the `setup(Pin, mode)` function, where Pin is the pin number and mode is either GPIO.OUT (for output) or GPIO.IN (for input). If we want our program to generate high or low voltages on a pin that potentially drives other electronic components (such as LEDs or servos), then configure the pin to be an OUTPUT pin. If we want to read the signal generated by sensors into our program, then configure the pin to be an INPUT pin. 
 
 
-```
-GPIO.setmode(GPIO.BOARD) # Uses the physical numbering scheme
-```
-
+ The very first line in the 'setup()' function specifies that we are using the physical numbering scheme. 
 
 ```
-GPIO.setmode(GPIO.BRCM) # Uses the BRCM numbering scheme 
+GPIO.setmode(GPIO.BOARD) # Use the physical numbering scheme
 ```
 
-Based on the code, we are using the physical numbering scheme. Can you identify the location of pin number 11 on your breadboard? You will need to do this when wiring your circuit.
+If we chose to use the BRCM scheme, that line should be replaced by the following:
+```
+GPIO.setmode(GPIO.BRCM) # Use the BRCM numbering scheme 
+```
+
+For the remainder of the lab we will use the physical numbering scheme. Before proceeding further identify GPIO pin number 11 on your breadboard. You will need this for wiring your circuit.
 
 
-The Python GPIO library allows configuring certain pins to be either input or output pins using the `setup(Pin, mode)` function, where Pin is the pin number and mode is either GPIO.OUT (for output) or GPIO.IN (for input). If we want our program to generate high or low voltages on a pin that potentially drives other electronic components (such as LEDs or servos), then configure the pin to be an OUTPUT pin. If we want to read the signal generated by sensors into our program, then configure the pin to be an INPUT pin. The code in setup() configures pin number 11 to be an output pin using the command `GPIO.setup(LedPin, GPIO.OUT)`. It also sets the initial state of that pin to be high via the command `GPIO.output(LedPin, GPIO.HIGH)`. GPIO.HIGH essentially evaluates to a True.
+The code in setup() configures pin number 11 to be an output pin using the command `GPIO.setup(LedPin, GPIO.OUT)`. It also sets the initial state of that pin to be high via the command `GPIO.output(LedPin, GPIO.HIGH)`. GPIO.HIGH essentially evaluates to a True.
+
+To summarize as part of the setup you must do two important GPIO configurations 
+
+* Specify the numbering convention (either GPIO.BOARD or GPIO.BRCM). To do this use the function GPIO.setmode(mode), where mode may be GPIO.BOARD or GPIO.BRCM
+* Set up the GPIO pins that you are using in your circuits as either input OR output pins depending on your usage of those pins. To configure any pin as an output pin you must say: GPIO.setup(mypin, GPIO.OUT). To configure the same pin as an input pin you must say: GPIO.setup(mypin, GPIO.OUT).
+
 
 Now look at the code in the 'loop()' function. You may notice that unlike any of the programs that you have written thus far the code in the 'loop()' function repeats forever because it is in a `while True` loop. Any ideas why that is?
 
@@ -212,7 +240,7 @@ Wire up the circuit shown by the following diagram. We will use the physical pin
 
 Ask an instructor or mentor is you don't understand the diagram.
 
-Now, run the `01_blinking_led.py` program in idle. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is probably in your wiring. If you were successful reason about why your program outputs a low voltage on pin 11 to turn the LED on and a high voltage to turn it off.
+Now, run the `01_blinking_led.py` program that is in your repo in idle. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is most likely with your wiring. If you were successful reason about the correctness of the program. For example why does your program output a low voltage on pin 11 to turn the LED on and a high voltage to turn it off.
 
 Modify the program to double the frequency at which the LED blinks. Run it to check your code.
 
@@ -243,20 +271,21 @@ Start with wiring the circuit as per the circuit diagram below:
 
 Keep the LED circuit from the previous exercise. Just add another circuit that places a button between GPIO pin 15 and GND.
 
-Create a new file called `02_buttonLED.py` in your git repo.
+Now open the program `02_buttonLED.py` in idle. This program reports the current polls pin 15 (the pin connected to the button) and reports the status of that pin: 1 indicates true or high voltage, 0 indicates False or a low voltage.
 
-Import the RPi.GPIO and time modules as before.
-Configure pin 15 to be an input pin. To read the status of an input pin use the command:
 
-```
-button = GPIO.input(pin)       # read status of pin and assigns it to variable button
-```
+Now answer the following questions:
 
+* Which line of code configures pin 15 to be an input pin. 
+* Which line of code gets the status of pin 15.
+* What is the purpose of the variable BtnPin?
 * What do you expect the value of `button` to be when the button in your circuit is pressed?
+* What should the value be when the button is not pressed?
 
-* What should the value be when the button is released?
 
-First write code to make sure you can detect each of the above cases. Then add logic to toggle the state of the LED (from ON to OFF or OFF to ON) everytime the button is pressed and released.
+Run the code. What do you get? Come up with a simple test to check the correctness of the program. Then modify the program to print whether the button is pressed or not pessed. You program should print "button is pressed" OR "button is not pressed" depending on the state of the button.
+
+Finally, add logic to toggle the state of the LED (from ON to OFF or OFF to ON) everytime the button is pressed and released.
 
 # Driving a 7-segment display
 A seven segment display packages seven LEDs, each LED is called a segment, which when energized forms part of a numeral. An additional eight LED is sometimes used within the same package to indicate a decimal point. By correctly energizing the individual segments of the 7-segment display you can display numbers 0 through 8.
