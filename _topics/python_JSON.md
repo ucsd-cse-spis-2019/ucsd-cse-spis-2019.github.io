@@ -191,5 +191,6 @@ What we get back is a python list of the keys for `rdata[u'data']`.    We see th
 
 We can represent what we've learned about `rdata` so far by drawing a diagram.  It looks like this:
 
+<img src="https://docs.google.com/drawings/d/1zRIQIeaTI3-AZskqwvYvtwv_3Q_EPQnGtZqi-HdTtBE/pub?w=966&amp;h=422">
 
 
