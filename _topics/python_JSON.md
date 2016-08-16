@@ -254,7 +254,7 @@ with a diagram.  Eventually, we *will* get to a structure that makes sense, that
 
 Let's update our diagram with what we know about the next level:
 
-https://docs.google.com/drawings/d/1UffljEjItYnKseSb3UE_SVZyFalcrid1-AxjqsrEPmg/pub?w=961&h=441
+<img src="https://docs.google.com/drawings/d/1UffljEjItYnKseSb3UE_SVZyFalcrid1-AxjqsrEPmg/pub?w=961&amp;h=441">
 
 Now, let's dive into the list of 27 things that is under `rdata[u'data'][u'children']`
 
@@ -296,4 +296,35 @@ u't3'
 
 It is at this point that I will come clean, and tell you that I could have saved you a lot of time by just pointing you to the documentation for the Reddit API, where all of this is explained, including what the value u`t3` in this case represents.  But what fun would that have been?  You've learned an awful lot about how to investigate an API by simply looking directly at the data you are getting and trying to make sense of it.  And that is a useful skill!
 
+* The Reddit API documentation: [https://www.reddit.com/dev/api/](https://www.reddit.com/dev/api/)
 
+On that page, among other things, we learn that `t3` is the type for links.   Let's take a look at the u'data' part of this
+`[0]` element of our children here:
+
+```python
+>>> rdata[u'data'][u'children'][0][u'data'].keys()
+[u'domain', u'banned_by', u'media_embed', u'subreddit', u'selftext_html', u'selftext', u'likes', 
+ u'suggested_sort', u'user_reports', u'secure_media', u'link_flair_text', u'id', u'from_kind', 
+ u'gilded', u'archived', u'clicked', u'report_reasons', u'author', u'media', u'name', u'score',
+ u'approved_by', u'over_18', u'hidden', u'thumbnail', u'subreddit_id', u'edited', u'link_flair_css_class', u'author_flair_css_class', u'downs', u'mod_reports', u'secure_media_embed', u'saved', 
+ u'removal_reason', u'stickied', u'from', u'is_self', u'from_id', u'permalink', u'locked', 
+ u'hide_score', u'created', u'url', u'author_flair_text', u'quarantine', u'title', u'created_utc', 
+ u'ups', u'num_comments', u'visited', u'num_reports', u'distinguished']
+>>> 
+```
+
+This finally looks like something that might be useful.  In fact, this represents a single Reddit Post.   A few of the things we might be interested in right away are the values with these keys:
+* `u'title'`
+* `u'url'`
+
+Let's see what we get for those:
+
+```python
+>>> rdata[u'data'][u'children'][0][u'data']['title']
+u'New Student Q&amp;A 2016'
+>>> rdata[u'data'][u'children'][0][u'data']['url']
+u'https://www.reddit.com/r/UCSD/comments/4cgr1w/new_student_qa_2016/'
+>>>
+```
+
+The `&amp;` is HTML for the `&` symbol.  So when this appears on a web page, it will simply appear as `New Student Q&A 2016`.    
