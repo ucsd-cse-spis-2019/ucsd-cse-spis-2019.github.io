@@ -254,3 +254,46 @@ with a diagram.  Eventually, we *will* get to a structure that makes sense, that
 
 Let's update our diagram with what we know about the next level:
 
+https://docs.google.com/drawings/d/1UffljEjItYnKseSb3UE_SVZyFalcrid1-AxjqsrEPmg/pub?w=961&h=441
+
+Now, let's dive into the list of 27 things that is under `rdata[u'data'][u'children']`
+
+```python
+>>> type(rdata[u'data'][u'children'])
+<type 'list'>
+>>> len(rdata[u'data'][u'children'])
+27
+>>> 
+```
+
+We apply our technique, recursively, to the first element of this list.  That is, we first examine what the keys are,
+and what the types of each of the values are.   
+
+```
+>>> rdata[u'data'][u'children'][0].keys()
+[u'kind', u'data']
+>>> 
+```
+
+And, when we say "recursively", we truly aren't kidding!  It appears that the first element of this list has the same keys
+as the entire result we got back for this page.    Let's check the types&mdash;it won't be surprising if they are the same as what we saw before for these keys:
+
+```python
+>>> type(rdata[u'data'][u'children'][0][u'kind'])
+<type 'unicode'>
+>>> type(rdata[u'data'][u'children'][0][u'data'])
+<type 'dict'>
+>>> 
+```
+
+So, since the first one is of type `unicode`, let's just see what it is:
+
+```python
+>>> rdata[u'data'][u'children'][0][u'kind']
+u't3'
+>>> 
+```
+
+It is at this point that I will come clean, and tell you that I could have saved you a lot of time by just pointing you to the documentation for the Reddit API, where all of this is explained, including what the value u`t3` in this case represents.  But what fun would that have been?  You've learned an awful lot about how to investigate an API by simply looking directly at the data you are getting and trying to make sense of it.  And that is a useful skill!
+
+
