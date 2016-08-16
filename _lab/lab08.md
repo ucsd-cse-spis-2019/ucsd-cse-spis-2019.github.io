@@ -271,13 +271,13 @@ The figure below shows the common-cathode 7-segment display:
 ![RPi-desktop](/lab/images/RPi/7seg-pinouts.gif){:height="200px"} 
 </p>
 
-Each of the LED segments has one of its connection pins out of the package. These connection pins are labeled 'a' through 'g' representing each of the individual segments. The other pin for each LED is connected together to a common pin. In this experiment we will use a common cathod 7-segment display, which means that the all the cathodes of the LEDs are connected together to the "common pins" that are marked as zero volts in the above diagram. Each individual segment (a-g) is turned on by applying a high voltage to the corresponging pin via a current limiting resistor (forward biasing that segment). By forward biasing the appropriate pins of the LED segments, you can display any numeral value in decimal from 0 to 8.
+Each of the LED segments has one of its connection pins out of the package. These connection pins are labeled 'a' through 'g' representing each of the individual segments. The other pin for each LED is connected together to a common pin. In this experiment we will use a common cathod 7-segment display, which means that the all the cathodes of the LEDs are connected together to the "common pins" that are marked as zero volts in the above diagram. Each individual segment (a-g) is turned on by applying a high voltage to the corresponging pin via a current limiting resistor (forward biasing that segment). By forward biasing the appropriate pins of the LED segments, you can display any numeral value in decimal from 0 to 9.
 
 * Draw a circuit that connects the 7 segment display to the RPi. Note that the center pins should be connected to the ground via a 220 ohm resistor. The other pins can be directed connected to the GPIO pins on the Pi.
 * Once you have a drawing of your circuit get it verified by an instructor or mentor.
 * Then wire your circuit.
-* Create a file called `03_7seg.py` in your git repo and write a program that displays the numerals 0 - 8 in sequence then cycles back to 0. Each numeral should be displayed for 1 second.
-* Now combine your current circuit with the LED and button circuit from the previous exercise and modify your program to display the number of button presses so far on the 7 segment display. You can only count till 8 and have to reset back to zero once the button is pressed more than 8 times.
+* Create a file called `03_7seg.py` in your git repo and write a program that displays the numerals 0 - 9 in sequence then cycles back to 0. Each numeral should be displayed for 1 second.
+* Now combine your current circuit with the LED and button circuit from the previous exercise and modify your program to display the number of button presses so far on the 7 segment display. You can only count till 8 and have to reset back to zero once the button is pressed more than 9 times.
 
 
 Congratulations on finishing lab 8!! You now have successfully built and controlled circuits via programs. We will build on this knowledge as we venture deeper into hardware and robotics!
