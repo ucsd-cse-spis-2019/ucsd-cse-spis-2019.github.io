@@ -2,7 +2,7 @@
 layout: lab
 num: lab08
 ready: false
-desc: "Basics of electronics with Rapsberry Pi, by Diba"
+desc: "Basics of electronics with Raspberry Pi, by Diba"
 assigned: 2016-08-17 09:30:00.00-7
 due: 2016-08-19 15:45:00.00-7
 ---
@@ -50,11 +50,12 @@ We will focus on a few important components on the diagram:
 5.	Power Input: Using this input you can power up your Pi using a charger or a batteries. 
 
 In the setup provided to you, the Pi has been wired to work as a desktop computer!
-Next week we will operate it in a untethered fashion (as a robot) but for now observe the following three wired connections from the Pi to other peripherals:
+Next week we will operate it in a untethered fashion (as a robot) but for now observe the following four wired connections from the Pi to other peripherals:
 
 * The Pi is connected to a monitor via the HDMI port.
 * The keyboard and mouse are connected to the in-built USB hub of your monitor. A single USB cable from the monitor connects the keyboard and mouse to the Pi.
 * The Pi is powered up using a charger that is plugged into the wall.
+* The GPIO pins on the Pi are routed to a breadboard via a ribbon cable and a breakout board that is plugged into the breadboard.
 
 ## Getting to know your desktop environment
 
@@ -75,6 +76,11 @@ When you open LXTerminal notice the prompt says `pi@spispi-XX`. This means that 
 All the unix commands that you have learned so far can be used to navigate through the file system on your Pi. You can also use command line git just like how you would on the ieng6 machines!
 
 
+## Clone your git repo
+In the home directory `/home/pi` clone the git repo that you created earlier in this lab. Navigate into your repo and open up idle by typing the following at the command line
 
+` sudo idle &`
 
+*A word on sudo*
 
+You might be wondering why we use the word sudo to open idle. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, “OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.”  This command to the operating system is “sudo”.  It stands for “super user do” or “substitute user do”.  In any case, it is a command to Raspbian to go ahead and run a command that you don’t really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We use the word `sudo` to open idle because we will be soon running programs in idle that use the Python GPIO library
