@@ -237,7 +237,22 @@ A seven segment display packages seven LEDs, each LED is called a segment, which
 
 The figure below shows the common-cathode 7-segment display:
 
+<p align="center">
+![RPi-desktop](/lab/images/RPi/7seg.jpg){:height="200px"} 
+</p>
+
+<p align="center">
+![RPi-desktop](/lab/images/RPi/7seg-pinouts.png){:height="200px"} 
+</p>
+
 Each of the LED segments has one of its connection pins out of the package. These connection pins are labeled 'a' through 'g' representing each of the individual segments. The other pin for each LED is connected together to a common pin. In this experiment we will use a common cathod 7-segment display, which means that the all the cathodes of the LEDs are connected together and this common connection should be in turn connected to the ground in our circuit. An individual segment (a-g) us turned on by applying a high voltage to the corresponging pin via a current limiting resistor. This is known as forward biasing. By forward biasing the appropriate pins of the LED segments, some will brighten up while others will remain dim, thereby displaying a numeral value of choice.
+
+* Draw a circuit that connects the 7 segment display to the RPi. Note that the center pins should be connected to the ground via a 220 ohm resistor.
+* Once you have a drawing of your circuit get it verified by an instructor or mentor.
+* Then wire your circuit
+* Create a file called `03_7seg.py` in your git repo and write a program that displays the numerals 0 - 8 in order then cycles back to 0. 
+* As a challenge combine your current circuit with the LED and button circuit from the previous exercise and modify your program to display the number of button presses on the 7 segment display. You can only count till 8 and have to cycle back to zero.
+
 
 
 
