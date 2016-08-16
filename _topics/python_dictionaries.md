@@ -3,6 +3,8 @@ topic: "Python: Dictionaries"
 desc: "Mappings from keys to values"
 ---
 
+# Python Dictionaries
+
 In Python, we can use a *dictionary* to associate keys with values.
 
 This code creates a simple dictionary called `en_to_es` (short for "English to Español), that
