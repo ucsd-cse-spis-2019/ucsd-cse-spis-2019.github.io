@@ -52,3 +52,4 @@ For a list, I can use this code to lookup some key in the dictionary, and add so
   someDict[key].append(newThing)
 ```
 
+For more information, see the [Python documentation for `defaultdict`](https://docs.python.org/2/library/collections.html#defaultdict-examples)
