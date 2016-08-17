@@ -9,17 +9,12 @@ layout: default
 ---
 
 
-
 | [APS 1](/hwk/aps1/) | [APS 2](/hwk/aps2/) | [APS 3](/hwk/aps3/)   | [APS 4](/hwk/aps4/) | 
 |---------------------|---------------------|-----------------------|---------------------|
-| Divide and Conquer  | Greedy Algorithms   | Iterative Improvement | Backtracking        |
+| Divide and Conquer  | Greedy Algorithms   | Backtracking          |  Iterative Improvement |
 
 
-Please create an APS repo with a Week3.md file, following these instructions:
-
-[Github: Creating Repos for APS writeups](/topics/github_aps_writeups/)
-
-Then, in your Week3.md file, please write a solution to these problems:
+Please add a Week3.md to your existing APS repo.   In that repo, write a solution to these problems:
 
 [APS Iterative Improvement problems (pdf)](aps_ii_problems.pdf){: data-ajax="false" }
 
