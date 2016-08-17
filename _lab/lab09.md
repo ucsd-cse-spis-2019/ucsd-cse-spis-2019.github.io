@@ -132,8 +132,79 @@ The function definition `reviewSummary` provides a way to print out three partic
 * `user/profileName`
 
 And, it customizes the label that appears next to each of those so that we can make more sense of the data
-we are looking at.   However, it is still a bit messy.  To make it neater, we can decide that we want the data
-to show up in some nicely aligned columns.
+we are looking at.   
+
+```
+Reading Data...
+review                                          beer name             reviewer
+beer name: Amstel Malt overall: 3.0 reviewer: Brabander
+beer name: Amstel Malt overall: 3.5 reviewer: kingcrowing
+beer name: Harboe Den Glada Danskens Lättöl overall: 2.0 reviewer: gnoff
+beer name: Harboe Den Glada Danskens Lättöl overall: 2.0 reviewer: bark
+beer name: Bernard S &#269;istou Hlavou overall: 2.0 reviewer: philipquarles
+beer name: Juleøl overall: 4.5 reviewer: jreitman
+beer name: Mørkt Hvidtøl overall: 3.5 reviewer: bark
+beer name: Buckler overall: 3.0 reviewer: drabmuh
+beer name: Buckler overall: 4.5 reviewer: McStagger
+beer name: Buckler overall: 3.0 reviewer: jifigz
+done
+```
+
+However, it is still a bit messy.  To make it neater, we can decide that we want the data
+to show up in some nicely aligned columns.  Here is some code that prints a few fields from the first ten review in some nice columns:
+
+```python
+def niceReviewSummary(review):
+    return str(review['review/overall']).rjust(5) + \
+           review['beer/name'].rjust(50) + \
+           review['user/profileName'].rjust(20)
 
 
+if __name__ == "__main__":
 
+  print "Reading Data..."
+  data = list(parseData("http://jmcauley.ucsd.edu/cse255/data/beer/non-alcoholic-beer.json"))
+
+  print  "review".rjust(5), "beer name".rjust(50), "reviewer".rjust(20)
+  for i in range(10):
+    print niceReviewSummary(data[i])
+
+  print "done"
+```
+
+Now the output looks like this:
+
+```
+Reading Data...
+review                                          beer name             reviewer
+  3.0                                       Amstel Malt           Brabander
+  3.5                                       Amstel Malt         kingcrowing
+  2.0                Harboe Den Glada Danskens Lättöl               gnoff
+  2.0                Harboe Den Glada Danskens Lättöl                bark
+  2.0                      Bernard S &#269;istou Hlavou       philipquarles
+  4.5                                           Juleøl            jreitman
+  3.5                                   Mørkt Hvidtøl                bark
+  3.0                                           Buckler             drabmuh
+  4.5                                           Buckler           McStagger
+  3.0                                           Buckler              jifigz
+done
+```
+
+Now that we see how to look at the data, we might want to actually calculate some things from this data.
+
+For example:
+
+* We might want to be able to filter out reviews based on whether or not we know the age of the reviewer.
+* We might want to make a list of just the ages of the reviewers.  
+   * Once we have just *that* list, we might want to do some things with it.
+* We might want to know what highest rated and lowest rated beers are.
+* etc.
+
+In order to be able to answer these types of questions, we need to be able to work with the data in various ways.  One of our most basis tools is to reduce the data down to a simpler form: for example, instead of a list of dictionaries, just a list of numbers.
+
+For example, we may want to write a function `ageKnownReviews` that takes a list of reviews and then returns a list of only the reviews where the reviewer age is known.
+
+We can then write a function called `justTheAges` that takes a list of dictionaries representing reviews, and returns
+a list of just numbers, where each of those numbers is the age of the reviewer in each corresponding review.
+
+With that list, we could do various things such as making a scatterplot, finding the minimum, maximum and average, and so forth.
