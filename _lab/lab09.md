@@ -1,9 +1,9 @@
 ---
 layout: lab
 num: lab09
-ready: false
-desc: "Working With Data, by Miles"
-assigned: 2016-08-17 10:15:00.00-7
+ready: true
+desc: "Working With Data, (by Miles and Phill)"
+assigned: 2016-08-17 13:15:00.00-7
 due: 2016-08-22 16:45:00.00-7
 ---
 
@@ -20,6 +20,25 @@ As you work through the steps below, you may find it helpful to refer to:
 * The pages on the SPIS 2016 website about:
     * [Python: Dictionaries](/topics/python_dictionaries/)
     * [Python: defaultdict](/topics/python_defaultdict/)
+
+One more hint: the dictionary methods `.keys()` and `.values()` may come in handy.  This example illustrates how they work:
+
+```python
+>>> foo = {'a':3, 'b':3, 'c':5 }
+>>> foo.keys()
+['a', 'c', 'b']
+>>> foo.values()
+[3, 5, 3]
+>>> 
+```
+
+A consequence of this is that if you want to iterate over every key in a dictionary called `foo`, 
+you can just do a for loop on `foo.keys()`, e.g.
+
+```python
+   for k in foo.keys():
+       # do something with key k and value foo[k]
+```
 
 # Step 1: Create a lab09 repo
 
@@ -242,6 +261,23 @@ You can then write test cases for the functions, following the examples of test 
     reviewer age in years.  In your solution, please make use of the `ageInSecondsToAgeInYears(seconds)` function 
     that you wrote in a previous step.
 
+6.  `def averageReviewerAge(reviewerAgeDict)` should take, as its parameter, the result of calling `reviewerToAgeInYears`,
+     that is, a dictionary that maps reviewer names to reviewer ages.   It should return the average age, in years, of
+     a reviewer, as a floating point number (that is, the average age could be `27.6` years, for example.)  As a hint:
+     if you have a dictionary foo, you can get a list of all of its value by 
+
+7.  `def beerToNumReviews(data)` should return a `defaultdict(int)` where the keys are `beer/name`, 
+    and the values are a count
+    of how many reviews appear for that beer.   
+
+8.  `def beerToListOfReviews(data)` should return a `defaultdict(list)` where the keys are `beer/name`, 
+    and the value for each key is a list of all of the individual `review/overall` values for that beer.  These lists
+    may indeed contain duplicates if multiple reviewers rated a beer the same.
+
+9.  `def beerToAvgReview(data)` should return a dictionary (the regular kind)
+    where they keys are `beer/name`, and each value is average
+    rating for that beer.  You should make use of the `beerToNumReviews(data)` and `beerToListOfReviews(data)`
+
 
 When you have written definitions for each of these functions, you can test them in either, or preferably both, of the following ways:
 
@@ -251,8 +287,8 @@ When you have written definitions for each of these functions, you can test them
 
 For each function, when you are satisfied that *that* function is working, do the steps to commit your changes to github:
 
-* git add my_analysis.py
-* git commit -m "AB/CD describe which function you worked on here"
-* git push origin master
+* `git add my_analysis.py`
+* `git commit -m "AB/CD describe which function you worked on here"`
+* `git push origin master`
 
-When they all work, you are done with lab09
+When they all work, you are done with lab09!
