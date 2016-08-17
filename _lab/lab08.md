@@ -238,7 +238,7 @@ Wire up the circuit shown by the following diagram. We will use the physical pin
 ![RPi-desktop](/lab/images/RPi/led_circuit.png){:height="100px"} 
 </p>
 
-Ask an instructor or mentor is you don't understand the diagram.
+Ask an instructor or mentor is you don't understand the diagram. For more in depth information on configuring GPIO pins as outputs refer to [this website](http://www.scriptoriumdesigns.com/embedded/gpio_out.php).
 
 Now, run the `01_blinking_led.py` program that is in your repo in idle. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is most likely with your wiring. If you were successful reason about the correctness of the program. For example why does your program output a low voltage on pin 11 to turn the LED on and a high voltage to turn it off.
 
@@ -262,22 +262,36 @@ For the circuit you will need the following components:
 * A 220 ohm resistor
 * Wires
 
-Start with wiring the circuit as per the circuit diagram below:
+
+One of the key differences in this exercise compared to the previous one is that you will configure the pin connected to the button as an INPUT pin. Here is a nice excerpt from [a website](http://www.scriptoriumdesigns.com/embedded/gpio_in.php) explaining such a configuration:
+
+*A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is “high” (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is “low” (near GND), reading the pin will result in reading a logic 0.*
+
+So, the bottom line is that when we configure a GPIO pin as an input, we can read the voltage at that pin in our Python program. But, what is the expected voltage if the pin is not connected to anything at all? The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is “floating” and has no defined voltage level. For us to be able to reliably detect whether the input is high or low we need to tie it so that it is always connected and either reads high or low.
 
 <p align="center">
 ![RPi-desktop](/lab/images/RPi/button_circuit.png){:height="200px"} 
 </p>
 
+To tie the pin we connect either a Pull Up or Pull Down resistor. A Pull up resistor connects the pin to 3.3V through a large resistor, this means that when the switch is open there is a path to 3.3V and so it will read high. When the switch is pressed (with the other side connected to GND there is a lower resistance path to GND and so the pin will read low. The large (10kΩ) resistor ensures that only a little current is drawn when the switch is pressed. A pull down resistor works along the same lines (ask an instructor if you'd like to know more about pull down resistors)
 
-Keep the LED circuit from the previous exercise. Just add another circuit that places a button between GPIO pin 15 and GND.
+
+Start with wiring the circuit as per the circuit diagram below:
+
+<p align="center">
+![RPi-desktop](/lab/images/RPi/button_internal.png){:height="200px"} 
+</p>
+
+
+As shown above keep the LED circuit from the previous exercise. Just add another circuit that places a button between GPIO pin 15 and GND. Notice that you don't have to wire up the pull up resistor. There is a pull up resister available internally in the raspberry Pi. We just have to specify in software that we would like to use it.
 
 Now open the program `02_buttonLED.py` in idle. This program reports the current polls pin 15 (the pin connected to the button) and reports the status of that pin: 1 indicates true or high voltage, 0 indicates False or a low voltage.
 
 
 Now answer the following questions:
 
-* Which line of code configures pin 15 to be an input pin. 
-* Which line of code gets the status of pin 15.
+* Which line of code configures pin 15 to be an input pin with a pull up resistor configuration? 
+* Which line of code gets the status of pin 15?
 * What is the purpose of the variable BtnPin?
 * What do you expect the value of `button` to be when the button in your circuit is pressed?
 * What should the value be when the button is not pressed?
