@@ -29,4 +29,14 @@ spis16ah  spis16as  spis16bd  spis16bo  spis16bz  spis16ck  spis16zz
 [spis16@ieng6-240]:spis16:224$ 
 ```
 
+# Custom code for the student's path, etc.
+
+If you want to customize things for the students account, the place to do it is in the directory 
+
+```
+/home/linux/ieng6/spis16/public
+```
+
+In that folder, there will likely be a file called `README.instructor` that explains the `modulefiles` directory, and
+how it is used to control the `PATH` etc.
 
