@@ -209,9 +209,50 @@ For example:
 
 In order to be able to answer these types of questions, we need to be able to work with the data in various ways.  One of our most basis tools is to reduce the data down to a simpler form: for example, instead of a list of dictionaries, just a list of numbers.
 
-For example, we may want to write a function `ageKnownReviews` that takes a list of reviews and then returns a list of only the reviews where the reviewer age is known.
+Your task is to write functions that will take as their parameter, `data`, the result that is returned by the `parseData` function, and then return various things.
 
-We can then write a function called `justTheAges` that takes a list of dictionaries representing reviews, and returns
-a list of just numbers, where each of those numbers is the age of the reviewer in each corresponding review.
+Here is a list of the functions you should write.  Add each of these to your `my_analysis.py` file.
 
-With that list, we could do various things such as making a scatterplot, finding the minimum, maximum and average, and so forth.
+You are also encouraged to write a file `test_my_analysis.py`, containing tests for your functions.
+
+To test these functions, you'd make your own values for `data`, that contain probably far fewer reviews than the
+real value of `data`, so that you can predict, by hand, what the results of the functions would be.
+
+You can then write test cases for the functions, following the examples of test cases that you saw in [lab06](/lab/lab06).
+
+1. `def beerUserRating(data):` returns a list of Python tuples, where each tuple
+   consists of three values: the `beer/name`, `user/profileName`, and the `review/overall` value for each review in the list `data`.
+
+2. `def beersRatedFive(data):` returns a list of strings, which are the names of the beers that 
+    are rated 5.0 (exactly).   Ideally, your function should NOT include any duplicates.  That is, if a particular beer
+    has been rated 5.0 by more than one reviewer, the beer should still appear in the list only once.
+
+3. `def reviewerToAgeInSeconds(data):` returns a dictionary (the regular kind, not a `defaultdict` where
+    the keys are the `user/profileName` values from `data`, and the values are the `user/ageInSeconds` values for each of those users.   Note that a user may appear more than once if they wrote more than one review.  We are going to
+    assume that the ages are all the same, even if that isn't the case.  And, note that a dictionary already gets
+    rid of duplicates, since if you update a value for a key that already exists, it just overwrites the old value,
+    rather than creating a duplicate entry. Note, though, that not every review has a value for age.  So, if you encounter
+    a review where the user/ageInSeconds is not present, you'll need to set the value for that user to the special
+    Python value `None`.
+
+4. `def ageInSecondsToAgeInYears(seconds)` should convert age in seconds to age in years.  Note that with age, we
+     don't round up.  If you are 20 years and 355 days old, you are still "age 20", not "age 21".
+
+5.  `def reviewerToAgeInYears(data):` should provide a dictionary that maps reviewer name (those are the keys) to 
+    reviewer age in years.  In your solution, please make use of the `ageInSecondsToAgeInYears(seconds)` function 
+    that you wrote in a previous step.
+
+
+When you have written definitions for each of these functions, you can test them in either, or preferably both, of the following ways:
+
+* running the test cases you came up with in your `test_my_analysis.py` file
+* call the functions on the value `data`, inside your `if __name__ == '__main__'` block, and print out the results.
+* call the functions interactively on the value `data` using the Python shell prompt.
+
+For each function, when you are satisfied that *that* function is working, do the steps to commit your changes to github:
+
+* git add my_analysis.py
+* git commit -m "AB/CD describe which function you worked on here"
+* git push origin master
+
+When they all work, you are done with lab09
