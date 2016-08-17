@@ -52,7 +52,7 @@ In the starter code, you'll find the file `non_alcoholic_data.py`.   Open this f
 
 This file loads a variable into memory called `data`.  That `data` variable is list of dictionaries.
 
-Now, you might think that the first think you'd want to do is type `data` at the Python prompt, and hit enter, but <span style="font-weight:bold; font-size: 110%; color:red;">PLEASE DON'T DO THAT</span>.  It isn't that anything awful will
+Now, you might think that the first thing you'd want to do is type `data` at the Python prompt, and hit enter, but <span style="font-weight:bold; font-size: 110%; color:red;">PLEASE DON'T DO THAT</span>.  It isn't that anything awful will
 happen; it is just that it will temporarily lock up your computer session, and you might have to close it and start over.
 
 Let's explain two things right away: 
