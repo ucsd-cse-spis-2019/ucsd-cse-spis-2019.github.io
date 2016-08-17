@@ -87,7 +87,7 @@ session just locks up, and it appears that nothing is happening.  Eventually, yo
 
 Each element in the list `data` represents a single review by some reviewer of some beer.
 
-If want to see all the pieces of data that we can access for a review, we can just look at the string representation of a single Python dictionary for a single review, like this:
+If we want to see all the pieces of data that we can access for a review, we can just look at the string representation of a single Python dictionary for a single review, like this:
 
 ```python
 >>> data[0]
