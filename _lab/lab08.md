@@ -288,7 +288,7 @@ Run the code. What do you get? Come up with a simple test to check the correctne
 Finally, add logic to toggle the state of the LED (from ON to OFF or OFF to ON) everytime the button is pressed and released.
 
 # Driving a 7-segment display
-A seven segment display packages seven LEDs, each LED is called a segment, which when energized forms part of a numeral. An additional eight LED is sometimes used within the same package to indicate a decimal point. By correctly energizing the individual segments of the 7-segment display you can display numbers 0 through 8.
+A seven segment display packages seven LEDs, each LED is called a segment, which when energized forms part of a numeral. An additional eight LED is sometimes used within the same package to indicate a decimal point. By correctly energizing the individual segments of the 7-segment display you can display numbers 0 through 9.
 
 The figure below shows the common-cathode 7-segment display:
 
