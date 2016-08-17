@@ -8,12 +8,12 @@ desc: ""
 
 Outline:
 
+* Create a free Heroku account
 * Clone a repo with a basic flask app
 * Run it locally first
 * Use the Heroku toolbelt on ACMS to get it set up
 
 # Step 1: Create a free Heroku Account
-
 
 Please visit heroku.com and signup for a free account.  You just have to provide your name, and email, nothing more.  
 
@@ -60,6 +60,9 @@ You should be able to run this "Hello World" type Flask app in the normal way by
 You'll test by visiting your `localhost:5000` URL (or if you need to change the port, whatever you change it to).
 
 Make sure that works.  If so, you are ready to try running on Heroku.
+
+
+
 
 # Step 4: Login to Heroku
 
