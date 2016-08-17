@@ -9,9 +9,7 @@ due: 2016-08-22 16:45:00.00-7
 
 # Working With Data
 
-In this lab you will 
-
-* TODO: Fill this in
+In this lab you will work with some data similar to the beer data that we saw in the Facets presentation by UCSD Professor Julian McAuley.   The data he presented was about reviews of beers.   Since SPIS participants are typically under age 21, we'll focus only on the reviews of non-alcoholic beers.
 
 
 # Step 1: Create a lab09 repo
