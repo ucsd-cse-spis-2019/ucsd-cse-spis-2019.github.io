@@ -42,7 +42,7 @@ you can just do a for loop on `foo.keys()`, e.g.
 
 # Step 1: Create a lab09 repo
 
-Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab09-startercode.git
+Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab09start
 
 Then use `git clone` to clone this into your `~/github` directory.
 
