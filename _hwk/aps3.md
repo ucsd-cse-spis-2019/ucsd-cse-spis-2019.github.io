@@ -16,6 +16,6 @@ layout: default
 
 Please add a Week3.md to your existing APS repo.   In that repo, write a solution to these problems:
 
-[APS Iterative Improvement problems (pdf)](aps_ii_problems.pdf){: data-ajax="false" }
+[APS Backtracking problems (pdf)](aps_bt_problems.pdf){: data-ajax="false" }
 
 See also: [Main SPIS 2016 APS Page](https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/2016_aps)
