@@ -138,8 +138,10 @@ All the unix commands that you have learned so far can be used to navigate throu
 ## Setup your programming environment
 
 * Configure your git credentials on the Pi. In the home directory `/home/pi` type the following commands replacing my name and email credentials with yours.
-``` git config --global user.name "Diba Mirza"
-    git config --global user.email dimirza@eng.ucsd.edu
+
+```
+ git config --global user.name "Diba Mirza"
+ git config --global user.email dimirza@eng.ucsd.edu
 
 ```
 
