@@ -11,6 +11,8 @@ due: 2016-08-22 16:45:00.00-7
 
 In this lab you will work with some data similar to the beer data that we saw in the Facets presentation by UCSD Professor Julian McAuley.   The data he presented was about reviews of beers.   Since SPIS participants are typically under age 21, we'll focus only on the reviews of non-alcoholic beers.
 
+As you work through the steps below, you may find it helpful to refer to the notes from the lecture Miles gave on Wednesday 08/17, which can be found here: [/lecture/week3/0817](/lecture/week3/0817)
+
 
 # Step 1: Create a lab09 repo
 
