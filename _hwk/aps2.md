@@ -9,9 +9,10 @@ layout: default
 ---
 
 
+
 | [APS 1](/hwk/aps1/) | [APS 2](/hwk/aps2/) | [APS 3](/hwk/aps3/)   | [APS 4](/hwk/aps4/) | 
 |---------------------|---------------------|-----------------------|---------------------|
-| Divide and Conquer  | Greedy Algorithms   | Iterative Improvement | Backtracking        |
+| Divide and Conquer  | Greedy Algorithms   | Backtracking          |  Iterative Improvement |
 
 
 Please create an APS repo with a Week2.md file, following these instructions:
