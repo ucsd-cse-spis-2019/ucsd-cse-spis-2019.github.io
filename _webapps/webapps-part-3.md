@@ -1,8 +1,7 @@
 ---
 topic: "Webapps Intro, Part 3"
-desc: ""
+desc: "Getting started with Heroku on ACMS"
 ---
-
 
 # Getting started with Heroku on ACMS.
 
