@@ -390,7 +390,7 @@ def render_mtokm():
     return render_template('mtokm.html')
     
 @app.route('/ftoc_result')
-def renderResult():
+def render_ftoc_result():
     try:
         ftemp_result = float(request.args['fTemp'])
         ctemp_result = ftoc(ftemp_result)
@@ -399,7 +399,7 @@ def renderResult():
         return "Sorry: something went wrong."
 
 @app.route('/ctof_result')
-def renderResult():
+def render_ctof_result():
     try:
         ctemp_result = float(request.args['cTemp'])
         ftemp_result = ctof(ctemp_result)
@@ -408,7 +408,7 @@ def renderResult():
         return "Sorry: something went wrong."
 
 @app.route('/mtokm_result')
-def renderResult():
+def render_mtokm_result():
     try:
         # You'll need some code here, and maybe some extra parameters in render_template below...
         return render_template('mtokm.html')
