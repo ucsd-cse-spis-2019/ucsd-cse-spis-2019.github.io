@@ -3,7 +3,12 @@ topic: "Webapps Intro, Part 2"
 desc: "ftoc (from url), and intro to templates"
 ---
 
-# Keeping your ACMS Account Safe
+In part 2 of the SPIS 2016 webapps tutorial, we'll learn about how to:
+
+* Perform a calculation based on a parameter that's in the url
+* Start building a larger multi-page web application
+
+## Keeping your ACMS Account Safe: turn debug mode off.
 
 So, trying to teach web development in an academic computing environment such as ACMS is always a bit of a risk.   The basic problem is this combination of things:
 
@@ -186,7 +191,14 @@ file, and then save it in your templates directory with the name `layout.html`.
 </html>
 ```
 
-This file `layout.html` defines a template for every page of your web application. The sections labelled `{% block title %}{% endblock %}` and `{% block content %}{% endblock %}` are places that you'll put either a title, or some content.
+This file `layout.html` defines a template for every page of your web application. 
+The sections labelled `{% block title %}{% endblock %}` and `{% block content %}{% endblock %}` are places that you'll put either a title, or some content.
+
+* Strictly speaking, the `{% block title %}{% endblock %}` and `{% block content %}{% endblock %}` parts are not HTML; they
+come from a templating system called Jinja2.   
+* Most frameworks for building web applications have some way to combine
+code with HTML; in the Flask web app framework, that method is Jinja2.   
+* That's all you really need to know about Jinja2 for now, but if you are curious to learn more, there is documentation here: [http://jinja.pocoo.org/](http://jinja.pocoo.org/).
 
 Now you can define the templates for the rest of the pages in your web application.   Let's make a web application with three pages: one that converts fahrenheit to celsius, another than converts celsius to fahrenheit, and a third that
 converts miles to kilometers.
