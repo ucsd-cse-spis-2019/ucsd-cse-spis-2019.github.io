@@ -430,7 +430,7 @@ if __name__=="__main__":
 
 # The next lesson
 
-The next lesson is [Web Apps Intro (part 3)](/webapps/webapps-intro-part-3.md)
+The next lesson is [Web Apps Intro (part 3)](/webapps/webapps-intro-part-3/)
 
 In that lesson, you'll learn how to start hosting your webapps on Heroku so that they can be accessed by anyone anywhere,
 and not just looking at a web browser on your local computer.
