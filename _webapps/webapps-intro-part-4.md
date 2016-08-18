@@ -1,6 +1,6 @@
 ---
 topic: "Webapps Intro, Part 4"
-desc: ""
+desc: "Deploying an existing Flask App on Heroku"
 ---
 
 # Deploying an existing Flask App on Heroku
