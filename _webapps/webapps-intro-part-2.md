@@ -127,7 +127,7 @@ If you've gotten this far, you've gotten a great start.
 
 One of the keys to understanding how Flask works is to focus first on these lines of code in hello.py.
 
-```
+```python
 @app.route('/')
 @app.route('/ftoc/<ftempString>')
 ```
@@ -180,22 +180,23 @@ file, and then save it in your templates directory with the name `layout.html`.
 ```html
 <!doctype html>
 <html>
-<head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <title>{% block title %}{% endblock %} - My Webpage</title>
-</head>
+  <head>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <title> {% raw %}{% block title %}{% endblock %}{% endraw %} - My Webpage</title>
+   </head>
 
-<body>
- <div id="content">{% block content %}{% endblock %}</div>
-</body>
+  <body>
+    <div id="content">{% raw %}{% block content %}{% endblock %}{% endraw %}</div>
+  </body>
 </html>
 ```
+
 
 This file `layout.html` defines a template for every page of your web application. 
 
 There are two parts of this file that are, strictly speaking, not HTML code. Those are:
-* `{% block title %}{% endblock %}` 
-* `{% block content %}{% endblock %}` 
+* `{% raw %}{%  block title %}{% endraw %}{% raw %}{%  endblock %}{% endraw %}` 
+* `{% raw %}{%  block content %}{% endraw %}{% raw %}{%  endblock %}{% endraw %}` 
 
 These are placeholders where some other HTML code will be inserted, and the syntax is defined by a system called
 Jinja2, which is part of the Flask framework.    That's all you really need to know about Jinja2 for now, but if you are curious to learn more, there is documentation here: [http://jinja.pocoo.org/](http://jinja.pocoo.org/).
@@ -210,18 +211,18 @@ converts miles to kilometers.
 The template for the home page will be called `home.html` and should be in the `templates` subdirectory.  It will look like this:
 
 ```html
-{% extends "layout.html" %}
+ {% raw %}{%  extends "layout.html" %}{% endraw %}
 
-{% block title %}Home{% endblock %}
+ {% raw %}{%  block title %}{% endraw %}Home{% raw %}{%  endblock %}{% endraw %}
 
-{% block content %}
+ {% raw %}{%  block content %}{% endraw %}
   <h1>Home</h1>
   <ul>
     <li><a href="/ctof">Convert celsius to Fahrenheit</a></li>
     <li><a href="/ftoc">Convert Fahrenheit to Celsius</a></li>
     <li><a href="/mtokm">Convert Miles to Kilometers</a></li>
   </ul>
-{% endblock %}
+ {% raw %}{%  endblock %}{% endraw %}
 ```
 
 ## Creating templates for pages with user input
@@ -230,13 +231,14 @@ Then you'll have three more templates for the pages where you ask the user for t
 calculations.   Here are the first two, which you should call `ctof.html` and `ftoc.html`.  Each of these should be 
 stored under your templates directory.
 
-Here's `ctof.html`
+Here's `ctof.html`:
+
 ```html
-{% extends "layout.html" %}
+{% raw %}{%  extends "layout.html" %}{% endraw %}
 
-{% block title %}Convert ctof{% endblock %}
+{% raw %}{%  block title %}{% endraw %}Convert ctof{% raw %}{%  endblock %}{% endraw %}
 
-{% block content %}
+{% raw %}{%  block content %}{% endraw %}
 
 <p>Enter a temperature and click "submit" to convert to Fahrenheit</p>
 
@@ -246,16 +248,17 @@ Here's `ctof.html`
   <input type="submit" value="Submit">
 </form>
 
-{% endblock %}
+{% raw %}{%  endblock %}{% endraw %}
 ```
 
-Here's `ftoc.html`
+Here's `ftoc.html`:
+
 ```html
-{% extends "layout.html" %}
+{% raw %}{%  extends "layout.html" %}{% endraw %}
 
-{% block title %}Convert ftoc{% endblock %}
+{% raw %}{%  block title %}{% endraw %}Convert ftoc{% raw %}{%  endblock %}{% endraw %}
 
-{% block content %}
+{% raw %}{%  block content %}{% endraw %}
 
 <p>Enter a temperature and click "submit" to convert to Celsius</p>
 
@@ -265,22 +268,23 @@ Here's `ftoc.html`
   <input type="submit" value="Submit">
 </form>
 
-{% endblock %}
+{% raw %}{%  endblock %}{% endraw %}
 ```
 
 You'll also need a file in `templates` called `mtokm.html`.  For now, just enter the following html code as a placeholder&mdash;getting that one to work is left as an exercise for you.
 
-Here's `mtokm.html`
+Here's `mtokm.html`:
+
 ```html
-{% extends "layout.html" %}
+{% raw %}{%  extends "layout.html" %}{% endraw %}
 
-{% block title %}Convert miles to kilometers{% endblock %}
+{% raw %}{%  block title %}{% endraw %}Convert miles to kilometers{% raw %}{%  endblock %}{% endraw %}
 
-{% block content %}
+{% raw %}{%  block content %}{% endraw %}
 
 <p>Coming soon...</p>
 
-{% endblock %}
+{% raw %}{%  endblock %}{% endraw %}
 ```
 
 ## Creating templates for the results pages
@@ -291,38 +295,39 @@ Those will be called `ftoc_result.html`, `ctof_result.html` and `mtokm_result.ht
 of those will look like:
 
 Here's `ftoc_result.html`:
+
 ```html
-{% extends "layout.html" %}
+{% raw %}{%  extends "layout.html" %}{% endraw %}
 
-{% block title %}Result of converting Fahrenheit to Celsius{% endblock %}
+{% raw %}{%  block title %}{% endraw %}Result of converting Fahrenheit to Celsius{% raw %}{%  endblock %}{% endraw %}
 
-{% block content %}
+{% raw %}{%  block content %}{% endraw %}
 <p> In Fahrenheit: {{ fTemp }}.  In Celsius: {{ cTemp }} </p>
-{% endblock %}
+{% raw %}{%  endblock %}{% endraw %}
 ```
 
 Here's `ctof_result.html`:
 
 ```html
-{% extends "layout.html" %}
+{% raw %}{%  extends "layout.html" %}{% endraw %}
 
-{% block title %}Result of converting Celsius to Fahrenheit{% endblock %}
+{% raw %}{%  block title %}{% endraw %}Result of converting Celsius to Fahrenheit{% raw %}{%  endblock %}{% endraw %}
 
-{% block content %}
+{% raw %}{%  block content %}{% endraw %}
 <p> In Celsius: {{ fTemp }}.  In Fahrenheit: {{ cTemp }} </p>
-{% endblock %}
+{% raw %}{%  endblock %}{% endraw %}
 ```
 
 Finally, you'll also need a `mtokm_result.html` file.    Here's a placeholder for it.  The final content is up to you to fill in:
 
 ```html
-{% extends "layout.html" %}
+{% raw %}{%  extends "layout.html" %}{% endraw %}
 
-{% block title %}Result of converting Miles to Kilometers{% endblock %}
+{% raw %}{%  block title %}{% endraw %}Result of converting Miles to Kilometers{% raw %}{%  endblock %}{% endraw %}
 
-{% block content %}
+{% raw %}{%  block content %}{% endraw %}
 <p>Coming soon...</p>
-{% endblock %}
+{% raw %}{%  endblock %}{% endraw %}
 ```
 
 ## Adding a `style.css` file
