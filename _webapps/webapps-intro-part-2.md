@@ -155,7 +155,7 @@ Our next steps will be to learn a bit about:
 
 So, at the moment, the values we are returning from our functions are plain text that shows up in the browser.  That's fine for getting started, but eventually we'd like something that looks like a "real web page". For that, we'll need to learn a little bit about HTML and CSS.   That's for our next lesson.
 
-If you want to get started on learning HTML and CSS now though, one of the best resources on the web for that is the site: [w3schools.com](http://w3schoos.com)
+If you want to get started on learning HTML and CSS now though, one of the best resources on the web for that is the site: [w3schools.com](http://w3schools.com)
 
 * Visit their HTML tutorial to get started
 * After learning some HTML, learn a bit of CSS
@@ -169,19 +169,172 @@ Here is an example of how that would look.  You need to create a subdirectory ca
 
 Into that directory, the first file you should create and store is one called `layout.html`
 
-That file should look like this:
+That file should look like this.   You can use idle to create a new file, copy/paste the following HTML code into the
+file, and then save it in your templates directory with the name `layout.html`.
 
 ```html
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>{% block title %}{% endblock %} - My Webpage</title>
+</head>
 
+<body>
+ <div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>
+```
+
+This file `layout.html` defines a template for every page of your web application. The sections labelled `{% block title %}{% endblock %}` and `{% block content %}{% endblock %}` are places that you'll put either a title, or some content.
+
+Now you can define the templates for the rest of the pages in your web application.   Let's make a web application with three pages: one that converts fahrenheit to celsius, another than converts celsius to fahrenheit, and a third that
+converts miles to kilometers.
+
+The template for the home page will be called `home.html` and should be in the `templates` subdirectory.  It will look like this:
+
+```html
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h1>Home</h1>
+  <ul>
+    <li><a href="/ctof">Convert celsius to Fahrenheit</a></li>
+    <li><a href="/ftoc">Convert Fahrenheit to Celsius</a></li>
+    <li><a href="/mtokm">Convert Miles to Kilometers</a></li>
+  </ul>
+{% endblock %}
+```
+
+Then you'll have three more templates for the pages where you ask the user for the input for each of these
+calculations.   Here are the first two, which you should call `ctof.html` and `ftoc.html`.  Each of these should be 
+stored under your templates directory.
+
+Here's `ctof.html`
+```html
+{% extends "layout.html" %}
+
+{% block title %}Convert ctof{% endblock %}
+
+{% block content %}
+
+<p>Enter a temperature and click "submit" to convert to Fahrenheit</p>
+
+<form action="/ctof_result">
+  Fahrenheit Temp:<br>
+  <input type="text" name="cTemp" value="20.0">
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
+```
+
+Here's `ftoc.html`
+```html
+{% extends "layout.html" %}
+
+{% block title %}Convert ftoc{% endblock %}
+
+{% block content %}
+
+<p>Enter a temperature and click "submit" to convert to Celsius</p>
+
+<form action="/ftoc_result">
+  Fahrenheit Temp:<br>
+  <input type="text" name="fTemp" value="68.0">
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
+```
+
+You'll also need a file in `templates` called `mtokm.html`.  For now, just enter the following html code as a placeholder&mdash;getting that one to work is left as an exercise for you.
+
+Here's `mtokm.html`
+```html
+{% extends "layout.html" %}
+
+{% block title %}Convert miles to kilometers{% endblock %}
+
+{% block content %}
+
+<p>Coming soon...</p>
+
+{% endblock %}
+```
+
+You'll now also need three templates for the HTML for the pages that come up after you do the conversion.  
+
+Those will be called `ftoc_result.html`, `ctof_result.html` and `mtokm_result.html`.  Here's what the first two 
+of those will look like:
+
+Here's `ftoc_result.html`:
+```html
+{% extends "layout.html" %}
+
+{% block title %}Result of converting Fahrenheit to Celsius{% endblock %}
+
+{% block content %}
+<p> In Fahrenheit: {{ fTemp }}.  In Celsius: {{ cTemp }} </p>
+{% endblock %}
+```
+
+Here's `ctof_result.html`:
+
+```html
+{% extends "layout.html" %}
+
+{% block title %}Result of converting Celsius to Fahrenheit{% endblock %}
+
+{% block content %}
+<p> In Celsius: {{ fTemp }}.  In Fahrenheit: {{ cTemp }} </p>
+{% endblock %}
+```
+
+Finally, you'll also need a `mtokm_result.html` file.    Here's a placeholder for it.  The final content is up to you to fill in:
+
+```html
+{% extends "layout.html" %}
+
+{% block title %}Result of converting Miles to Kilometers{% endblock %}
+
+{% block content %}
+<p>Coming soon...</p>
+{% endblock %}
+```
+
+You should also create a subdirectory of the top of your repository called `static`, at the same level as your `hello.py` file, and as a sibling of your `templates` directory (not inside it.)
+
+Inside that folder, put a file called `style.css`.   This file will contain rules for the fonts, colors, spacing, and layout for your web page, expressed in a language called CSS, which stands for *Cascading Style Sheets*.
+
+Here is a basic `style.css` file. You can learn more about CSS rules at [w3schools.com](http://w3schools.com) and experiment with the style if you like.
+
+```css
+
+body {
+    background-color: #eef;
+    color: black;
+}
 
 ```
 
-you can put some HTML files, as in this example:
+Finally, we are ready for the changes to our `hello.py` that allow us to use these templates.
 
-* [flask-practice-web-app](https://github.com/pconrad/flask-practice-web-app)
+For each of the different URLs that our web application can serve, we will still write a function, just like before.
+But this time, instead of directly returning the string that makes up the web page, we'll call the Flask function
+`render_template`, like this:
 
-Then, you instead of just returning a string, you can use the `render-template` function as illustrated
-in this example.  Note the additional `import` statements that are needed:
+```
+@app.route('/')
+def renderMain():
+    return render_template('home.html')
+```
+
+Here's a complete example of the code that we'll want to put into our hello.py file.
+
+Note the the additional `import` statements that are needed:
 
 ```python
 import os
@@ -190,28 +343,65 @@ from flask import Flask, url_for, render_template, request
 app = Flask(__name__)
 
 @app.route('/')
-def renderMain():
+def render_main():
     return render_template('home.html')
 
-@app.route('/page1')
-def renderPage1():
-    return render_template('page1.html')
+@app.route('/ctof')
+def render_ctof():
+    return render_template('ctof.html')
 
-@app.route('/page2')
-def renderPage2():
-    return render_template('page2.html')
+@app.route('/ftoc')
+def render_ftoc():
+    return render_template('ftoc.html')
 
-@app.route('/page3')
-def renderPage3():
-    return render_template('page3.html')
+@app.route('/mtokm')
+def render_mtokm():
+    return render_template('mtokm.html')
+    
+@app.route('/ftoc_result')
+def renderResult():
+    try:
+        ftemp_result = float(request.args['fTemp'])
+        ctemp_result = ftoc(ftemp_result)
+        return render_template('ftoc_result.html', fTemp=ftemp_result, cTemp=ctemp_result)
+    except ValueError:
+        return "Sorry: something went wrong."
+
+@app.route('/ctof_result')
+def renderResult():
+    try:
+        ctemp_result = float(request.args['cTemp'])
+        ftemp_result = ctof(ctemp_result)
+        return render_template('ctof_result.html', cTemp=ctemp_result, fTemp=ftemp_result)
+    except ValueError:
+        return "Sorry: something went wrong."
+
+@app.route('/mtokm_result')
+def renderResult():
+    try:
+        # You'll need some code here, and maybe some extra parameters in render_template below...
+        return render_template('mtokm.html')
+    except ValueError:
+        return "Sorry: something went wrong."
+
+def ftoc(ftemp):
+   return (ftemp-32.0)*(5.0/9.0)
+    
+def ctof(ftemp):
+   return -42.0 # replace with correct formula
+
+# You'll probably want a basic function here to convert miles to kilometers too...
     
 if __name__=="__main__":
-    app.run(debug=False,host="0.0.0.0",port=54321)
+    app.run(debug=False, port=54321)
 ```
 
 
 # The next lesson
 
 The next lesson is [Web Apps Intro (part 3)](/webapps/webapps-intro-part-3.md)
+
+In that lesson, you'll learn how to start hosting your webapps on Heroku so that they can be accessed by anyone anywhere,
+and not just looking at a web browser on your local computer.
 
  
