@@ -167,7 +167,16 @@ on each page.
 
 Here is an example of how that would look.  You need to create a subdirectory called `templates`.
 
-Into that directory, you can put some HTML files, as in this example:
+Into that directory, the first file you should create and store is one called `layout.html`
+
+That file should look like this:
+
+```html
+
+
+```
+
+you can put some HTML files, as in this example:
 
 * [flask-practice-web-app](https://github.com/pconrad/flask-practice-web-app)
 
