@@ -302,7 +302,7 @@ Here's `ftoc_result.html`:
 {% raw %}{%  block title %}{% endraw %}Result of converting Fahrenheit to Celsius{% raw %}{%  endblock %}{% endraw %}
 
 {% raw %}{%  block content %}{% endraw %}
-<p> In Fahrenheit: {{ fTemp }}.  In Celsius: {{ cTemp }} </p>
+<p> In Fahrenheit: {% raw %}{{ fTemp }}{% endraw %}.  In Celsius: {{ cTemp }} </p>
 {% raw %}{%  endblock %}{% endraw %}
 ```
 
