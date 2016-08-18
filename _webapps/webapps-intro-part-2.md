@@ -192,13 +192,17 @@ file, and then save it in your templates directory with the name `layout.html`.
 ```
 
 This file `layout.html` defines a template for every page of your web application. 
-The sections labelled `{% block title %}{% endblock %}` and `{% block content %}{% endblock %}` are places that you'll put either a title, or some content.
 
-* Strictly speaking, the `{% block title %}{% endblock %}` and `{% block content %}{% endblock %}` parts are not HTML; they
-come from a templating system called Jinja2.   
-* Most frameworks for building web applications have some way to combine
-code with HTML; in the Flask web app framework, that method is Jinja2.   
-* That's all you really need to know about Jinja2 for now, but if you are curious to learn more, there is documentation here: [http://jinja.pocoo.org/](http://jinja.pocoo.org/).
+There are two parts of this file that are, strictly speaking, not HTML code. Those are:
+* `{% block title %}{% endblock %}` 
+* `{% block content %}{% endblock %}` 
+
+These are placeholders where some other HTML code will be inserted, and the syntax is defined by a system called
+Jinja2, which is part of the Flask framework.    That's all you really need to know about Jinja2 for now, but if you are curious to learn more, there is documentation here: [http://jinja.pocoo.org/](http://jinja.pocoo.org/).
+
+The `title` and `content` blocks for each of our pages are going to be defined in additional files in our `templates` directory. 
+
+## Creating a template for the home page
 
 Now you can define the templates for the rest of the pages in your web application.   Let's make a web application with three pages: one that converts fahrenheit to celsius, another than converts celsius to fahrenheit, and a third that
 converts miles to kilometers.
@@ -219,6 +223,8 @@ The template for the home page will be called `home.html` and should be in the `
   </ul>
 {% endblock %}
 ```
+
+## Creating templates for pages with user input
 
 Then you'll have three more templates for the pages where you ask the user for the input for each of these
 calculations.   Here are the first two, which you should call `ctof.html` and `ftoc.html`.  Each of these should be 
@@ -277,7 +283,9 @@ Here's `mtokm.html`
 {% endblock %}
 ```
 
-You'll now also need three templates for the HTML for the pages that come up after you do the conversion.  
+## Creating templates for the results pages
+
+Finally you'll need three templates for the HTML for the pages that come up after you do the conversions.  
 
 Those will be called `ftoc_result.html`, `ctof_result.html` and `mtokm_result.html`.  Here's what the first two 
 of those will look like:
@@ -317,6 +325,8 @@ Finally, you'll also need a `mtokm_result.html` file.    Here's a placeholder fo
 {% endblock %}
 ```
 
+## Adding a `style.css` file
+
 You should also create a subdirectory of the top of your repository called `static`, at the same level as your `hello.py` file, and as a sibling of your `templates` directory (not inside it.)
 
 Inside that folder, put a file called `style.css`.   This file will contain rules for the fonts, colors, spacing, and layout for your web page, expressed in a language called CSS, which stands for *Cascading Style Sheets*.
@@ -331,6 +341,10 @@ body {
 }
 
 ```
+
+Other things that might go into our `static` directory later on include things like images (.png, .jpg files) that we may want to display on our web pages.
+
+## Changes to `hello.py` to use templates
 
 Finally, we are ready for the changes to our `hello.py` that allow us to use these templates.
 
