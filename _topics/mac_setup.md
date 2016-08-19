@@ -24,91 +24,85 @@ You can use these machines:
 
 ## Using ACMS over ssh
 
-To use ACMS computers over ssh, the best solution we have found is called [Mobaxterm](http://mobaxterm.mobatek.net/).
+To use ACMS computers over ssh, you can just bring up the Terminal application on your Mac, and type the following
+at the command prompt.  This assumes that your spis username is `spis16xy`.  Put your own username in instead:
 
-The "MobaXterm Home Edition (Installer edition)" is free and is the best choice (as of this writing, August 2016).
+```
+ssh spis16xy@ieng6-240.ucsd.edu
+```
 
-To use it: 
-* Install it
-* Open up a new "session", and choose "ssh"
-* Fill in the host with `ieng6-240.ucsd.edu`, click the "enter username" box, and enter your `spis16xy` username (yours won't be `xy`, necessarily.  It will be whatever username you were assigned.
-* Enter your password when prompted.
+However, this method will NOT work for bringing up graphics programs such as `idle`.  You will ONLY have access to command line programs (including the command line Python prompt `python`).
+
+If you want to access IDLE, you'll need to take an additional one time step of installing XQuartz.  XQuartz provides access to the `X11 Windowing System`, which enables programs running on remote systems (e.g. the ACMS Linux systems) to get access to the screen, mouse and keyboard of another system (e.g. your Mac.)
+
+You can install XQuartz by visiting this link: [https://www.xquartz.org/](https://www.xquartz.org/)
+
+(If that installer tells you that *a reboot is required*, they aren't kidding.  It's pretty unusual for Mac OS software to require that, but in this case, it if they say it, its likely to be true.)
+
+Once you've installed XQuartz, and rebooted if necessary, you should be able to use these commands to access the ACMS systems with access to idle and other graphical tools:
+
+```
+ssh -X spis16xy@ieng6-240.ucsd.edu
+```
+
+OR 
+
+```
+ssh -Y spis16xy@ieng6-240.ucsd.edu
+```
+
+Use the `-X` version if it works for you.  If it gives you problems, sometimes the -Y version works better.
+* Don't ask why&mdash;I don't know.
+
+Also: you may get a warning: 
+
+```
+Warning: No xauth data; using fake authentication data for X11 forwarding.
+```
+
+It's always a little dicey to ignore messages like this one.  But it turns out that *most everyone does ignore this one*.
+Getting things configured to make it go away turns out to be very tricky, and system dependent.  And probably not worth it.
+
 
 # Installing Python
 
 The version of Python you want is the "latest Python 2 release" on this screen:
 
-https://www.python.org/downloads/windows/
+https://www.python.org/downloads/mac-osx/
 
-If you know you have a 64-bit machine and a 64-bit version of windows, choose the `Windows x86-64 MSI installer`.
+* Use the `Mac OS X 64-bit/32-bit installer` if you have Mac OS X 10.6 and later
+* Use the `Mac OS X 32-bit installer` *only* if you have Mac OS X 10.5
+* If you have Mac OS X 10.4 or earlier, you'll need to upgrade your Mac OS X install to a later version.
 
-Otherwise, choose the  `Windows x86 MSI installer`
 
-## Getting Python to actually work at the command prompt
+## Getting pip to actually work at the command prompt
 
-To get Python and the pip command to work at the command prompt, you may have to do one extra step.
+Python typically works immediately for Mac OS users after doing the install above. If that's not the case. 
 
-To see whether you need to do this step, bring up a Windows command prompt, and type `python`
+But pip sometimes doesn't. 
 
-If you get the Python shell, just type `quit()`.     If you don't, then you'll need to do the step below to
-add `C:\Python27\` to your `path` environment variable.    And while we are at it, we'll add `C:\Python27\Scripts`, since
-we'll need that eventually as well.
+To get pip, you can try  `sudo easy_install pip`.
 
-(This is assuming that Python has been installed to `C:\Python27`; check that first.  If Python isn't on your computer at all, try installing it again.  If it is in another
-place, use that instead of `C:\Python27 in the instructions below.)
+Try closing all open terminals, then opening one again, and seeing if `pip` works now.
 
-Also, try typing `path` at the Windows command prompt.   You'll get back output with some long thing that looks like this (the exact value will vary from system to system, and it is often considerably longer)
+If that works, great.  If not, here's a slightly more involved way that does seem to work:
 
-```
-%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\
-```
-
-What you want is to make a change so that `C:\Python27\` shows up at the end of this as well.
-
-The way you add The way it looks is slightly different on each different version of Windows.  But typically, it invovles the following steps:
-
-* Start the System Control Panel applet (Start - Settings - Control Panel - System).
-* Select the Advanced tab.
-* Click the Environment Variables button.
-* Under System Variables, select Path, then click Edit.
-
-There will be some way to add additional things into this so-called `path`.     You want to add two new things:
-
-* `C:\Python27\`
-* `C:\Python27\Scripts`
-
-Be sure that after you add these, that you click "OK", or "Save", or whatever to back your way out of the various windows and dialogs and buttons you used to get to where you added the new values.  If you use "cancel" or "click the red x", it might not save your changes, and you'll just have to do it all over again.
-
-To see whether it worked, *close and then reopen* any Windows Command Line windows you have open, and then type `path` again. See whether these two new directories appear at the end of the path:
-
-```
-%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Python27\;C:\Python27\Scripts\
-```
-
-If so, then try the `python` and `pip` commands again and see if they work.
-
-Note that on Windows, instead of `pip install --user blah` you'll probably just use `pip install blah`
-
-Try it with `pip install flask` to see if it works.
-
-## What if Python works, but pip doesn't?
-
-If the Python command works, but the pip command does not, then try this:
-
-1.  Navigate to [https://bootstrap.pypa.io/get-pip.py](https://bootstrap.pypa.io/get-pip.py) and save that file to `get-pip.py` somewhere on your computer; perhaps your Windows home folder.
-2.  In a Windows command line shell, navigate to the folder where you saved `get-pip.py`.  Run the command `python get-pip.py`
-3.  Try the `pip` command again at the Windows Command Prompt.
-
+1.  Navigate to [https://bootstrap.pypa.io/get-pip.py](https://bootstrap.pypa.io/get-pip.py) and save that file to `get-pip.py` somewhere on your computer; perhaps your home direcory or `~/Desktop`.
+2.  At command line, navigate to the folder where you saved `get-pip.py`.  Run the command `python get-pip.py`
+3.  Close your terminal, open it again and try the pip command again.
+ 
 If that still doesn't work, you may need to either:
 
 1.   Ask a mentor or instructor for help
 2.   Search the web for a solution
 
-# Getting git for windows
+# Getting git for Mac
 
-To get git for Windows, visit:
+Most version of Mac OS come with git preinstalled, so you won't have to do anything.
 
-[https://git-scm.com/download/win](https://git-scm.com/download/win)
+But if you don't have git on your system for some reason, you can install it from here:
+
+[https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 
 Download and install.  We recommend taking all of the defaults for the various options you are presented with (i.e. just keep pressing enter).
 
@@ -116,14 +110,13 @@ If you have any command line windows open, close and reopen them before trying g
 
 # Setting up the git options and ssh key on your Windows machine
 
-The steps for setting up an ssh key for your Windows machine are pretty much the same as the git steps we did
+The steps for setting up an ssh key for your Mac  are pretty much the same as the git steps we did
 for our ACMS account, documented here: [ACMS: Github one time setup](topics/acms_git_one_time_setup/), with the difference
 being that:
 
-* You type all of the commands, including the `ssh-keygen` command in the *git bash shell* that was installed
-    when you installed "Git for Windows", not in a terminal session on ACMS.
+* You type all of the commands, including the `ssh-keygen` command in a Mac terminal session, NOT on ACMS.
 * When you save the contents of the `id_rsa.pub` you generate on your laptop, it will be an *additional* key that
-    you add to your github.com account.  For the name of the key, use "My Windows Laptop" or something like that.
+    you add to your github.com account.  For the name of the key, use "My Mac" or something like that.
 
 If you use your github.com account from multiple computers and/or ACMS accounts, you'll need to add an ssh key
 for each one.
