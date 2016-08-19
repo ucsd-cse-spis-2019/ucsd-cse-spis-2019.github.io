@@ -38,7 +38,7 @@ If you know you have a 64-bit machine and a 64-bit version of windows, choose th
 
 Otherwise, choose the  `Windows x86 MSI installer`
 
-# Getting Python to actually work at the command prompt
+## Getting Python to actually work at the command prompt
 
 To get Python and the pip command to work at the command prompt, you may have to do one extra step.
 
@@ -81,7 +81,11 @@ To see whether it worked, *close and then reopen* any Windows Command Line windo
 
 If so, then try the `python` and `pip` commands again and see if they work.
 
-# What if Python works, but pip doesn't?
+Note that on Windows, instead of `pip install --user blah` you'll probably just use `pip install blah`
+
+Try it with `pip install flask` to see if it works.
+
+## What if Python works, but pip doesn't?
 
 If the Python command works, but the pip command does not, then try this:
 
@@ -93,4 +97,29 @@ If that still doesn't work, you may need to either:
 
 1.   Ask a mentor or instructor for help
 2.   Search the web for a solution
+
+# Getting git for windows
+
+To get git for Windows, visit:
+
+[https://git-scm.com/download/win](https://git-scm.com/download/win)
+
+Download and install.  We recommend taking all of the defaults for the various options you are presented with (i.e. just keep pressing enter).
+
+If you have any command line windows open, close and reopen them before trying git commands.
+
+# Setting up the git options and ssh key on your Windows machine
+
+The steps for setting up an ssh key for your Windows machine are pretty much the same as the git steps we did
+for our ACMS account, documented here: [ACMS: Github one time setup](topics/acms_git_one_time_setup/), with the difference
+being that:
+
+* You type all of the commands, including the `ssh-keygen` command in the *git bash shell* that was installed
+    when you installed "Git for Windows", not in a terminal session on ACMS.
+* When you save the contents of the `id_rsa.pub` you generate on your laptop, it will be an *additional* key that
+    you add to your github.com account.  For the name of the key, use "My Windows Laptop" or something like that.
+
+If you use your github.com account from multiple computers and/or ACMS accounts, you'll need to add an ssh key
+for each one.
+
 
