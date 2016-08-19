@@ -181,7 +181,7 @@ file, and then save it in your templates directory with the name `layout.html`.
 <!doctype html>
 <html>
   <head>
-     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <link rel="stylesheet" href="{% raw %}{{{% endraw %} url_for('static', filename='style.css') {% raw %}}}{% endraw %}">
      <title> {% raw %}{% block title %}{% endblock %}{% endraw %} - My Webpage</title>
    </head>
 
@@ -302,7 +302,7 @@ Here's `ftoc_result.html`:
 {% raw %}{%  block title %}{% endraw %}Result of converting Fahrenheit to Celsius{% raw %}{%  endblock %}{% endraw %}
 
 {% raw %}{%  block content %}{% endraw %}
-<p> In Fahrenheit: {% raw %}{{ fTemp }}{% endraw %}.  In Celsius: {{ cTemp }} </p>
+<p> In Fahrenheit: {% raw %}{{ fTemp }}{% endraw %}.  In Celsius: {% raw %}{{ cTemp }}{% endraw %} </p>
 {% raw %}{%  endblock %}{% endraw %}
 ```
 
@@ -314,7 +314,8 @@ Here's `ctof_result.html`:
 {% raw %}{%  block title %}{% endraw %}Result of converting Celsius to Fahrenheit{% raw %}{%  endblock %}{% endraw %}
 
 {% raw %}{%  block content %}{% endraw %}
-<p> In Celsius: {{ fTemp }}.  In Fahrenheit: {{ cTemp }} </p>
+<p> In Celsius: {% raw %}{{ fTemp }}{% endraw %}.  In Fahrenheit: {% raw %}{{
+ cTemp }}{% endraw %} </p>
 {% raw %}{%  endblock %}{% endraw %}
 ```
 
