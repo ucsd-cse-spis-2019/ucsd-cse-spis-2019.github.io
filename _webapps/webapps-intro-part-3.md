@@ -16,11 +16,23 @@ Outline:
 
 Please visit heroku.com and signup for a free account.  You just have to provide your name, and email, nothing more.  
 
+You can leave "company name" blank.
+
 It is probably a good idea to sign up with your ucsd.edu email, because companies such as Heroku sometimes give discounts for folks at .edu addresses, but its up to you.
 
-Once you've created your account, there will be "getting started" options.  DO NOT FOLLOW THOSE YET.  
+Once you've created your account, there will be "getting started" options.  
 
-Those are appropriate for using Heroku on your own machine, and they are appropriate for using Heroku with Django on Python.  WE AREN'T DOING EITHER OF THOSE YET!
+* If you are completing part three on ACMS: 
+    * DO NOT FOLLOW THOSE "getting started" options from the Heroku site yet.
+    * Those are appropriate for using Heroku on your own machine, and they are appropriate for using Heroku with Django on Python.  WE AREN'T DOING EITHER OF THOSE YET!
+    
+* But if you are doing the lab *directly* on your own machine:
+    * Then you will want to install the Heroku toolbelt for [Windows](https://toolbelt.heroku.com/windows), [Mac](https://toolbelt.heroku.com/osx) or [Linux](https://toolbelt.heroku.com/), as appropriate
+    * You'll also need to make sure you have [Python 2.7 on your Windows, Mac or Linux box](https://www.python.org/downloads/), and
+    * Also install git (for [Windows](Git-2.9.3-32-bit), [Mac](https://git-scm.com/download/mac) or [Linux](https://git-scm.com/download/linux).
+    * At that point, return to these instructions
+
+
 
 # Step 2:  Clone our starting code github repo
 
