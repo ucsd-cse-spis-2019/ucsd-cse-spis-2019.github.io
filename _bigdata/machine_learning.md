@@ -72,7 +72,7 @@ Implementing k-nearest neighbors in Python<br>
 
 <h2> Now let's get to the good stuff, the Minkowski Distance Metric, this big boy. </h2>
 
-<img src='http://i.stack.imgur.com/U6qGk.png' style="width: 600px">
+<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/33aa1151bd324808aeb7d7bd1262f6b8c515ec14' style="width: 600px">
 
 <p> Note: If you have not encountered the notation above for dealing with series, heres a quick and easy explanation: <a href='https://www.youtube.com/watch?v=haK3oC0L_a8'> YouTube. </a> .  </p>
 
@@ -84,5 +84,17 @@ Implementing k-nearest neighbors in Python<br>
 
 <img src='http://mines.humanoriented.com/classes/2010/fall/csci568/portfolio_exports/lguo/image/euclidean_distance.jpg' style="width: 600px">
 
-<p> And so we get a rough idea of what this formula is communicating. It is a generalization of different ways to 
+<p> And so we get a rough idea of what this formula is communicating.</p>
+
+<h1>DISTANCE. IT REVEALS A FUNDAMENTAL TRUTH ABOUT THE MEASUREMENT OF DISTANCE IN TWO DIMENSIONAL SPACE. THIS EQUATION, MINKOWSKI DISTANCE, GIVEN DIFFERENT P VALUES, REVEALS DIFFERENT POSSIBLE MEASURES OF DISTANCE, EACH OF WHICH WEIGHS THE IMPORTANCE OF THE RATIO BETWEEN X AN Y VALUES DIFFERENTLY. SOUNDS AND SEEMS COMPLICATED, BUT THE EASIEST WAY TO THINK ABOUT IT FOR MYSELF IS THAT IT IS JUST A FUNCTION THAT WILL RETURN TO YOU A DIFFERENT WAY TO MEASURE DISTANCE GIVEN DIFFERENT INPUTS. P COOL RIGHT? MATH IS BEAUTIFUL. JUST, LIKE, THIS THING, THESE COUPLE OF SYMBOLS, CONDENSE LITERALLY AN INFINITE NUMBER OF DIFFERENT WAYS TO MEASURE DISTANCE IN TWO DIMENSIONAL SPACE. HERES A PICTURE OF THESE WAYS, DEPICTED AS SHAPES, SEE HOW THE CIRCLE IS EUCLIDEAN WHEREAS THE DIAMOND IS MANHATTAN? THIS IS BECAUSE THE MEASURE OF DISTANCE IN MANHATTAN TERMS IS "TRIANGULAR", A SIMPLE ADDITION OF THE SUMS, WHEREAS THE MEASURE IN EUCLIDEAN TERMS RELIES UPON THE SQUARE ROOT OF THE SUM OF THE SQUARES, E.G. "CIRCULAR". IT IS KIND OF FUNNY TO TALK ABOUT AND IM NOT SURE THE BEST WAY TO GO ABOUT IT, BUT HOPEFULLY YOU KIND OF GET WHAT I MEAN. AT THE VERY LEAST TODAY YOU LEARNED ABOUT MINKOWSKI DISTANCE WHICH MAY OR MAY NOT BE IMPORTANT TO YOU OR YOUR FUTURE EMPLOYMENT, BUT WHO CARES LMAO? MATH IS GREAT AND THAT'S WHAT REALLY COUNTS.</h1>
+
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/2D_unit_balls.svg/2250px-2D_unit_balls.svg.png' style="width: 600px">
+
+<h1> Getting back to the topic at hand. Distance is important, especially for Data Science, as, if we want to recommend a good book to Miles Jones, our best bet is most likely to look for the person most similar to Miles, in terms of distance, and recommend a book that this "closest neighbor" liked that Miles Jones has not read. </h1>
+
+<h1> Time for the Pearson Correlation Coefficient, otherwise known as the thing I tell literally everyone about when they ask me about Data Science. </h1>
+
+<p>...</p>
+
+
 
