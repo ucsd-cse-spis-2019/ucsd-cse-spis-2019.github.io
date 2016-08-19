@@ -3,11 +3,14 @@ topic: "Python: unittest"
 desc: "module for test-driven development in Python"
 ---
 
+# Using `unittest` to test your Python code
+
 Test-driven development involves writing "unit tests" for each individual
 unit of code: typically each function definition.
 
 Unit tests, or "test cases" as they are sometimes called, are specified
 by:
+
 * Writing a function call with an actual parameter (the actual result)
 * Writing the value what we expect that function to return (the expected results)
 * *Asserting* that those are equal to each other, i.e. `actual==expected`
