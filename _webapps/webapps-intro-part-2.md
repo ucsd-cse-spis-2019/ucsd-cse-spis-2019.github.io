@@ -28,7 +28,7 @@ app.run(port=5000,debug=True)  # DO NOT do this on your ACMS ACCOUNT
 
 If you do set `debug=True`, that allows anyone that can bring up your web app to execute any line of Python code they want, but as you, in your account.  That means they could launch a spambot, delete all your files, or do something even more awful.
 
-```
+```python
 app.run(port=5000,debug=False)   # ALWAYS DO THIS when  RUNNING ON ACMS, THIS IS THE SAFE THING TO DO
 ```
 This is the safe thing to do when running on ACMS.
