@@ -3,7 +3,11 @@ topic: "Feedback lab02"
 desc: "Feedback on lab02"
 ---
 
-# Did they submit to Gradescope?
+# Feedback on lab02
+
+Here's what to look for when giving feedback on lab02 (a pair lab.)
+
+## Did they submit to Gradescope?
 
 This is the first thing to check.  If they did, and if they got a perfect score, add a congratulations in their feedback
 repo.  Everything else is an additional sanity check after that.  
@@ -16,11 +20,11 @@ as your login.  If you haven't logged in before, you may need to ask for a passw
 
 You should have access to the SPIS 2016 course in Gradescope.
 
-# Did they submit as a team in Gradescope?
+## Did they submit as a team in Gradescope?
 
 It is possible that only one pair partner submitted for the team.  There is a way for them to create teams of two in Gradescope, but it may not have been clear to them how to do this.  If they didn't submit as a team, check why.
 
-# Does the repo they created have the correct name?
+## Does the repo they created have the correct name?
 
 The should have created a repo with the name listed in this spreadsheet (private to mentors only):
 
@@ -33,7 +37,7 @@ If the name is not correct, you won't be able to find it by clicking on the link
 Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2016>, type "lab02" in the search box,
 and look through to see if you can find the repo. 
 
-# Does the repo contain the right files?
+## Does the repo contain the right files?
 
 The files should be:
 
@@ -44,13 +48,13 @@ The files should be:
 
 If they dont have the right files, or the file names are wrong, provide some feedback on that.
 
-#  tempFuncs.py: two function definitions
+##  tempFuncs.py: two function definitions
 
 Check that tempFuncs.py has function definitions for both `ftoc` and `ctof`
 
 These are pretty straightforward, so there probably isn't much you can say, unless you see something that jumps out at you.
 
-# test_tempFuncs.py
+## test_tempFuncs.py
 
 They were supposed to add four tests for ctof that were NOT in the starter code so that there are nine tests in all.  
 
@@ -73,6 +77,6 @@ $ python test_tempFuncs.py
 Ran 9 tests in 0.000s
 
 OK
-```
 $
+```
 
