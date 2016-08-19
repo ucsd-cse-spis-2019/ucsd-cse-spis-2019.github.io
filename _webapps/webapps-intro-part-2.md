@@ -314,7 +314,7 @@ Here's `ctof_result.html`:
 {% raw %}{%  block title %}{% endraw %}Result of converting Celsius to Fahrenheit{% raw %}{%  endblock %}{% endraw %}
 
 {% raw %}{%  block content %}{% endraw %}
-<p> In Celsius: {% raw %}{{ fTemp }}{% endraw %}.  In Fahrenheit: {% raw %}{{ cTemp }}{% endraw %} </p>
+<p> In Celsius: {% raw %}{{ cTemp }}{% endraw %}.  In Fahrenheit: {% raw %}{{ fTemp }}{% endraw %} </p>
 {% raw %}{%  endblock %}{% endraw %}
 ```
 
