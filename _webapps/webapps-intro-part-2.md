@@ -195,6 +195,7 @@ file, and then save it in your templates directory with the name `layout.html`.
 This file `layout.html` defines a template for every page of your web application. 
 
 There are two parts of this file that are, strictly speaking, not HTML code. Those are:
+
 * `{% raw %}{%  block title %}{% endraw %}{% raw %}{%  endblock %}{% endraw %}` 
 * `{% raw %}{%  block content %}{% endraw %}{% raw %}{%  endblock %}{% endraw %}` 
 
