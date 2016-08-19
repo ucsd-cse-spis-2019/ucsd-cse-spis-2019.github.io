@@ -3,6 +3,11 @@ topic: "Windows: Python and git setup "
 desc: "Getting your windows laptop setup to do Python and git"
 ---
 
+
+This article describes setting up your Windows laptop for SPIS.
+* For Mac OS, visit: [Mac OS: Python and git setup](/topics/mac_setup/).  
+* For Linux, visit [Linux: Python and git setup](/topics/linux_setup/).
+
 # Setting up your Windows Computer
 
 You don't really need a laptop to participate in SPIS.  Most of the work for SPIS will be done on the ACMS machines in B230.
