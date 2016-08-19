@@ -4,6 +4,7 @@ desc: "Getting your Mac OS laptop setup to do Python and git"
 ---
 
 This article describes setting up your Mac OS laptop for SPIS.
+
 * For Windows, visit: [Windows: Python and git setup](/topics/windows_setup/).  
 * For Linux, visit [Linux: Python and git setup](/topics/linux_setup/).
 
