@@ -30,7 +30,12 @@ Once you've created your account, there will be "getting started" options.
     * Then you will want to install the Heroku toolbelt for [Windows](https://toolbelt.heroku.com/windows), [Mac](https://toolbelt.heroku.com/osx) or [Linux](https://toolbelt.heroku.com/), as appropriate
     * You'll also need to make sure you have [Python 2.7 on your Windows, Mac or Linux box](https://www.python.org/downloads/), and
     * Also install git (for [Windows](Git-2.9.3-32-bit), [Mac](https://git-scm.com/download/mac) or [Linux](https://git-scm.com/download/linux).
+    * Finally, be sure that you have set up an ssh key *for your laptop* (this is separate from when you did it for your
+        ACMS acccount), and upload that key to github.com.  Instructions are here: 
+        [git one time setup](http://ucsd-cse-spis-2016.github.io/topics/acms_git_one_time_setup/), but do these
+        directly on your laptop at the shell prompt, not on ACMS (all the same steps.)
     * At that point, return to these instructions
+    
 
 
 
