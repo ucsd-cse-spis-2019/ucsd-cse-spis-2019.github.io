@@ -94,7 +94,7 @@ Implementing k-nearest neighbors in Python<br>
 
 <h1> Time for the Pearson Correlation Coefficient, otherwise known as the thing I tell literally everyone about when they ask me about Data Science. </h1>
 
-<p>...</p>
+<p> CAPS LOCK IS CRUISE CONTROL FOR COOL.</p>
 
-
+<p> So people are different, and rate things differently. I might rate things on a scale of 1 to 10, whereas Harambe might only rate them on a scale of 4 to 5. So things aren't objective. How do data scientists deal with this "grade inflation?" As with anything dank, there is a math equation. The Pearson Correlation Coefficient describes the similarity of two people for whom the grading scale is subjective. It is pretty sick, but before I get into it, lets get into some dank memes. </p>
 
