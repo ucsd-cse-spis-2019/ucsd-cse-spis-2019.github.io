@@ -21,7 +21,7 @@ As you work through the steps below, you may find it helpful to refer to:
     <Fill this in>
 
 
-# Step 1: Create a lab09 repo
+# Step 1: Create a lab10 repo
 
 Go to github.com and create a new repo called spis16-lab10-Name-Name using Method 1. When creating the repo import the starter code from this git repo: FILL THIS IN
 
