@@ -1,6 +1,6 @@
 ---
-topic: "Webapps: Advanced Topics"
-desc: "Stuff that is beyond the basics"
+topic: "Github API"
+desc: "Accessing Github from a webapp (or, any app for that matter)"
 ---
 
 # Accessing Github resources from a webapp
