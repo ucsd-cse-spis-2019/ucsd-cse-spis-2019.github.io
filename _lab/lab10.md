@@ -93,6 +93,8 @@ write this code in idle:
                     'Year': 2009}}
                     
 ```
+If you like the way that looks then you may use it to look at data for the rest of this lab and really for any time you 
+use a dictionary!!!!
 
 ## Why typing `cardata` and hitting return is a bad idea
 
