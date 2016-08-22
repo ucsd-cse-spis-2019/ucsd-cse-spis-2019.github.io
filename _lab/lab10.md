@@ -100,7 +100,7 @@ assign a variable to cardata[0] like this
 >>> car0 = cardata[0]
 ```
 
-* Exercise: What would you write to output the year of this particular car?
+* Exercise 1: What would you write to output the year of this particular car?
 
 ## What to do with a list of integers
 
@@ -111,7 +111,7 @@ In order to be able to answer these types of questions, we need to be able to wo
 Your task is to write functions that will take as their parameter, `cardata` and return various things. Then we will plot 
 certain things about these cars.
 
-* Exercise:
+* Exercise 2:
  Write a function `def Horsepower(cardata):` in your file called car_analysis.py that returns a list of integers of horsepowers for each car in the list `cardata`.
 
 Set HP_list = Horsepower(cardata). It should be a list of integers. Try the following commands:
@@ -152,7 +152,7 @@ We put in the `len` function to be sure that it will have the same length as HP_
 So, in your python shell write
 
 ```python
-plt.scatter(HP_list,range(len(HP_list)))
+plt.scatter(range(len(HP_list)),HP_list)
 ```
 
 It should output something like
@@ -274,55 +274,104 @@ plt.ylabel('Number of cars')
 plt.xlabel('Horsepower')
 plt.savefig('Histogram_HP')
 ```
-Save this picture by 
+This picture will be saved in your repo.
 
-2. `def beersRatedFive(data):` returns a list of strings, which are the names of the beers that 
-    are rated 5.0 (exactly).   Ideally, your function should NOT include any duplicates.  That is, if a particular beer
-    has been rated 5.0 by more than one reviewer, the beer should still appear in the list only once.
+* Exercise 4: Write a function `def MPG(cardata):` in your file called `car_analysis.py` that returns a list of integers of 'Highway MPG' for each car in the list `cardata`. Assign `MPG_list = MPG(cardata)`. Make a histogram of `MPG_list` with 25 bins just as we did for
+`HP_list` and save the figure as `Histogram_MPG`.
+(Remember to histogramify your data and label your axes and title.)
 
-3. `def reviewerToAgeInSeconds(data):` returns a dictionary (the regular kind, not a `defaultdict` where
-    the keys are the `user/profileName` values from `data`, and the values are the `user/ageInSeconds` values for each of those users.   Note that a user may appear more than once if they wrote more than one review.  We are going to
-    assume that the ages are all the same, even if that isn't the case.  And, note that a dictionary already gets
-    rid of duplicates, since if you update a value for a key that already exists, it just overwrites the old value,
-    rather than creating a duplicate entry. Note, though, that not every review has a value for age.  So, if you encounter
-    a review where the user/ageInSeconds is not present, you'll need to set the value for that user to the special
-    Python value `None`.
+## More than one set of data.
 
-4. `def ageInSecondsToAgeInYears(seconds)` should convert age in seconds to age in years.  Note that with age, we
-     don't round up.  If you are 20 years and 355 days old, you are still "age 20", not "age 21".
+Right now, we have two lists of data i.e. `HP_list` and `MPG_list`. It could be that there is a relation between these two values.
+What do you think the relationship is?
 
-5.  `def reviewerToAgeInYears(data):` should provide a dictionary that maps reviewer name (those are the keys) to 
-    reviewer age in years.  In your solution, please make use of the `ageInSecondsToAgeInYears(seconds)` function 
-    that you wrote in a previous step.
+It's hard to say without looking at the data. It's hard to read if you look at the actual numbers so instead let's plot the data
+as a scatter plot. Run this code:
 
-6.  `def averageReviewerAge(reviewerAgeDict)` should take, as its parameter, the result of calling `reviewerToAgeInYears`,
-     that is, a dictionary that maps reviewer names to reviewer ages.   It should return the average age, in years, of
-     a reviewer, as a floating point number (that is, the average age could be `27.6` years, for example.)  As a hint:
-     if you have a dictionary foo, you can get a list of all of its value by 
+```python
+plt.scatter(HP_list,MPG_list)
+plt.title('Horsepower vs MPG')
+plt.ylabel('Highway MPG')
+plt.xlabel('Horsepower')
+plt.savefig('scatter_HP_MPG')
 
-7.  `def beerToNumReviews(data)` should return a `defaultdict(int)` where the keys are `beer/name`, 
-    and the values are a count
-    of how many reviews appear for that beer.   
+```
 
-8.  `def beerToListOfReviews(data)` should return a `defaultdict(list)` where the keys are `beer/name`, 
-    and the value for each key is a list of all of the individual `review/overall` values for that beer.  These lists
-    may indeed contain duplicates if multiple reviewers rated a beer the same.
+What do you see? It looks as though the more horsepower you have, the less MPG your car gets.
+Does this make sense? As scientists, it is important to think about your results and see if they make sense. 
+This is where some hypotheses come from.
 
-9.  `def beerToAvgReview(data)` should return a dictionary (the regular kind)
-    where they keys are `beer/name`, and each value is average
-    rating for that beer.  You should make use of the `beerToNumReviews(data)` and `beerToListOfReviews(data)`
+It would be nice to have some numbers to describe this relation and not just qualitative descriptions.
 
+We are going to use the library called numpy. It has many uses, especially for statistics and mathematics. 
+We are only going to use one function called `numpy.linalg.lstsq(X,y)`
 
-When you have written definitions for each of these functions, you can test them in either, or preferably both, of the following ways:
+What it does is give you the equation of a line that "best fits" the data. What does that mean? Well, it means that
+it is the line that has the least sum of squares of errors. This is important but we will not discuss this here. This
+space is to practice using the computer where least squares error is mathematics. (Don't worry, we'll discuss it in lecture ;)
 
-* running the test cases you came up with in your `test_my_analysis.py` file
-* call the functions on the value `data`, inside your `if __name__ == '__main__'` block, and print out the results.
-* call the functions interactively on the value `data` using the Python shell prompt.
+What this function does is output 4 values. The first value is all that we need. It will be a pair of numbers. These numbers
+are the b and m values in the equation of a line y = mx+b.
 
-For each function, when you are satisfied that *that* function is working, do the steps to commit your changes to github:
+What are the inputs X and y? X is a list of pairs that look like this [1,HP] and y is a list of MPG. In fact, y is just the
+list `MPG_list`.
+
+Let's define `X` as
+
+```python
+import numpy
+X = [[1,h] for h in HP_list]
+y = MPG_list
+numpy.linalg.lstsq(X,y)
+```
+After calling the last line, you should have an output like this
+
+```python
+(array([  3.68625612e+01,  -3.62427603e-02]), array([ 13404.2422533]), 2, array([ 8784.95244788,    12.94173734]))
+```
+The first "array" contains two values, these are the b and m of y=mx+b.
+I want to assign a value to just the first element of this and let's call it theta. 
+
+```python
+theta = numpy.linalg.lstsq(X,y)[0]
+```
+
+Then we will plot the line
+
+```python
+xs = range(min(HP_list),max(HP_list))
+ys = [theta[1]*x + theta[0] for x in xs]
+plt.plot(xs,ys)
+plt.show()
+```
+
+It should just give you a line. This line does not mean much on its own. Let's plot it with the scatter plot
+
+```python
+plt.plot(xs,ys)
+plt.scatter(HP_list,MPG_list)
+plt.title('horsepower versus mpg')
+plt.ylabel('Highway MPG')
+plt.xlabel('Horsepower')
+plt.show()
+```
+
+Save this figure as `HP_MPG_line`
+
+What we have done is made a very simple predictor. What we can do with it is predict your car's MPG, given its horsepower.
+It is not a perfect predictor but maybe it is pretty good. Make a function to predict this.
+
+```python
+def cars_MPG_given_HP(horsepower):
+	return theta[1]*horsepower+theta[0]
+```
+
+If you know the horsepower of your car or of a family car, plug it into the function and see what MPG your car should get!!!
+
+After each exercise, commit your changes to github:
 
 * `git add my_analysis.py`
 * `git commit -m "AB/CD describe which function you worked on here"`
 * `git push origin master`
 
-When they all work, you are done with lab09!
+Make sure you have saved all the figures specified and completed all the functions in your `car_analysis.py` file.
