@@ -378,3 +378,9 @@ After each exercise, commit your changes to github:
 * `git push origin master`
 
 Make sure you have saved all the figures specified and completed all the functions in your `car_analysis.py` file.
+
+----
+
+Sample Image (this is just for practice:)
+
+![sample](spis_logo.jpg)
