@@ -93,41 +93,59 @@ Note here that each entry of cardata is actually a dictionary of dictionaries.
 For the last one, you should get type int. If we are interested in Horsepower, we must
 look through each dictionary until we find it.
 
-assign a variable to cardata[0] like this
+assign a variable to cardata[0] like this:
 
 ```python
 >>> car0 = cardata[0]
 ```
 
-# Exercise 1: What would you write to output the year of this particular car?
+# Exercise 1
 
-## What to do with a list of integers
+Given the code from above, that is:
 
-Let's create a new file called `car_analysis.py`.
+```python
+>>> car0 = cardata[0]
+```
+
+what would you write to output the year of this particular car?
+
+Once you determine the answer, you can use that answer to fill in the code for the function `def yearOfCar(car)` in the
+file `car_analysis.py` that is part of the starter code in your repo.
+
+Please fill in that function before continuing.  Then test it with:
+
+```python
+>>> car0 = cardata[0]
+>>> yearOfCar(car0)
+(the year of the car should appear here)
+```
+
+# What to do with a list of integers
+
 
 In order to be able to answer these types of questions, we need to be able to work with the data in various ways.  One of our most basis tools is to reduce the data down to a simpler form: for example, instead of a list of dictionaries, just a list of numbers.
 
 Your task is to write functions that will take as their parameter, `cardata` and return various things. Then we will plot 
-certain things about these cars.
+certain things about these cars.   The remainder of the lab walks you through doing just that.
 
-# Exercise 2
+# Exercise 2: `horsepower` function
 
 Write a function `def horsepower(cardata):` in your file called `car_analysis.py` that returns a list of integers of horsepowers for each car in the list `cardata`.
 
-Set `HP_list = horsepower(cardata)`. It should be a list of integers. Try the following commands:
+Set `hp_list = horsepower(cardata)`. It should be a list of integers. Try the following commands:
 
 ```
-type(HP_list)
-min(HP_list)
-max(HP_list)
+type(hp_list)
+min(hp_list)
+max(hp_list)
 ```
 
 Do those seem like reasonable values? If not, maybe you should try your list again.
 
-## Plotting Data
+# Plotting Data
 
-The next thing we will do is plot the data HP_list. We are going to use the library matplotlib. It can do a variety 
-of visualizations, you may remember in Miles's class last week some of the uses of matplotlib. For example, 
+The next thing we will do is plot the data `hp_list`. We are going to use the library `matplotlib`. It can do a variety 
+of visualizations, you may remember in Miles's class last week some of the uses of `matplotlib`. For example, 
 you can plot a scatter plot, a line plot and a bar chart among other things. In this lab, we will be plotting all of those things.
 
 Type this into your car_analysis.py file:
@@ -140,19 +158,19 @@ This is a way of giving a nickname to a library so that whenever you call matplo
 This is a standard convention for this specific library. If you are interested in more applications of
 matplotlib.pyplot, most of the literature will use this convention.
 
-Let's plot HP_list as a scatter plot.
+Let's plot `hp_list` as a scatter plot.
 
 The scatter plot plt.scatter(xs,ys) takes two lists of numbers (integers or floats) where each list is of equal length 
 and it plots a point at each coordinate xs[i],ys[i].
 
-HP_list is only one list so we are going to have to make up another list so that we can plot it.
-The other list we will use is the list `range(len(HP_list))`. This is a list of integers [0,1,...,len(HP_list)-1].
-We put in the `len` function to be sure that it will have the same length as HP_list.
+`hp_list` is only one list so we are going to have to make up another list so that we can plot it.
+The other list we will use is the list `range(len(hp_list))`. This is a list of integers `[0,1,...,len(hp_list)-1]`.
+We put in the `len` function to be sure that it will have the same length as `hp_list`.
 
 So, in your python shell write
 
 ```python
-plt.scatter(range(len(HP_list)),HP_list)
+plt.scatter(range(len(hp_list)),hp_list)
 ```
 
 It should output something like
@@ -228,7 +246,7 @@ and the values are how many data points fall in that "bin".
 We are going to use histogramify to plot a histogram of the horsepower data.
 Assign 
 ```python
-hist_HP = histogramify(HP_list,25)
+hist_HP = histogramify(hp_list,25)
 ```
 
 We are going to plot a bar chart, plt.bar(xs,ys) takes two lists of data, each the same length where the height of the bar at 
@@ -236,10 +254,10 @@ xs[i] is ys[i].
 
 I am going to show you how to make the lists.
 ```python
-xs = range(min(HP_list),max(HP_list))
+xs = range(min(hp_list),max(hp_list))
 ```
 The x axis represents the actual horsepower values so we want xs to range through each value.
-The y axis represents the number of cars with horsepower in a specific range. hist_HP holds all of that data 
+The y axis represents the number of cars with horsepower in a specific range. `hist_HP` holds all of that data 
 in a defaultdict format so if you input a key that hasn't been assigned, it will give you a value of 0.
 However all other keys that have been assigned will give you the amount of cars that have horsepower in that range.
 
@@ -277,19 +295,19 @@ plt.savefig('Histogram_HP')
 This picture will be saved in your repo.
 
 * Exercise 4: Write a function `def MPG(cardata):` in your file called `car_analysis.py` that returns a list of integers of 'Highway MPG' for each car in the list `cardata`. Assign `MPG_list = MPG(cardata)`. Make a histogram of `MPG_list` with 25 bins just as we did for
-`HP_list` and save the figure as `Histogram_MPG`.
+`hp_list` and save the figure as `Histogram_MPG`.
 (Remember to histogramify your data and label your axes and title.)
 
 ## More than one set of data.
 
-Right now, we have two lists of data i.e. `HP_list` and `MPG_list`. It could be that there is a relation between these two values.
+Right now, we have two lists of data i.e. `hp_list` and `MPG_list`. It could be that there is a relation between these two values.
 What do you think the relationship is?
 
 It's hard to say without looking at the data. It's hard to read if you look at the actual numbers so instead let's plot the data
 as a scatter plot. Run this code:
 
 ```python
-plt.scatter(HP_list,MPG_list)
+plt.scatter(hp_list,MPG_list)
 plt.title('Horsepower vs MPG')
 plt.ylabel('Highway MPG')
 plt.xlabel('Horsepower')
@@ -320,7 +338,7 @@ Let's define `X` as
 
 ```python
 import numpy
-X = [[1,h] for h in HP_list]
+X = [[1,h] for h in hp_list]
 y = MPG_list
 numpy.linalg.lstsq(X,y)
 ```
@@ -339,7 +357,7 @@ theta = numpy.linalg.lstsq(X,y)[0]
 Then we will plot the line
 
 ```python
-xs = range(min(HP_list),max(HP_list))
+xs = range(min(hp_list),max(hp_list))
 ys = [theta[1]*x + theta[0] for x in xs]
 plt.plot(xs,ys)
 plt.show()
@@ -349,7 +367,7 @@ It should just give you a line. This line does not mean much on its own. Let's p
 
 ```python
 plt.plot(xs,ys)
-plt.scatter(HP_list,MPG_list)
+plt.scatter(hp_list,MPG_list)
 plt.title('horsepower versus mpg')
 plt.ylabel('Highway MPG')
 plt.xlabel('Horsepower')
