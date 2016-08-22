@@ -1,6 +1,6 @@
 ---
 layout: lab
-num: lab09
+num: lab10
 ready: false
 desc: "Data analysis and plotting"
 assigned: 2016-08-17 13:15:00.00-7
