@@ -98,8 +98,7 @@ assign a variable to cardata[0] like this
 
 ```
 python
-
-car0 = cardata[0]
+>>> car0 = cardata[0]
 ```
 
 *What would you write to output the year of this particular car?
