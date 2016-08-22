@@ -186,11 +186,21 @@ This will generate a scatter plot with your title. Notice that in your idle, the
 To get back to that, you must close the picture. If you would like to save that picture for later, then you
 could click the little disk image on the bottom of the picture.
 
-Go ahead and click on it and save it into your repo.
+There is another way to save the image. That is to write
+```python
+plt.savefig('filename')
+```
+and it will save the plot as the 'filename' in the same repo that you started in.
 
-Go ahead and close the picture so that you can return to idle.
+Both plt.show() and plt.savefig('filename') "reset" the plot and it will start fresh the next time you define a plot.
+
 What happens if you write plt.show() again?
 Nothing! It is because now the plot has been erased. You must build another plot every time.
+
+* Go ahead and make the plot again on your own, and instead of writing plt.show(), write plt.savefig('scatter_HP') and it will
+save it as that name.
+
+
 
 ## Histograms
 
@@ -249,8 +259,29 @@ plt.show()
 
 If you have done it right, you should get something that looks like
 
+FILL IN PICTURE
 
+Notice that the bars are really thin. The default width is set to 1. So let's change the width. The way to do that is to add another
+argument to plt.bar
 
+So now call
+
+```python
+plt.bar(xs,ys,20)
+plt.show()
+```
+It should have made the bars wider.
+
+Now, let's make a histogram with a title and labels for the x-axis and y-axis
+
+```python
+plt.bar(xs,ys,20)
+plt.title('Histogram of Horsepower Data')
+plt.ylabel('Number of cars')
+plt.xlabel('Horsepower')
+plt.savefig('Histogram_HP')
+```
+Save this picture by 
 
 2. `def beersRatedFive(data):` returns a list of strings, which are the names of the beers that 
     are rated 5.0 (exactly).   Ideally, your function should NOT include any duplicates.  That is, if a particular beer
