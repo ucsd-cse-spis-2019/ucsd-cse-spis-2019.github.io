@@ -96,8 +96,7 @@ look through each dictionary until we find it.
 
 assign a variable to cardata[0] like this
 
-```
-python
+```python
 >>> car0 = cardata[0]
 ```
 
