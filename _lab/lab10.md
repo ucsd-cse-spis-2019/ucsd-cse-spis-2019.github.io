@@ -102,23 +102,13 @@ assign a variable to cardata[0] like this
 
 *What would you write to output the year of this particular car?
 
+## What to do with a list of integers
+
 Let's create a new file called `car_analysis.py'.
-
-In that file, put this code:
-
-
-
-
-
-Now that we see how to look at the data, we might want to actually calculate some things from this data.
-
-For example:
-
-
 
 In order to be able to answer these types of questions, we need to be able to work with the data in various ways.  One of our most basis tools is to reduce the data down to a simpler form: for example, instead of a list of dictionaries, just a list of numbers.
 
-Your task is to write functions that will take as their parameter, `data` and return various things
+Your task is to write functions that will take as their parameter, `cardata` and return various things
 
 Here is a list of the functions you should write.  Add each of these to your `car_analysis.py` file.
 
@@ -129,8 +119,138 @@ real value of `cardata`, so that you can predict, by hand, what the results of t
 
 You can then write test cases for the functions, following the examples of test cases that you saw in [lab06](/lab/lab06).
 
-1. `def beerUserRating(data):` returns a list of Python tuples, where each tuple
-   consists of three values: the `beer/name`, `user/profileName`, and the `review/overall` value for each review in the list `data`.
+Write a function `def Horsepower(cardata):` that returns a list of integers of horsepowers for each car in the list `cardata`.
+
+Set HP_list = Horsepower(cardata). It should be a list of integers. Try the following commands:
+
+type(HP_list)
+
+min(HP_list)
+
+max(HP_list)
+
+Do those seem like reasonable values? If not, maybe you should try your list again.
+
+## Plotting Data
+
+The next thing we will do is plot the data HP_list. We are going to use the library matplotlib. It can do a variety 
+of visualizations, you may remember in Miles's class last week some of the uses of matplotlib. For example, 
+you can plot a scatter plot, a line plot and a bar chart among other things. In this lab, we will be plotting all of those things.
+
+Type this into your car_analysis.py file:
+
+``` python
+import matplotlib.pyplot as plt
+```
+
+This is a way of giving a nickname to a library so that whenever you call matplotlib.pyplot, you only have to write plt.
+This is a standard convention for this specific library. If you are interested in more applications of
+matplotlib.pyplot, most of the literature will use this convention.
+
+Let's plot HP_list as a scatter plot.
+
+The scatter plot plt.scatter(xs,ys) takes two lists of numbers (integers or floats) where each list is of equal length 
+and it plots a point at each coordinate xs[i],ys[i].
+
+HP_list is only one list so we are going to have to make up another list so that we can plot it.
+The other list we will use is the list `range(len(HP_list))`. This is a list of integers [0,1,...,len(HP_list)-1].
+We put in the `len` function to be sure that it will have the same length as HP_list.
+
+So, in your python shell write
+
+```python
+plt.scatter(HP_list,range(len(HP_list)))
+```
+
+It should output something like
+
+```python
+<matplotlib.collections.PathCollection object at 0x00000000096B4EB8>
+```
+
+This is just saying that it has built your plot but it hasn't actually shown you yet because you may add
+things to the plot if you like. for example, you could write
+
+```python
+plt.title('Horsepower of cars in cardata')
+```
+
+and it will add a title to the plot.
+Let's view the plot that we made
+
+```python
+plt.show()
+```
+
+This will generate a scatter plot with your title. Notice that in your idle, the >>> hasn't reappeared. 
+To get back to that, you must close the picture. If you would like to save that picture for later, then you
+could click the little disk image on the bottom of the picture.
+
+Go ahead and click on it and save it into your repo.
+
+Go ahead and close the picture so that you can return to idle.
+What happens if you write plt.show() again?
+Nothing! It is because now the plot has been erased. You must build another plot every time.
+
+## Histograms
+
+This scatter plot that we made is kind of a mess. There is a much better way to visualize a list of numbers as an image.
+It is called a Histogram. Basically, a histogram is a bar chart of ranges where the height of the bar is based on how many 
+data points fall into that range.
+
+add this function into your car_analysis.py file
+
+```python
+from collections import defaultdict
+
+def histogramify(data,bins):
+	M = max(data)
+	m = min(data)
+	interval = (M-m)/bins
+	hist = defaultdict(int)
+	for d in data:
+		for i in range(bins):
+			if d>m+i*interval:
+				f=m+i*interval
+		hist[f]+=1
+	return hist
+```
+
+This is a function that takes as an input a list of data `data` and the number of bins `bins`. The number of bins will
+evenly divide the set of values into that many ranges. For example, if the maximum of your list is 200 and the minimum is
+100 and bins is ten, then histogramify will split your data range into 10 equal "bins" i.e. 100-110,111-120,121-130,...etc.
+Then it will output a defaultdict where the keys and values are both integers. The keys are the lower bound of each "bin"
+and the values are how many data points fall in that "bin".
+
+We are going to use histogramify to plot a histogram of the horsepower data.
+Assign 
+```python
+hist_HP = histogramify(HP_list,25)
+```
+
+We are going to plot a bar chart, plt.bar(xs,ys) takes two lists of data, each the same length where the height of the bar at 
+xs[i] is ys[i].
+
+I am going to show you how to make the lists.
+```python
+xs = range(min(HP_list),max(HP_list))
+```
+The x axis represents the actual horsepower values so we want xs to range through each value.
+The y axis represents the number of cars with horsepower in a specific range. hist_HP holds all of that data 
+in a defaultdict format so if you input a key that hasn't been assigned, it will give you a value of 0.
+However all other keys that have been assigned will give you the amount of cars that have horsepower in that range.
+
+```python
+ys = [hist_HP[x] for x in xs]
+
+plt.bar(xs,ys)
+plt.show()
+```
+
+If you have done it right, you should get something that looks like
+
+
+
 
 2. `def beersRatedFive(data):` returns a list of strings, which are the names of the beers that 
     are rated 5.0 (exactly).   Ideally, your function should NOT include any duplicates.  That is, if a particular beer
