@@ -269,7 +269,7 @@ plt.show()
 
 If you have done it right, you should get something that looks like
 
-FILL IN PICTURE
+![horsepower histogram](Histogramlab10.PNG)
 
 Notice that the bars are really thin. The default width is set to 1. So let's change the width. The way to do that is to add another
 argument to plt.bar
