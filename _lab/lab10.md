@@ -100,7 +100,7 @@ assign a variable to cardata[0] like this
 >>> car0 = cardata[0]
 ```
 
-*What would you write to output the year of this particular car?
+* Exercise: What would you write to output the year of this particular car?
 
 ## What to do with a list of integers
 
