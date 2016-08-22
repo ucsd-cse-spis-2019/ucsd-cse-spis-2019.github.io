@@ -383,4 +383,4 @@ Make sure you have saved all the figures specified and completed all the functio
 
 Sample Image (this is just for practice:)
 
-![sample](spis_logo.jpg)
+![sample](SPIS_logo.jpg)
