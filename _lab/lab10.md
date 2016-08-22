@@ -76,147 +76,58 @@ If we want to see all the pieces of data that we can access for a car, we can ju
 >>> 
 ```
 
-Or, if I want to see just the keys in the dictionary, I can use `data[0].keys()`
+Or, if I want to see just the keys in the dictionary, I can use `cardata[0].keys()`
 
 ```python
->>> data[0].keys()
-['beer/style', 'beer/ABV', 'beer/beerId', 'review/timeStruct', 'review/aroma', 'review/appearance', 'review/timeUnix', 'review/palate', 'review/taste', 'beer/name', 'beer/brewerId', 'review/overall', 'review/text', 'user/profileName']
+>>> cardata[0].keys()
+['Engine Information', 'Identification', 'Dimensions', 'Fuel Information']
 >>> 
 ```
 
-If I wanted to see a list of the names, overall scores, and the review name for the first 10 beers in the list, I could use this:
+Note here that each entry of cardata is actually a dictionary of dictionaries.
+
+1. Type `type(cardata[0])`.
+1. Type `type(cardata[0]['Engine Information'])`.
+1. Type `cardata[0]['Engine Information'].keys()')`.
+1. Type `type(cardata[0]['Engine Inoformation']['Engine Statistics']['Horsepower'])`.
+
+For the last one, you should get type int. If we are interested in Horsepower, we must
+look through each dictionary until we find it.
+
+assign a variable to cardata[0] like this
 
 ```
->>> for i in range(10):
-	print data[i]['beer/name'],data[i]['review/overall'],data[i]['user/profileName']
+python
 
-	
-Amstel Malt 3.0 Brabander
-Amstel Malt 3.5 kingcrowing
-Harboe Den Glada Danskens Lättöl 2.0 gnoff
-Harboe Den Glada Danskens Lättöl 2.0 bark
-Bernard S &#269;istou Hlavou 2.0 philipquarles
-Juleøl 4.5 jreitman
-Mørkt Hvidtøl 3.5 bark
-Buckler 3.0 drabmuh
-Buckler 4.5 McStagger
-Buckler 3.0 jifigz
->>> 
+car0 = cardata[0]
 ```
 
-However, very quickly, doing this kind of thing at the command line is going to get very tedious.
+*What would you write to output the year of this particular car?
 
-You are going to get very tired of typing these long strings over and over. You'll want to define some convenient
-functions to work with this data.   
-
-So, using IDLE, create a new file called `my_analysis.py'.
+Let's create a new file called `car_analysis.py'.
 
 In that file, put this code:
 
-```python
-from non_alcoholic_data import parseData
-
-def reviewSummary(review):
-    return "beer name: " + review['beer/name'] + \
-           " overall: " + str(review['review/overall']) + \
-           " reviewer: " + review['user/profileName']
 
 
-if __name__ == "__main__":
 
-  print "Reading Data..."
-  data = list(parseData("http://jmcauley.ucsd.edu/cse255/data/beer/non-alcoholic-beer.json"))
-
-  for i in range(10):
-    print reviewSummary(data[i])
-
-  print "done"
-```
-
-The function definition `reviewSummary` provides a way to print out three particular fields, in this case:
-* `beer/name`
-* `review/overall`
-* `user/profileName`
-
-And, it customizes the label that appears next to each of those so that we can make more sense of the data
-we are looking at.   
-
-```
-Reading Data...
-review                                          beer name             reviewer
-beer name: Amstel Malt overall: 3.0 reviewer: Brabander
-beer name: Amstel Malt overall: 3.5 reviewer: kingcrowing
-beer name: Harboe Den Glada Danskens Lättöl overall: 2.0 reviewer: gnoff
-beer name: Harboe Den Glada Danskens Lättöl overall: 2.0 reviewer: bark
-beer name: Bernard S &#269;istou Hlavou overall: 2.0 reviewer: philipquarles
-beer name: Juleøl overall: 4.5 reviewer: jreitman
-beer name: Mørkt Hvidtøl overall: 3.5 reviewer: bark
-beer name: Buckler overall: 3.0 reviewer: drabmuh
-beer name: Buckler overall: 4.5 reviewer: McStagger
-beer name: Buckler overall: 3.0 reviewer: jifigz
-done
-```
-
-However, it is still a bit messy.  To make it neater, we can decide that we want the data
-to show up in some nicely aligned columns.  Here is some code that prints a few fields from the first ten review in some nice columns:
-
-```python
-def niceReviewSummary(review):
-    return str(review['review/overall']).rjust(5) + \
-           review['beer/name'].rjust(50) + \
-           review['user/profileName'].rjust(20)
-
-
-if __name__ == "__main__":
-
-  print "Reading Data..."
-  data = list(parseData("http://jmcauley.ucsd.edu/cse255/data/beer/non-alcoholic-beer.json"))
-
-  print  "review".rjust(5), "beer name".rjust(50), "reviewer".rjust(20)
-  for i in range(10):
-    print niceReviewSummary(data[i])
-
-  print "done"
-```
-
-Now the output looks like this:
-
-```
-Reading Data...
-review                                          beer name             reviewer
-  3.0                                       Amstel Malt           Brabander
-  3.5                                       Amstel Malt         kingcrowing
-  2.0                Harboe Den Glada Danskens Lättöl               gnoff
-  2.0                Harboe Den Glada Danskens Lättöl                bark
-  2.0                      Bernard S &#269;istou Hlavou       philipquarles
-  4.5                                           Juleøl            jreitman
-  3.5                                   Mørkt Hvidtøl                bark
-  3.0                                           Buckler             drabmuh
-  4.5                                           Buckler           McStagger
-  3.0                                           Buckler              jifigz
-done
-```
 
 Now that we see how to look at the data, we might want to actually calculate some things from this data.
 
 For example:
 
-* We might want to be able to filter out reviews based on whether or not we know the age of the reviewer.
-* We might want to make a list of just the ages of the reviewers.  
-   * Once we have just *that* list, we might want to do some things with it.
-* We might want to know what highest rated and lowest rated beers are.
-* etc.
+
 
 In order to be able to answer these types of questions, we need to be able to work with the data in various ways.  One of our most basis tools is to reduce the data down to a simpler form: for example, instead of a list of dictionaries, just a list of numbers.
 
-Your task is to write functions that will take as their parameter, `data`, the result that is returned by the `parseData` function, and then return various things.
+Your task is to write functions that will take as their parameter, `data` and return various things
 
-Here is a list of the functions you should write.  Add each of these to your `my_analysis.py` file.
+Here is a list of the functions you should write.  Add each of these to your `car_analysis.py` file.
 
-You are also encouraged to write a file `test_my_analysis.py`, containing tests for your functions.
+You are also encouraged to write a file `test_car_analysis.py`, containing tests for your functions.
 
-To test these functions, you'd make your own values for `data`, that contain probably far fewer reviews than the
-real value of `data`, so that you can predict, by hand, what the results of the functions would be.
+To test these functions, you'd make your own values for `cardata`, that contain probably far fewer reviews than the
+real value of `cardata`, so that you can predict, by hand, what the results of the functions would be.
 
 You can then write test cases for the functions, following the examples of test cases that you saw in [lab06](/lab/lab06).
 
