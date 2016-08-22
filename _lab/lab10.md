@@ -104,22 +104,15 @@ assign a variable to cardata[0] like this
 
 ## What to do with a list of integers
 
-Let's create a new file called `car_analysis.py'.
+Let's create a new file called `car_analysis.py`.
 
 In order to be able to answer these types of questions, we need to be able to work with the data in various ways.  One of our most basis tools is to reduce the data down to a simpler form: for example, instead of a list of dictionaries, just a list of numbers.
 
-Your task is to write functions that will take as their parameter, `cardata` and return various things
+Your task is to write functions that will take as their parameter, `cardata` and return various things. Then we will plot 
+certain things about these cars.
 
-Here is a list of the functions you should write.  Add each of these to your `car_analysis.py` file.
-
-You are also encouraged to write a file `test_car_analysis.py`, containing tests for your functions.
-
-To test these functions, you'd make your own values for `cardata`, that contain probably far fewer reviews than the
-real value of `cardata`, so that you can predict, by hand, what the results of the functions would be.
-
-You can then write test cases for the functions, following the examples of test cases that you saw in [lab06](/lab/lab06).
-
-Write a function `def Horsepower(cardata):` that returns a list of integers of horsepowers for each car in the list `cardata`.
+* Exercise:
+ Write a function `def Horsepower(cardata):` in your file called car_analysis.py that returns a list of integers of horsepowers for each car in the list `cardata`.
 
 Set HP_list = Horsepower(cardata). It should be a list of integers. Try the following commands:
 
