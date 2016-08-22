@@ -99,7 +99,7 @@ assign a variable to cardata[0] like this
 >>> car0 = cardata[0]
 ```
 
-* Exercise 1: What would you write to output the year of this particular car?
+# Exercise 1: What would you write to output the year of this particular car?
 
 ## What to do with a list of integers
 
@@ -110,16 +110,17 @@ In order to be able to answer these types of questions, we need to be able to wo
 Your task is to write functions that will take as their parameter, `cardata` and return various things. Then we will plot 
 certain things about these cars.
 
-* Exercise 2:
- Write a function `def Horsepower(cardata):` in your file called car_analysis.py that returns a list of integers of horsepowers for each car in the list `cardata`.
+# Exercise 2
 
-Set HP_list = Horsepower(cardata). It should be a list of integers. Try the following commands:
+Write a function `def horsepower(cardata):` in your file called `car_analysis.py` that returns a list of integers of horsepowers for each car in the list `cardata`.
 
+Set `HP_list = horsepower(cardata)`. It should be a list of integers. Try the following commands:
+
+```
 type(HP_list)
-
 min(HP_list)
-
 max(HP_list)
+```
 
 Do those seem like reasonable values? If not, maybe you should try your list again.
 
