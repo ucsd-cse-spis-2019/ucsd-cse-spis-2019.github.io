@@ -17,12 +17,11 @@ As you work through the steps below, you may find it helpful to refer to:
 
 * the notes from the lecture Miles gave on Wednesday 08/17, 
     which can be found here: [Transcript of Python Shell Session](/lectures/week3/Lecture-08-17.txt){: data-ajax="false"}
-* The pages on the SPIS 2016 website about:
-    Fill this in
 
 # Step 1: Create a lab10 repo
 
-Go to github.com and create a new repo called spis16-lab10-Name-Name using Method 1. When creating the repo import the starter code from this git repo: FILL THIS IN
+Go to github.com and create a new repo called spis16-lab10-Name-Name using Method 1. When creating the repo import the starter code from this git repo:
+* https://github.com/ucsd-cse-spis-2016/lab10-startercode
 
 Then use `git clone` to clone this into your `~/github` directory.
 
