@@ -18,8 +18,7 @@ As you work through the steps below, you may find it helpful to refer to:
 * the notes from the lecture Miles gave on Wednesday 08/17, 
     which can be found here: [Transcript of Python Shell Session](/lectures/week3/Lecture-08-17.txt){: data-ajax="false"}
 * The pages on the SPIS 2016 website about:
-    <Fill this in>
-
+    Fill this in
 
 # Step 1: Create a lab10 repo
 
