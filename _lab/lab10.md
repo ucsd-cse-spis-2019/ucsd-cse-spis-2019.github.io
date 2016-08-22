@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab10
-ready: false
+ready: true
 desc: "Data analysis and plotting"
 assigned: 2016-08-17 13:15:00.00-7
 due: 2016-08-22 16:45:00.00-7
