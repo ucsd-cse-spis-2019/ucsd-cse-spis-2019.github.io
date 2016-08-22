@@ -57,6 +57,43 @@ For the result of `type(cardata[0])` you should have gotten `dict`, which stands
 If you need a review about Python dictionaries, you can consult the lecture notes from either Phill or Miles, or you can
 review this page: [Python: Dictionaries](/topics/python_dictionaries)
 
+When you type `cardata[0]`, it may look a little messy to you. A way to see the data in a more attractive way is to use
+the library `pprint` which stands for pretty print.
+
+write this code in idle:
+
+```python
+>>> cardata[0]
+>>> import pprint
+>>> pprint.pprint(cardata[0])
+
+>>> cardata[0]
+{'Engine Information': {'Transmission': '6 Speed Automatic Select Shift', 'Engine Type': 'Audi 3.2L 6 cylinder 250hp 236ft-lbs', 'Engine Statistics': {'Horsepower': 250, 'Torque': 236}, 'Hybrid': False, 'Number of Forward Gears': 6, 'Driveline': 'All-wheel drive'}, 'Identification': {'Make': 'Audi', 'Model Year': '2009 Audi A3', 'ID': '2009 Audi A3 3.2', 'Classification': 'Automatic transmission', 'Year': 2009}, 'Dimensions': {'Width': 202, 'Length': 143, 'Height': 140}, 'Fuel Information': {'Highway mpg': 25, 'City mph': 18, 'Fuel Type': 'Gasoline'}}
+
+
+>>> import pprint
+>>> pprint.pprint(cardata[0])
+
+
+{'Dimensions': {'Height': 140, 'Length': 143, 'Width': 202},
+ 'Engine Information': {'Driveline': 'All-wheel drive',
+                        'Engine Statistics': {'Horsepower': 250,
+                                              'Torque': 236},
+                        'Engine Type': 'Audi 3.2L 6 cylinder 250hp 236ft-lbs',
+                        'Hybrid': False,
+                        'Number of Forward Gears': 6,
+                        'Transmission': '6 Speed Automatic Select Shift'},
+ 'Fuel Information': {'City mph': 18,
+                      'Fuel Type': 'Gasoline',
+                      'Highway mpg': 25},
+ 'Identification': {'Classification': 'Automatic transmission',
+                    'ID': '2009 Audi A3 3.2',
+                    'Make': 'Audi',
+                    'Model Year': '2009 Audi A3',
+                    'Year': 2009}}
+                    
+```
+
 ## Why typing `cardata` and hitting return is a bad idea
 
 The reason is simple: cardata is a *huge* list.   It takes a very long time to convert that list into its string representation and then print it out in your IDLE Python Shell.     While it is doing that string conversion, your entire
