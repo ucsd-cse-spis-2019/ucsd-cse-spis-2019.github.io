@@ -368,6 +368,9 @@ def cars_MPG_given_HP(horsepower):
 
 If you know the horsepower of your car or of a family car, plug it into the function and see what MPG your car should get!!!
 
+* Exercise 5: plot the scatterplot of the horsepower vs the torque. Run the numpy.linalg.lstsq to get theta[0] and theta[1] so that you can plot the "best fit" line on the same plot as the scatter plot. Name your title and axes and save the figure as `Torque_HP_plot` in 
+your repo.
+
 After each exercise, commit your changes to github:
 
 * `git add my_analysis.py`
