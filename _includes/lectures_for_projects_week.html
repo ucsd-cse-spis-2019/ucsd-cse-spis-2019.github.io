@@ -3,7 +3,7 @@
 <ul>
   {% for item in site.lectures %}
   {% if item.week == include.week %}
-  <li {% if item.indent %} style="margin-left:3em;" {% endif %} >
+  <li {% if item.indent %} class="indent" {% endif %} >
     {% if item.link_topic_desc_only %}
       <a href="{{ item.url }}">{{ item.topic }}</a>&mdash;{{ item.desc }}
     {% else %}

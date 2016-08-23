@@ -74,7 +74,7 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
  <h3>Web Apps</h3>
  <ul>
  {% for item in site.webapps %}
-   <li><a href="{{item.url}}">{{item.topic}}&mdash;{{item.desc}}</a></li>
+   <li {% if item.indent %} class="indent" {% endif %} ><a href="{{item.url}}">{{item.topic}}&mdash;{{item.desc}}</a></li>
  {% endfor %}
  </ul>
  </div>
