@@ -69,7 +69,7 @@ Jinja2==2.8
 MarkupSafe==0.23
 Werkzeug==0.10.4
 wheel==0.24.0
-gunicorn=19.3.0
+gunicorn==19.3.0
 [spis15t7@ieng6-240]:512$ 
 ```
 

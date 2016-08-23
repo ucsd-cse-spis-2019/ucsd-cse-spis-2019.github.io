@@ -1,6 +1,6 @@
 ---
 topic: "Feedback lab03"
-desc: "Feedback on lab03: DIBA TODO"
+desc: "Feedback on lab03: by Diba"
 ---
 
 feedback_lab03.md
@@ -20,7 +20,7 @@ Open the lab03.py file on github and provide your feedback by just looking throu
 
 * Check to see if the students have attempted to draw rounded letters instead of block style letters. If so acknowledge their effort in the feedback.
 
-You are not required to check whether the trigonometry in the student code checks outs. Just that the code is readable and well organized.
+You are not required to check whether the trigonometry in the student code checks outs. Just that the code is readable and well organized. However, if you find that the lab was not completed, please reach out to the pair to find out of what they had difficulty with.
 
 
 
