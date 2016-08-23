@@ -25,9 +25,9 @@ Go to github.com and create a new repo called spis16-lab10-Name-Name using Metho
 
 Then use `git clone` to clone this into your `~/github` directory.
 
-# Step 2: Work with the file `cardata.py` file
+# Step 2: Work with the file `car_analysis.py` file
 
-In the starter code, you'll find the file `cardata.py`.   Open this file in IDLE, and run it.
+In the starter code, you'll find the file `car_analysis.py`.   Open this file in IDLE, and run it.
 
 This file loads a variable into memory called `cardata`.  That `cardata` variable is list of dictionaries.
 
@@ -40,7 +40,7 @@ Let's explain two things right away:
 
 ## What you should do instead
 
-Here are several things you can do after running the `cardata.py` file with the `cardata` variable that are
+Here are several things you can do after running the `car_analysis.py` file with the `cardata` variable that are
 perfectly fine:
 
 1. Type `type(cardata)`.
