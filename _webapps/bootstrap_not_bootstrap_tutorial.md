@@ -17,7 +17,72 @@ indent: true
 </style>
 
 
-# Under Construction :)
+# Building the navbar from scratch
+Setting up the navbar is quick and dirty when copy pasting code from the
+Bootsrap termplates. However, here we will take a little more time to dig deep
+into the how the navbar is created. 
+
+The navbar used on this
+[website](http://webapps-flask-bootstrap-demo.herokuapp.com) from the
+Flask-Bootrap tutorial uses code directly from
+[bootstrap](http://getbootstrap.com/components/#navbar). If we were to inspect
+the code on the example site, or view the docs on bootstrap, this is the first
+line that we would see:
+
+```html
+<nav class="navbar navbar-default">
+```
+
+From this line we can gather that there's a "<nav>" tag in HTML. The bootstrap
+nav tag uses classes `navbar` and `navbar-default`. We have neither of these
+written for us so instead, we'll write them later oursleves. 
+
+```html
+<nav class="navbar navbar-default">
+   <a href="/page1">Page 1</a> |
+   <a href="/page2">Page 2</a> 
+</nav> 
+```
+
+By inserting the code above between our <body> tags we can retain the same
+functionality as the the bootstrap navbar we implemented in the Flask-Bootstrap 
+demo, and you can see it in action [here](https://basic-navbar.herokuapp.com).
+
+~~~
+In the demo site, as well as the basic navbar site, the html code above is
+actually written in the navbar.html in the templates folder
+~~~
+
+And with just a few more lines of CSS, we'll be able to make our navbar much
+more presentable. But what is CSS? To put it simply: CSS describes properties
+for HTML elements; telling the browser details of how something should be
+displayed. Although, this could be accomplished within the HTML file itself, the
+implementation of the style sheets allows the user to implement the rules
+without repeating herself/himself. 
+
+#### How to include a CSS file
+Inserting a CSS file is done using the link attribute. In the <head> section of HTML
+file, insert the following code:
+
+```html
+<link rel="stylesheet" href="{_{ url_for('static', filename='navbar.css') }}">
+```
+
+Note: href may change based on where the css is placed. Format of href link may
+also vary. Oh and ignore the underscore between the two brackets. Temporary fix
+to keep the link from disappearing because I'm too tired for a clever solution.
+
+#### Writing the CSS file
+Now, there's wasn't really any point in giving the nav bar two classes for out
+intent and purposes. So, in the static folder (because that's where our link is
+pointing, we're going to create navbar.css. To properly define a class we
+write its properties in the squigly brackets following its name, which is
+written with a period "." in *....and I'm asleep*
+
+
+
+
+# The Rest is Under Construction :)
 ![under construction](http://www.animatedgif.net/underconstruction/5consbar2_e0.gif)
 
 # What is BootStrap?
@@ -69,38 +134,6 @@ vitae, massa wisi vel maecenas. Enim sed, interdum justo pede id nisl ut. A eget
 ipsum orci etiam.
 
 
-
-# Building the navbar from scratch
-Setting up the navbar is quick and dirty when copy pasting code from the
-Bootsrap termplates. However, here we will take a little more time to dig deep
-into the how the navbar is created. 
-
-The navbar used on this
-[website](http://webapps-flask-bootstrap-demo.herokuapp.com) from the
-Flask-Bootrap tutorial uses code directly from
-[bootstrap](http://getbootstrap.com/components/#navbar). If we were to inspect
-the code on the example site, or view the docs on bootstrap, this is the first
-line that we would see:
-
-```html
-<nav class="navbar navbar-default">
-```
-
-From this line we can gather that there's a "<nav>" tag in HTML. The bootstrap
-nav tag uses classes `navbar` and `navbar-default`. We have neither of these
-written for us so instead, we'll write them later oursleves. 
-
-```html
-<nav class="navbar navbar-default">
-   <a href="/page1">Page 1</a> |
-   <a href="/page2">Page 2</a> 
-</nav> 
-```
-
-Insert that code between your <body> tags. Now if you were to run this, you
-would essentially have the same functionality as the bootstrap navbar we have
-implemented in the Flask-Bootstrap demo, and you can see it in action
-[here](https://basic-navbar.herokuapp.com).
 
 <!--- happy comments for myself 
 
