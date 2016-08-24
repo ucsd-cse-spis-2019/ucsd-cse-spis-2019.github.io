@@ -277,7 +277,9 @@ def histogramify(data,bins):
 	hist = defaultdict(int)
 	for d in data:
 		for i in range(bins):
-			if d>m+i*interval:
+			
+			#This line originally said: if d>m+i*interval:
+			if d>m+i*interval and d<=m+(i+1)*interval:
 				f=m+i*interval
 		hist[f]+=1
 	return hist
