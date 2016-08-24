@@ -11,7 +11,7 @@ Here' s the so-called "Flask Megatutorial" with many advanced topics that you co
 
 * [http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
-Among other topics, this page explores working with a database in Flask.
+Among other topics, this page explores working with a database in Flask on Heroku.  See [this article](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud)
 
 
 # Storing Data
