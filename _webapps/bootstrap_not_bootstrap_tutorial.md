@@ -20,10 +20,7 @@ indent: true
 # Under Construction :)
 ![under construction](http://www.animatedgif.net/underconstruction/5consbar2_e0.gif)
 
-```html
-<h1> <blink> What is BootStrap? </blink></h1>
-
-```
+# What is BootStrap?
 
    [BootStrap](http://getbootstrap.com) is comprised of HTML, CSS
    and JavaScript presets used to create responsive websites that work
