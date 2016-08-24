@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab11
-ready: false
+ready: true
 desc: "Project Planning"
 assigned: 2016-08-24 10:15:00.00-7
 due: 2016-08-24 15:00:00.00-7
