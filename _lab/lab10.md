@@ -71,8 +71,13 @@ write this code in idle:
 >>> pprint.pprint(cardata[0])
 
 >>> cardata[0]
-{'Engine Information': {'Transmission': '6 Speed Automatic Select Shift', 'Engine Type': 'Audi 3.2L 6 cylinder 250hp 236ft-lbs', 'Engine Statistics': {'Horsepower': 250, 'Torque': 236}, 'Hybrid': False, 'Number of Forward Gears': 6, 'Driveline': 'All-wheel drive'}, 'Identification': {'Make': 'Audi', 'Model Year': '2009 Audi A3', 'ID': '2009 Audi A3 3.2', 'Classification': 'Automatic transmission', 'Year': 2009}, 'Dimensions': {'Width': 202, 'Length': 143, 'Height': 140}, 'Fuel Information': {'Highway mpg': 25, 'City mph': 18, 'Fuel Type': 'Gasoline'}}
-
+{'Engine Information': {'Transmission': '6 Speed Automatic Select Shift', 'Engine Type': 
+'Audi 3.2L 6 cylinder 250hp 236ft-lbs', 'Engine Statistics': {'Horsepower': 250, 'Torque':
+236}, 'Hybrid': False, 'Number of Forward Gears': 6, 'Driveline': 'All-wheel drive'}, 
+'Identification': {'Make': 'Audi', 'Model Year': '2009 Audi A3', 'ID': '2009 Audi A3 3.2',
+'Classification': 'Automatic transmission', 'Year': 2009}, 'Dimensions': {'Width': 202, 
+'Length': 143, 'Height': 140}, 'Fuel Information': {'Highway mpg': 25, 'City mph': 18, 
+'Fuel Type': 'Gasoline'}}
 
 >>> import pprint
 >>> pprint.pprint(cardata[0])
@@ -438,8 +443,4 @@ After each exercise, commit your changes to github:
 
 Make sure you have saved all the figures specified and completed all the functions in your `car_analysis.py` file.
 
-----
 
-Sample Image (this is just for practice:)
-
-![sample](SPIS_logo.jpg)
