@@ -1,7 +1,7 @@
 ---
-topic: "Anything but BootStrap Tutorial"
-desc: "Learning to use anything but bootstrap for front end design, and making
-website that have personality."
+topic: "Anything but Bootstrap Tutorial"
+desc: "Learning front end design from the ground up, and making
+websites that have personality."
 indent: true
 ---
 
