@@ -98,3 +98,5 @@ Implementing k-nearest neighbors in Python<br>
 
 <p> So people are different, and rate things differently. I might rate things on a scale of 1 to 10, whereas Harambe might only rate them on a scale of 4 to 5. So things aren't objective. How do data scientists deal with this "grade inflation?" As with anything dank, there is a math equation. The Pearson Correlation Coefficient describes the similarity of two people for whom the grading scale is subjective. It is pretty sick, but before I get into it, lets get into some dank memes. </p>
 
+<img src='https://s-media-cache-ak0.pinimg.com/564x/f1/4e/16/f14e1605521c8b37db3dc7e290bb51a4.jpg' style="width: 100vw">
+
