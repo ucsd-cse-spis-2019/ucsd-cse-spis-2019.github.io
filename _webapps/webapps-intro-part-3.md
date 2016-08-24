@@ -164,4 +164,4 @@ Converting a Flask app you already developed that does NOT YET use Heroku into o
 
 Fortunately, this is not difficult. It involves, pretty much, just creating two files: Procfile and requirements.txt ,and including those in the root directory of your github repo.
 
-We'll discuss how to do that in our next lesson, Web Apps Intro (part 4)
+We'll discuss how to do that in our next lesson, [Web Apps Intro (part 4)](/webapps/webapps-intro-part-4/)
