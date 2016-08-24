@@ -47,13 +47,13 @@ Note that before you do the next step, you should do the following `pip install`
 pip install --user gunicorn
 ```
 
-We *can* create the file `requirements.txt` with this command:
+We  <span style="font-weight:bold; font-size: 110%; color:red;">can</span> create the file `requirements.txt` with this command:
 
 ```
 pip freeze > requirements.txt
 ```
 
-**BUT** "pip freeze" outputs the installed packages in the requirements format. However, over the course of SPIS, we have installed many packages, and the list is very *very* long; also heroku does not like some of the packages.
+ <span style="font-weight:bold; font-size: 110%; color:red;">But we won't do that! Because</span> "pip freeze" outputs the installed packages in the requirements format. However, over the course of SPIS, we have installed many packages, and the list is very *very* long; also heroku does not like some of the packages.
 
 **Instead**, go ahead and and type "idle requirements.txt" into the command line, and paste this into the file:
 
