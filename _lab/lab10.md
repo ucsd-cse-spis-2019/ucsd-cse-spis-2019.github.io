@@ -43,6 +43,9 @@ Let's explain two things right away:
 Here are several things you can do after running the `car_analysis.py` file with the `cardata` variable that are
 perfectly fine:
 
+1. Type `cardata = cars.get_cars()` to set up the variable `cardata`.  
+     * You might want to just add that line of code immediately after the `if __name__==`__main__`: line, before
+       the `print` statement, so that it always sets up the `cardata` variable when you run the file.
 1. Type `type(cardata)`.
 1. Type `len(cardata)`
 1. Type `cardata[0]`
