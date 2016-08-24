@@ -47,22 +47,17 @@ Note that before you do the next step, you should do the following `pip install`
 pip install --user gunicorn
 ```
 
-We create the file `requirements.txt` with this command:
+We *can* create the file `requirements.txt` with this command:
 
 ```
 pip freeze > requirements.txt
 ```
 
-We can see whether it worked by typing:
+**BUT** "pip freeze" outputs the installed packages in the requirements format. However, over the course of SPIS, we have installed many packages, and the list is very *very* long; also heroku does not like some of the packages.
+
+**Instead**, go ahead and and type "idle requirements.txt" into the command line, and paste this into the file:
 
 ```
-cat requirements.txt
-```
-
-It should look something like this (the exact list may differ, and the numbers may differ.  It is important that gunicorn is in the list though.)
-
-```
-[spis15t7@ieng6-240]:511$ cat requirements.txt 
 Flask==0.10.1
 itsdangerous==0.24
 Jinja2==2.8
@@ -70,10 +65,11 @@ MarkupSafe==0.23
 Werkzeug==0.10.4
 wheel==0.24.0
 gunicorn==19.3.0
-[spis15t7@ieng6-240]:512$ 
 ```
 
-So now lets push that to github as well:
+We now have a list of packages our program needs to run. 
+
+Go ahead and save that file, and now lets push that to github as well:
 
 ```
 git add requirements.txt
