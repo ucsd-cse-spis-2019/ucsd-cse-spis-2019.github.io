@@ -44,7 +44,7 @@ that the template designers never intended for them to keep around forever.
 
 # What could I do instead?
 
-Sim has been working on a tutorial called [Anything but Bootstrap](/topics/bootstrap_not_bootstrap_tutorial/).   It is possible to acheive common navigation very similar to, or
+Sim has been working on a tutorial called [Anything but Bootstrap](/webapps/bootstrap_not_bootstrap_tutorial/).   It is possible to acheive common navigation very similar to, or
 perhaps even superior to, the common navigation in the Bootstrap example explained above.
 
 One advantage of using Sim's tutorial (vs. the Bootstrap method above) is that you'll have a much deeper understanding of HTML, CSS, etc.
