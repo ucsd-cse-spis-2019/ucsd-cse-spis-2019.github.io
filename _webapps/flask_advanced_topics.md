@@ -14,3 +14,9 @@ Here' s the so-called "Flask Megatutorial" with many advanced topics that you co
 Among other topics, this page explores working with a database in Flask.
 
 
+# Storing Data
+
+Options:
+
+* SQL Database.  See the database secton of the [Flask Megatutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+* MongoDB.  See: [Getting Started with MongoDB (Python Edition)](https://docs.mongodb.com/getting-started/python/)
