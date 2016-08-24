@@ -55,7 +55,7 @@ pip freeze > requirements.txt
 
  <span style="font-weight:bold; font-size: 110%; color:red;">But we won't do that! Because</span> "pip freeze" outputs the installed packages in the requirements format; however, over the course of SPIS, we have installed **many** packages, and the list is very *very* long; also heroku does not like some of the packages.
 
-**Instead**, go ahead and create a file called "requirements.txt" <spoiler>hint: you can do this by typing "idle requirements.txt"</spoiler> into the command line, and paste this into the file:
+**Instead**, go ahead and create a file called "requirements.txt" `(hint: you can do this by typing "idle requirements.txt")` into the command line, and paste this into the file:
 
 ```
 Flask==0.10.1
