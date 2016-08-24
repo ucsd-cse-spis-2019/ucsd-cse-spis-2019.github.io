@@ -102,7 +102,8 @@ written for us so instead, we'll write them later oursleves.
 
 Insert that code between your <body> tags. Now if you were to run this, you
 would essentially have the same functionality as the bootstrap navbar we have
-implemented in the Flask-Bootstrap demo, and you can see it in action here. 
+implemented in the Flask-Bootstrap demo, and you can see it in action
+[here](https://basic-navbar.herokuapp.com).
 
 <!--- happy comments for myself 
 
