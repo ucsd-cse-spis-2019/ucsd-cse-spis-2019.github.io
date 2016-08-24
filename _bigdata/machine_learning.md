@@ -99,4 +99,28 @@ Implementing k-nearest neighbors in Python<br>
 <p> So people are different, and rate things differently. I might rate things on a scale of 1 to 10, whereas Harambe might only rate them on a scale of 4 to 5. So things aren't objective. How do data scientists deal with this "grade inflation?" As with anything dank, there is a math equation. The Pearson Correlation Coefficient describes the similarity of two people for whom the grading scale is subjective. It is pretty sick, but before I get into it, lets get into some dank memes. </p>
 
 <img src='https://s-media-cache-ak0.pinimg.com/564x/f1/4e/16/f14e1605521c8b37db3dc7e290bb51a4.jpg' style="width: 100vw">
+<img src='http://media.lolusercontent.com/api/embedly/1/image/resize?url=http%3A%2F%2Fimgur.com%2Fy1JvdCP.jpg&key=a45e967db0914c7fb472fd4381e6c85b&width=425' style="width: 100vw">
+<img src='https://img.ifcdn.com/images/8a607a62f1caa8eb22410cda40d962766c4a7838675dcde3a6a1dfc14828fac7_1.jpg' style="width: 100vw">
 
+<h1> That's good, now let's get into some real stuff familia. The Pearson Correlation Coefficient: </h1>
+
+<img src='http://ww2.tnstate.edu/ganter/BIO311-Ch12-Eq8.gif' style="width: 100vw">
+
+<p> This equation will pop out a number betweeen -1 and 1, with 0 being no correlation between two people's subjective ratings and 1 being a really high correlation. Negative one is a really high correlation of disagreement. Simply put, if I rate this on a scale of 4 and 5, whereas you rate things on a scale from one to five, we can be in really good agreement, even if our scales are different, really good disagreement, or not really compatible measurements. This, of course, allows us to make measures of similarity even with skewed data. </p>
+
+<h1> HOWEVER, THE EQUATION ABOVE IS REALLY A PAIN TO COMPUTE, SO WE WILL USE THIS ONE INSTEAD. </h1>
+
+<img src='https://lh6.googleusercontent.com/7DYEG48coma6lbAYYa7K-tz9SuBbF0Aw3N8tGtZ9zSepsoIxkwh4Ix9C0i2o6iqwS-QuX68TsrFQarQ=w1366-h680' style="width: 100vw">
+
+<h1> LMAOOOOOOOO!!! </h1>
+
+<p> Kay, don't be scared. We're going to walk through what this means. But then again, I'm v lazy so I'm going to steal an explanation from another book, and then explain "why" it works. </p> 
+
+
+<img src='https://lh6.googleusercontent.com/i0xsJq1BLsb_ZEJCn--CwEdzSIWsG6SqLRJeaC3H9-pA3BhGErx8Ozm6O0yfErxrBc-qDuSTMmWb6WQ=w1366-h680' style="width: 100vw">
+
+<img src='https://lh5.googleusercontent.com/vDom8SrjUwKH_0a9j1MddRcrKzvNfgyP0HTqkVVtgXv3skoCctOnRxVrxEuWkqAzyL_bWBZROVyZxDQ=w1366-h680' style="width: 100vw">
+
+<img src='https://lh4.googleusercontent.com/VApkEmNaSGDdoHXGj5YQLn853beDBoqgWAY5Rr2ptC9BXzngpPokAcCMYJCbskH0N1j9K0CUTYuJYMw=w1366-h680' style="width: 100vw">
+
+<img src='https://lh3.googleusercontent.com/BW6jI29YHLCciQxS8gecmC-ksL-TrR7Z9Gd37DlUnCSNTSn3WNUDhtkRyovyT9rn-fgVh_-wFbp2cR4=w1366-h680' style="width: 100vw">
