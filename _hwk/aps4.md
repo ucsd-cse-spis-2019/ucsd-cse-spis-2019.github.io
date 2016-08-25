@@ -1,7 +1,7 @@
 ---
 num: "aps4"
 desc: "Iterative Improvement"
-ready: false
+ready: true
 assigned: 2016-08-24 08:45:00.00-7:00
 due: 2016-08-27 21:00:00.00-7:00
 resubmit: 2016-08-30 22:00:00.00-7:00
