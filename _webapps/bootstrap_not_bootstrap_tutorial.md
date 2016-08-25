@@ -18,7 +18,7 @@ indent: true
 
 
 # Building the navbar from scratch
-Setting up the navbar is quick and dirty when copy pasting code from the
+[Setting up](https://github.com/ucsd-cse-spis-2016/navbar_starter_code) the navbar is quick and dirty when copy pasting code from the
 Bootsrap termplates. However, here we will take a little more time to dig deep
 into the how the navbar is created. 
 
