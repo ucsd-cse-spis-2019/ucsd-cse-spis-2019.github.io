@@ -37,10 +37,14 @@ From this line we can gather that there's a "<nav>" tag in HTML. The bootstrap
 nav tag uses classes `navbar` and `navbar-default`. We have neither of these
 written for us so instead, we'll write them later oursleves. 
 
+Within the nav tags, we can insert <a> elements, which are hyper links to other
+pages. We will also give them the class "button" and write it later.
+
 ```html
 <nav class="navbar navbar-default">
-   <a href="/page1">Page 1</a> |
-   <a href="/page2">Page 2</a> 
+   <a class="button" href="/">Home</a> 
+   <a class="button" href="/page1">Page 1</a> |
+   <a class="button" href="/page2">Page 2</a> 
 </nav> 
 ```
 
@@ -68,6 +72,9 @@ file, insert the following code:
 <link rel="stylesheet" href="{_{ url_for('static', filename='navbar.css') }}">
 ```
 
+Once the CSS code is added, this is what the final result will be a [slightly
+better navbar](https://slightly-better-navbar.herokuapp.com)
+
 Note: href may change based on where the css is placed. Format of href link may
 also vary. Oh and ignore the underscore between the two brackets. Temporary fix
 to keep the link from disappearing because I'm too tired for a clever solution.
@@ -79,8 +86,12 @@ pointing, we're going to create navbar.css. To properly define a class we
 write its properties in the squigly brackets following its name, which is
 written with a period "." in *....and I'm asleep*
 
+OKAY IM AWAKE. There's a great explanation of class vs ID in you starter files.
 
+#####What are the properties of the navbar that will make it look better?
 
+There's many ways to approach this. And different property settings may result
+in the same navbar.
 
 # The Rest is Under Construction :)
 ![under construction](http://www.animatedgif.net/underconstruction/5consbar2_e0.gif)
