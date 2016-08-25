@@ -14,5 +14,5 @@ Here is an overview, followed by more specific information about each one.
 
 * New York Times Data Journalism: [http://www.nytimes.com/section/upshot](http://www.nytimes.com/section/upshot)
 * Nate Silver's Election analysis and more: [http://fivethirtyeight.com/](http://fivethirtyeight.com/)
-* 
+
 * Reddit Data Visualization: [https://www.reddit.com/r/dataisbeautiful/](https://www.reddit.com/r/dataisbeautiful/)
