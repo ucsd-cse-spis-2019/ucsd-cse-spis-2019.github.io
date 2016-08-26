@@ -68,14 +68,19 @@ We simply type `import requests`, then assign a variable to the result of `reque
 where `url` is a Python string with a web address.  For example:
 
 ```
->>> import requests
->>> result = requests.get("https://www.reddit.com/r/ucsd.json")
+import requests
+result = requests.get("https://www.reddit.com/r/ucsd.json")
 ```
 
 Note: If you get an error "too many requests", you may need to set a custom "user-agent".  Here is an article that
 explains the process: [Python: Requests: User-Agent](/topics/python-requests-user-agent.md)
 
+The short version is that you should write your request like this, except put your name where it says your-name-here.   If that doesn't fix the problem, see the   [Python: Requests: User-Agent](/topics/python-requests-user-agent.md) article for more detail.
 
+```python
+import requests
+result = requests.get("http://www.reddit.com/r/ucsd.json", headers = {'User-agent': 'spis16 your-name-here'})
+```
 
 Now, if we type `result.text`, we get the entire contents of that web page (in this case, all the JSON that
 was returned.   I'm not showing the whole thing, because it is enormous.  Here are just the first 100 characters:
