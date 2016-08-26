@@ -314,6 +314,7 @@ On that page, among other things, we learn that `t3` is the type for links.   Le
 ```
 
 This finally looks like something that might be useful.  In fact, this represents a single Reddit Post.   A few of the things we might be interested in right away are the values with these keys:
+
 * `u'title'`
 * `u'url'`
 
