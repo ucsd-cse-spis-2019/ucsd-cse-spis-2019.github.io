@@ -1,4 +1,3 @@
-
 ---
 topic: "Notes from August 25th "
 desc: " How to look at Word Vectors"
