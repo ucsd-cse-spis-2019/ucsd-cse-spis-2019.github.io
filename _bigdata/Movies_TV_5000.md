@@ -3,7 +3,7 @@ topic: "Parse Data Python "
 desc: " An Example Script"
 ---
 
-'''python
+'''Python
 import urllib
 
 def parseData(fname):
