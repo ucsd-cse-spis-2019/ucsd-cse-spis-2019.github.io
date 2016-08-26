@@ -1,7 +1,7 @@
 
 ---
-topic: "Notes from 8/25 "
-desc: " Sentiment Analysis"
+topic: "Notes from August 25th "
+desc: " How to look at Word Vectors"
 ---
 
 ```python
