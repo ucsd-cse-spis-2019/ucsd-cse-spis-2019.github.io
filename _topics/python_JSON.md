@@ -334,3 +334,115 @@ u'https://www.reddit.com/r/UCSD/comments/4cgr1w/new_student_qa_2016/'
 ```
 
 The `&amp;` is HTML for the `&` symbol.  So when this appears on a web page, it will simply appear as `New Student Q&A 2016`.    
+# Another useful tool for working with JSON data: `pprint.pprint`
+
+The `pprint` module (pretty print) provides a super handy tool for looking at large complex dictionary objects in Python.
+
+Let's go back to the original example.   We now know that these four lines of code will grab some data from the UCSD subreddit and put it into a Python dictionary:
+
+```python
+>>> import requests
+>>> result = requests.get("http://www.reddit.com/r/ucsd.json", headers = {'User-agent': 'spis16 your-name-here'})
+>>> import json
+>>> rdata = json.loads(result.text)
+>>> 
+```
+
+We also know that if we type `rdata` at the Python prompt, the output will be long and dense:
+
+```python
+>>> rdata
+{u'kind': u'Listing', u'data': {u'modhash': u'', u'children': [{u'kind': u't3', u'data': {u'domain': u'self.UCSD',
+u'banned_by': None, u'media_embed': {}, u'subreddit': u'UCSD', u'selftext_html': u'&lt;!-- SC_OFF --&gt;&lt;div
+class="md"&gt;&lt;p&gt;I&amp;#39;m basically just copying this directly from last year&amp;#39;s Q&amp;amp;A, but
+I don&amp;#39;t think many things have changed. (so thank &lt;a href="/u/inconditus"&gt;/u/inconditus&lt;/a&g
+```
+<em>many lines omitted</em>
+```python
+ainst Students Due Process', u'created_utc': 1472075072.0, u'ups': 30, u'num_comments': 2, u'visited': False, u'num_reports': None, u'distinguished': None}}], u'after': u't3_4zf0b0', u'before': None}}
+>>>
+```
+So there are two issues here: the *long* part, and the *dense* part.
+
+The *long* part has to be tackled with the tools we've already discussed: going top down by keys to find a way to select out, for example, the dictionary for single post, like this:
+
+```
+>>> rdata[u'data'][u'children'][0][u'data']
+{u'domain': u'self.UCSD', u'banned_by': None, u'media_embed': {}, u'subreddit': u'UCSD', u'selftext_html': u'&lt;!-- 
+SC_OFF --&gt;&lt;div class="md"&gt;&lt;p&gt;I&amp;#39;m basically just copying this directly from last year&amp;#39;s
+Q&amp;amp;A, but I don&amp;#39;t think many things have changed. (so thank &lt;ahref="/u/inconditus"&gt;/u/inconditus&lt;/a&gt; for this, because they wrote most of it)&lt;/p&gt;\n\n&lt;p&gt;So,
+you got into UCSD, congratulations! It&amp;#39;s a great school! But you have questions, most of which the administration
+```
+<em>many lines of output ommitted</em>
+```python
+u'removal_reason': None, u'stickied': True, u'from': None, u'is_self': True, u'from_id': None, u'permalink':
+u'/r/UCSD/comments/4cgr1w/new_student_qa_2016/', u'locked': False, u'hide_score': False, u'created': 1459304568.0,
+u'url': u'https://www.reddit.com/r/UCSD/comments/4cgr1w/new_student_qa_2016/', u'author_flair_text': u'History (B.A.)',
+u'quarantine': False, u'title': u'New Student Q&amp;A 2016', u'created_utc': 1459275768.0, u'ups': 49, u'num_comments': 305,
+u'visited': False, u'num_reports': None, u'distinguished': None}
+>>> 
+```
+
+This is still a bit long, but at least now it is small enough that we can scroll back through it.   Can we do something about the "dense" part?  We can, using `pprint`.  Observe.   This time I *am* going to leave the entire output here, even though 
+one part of it will scroll "way" off the screen:
+
+>>> from pprint import pprint
+>>> thisPost = rdata[u'data'][u'children'][0][u'data']
+>>> pprint(thisPost)
+>>> pprint(thisPost)
+{u'approved_by': None,
+ u'archived': False,
+ u'author': u'ThumbtacksArePointy',
+ u'author_flair_css_class': u'',
+ u'author_flair_text': u'History (B.A.)',
+ u'banned_by': None,
+ u'clicked': False,
+ u'created': 1459304568.0,
+ u'created_utc': 1459275768.0,
+ u'distinguished': None,
+ u'domain': u'self.UCSD',
+ u'downs': 0,
+ u'edited': False,
+ u'from': None,
+ u'from_id': None,
+ u'from_kind': None,
+ u'gilded': 0,
+ u'hidden': False,
+ u'hide_score': False,
+ u'id': u'4cgr1w',
+ u'is_self': True,
+ u'likes': None,
+ u'link_flair_css_class': None,
+ u'link_flair_text': None,
+ u'locked': False,
+ u'media': None,
+ u'media_embed': {},
+ u'mod_reports': [],
+ u'name': u't3_4cgr1w',
+ u'num_comments': 305,
+ u'num_reports': None,
+ u'over_18': False,
+ u'permalink': u'/r/UCSD/comments/4cgr1w/new_student_qa_2016/',
+ u'quarantine': False,
+ u'removal_reason': None,
+ u'report_reasons': None,
+ u'saved': False,
+ u'score': 49,
+ u'secure_media': None,
+ u'secure_media_embed': {},
+ u'selftext': u'I\'m basically just copying this directly from last year\'s Q&amp;A, but I don\'t think many things have changed. (so thank /u/inconditus for this, because they wrote most of it)\n\nSo, you got into UCSD, congratulations! It\'s a great school! But you have questions, most of which the administration can\'t help you with. Come ask us! I\'m rolling over a lot of info from the [2014 edition](http://www.reddit.com/r/UCSD/comments/21uxq7/new_student_qa_2014_edition/) and [2013 edition](http://www.reddit.com/r/UCSD/comments/1c187y/official_new_student_qa_2013/) and [2015 edition](http://www.reddit.com/r/UCSD/comments/32p9ng/new_student_qa_2015/). Thanks to /u/nervette and everyone else for compiling this information.\n\nFirst up: "What are the housing deadlines?" Check out the [housing deadlines here!](http://housing.ucsd.edu/deadlines.asp)\n\nWanna know what all the acronyms and abbreviations we\'re throwing around mean? [There\'s a list for that](http://blink.ucsd.edu/sponsor/blink/AA.html)\n\n"What are the major differences between the colleges?/I got into Miur, what does that even mean?" There are 2 things: The housing units for each college are separate. [Here\'s a map](http://maps.ucsd.edu/mapping/viewer/default.htm) and they all have separate general ed requirements. check it out:  \n[ERC gen eds.](http://roosevelt.ucsd.edu/academics/gen-ed/index.html)- [Marshall gen eds.](https://marshall.ucsd.edu/academics/general-education-requirements.html)- [Muir gen eds.](http://muir.ucsd.edu/academics/degree_reqs.html)- [Revelle gen eds.](http://revelle.ucsd.edu/academics/general-education/index.html)- [Warren gen eds.](http://warren.ucsd.edu/academics/advising/acad-req.html)- [6th gen eds.](http://www.sixth.ucsd.edu/advising/requirements/index.html)\n\n"Which of my AP\'s will give me credit towards what?" I have no idea, look it up on this handy [AP credit chart](http://www.ucsd.edu/catalog/pdf/APC-chart.pdf). Also, check out the [International Baccalaureate (IB) chart]( http://www.ucsd.edu/catalog/pdf/IBC-chart.pdf).\n\nTake a look at the list of UCSD\'s [Student Organizations](http://tonga.ucsd.edu/studentorgregistration/RdOnlyList.aspx) if you\'re interested in getting involved. Here\'s the [Greek website](http://www.tritongreeks.org/) if you\'re into that, too.\n\nWanna know how many units you can transfer? According to the UCSD catalog: "The university will award graduation credit for up to seventy semester (105 quarter) units of transferable course work from a community college. Courses in excess of seventy semester units will receive subject credit and may be used to satisfy university subject requirements."\n\nThe MARSHALL list of approved classes for the Significant Writing Course requirement is [here](http://marshall.ucsd.edu/pdfs/Sig_Writing.pdf)\n\n/u/iGiveProTips takes you on an [epic tour](http://www.reddit.com/r/UCSD/comments/1c187y/official_new_student_qa_2013/c9gn7ih) of campus, complete with bathroom ratings.\n\n /u/delicious_truffles kindly made a thread for entering CS:BioInfo in 2012/2011. If that is your intended major, [check it out.](http://www.reddit.com/r/UCSD/comments/jra8a/incoming_freshman_with_questions/)\n\nOn a waitlist? Remember the Adam Powers Rule of Waitists, for any given class, around 10% of those enrolled with drop it. So you\'re #20 on the waitlist for 500 person class? You\'ll probably get in. The cravats being: if the class is super easy and popular (or Magagna), or it is a class required for an impacted major, then the drop rate goes down. Otherwise, be patient, have a back up, but have faith.\n\nIf you want fancy flair, on the sidebar under the subscribe button, check the show my flair, then hit edit and select your intended major! There is even an undeclared, for those who don\'t know yet.\n\nI\'ll be keeping an eye on this until the start of Fall Quarter, as will several others. \n\n**ALSO, GUYS, READ THIS THING:** [**SCHEDULES PSA**](http://www.reddit.com/r/UCSD/comments/1jh8hz/psa_for_freshmen_and_new_transfers_regarding)  I am serious. I know it\'s a wall of text, and I know you are in college now and know everything, but remember this is the quarter system. You only get 10 weeks before finals. Don\'t burn out. Seriously, this is super important.\n\n# Ask questions below!',
+ u'selftext_html': u'&lt;!-- SC_OFF --&gt;&lt;div class="md"&gt;&lt;p&gt;I&amp;#39;m basically just copying this directly from last year&amp;#39;s Q&amp;amp;A, but I don&amp;#39;t think many things have changed. (so thank &lt;a href="/u/inconditus"&gt;/u/inconditus&lt;/a&gt; for this, because they wrote most of it)&lt;/p&gt;\n\n&lt;p&gt;So, you got into UCSD, congratulations! It&amp;#39;s a great school! But you have questions, most of which the administration can&amp;#39;t help you with. Come ask us! I&amp;#39;m rolling over a lot of info from the &lt;a href="http://www.reddit.com/r/UCSD/comments/21uxq7/new_student_qa_2014_edition/"&gt;2014 edition&lt;/a&gt; and &lt;a href="http://www.reddit.com/r/UCSD/comments/1c187y/official_new_student_qa_2013/"&gt;2013 edition&lt;/a&gt; and &lt;a href="http://www.reddit.com/r/UCSD/comments/32p9ng/new_student_qa_2015/"&gt;2015 edition&lt;/a&gt;. Thanks to &lt;a href="/u/nervette"&gt;/u/nervette&lt;/a&gt; and everyone else for compiling this information.&lt;/p&gt;\n\n&lt;p&gt;First up: &amp;quot;What are the housing deadlines?&amp;quot; Check out the &lt;a href="http://housing.ucsd.edu/deadlines.asp"&gt;housing deadlines here!&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Wanna know what all the acronyms and abbreviations we&amp;#39;re throwing around mean? &lt;a href="http://blink.ucsd.edu/sponsor/blink/AA.html"&gt;There&amp;#39;s a list for that&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&amp;quot;What are the major differences between the colleges?/I got into Miur, what does that even mean?&amp;quot; There are 2 things: The housing units for each college are separate. &lt;a href="http://maps.ucsd.edu/mapping/viewer/default.htm"&gt;Here&amp;#39;s a map&lt;/a&gt; and they all have separate general ed requirements. check it out:&lt;br/&gt;\n&lt;a href="http://roosevelt.ucsd.edu/academics/gen-ed/index.html"&gt;ERC gen eds.&lt;/a&gt;- &lt;a href="https://marshall.ucsd.edu/academics/general-education-requirements.html"&gt;Marshall gen eds.&lt;/a&gt;- &lt;a href="http://muir.ucsd.edu/academics/degree_reqs.html"&gt;Muir gen eds.&lt;/a&gt;- &lt;a href="http://revelle.ucsd.edu/academics/general-education/index.html"&gt;Revelle gen eds.&lt;/a&gt;- &lt;a href="http://warren.ucsd.edu/academics/advising/acad-req.html"&gt;Warren gen eds.&lt;/a&gt;- &lt;a href="http://www.sixth.ucsd.edu/advising/requirements/index.html"&gt;6th gen eds.&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&amp;quot;Which of my AP&amp;#39;s will give me credit towards what?&amp;quot; I have no idea, look it up on this handy &lt;a href="http://www.ucsd.edu/catalog/pdf/APC-chart.pdf"&gt;AP credit chart&lt;/a&gt;. Also, check out the &lt;a href="http://www.ucsd.edu/catalog/pdf/IBC-chart.pdf"&gt;International Baccalaureate (IB) chart&lt;/a&gt;.&lt;/p&gt;\n\n&lt;p&gt;Take a look at the list of UCSD&amp;#39;s &lt;a href="http://tonga.ucsd.edu/studentorgregistration/RdOnlyList.aspx"&gt;Student Organizations&lt;/a&gt; if you&amp;#39;re interested in getting involved. Here&amp;#39;s the &lt;a href="http://www.tritongreeks.org/"&gt;Greek website&lt;/a&gt; if you&amp;#39;re into that, too.&lt;/p&gt;\n\n&lt;p&gt;Wanna know how many units you can transfer? According to the UCSD catalog: &amp;quot;The university will award graduation credit for up to seventy semester (105 quarter) units of transferable course work from a community college. Courses in excess of seventy semester units will receive subject credit and may be used to satisfy university subject requirements.&amp;quot;&lt;/p&gt;\n\n&lt;p&gt;The MARSHALL list of approved classes for the Significant Writing Course requirement is &lt;a href="http://marshall.ucsd.edu/pdfs/Sig_Writing.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a href="/u/iGiveProTips"&gt;/u/iGiveProTips&lt;/a&gt; takes you on an &lt;a href="http://www.reddit.com/r/UCSD/comments/1c187y/official_new_student_qa_2013/c9gn7ih"&gt;epic tour&lt;/a&gt; of campus, complete with bathroom ratings.&lt;/p&gt;\n\n&lt;p&gt;&lt;a href="/u/delicious_truffles"&gt;/u/delicious_truffles&lt;/a&gt; kindly made a thread for entering CS:BioInfo in 2012/2011. If that is your intended major, &lt;a href="http://www.reddit.com/r/UCSD/comments/jra8a/incoming_freshman_with_questions/"&gt;check it out.&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;On a waitlist? Remember the Adam Powers Rule of Waitists, for any given class, around 10% of those enrolled with drop it. So you&amp;#39;re #20 on the waitlist for 500 person class? You&amp;#39;ll probably get in. The cravats being: if the class is super easy and popular (or Magagna), or it is a class required for an impacted major, then the drop rate goes down. Otherwise, be patient, have a back up, but have faith.&lt;/p&gt;\n\n&lt;p&gt;If you want fancy flair, on the sidebar under the subscribe button, check the show my flair, then hit edit and select your intended major! There is even an undeclared, for those who don&amp;#39;t know yet.&lt;/p&gt;\n\n&lt;p&gt;I&amp;#39;ll be keeping an eye on this until the start of Fall Quarter, as will several others. &lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;ALSO, GUYS, READ THIS THING:&lt;/strong&gt; &lt;a href="http://www.reddit.com/r/UCSD/comments/1jh8hz/psa_for_freshmen_and_new_transfers_regarding"&gt;&lt;strong&gt;SCHEDULES PSA&lt;/strong&gt;&lt;/a&gt;  I am serious. I know it&amp;#39;s a wall of text, and I know you are in college now and know everything, but remember this is the quarter system. You only get 10 weeks before finals. Don&amp;#39;t burn out. Seriously, this is super important.&lt;/p&gt;\n\n&lt;h1&gt;Ask questions below!&lt;/h1&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;',
+ u'stickied': True,
+ u'subreddit': u'UCSD',
+ u'subreddit_id': u't5_2r6sq',
+ u'suggested_sort': u'new',
+ u'thumbnail': u'self',
+ u'title': u'New Student Q&amp;A 2016',
+ u'ups': 49,
+ u'url': u'https://www.reddit.com/r/UCSD/comments/4cgr1w/new_student_qa_2016/',
+ u'user_reports': [],
+ u'visited': False}
+>>> 
+```
+
+
