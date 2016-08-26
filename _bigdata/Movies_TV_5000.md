@@ -1,4 +1,9 @@
+---
+topic: "Parse Data Python "
+desc: " An Example Script"
+---
 
+'''python
 import urllib
 
 def parseData(fname):
@@ -11,3 +16,4 @@ data = []
 for i in range(5000):
   data.append(gen.next())
 print "done"
+'''
