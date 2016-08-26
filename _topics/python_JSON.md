@@ -449,5 +449,236 @@ the only two values  in this dictionary representing a single Reddit post that a
 >>> 
 ```
 
+# pprint with a depth parameter
+
+If this pprint thing is so good, why not apply it to the entire `rdata` variable?
+
+If we try that, unfortunately, we still get the problem of the output being `too long`.
+
+But, there is a workaround for that.   We don't have to print "all the way down the tree".
+
+Consider, again the "tree" representation of the dictionary `rdata`.  Here is a diagram that shows just the top few levels.
+
+
+
+We can tell `pprint` to only print a certain number of levels of a dictionary.  That allows us to do the exploration with did above using `.keys()` and `.values()` much more efficiently.  Here's what that looks like.   We add a parameter `levels=1`, `levels=2`, etc. to restrict how far down the tree to go:
+
+```python
+>>> pprint(rdata,depth=1)
+{u'data': {...}, u'kind': u'Listing'}
+>>> pprint(rdata,depth=2)
+{u'data': {u'after': u't3_4zf0b0',
+           u'before': None,
+           u'children': [...],
+           u'modhash': u''},
+ u'kind': u'Listing'}
+>>> pprint(rdata,depth=3)
+{u'data': {u'after': u't3_4zf0b0',
+           u'before': None,
+           u'children': [{...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...},
+                         {...}],
+           u'modhash': u''},
+ u'kind': u'Listing'}
+>>> pprint(rdata,depth=4)
+{u'data': {u'after': u't3_4zf0b0',
+           u'before': None,
+           u'children': [{u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'},
+                         {u'data': {...}, u'kind': u't3'}],
+           u'modhash': u''},
+ u'kind': u'Listing'}
+>>> 
+
+```
+
+If we go as far as `levels=5`, that's when the output becomes too long to reasonably display.  But by then, we already have enough information to write the expression:
+
+```
+pprint(rdata['data']['children'][0]['data']
+```
+
+which gives us the data for one post.   By iterating over a slice of the children, we could get, say, the first five posts from that list.
+
+```python
+for post in rdata['data']['children'][0:5]:
+  pprint(post['data'])
+```
+
+As it turns out, even the first five is too long to effectively use copy/paste to get the output into this article, but here is the first "two" posts:
+
+```python
+>>> for post in rdata['data']['children'][0:2]:
+...    pprint(post['data'])
+... 
+{u'approved_by': None,
+ u'archived': False,
+ u'author': u'ThumbtacksArePointy',
+ u'author_flair_css_class': u'',
+ u'author_flair_text': u'History (B.A.)',
+ u'banned_by': None,
+ u'clicked': False,
+ u'created': 1459304568.0,
+ u'created_utc': 1459275768.0,
+ u'distinguished': None,
+ u'domain': u'self.UCSD',
+ u'downs': 0,
+ u'edited': False,
+ u'from': None,
+ u'from_id': None,
+ u'from_kind': None,
+ u'gilded': 0,
+ u'hidden': False,
+ u'hide_score': False,
+ u'id': u'4cgr1w',
+ u'is_self': True,
+ u'likes': None,
+ u'link_flair_css_class': None,
+ u'link_flair_text': None,
+ u'locked': False,
+ u'media': None,
+ u'media_embed': {},
+ u'mod_reports': [],
+ u'name': u't3_4cgr1w',
+ u'num_comments': 305,
+ u'num_reports': None,
+ u'over_18': False,
+ u'permalink': u'/r/UCSD/comments/4cgr1w/new_student_qa_2016/',
+ u'quarantine': False,
+ u'removal_reason': None,
+ u'report_reasons': None,
+ u'saved': False,
+ u'score': 49,
+ u'secure_media': None,
+ u'secure_media_embed': {},
+ u'selftext': u'I\'m basically just copying this directly from last year\'s Q&amp;A, but I don\'t think many things have changed. (so thank /u/inconditus for this, because they wrote most of it)\n\nSo, you got into UCSD, congratulations! It\'s a great school! But you have questions, most of which the administration can\'t help you with. Come ask us! I\'m rolling over a lot of info from the [2014 edition](http://www.reddit.com/r/UCSD/comments/21uxq7/new_student_qa_2014_edition/) and [2013 edition](http://www.reddit.com/r/UCSD/comments/1c187y/official_new_student_qa_2013/) and [2015 edition](http://www.reddit.com/r/UCSD/comments/32p9ng/new_student_qa_2015/). Thanks to /u/nervette and everyone else for compiling this information.\n\nFirst up: "What are the housing deadlines?" Check out the [housing deadlines here!](http://housing.ucsd.edu/deadlines.asp)\n\nWanna know what all the acronyms and abbreviations we\'re throwing around mean? [There\'s a list for that](http://blink.ucsd.edu/sponsor/blink/AA.html)\n\n"What are the major differences between the colleges?/I got into Miur, what does that even mean?" There are 2 things: The housing units for each college are separate. [Here\'s a map](http://maps.ucsd.edu/mapping/viewer/default.htm) and they all have separate general ed requirements. check it out:  \n[ERC gen eds.](http://roosevelt.ucsd.edu/academics/gen-ed/index.html)- [Marshall gen eds.](https://marshall.ucsd.edu/academics/general-education-requirements.html)- [Muir gen eds.](http://muir.ucsd.edu/academics/degree_reqs.html)- [Revelle gen eds.](http://revelle.ucsd.edu/academics/general-education/index.html)- [Warren gen eds.](http://warren.ucsd.edu/academics/advising/acad-req.html)- [6th gen eds.](http://www.sixth.ucsd.edu/advising/requirements/index.html)\n\n"Which of my AP\'s will give me credit towards what?" I have no idea, look it up on this handy [AP credit chart](http://www.ucsd.edu/catalog/pdf/APC-chart.pdf). Also, check out the [International Baccalaureate (IB) chart]( http://www.ucsd.edu/catalog/pdf/IBC-chart.pdf).\n\nTake a look at the list of UCSD\'s [Student Organizations](http://tonga.ucsd.edu/studentorgregistration/RdOnlyList.aspx) if you\'re interested in getting involved. Here\'s the [Greek website](http://www.tritongreeks.org/) if you\'re into that, too.\n\nWanna know how many units you can transfer? According to the UCSD catalog: "The university will award graduation credit for up to seventy semester (105 quarter) units of transferable course work from a community college. Courses in excess of seventy semester units will receive subject credit and may be used to satisfy university subject requirements."\n\nThe MARSHALL list of approved classes for the Significant Writing Course requirement is [here](http://marshall.ucsd.edu/pdfs/Sig_Writing.pdf)\n\n/u/iGiveProTips takes you on an [epic tour](http://www.reddit.com/r/UCSD/comments/1c187y/official_new_student_qa_2013/c9gn7ih) of campus, complete with bathroom ratings.\n\n /u/delicious_truffles kindly made a thread for entering CS:BioInfo in 2012/2011. If that is your intended major, [check it out.](http://www.reddit.com/r/UCSD/comments/jra8a/incoming_freshman_with_questions/)\n\nOn a waitlist? Remember the Adam Powers Rule of Waitists, for any given class, around 10% of those enrolled with drop it. So you\'re #20 on the waitlist for 500 person class? You\'ll probably get in. The cravats being: if the class is super easy and popular (or Magagna), or it is a class required for an impacted major, then the drop rate goes down. Otherwise, be patient, have a back up, but have faith.\n\nIf you want fancy flair, on the sidebar under the subscribe button, check the show my flair, then hit edit and select your intended major! There is even an undeclared, for those who don\'t know yet.\n\nI\'ll be keeping an eye on this until the start of Fall Quarter, as will several others. \n\n**ALSO, GUYS, READ THIS THING:** [**SCHEDULES PSA**](http://www.reddit.com/r/UCSD/comments/1jh8hz/psa_for_freshmen_and_new_transfers_regarding)  I am serious. I know it\'s a wall of text, and I know you are in college now and know everything, but remember this is the quarter system. You only get 10 weeks before finals. Don\'t burn out. Seriously, this is super important.\n\n# Ask questions below!',
+ u'selftext_html': u'&lt;!-- SC_OFF --&gt;&lt;div class="md"&gt;&lt;p&gt;I&amp;#39;m basically just copying this directly from last year&amp;#39;s Q&amp;amp;A, but I don&amp;#39;t think many things have changed. (so thank &lt;a href="/u/inconditus"&gt;/u/inconditus&lt;/a&gt; for this, because they wrote most of it)&lt;/p&gt;\n\n&lt;p&gt;So, you got into UCSD, congratulations! It&amp;#39;s a great school! But you have questions, most of which the administration can&amp;#39;t help you with. Come ask us! I&amp;#39;m rolling over a lot of info from the &lt;a href="http://www.reddit.com/r/UCSD/comments/21uxq7/new_student_qa_2014_edition/"&gt;2014 edition&lt;/a&gt; and &lt;a href="http://www.reddit.com/r/UCSD/comments/1c187y/official_new_student_qa_2013/"&gt;2013 edition&lt;/a&gt; and &lt;a href="http://www.reddit.com/r/UCSD/comments/32p9ng/new_student_qa_2015/"&gt;2015 edition&lt;/a&gt;. Thanks to &lt;a href="/u/nervette"&gt;/u/nervette&lt;/a&gt; and everyone else for compiling this information.&lt;/p&gt;\n\n&lt;p&gt;First up: &amp;quot;What are the housing deadlines?&amp;quot; Check out the &lt;a href="http://housing.ucsd.edu/deadlines.asp"&gt;housing deadlines here!&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Wanna know what all the acronyms and abbreviations we&amp;#39;re throwing around mean? &lt;a href="http://blink.ucsd.edu/sponsor/blink/AA.html"&gt;There&amp;#39;s a list for that&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&amp;quot;What are the major differences between the colleges?/I got into Miur, what does that even mean?&amp;quot; There are 2 things: The housing units for each college are separate. &lt;a href="http://maps.ucsd.edu/mapping/viewer/default.htm"&gt;Here&amp;#39;s a map&lt;/a&gt; and they all have separate general ed requirements. check it out:&lt;br/&gt;\n&lt;a href="http://roosevelt.ucsd.edu/academics/gen-ed/index.html"&gt;ERC gen eds.&lt;/a&gt;- &lt;a href="https://marshall.ucsd.edu/academics/general-education-requirements.html"&gt;Marshall gen eds.&lt;/a&gt;- &lt;a href="http://muir.ucsd.edu/academics/degree_reqs.html"&gt;Muir gen eds.&lt;/a&gt;- &lt;a href="http://revelle.ucsd.edu/academics/general-education/index.html"&gt;Revelle gen eds.&lt;/a&gt;- &lt;a href="http://warren.ucsd.edu/academics/advising/acad-req.html"&gt;Warren gen eds.&lt;/a&gt;- &lt;a href="http://www.sixth.ucsd.edu/advising/requirements/index.html"&gt;6th gen eds.&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&amp;quot;Which of my AP&amp;#39;s will give me credit towards what?&amp;quot; I have no idea, look it up on this handy &lt;a href="http://www.ucsd.edu/catalog/pdf/APC-chart.pdf"&gt;AP credit chart&lt;/a&gt;. Also, check out the &lt;a href="http://www.ucsd.edu/catalog/pdf/IBC-chart.pdf"&gt;International Baccalaureate (IB) chart&lt;/a&gt;.&lt;/p&gt;\n\n&lt;p&gt;Take a look at the list of UCSD&amp;#39;s &lt;a href="http://tonga.ucsd.edu/studentorgregistration/RdOnlyList.aspx"&gt;Student Organizations&lt;/a&gt; if you&amp;#39;re interested in getting involved. Here&amp;#39;s the &lt;a href="http://www.tritongreeks.org/"&gt;Greek website&lt;/a&gt; if you&amp;#39;re into that, too.&lt;/p&gt;\n\n&lt;p&gt;Wanna know how many units you can transfer? According to the UCSD catalog: &amp;quot;The university will award graduation credit for up to seventy semester (105 quarter) units of transferable course work from a community college. Courses in excess of seventy semester units will receive subject credit and may be used to satisfy university subject requirements.&amp;quot;&lt;/p&gt;\n\n&lt;p&gt;The MARSHALL list of approved classes for the Significant Writing Course requirement is &lt;a href="http://marshall.ucsd.edu/pdfs/Sig_Writing.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a href="/u/iGiveProTips"&gt;/u/iGiveProTips&lt;/a&gt; takes you on an &lt;a href="http://www.reddit.com/r/UCSD/comments/1c187y/official_new_student_qa_2013/c9gn7ih"&gt;epic tour&lt;/a&gt; of campus, complete with bathroom ratings.&lt;/p&gt;\n\n&lt;p&gt;&lt;a href="/u/delicious_truffles"&gt;/u/delicious_truffles&lt;/a&gt; kindly made a thread for entering CS:BioInfo in 2012/2011. If that is your intended major, &lt;a href="http://www.reddit.com/r/UCSD/comments/jra8a/incoming_freshman_with_questions/"&gt;check it out.&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;On a waitlist? Remember the Adam Powers Rule of Waitists, for any given class, around 10% of those enrolled with drop it. So you&amp;#39;re #20 on the waitlist for 500 person class? You&amp;#39;ll probably get in. The cravats being: if the class is super easy and popular (or Magagna), or it is a class required for an impacted major, then the drop rate goes down. Otherwise, be patient, have a back up, but have faith.&lt;/p&gt;\n\n&lt;p&gt;If you want fancy flair, on the sidebar under the subscribe button, check the show my flair, then hit edit and select your intended major! There is even an undeclared, for those who don&amp;#39;t know yet.&lt;/p&gt;\n\n&lt;p&gt;I&amp;#39;ll be keeping an eye on this until the start of Fall Quarter, as will several others. &lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;ALSO, GUYS, READ THIS THING:&lt;/strong&gt; &lt;a href="http://www.reddit.com/r/UCSD/comments/1jh8hz/psa_for_freshmen_and_new_transfers_regarding"&gt;&lt;strong&gt;SCHEDULES PSA&lt;/strong&gt;&lt;/a&gt;  I am serious. I know it&amp;#39;s a wall of text, and I know you are in college now and know everything, but remember this is the quarter system. You only get 10 weeks before finals. Don&amp;#39;t burn out. Seriously, this is super important.&lt;/p&gt;\n\n&lt;h1&gt;Ask questions below!&lt;/h1&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;',
+ u'stickied': True,
+ u'subreddit': u'UCSD',
+ u'subreddit_id': u't5_2r6sq',
+ u'suggested_sort': u'new',
+ u'thumbnail': u'self',
+ u'title': u'New Student Q&amp;A 2016',
+ u'ups': 49,
+ u'url': u'https://www.reddit.com/r/UCSD/comments/4cgr1w/new_student_qa_2016/',
+ u'user_reports': [],
+ u'visited': False}
+{u'approved_by': None,
+ u'archived': False,
+ u'author': u'brianbsantacruz',
+ u'author_flair_css_class': u'',
+ u'author_flair_text': u"Physics, B.S., Class of '09",
+ u'banned_by': None,
+ u'clicked': False,
+ u'created': 1470800155.0,
+ u'created_utc': 1470771355.0,
+ u'distinguished': None,
+ u'domain': u'self.UCSD',
+ u'downs': 0,
+ u'edited': False,
+ u'from': None,
+ u'from_id': None,
+ u'from_kind': None,
+ u'gilded': 0,
+ u'hidden': False,
+ u'hide_score': False,
+ u'id': u'4wy1h0',
+ u'is_self': True,
+ u'likes': None,
+ u'link_flair_css_class': None,
+ u'link_flair_text': None,
+ u'locked': False,
+ u'media': None,
+ u'media_embed': {},
+ u'mod_reports': [],
+ u'name': u't3_4wy1h0',
+ u'num_comments': 0,
+ u'num_reports': None,
+ u'over_18': False,
+ u'permalink': u'/r/UCSD/comments/4wy1h0/new_student_summer_send_offs_2016/',
+ u'post_hint': u'self',
+ u'preview': {u'images': [{u'id': u'96Il-V7y39f3oeycSCxbORTao68fW7iO2bdqfw1hf9U',
+                           u'resolutions': [{u'height': 67,
+                                             u'url': u'https://i.redditmedia.com/Dx_WGSEo-KhUdL_fUn8AVrOYVScm-RWM3JE-zvuCCCU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=6e9ca0065f2a5fa438fa65c73b120579',
+                                             u'width': 108},
+                                            {u'height': 135,
+                                             u'url': u'https://i.redditmedia.com/Dx_WGSEo-KhUdL_fUn8AVrOYVScm-RWM3JE-zvuCCCU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=eec349ec9d9cfb06228f19b31038d50e',
+                                             u'width': 216},
+                                            {u'height': 200,
+                                             u'url': u'https://i.redditmedia.com/Dx_WGSEo-KhUdL_fUn8AVrOYVScm-RWM3JE-zvuCCCU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=315423e7c4d94e736e291292d4acbbad',
+                                             u'width': 320}],
+                           u'source': {u'height': 250,
+                                       u'url': u'https://i.redditmedia.com/Dx_WGSEo-KhUdL_fUn8AVrOYVScm-RWM3JE-zvuCCCU.jpg?s=a625be5db09930ec008b5682c34c8660',
+                                       u'width': 400},
+                           u'variants': {}}]},
+ u'quarantine': False,
+ u'removal_reason': None,
+ u'report_reasons': None,
+ u'saved': False,
+ u'score': 11,
+ u'secure_media': None,
+ u'secure_media_embed': {},
+ u'selftext': u'For those incoming students in California, UCSD Alumni hosts a "Summer Send Off" in several regions every year for incoming students (Freshmen and Transfers). Check out one of the events happening near you. They\'re a great way to meet alumni, make connections for internships and jobs down the road, get advice and all your burning questions answered, and more. The best part is, it\'s totally free!\n\nTo make this event a success, alumni volunteers are needed.  You can sign up to volunteer on the UCSD Alumni website.  Check out the pages below for more information and a location near you: \n\n* Incoming students (and their families), sign up here: http://www.alumni.ucsd.edu/s/1170/landing/index_rot.aspx?sid=1170&amp;gid=1&amp;pgid=7150\n\n* Alumni volunteers, sign up here: http://www.alumni.ucsd.edu/s/1170/landing/index_rot.aspx?sid=1170&amp;gid=1&amp;pgid=7187',
+ u'selftext_html': u'&lt;!-- SC_OFF --&gt;&lt;div class="md"&gt;&lt;p&gt;For those incoming students in California, UCSD Alumni hosts a &amp;quot;Summer Send Off&amp;quot; in several regions every year for incoming students (Freshmen and Transfers). Check out one of the events happening near you. They&amp;#39;re a great way to meet alumni, make connections for internships and jobs down the road, get advice and all your burning questions answered, and more. The best part is, it&amp;#39;s totally free!&lt;/p&gt;\n\n&lt;p&gt;To make this event a success, alumni volunteers are needed.  You can sign up to volunteer on the UCSD Alumni website.  Check out the pages below for more information and a location near you: &lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;Incoming students (and their families), sign up here: &lt;a href="http://www.alumni.ucsd.edu/s/1170/landing/index_rot.aspx?sid=1170&amp;amp;gid=1&amp;amp;pgid=7150"&gt;http://www.alumni.ucsd.edu/s/1170/landing/index_rot.aspx?sid=1170&amp;amp;gid=1&amp;amp;pgid=7150&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Alumni volunteers, sign up here: &lt;a href="http://www.alumni.ucsd.edu/s/1170/landing/index_rot.aspx?sid=1170&amp;amp;gid=1&amp;amp;pgid=7187"&gt;http://www.alumni.ucsd.edu/s/1170/landing/index_rot.aspx?sid=1170&amp;amp;gid=1&amp;amp;pgid=7187&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;',
+ u'stickied': True,
+ u'subreddit': u'UCSD',
+ u'subreddit_id': u't5_2r6sq',
+ u'suggested_sort': None,
+ u'thumbnail': u'self',
+ u'title': u'New Student Summer Send Offs 2016',
+ u'ups': 11,
+ u'url': u'https://www.reddit.com/r/UCSD/comments/4wy1h0/new_student_summer_send_offs_2016/',
+ u'user_reports': [],
+ u'visited': False}
+>>> 
+```
 
 
