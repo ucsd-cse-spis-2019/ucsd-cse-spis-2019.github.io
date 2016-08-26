@@ -457,9 +457,9 @@ If we try that, unfortunately, we still get the problem of the output being `too
 
 But, there is a workaround for that.   We don't have to print "all the way down the tree".
 
-Consider, again the "tree" representation of the dictionary `rdata`.  Here is a diagram that shows just the top few levels.
+Consider, again the "tree" representation of the dictionary `rdata`.  Here, again, is a diagram that shows just the top few levels.
 
-
+<img src="https://docs.google.com/drawings/d/1UffljEjItYnKseSb3UE_SVZyFalcrid1-AxjqsrEPmg/pub?w=961&amp;h=441">
 
 We can tell `pprint` to only print a certain number of levels of a dictionary.  That allows us to do the exploration with did above using `.keys()` and `.values()` much more efficiently.  Here's what that looks like.   We add a parameter `levels=1`, `levels=2`, etc. to restrict how far down the tree to go:
 
