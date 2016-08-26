@@ -386,6 +386,7 @@ u'visited': False, u'num_reports': None, u'distinguished': None}
 This is still a bit long, but at least now it is small enough that we can scroll back through it.   Can we do something about the "dense" part?  We can, using `pprint`.  Observe.   This time I *am* going to leave the entire output here, even though 
 one part of it will scroll "way" off the screen:
 
+```python
 >>> from pprint import pprint
 >>> thisPost = rdata[u'data'][u'children'][0][u'data']
 >>> pprint(thisPost)
