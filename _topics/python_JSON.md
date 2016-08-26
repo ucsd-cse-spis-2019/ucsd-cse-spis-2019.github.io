@@ -373,7 +373,7 @@ SC_OFF --&gt;&lt;div class="md"&gt;&lt;p&gt;I&amp;#39;m basically just copying t
 Q&amp;amp;A, but I don&amp;#39;t think many things have changed. (so thank &lt;ahref="/u/inconditus"&gt;/u/inconditus&lt;/a&gt; for this, because they wrote most of it)&lt;/p&gt;\n\n&lt;p&gt;So,
 you got into UCSD, congratulations! It&amp;#39;s a great school! But you have questions, most of which the administration
 ```
-<em>many lines of output ommitted</em>
+<em>many lines of output omitted</em>
 ```python
 u'removal_reason': None, u'stickied': True, u'from': None, u'is_self': True, u'from_id': None, u'permalink':
 u'/r/UCSD/comments/4cgr1w/new_student_qa_2016/', u'locked': False, u'hide_score': False, u'created': 1459304568.0,
@@ -384,7 +384,10 @@ u'visited': False, u'num_reports': None, u'distinguished': None}
 ```
 
 This is still a bit long, but at least now it is small enough that we can scroll back through it.   Can we do something about the "dense" part?  We can, using `pprint`.  Observe.   This time I *am* going to leave the entire output here, even though 
-one part of it will scroll "way" off the screen:
+one part of it will scroll "way" off the screen.
+
+From the output below, we can see all of the keys for elements of a single post quite clearly.   We can also see that 
+the only two values  in this dictionary representing a single Reddit post that are "huge" are the values for the keys `selftext` and `selftext_html`.    Those are the values that contain the actual text of the post&mdash;the `selftext` version is plain text, while the `selftext_html` contains the HTML markup, with various symbols "escaped" using symbols such as `&lt;` for `<`.    
 
 ```python
 >>> from pprint import pprint
@@ -445,5 +448,6 @@ one part of it will scroll "way" off the screen:
  u'visited': False}
 >>> 
 ```
+
 
 
