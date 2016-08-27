@@ -16,32 +16,75 @@ Here is an example of a running application on Heroku that uses sessions:
 * The code for that app is here: [https://github.com/ucsd-cse-spis-2016/spis16-webapps-flask-sessions](https://github.com/ucsd-cse-spis-2016/spis16-webapps-flask-sessions)
 * In this lesson we'll go through the code that makes this example work.
 
-## How do you use a session?
+## Preliminaries to using Sessions
 
-To create a session in Flask, you first need to import the session object from flask:
+Before you can use sessions in your flask webapp, you need to do two preliminary things:
 
-```python
-from flask import session
+1. Set up the right import statement
+
+   Here's the import you need:
+
+   ```python
+   from flask import session
+   ```
+2. Set the value of `app.secret_key`  
+
+   The secret key is used to encrypt our session to avoid something called "session hijacking", which
+   is a way that an evildoer can hack into a running web app session and take it over (potentially stealing private data, or creating other mayhem).
+
+   The value of the secret key can be pretty much any string of letters and digits.  More information on the secret key can be found here: [http://flask.pocoo.org/docs/0.10/quickstart/#sessions](http://flask.pocoo.org/docs/0.10/quickstart/#session)
+
+   Set the secret key sometime after the `app = Flask(__name__)` line.
+
+   ```python
+   app = Flask(__name__)
+   app.secret_key='w98fw9ef8hwe98fhwef'   # This sets the secret key for sessions
+   ```
+
+   In this example, the secret key is hard coded right in the Python code that implements
+   the web app, which is fine for a simple example, but there are better ways to do it, such as reading the value
+   from an environment variable.   We'll discuss how that works when we get to OAuth and databases.
+
+## Setting up a session (or starting over)
+
+To create a new session, we use this code:
+
+```
+   session.clear()
 ```
 
-You also need to set a secret key.  
+This is *also* the code we use to destroy a session, since the act of destroying a sessions also, essentially, creates a new session.     
 
-The secret key is used to encrypt our session to avoid something called "session hijacking", which
-is a way that an evildoer can hack into a running web app session and take it over (potentially stealing private data, or creating other mayhem).
+Another way to look at it is this: once you use `from flask import session`, you *always* have a session
+in any browser that opens a page on your web app.  It is just a matter of when you press the "reset" button to make a new
+one.   
 
-The value of the secret key can be pretty much any string of letters and digits.  More information on the secret key can be found here: [http://flask.pocoo.org/docs/0.10/quickstart/#sessions](http://flask.pocoo.org/docs/0.10/quickstart/#session)
+You can actually "just start using" the session object by storing things in it, without doing `session.clear()` first.  But its probably a better idea to be sure that you always start with a clean slate, like erasing the blackboard before you start a new lesson.
 
-Set the secret key sometime after the `app = Flask(__name__)` line.
+## Storing things in a session, and getting them back out
+
+You store things in a session the same way you store them in a Python dictionary (`dict`) object, by key and value:
+
+To store a hard coded value, you could write:
 
 ```python
-app = Flask(__name__)
-app.secret_key='w98fw9ef8hwe98fhwef'   # This sets the secret key for sessions
+    session['firstName']='Phill'
 ```
 
-In this example, the secret key is hard coded right in the Python code that implements
-the web app, which is fine for a simple example, but there are better ways to do it, such as reading the value
-from an environment variable.   We'll discuss how that works when we get to OAuth and databases.
+But it is more likely that you'd be storing some information that the user entered into a form:
 
+```python
+    session['firstName']=request.form['firstName']
+```
+
+When we get something out of session, we are typically doing that inside the HTML inside one of our templates.  We may want to check
+whether that value exists or not first.  Here's some code that does that.  This code would be inside one of the `.html` files inside the `templates` folder:
+
+```python
+{% raw %}{%{% endraw %} if 'firstName' in session {% raw %}%}{% endraw %} 
+   First Name: {% raw %}{{{% endraw %} session['firstName'] {% raw %}}}{% endraw %}<br>
+{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+```
 
 
 ## Some things to know about sessions:
