@@ -6,3 +6,4 @@ indent: True
 
 TBD: This page will describe how to set up the GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET credentials for using Github as an OAuth provider.
 
+![The page with the GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET](/webapps/oauth/github-client-id-and-client-secret-example.png)
