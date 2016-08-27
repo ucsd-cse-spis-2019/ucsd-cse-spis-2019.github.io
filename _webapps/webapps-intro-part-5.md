@@ -77,8 +77,15 @@ But it is more likely that you'd be storing some information that the user enter
     session['firstName']=request.form['firstName']
 ```
 
-When we get something out of session, we are typically doing that inside the HTML inside one of our templates.  We may want to check
-whether that value exists or not first.  Here's some code that does that.  This code would be inside one of the `.html` files inside the `templates` folder:
+Suppose we want to get something out of session that we have stored there.  For instance, suppose  our key is `firstName` and we want to get the value:
+
+* We use `session['firstName']` to get the value.   
+* We can also test whether a key is in the session or not with: `if 'firstName' in session:`
+
+We are typically doing that inside the HTML inside one of our templates.  We may want to check whether that value exists or not first.  Here's some code that does that.  This code would be inside one of the `.html` files inside the `templates` folder.  
+
+Note that in a Jinja2 template, we do *not* put a colon (`:`) after the `if 'firstName' in session` test; since this is already inside a set of Jinja2 delimiters, i.e. `{% raw %}{% %}{% endraw %}`, the colon is not needed.
+
 
 ```python
 {% raw %}{%{% endraw %} if 'firstName' in session {% raw %}%}{% endraw %} 
