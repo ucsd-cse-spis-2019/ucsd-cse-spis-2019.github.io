@@ -5,7 +5,7 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
 
 # {{site.course}}, {{site.year}}
 
-<div id="info" data-role="collapsible" data-collapsed="false" name="info">
+<div id="info" data-role="collapsible" data-collapsed="false">
 <h2>Course Information</h2>
 <ul>
 {% for item in site.info %}
@@ -14,7 +14,7 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
 </ul>
 </div>
 
-<div data-role="collapsible" data-collapsed="false" markdown="0" name="lectures">
+<div data-role="collapsible" data-collapsed="false" markdown="0">
 <h2 id="labs">Lectures</h2>
   {% include lectures_for_week.html week="1"
     collapsible="true" collapsed="true" %}
@@ -28,17 +28,17 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
     collapsible="true" collapsed="true" extra_item="0902" %}
 </div>
 
-<div data-role="collapsible" data-collapsed="false" name="homework">
+<div data-role="collapsible" data-collapsed="false" >
 <h2 id="homework">Homework</h2>
 {% include hwk_table.html %}
 </div>
 
-<div data-role="collapsible" data-collapsed="false" name="labs">
+<div data-role="collapsible" data-collapsed="false" >
 <h2 id="labs">Labs</h2>
 {% include lab_table.html %}
 </div>
 
-<div data-role="collapsible" data-collapsed="false" name="topics">
+<div data-role="collapsible" data-collapsed="false" >
 <h2 id="labs">Topics</h2>
  <ul>
  {% for item in site.topics %}
@@ -48,10 +48,10 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
 </div>
 
 
-<div data-role="collapsible" data-collapsed="false" name="projects">
-<h2 id="labs">Projects</h2>
+<div data-role="collapsible" data-collapsed="false" >
+<h2 id="projects">Projects</h2>
 
- <div data-role="collapsible" data-collapsed="false" name="bigdata">
+ <div data-role="collapsible" data-collapsed="false" id="bigdata">
  <h3>The Marvelous Big Data Guide</h3>
  <p>(Procured by your ever-faithful data tour guide, Maxwell Bland)</p>
  <ul>
@@ -61,7 +61,7 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
  </ul>
  </div>
 
- <div data-role="collapsible" data-collapsed="false" name="robotics">
+ <div data-role="collapsible" data-collapsed="false" id="robotics">
  <h3>Robotics</h3>
  <ul>
  {% for item in site.robotics %}
@@ -70,7 +70,7 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
  </ul>
  </div>
  
- <div data-role="collapsible" data-collapsed="false" name="webapps"> 
+ <div data-role="collapsible" data-collapsed="false" id="webapps"> 
  <h3>Web Apps</h3>
  <ul>
  {% for item in site.webapps %}
