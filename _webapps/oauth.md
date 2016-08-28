@@ -3,13 +3,22 @@ topic: "OAuth"
 desc: "Delegating username/password authentication to Github, Facebook, Google, etc."
 ---
 
-Here's an example: 
+# TODO: Introductory material about OAuth
 
-<https://github.com/ucsd-cse-spis-2015/flask-oauth-example>
+Explain what OAuth is, and why we need it here.
 
-Here is another example:
-<https://github-flask.readthedocs.io/en/latest/>
+# Example code: 
 
+TODO: Explain these examples a bit more
+
+* Simple github oauth: <https://github.com/ucsd-cse-spis-2016/spis16-webapps-oauth-example>
+    * If you have a github account, you can log in.
+    * This app only works with sessions; no connection to a database
+    * No ability to store user preferences, or any other persistent data
+* Github OAuth based on organization membership: <https://github.com/ucsd-cse-spis-2016/spis16-webapps-oauth-github-org-example>
+    * Checks is you have a github account, AND if you are a member of specific github organization specified by the application (e.g. `ucsd-cse-spis-2016`, for example.)
+    * Like preceding one, this app only works with sessions; no connection to a database
+    * No ability to store user preferences, or any other persistent data
 
 # Using Flask-OAuthlib
 
@@ -36,6 +45,12 @@ pip install Flask-OAuthlib
 
 If you run into problems with that, ask a mentor or instructor for assistance.
 
+
 ## Example code
+
+
+# References
+
+* <https://github-flask.readthedocs.io/en/latest/>
 
 
