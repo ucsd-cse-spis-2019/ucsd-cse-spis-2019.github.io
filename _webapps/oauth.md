@@ -32,20 +32,22 @@ Maybe&mdash;maybe not.  There is a below section that will ask a few questions t
 
 There are a few simple questions to determine whether your web app needs user logins or not
 
-1.  Do you need to save any information between sessions?    
+1.  <b>Do you need to save any information between sessions</b>?    
     * If the answer is yes, then that means your web app will need a [Database](/webapps/database/).  
-    * And if you need a database, you'll need user logins, even if you don't think you need to save any
-         particular information about individual users.
+    * And if you need a database, <b>you'll need user logins, so you'll need OAuth</b>
+    * This is true even if you don't think you need to save any particular information about individual users.
     * The reason has to do with security and accountability.  Any webapp that let's users upload content 
-         without   authentication quickly becomes a cesspool of spam, left by bots and trolls.
-    * Requiring logins gives you some degree of control over this.  It doesn't entirely prevent it, but
-         it does slow down the process, and give you some way to ban specific abusive accounts.
+         without authentication quickly becomes a cesspool of spam, left by bots and trolls.
+    * Requiring logins&mdash;and tracking which users have uploaded which content&mdash;gives 
+        you some degree of control over this.  
+    * It doesn't entirely prevent abuse, but
+        it does slow down the process, and give you some way to ban specific abusive accounts.
     * An even better way is to require not only a login, but an "approved" account.   
     * The sample code we are providing shows a particular way of doing this, levering the Github *organization* 
          feature.  More on that later.
 
-2.  Do you want users to be able to save personalized information and preferences on your site?
-    * If the answer is yes, then you'll need user logins
+2.  <b>Do you want users to be able to save personalized information and preferences on your site</b>?
+    * If the answer is yes, then <b>you'll need user logins, so you'll need OAuth</b>
     * You'll also need a database of some kind in which to store those user preferences.   
     * While your app will not be storing the username/password information, your app *will* update a 
         a table/dictionary of users, keyed by the username.
@@ -53,12 +55,15 @@ There are a few simple questions to determine whether your web app needs user lo
         you'll look up the user in that table.  If that user doesn't already exist, you'll create a new
         entry in the table for that user.   
 
-3.  Is your application one that can give answers *entirely* based on information the user enters during a single
-     session of use, and that does *NOT* need to remember anything from one session to the next (only from one
-     page to the next)? *AND*  can all of the information that is needed to give answers either freely available online
-     with no authentication, or information that can be stored in a hard-coded file as part of your application?
-    * If so, then you probably do NOT need user logins, or OAuth.  You don't need to read the rest of of this page.
-    * But there are very few webapps for which that is true. :-)
+3.  Is your application one that can
+    *  give answers *entirely* based on information the user enters during a 
+        single session of use, *AND*
+    * does *NOT* need to remember anything from one session to the next (only from one
+     page to the next), *AND*
+    * is all of the information that is needed to give answers either freely available online with no authentication, OR
+    * is it information that can be stored in a hard-coded file as part of your application?
+    If so, then <b>you probably do NOT need user logins, or OAuth</b>.  You don't need to read the rest of of this page.
+    But there are very few webapps for which that is true. :-)
     
 
 # We'll use Github as our OAuth provider, at least initially
