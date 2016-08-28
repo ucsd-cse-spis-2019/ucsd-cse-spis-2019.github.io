@@ -75,3 +75,8 @@ We are currently looking at two possibilities:
 * Redis, which is a NoSQL key-value store
 
 More details on these will be posted here as they become available.
+
+# References
+
+* a comparison of NoSQL databases
+    * [https://www.digitalocean.com/community/tutorials/a-comparison-of-nosql-database-management-systems-and-models](https://www.digitalocean.com/community/tutorials/a-comparison-of-nosql-database-management-systems-and-models)
