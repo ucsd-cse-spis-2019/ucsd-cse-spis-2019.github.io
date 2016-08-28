@@ -17,8 +17,6 @@ we need to store it somewhere more permanently.
 For a desktop app where there is likely to be only one user at a time, writing to the file system is often a
 way that data is stored between sessions.
 
-The problem of storing information between sessions
-
 For web apps, though, there are at least three reasons that we tend to use databases rather than 
 reading or writing regular files:
 
