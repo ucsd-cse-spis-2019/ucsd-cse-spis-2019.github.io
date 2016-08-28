@@ -58,15 +58,13 @@ There are a few simple questions to determine whether your web app needs user lo
 3.  Is your application one that can
     *  give answers *entirely* based on information the user enters during a 
         single session of use, *AND*
-    * does *NOT* need to remember anything from one session to the next (only from one
-     page to the next), *AND*
-    * is all of the information that is needed to give answers either freely available online with no authentication, OR
-    * is it information that can be stored in a hard-coded file as part of your application?
+    * does *NOT* need to remember anything from one session to the next (only from one page to the next), *AND*
+    * respond to user queries based on information that is either freely available online with no authentication, OR
+        can be hard-coded in a static file that you keep with your application?
     
     If so, then <b>you probably do NOT need user logins, or OAuth</b>.  You don't need to read the rest of of this page.
-    But there are very few webapps for which that is true. :-)
+    But there are very few webapps for which that is true.
     
-
 # We'll use Github as our OAuth provider, at least initially
 
 If you do need user authentication, I highly recommend using OAuth based on Github as the way to proceed, at least initially.  You can switch to Facebook, Google, Twitter, etc. or add them as additional options later if you so choose.  (There is section below that explains why we are using Github as our initial OAuth provider below.)
