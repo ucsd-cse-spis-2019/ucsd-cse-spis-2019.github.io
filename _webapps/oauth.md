@@ -85,7 +85,23 @@ Here's why we are using Github as the OAuth provider for our sample applications
 
 # Example code: 
 
-TODO: Explain these examples a bit more
+Below are two example repos with code for using OAuth Authentication with Github in a Flask Applicaiton.
+
+Each of the repos below requires a bit more explanation---the code won't just "run" without these important configuration steps:
+
+1.  Creating a client_id and client_secret specific to your instance of this application.
+    * You have to do this from scratch each time you move the application to a different host or port number
+    * That means you have to do this step once for running on your local machine (e.g. `http://127.0.0.1:4000` and 
+        a second time if/when you run on Heroku
+    * Instructions for creating those are here: [Github OAuth Setup](http://ucsd-cse-spis-2016.github.io/webapps/oauth_github/)
+    
+2.  Putting the client_id and client_secret, along with perhaps other configuration, into either:
+    * an appropriate `env.sh` file (if running locally on ACMS or your own computer), OR
+    * the Heroku Config Vars screen (if running on Heroku)
+    * Adding an explanation of these two steps to the website is still a TODO ITEM.
+    * In the meantime, an instructor or mentor may be able to walk you through it.
+
+Here are the code examples:
 
 * Simple github oauth: <https://github.com/ucsd-cse-spis-2016/spis16-webapps-oauth-example>
     * If you have a github account, you can log in.
