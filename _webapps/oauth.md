@@ -3,9 +3,81 @@ topic: "OAuth"
 desc: "Delegating username/password authentication to Github, Facebook, Google, etc."
 ---
 
-# TODO: Introductory material about OAuth
+# What is OAuth, and why do we need it?
 
-Explain what OAuth is, and why we need it here.
+If you've ever seen a webapp that allows you to "Login with Facebook", "Login with Google", etc. as in the images below, then you've seen an example of a webapp that is probably using OAuth.
+
+![OAuth sample icons](/webapps/oauth/oauth_login_with_icons.png) 
+![OAuth sample buttons](/webapps/oauth/oauth_login_with_buttons.png) 
+
+OAuth allows one web application to delegate the function of "username/password" checking, and account management (creating, updating, verifying and deleting accounts) to some other service, such as Google, Facebook, Github, Twitter, etc.
+
+These other services are called *OAuth Providers* and the webapp that users the service is called an *OAuth Client*.
+
+The  version of OAuth (as of Summer 2016, when this lesson is being written) that is most current and should be used for new applications is OAuth2.
+
+# Why not implement a username/password account feature from scratch?
+
+You *could* do that.  This article explains an approach to implementing do-it-yourself account creation (usernames, passwords, email verifiction, password reset, etc.) using Flask and an SQL database: [http://exploreflask.com/en/latest/users.html](http://exploreflask.com/en/latest/users.html).
+
+*HOWEVER*, that would probably take you at least a week, and it would probably be the only thing your webapp would be able to do.  It is a classic case of "reinventing the wheel".    
+
+During SPIS 2016, we have just about a week (from Thursday of Week 4 to Thursday of Week 5) to implement a full web app from start (initial brainstorming) to finished product (demos on Friday of Week 5.)   It doesn't make sense to spend time
+doing something that is a "commodity feature" like account management, especially when delegating that to an OAuth provider
+is *much* more straightforward.
+
+# Do I even need user logins in my SPIS 2016 webapp project
+
+Maybe&mdash;maybe not.  There is a below section that will ask a few questions to see whether you need authentication (user login/logout functionality) or not.  It will also check to see what level of user authentication you might need.
+
+There are a few simple questions to determine whether your web app needs user logins or not
+
+1.  Do you need to save any information between sessions?    
+    * If the answer is yes, then that means your web app will need a [Database](/webapps/database/).  
+    * And if you need a database, you'll need user logins, even if you don't think you need to save any
+         particular information about individual users.
+    * The reason has to do with security and accountability.  Any webapp that let's users upload content 
+         without   authentication quickly becomes a cesspool of spam, left by bots and trolls.
+    * Requiring logins gives you some degree of control over this.  It doesn't entirely prevent it, but
+         it does slow down the process, and give you some way to ban specific abusive accounts.
+    * An even better way is to require not only a login, but an "approved" account.   
+    * The sample code we are providing shows a particular way of doing this, levering the Github *organization* 
+         feature.  More on that later.
+
+2.  Do you want users to be able to save personalized information and preferences on your site?
+    * If the answer is yes, then you'll need user logins
+    * You'll also need a database of some kind in which to store those user preferences.   
+    * While your app will not be storing the username/password information, your app *will* update a 
+        a table/dictionary of users, keyed by the username.
+    * Each time a user logs in, you'll be told by the OAuth provider what that user's login username is; 
+        you'll look up the user in that table.  If that user doesn't already exist, you'll create a new
+        entry in the table for that user.   
+
+3.  Is your application one that can give answers *entirely* based on information the user enters during a single
+     session of use, and that does *NOT* need to remember anything from one session to the next (only from one
+     page to the next)? *AND*  can all of the information that is needed to give answers either freely available online
+     with no authentication, or information that can be stored in a hard-coded file as part of your application?
+    * If so, then you probably do NOT need user logins, or OAuth.  You don't need to read the rest of of this page.
+    * But there are very few webapps for which that is true. :-)
+    
+
+# We'll use Github as our OAuth provider, at least initially
+
+If you do need user authentication, I highly recommend using OAuth based on Github as the way to proceed, at least initially.  You can switch to Facebook, Google, Twitter, etc. or add them as additional options later if you so choose.  (There is section below that explains why we are using Github as our initial OAuth provider below.)
+
+# Why Github as our OAuth provider?
+
+Here's why we are using Github as the OAuth provider for our sample applications:
+
+* Everyone in SPIS 2016 has a github account, so everyone in SPIS 2016 will be able to test your application
+* For certain applications, we can use the class organization, `ucsd-cse-spis-2016` as a way to further restrict logins 
+    only to people that we know (e.g. if we are using personal data or pictures that have been shared with the SPIS 2016
+    community, but that members of that community may not wish to be available to the general "github account having" public.)
+* Focusing on a single provider for our initial documentation of the process makes things *much* easier.
+* The instructional staff has more experience with Github's OAuth system than with the other OAuth providers out there.
+ 
+
+
 
 # Example code: 
 
