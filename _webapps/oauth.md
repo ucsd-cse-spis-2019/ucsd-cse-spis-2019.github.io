@@ -62,6 +62,7 @@ There are a few simple questions to determine whether your web app needs user lo
      page to the next), *AND*
     * is all of the information that is needed to give answers either freely available online with no authentication, OR
     * is it information that can be stored in a hard-coded file as part of your application?
+    
     If so, then <b>you probably do NOT need user logins, or OAuth</b>.  You don't need to read the rest of of this page.
     But there are very few webapps for which that is true. :-)
     
