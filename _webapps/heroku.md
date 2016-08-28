@@ -4,6 +4,24 @@ desc: "Using Heroku to host Flask-based Python webapps"
 ---
 
 
+# Checking the current status of things
+
+Typing `heroku apps:info` can give you a lot of information about the app you are currently working with.
+
+```
+$ heroku apps:info
+=== salty-reef-52860
+Dynos:         
+Git URL:       https://git.heroku.com/salty-reef-52860.git
+Owner:         pconrad.cis@gmail.com
+Region:        us
+Repo Size:     0 B
+Slug Size:     0 B
+Stack:         cedar-14
+Web URL:       https://salty-reef-52860.herokuapp.com/
+$ 
+```
+
 # Setting the heroku remote
 
 Suppose you try to do `git push heroku master` and you get this error message:
