@@ -1,5 +1,5 @@
 ---
-topic: "Webapps Intro, Part 5"
+topic: "Sessions"
 desc: "Working with Sessions in Flask"
 ---
 
