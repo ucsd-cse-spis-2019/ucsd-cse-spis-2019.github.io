@@ -1,5 +1,5 @@
 ---
-topic: "OAuth: Adding it to your app"
+topic: "OAuth: Actually doing it"
 desc: "Adding OAuth to an existing Flask Webapp"
 indent: True
 ---
