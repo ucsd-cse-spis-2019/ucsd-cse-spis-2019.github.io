@@ -35,6 +35,7 @@ I *highly recommend* using a library whenever one is available.
 # A few APIs 
 
 * Google Places API
+    * Working Example: <https://github.com/ucsd-cse-spis-2016/spis16-webapps-google-places-demo>  
     * Main Page: [https://developers.google.com/places/](https://developers.google.com/places/)
     * Python Library: <https://github.com/slimkrazy/python-google-places>
     * Code to do it "by hand": <https://andrewpwheeler.wordpress.com/2014/05/15/using-the-google-places-api-in-python/>
