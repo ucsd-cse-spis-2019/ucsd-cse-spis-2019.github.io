@@ -1,6 +1,6 @@
 ---
 topic: "OAuth: Deploy Examples"
-desc: "Depolying the OAuth Example Code on localhost, and Heroku"
+desc: "Deploying the OAuth Example Code on localhost, and Heroku"
 indent: True
 ---
 
