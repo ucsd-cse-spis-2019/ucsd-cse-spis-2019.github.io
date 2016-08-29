@@ -25,3 +25,5 @@ Forking is very simple: it means to create a copy of a repo on github, from one 
 
 To fork a repo, find this button:
 
+[fork button](https://github-images.s3.amazonaws.com/help/bootcamp/Bootcamp-Fork.png)
+
