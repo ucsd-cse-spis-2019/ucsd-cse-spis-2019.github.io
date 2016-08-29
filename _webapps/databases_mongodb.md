@@ -43,3 +43,7 @@ Flask-PyMongo==0.4.1
 pymongo==3.3.0
 ```
 
+# References
+
+* <http://blog.dwyer.co.za/2013/10/a-basic-web-app-using-flask-and-mongodb.html>
+* <https://mlab.com>
