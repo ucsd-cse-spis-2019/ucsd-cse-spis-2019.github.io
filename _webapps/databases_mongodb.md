@@ -70,3 +70,4 @@ pymongo==3.3.0
 
 * <http://blog.dwyer.co.za/2013/10/a-basic-web-app-using-flask-and-mongodb.html>
 * <https://mlab.com>
+* MongoDB Collection operations from pymongo module: <https://api.mongodb.com/python/current/api/pymongo/collection.html#pymongo.collection.Collection>
