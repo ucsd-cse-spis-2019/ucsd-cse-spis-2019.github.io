@@ -8,18 +8,41 @@ For an introduction to Databases, and their role in webapps, see the article:
 
 * [Webapps: Databases](/webapps/databases/)
 
+# MongoDB on mLab
+
+MongoDB is a particular implementation of a NoSQL database.   There multiple  hosting providers that offer MongoDB implementations "in the cloud" as a service.
+
+The one we'll be using for SPIS 2016 is called mLab (<https://www.mlab.com>.  We are using mLab because:
+
+* there is free tier
+* using the free tier does not require entering a credit card
+
+# Use mLab.com *directly*, not via the Heroku mLab add-on
+
+Note that we *NOT* using mLab MongoDB Add-On for Heroku&mdash;instead, we are using mLab directly through its own console at <https://www.mlab.com>. 
+
+# Wait, why aren't we using the mLab add-on.
+
+Although it is slightly more convenient to use the Heroku mLab add-on, that add-on requires entering a credit card into Heroku (even though it is free).      What using the Heroku add-on buys you is that with one click, you can:
+
+* Automatically create the database
+* Automatically fill in the five parts of the configuration info for the database directly into Heroku's configuration variables
+     * For the record, those are: (host, port, database name, database username, database password) 
+
+When you use mLab directly, you have to do those steps manually.  Fortunately, that isn't very difficult.  It's just slightly tedious, but you typically only have to do it once per application, and then you never have to worry about it again (at least not for that app.)
+
+# As an aside, what *is* free on Heroku?
+
+In fact, the only free services on Heroku that do not require entering a credit card are:
+
+* Up to five running applications (but no more than that)
+* The Heroku Postgres add-on (which is for an SQL-based database)
+    * We certainly could use Postgres, but its a bit more complicated.
+* The Heroku Connect add-on 
+    (which is for integration with Salesforce.com, something not of particular interest to us in SPIS.)
 
 
-
-# MongoDB
-
-<div style="width:80%; padding: 1em; margin: 1em; border: 2px solid red;" markdown="1">
-
-UPDATE: It turns out that the MongoDB service on Heroku, even though it is "free", requires entering a credit card for "account validation".  We therefore do not wish to use it during SPIS.
-
-We might go back to using Heroku Postgres instead, since it does NOT require credit card validation.
-
-</div>
+# `Flask-PyMongo` Python Module 
 
 There is a Python module called [Flask-PyMongo](http://flask-pymongo.readthedocs.io/en/latest/) that we can install with `pip install` to make working with MongoDB easier.
 
