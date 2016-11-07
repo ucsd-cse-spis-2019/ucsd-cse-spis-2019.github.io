@@ -57,7 +57,7 @@ your partner will share the same repo by following these instructions
     you should expect to see if you were importing the starter code for
     lab04:
 	
-    ![click import code](/images/click-import-code.png)
+    ![click import code](/images/import-code1.png)
 
 4.  After you click  the *import code* button,
     a screen will come up similar to the one below.    You should have been
@@ -65,7 +65,7 @@ your partner will share the same repo by following these instructions
     into the box labelled "Your old repository's clone URL".    Then click
     the button labeled "begin import".
 
-    ![import code screen](/images/import-code1.png)
+    ![import code screen](/images/import-code2.png)
 
 
 5. Its now time to clone a copy of your repo on the computer where you
