@@ -65,7 +65,7 @@ your partner will share the same repo by following these instructions
     into the box labelled "Your old repository's clone URL".    Then click
     the button labeled "begin import".
 
-    ![import code screen](/images/import-starter-code.png)
+    ![import code screen](/images/import-code1.png)
 
 
 5. Its now time to clone a copy of your repo on the computer where you
