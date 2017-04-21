@@ -14,8 +14,8 @@ function weekLabel(weekNum) {
     return 'Week ' + weekNum +  
 	'<ul>' +
 	'<li><a href="{{site.weekly_google_calendar_prefix}}' +
-	weekNum + '">agenda</a></li>' +
-	'<li><a href="/lectures/week' + weekNum + '">lectures</a></li>' +
+	weekNum + '/">agenda</a></li>' +
+	'<li><a href="/lectures/week' + weekNum + '/">lectures</a></li>' +
 	'</ul>';
 }
 
