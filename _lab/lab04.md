@@ -3,8 +3,8 @@ layout: lab
 num: lab04
 ready: false
 desc: "Recursion and fractals with turtle"
-assigned: 2016-08-10 09:30:00.00-7
-due: 2016-08-12 15:45:00.00-7
+assigned: 2017-08-10 09:30:00.00-7
+due: 2017-08-12 15:45:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
@@ -37,7 +37,7 @@ Your learning goals are:
 
 * Step 1: Read Chapter 4 of Guttag, Sections 4.1 -4.5
 
-* Step 2: Create a new private github repo under the "ucsd-cse-spis-2016" organization. Your github repo should be called spis16-lab04-Name1-Name2 (where Name1 and Name2 are the first names of the pair partners). Your repo should contain a README and .gitignore 
+* Step 2: Create a new private github repo under the "ucsd-cse-spis-2017" organization. Your github repo should be called spis16-lab04-Name1-Name2 (where Name1 and Name2 are the first names of the pair partners). Your repo should contain a README and .gitignore 
 
 * Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy.
 

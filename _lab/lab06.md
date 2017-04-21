@@ -3,9 +3,9 @@ layout: lab
 num: lab06
 ready: false
 desc: "Python skill builder (functions, types, if/else, strings, recursion)"
-assigned: 2016-08-15 08:45:00.00-7
-due: 2016-08-19 15:45:00.00-7
-starter-code-url: https://github.com/ucsd-cse-spis-2016/lab06-startercode.git
+assigned: 2017-08-15 08:45:00.00-7
+due: 2017-08-19 15:45:00.00-7
+starter-code-url: https://github.com/ucsd-cse-spis-2017/lab06-startercode.git
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
@@ -62,11 +62,11 @@ The way that you create the repo will be a little different, since we have "star
 Instead of creating the repo from scratch, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
 importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
 
-The name of your repo should be `spis16-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2016.github.io/info/pairs/)
+The name of your repo should be `spis16-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2017.github.io/info/pairs/)
 
 # Step 2: Invite the "other" pair partner as a collaborator with admin access
 
-The pair partner that created the repo needs to invite the second pair partner to be a collaborator on the repo with Admin access.   That process is explained here: [Github: Adding Collaborators](http://ucsd-cse-spis-2016.github.io/topics/github_add_collaborators/)
+The pair partner that created the repo needs to invite the second pair partner to be a collaborator on the repo with Admin access.   That process is explained here: [Github: Adding Collaborators](http://ucsd-cse-spis-2017.github.io/topics/github_add_collaborators/)
 
 # Step 3: cd into the ~/github directory of your 
 

@@ -2,8 +2,8 @@
 num: "aps1"
 desc: "Divide-and-Conquer"
 ready: false
-assigned: 2016-08-03 08:45:00.00-7:00
-due: 2016-08-06 21:00:00.00-7:00
+assigned: 2017-08-09 08:45:00.00-7:00
+due: 2017-08-12 21:00:00.00-7:00
 layout: default
 ---
 

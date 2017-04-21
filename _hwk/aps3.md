@@ -2,8 +2,8 @@
 num: "aps3"
 desc: "Iterative Improvement"
 ready: false
-assigned: 2016-08-17 08:45:00.00-7:00
-due: 2016-08-20 21:00:00.00-7:00
+assigned: 2017-08-17 08:45:00.00-7:00
+due: 2017-08-20 21:00:00.00-7:00
 resubmit: 2016-08-23 22:00:00.00-7:00
 layout: default
 ---

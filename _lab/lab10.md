@@ -3,8 +3,8 @@ layout: lab
 num: lab10
 ready: false
 desc: "Data analysis and plotting"
-assigned: 2016-08-17 13:15:00.00-7
-due: 2016-08-22 16:45:00.00-7
+assigned: 2017-08-17 13:15:00.00-7
+due: 2017-08-22 16:45:00.00-7
 ---
 
 # Data analysis and plotting
@@ -21,7 +21,7 @@ As you work through the steps below, you may find it helpful to refer to:
 # Step 1: Create a lab10 repo
 
 Go to github.com and create a new repo called spis16-lab10-Name-Name using Method 1. When creating the repo import the starter code from this git repo:
-* https://github.com/ucsd-cse-spis-2016/lab10-startercode
+* https://github.com/ucsd-cse-spis-2017/lab10-startercode
 
 Then use `git clone` to clone this into your `~/github` directory.
 

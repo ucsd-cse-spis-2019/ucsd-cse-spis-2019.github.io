@@ -2,8 +2,8 @@
 num: "aps2"
 desc: "Greedy Method"
 ready: false
-assigned: 2016-08-10 08:45:00.00-7:00
-due: 2016-08-13 21:00:00.00-7:00
+assigned: 2017-08-14 08:45:00.00-7:00
+due: 2017-08-21 21:00:00.00-7:00
 resubmit: 2016-08-16 22:00:00.00-7:00
 layout: default
 ---

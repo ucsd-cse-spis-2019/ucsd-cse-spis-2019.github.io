@@ -3,8 +3,8 @@ layout: lab
 num: lab09
 ready: false
 desc: "Working With Data, (by Miles and Phill)"
-assigned: 2016-08-17 13:15:00.00-7
-due: 2016-08-22 16:45:00.00-7
+assigned: 2017-08-17 13:15:00.00-7
+due: 2017-08-22 16:45:00.00-7
 ---
 
 # Working With Data
@@ -17,7 +17,7 @@ As you work through the steps below, you may find it helpful to refer to:
 
 * the notes from the lecture Miles gave on Wednesday 08/17, 
     which can be found here: [Transcript of Python Shell Session](/lectures/week3/Lecture-08-17.txt){: data-ajax="false"}
-* The pages on the SPIS 2016 website about:
+* The pages on the SPIS 2017 website about:
     * [Python: Dictionaries](/topics/python_dictionaries/)
     * [Python: defaultdict](/topics/python_defaultdict/)
 
@@ -42,7 +42,7 @@ you can just do a for loop on `foo.keys()`, e.g.
 
 # Step 1: Create a lab09 repo
 
-Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab09start
+Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab09start
 
 Then use `git clone` to clone this into your `~/github` directory.
 

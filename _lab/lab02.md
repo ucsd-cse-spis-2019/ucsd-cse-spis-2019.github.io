@@ -3,8 +3,8 @@ layout: lab
 num: lab02
 ready: false
 desc: "Next steps with github, Python functions, testing"
-assigned: 2016-08-08 13:15:00.00-7
-due: 2016-08-08 17:00:00.00-7
+assigned: 2017-08-08 13:15:00.00-7
+due: 2017-08-08 17:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
@@ -95,26 +95,26 @@ There are three steps involved here.  First, I'll give you an overview, and then
 3. Finally, the second pair partner needs to accept the invitation to be a collaborator.    
 
 
-Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2016 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
+Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2017 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
 
 For purposes of the rest of these insructions, though, I'll refer to "first" as the partner
 under whose github account the repo is initially created, and "second" as the partner that gets invited to collaborate.
 
-And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2016 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
+And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2017 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
    
 ### Step 2a: Create a private repo with a README.md and a .gitignore file for Python.
 
 Choose which pair partner is going to create the repo&mdash;that pair partner should be the one that is logged into github.com.
 
-To create the repo follow the instructions at the link: [github create repo Method 2](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method2).
+To create the repo follow the instructions at the link: [github create repo Method 2](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method2).
 
 As you follow these instructions, create:
-* a private github repo under the `ucsd-cse-spis-2016` github organizaiton,
+* a private github repo under the `ucsd-cse-spis-2017` github organizaiton,
 * with the name `spis16-lab02-Name1-Name2` where,
     * `Name1` is the first pair partner's preferred first name
     * `Name2` is the second pair partner's preferred first name
 
-The <b>Pair Name</b> column in the [SPIS 2016 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
+The <b>Pair Name</b> column in the [SPIS 2017 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
 
 An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be: 
 

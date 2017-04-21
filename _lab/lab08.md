@@ -3,8 +3,8 @@ layout: lab
 num: lab08
 ready: false
 desc: "Basics of electronics with Raspberry Pi, by Diba"
-assigned: 2016-08-17 09:30:00.00-7
-due: 2016-08-19 15:45:00.00-7
+assigned: 2017-08-17 09:30:00.00-7
+due: 2017-08-19 15:45:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
@@ -16,7 +16,7 @@ In this lab you will be introduced to the basics of electronics using a a credit
 # Getting started
 
 ## Create a git repo and get the starter code
-Use your laptop to create a new repo called `spis16-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2016.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab08-startercode.git 
+Use your laptop to create a new repo called `spis16-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab08-startercode.git 
 You may also also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
 
 Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group.
@@ -145,7 +145,7 @@ All the unix commands that you have learned so far can be used to navigate throu
 
 ```
 
-* Clone your git repo over https into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop (not the Pi) and navigate to your repo on github which should be called `spis16-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The https address should be something like `https://github.com/ucsd-cse-spis-2016/spis16-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
+* Clone your git repo over https into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop (not the Pi) and navigate to your repo on github which should be called `spis16-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The https address should be something like `https://github.com/ucsd-cse-spis-2017/spis16-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
 
 Make sure you have the starter code which are the files `01_blinking_led.py` and `02_buttonLED.py` in your repo. If you did not import the starter code when creating the repo, you can copy it over from the directory /home/pi/lab08-startercode/  on the Pi
 To do this type the following command replacing the second argument by the name of your repo

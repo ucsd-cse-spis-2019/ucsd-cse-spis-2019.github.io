@@ -3,8 +3,8 @@ layout: lab
 num: lab01
 ready: false
 desc: "Picobot"
-assigned: 2016-08-02 09:30:00.00-7
-due: 2016-08-03 17:00:00.00-7
+assigned: 2017-08-02 09:30:00.00-7
+due: 2017-08-03 17:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
@@ -25,7 +25,7 @@ The basic end-goals for this part of the lab are (and remember, these are minima
 
 ## First steps
 
-* Create a new github repo under the "ucsd-cse-spis-2016" organization. Your github repo should be called spis16-lab01-Name1_Name2 (where Name1 and Name2 are the pair names). 
+* Create a new github repo under the "ucsd-cse-spis-2017" organization. Your github repo should be called spis16-lab01-Name1_Name2 (where Name1 and Name2 are the pair names). 
 
 * Create three text files in your git repo: `answers.txt`, `emptyroom.txt` and `maze.txt`. The file `answers.txt` should contain your answers to all the questions in the following section. `emptyroom.txt` and `maze.txt` should contain your Picobot code for the empty room and maze exercises. See additional instructions in the subsequent sections.
 

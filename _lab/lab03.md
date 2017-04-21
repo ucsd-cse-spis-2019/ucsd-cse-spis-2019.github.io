@@ -3,8 +3,8 @@ layout: lab
 num: lab03
 ready: false
 desc: "More functions and drawing with Turtle Graphics"
-assigned: 2016-08-09 13:15:00.00-7
-due: 2016-08-10 15:00:00.00-7
+assigned: 2017-08-09 13:15:00.00-7
+due: 2017-08-10 15:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
@@ -280,13 +280,13 @@ Congratulations on finishing lab 3!!! Hope you had fun with turtle graphics!
 When you are finished with the main part of lab03, here is an extension that you can start working on, and continue
 to contribute to throughout SPIS.
 
-You are invited to create a *public* github repo under the ucsd-cse-spis-2016 organization with this naming convention:
+You are invited to create a *public* github repo under the ucsd-cse-spis-2017 organization with this naming convention:
 
 * `spis16-drawings-Name-Name`  (e.g. `spis16-drawings-Alex-Chris` )
 
 In this repo, you can add files that provide drawing routines to draw whatever you like.
 
-You can use the code from [https://github.com/ucsd-cse-spis-2016/spis16-lecture-0809](https://github.com/ucsd-cse-spis-2016/spis16-lecture-0809) as a model.
+You can use the code from [https://github.com/ucsd-cse-spis-2017/spis16-lecture-0809](https://github.com/ucsd-cse-spis-2016/spis16-lecture-0809) as a model.
 
 Then, try looking at the code from some of your fellow classmates public `spis16-drawings...` repos.
 
