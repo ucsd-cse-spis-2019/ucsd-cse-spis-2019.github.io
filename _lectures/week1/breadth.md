@@ -5,6 +5,7 @@ desc: "A second look at data mining and intro to list comprehension"
 week: "1"
 indent: true
 link_topic_desc_only: true
+ready: false
 ---
 
 # Breadth lecture from 08/05: Miles

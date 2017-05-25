@@ -1,9 +1,11 @@
 ---
-lecture_date: 2016-08-05 16:00:00.00-7:00
+lecture_date: 2017-08-11 16:00:00.00-7:00
 topic: "Week 1 Closing Circle"
 desc: "Reflect on Awesome moments, meet the mentors, appreciations"
 week: "1"
+ready: false
 link_topic_desc_only: true
+ready: false
 ---
 
 Here are the slides from our week 1 closing circle:
