@@ -1,5 +1,5 @@
 ---
-lecture_date: "2016-08-05 09:00:00.00-7:00"
+lecture_date: "2017-08-11 09:00:00.00-7:00"
 topic: "Week 1: Breadth"
 desc: "A second look at data mining and intro to list comprehension"
 week: "1"

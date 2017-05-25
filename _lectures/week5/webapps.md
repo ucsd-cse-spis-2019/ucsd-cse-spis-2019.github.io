@@ -8,5 +8,8 @@ link_topic_desc_only: true
 
 # Web Applications in Python, using Flask
 
-TODO: Fill this in with general description of this project area.
+{% include lectures_for_week.html week="5" section_title="Projects" collapsed="false"
+     extra_item="0908" project_filter="webapps" %}
+
+
 

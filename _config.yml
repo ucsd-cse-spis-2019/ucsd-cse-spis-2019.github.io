@@ -42,6 +42,14 @@ collections:
     output: true
     permalink: /lab/:path/
     last_before: false
+  draftlab:
+    output: true
+    permalink: /draftlab/:path/
+    last_before: false
+  drafthwk:
+    output: true
+    permalink: /drafthwk/:path/
+    last_before: false
   info:
     output: true
     permalink: /info/:path/
@@ -79,10 +87,22 @@ defaults:
       type: hwk
     values:
       layout: hwk
+  -
+    scope:
+      path: ""
+      type: drafthwk
+    values:
+      layout: hwk
   - 
     scope:
       path: ""
       type: lab
+    values:
+      layout: lab
+  - 
+    scope:
+      path: ""
+      type: draftlab
     values:
       layout: lab
   - 

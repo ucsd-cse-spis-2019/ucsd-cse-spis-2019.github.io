@@ -12,11 +12,21 @@
       {% for item in site.lectures %}
         {% unless item.omit_from_collection %}     
           {% if item.week == include.week %}
-            {% include lecture_link.html
+            {% if include.project_filter %}
+              {% if include.project_filter == item.project_area %}
+                {% include lecture_link.html
+                  link_topic_desc_only=item.link_topic_desc_only
+                  indent=item.indent topic=item.topic
+                  desc=item.desc url=item.url lecture_date=item.lecture_date
+                %}
+              {% endif %}
+            {% else %}
+             {% include lecture_link.html
                link_topic_desc_only=item.link_topic_desc_only
                indent=item.indent topic=item.topic
                desc=item.desc url=item.url lecture_date=item.lecture_date
              %}
+            {% endif %}
       {% endif %}
       {% endunless %}
       {% endfor %}
