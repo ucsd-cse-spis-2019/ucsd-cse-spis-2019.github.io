@@ -19,7 +19,14 @@
     </script>
       
     {% include nav.html %}
+	    
+	    
     <div id="content"  class="ui-content">
+      {% if page.ready %}
+      {% else %}
+      {% include not_ready_warning.html %}
+      {% endif %}     
+	    
       {% if page.project_header %}
       <h1>{{ page.topic }} Project, Week {{page.week}} Lectures</h1>
       {% else %}
