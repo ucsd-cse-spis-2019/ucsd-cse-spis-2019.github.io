@@ -19,13 +19,14 @@ If you find typos or problems with the lab instructions, please report them on P
 * Write a program to control a simulated robot so that it navigates through both an empty world and a maze environment
 * Save and submit your files for feedback
 
-The basic end-goals for this part of the lab are (and remember, these are minimal goals, eager for extensions):
+The main goals for this part of the lab are (and remember, these are minimal goals, eager for extensions):
 
-* Write a program that directs your robot, Picobot, to completely "cover" (i.e., visit all the non-wall spaces) first an empty room, and then a maze.  
+* Write a program that directs your robot, Picobot, to completely "cover" (i.e., visit all the non-wall spaces) an empty room
+* Write a program to do the same for a maze
 
 ## First steps
 
-* Create a new github repo under the "ucsd-cse-spis-2017" organization. Your github repo should be called spis16-lab01-Name1_Name2 (where Name1 and Name2 are the pair names). 
+* Create a new github repo under the "ucsd-cse-spis-2017" organization. Your github repo should be called spis17-lab01-Name1_Name2 (where Name1 and Name2 are the pair names). 
 
 * Create three text files in your git repo: `answers.txt`, `emptyroom.txt` and `maze.txt`. The file `answers.txt` should contain your answers to all the questions in the following section. `emptyroom.txt` and `maze.txt` should contain your Picobot code for the empty room and maze exercises. See additional instructions in the subsequent sections.
 
@@ -34,7 +35,7 @@ The basic end-goals for this part of the lab are (and remember, these are minima
 
 Once you have logged on to your account on a terminal in the computer lab and managed to open a web browser (which we assume you have done if you are reading this), you are ready to dive into Picobot. You may already feel comfortable with Picobot from the exercises we did in the interactive portion of this lab.  If that's the case and you're ready to start writing your code, you can jump right to the Picobot simulator and start writing programs:
 
-[Click here for the Picobot simulator and GET STARTED](https://www.cs.hmc.edu/picobot/)!
+[Right click here for the Picobot simulator and GET STARTED](https://www.cs.hmc.edu/picobot/)!
 
 Again, your goals are to write a program to cover the empty room and the maze.  Feel free to play around for a while--playing around is often the best way to get going.  But many people eventually find this frustrating and crave a deeper understanding of what's going on.  Furthermore,  it is an important skill not only to solve the problems, but to understand exactly why your solution works.  So once you've gotten your feet wet playing around, please move on to the next section.
 
