@@ -47,29 +47,28 @@ Read [Chapter 1.2 of the book CS for All](https://www.cs.hmc.edu/csforall/Introd
 As you read, make sure you can answer the following questions.  Discuss the answers with your partner.  Ask a tutor if you're stuck or want to check your answers. Put your answers to the following questions in the `answers.txt` file in your git repo. Commit your file to submit your answers.
 
 
-1. Draw the environments for the following descriptions: xxWx, NxWS
-
-2. Describe the following rules in English:
+1. Describe the following rules in English:
 
 	```
 	0 N*x* --> W 0
 	1 x**x --> N 2
 	```
-3. What is the difference between the "*" and the "x" in the description of Picobot's surroundings?
+2. What is the difference between the "*" and the "x" in the description of Picobot's surroundings?
 
-4. Write a Picobot rule that would cause Picobot to crash into a wall (Picobot will report an error if you try this)
+3. Write a Picobot rule that would cause Picobot to crash into a wall (Picobot will report an error if you try this)
+
+4. In the Picobot simulator, what will happen if we replace the "X" in the fourth (i.e., last) starting rule with a W.  First try to predict, and then run the simulation to see what happens.
 
 5. In the Picobot simulator, modify the starting rules so that Picobot moves from East to West instead of from North to South.
 
-6. In the Picobot simulator, what will happen if we replace the "X"s in the second and fourth starting rule with a W.  First try to predict, and then run the simulation to see what happens.
 
 
 ## Program Picobot to solve the empty room
 
 When you are finished reading (or even before you finish), solve the empty room problem.  That is, write a Picobot program to make Picobot visit every cell in the empty room, no matter where it starts.  Here are some hints to get you started:
-As you saw if you answered the last question above, simply changing the X's to W's gets you a good part of the way there.  But there are some problems.  The first is that Picobot crashes into walls.  Picbobot should only be allowed to move West if there is no wall to the West.  Modify the existing rules so that Picobot moves West whenever it is against a N or S wall and there is no wall to the west.
-Now Picobot successfully covers the room to the West of where it started, but it gets stuck when it reaches either the NW or SW corner, because it doesn't have a rule that applies to this surrounding.  You'll need to add one.  However, before you do, you should think carefully about your algorithm.  What is it that you want Picobot to do when it reaches the NW or SW corner?  One option is to immediately head all the way east, and then start moving N, S and W again as it was doing before.  Another option is to begin a N, S, and E sweep back the other way.  Either way you are going to need at least one new state.  We encourage you to think carefully about what this state or states will mean before you start implementing rules. 
-Before continuing, save your code for the empty room solution in the file `emptyroom.txt` in your git repo. 
+As you saw if you answered question 4 above, a simple change gets you a good part of the way there, covering half the room.
+But you'll probably notice picobot gets stuck when it reaches the NW or SW corner, because it doesn't have a rule that applies to this surrounding.  You'll need to add one.  However, before you do, you should think carefully about your algorithm.  What is it that you want Picobot to do when it reaches one of those corners?  One option is to immediately head all the way east, and then start moving N, S and W again as it was doing before.  Another option is to begin a N, S, and E sweep back the other way.  Either way you are going to need at least one new state.  We encourage you to think carefully about what this state or states will mean before you start implementing rules. 
+Once you are finished with this problem, save your code for the empty room solution in the file `emptyroom.txt` in your git repo, before moving on to the next problem. 
 
 ## Program Picobot to solve the maze
 
@@ -95,7 +94,7 @@ Continuing with the Roomba vacuum cleaner analogy, you might know that the edges
 
 ## Submitting your code
 
-As stated before, please create a private github repo with the name spis16-lab01-pair1name-pair2name.
+As stated before, please create a private github repo with the name spis17-lab01-pair1name-pair2name.
 
 In the repo, create three files called answers.txt, emptyroom.txt and maze.txt
 
