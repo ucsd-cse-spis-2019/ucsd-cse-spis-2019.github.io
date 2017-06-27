@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab02
-ready: true
+ready: false
 desc: "Next steps with github, Python functions, testing"
 assigned: 2017-08-09 13:15:00.00-7
 due: 2017-08-10 17:00:00.00-7
