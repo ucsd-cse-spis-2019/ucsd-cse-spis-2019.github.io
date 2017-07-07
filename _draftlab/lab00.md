@@ -17,13 +17,13 @@ These computer run the Linux operating system, and you'll log into them with you
 
 # Administrative one-time tasks for lab00
 
-During this lab you will acheive the following administrative one-time steps
+During this lab you will achieve the following administrative one-time steps
 
 * Learn what your ACMS username/password for SPIS is
 * Access your UCSD email account to get your invitation to Piazza
 * Create an account on github.com using your UCSD email address
 * Fill out a Google Form so that we know your github id
-* Accept an invitation to the ucsb-cse-spis-2017 github organization
+* Accept an invitation to the ucsd-cse-spis-2017 github organization
 * Activate your Piazza account
 
 # Learning Goals
