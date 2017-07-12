@@ -90,7 +90,7 @@ IDLE is the program we'll use to do Python programming during SPIS.
 
 In IDLE, you you create, edit, and run Python code.
 
-To bring up idle, type `idle3` at the bash shell prompt (which you get by opening a Terminal window).
+To bring up idle, type `idle3` at the bash shell prompt (which you get by opening a Terminal window: select “Applications”, the "System Tools", then either “Terminal” or “Konsole” from the menu that pops up).
 
 For this step, there is one goal: write a Python 3 program that prints the string `Hello, World!` as its output.
 
