@@ -17,7 +17,7 @@ If *both* you *and* your pair partner are already thoroughly familiar with Unix 
 `~/github`, and you are *throughly* familiar with everything in the table below, you can just create ~/mkdir, and skip
 the rest of this page. 
 
-But if either or both of you has any doubt, you are strongly encourage to go through this page carefully and slowly,
+But if either or both of you has any doubt, you are strongly encouraged to go through this page carefully and slowly,
 to learn some of the basics of working with Unix commands at the bash shell.  That is one of the most fundamental skills you'll need
 throughout all of the courses that use the ACMS unix accounts during your entire stay at UCSD.
 
@@ -49,7 +49,7 @@ You should also learn the following concepts:
 
 # Step 1: Bring up a bash terminal shell
 
-Bring up a bash terminal shell.  As a reminder, you can do this by selecting "Applications", then either "Terminal" or "Konsole" from the menu that pops up.  (Your Applications menu may have only Terminal, or only Konsole, or may have both.
+Bring up a bash terminal shell.  As a reminder, you can do this by selecting "Applications", then "System Tools", then either "Terminal" or "Konsole" from the menu that pops up.  (Your Applications menu may have only Terminal, or only Konsole, or may have both.
 For our purposes, they work equally well.)
 
 For now, we can use the following terms to mean more or less the same thing.  (There are fine-grained distinctions among these terms, but those won't be important until later in your studies)
