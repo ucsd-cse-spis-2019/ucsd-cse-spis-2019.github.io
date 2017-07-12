@@ -90,7 +90,6 @@ When both partners have a `~/github` directory and are comfortable with shell ba
 There are three steps involved here.  First, I'll give you an overview, and then the details:
 
 1. One of the two pair partners should log into github.com to create an empty private repo *in a particular way*, namely,    pre-populated only with a README.md, and a .gitignore for Python.  
-
 2. The first pair partner will then invite the second to be a collaborator with <b>Admin</b> access.   
 3. Finally, the second pair partner needs to accept the invitation to be a collaborator.    
 
@@ -110,7 +109,7 @@ To create the repo follow the instructions at the link: [github create repo Meth
 
 As you follow these instructions, create:
 * a private github repo under the `ucsd-cse-spis-2017` github organizaiton,
-* with the name `spis16-lab02-Name1-Name2` where,
+* with the name `spis17-lab02-Name1-Name2` where,
     * `Name1` is the first pair partner's preferred first name
     * `Name2` is the second pair partner's preferred first name
 
@@ -118,7 +117,7 @@ The <b>Pair Name</b> column in the [SPIS 2017 Pairs List](/info/pairs/) page cor
 
 An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be: 
 
-`spis16-lab02-Alex-Chris`.
+`spis17-lab02-Alex-Chris`.
 
 ### Step 2b: First pair partner invites second pair partner to be a collaborator
 
