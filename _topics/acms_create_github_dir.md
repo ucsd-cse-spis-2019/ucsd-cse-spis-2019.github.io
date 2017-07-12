@@ -111,7 +111,7 @@ You can see that the next command I type will be "number 34" in my history.
 
 There are a few others parts of the prompt.  
 
-* The `spis16t3` part is my account name. Your's will be something like `spis16xy` 
+* The `spis16t3` part is my account name. Your's will be something like `spis17xy` 
     where `xy` are two letters
 * The `ieng6-240` part is the machine I'm logged into.  It's full name is `ieng6-240.ucsd.edu`
 * Finally, the `~` part is a symbol for your *home directory*.  That home directory is a 
@@ -206,13 +206,13 @@ These files and directories, though exist in the context of a larger directory t
 
 This output `/home/linux/ieng6/spis16/spis16t3/github` from the pwd command is called a *path*, since it shows the path from the root directory of the disk space on our machine, which is represented by the symbol `/`, all the way down to the directory `github` that we just created.
 
-Our home directories for spis are all located inside `/home/linux/ieng6/spis16`.   They are, for example:
+Our home directories for spis this year are all located inside `/home/linux/ieng6/spis17`.   They are, for example:
 
-* /home/linux/ieng6/spis16/spis16aa
-* /home/linux/ieng6/spis16/spis16ab
-* /home/linux/ieng6/spis16/spis16ac
-* /home/linux/ieng6/spis16/spis16ad
-* /home/linux/ieng6/spis16/spis16ae
+* /home/linux/ieng6/spis17/spis17aa
+* /home/linux/ieng6/spis17/spis17ab
+* /home/linux/ieng6/spis17/spis17ac
+* /home/linux/ieng6/spis17/spis17ad
+* /home/linux/ieng6/spis17/spis17ae
 * etc...
 
 Each of you has their own home directory.  
@@ -230,7 +230,7 @@ exploring the directory tree shown in the diagram above, and using `pwd` and `ls
 * `cd ~` or `cd` to go your home directory
 * `cd ~spis16t1` or `cd ~spis16t2` to go to a specific user's home directory
 * `cd ..` to go *up one level in the tree* from where you are now.  
-* `cd /` to go to the root of teh directory
+* `cd /` to go to the root of the directory
 * `cd foo` to go into a directory foo that is located in the current directory
 
 You should be able to use the `pwd` command at each level 
@@ -255,5 +255,5 @@ As shown above, use `pwd` to verify that you are indeed in your `~/github direct
 
 Your output won't say `spis16t3`, but instead will show your own ACMS username in place of that.
 
-If you were doing these steps as part of SPIS 2016 lab02,<br>
-you can use this link to return there now: [SPIS 2016 lab02](/lab/lab02/)
+If you were doing these steps as part of SPIS 2017 lab02,<br>
+you can use this link to return there now: [SPIS 2017 lab02](/lab/lab02/)
