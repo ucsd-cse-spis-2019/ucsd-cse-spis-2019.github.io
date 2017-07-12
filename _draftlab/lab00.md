@@ -90,24 +90,23 @@ IDLE is the program we'll use to do Python programming during SPIS.
 
 In IDLE, you you create, edit, and run Python code.
 
-To bring up idle, type `idle` at the bash shell prompt.
+To bring up idle, type `idle3` at the bash shell prompt (which you get by opening a Terminal window).
 
-For this step, there is one goal: write a Python 2.7 program that prints the string `Hello, World!` as its output.
+For this step, there is one goal: write a Python 3 program that prints the string `Hello, World!` as its output.
 
 In this sense, we are following a long tradition: for [more than 40 years](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) it has been a tradition to make printing `Hello, World!` be the first thing you do when learning a new programming language.
 
 In Python, this program is very short.  It looks like this:
 
 ```Python
-print 'Hello, World!'
+print('Hello, World!')
 ```
-
 That's it!   Now, you can also add, on the first line, a *comment* with your name, your pair partner's name,
 and the reason you wrote the program.
 
 ```Python
 # Alex Triton and Chris La Jolla for CSE SPIS 2017
-print 'Hello, World!'
+print('Hello, World!')
 ```
 You are encouraged to do that, because it helps someone looking at your code know that *you* wrote it.  But, other than that, it isn't necessary.  In general, in computer programming, a *comment* is something that is intended only for human readers of the code, and is otherwise "ignored by the system".   Nearly every programming language has some way to express comments, though the exact rules for formatting of comments--that is, the *syntax* of comments--differs from one language to another.
 
@@ -119,9 +118,12 @@ explains Hello World in IDLE](http://www.youtube.com/watch?v=Cdk20r2dgFU)
 
 Once you've run your "Hello World!" program, you are ready to move on to the next step.
 
+BTW, if you are familiar with Python 2, you may note that the syntax of the print command has changed in Python 3. This is a little confusing, but it is good to know that there are some key differences between Python 2 and Python 3. We will be using Python 3 in SPIS this year.
+
+
 ## Step 5:  Accept invitation to UCSD-CSE-SPIS-2017 github organization
 
-By now, the mentors/instructors should have inivited you to the UCSD-CSE-SPIS-2017 github organization.
+By now, the mentors/instructors should have invited you to the UCSD-CSE-SPIS-2017 github organization.
 
 You should find an place where you can accept this invitation if you click on this link and look near the top of the page:
 
@@ -149,15 +151,13 @@ To create this repo:
 
 * Login to your github.com account, and 
 
-* Then and find the button at upper right to create a repository.  
-    * That button looks like a + sign with a triangle next to it.  
-    * When you click that button, there are three choices.  Select "New Repository"
+* Then create a new repository. You do this by pressing the green button with the words "New repository". Alternatively, on the menu bar on top, there is a '+' sign with a down arrow next to it. If you click it, you also get the option of creating a new repository. 
 
 On the next screen:
 
 * Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2017`, NOT your own github id.
 * Put `practice-alex-t` as the name (BUT PUT YOUR OWN NAME AND FIRST INITIAL, not literally `alex-t` :-) )
-* Click the box to create a `README.md` file in the repo
+* check the box to "Initialize this repository with a README"
 * Select a `.gitignore` file for Python
 * You don't need to select a license file.
 
@@ -177,8 +177,11 @@ Once you have the photo in your email, access your email from the web browser of
 seated.   Save the photo (i.e. the .png, .jpg, or whatever) to a file.    Depending on the browser you are using, this 
 file may end up in your "home directory", or in some other directory (e.g. `~/Downloads`, `~/Desktop`, etc.)
 
+Once you've located it, change the name to `alex-t.jpg` or `alex-t.png` or whatever.   You need to keep the .jpg or .png exactly as it is, but change the first part of the filename to match your first name and last initial, in lowercase, separated by a hyphen (`-`). The naming convention is important, because the SPIS staff is going to access all of these images to create a SPIS photo album so that we can all learn your names more quickly.
+
 Once you've located it, your next job will be to upload it to your github practice repository.  We'll discuss how
 in the next step.
+
 
 # Step 7: Upload your photo to your `ucsd-cse-spis-2017/practice-alex-t` repo.
 
@@ -190,9 +193,8 @@ except it will be your name instead of `alex-t`.
 
 On the right hand side, there is a great big green button labelled "Clone or Download".   Eventually, we'll be using that button a lot.  But for now, look just a few buttons to the left, and you'll find a button that says "Upload files".
 
-Click that button, and upload your photo from the place where you saved it out of your email.
+Click that button, and upload your photo from the place where you saved it out of your email. Click the green "Commit changes" button.
 
-Once you've uploaded it, you should be able to change the name to `alex-t.jpg` or `alex-t.png` or whatever.   You need to keep the .jpg or .png exactly as it is, but change the first part of the filename to match your first name and last initial, in lowercase, separated by a hyphen (`-`).     The naming convention is important, because the SPIS staff is going to access all of these images to create a SPIS photo album so that we can all learn your names more quickly.
 
 
 # Step 8: Edit your README.md file to add some information about you, and a link to your photo
@@ -220,9 +222,10 @@ of your image file is:
 
 ```
 
-Save it, and take a look at your README.md file.  You should see your photo embedded in the README.md text.
+Save it (click the "Commit change" button), and take a look at your README.md file.  You should see your photo embedded in the README.md text.
 
-If so, you are finished with lab00!
+If so, you are almost finished with lab00!
+
 
 # Step 8: Piazza Invitation
 
