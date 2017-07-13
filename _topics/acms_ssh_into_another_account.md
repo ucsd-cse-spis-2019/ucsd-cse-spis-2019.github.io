@@ -4,7 +4,7 @@ desc: "A is logged in, but B needs to get into their account for just a moment..
 ---
 
 Suppose your pair partner (or anyone else that you trust) is logged into a computer in the B230/B240 labs.   You need
- to do something in yourown ACMS account for just a moment.
+ to do something in your own ACMS account for just a moment.
 
 But asking your pair partner to log all the way out is *really* inconvenient.   They will lose their place in all the work they have open.  And, it takes a long time to go through the whole logout/login process.
 
@@ -24,7 +24,7 @@ The terminal session below shows an example of what that might look like.   But 
     *    Typically,
          you just type the word `yes`, and you'll never see that message again.    
     *    The only time you would *not* do that is
-         if you have some particular reason to beleive you are being malicously attacked by evildoers that are spoofing IP addresses.   This is pretty rare.)
+         if you have some particular reason to believe you are being malicously attacked by evildoers that are spoofing IP addresses.   This is pretty rare.)
 *   You'll be asked for your password.  It might not echo on the screen as you type it, but it is going in.
 *   Once you are successful in logging in, there may be a long series of announcements.  In the middle, you might
     see the message:
