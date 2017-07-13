@@ -129,13 +129,13 @@ To upload your ssh public key to github.com, start by opening a web browser to g
 
 If you are not yet logged in, login to your github.com account.   
 
-Go to the github.com settings menu.  It's on a pull down menu at the upper right hand corner of the page.
+Go to the github.com settings menu. It's under the pull down menu at the upper right hand corner of the page.
 
-Once you are at the settings menu, choose  the SSH keys option. It's in the middle on the left.  
+Once you are at the settings menu, choose  the "SSH and PGP keys" option. It's in the middle on the left.  
 
-Then, click "Add SSH key".
+Then, click "Add SSH key" or "New SSH key".
 
-Next, "copy" your SSH public key from your terminal window so that we can paste it into the github.com web browser window. Be careful to get the whole key, but nothing more than the key. Don't include the shell prompts or the cat command.
+Next, "copy" your SSH public key from your terminal window (you can get to copy by right clicking) so that we can paste it into the github.com web browser window. Be careful to get the whole key (including 'ssh-rsa'), but nothing more than the key. Don't include the shell prompts or the cat command.
 
 Paste it into the window on the github.com website that asks for the key.
 
