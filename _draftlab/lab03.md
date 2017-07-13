@@ -40,7 +40,7 @@ Then, you'll write two more functions:
 -   drawInitialsPB(theTurtle, letterWidth, letterHeight, letterSpacing)
 -   drawInitialsCJ(theTurtle, letterWidth, letterHeight, letterSpacing)
 
-In the event that you are paired with someone that shares an initial with you (e.g. if Riley Jones and Chris Jimenez are partners, they share the letter J), you might be able to write fewer functions. Similarly, if Chris Jimenez and Charlie Jones are together, you might be able to share the drawInitialsCJ function. However, we'll try to avoid that, because we want you to get lots of practice.
+In the event that you are paired with someone that shares an initial with you (e.g. if Riley Jones and Chris Jimenez are partners, they share the letter J), you might be able to write fewer functions. Similarly, if Chris Jimenez and Charlie Jones are together, you might be able to share the drawInitialsCJ function. However, we'll try to avoid that, because we want you to get lots of practice. In that case, please use your middle initials to at least get to three (ideally four) unique letters (and mention in your code comments what your middle name is).
 
 You'll also write a function called go() that draws each members of the pair initials three times each, at different sizes.
 
@@ -68,7 +68,7 @@ Plan your drawing. For each letter that you and your pair partner are going to d
 
 <img src="/lab/images/turtle/BoundingBox.png" title="BoundingBox.png" alt="BoundingBox.png" height="200" />
 
-For example, for my name, Phill Conrad, I might plan out bounding boxes like these. Here, I've chosen each of the important points, and labelled them. Note, though, that these are only examples. I don't expect that everyone with a P or a C in their name will make the same choices about how to shape the letters. In fact, I hope each of you will make slightly different choices.
+For example, for the name, Phill Conrad, I might plan out bounding boxes like these. Here, I've chosen each of the important points, and labelled them. Note, though, that these are only examples. I don't expect that everyone with a P or a C in their name will make the same choices about how to shape the letters. In fact, I hope each of you will make slightly different choices.
 
 <img src="/lab/images/turtle/BoundingBoxP1.png" title="fig:BoundingBoxP1.png" alt="BoundingBoxP1.png" height="200" /> <img src="/lab/images/turtle/BoundingBoxC1.png" title="fig:BoundingBoxC1.png" alt="BoundingBoxC1.png" height="200" />
 
@@ -87,7 +87,7 @@ Once you've planned your letters on paper, you are ready to start coding.
 Step 2: Driver gets things started on first letter 
 -----------------------------------------------------------------
 
-Bring up IDLE. Create a new file called "lab03.py" in your repo. To do this, in IDLE go to the menu option File-> New. Then continue with the following steps
+Bring up IDLE3. Create a new file called "lab03.py" in your repo. To do this, in IDLE3 go to the menu option File-> New. Then continue with the following steps
 
 ### Step 2c: Start a function definition for first letter
 
