@@ -73,7 +73,7 @@ We now explain the contents of `test_tempFuncs.py` one or two lines at a time.
 # test_tempFuncs.py
 ```
 
-This line is merely a comment with the name of the file, for identificatio purposes.
+This line is merely a comment with the name of the file, for identification purposes.
 
 ```
 import unittest
@@ -171,7 +171,7 @@ if __name__=="__main__":
 The if test here is indeed strange.  What is `__name__`?  and what is `"__main__"`?  The answer is that this is a bit of a hack, a kludge&mdash;that is, a sort of inelegant solution to a problem.    In Python, a file can be run in at least two different ways:
 
 1.  It can be "directly run"&mdash;that is, a user asked for this file
-    by name to be run by selecting the "Run" menu option in idle, for
+    by name to be run by selecting the "Run" menu option in idle3, for
     example, or by typing `python thisFile.py` at the unix command line.
 
 2.  It can be "indirectly run" by being *imported* into another Python
