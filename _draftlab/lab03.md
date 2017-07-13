@@ -200,44 +200,42 @@ In any case, repeat this for all of the initials you need to draw.
 
 AS YOU WORK, SWITCH DRIVER AND NAVIGATOR FREQUENTLY. Each member of the team should be the driver for the function for at least one their own initials.
 
-If you are Mike McMahaon working with Martha Masters, then you'll be really in luck: one function is all you need. In that case, you will have to switch in the middle of that one function.
-
-Depending on how many letters you share in common with your pair partner, you'll need between one and four letter drawing functions. Repeat the steps above until you have all of those done, and switch driver/navigator between each function. Then you are ready for the combining steps.
+Repeat the steps above until you have all your letters done, and switch driver/navigator between each function. Then you are ready for the combining steps.
 
 Step 5: The step where you combine things
 -----------------------------------------
 
-In this step, you are going to write either one or two new functions, for each of the initials of the members of the pair.
+In this step, you are going to write two new functions, for each of the initials of the members of the pair.
 
-Again, if it is Mike McMahon working with Martha Masters, you'll need only one function:
+For example, for Phill Conrad, the function is :
 
-    def drawMM(aTurtle, letterWidth, letterHeight, spacing):
+    def drawPC(aTurtle, letterWidth, letterHeight, spacing):
        """
-       draw the letters MM, using aTurtle, and the width and height given.  Use spacing * width as the space between letters.
-       For example, if spacing is 0.5, then the space between the right edge of the first M and the left edge of the second one
-       should be half of the letter width.  If spacing is 1, it should be the same as the letter width, and if it is 2, it should be
-       double the letter width.
+       draw the letters PC, using aTurtle, and the width and height given.  Use spacing * width as the space between letters.
+       For example, if spacing is 0.5, then the space between the right edge of the P and the left edge of the C
+       should be half of the average letter width.  If spacing is 1, it should be the same as the average letter width, and 
+       if it is 2, it should be double the letter width.
 
        """
 
-       # draw the first M
+       # draw the P
       
-       drawM(aTurtle, letterWidth, letterHeight)
+       drawP(aTurtle, letterWidth, letterHeight)
 
        # do something here to space out the letters--you figure it out
 
 
-       # draw the second M
+       # draw the C
 
-       drawM(aTurtle, letterWidth, letterHeight)
+       drawC(aTurtle, letterWidth, letterHeight)
 
-Your functions will look just like these, except that probably you'll have two different letters, e.g. drawP() and drawC() for Phill Conrad. And you have to figure out the thing to do in between the letters (it's not that hard.)
+Your functions will look just like these, except that probably you'll have different letters. And you have to figure out the thing to do in between the letters (it's not that hard.)
 
-But probably, you'll need two or three of these, because you and your pair partner probably don't have the same initials. So write the functions you need. Add them after your draw functions for each letter, but before your go() function.
+Add them after your draw functions for each letter, but before your go() function.
 
 AS YOU WORK, SWITCH DRIVER AND NAVIGATOR FREQUENTLY. Each member of the team should be the driver for the function for their own initials.
 
-Then, modify your go() function so that it draws each member of your team's initials, at least three times each, with DIFFERENT widths, heights, and spacings. You'll need to pick up the pen between calls to drawMM() or drawPC() or drawJH() or whatever. And choose starting points (using t.goto(x,y)) so that all of the initials are on the screen, and none of them overlap.
+Then, modify your go() function so that it draws each member of your team's initials, at least three times each, with DIFFERENT widths, heights, and spacings. You'll need to pick up the pen between calls to drawXM() or drawPC() or drawJH() or whatever. And choose starting points (using t.goto(x,y)) so that all of the initials are on the screen, and none of them overlap.
 
 When that's done, you are ready to do your finalcheck list on your code before submission, and then use the git command line to submit.
 
