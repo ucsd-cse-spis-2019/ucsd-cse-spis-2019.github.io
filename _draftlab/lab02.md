@@ -179,13 +179,13 @@ should be able to type `pwd` and see that your current directory path ends in `g
 [spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:119$ 
 ```
 
-Then, start up idle by typing `idle`:
+Then, start up idle by typing `idle3`:
 
 ```
-[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:119$ idle
+[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:119$ idle3
 ```
 
-Once you do, use the `File -> New File` menu item to open *two* windows in which you can type Python code.
+Once you do, use the `File -> New File` menu item twice to open *two* windows in which you can type Python code.
 
 In the first window, enter this function definition.  This function converts Fahrenheit temperatures to Celsius.
 
@@ -200,7 +200,7 @@ def ftoc(fTemp):
 In the second window, enter this code.   Don't just copy and paste it; read through it and try to understand it.
 
 If you would like a more detailed, line-by-line explanation of this code, plus some background on unit testing in general,
-read the article [Python: Unit Testing](/topics/python_unittest/).sy
+read the article [Python: Unit Testing](/topics/python_unittest/).
 
 ```python
 # test_tempFuncs.py
@@ -230,11 +230,11 @@ Save each of the files by choosing 'File -> Save' from the Idle menu.
 
 Save them with the *exact* names: `tempFuncs.py` and `test_tempFuncs.py`.  It is important to get the upper vs. lowercase, and the punctuation correct.
 
-When you save, the save dialog should indicate that they are being saved inside the ~/github/spis16-lab02-Name-Name folder that corresponds to your local github repo.   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
+When you save, the save dialog should indicate that they are being saved inside the ~/github/spis16-lab02-Name-Name folder that corresponds to your local github repo (you should see a .git directory already present).   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
 
 Onve you have saved both files, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis16-lab02-Name-Name` folder, and do an ls command as shown here.  You should see both the files, with names exactly as shown here.
 
-Note that if you also have a .pyc file, that's fine.  You don't need to worry about that one, or remove it.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
+Note that if you also have a .pyc file, that's fine (or if you don't, that's fine too).  You don't need to worry about that one, or remove it.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
 
 ```
 [spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:170$ ls
@@ -253,7 +253,7 @@ You should get output that looks like this:
 >>> 
 ....
 ----------------------------------------------------------------------
-Ran 4 tests in 0.310s
+Ran 4 tests in 0.031s
 
 OK
 >>> 
@@ -307,7 +307,7 @@ Essentially, though here's what you are going to do:
 7.  Type `git push origin master` to push the changes from your local repo to the origin repo (on github.com)
 8.  Type `git status` and read the messages
 9.  Navigate to your repo's page at https://github.com and see that the two files now appear there, along
-    with your commit message.
+    with your commit message. You may need to refresh the page if you were already on it.
 
 Congratulations, you've just done your first of many dozens of git commits you'll do during SPIS, and the first
 of hundreds or thousands you'll do during your four years at UCSD.
@@ -370,7 +370,7 @@ Then check the repo's page on github.com to see that the changes appear.
 
 ## Step 7b: Add import, and test cases for `ctof` to `test_tempFuncs.py`
         
-Next, edit the `test_tempFuncs.py` file in IDLE, and after the line
+Next, edit the `test_tempFuncs.py` file in IDLE3, and after the line
 
 ```
 from tempFuncs import ftoc
@@ -400,7 +400,7 @@ I'll give you the first one, but the rest you must come up with on your own:
 
 Add at least four more so that you have a total of five tests.
 
-Once you are done, its time to commit the changes:
+Once you are done and saved the file, its time to commit the changes:
 
 * `git status`
 * `git add test_tempFuncs.py`
@@ -427,7 +427,7 @@ In general, test cases where you have a "stub" function should fail either becau
 The second type of error comes because the `assertAlmostEqual` function tries to subtract the expected result from the actual result, and then take the absolute value.  It can't subtract from a string value such as `"stub"`, hence the error.
 
 You could also use a stub with a value of something like `return -99999.999` if you like; then you'll get a slightly
-different error, but the test will still fail&mdash;which is want you want for a stub.
+different error, but the test will still fail&mdash;which is want you want for a stub. Note that this case is reported as a 'failure' rather than an 'error'.
 
 ### Are the tests *failing* the expected way?
 
