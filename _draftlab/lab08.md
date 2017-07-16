@@ -16,7 +16,7 @@ In this lab you will be introduced to the basics of electronics using a a credit
 # Getting started
 
 ## Create a git repo and get the starter code
-Use your laptop to create a new repo called `spis16-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2016/lab08-startercode.git 
+Use your laptop to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab08-startercode.git 
 You may also also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
 
 Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group.
@@ -27,14 +27,14 @@ Take a look at the Raspberry Pi on your workbench. You are looking at the inside
 The green base on which all the electronic components (which you see as bulgy entities) are laid out is a non-conductive substrate. This means that the green parts of the board don’t conduct electricity. However, to connect the various electrical components, conductive tracks made of copper are etched on the green base. At the very center of your Pi sits a prominent black square block. This is the brain of your Pi – the processor. But the processor is not the only thing on the black square. It is clubbed with some Random Access Memory (RAM).  For now, just know that the RAM is a form of non-persistent memory. There are other components on the Pi. To identify them orient your Pi to match the circuit below.
 
 <p align="center">
-![RPi-1-modelB](/lab/images/RPi/RPi1_modelB.png){:height="200px"} 
+![RPi-1-modelB](/images/labs/images/RPi/RPi1_modelB.png){:height="200px"} 
 </p>
 
 A corresponding functional diagram of the Pi is also shown below:
 
 
 <p align="center">
-![RPi-1-labeled](/lab/images/RPi/RPi-diagram.png){:height="200px"} 
+![RPi-1-labeled](/images/labs/images/RPi/RPi-diagram.png){:height="200px"} 
 </p>
 
 
@@ -68,7 +68,7 @@ Let's take a closer look at the breadboard and the GPIO breakout board that sits
 The RPi chip itself is very small, so we will be attaching an electronic component called a breadboard  -- which is designed to make it possible to experiment with circuits by extending the available space.  For electricity to flow you need connections.  Think of a breadboard as a way of giving you more space to make those connections.  The main feature of the breadboard is that it comes with a set of in-built electrical connections which significantly simplifies the wiring involved in complicated circuits. Let's try to understand the electrical connections on the breadboard using the figures below:
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/breadboard.png){:height="400px"} 
+![RPi-desktop](/images/labs/images/RPi/breadboard.png){:height="400px"} 
 </p>
 
 The figure on the left shows a picture of the breadboard as visible to you, while the one on the right shows in internal electrical connections when the back of the breadboard is uncovered. The rows are numbered 1 through 30 and the columns 'a' through 'j'. In the figure on the right observe how the conductive metal strips run across the rows.  This means that any two grids that are on columns 'a' through 'e' are at the same *potential* as long as they are also on the same row. Similarly, any two grids that are on columns 'f' through 'j' are at the same potential as long as they are also on the same row. However, the two halves of a row are electronically disconnected.  As you will see, this helps you out a lot! 
@@ -91,7 +91,7 @@ Finally, the breadboard has two vertical lines running up and down on both sides
 The Raspberry Pi 1, model B (which is the one we are using) has 26 GPIO pins that are laid out as two rows of 13 pins each, also depicted in the diagram below:
 
 <p align="center">
-![GPIO-numbering](/lab/images/RPi/GPIO-numbering.png){:height="400px"} 
+![GPIO-numbering](/images/labs/images/RPi/GPIO-numbering.png){:height="400px"} 
 </p>
 
 The pins that are colored in green are available for any general purpose and can be referred to and configured in your python programs! There are two different conventions used to refer to these pins:
@@ -107,7 +107,7 @@ Note that physical pins 1 and 17 provide 3.3V, while physical pins 2 and 4 provi
 The GPIO breakout board shown below makes all these pins available to you on a breadboard where you will be doing your electrical wiring.
 
 <p align="center">
-![GPIO-breakout](/lab/images/RPi/GPIO-breakout.png){:height="400px"} 
+![GPIO-breakout](/images/labs/images/RPi/GPIO-breakout.png){:height="400px"} 
 </p>
 
 Notice that the labels on the breakout board use the BRCM naming convention. However, we have connected the breakout board in such a way that you can easily derive the physical pin number of any pin by looking at the row number that it is connected to on the breadboard. Answer the following questions based on your understanding of the breadboard and the GPIO numbering scheme:
@@ -119,7 +119,7 @@ Notice that the labels on the breakout board use the BRCM naming convention. How
 ## Getting to know your desktop environment
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/RPi-desktop.png){:height="400px"} 
+![RPi-desktop](/images/labs/images/RPi/RPi-desktop.png){:height="400px"} 
 </p>
 
 The operating system on the Pi is a version of the linux known as Raspbian. The picture above shows the Raspbian desktop environment. Like Windows, or OS X (for Apple), you can run programs by double clicking them. Feel free to poke around and see what all of these icons mean! We will use two main programs on your desktop: the Wifi config tool and the LXTerminal.
@@ -145,17 +145,17 @@ All the unix commands that you have learned so far can be used to navigate throu
 
 ```
 
-* Clone your git repo over https into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop (not the Pi) and navigate to your repo on github which should be called `spis16-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The https address should be something like `https://github.com/ucsd-cse-spis-2017/spis16-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
+* Clone your git repo over https into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop (not the Pi) and navigate to your repo on github which should be called `spis17-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The https address should be something like `https://github.com/ucsd-cse-spis-2017/spis17-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
 
 Make sure you have the starter code which are the files `01_blinking_led.py` and `02_buttonLED.py` in your repo. If you did not import the starter code when creating the repo, you can copy it over from the directory /home/pi/lab08-startercode/  on the Pi
 To do this type the following command replacing the second argument by the name of your repo
 
 ```
-cp ~/lab08-startercode/*.py ~/spis16-lab08-Name-Name/
+cp ~/lab08-startercode/*.py ~/spis17-lab08-Name-Name/
 ```
 
 
-On the Pi's terminal navigate to the your local git repo (~/spis16-lab08-Name-Name/ and NOT the lab08-startercode directory) and open up idle by typing the following command
+On the Pi's terminal navigate to the your local git repo (~/spis17-lab08-Name-Name/ and NOT the lab08-startercode directory) and open up idle by typing the following command
 
 ` sudo idle &`
 
@@ -229,7 +229,7 @@ Refer to the chart provided to you to decipher how these color codes represent t
 The picture of a LED and the symbol used for it in circuits is shown below:
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/LED.jpg){:height="200px"} 
+![RPi-desktop](/images/labs/images/RPi/LED.jpg){:height="200px"} 
 </p>
 
  The longer leg of the LED is called the 'anode' and the shorter leg is called the 'cathode'. When there is a positive voltage difference between the anode and the cathode, the LED is in forward biased or "on state" and current flows through the circuit lighting it up, otherwise the LED is in the "off state". 
@@ -237,7 +237,7 @@ The picture of a LED and the symbol used for it in circuits is shown below:
 Wire up the circuit shown by the following diagram. We will use the physical pin numbering in all the subsequent diagrams. 
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/led_circuit.png){:height="100px"} 
+![RPi-desktop](/images/labs/images/RPi/led_circuit.png){:height="100px"} 
 </p>
 
 Ask an instructor or mentor is you don't understand the diagram. For more in depth information on configuring GPIO pins as outputs refer to [this website](http://www.scriptoriumdesigns.com/embedded/gpio_out.php).
@@ -252,7 +252,7 @@ Buttons are switches that are used to connect or disconnect circuits. In the fig
 
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/button.png){:height="100px"} 
+![RPi-desktop](/images/labs/images/RPi/button.png){:height="100px"} 
 </p>
 
 In this exercise you will control an LED using a button. Your program should toggle the state of the LED everytime the button is pressed. So, if the LED is ON and the button is pressed, it should turn OFF. If the LED is OFF and the button is pressed, it should turn ON. 
@@ -272,7 +272,7 @@ One of the key differences in this exercise compared to the previous one is that
 So, the bottom line is that when we configure a GPIO pin as an input, we can read the voltage at that pin in our Python program. But, what is the expected voltage if the pin is not connected to anything at all? The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is “floating” and has no defined voltage level. For us to be able to reliably detect whether the input is high or low we need to tie it so that it is always connected and either reads high or low.
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/button_circuit.png){:height="200px"} 
+![RPi-desktop](/images/labs/images/RPi/button_circuit.png){:height="200px"} 
 </p>
 
 To tie the pin we connect either a Pull Up or Pull Down resistor. A Pull up resistor connects the pin to 3.3V through a large resistor, this means that when the switch is open there is a path to 3.3V and so it will read high. When the switch is pressed (with the other side connected to GND there is a lower resistance path to GND and so the pin will read low. The large (10kΩ) resistor ensures that only a little current is drawn when the switch is pressed. A pull down resistor works along the same lines (ask an instructor if you'd like to know more about pull down resistors)
@@ -281,7 +281,7 @@ To tie the pin we connect either a Pull Up or Pull Down resistor. A Pull up resi
 Start with wiring the circuit as per the circuit diagram below:
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/button_internal.png){:height="200px"} 
+![RPi-desktop](/images/labs/images/RPi/button_internal.png){:height="200px"} 
 </p>
 
 
@@ -309,11 +309,11 @@ A seven segment display packages seven LEDs, each LED is called a segment, which
 The figure below shows the common-cathode 7-segment display:
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/7seg.jpg){:height="200px"} 
+![RPi-desktop](/images/labs/images/RPi/7seg.jpg){:height="200px"} 
 </p>
 
 <p align="center">
-![RPi-desktop](/lab/images/RPi/7seg-pinouts.gif){:height="200px"} 
+![RPi-desktop](/images/labs/images/RPi/7seg-pinouts.gif){:height="200px"} 
 </p>
 
 Each of the LED segments has one of its connection pins out of the package. These connection pins are labeled 'a' through 'g' representing each of the individual segments. The other pin for each LED is connected together to a common pin. In this experiment we will use a common cathod 7-segment display, which means that the all the cathodes of the LEDs are connected together to the "common pins" that are marked as zero volts in the above diagram. Each individual segment (a-g) is turned on by applying a high voltage to the corresponging pin via a current limiting resistor (forward biasing that segment). By forward biasing the appropriate pins of the LED segments, you can display any numeral value in decimal from 0 to 9.
