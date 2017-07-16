@@ -12,17 +12,17 @@ due: 2017-08-24 15:00:00.00-7
 This lab should be completed during the Open Lab time on Wednesday of Spis Week 4, together with your [New Pair Partner for the Project Phase](/info/pairs/).
 
 In this lab, you'll create a github repo called <br>
-`spis16-project-planning-`<em>areaname</em>`-`<em>Name</em>`-`<em>Name</em>. In the `README.md` of that repo,
+`spis17-project-planning-`<em>areaname</em>`-`<em>Name</em>`-`<em>Name</em>. In the `README.md` of that repo,
 you'll start writing some plans for your project.
 
 # About the due date of 3pm Wednesday of Week 4
 
-We'd like you to have at least an "initial" version of this by 3pm on the Wednesday of Week 4. 
+We'd like you to have at least an "initial" version of this by 3pm on the Wednesday of Week 5. 
 
 * But, that doesn't mean it will be a "finished product" at that point that you never come back to.  
-* On the contraryYou may well find that we come back to the README.md of this repo again and again throughout the rest
+* On the contrary. You may well find that we come back to the README.md of this repo again and again throughout the rest
 of SPIS.
-* It fact, it may well form the basis of activities you do on Thursday and Friday of Week 4, and throughout Week 4.
+* In fact, it may well form the basis of activities you do on Thursday and Friday of Week 4, and throughout Week 4.
 
 But for today, at least try to complete all of the steps listed below.
 
@@ -46,7 +46,7 @@ This lab has three steps:
     * For Data Mining: `spis16-project-planning-datamining-Name-Name`
     * For Web Apps: `spis16-project-planning-webapps-Name-Name`
     
-2.  Whoever creates the repo, be sure to add the second pair as a collaborator with Admin access, as explained here.
+2.  Whoever creates the repo, be sure to add the second pair as a collaborator with Admin access, as you did before.
 
 3.  Edit the README.md file, and into it, put a description of your thoughts about the project you want to undertake.
 
@@ -54,7 +54,7 @@ This lab has three steps:
 
     *If you don't yet have a clear idea about what that will look like*&mdash;if you are literally thinking "what? We have
     absolutely no idea what what we want to do in this area!?!", *don't worry*.  Part of this exercise is about (a) identifying which pairs are at that stage, and (b) helping them get past it.   So, if that's where you are,
-    this lab is the right thing to be working on to get you past that point.   There is more informatio below.
+    this lab is the right thing to be working on to get you past that point. There is more information below.
     
 4.  Once you have something that feels like a coherent description of where you and your partner are: either a 
     coherent description of your project, OR a description of where you are (perhaps completely "blank" and in need
@@ -101,13 +101,12 @@ Here's what to put in the file:
 2.  *Brief Description*: A brief description of your initial stage for planning the project.  
     If you have a clear, or even a vague idea,
     about what you want to do, write about that.  
-
     If you have no idea at all what you want to do; write "We need help and guidance in choosing a
     project topic."
   
-3.  If you do have a project topic in mind, think though the steps you'd need to take to go from a starting
-    point, to a finished product.  Try to identify at least three separate stages.   Having more stages is good, 
-    to certain point.  (Rule of thumb: five is about right.  Seven to eight is ok. More than twelve, and you are probably getting too detailed in the planning, too soon.)
+3.  If you do have a project topic in mind, think through the steps you'd need to take to go from a starting
+    point, to a finished product.  Try to identify at least three separate stages. Having more stages is good, 
+    to a certain point.  (Rule of thumb: five is about right.  Seven to eight is ok. More than twelve, and you are probably getting too detailed in the planning, too soon.)
 
     Put this in a section called `# Stages`.    Stages should be identifiable steps where you have something
     that works.  For example, for the doomsday clock listed above, here are four initial stages.
@@ -120,7 +119,8 @@ Here's what to put in the file:
     Stage 3: Get two seven segment displays to count down from the first number in a list of integers in our Python
     code, instead of always starting at 59.
     
-    Stage 4: Get some same displays to countdown from the first number in the list, then when they reach zero, count down from the next number in the list, and so on, until the list is done.
+    Stage 4: Get some same displays to countdown from the first number in the list, then when they reach zero, 
+    count down from the next number in the list, and so on, until the list is done.
     
     etc...
     ```
@@ -132,9 +132,9 @@ Here's what to put in the file:
 # About your stages
 
 The short version: 
-* Make the early ones easy to acheive
+* Make the early ones easy to achieve
 * Realize that you might not get all the way to the final stage during SPIS
-* So, to the extent possible, make each stage something you could demo independently
+* Therefore, to the extent possible, make each stage something you could demo independently
 
 The longer version:
 
