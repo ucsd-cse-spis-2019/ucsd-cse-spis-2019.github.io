@@ -300,7 +300,10 @@ The command below can be helpful. It creates a new image im, as a color image (t
 
 * blur: Again create and return a copy of the image that is passed in.  This copy will be a blur of the original image, created by combining neighboring pixels in some way (entirely up to you). You might consider averaging the RGB values of a designated 'square' of pixels, then changing each of these pixels' values to the average.
 
-* randomGrid: Creates and returns a copy of the original image.  To create this copy it divides the image into an NxN grid (where the N is up to you, or make it an argument of the function) and randomly sorts the pieces of the grid across the image - "sliding puzzle"-style.
+* randomGrid: Creates and returns a copy of the original image.  To create this copy it divides the image into an NxN grid (where the N is up to you, or make it an argument of the function) and randomly sorts the pieces of the grid across the image - "sliding puzzle"-style. Hint: you can use the random library (just google this). 
+```
+    import random
+```
 
 Now it's time to create your own effects!! Please be sure to include a comment or note to the tutors explaining what you did. Be creative!  There is literally no end to this assignment. Add any creative routines that you come up with to your public repo and continue working on the joint group mashup project.
 
