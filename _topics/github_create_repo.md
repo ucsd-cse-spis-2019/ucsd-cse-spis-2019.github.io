@@ -25,31 +25,31 @@ your partner will share the same repo by following these instructions
 1. Navigate to 
    the [ucsd-cse-spis-2017 organization](https://github.com/ucsd-cse-spis-2017)
 
-1. Click on the "New repository" button to create a new repo as shown below: 
+1. Click on the "New repository" button to create a new repo as shown below (for 2016; note that the github layout has changed somewhat; look for a green "New" button instead): 
 
    ![new repo](/images/new-repo-begin.png)
    
-   Be sure that the "owner" of the repository is *ucsd-cse-spis-2016*
+   Be sure that the "owner" of the repository is *ucsd-cse-spis-2017*
    as shown in the image, and NOT your own github account.  If the
    owner shows as your own github id, you may have to change the pull
    down menu on the left where it says owner.
    
    When creating your repo use the naming convention
-   `spis16-labXX-<pair name>`. Enter your pair name exactly as listed
+   `spis17-labXX-<pair name>`. Enter your pair name exactly as listed
    under the `Pair_Name` column [at this
-   link](http://ucsd-cse-spis-2016.github.io/info/pairs/). For
+   link](http://ucsd-cse-spis-2017.github.io/info/pairs/). For
    example, if you are creating a repo for lab04, and the name of your
    pair is Phill-Diba, then your repo should be named
-   "spis16-lab04-Phill-Diba". Select the "private" option when
+   "spis17-lab04-Phill-Diba". Select the "private" option when
    creating your repo to make sure your repo is only visible to the
    collaborators of the repo (you and your partner) and the course
    instructors. Click on the "Create repository" button. See the
-   screenshot below:
+   screenshot below (note, this example shows this for 2016):
 	
    ![new repo](/images/create-new-repo.png)
 
 3. After you click "Create Repository", you'll see the following screen.
-   You will want to click the For each lab we have provided you with some starter code. To obtain
+   For some labs we have provided you with some starter code. To obtain
     the starter code, click on the "import code" button on the screen that
     follows right after you create a new repo. Then provide the url of the
     repository that contains the starter code. This url should be
