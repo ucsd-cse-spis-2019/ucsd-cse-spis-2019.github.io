@@ -62,7 +62,7 @@ E.g.,
 
 In other words, we want to define a function recProduct(a, b) which will have integers as arguments and will return the product of its arguments.  But, the function won't use the operation *.
 
-Just for practice, take a minute to (a) determine the base case and (b) write the recursive step without looking below.  After you've got it, read on. If you don't know where to ask, please ask for help. Scroll down when you have an answer.
+Just for practice, take a minute to (a) determine the base case and (b) write the recursive step without looking below.  After you've got it, read on. If you don't know where to start, please ask for help. Scroll down when you have an answer.
 
 
 <div style="margin-bottom:32em">
@@ -79,9 +79,9 @@ Your recursive step should be something like:
 
 a * b = a + a * (b-1)
 
-Briing up idle and create a new file called "recursivefuncs.py" in your repo.
+Bring up idle3 and create a new file called "recursivefuncs.py" in your repo.
 In that file create a stub for the function `recProduct`.
-Now, implement these steps in your function. Once you have that, its time to test you code. Using the unittest framework, unit test your code for some typical inputs.
+Now, implement these steps in your function. Once you have that, its time to test you code. Using the unittest framework, unit test your code for some typical inputs. Follow the same procedure as in Lab 02.
 
 For example check that your program does the following:
 
@@ -107,7 +107,7 @@ If your code passes these cases, great! If not implement the logic needed to han
 ## Recursive Rendering
 It is time for you to start showing off your skills visually. You will do this by writing programs to create cool fractal art, which is based on internal self-similarity. 
 
-We'll start by creating two classical fractals: a spiral and a tree. Afterward, try your hand at creating snowflakes, too, or any fractals beyond the problems below!
+We'll start by creating two classical fractals: a spiral and a tree. Afterward, try your hand at creating snowflakes too, or any fractals beyond the problems below!
 
 
 *The Python Turtle Library*
