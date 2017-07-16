@@ -66,7 +66,7 @@ Step 1: PLAN your letters on paper
 
 Plan your drawing. For each letter that you and your pair partner are going to draw, start by drawing a bounding box like this on a piece of paper. Trade off: each of you should do the planning for the letters for your OWN name, with your pair partner watching and making helpful suggestions.
 
-<img src="/lab/images/turtle/BoundingBox.png" title="BoundingBox.png" alt="BoundingBox.png" height="200" />
+<img src="images/turtle/BoundingBox.png" title="BoundingBox.png" alt="BoundingBox.png" height="200" />
 
 For example, for the name, Phill Conrad, I might plan out bounding boxes like these. Here, I've chosen each of the important points, and labelled them. Note, though, that these are only examples. I don't expect that everyone with a P or a C in their name will make the same choices about how to shape the letters. In fact, I hope each of you will make slightly different choices.
 
