@@ -195,7 +195,7 @@ For example, the following are example screenshots from the call spiral(100, 90,
 
 <p align="center">
 
-![alt-Spiral-1](/lab/images/spiral1.gif){:height="200px" width="200px"} ![alt-Spiral-2](/lab/images/spiral2.gif){:height="200px" width="200px"}
+![alt-Spiral-1](/images/labs/images/spiral1.gif){:height="200px" width="200px"} ![alt-Spiral-2](/images/labs/images/spiral2.gif){:height="200px" width="200px"}
 
 </p>
 
@@ -309,8 +309,8 @@ Here are some pictures for inspiration:
 
 
 <p align="center">
-![alt-frac-3](images/labs/images/fractals/Sierpinski.png){: height="200px" }
-![alt-frac-4](images/labs/images/fractals/fern.png){: height="200px" }
+![alt-frac-3](/images/labs/images/fractals/Sierpinski.png){: height="200px" }
+![alt-frac-4](/images/labs/images/fractals/fern.png){: height="200px" }
 </p>
 
 
