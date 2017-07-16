@@ -19,11 +19,11 @@ Other github topics:
 # <a name="method1"></a>Method 1: Create empty private repo, optionally adding starter code from a link
 
 We ask that you create a new private github repo *inside the
-ucsd-cse-spis-2016 organization* for each lab assignment.  You and
+ucsd-cse-spis-2017 organization* for each lab assignment.  You and
 your partner will share the same repo by following these instructions
 
 1. Navigate to 
-   the [ucsd-cse-spis-2016 organization](https://github.com/ucsd-cse-spis-2016)
+   the [ucsd-cse-spis-2017 organization](https://github.com/ucsd-cse-spis-2017)
 
 1. Click on the "New repository" button to create a new repo as shown below: 
 
