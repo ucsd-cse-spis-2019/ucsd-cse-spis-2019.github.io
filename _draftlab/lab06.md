@@ -116,7 +116,7 @@ Use the command `git clone ` *repos-clone-ssh-url* to clone your new repo.
 
 If you've forgetting where to get the *repos-clone-ssh-url*, consult the page: [git: cloning your first repo]/topics/git_cloning_your_first_repo/)
 
-# Step 5: cd into your repo's directory, and open idle3
+# Step 5: cd into your repo's directory, and open IDLE
 
 If you type `cd ~/github/spis17-`<tt>{{page.num}}</tt>` and then press
 the *tab* button, the bash shell should auto-complete the name of your
@@ -126,10 +126,10 @@ press enter and be in the correct directory.
 Use the commands `pwd`, `ls`, and `git status` to be sure you are in
 the right spot.
 
-Then, open idle3 by typing `idle3 &` at the bash command prompt.  The
+Then, open IDLE (for Python 3) by typing `idle3 &` at the bash command prompt.  The
 extra `&` at the end allows you to get your command prompt back so
 that you can use it to type git commands.  You may see messages from
-time to time from IDLE3&mdash;if so, just press enter to get a bash
+time to time from IDLE&mdash;if so, just press enter to get a bash
 prompt back again.
 
 If you forget the `&`, no worries.  You can also just open a second
@@ -172,7 +172,7 @@ For each, there some additional hints below.
 
 In pyfuncs01.py, we have two simple python functions that just return a value based on their parameters.
 
-Load the file `pyfuncs01.py` and the file `test_pyfuncs01.py` into IDLE3.
+Load the file `pyfuncs01.py` and the file `test_pyfuncs01.py` into IDLE.
 
 You'll need to edit and save changes to both of these files, but its the 
 file `test_pyfuncs01.py` that you need to run to see if the test cases pass.
@@ -221,7 +221,7 @@ as a reminder of how to check for types.
 As a reminder, run `test_pyfuncs03.py` to test the functions in this
 file.    You actually can run these tests from the Unix command line too,
 by typing `python test_pyfuncs03.py`&mdash;you don't actually have to open
-up `test_pyfuncs03.py` in IDLE3, since you don't have to make any changes to 
+up `test_pyfuncs03.py` in IDLE, since you don't have to make any changes to 
 it.  
 
 # `pyfuncs04.py`: `first`, `rest`, `last`, `allButLast` functions for lists and tuples
@@ -257,7 +257,7 @@ a few steps to finish up and submit.
 
 # Step 7: Final check of all your tests
 
-As one last check, run all of your tests in IDLE3, or at the command line.
+As one last check, run all of your tests in IDLE, or at the command line.
 
 Here is an example of running each one of your tests at the command line.  Here the bash shell prompt is replaced by simply `$ ` to make the output easier to read.    If your output looks like this, it means all of your tests are passing, and you
 are ready to try submitting on Gradescope.
