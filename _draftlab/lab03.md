@@ -64,7 +64,7 @@ The initial driver will be the one that is typing on the computer.
 Step 1: PLAN your letters on paper
 ----------------------------------
 
-Plan your drawing. For each letter that you and your pair partner are going to draw, start by drawing a bounding box like this on a piece of paper. Trade off: each of you should do the planning for the letters for your OWN name, with your pair partner watching and making helpful suggestions. ****
+Plan your drawing. For each letter that you and your pair partner are going to draw, start by drawing a bounding box like this on a piece of paper. Trade off: each of you should do the planning for the letters for your OWN name, with your pair partner watching and making helpful suggestions. TEST TEST
 
 <img src="images/turtle/BoundingBox.png" title="BoundingBox.png" alt="BoundingBox.png" height="200" />
 
