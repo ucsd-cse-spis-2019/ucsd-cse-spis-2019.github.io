@@ -244,7 +244,7 @@ Draw some interesting trees using your function.
 By now you should be very skilled at creating fractals using recursions. Congratulations! Now you can do much more, even making it snow during summer in sunny San Diego! In this exercise you will create the following snowflake structure (a.k.a. Koch Snowflake).
 
 <p align="center">
-![](/lab/images/Von_Koch_curve.gif)
+![](/images/labs/images/Von_Koch_curve.gif)
 </p>
 
 As the animation shows, the Koch snowflake begins with an equilateral triangle; at each stage, the middle third of each line segment is replaced by a pair of line segments that can, together with the replaced segment, form an equilateral triangle; then the replacement will be performed again on all the component line segments of the newly created shape, over and over.
@@ -277,13 +277,13 @@ keep in mind that you're only creating one of the three sides of the snowflake!
 Here are images of four steps (after three levels of recursions) of the overall Koch curve's progression:
 
 <p align="center">
-![](/lab/images/360px-KochFlake.gif)
+![](/images/labs/images/360px-KochFlake.gif)
 </p>
 
 Test your implementation by calling snowflake(280, 4); you should get the following snowflake:
 
 <p align="center">
-![](/lab/images/Koch_280_4.gif)
+![](/images/labs/images/Koch_280_4.gif)
 </p>
 
 
@@ -302,15 +302,15 @@ Here are some pictures for inspiration:
 
 <p align="center">
 
-![alt-frac-1](/lab/images/fractals/Julia.png){: height="200px" }
-![alt-frac-2](/lab/images/fractals/Douady_rabbit.png){: height="200px" }
+![alt-frac-1](/images/labs/images/fractals/Julia.png){: height="200px" }
+![alt-frac-2](/images/labs/images/fractals/Douady_rabbit.png){: height="200px" }
 
 </p>
 
 
 <p align="center">
-![alt-frac-3](/lab/images/fractals/Sierpinski.png){: height="200px" }
-![alt-frac-4](/lab/images/fractals/fern.png){: height="200px" }
+![alt-frac-3](images/labs/images/fractals/Sierpinski.png){: height="200px" }
+![alt-frac-4](images/labs/images/fractals/fern.png){: height="200px" }
 </p>
 
 
@@ -319,7 +319,7 @@ Here are some pictures for inspiration:
 
 When you have completed lab 4, you can continue working on the fun group drawing project that you started in lab 3. 
 
-We presume that you have already created the public repo `spis16-drawings-Name1-Name2`.
+We presume that you have already created the public repo `spis17-drawings-Name1-Name2`.
 If you haven't refer to the instructions at the end of lab 3.
 
 Continue adding new files and functions that draw interesting fractals to that repo. Please DO NOT include the code for the (spiral, tree and snowflake) in your public repo. We don't want spoilers for the SPISERS who may still be working on the core lab 4 exercises.
