@@ -56,11 +56,11 @@ Download the  "stone bear" picture below and save it in your github repo working
 
 <p align="center">
 
-![](/lab/images/stoneteddybear.jpg){:height="400px"}
+![](/images/labs/images/stoneteddybear.jpg){:height="400px"}
 
 </p>
 
-Next, launch idle3 in the same directory that you stored the stone bear image.
+Next, launch IDLE in the same directory that you stored the stone bear image.
 
 Before we can manipulate a picture in PIL, we will need to tell Python and PIL where to find it.  To do this, you will need to specify the exact path to the picture on your computer.  You also need to tell Python about the PIL Image library.  We'll start by playing around with the teddy bear image in the shell.  In the shell, type the following to load the Image library into the shell (later you'll put this line at the top of your file).  
 
@@ -76,7 +76,7 @@ Then, you can open the picture you just downloaded as an image as follows:
 
 ```
 
-The argument to the open function tells Python where to find the image. If you are getting an error here it's probably because of a typo in your filename, or because you either placed the file in the wrong place or launched idle3 from a directory different from where the image was stored. 
+The argument to the open function tells Python where to find the image. If you are getting an error here it's probably because of a typo in your filename, or because you either placed the file in the wrong place or launched IDLE from a directory different from where the image was stored. 
 
 To ensure that the command you just executed works you can show the image you just created:
 
@@ -87,7 +87,7 @@ To ensure that the command you just executed works you can show the image you ju
 Logically, an image is a grid of pixels. The size of the "stone bear" picture is 600 x 800, i.e., 480,000 pixels. You can pick a specific pixel from the image by using the `getpixel()` function. The arguments of this function are a picture object and the pixel's X position and its Y position; the function returns the pixel object at the coordinate(X, Y) of the image. Note that in the image grid, the axis is a little different from the usual 2D Cartesian axis, in that it counts from upper left to bottom right. For example, in the following 18 x 18 image grid, the coordinate (11, 7) is the grey block. Note the index starts at 0.
 
 <p align="center">
-![](/lab/images/coordinates.gif){:height="400px"}
+![](/images/labs/images/coordinates.gif){:height="400px"}
 </p>
 
 So, if you make the following statement:
@@ -210,7 +210,7 @@ Tired of typing these lines into the shell? You can actually place the lines tha
 When you execute the invert function on the stone bear picture given to you. Your result should look similar to this.
 
 <p align="center">
-![](/lab/images/PIL/invertedbear.jpg){:height="400px"}
+![](/images/labs/images/PIL/invertedbear.jpg){:height="400px"}
 </p>
 
 ## Functions for YOU to write
@@ -232,8 +232,8 @@ Write a function called greyscale that takes an image as a parameter and modifie
 
 <p align="center">
 
-![alt-bear1](/lab/images/PIL/originalbear.jpg){:height="400px"} 
-![alt-bear2](/lab/images/PIL/grayscalebear.png){:height="400px"}
+![alt-bear1](/images/labs/images/PIL/originalbear.jpg){:height="400px"} 
+![alt-bear2](/images/labs/images/PIL/grayscalebear.png){:height="400px"}
 
 </p>
 
@@ -250,7 +250,7 @@ What is the expected behavior of binarize(im, 255) (for any image)?
 
 <p align="center">
 
-![](/lab/images/PIL/binarizedbear.png){:height="400px"}
+![](/images/labs/images/PIL/binarizedbear.png){:height="400px"}
 
 </p>
 
@@ -261,7 +261,7 @@ Write `mirrorVert`: This function takes an image and modifies the image to mirro
 
 <p align="center">
 
-![](/lab/images/PIL/vertmirror.jpg){:height="400px"}
+![](/images/labs/images/PIL/vertmirror.jpg){:height="400px"}
 
 </p>
 
@@ -269,7 +269,7 @@ Write `mirrorVert`: This function takes an image and modifies the image to mirro
 
 <p align="center">
 
-![](/lab/images/PIL/horizmirror.jpg){:height="400px"}
+![](/images/labs/images/PIL/horizmirror.jpg){:height="400px"}
 
 </p>
 
@@ -277,7 +277,7 @@ Write `flipVert`, a function which flips the image in a picture along its horizo
 
 <p align="center">
 
-![](/lab/images/PIL/flipvert.jpg){:height="400px"}
+![](/images/labs/images/PIL/flipvert.jpg){:height="400px"}
 
 </p>
 
@@ -285,7 +285,7 @@ Next up, `flipHoriz`, flip the image on its vertical axis. This should work in t
 
 <p align="center">
 
-![](/lab/images/PIL/fliphoriz.jpg){:height="400px"}
+![](/images/labs/images/PIL/fliphoriz.jpg){:height="400px"}
 
 </p>
 
