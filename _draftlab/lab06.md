@@ -62,7 +62,7 @@ The way that you create the repo will be a little different, since we have "star
 Instead of creating the repo from scratch, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
 importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
 
-The name of your repo should be `spis16-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2017.github.io/info/pairs/)
+The name of your repo should be `spis17-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2017.github.io/info/pairs/)
 
 # Step 2: Invite the "other" pair partner as a collaborator with admin access
 
@@ -91,7 +91,7 @@ Two notes on this:
 * Here the `$ ` is 
     standing in for the bash shell prompt, which on ACMS machines 
     is typically something
-    long such as `[spis16t3@ieng6-240]:~:179$ `.   Since
+    long such as `[spis17t3@ieng6-240]:~:179$ `.   Since
     the exact content of the bash shell prompt differs from 
     system to system, or even user to user, it is traditional
     to just show it as `$` in documentation.  (By the way, you can 
@@ -116,9 +116,9 @@ Use the command `git clone ` *repos-clone-ssh-url* to clone your new repo.
 
 If you've forgetting where to get the *repos-clone-ssh-url*, consult the page: [git: cloning your first repo]/topics/git_cloning_your_first_repo/)
 
-# Step 5: cd into your repo's directory, and open idle
+# Step 5: cd into your repo's directory, and open idle3
 
-If you type `cd ~/github/spis16-`<tt>{{page.num}}</tt>` and then press
+If you type `cd ~/github/spis17-`<tt>{{page.num}}</tt>` and then press
 the *tab* button, the bash shell should auto-complete the name of your
 repo (i.e. automatically finish the `-Name1-Name2` part.  You can then
 press enter and be in the correct directory.
@@ -126,10 +126,10 @@ press enter and be in the correct directory.
 Use the commands `pwd`, `ls`, and `git status` to be sure you are in
 the right spot.
 
-Then, open idle by typing `idle &` at the bash command prompt.  The
+Then, open idle3 by typing `idle3 &` at the bash command prompt.  The
 extra `&` at the end allows you to get your command prompt back so
 that you can use it to type git commands.  You may see messages from
-time to time from IDLE&mdash;if so, just press enter to get a bash
+time to time from IDLE3&mdash;if so, just press enter to get a bash
 prompt back again.
 
 If you forget the `&`, no worries.  You can also just open a second
@@ -172,7 +172,7 @@ For each, there some additional hints below.
 
 In pyfuncs01.py, we have two simple python functions that just return a value based on their parameters.
 
-Load the file `pyfuncs01.py` and the file `test_pyfuncs01.py` into IDLE.
+Load the file `pyfuncs01.py` and the file `test_pyfuncs01.py` into IDLE3.
 
 You'll need to edit and save changes to both of these files, but its the 
 file `test_pyfuncs01.py` that you need to run to see if the test cases pass.
@@ -189,7 +189,7 @@ For this step, you should open the files `pyfuncs02.py`, and
 `test_pyfuncs02.py`.   
 
 (This pattern repeats itself for each of the remaining files
-`pyfuncs03.py`, `pyfuncs04.py`, and pyfuncs05.py`&mdash;each one has a
+`pyfuncs03.py`, `pyfuncs04.py`, and `pyfuncs05.py`;each one has a
 test file starting with `test_` that goes along with it.  So we won't
 repeat those instructions for each step below.)
 
@@ -205,7 +205,7 @@ you are supposed to write.
 
 # `pyfuncs03.py`: boolean functions involving `or`
 
-In this file, you are given a corret function definition for
+In this file, you are given a correct function definition for
 `isAdditivePrimaryColor` as an example.   There is a comment that invites
 you to try a different way of writing the function: one that many students
 sometimes think will work, but that doesn't.  You are encouraged to read
@@ -221,7 +221,7 @@ as a reminder of how to check for types.
 As a reminder, run `test_pyfuncs03.py` to test the functions in this
 file.    You actually can run these tests from the Unix command line too,
 by typing `python test_pyfuncs03.py`&mdash;you don't actually have to open
-up `test_pyfuncs03.py` in IDLE, since you don't have to make any changes to 
+up `test_pyfuncs03.py` in IDLE3, since you don't have to make any changes to 
 it.  
 
 # `pyfuncs04.py`: `first`, `rest`, `last`, `allButLast` functions for lists and tuples
@@ -257,7 +257,7 @@ a few steps to finish up and submit.
 
 # Step 7: Final check of all your tests
 
-As one last check, run all of your tests in IDLE, or at the command line.
+As one last check, run all of your tests in IDLE3, or at the command line.
 
 Here is an example of running each one of your tests at the command line.  Here the bash shell prompt is replaced by simply `$ ` to make the output easier to read.    If your output looks like this, it means all of your tests are passing, and you
 are ready to try submitting on Gradescope.
