@@ -32,7 +32,7 @@ Your learning goals are:
 
 * Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy and your first steps.
 
-* Step 4: Unit test your code as much as possible (In most cases you should be able to inspect the outcome of your code visually but we encourage you to use the unittest fraemwork as much as possible)
+* Step 4: Unit test your code as much as possible (In most cases you should be able to inspect the outcome of your code visually but we encourage you to use the unittest framework as much as possible)
 
 * Step 5: Track your progress by committing your code frequently to git. Submit your code bu pushing it to git. You may do this multiple times.
 
@@ -60,7 +60,7 @@ Download the  "stone bear" picture below and save it in your github repo working
 
 </p>
 
-Next, launch IDLE in the same directory that you stored the stone bear image.
+Next, launch idle3 in the same directory that you stored the stone bear image.
 
 Before we can manipulate a picture in PIL, we will need to tell Python and PIL where to find it.  To do this, you will need to specify the exact path to the picture on your computer.  You also need to tell Python about the PIL Image library.  We'll start by playing around with the teddy bear image in the shell.  In the shell, type the following to load the Image library into the shell (later you'll put this line at the top of your file).  
 
@@ -76,7 +76,7 @@ Then, you can open the picture you just downloaded as an image as follows:
 
 ```
 
-The argument to the open function tells Python where to find the image. If you are getting an error here it's probably because of a typo in your filename, or because you either placed the file in the wrong place or launched IDLE from a directory different from where the image was stored. 
+The argument to the open function tells Python where to find the image. If you are getting an error here it's probably because of a typo in your filename, or because you either placed the file in the wrong place or launched idle3 from a directory different from where the image was stored. 
 
 To ensure that the command you just executed works you can show the image you just created:
 
@@ -115,7 +115,7 @@ The `putpixel` function takes two arguments:
 
 * a tuple representing the RGB color to set the pixel to.  In the example above, this color is (0, 0, 0), i.e. black.
 
-After running the command above, show the bear image again and see if you can find the modified pixel.  It's there!
+After running the command above, show the bear image again (you need to run the .show() again) and see if you can find the modified pixel.  It's there!
 
 If you have a hard time seeing the modified pixel, try the following code to turn a range of pixels black.
 
@@ -203,9 +203,9 @@ def invert( im ):
 ```
 
 Copy this function into your "imaging.py" file, load it and run it.  Again, you will need to follow the three steps from above to run this function:
-Create the stone bear image
-Run the function, passing in the image
-Show the image after running the function
+* Create the stone bear image
+* Run the function, passing in the image
+* Show the image after running the function
 Tired of typing these lines into the shell? You can actually place the lines that will execute the three steps above into your "imaging.py" file, outside of any function (below all the function definitions). Then, every time you press F5, you will automatically run these lines!
 When you execute the invert function on the stone bear picture given to you. Your result should look similar to this.
 
@@ -213,7 +213,7 @@ When you execute the invert function on the stone bear picture given to you. You
 ![](/lab/images/PIL/invertedbear.jpg){:height="400px"}
 </p>
 
-Functions for you to write
+## Functions for YOU to write
 
 NOTES: 
 
@@ -238,7 +238,7 @@ Write a function called greyscale that takes an image as a parameter and modifie
 </p>
 
 
-Hint: Getting an OverflowError: unsigned byte integer is greater than maximum? This might be because your luminance calculation results in RGB values higher than 255. Make sure that all of your percentages add up to 1.
+Hint: Getting an OverflowError: unsigned byte integer is greater than maximum? This might be because your luminance calculation results in RGB values higher than 255. Make sure that all of your percentages add up to 1. Also, if you get "integer argument expected, got float", it may mean you are trying to assign red, green or blue a floating point value. You may solve this by using a typecast c = int(a/b) or doing an integer division c = a//b versus the floating point one c = a/b (Note that this is one of the differences between Python 2, which was used last year in SPIS, and Python 3, which we are using this year. In Python 2, the / with two integer arguments resulted in an int, while it results in a float for Python 3. See also (http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#integer-division). This is one of the challenging issues when porting between these two different versions of Python).
 
 ## Binarize
 
@@ -256,8 +256,8 @@ What is the expected behavior of binarize(im, 255) (for any image)?
 
 ## Geometric Transformations!
 
-The following four functions take an image as an argument and modify that image.  They don't return anything.  
-Write `mirrorVert`: This function takes an image and modifies the image to mirror the photo across its horizontal axis (i.e., so that the top part is mirrored upside down on the bottom of the image). Hint: Think carefully about which pixels you need to loop over, and where each pixel in the top half needs to be copied to create the mirror effect.  Start with concrete examples as we will see in class.   Then derive the general formula based on the pixel's location (x, y) and the height and width of the image.
+The following four functions take an image as an argument and do some geometric transformations on it.  
+Write `mirrorVert`: This function takes an image and modifies the image to mirror the photo across its horizontal axis (i.e., so that the top part is mirrored upside down on the bottom of the image). Hint: Think carefully about which pixels you need to loop over, and where each pixel in the top half needs to be copied to create the mirror effect.  Start with concrete examples. Then derive the general formula based on the pixel's location (x, y) and the height and width of the image.
 
 <p align="center">
 
@@ -290,9 +290,13 @@ Next up, `flipHoriz`, flip the image on its vertical axis. This should work in t
 </p>
 
 
-The next three methods create and return a copy of the image passed in.  They should NOT modify the original image.
+The next three methods create and return a copy of the image passed in (i.e., use the return statement). They should NOT modify the original image.
+The command below can be helpful. It creates a new image im, as a color image (this is what the RGB means), of a certain width and height given by the tuple.
+```
+    im = Image.new('RGB',(width,height))
+```
 
-* scale: Take an image as a parameter and create a copy of that image that is scaled to be half its original size.  Then return this scale copy. Hint: one way to do this is to skip every other pixel when copying from one image to the other.  Be careful with youir coordinates so that you do not go out of bounds in the smaller image.
+* scale: Take an image as a parameter and create a copy of that image that is scaled to be half its original size.  Then return this scale copy. Hint: one way to do this is to skip every other pixel when copying from one image to the other.  Be careful with your coordinates so that you do not go out of bounds in the smaller image.
 
 * blur: Again create and return a copy of the image that is passed in.  This copy will be a blur of the original image, created by combining neighboring pixels in some way (entirely up to you). You might consider averaging the RGB values of a designated 'square' of pixels, then changing each of these pixels' values to the average.
 
