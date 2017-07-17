@@ -37,7 +37,7 @@ Your learning goals are:
 
 * Step 1: Read Chapter 4 of Guttag, Sections 4.1 -4.5
 
-* Step 2: Create a new private github repo under the "ucsd-cse-spis-2017" organization. Your github repo should be called spis16-lab04-Name1-Name2 (where Name1 and Name2 are the first names of the pair partners). Your repo should contain a README and .gitignore 
+* Step 2: Create a new private github repo under the "ucsd-cse-spis-2017" organization. However, the instructions are a little different this time, since we will be providing you with some starter code. 
 
 * Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy.
 
@@ -46,6 +46,16 @@ Your learning goals are:
 * Step 5: Commit your code frequently. Push working versions of your code to github. 
 
 Developing code is an iterative process. Your code will probably not work as expected on the very first try. Don't be dismayed. Work through your code to identify bugs, test new code frequently and seek help if you feel you are stuck!
+
+
+# Setting up your repo
+The way that you create the repo will be a little different this time, since we have "starter code" available for you.
+
+Instead of creating the repo from scratch, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
+importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
+
+The name of your repo should be `spis17-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2017.github.io/info/pairs/), as we have done for the previous labs.
+
 
 # Programming Exercises
 Let's begin with our very first exercise which is a warmup on recursion.
@@ -79,9 +89,8 @@ Your recursive step should be something like:
 
 a * b = a + a * (b-1)
 
-Bring up idle3 and create a new file called "recursivefuncs.py" in your repo.
-In that file create a stub for the function `recProduct`.
-Now, implement these steps in your function. Once you have that, its time to test you code. Using the unittest framework, unit test your code for some typical inputs. Follow the same procedure as in Lab 02.
+Bring up idle3, and open "recursiveFuncs.py" and "test_recursiveFuncs.py". These two files were part the starter code for your repo. Note that the code is still incomplete. 
+Now, implement the recursive multiplication function recProduct(a,b) in "recursiveFuncs.py". Once you have that, its time to test you code using the unittest framework (see lab02). The file "test_recursiveFuncs.py" is where you unit test your code.
 
 For example check that your program does the following:
 
