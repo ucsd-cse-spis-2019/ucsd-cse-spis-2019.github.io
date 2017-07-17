@@ -112,72 +112,14 @@ We'll start by creating two classical fractals: a spiral and a tree. Afterward, 
 
 *The Python Turtle Library*
 
-You've already started playing with Python's Turtle library in the previous lab. Today, you'll draw your own pictures and write code from scratch. For more information on the turtle library refer to the [documentation on the turtle library](http://pydoc-zh.readthedocs.io/en/latest/library/turtle.html).
+You've already started playing with Python's Turtle library in the previous lab. For more information on the turtle library refer to the [documentation on the turtle library](http://pydoc-zh.readthedocs.io/en/latest/library/turtle.html).
 
-But let's start simple. We will draw a square. In your git repo create a file called "recursiveDrawings.py". Write code to import the turtle library as follows:
+In your git repo create a file called "recursiveDrawings.py" and put all your code for this lab in that file. Remember, to be able to use our turtle, we need to import the turtle library:
 
 ```python
 import turtle
 ```
 
-This above line tells Python about the turtle library and allows you to call its functions. The function below does the actually drawing. Copy the following code into your file.
-
-```python
-def drawPicture():
-
-	''' Draw a simple picture using a turtle '''
-
-    turtle.forward(100)
-
-    turtle.left(90)
-
-    turtle.forward(100)
-
-    turtle.left(90)
-
-    turtle.forward(100)
-
-    turtle.left(90)
-
-    turtle.forward(100)
-
-    turtle.left(90)    
-
-```
-
-What happens when you run the above function?
-
-Modify the function in various ways to see what happens:
-Change the number in the first `turtle.forward()` call in the drawPicture function. What's the role of the number?
-
-Change the values in the calls to `turtle.left()`. What units are being used?
-
-Play around with the `drawPicture()` function. Can you draw a rectangle? How about a smiley face? See if you can draw an equilateral triangle. The equilateral triangle is the first step to drawing the Koch snow flake, which is the apex of this lab.
-
-Add each of your new functions to the Recursion.py file, making sure to comment your code and including descriptive and concise docstrings.
-
-*Referring the turtle documentation*
-
-It's a good idea to check out the [library documentation](http://pydoc-zh.readthedocs.io/en/latest/library/turtle.html) (a.k.a. reference manual, API docs, etc.) when you're learning how to use a new library (set of methods).  Google can be very helpful when exploring a new tool. Here are a couple of links that can help you get started drawing pictures and seeing what's possible.
-
-Here's the entry in the documentation for the function that lets us move forward:
-
-****
-
-```python
- turtle.forward(distance) turtle.fd(distance)
-```
-
-Parameters:	distance – a number (integer or float)
-Move the turtle forward by the specified distance, in the direction the turtle is headed.
-
-****
-
-If you and your partner get stuck, look back at the examples we worked through together in class and try to adapt the strategies.  If you're still stuck, ask for help.
-
-Don't forget to save your work often and to add helpful comments to your code.
-
-To complete the remaining exercises create the file "recursiveDrawings.py" and add all your code to that file.
 
 ## Draw a Spiral
 In the file "recursiveDrawings.py" add a stub for the spiral function which has the following signature. 
