@@ -124,7 +124,7 @@ An example correct repo name for the ficticious SPIS students Alex Triton and Ch
 The pair partner that created the repo will automatically have access.  That partner needs to invite the second
 partner to be a collaborator with admin access.
 
-The instructions to do that are found here: [Github: Adding collaborators](/topics/github_add_collaborators)
+The instructions to do that are found here: [Github: Adding collaborators](https://ucsd-cse-spis-2017.github.io/topics/github_add_collaborators)
 
 ### Step 2c: Second pair partner accepts the invitation
 
