@@ -2,7 +2,7 @@
 layout: lab
 num: lab05
 ready: false
-desc: "Image Manipulation, covering Guttag Ch5"
+desc: "Image Manipulation"
 assigned: 2017-08-11 09:30:00.00-7
 due: 2017-08-15 17:00:00.00-7
 ---
@@ -26,7 +26,7 @@ Your learning goals are:
 
 # Work Flow 
 
-* Step 1: Review Chapters 4 and Chapter 5 (Sections 5.1-5.2 and 5.4) of Guttag
+* Step 1: Review Chapters 4 and Chapter 5 (Sections 5.1-5.5) of Guttag
 
 * Step 2: Create a private github repo called spis16-lab05-Name1-Name2 (following the naming convention in past labs). 
 
