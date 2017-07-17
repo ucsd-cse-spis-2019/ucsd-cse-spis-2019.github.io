@@ -61,7 +61,78 @@ The initial driver will be the one that is typing on the computer.
 -   If you are both logged in, the temptation to "not really do pair programming" will be too great, at least until you are used to the system.
 
 
-Step 1: PLAN your letters on paper
+
+Step 1: Try out the Turtle library
+----------------------------------
+The Python Turtle library lets you draw on a canvas, by moving around a little turtle. Simple commands make the turtle move and turn and it draws as it goes. 
+
+But before you start with your own turtle, let's show you a simple example. Bring up IDLE. Create a new file called "turtletest.py" in your repo. To do this, in IDLE go to the menu option File-> New. Then continue with the following steps.
+
+First add this code to import the turtle library:
+
+```python
+import turtle
+```
+
+This above line tells Python about the turtle library and allows you to call its functions. The function below does the actually drawing. Copy the following code into your file.
+
+```python
+def drawPicture():
+
+	''' Draw a simple picture using a turtle '''
+
+    turtle.forward(100)
+
+    turtle.left(90)
+
+    turtle.forward(100)
+
+    turtle.left(90)
+
+    turtle.forward(100)
+
+    turtle.left(90)
+
+    turtle.forward(100)
+
+    turtle.left(90)    
+
+drawPicture()
+```
+
+What happens when you run your file?
+
+Modify the function in various ways to see what happens:
+Change the number in the first `turtle.forward()` call in the drawPicture function. What's the role of the number?
+
+Change the values in the calls to `turtle.left()`. What units are being used?
+
+
+*Referring the turtle documentation*
+
+It's a good idea to check out the [library documentation](http://pydoc-zh.readthedocs.io/en/latest/library/turtle.html) (a.k.a. reference manual, API docs, etc.) when you're learning how to use a new library (set of methods).  Google can be very helpful when exploring a new tool. Here are a couple of links that can help you get started drawing pictures and seeing what's possible.
+
+Here's the entry in the documentation for the function that lets us move forward:
+
+****
+
+```python
+ turtle.forward(distance) turtle.fd(distance)
+```
+
+Parameters:	distance – a number (integer or float)
+Move the turtle forward by the specified distance, in the direction the turtle is headed.
+
+****
+
+If you and your partner get stuck, look back at the examples we worked through together in class and try to adapt the strategies.  If you're still stuck, ask for help.
+
+Don't forget to save your work often and to add helpful comments to your code.
+
+Next, you'll use a turtle to draw your initials.
+
+
+Step 2: PLAN your letters on paper
 ----------------------------------
 
 Plan your drawing. For each letter that you and your pair partner are going to draw, start by drawing a bounding box like this on a piece of paper. Trade off: each of you should do the planning for the letters for your OWN name, with your pair partner watching and making helpful suggestions.
@@ -84,14 +155,11 @@ A warning about that last approach: although it may seem like it isn't that toug
 
 Once you've planned your letters on paper, you are ready to start coding.
 
-Step 2: Driver gets things started on first letter 
+
+Step 3: Driver gets things started on first letter 
 -----------------------------------------------------------------
 
-Bring up IDLE3. Create a new file called "lab03.py" in your repo. To do this, in IDLE3 go to the menu option File-> New. Then continue with the following steps
-
-### Step 2c: Start a function definition for first letter
-
-Open the file "lab03.py" provided in the starter code, and start typing a function definition for your first inital.
+Create a new file called "lab03.py" in your repo, and start creating a function definition for your first inital.
 
 -   If the initial is A, the function should be called drawA. If it is a C, it should be called drawC, etc.
 -   The function should take there parameters: the name of a turtle, a width, and a height.
@@ -110,7 +178,7 @@ Example:
 
       # The rest is up to you to figure out
 
-Then, at the top of your file, add this comment, and the `import` `turtle` line, and save the file as lab03.py. (The function def for drawA or whatever your first initial is that you are trying to draw goes below that point, as shown:
+At the top of your file, add this comment (with your names), and the `import` `turtle` line, and save the file as lab03.py. (The function def for drawA or whatever your first initial is that you are trying to draw goes below that point, as shown:
 
     # lab03.py for Alice Baker and Chris Gaucho
     # Draw some initials using turtle graphics
@@ -138,7 +206,7 @@ Your next task: start adding code into your first initial drawing routine so tha
 As you code, put a comment before each step, that explains in English what you are doing. 
 
 
-Step 3: Draw the remaining letters
+Step 4: Draw the remaining letters
 ----------------------------------
 
 When your first initial looks good, its time to try the next one.
@@ -174,7 +242,7 @@ So calling them (pickle, tomato, cucumber) is not ok---you could make it work, b
 
 But (turt, wid, hght) is fine, as is (t, w, h), or (aTurtle, width, height).
 
-Step 4: Testing your first and second letters
+Step 5: Testing your first and second letters
 ----------------------------------------------
 
 To test your first and second drawing function, add code into your go() function, like this:
@@ -202,7 +270,7 @@ AS YOU WORK, SWITCH DRIVER AND NAVIGATOR FREQUENTLY. Each member of the team sho
 
 Repeat the steps above until you have all your letters done, and switch driver/navigator between each function. Then you are ready for the combining steps.
 
-Step 5: The step where you combine things
+Step 6: The step where you combine things
 -----------------------------------------
 
 In this step, you are going to write two new functions, for each of the initials of the members of the pair.
@@ -239,7 +307,7 @@ Then, modify your go() function so that it draws each member of your team's init
 
 When that's done, you are ready to do your finalcheck list on your code before submission, and then use the git command line to submit.
 
-Step 6: Final Checklist
+Step 7: Final Checklist
 -----------------------
 
 Here's your final checklist.
