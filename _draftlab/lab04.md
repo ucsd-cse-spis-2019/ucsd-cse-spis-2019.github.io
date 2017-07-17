@@ -2,7 +2,7 @@
 layout: lab
 num: lab04
 ready: false
-desc: "Recursion and fractals with turtle"
+desc: "Recursion and fractals with Turtle"
 assigned: 2017-08-10 09:30:00.00-7
 due: 2017-08-12 15:45:00.00-7
 ---
