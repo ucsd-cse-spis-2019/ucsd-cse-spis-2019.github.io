@@ -2,7 +2,7 @@
 layout: lab
 num: lab00
 ready: false
-desc: "lab00 on basics, by Phill"
+desc: "The basics"
 assigned: 2017-08-01 09:30:00.00-7
 due: 2017-08-03 17:00:00.00-7
 ---
@@ -118,14 +118,14 @@ explains Hello World in IDLE](http://www.youtube.com/watch?v=Cdk20r2dgFU)
 
 Once you've run your "Hello World!" program, you are ready to move on to the next step.
 
-BTW, if you are familiar with Python 2, you may note that the syntax of the print command has changed in Python 3. This is a little confusing, but it is good to know that there are some key differences between Python 2 and Python 3. We will be using Python 3 in SPIS this year.
+BTW, if you are familiar with Python 2, you may notice that the syntax of the print command has changed in Python 3. This is a little confusing, but it is good to know that there are some key differences between Python 2 and Python 3 (the syntax options for the print command being one of them). We will be using Python 3 in SPIS this year.
 
 
 ## Step 5:  Accept invitation to UCSD-CSE-SPIS-2017 github organization
 
-By now, the mentors/instructors should have invited you to the UCSD-CSE-SPIS-2017 github organization.
+The mentors/instructors should have invited you to the UCSD-CSE-SPIS-2017 github organization (if they haven't, the invitation will come soon).
 
-You should find an place where you can accept this invitation if you click on this link and look near the top of the page:
+You should find a place where you can accept this invitation if you click on this link and look near the top of the page:
 
 <https://github.com/ucsd-cse-spis-2017>
 
