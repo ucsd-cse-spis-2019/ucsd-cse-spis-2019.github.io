@@ -131,7 +131,7 @@ The instructions to do that are found here: [Github: Adding collaborators](https
 The second pair partner should accept the invitation.  This is usually straightforward: there is an invitation in the second pair partner's incoming email with a link to click, and it is clear what to do.
 
 If the email doesn't arrive, though, or anything is not clear, there are troubleshooting instructions later on the same page you accessed in the previous step to add the partner as a collaborator:  
-[Github: Adding collaborators](/topics/github_add_collaborators)
+[Github: Adding collaborators](https://ucsd-cse-spis-2017.github.io/topics/github_add_collaborators)
 
 ## Step 3: One time steps for configurating your ACMS account for git
 
