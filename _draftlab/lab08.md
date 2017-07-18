@@ -17,9 +17,9 @@ In this lab you will be introduced to the basics of electronics using a a credit
 
 ## Create a git repo and get the starter code
 Use your laptop to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab08-startercode.git 
-You may also also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
+You may also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
 
-Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group.
+Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group.
 
 ## Observe your Raspberry Pi
 Take a look at the Raspberry Pi on your workbench. You are looking at the insides of a computer. The Pi is not shy about exposing its true self. You would see a similar circuit if you cracked open the shiny shell of your laptop (which is probably not a great idea to quench your curiosity). As you stare down at your Pi, you see an all-encompassing circuit. Your gut feeling may be that it all looks very complex. Your premonitions are not misplaced. The circuit that you are looking at is not called the motherboard for nothing! 
@@ -265,7 +265,7 @@ For the circuit you will need the following components:
 * Wires
 
 
-One of the key differences in this exercise compared to the previous one is that you will configure the pin connected to the button as an INPUT pin. Here is a nice excerpt from [a website](http://www.scriptoriumdesigns.com/embedded/gpio_in.php) explaining such a configuration:
+One of the key differences in this exercise compared to the previous one is that you will configure the pin connected to the button as an INPUT pin. Here is a nice excerpt from [a website](http://blmrgnn.blogspot.com/2016/02/gpio-general-purpose-inputoutput-inputs.html) explaining such a configuration:
 
 *A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is “high” (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is “low” (near GND), reading the pin will result in reading a logic 0.*
 
@@ -287,10 +287,9 @@ Start with wiring the circuit as per the circuit diagram below:
 
 As shown above keep the LED circuit from the previous exercise. Just add another circuit that places a button between GPIO pin 15 and GND. Notice that you don't have to wire up the pull up resistor. There is a pull up resister available internally in the raspberry Pi. We just have to specify in software that we would like to use it.
 
-Now open the program `02_buttonLED.py` in idle. This program reports the current polls pin 15 (the pin connected to the button) and reports the status of that pin: 1 indicates true or high voltage, 0 indicates False or a low voltage.
+Now open the program `02_buttonLED.py` in idle. This program polls pin 15 (the pin connected to the button) and reports the status of that pin: 1 indicates true or high voltage, 0 indicates False or a low voltage. It doesn't do much more, at the moment. 
 
-
-Now answer the following questions:
+Try to understand the code, and answer the following questions:
 
 * Which line of code configures pin 15 to be an input pin with a pull up resistor configuration? 
 * Which line of code gets the status of pin 15?
@@ -299,9 +298,14 @@ Now answer the following questions:
 * What should the value be when the button is not pressed?
 
 
-Run the code. What do you get? Come up with a simple test to check the correctness of the program. Then modify the program to print whether the button is pressed or not pessed. You program should print "button is pressed" OR "button is not pressed" depending on the state of the button.
+Run the code. What do you get? Come up with a simple test to check the correctness of the program. 
 
-Finally, add logic to toggle the state of the LED (from ON to OFF or OFF to ON) everytime the button is pressed and released.
+Now, it's time to write some code of your own:
+* Modify the program to print whether the button is pressed or not pessed. You program should print "button is pressed" OR "button is not pressed" depending on the state of the button.
+* Then add logic to toggle the state of the LED (from ON to OFF or OFF to ON) everytime the button is pressed and released.
+
+Make sure you commit this code to your github repo.
+
 
 # Driving a 7-segment display
 A seven segment display packages seven LEDs, each LED is called a segment, which when energized forms part of a numeral. An additional eight LED is sometimes used within the same package to indicate a decimal point. By correctly energizing the individual segments of the 7-segment display you can display numbers 0 through 9.
@@ -318,14 +322,14 @@ The figure below shows the common-cathode 7-segment display:
 
 Each of the LED segments has one of its connection pins out of the package. These connection pins are labeled 'a' through 'g' representing each of the individual segments. The other pin for each LED is connected together to a common pin. In this experiment we will use a common cathod 7-segment display, which means that the all the cathodes of the LEDs are connected together to the "common pins" that are marked as zero volts in the above diagram. Each individual segment (a-g) is turned on by applying a high voltage to the corresponging pin via a current limiting resistor (forward biasing that segment). By forward biasing the appropriate pins of the LED segments, you can display any numeral value in decimal from 0 to 9.
 
-* Draw a circuit that connects the 7 segment display to the RPi. Note that the center pins should be connected to the ground via a 220 ohm resistor. The other pins can be directed connected to the GPIO pins on the Pi.
+* Draw a circuit that connects the 7 segment display to the RPi. Note that the center pins should be connected to the ground via a 220 ohm resistor (you only need to connect one of them this way, and you can leave the other not connected). The other pins can be directed connected to the GPIO pins on the Pi.
 * Once you have a drawing of your circuit get it verified by an instructor or mentor.
 * Then wire your circuit.
 * Create a file called `03_7seg.py` in your git repo and write a program that displays the numerals 0 - 9 in sequence then cycles back to 0. Each numeral should be displayed for 1 second.
-* Now combine your current circuit with the LED and button circuit from the previous exercise and modify your program to display the number of button presses so far on the 7 segment display. You can only count till 8 and have to reset back to zero once the button is pressed more than 9 times.
+* Create a file called '04_7seg.py' in your git repo. Now write a program that combines your current circuit with the button circuit from the previous exercise: display the number of button presses so far on the 7 segment display. You can only count till 8 and have to reset back to zero once the button is pressed more than 9 times. Make sure you push all your code to the github repo.
 
 
-Congratulations on finishing lab 8!! You now have successfully built and controlled circuits via programs. We will build on this knowledge as we venture deeper into hardware and robotics!
+Congratulations on finishing lab 8!! You now have successfully built and controlled circuits via software. We will build on this knowledge as we venture deeper into hardware and robotics!
 
 
 
