@@ -157,8 +157,7 @@ it.
 These functions are based on the idea of indexing into lists and tuples with 
 notations such as `[0]`, `[1:]`, and so forth.
 
-You may want to review the sections of Chapter 5 of your book as well
-as the notes from lecture about this topic. You are given two function
+You may want to review the sections of Chapter 5 of your book. You are given two function
 definitions as examples, and then asked to replace the stubs for two more.
 
 # `pyfuncs05.py`: Recursion on lists and tuples
