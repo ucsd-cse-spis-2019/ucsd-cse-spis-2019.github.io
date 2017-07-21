@@ -17,9 +17,9 @@ In this lab you will be introduced to the basics of electronics using a a credit
 
 ## Create a git repo and get the starter code
 Use your laptop to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab08-startercode.git 
-You may also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
+Alternatively, you may also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
 
-Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group.
+**Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group.**
 
 ## Observe your Raspberry Pi
 Take a look at the Raspberry Pi on your workbench. You are looking at the insides of a computer. The Pi is not shy about exposing its true self. You would see a similar circuit if you cracked open the shiny shell of your laptop (which is probably not a great idea to quench your curiosity). As you stare down at your Pi, you see an all-encompassing circuit. Your gut feeling may be that it all looks very complex. Your premonitions are not misplaced. The circuit that you are looking at is not called the motherboard for nothing! 
@@ -47,19 +47,19 @@ We will focus on a few important components on the diagram:
 
 3. SD card slot: All the software that runs on the Pi, which includes the Operating System (more on the OS later) as well as your programs, will be stored on the SD card that goes into the SD card slot. The Pi without the SD card is all hardware.
 
-4. GPIO pins: This stands for General Purpose Input / Output. You won’t be able to observe the GPIO pins on the Raspberry Pi on your workbench because they are hidden under the gray/black ribbon cable that connects them to the white breadboard. These pins can be configured to send/receive signals through your python programs. You will control and sense the world around you through these pins!!
+4. GPIO pins: This stands for General Purpose Input / Output. You won’t be able to observe the GPIO pins on the Raspberry Pi on your workbench because they are hidden under the ribbon cable that connects them to the white breadboard. These pins can be configured to send/receive signals through your python programs. You will control and sense the world around you through these pins!!
 
 5.	Power Input: Using this input you can power up your Pi using a charger or a batteries. 
 
 ## Observe the connections from your Pi to other peripherals
 
-In the setup provided to you, the Pi has been wired to work as a desktop computer! Actually its more than a desktop because it is setup to connect to an electronic circuit that you will soon create (something you can't do with standard desktops)
-Next week we will operate the Pi in a untethered fashion (as a mobile robot) but for now observe the following wired connections from the Pi to other peripherals:
+In the setup provided to you, the Pi has been wired to work as a desktop computer! Actually its more than a desktop because it is setup to connect to an electronic circuit that you will soon create (something you can't do with standard desktops).
+For the robotics projects, we will operate the Pi in a untethered fashion (so the robot can be mobile) but for now observe the following wired connections from the Pi to other peripherals:
 
 * The Pi has a connection to a monitor via the HDMI port.
 * The keyboard and mouse are connected to the in-built USB hub of your monitor. A single USB cable from the monitor connects the keyboard and mouse to the Pi.
 * The Pi is powered up using a charger that is plugged into the wall.
-* The GPIO pins on the Pi are routed to a breadboard via a black ribbon cable.
+* The GPIO pins on the Pi are routed to a breadboard via a ribbon cable.
 
 Let's take a closer look at the breadboard and the GPIO breakout board that sits on it. You will need this information to complete the later exercises in this lab
 
@@ -75,12 +75,12 @@ The figure on the left shows a picture of the breadboard as visible to you, whil
 
 Are each of the following grids internally connected on the above shown breadboard?
 
-* a1 and a2
-* a1 and b2
-* a1 and b1
-* c14 and f14
-* j1 and j2
-* a1 and e1
+* 1a and 2a
+* 1a and 1b
+* 1a and 2b
+* 14c and 14f
+* 1j and 2j
+* 1a and 1e
 
 
 Finally, the breadboard has two vertical lines running up and down on both sides.  The pins on each of these lines are electrically connected but the lines are electrically disconnected from each other. The convention is to connect a positive voltage to the line that has a '+' sign above it and connect the 'ground' to the line with the '-' sign above it.
@@ -127,7 +127,7 @@ The operating system on the Pi is a version of the linux known as Raspbian. The 
 
 ### The WiFi config tool
 This tool shows the status of your Wifi connection and internet connectivity.
-Use the mouse navigate to the WiFi Config Tool on your desktop. Double click on it to view the status of your network connection. Take note of the IP address in the GUI of that tool. Your IP address is of the form: 137.110.XX.XX. If you see such a number then you have internet connectivity. You can use the IP to remotely access your Pi from any other computer using ssh (just like how you log into the ieng6 machines, more on this later)
+Use the mouse navigate to the WiFi Config Tool on your desktop. Double click on it to view the status of your network connection. Take note of the IP address in the GUI of that tool. Your IP address is of the form: 137.110.XX.XX. If you see such a number then you have internet connectivity. You can use the IP to remotely access your Pi from any other computer using ssh (just like how you log into the ieng6 machines, more on this later).
 
 ### LXTerminal
 LXTerminal is the command line interpreter. Double click on the icon to open it.
@@ -135,19 +135,19 @@ When you open LXTerminal notice the prompt says `pi@spispi-XX`. This means that 
 All the unix commands that you have learned so far can be used to navigate through the file system on your Pi. You can also use command line git just like how you would on the ieng6 machines!
 
 
-## Setup your programming environment
+## Set up your programming environment
 
-* Configure your git credentials on the Pi. In the home directory `/home/pi` type the following commands replacing my name and email credentials with yours.
-
-```
- git config --global user.name "Diba Mirza"
- git config --global user.email dimirza@eng.ucsd.edu
+* Configure your git credentials on the Pi. In the home directory `/home/pi` type the following commands replacing the name and email credentials with yours.
 
 ```
+ git config --global user.name "Bert Sesame"
+ git config --global user.email bsesame@eng.ucsd.edu
 
-* Clone your git repo over https into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop (not the Pi) and navigate to your repo on github which should be called `spis17-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The https address should be something like `https://github.com/ucsd-cse-spis-2017/spis17-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
+```
 
-Make sure you have the starter code which are the files `01_blinking_led.py` and `02_buttonLED.py` in your repo. If you did not import the starter code when creating the repo, you can copy it over from the directory /home/pi/lab08-startercode/  on the Pi
+* Clone your git repo **over https** into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop (not the Pi) and navigate to your repo on github which should be called `spis17-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The **https address** should be something like `https://github.com/ucsd-cse-spis-2017/spis17-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
+
+Make sure you have the starter code which are the files `01_blinking_led.py` and `02_buttonLED.py` in your repo. If you did not import the starter code when creating the repo, you can copy it over from the directory /home/pi/lab08-startercode/ on the Pi
 To do this type the following command replacing the second argument by the name of your repo
 
 ```
@@ -157,11 +157,11 @@ cp ~/lab08-startercode/*.py ~/spis17-lab08-Name-Name/
 
 On the Pi's terminal navigate to the your local git repo (~/spis17-lab08-Name-Name/ and NOT the lab08-startercode directory) and open up idle by typing the following command
 
-` sudo idle &`
+` sudo idle3 &`
 
 *A word on sudo*
 
-You might be wondering why we use the word sudo to open idle. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, “OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.”  This command to the operating system is “sudo”.  It stands for “super user do” or “substitute user do”.  In any case, it is a command to Raspbian to go ahead and run a command that you don’t really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We use the word `sudo` to open idle because we will be soon running programs in idle that use the Python GPIO library
+You might be wondering why we use the word sudo to open idle. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, “OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.”  This command to the operating system is “sudo”.  It stands for “super user do” or “substitute user do”.  In any case, it is a command to Raspbian to go ahead and run a command that you don’t really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We use the word `sudo` to open idle3 because we will be soon running programs in idle that use the Python GPIO library
 
 You are now ready to start working on your first exercise where you would create your own circuit and control it using the starter code given to you. 
 
@@ -173,7 +173,7 @@ In this exercise you will create a circuit consisting of an LED and a resistor c
 
 ## Understanding the code
 
-In idle open the file `01_blinking_led.py`. Let's begin by trying to understand the given code.
+In IDLE open the file `01_blinking_led.py`. Let's begin by trying to understand the given code.
 
 
 The first two statements import the modules needed for this exercise:
@@ -255,7 +255,7 @@ Buttons are switches that are used to connect or disconnect circuits. In the fig
 ![RPi-desktop](/images/labs/images/RPi/button.png){:height="100px"} 
 </p>
 
-In this exercise you will control an LED using a button. Your program should toggle the state of the LED everytime the button is pressed. So, if the LED is ON and the button is pressed, it should turn OFF. If the LED is OFF and the button is pressed, it should turn ON. 
+In this exercise you will control an LED using a button. Your program should toggle the state of the LED every time the button is pressed. So, if the LED is ON and the button is pressed, it should turn OFF. If the LED is OFF and the button is pressed, it should turn ON. 
 
 For the circuit you will need the following components:
 
@@ -287,9 +287,7 @@ Start with wiring the circuit as per the circuit diagram below:
 
 As shown above keep the LED circuit from the previous exercise. Just add another circuit that places a button between GPIO pin 15 and GND. Notice that you don't have to wire up the pull up resistor. There is a pull up resister available internally in the raspberry Pi. We just have to specify in software that we would like to use it.
 
-Now open the program `02_buttonLED.py` in idle. This program polls pin 15 (the pin connected to the button) and reports the status of that pin: 1 indicates true or high voltage, 0 indicates False or a low voltage. It doesn't do much more, at the moment. 
-
-Try to understand the code, and answer the following questions:
+Now open the program `02_buttonLED.py` in idle3. This program polls pin 15 (the pin connected to the button) and reports the status of that pin: 1 indicates true or high voltage, 0 indicates False or a low voltage. It doesn't do much more, at the moment. You will need to modify it so that the button presses control the led. However, before you do this, try to understand the starter code, and answer the following questions:
 
 * Which line of code configures pin 15 to be an input pin with a pull up resistor configuration? 
 * Which line of code gets the status of pin 15?
@@ -304,7 +302,7 @@ Now, it's time to write some code of your own:
 * Modify the program to print whether the button is pressed or not pessed. You program should print "button is pressed" OR "button is not pressed" depending on the state of the button.
 * Then add logic to toggle the state of the LED (from ON to OFF or OFF to ON) everytime the button is pressed and released.
 
-Make sure you commit this code to your github repo.
+You now have created a program that uses the buttons as way to control to LED. Make sure you commit this code to your github repo.
 
 
 # Driving a 7-segment display
@@ -324,9 +322,9 @@ Each of the LED segments has one of its connection pins out of the package. Thes
 
 * Draw a circuit that connects the 7 segment display to the RPi. Note that the center pins should be connected to the ground via a 220 ohm resistor (you only need to connect one of them this way, and you can leave the other not connected). The other pins can be directed connected to the GPIO pins on the Pi.
 * Once you have a drawing of your circuit get it verified by an instructor or mentor.
-* Then wire your circuit.
+* Only after you've completed the previous step, wire your circuit.
 * Create a file called `03_7seg.py` in your git repo and write a program that displays the numerals 0 - 9 in sequence then cycles back to 0. Each numeral should be displayed for 1 second.
-* Create a file called '04_7seg.py' in your git repo. Now write a program that combines your current circuit with the button circuit from the previous exercise: display the number of button presses so far on the 7 segment display. You can only count till 8 and have to reset back to zero once the button is pressed more than 9 times. Make sure you push all your code to the github repo.
+* Create a file called `04_7seg.py` in your git repo. Now write a program that combines your current circuit with the button circuit from the previous exercise: display the number of button presses so far on the 7 segment display. You can only count till 9 and have to reset back to zero once the button is pressed more than 9 times. Make sure you push all your code to the github repo.
 
 
 Congratulations on finishing lab 8!! You now have successfully built and controlled circuits via software. We will build on this knowledge as we venture deeper into hardware and robotics!
