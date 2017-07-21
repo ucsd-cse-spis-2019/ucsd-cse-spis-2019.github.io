@@ -37,7 +37,7 @@ all so-called "grades" are just a way to get feedback on how you are doing.  The
 # Overview 
 
 The basic structure of the lab is similar to [lab02](/lab02), except for the one-time steps from that lab, and the 
-fact that the repo you create will begin with some starter code (so that step will look a little different than before.)
+fact that the repo you create will begin with some starter code (similar to lab04)
 
 After creating the repo, you'll `git clone ... ` the repo, and then start editing Python code, trying to get
 test cases to pass.
@@ -57,85 +57,13 @@ Ok, let's get started!
 
 # Step 1: Create your repository.
 
-The way that you create the repo will be a little different, since we have "starter code" available for you.
-
-Instead of creating the repo from scratch, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
+For this lab, we have made starter code available for you. Following the same procedure we had for lab04, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
 importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
 
-The name of your repo should be `spis17-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2017.github.io/info/pairs/)
+The name of your repo should be `spis17-`<tt>{{page.num}}</tt>`-Name1-Name2`, as before. And invite your pair partner to be a collaborator with admin access. 
 
-# Step 2: Invite the "other" pair partner as a collaborator with admin access
 
-The pair partner that created the repo needs to invite the second pair partner to be a collaborator on the repo with Admin access.   That process is explained here: [Github: Adding Collaborators](http://ucsd-cse-spis-2017.github.io/topics/github_add_collaborators/)
-
-# Step 3: cd into the ~/github directory of your 
-
-You should have created a `~/github` directory during a previous lab.
-
-So use `cd ~/github` to cd into this directory.  If it works, skip down to the next step.
-
-## What if that directory doesn't exist yet?
-
-It is possible, if you are working in the 
-other pairs ACMS account, that they don't have one yet.
-
-The fastest way to create that directory and `cd` into is to simply type these commands.  
-
-```bash
-$ mkdir -p ~/github
-$ cd ~/github
-```
-
-Two notes on this:
-
-* Here the `$ ` is 
-    standing in for the bash shell prompt, which on ACMS machines 
-    is typically something
-    long such as `[spis17t3@ieng6-240]:~:179$ `.   Since
-    the exact content of the bash shell prompt differs from 
-    system to system, or even user to user, it is traditional
-    to just show it as `$` in documentation.  (By the way, you can 
-    customize your shell prompt, but that's a 
-    story for another time.)
-
-* The `-p` after `mkdir` stands for *path*.   
-    When you use `mkdir -p path` instead  of just `mkdir path` you get two
-    benefits:
-    1.  If the path you are creating, e.g. `~/github` already exists, 
-        `mkdir -p` doesn't complain
-    2.  You can create a long path all at once, 
-        e.g. `mkdir -p ~/foo/bar/fum/fiddle` will create that entire
-        chain of directories with one command.  Without the `-p`, 
-        you can only create one directory at a time,
-        so it would have to be `mkdir ~/foo`, then ``mkdir ~/foo/bar`, 
-        then `mkdir ~/foo/bar/fum`, etc.
-
-# Step 4: Use `git clone repos-clone-ssh-url` to clone your repo
-
-Use the command `git clone ` *repos-clone-ssh-url* to clone your new repo.
-
-If you've forgetting where to get the *repos-clone-ssh-url*, consult the page: [git: cloning your first repo]/topics/git_cloning_your_first_repo/)
-
-# Step 5: cd into your repo's directory, and open IDLE
-
-If you type `cd ~/github/spis17-`<tt>{{page.num}}</tt>` and then press
-the *tab* button, the bash shell should auto-complete the name of your
-repo (i.e. automatically finish the `-Name1-Name2` part.  You can then
-press enter and be in the correct directory.
-
-Use the commands `pwd`, `ls`, and `git status` to be sure you are in
-the right spot.
-
-Then, open IDLE (for Python 3) by typing `idle3 &` at the bash command prompt.  The
-extra `&` at the end allows you to get your command prompt back so
-that you can use it to type git commands.  You may see messages from
-time to time from IDLE&mdash;if so, just press enter to get a bash
-prompt back again.
-
-If you forget the `&`, no worries.  You can also just open a second
-terminal window for typing your `git` commands.
-
-# Step 6: Python coding.
+# Step 2: Python coding.
 
 In this step you will work, one file at a time, trying to replace the function stubs in each file with running code.
 
@@ -189,7 +117,7 @@ For this step, you should open the files `pyfuncs02.py`, and
 `test_pyfuncs02.py`.   
 
 (This pattern repeats itself for each of the remaining files
-`pyfuncs03.py`, `pyfuncs04.py`, and `pyfuncs05.py`;each one has a
+`pyfuncs03.py`, `pyfuncs04.py`, and `pyfuncs05.py`; each one has a
 test file starting with `test_` that goes along with it.  So we won't
 repeat those instructions for each step below.)
 
@@ -230,7 +158,7 @@ These functions are based on the idea of indexing into lists and tuples with
 notations such as `[0]`, `[1:]`, and so forth.
 
 You may want to review the sections of Chapter 5 of your book as well
-as the notes from lecture about this topic.   You are given two function
+as the notes from lecture about this topic. You are given two function
 definitions as examples, and then asked to replace the stubs for two more.
 
 # `pyfuncs05.py`: Recursion on lists and tuples
@@ -298,32 +226,12 @@ $
 
 # Step 8: Submit your solution on Gradescope
 
-Navigate to gradescope.com and login.
+Navigate to gradescope.com and login. Remember, your login id is your `____@ucsd.edu` email address, with the full `@ucsd.edu` at the end.
 
-Your login id is your `____@ucsd.edu` email address, with the full `@ucsd.edu` at the end.
+Also, as a reminder, you can easily generate the .zip file for your submssion using github.com. Navigate to the page for your repo, use the "Clone or download" button, and then the "Download zip" button.
 
-You may have received an email to retrieve your password, or you might need to ask that the password reset email
-be resent.
-
-Once you are logged in, locate the place to submit  {{page.num}}.  It should ask you to upload a .zip file with your submission.
-
-### Step 8b: Generate a .zip file for your submission
-
-As long as you have pushed all of your changes to github.com, generating a .zip file for your submission is easy.
-
-Just navigate to the page for your repo, use the "Clone or download" button, and then the "Download zip" button, as shown in the image below:
-
-![Download zip](github-download-zip-for-gradescope-50.png)
-
-IMPORTANT: If your browser give you the option to: either (a) open the downloaded .zip file or (b) save it to disk,
-you *need to select SAVE TO DISK*.   
-
-If you open the downloaded .zip file, it may change the structure to one that the Gradescope autograder is not expecting.
-
-The Gradescope autograder expects a .zip file with the name `spis16-`<tt>{{page.num}}</tt>`-Name-Name-master.zip` that contains the Python files that were in your starter code repo.    If you change the names of functions, or of the files,
+The Gradescope autograder expects a .zip file with the name `spis16-`<tt>{{page.num}}</tt>`-Name-Name-master.zip` that contains the Python files that were in your starter code repo. If you change the names of functions, or of the files,
 things may not work correctly.
-
-### Step 8c: Upload the zip, and wait for the results
 
 Upload the zip and wait for the results: hopefully a perfect 100%.
 
