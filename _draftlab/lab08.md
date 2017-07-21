@@ -5,6 +5,7 @@ ready: false
 desc: "Basics of electronics with Raspberry Pi"
 assigned: 2017-08-17 09:30:00.00-7
 due: 2017-08-19 15:45:00.00-7
+starter-code-url: https://github.com/ucsd-cse-spis-2017/lab08-startercode.git
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
@@ -16,7 +17,7 @@ In this lab you will be introduced to the basics of electronics using a a credit
 # Getting started
 
 ## Create a git repo and get the starter code
-Use your laptop to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab08-startercode.git 
+Use your laptop to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}).
 Alternatively, you may also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
 
 **Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group.**
