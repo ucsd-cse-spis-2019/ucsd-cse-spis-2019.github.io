@@ -18,7 +18,7 @@ want to look into it further.
 To check: Log into Gradescope.  If you haven't logged in yet, it is gradescope.com, and you use your ucsd email address
 as your login.  If you haven't logged in before, you may need to ask for a password reset.
 
-You should have access to the SPIS 2016 course in Gradescope.
+You should have access to the SPIS 2017 course in Gradescope.
 
 ## Did they submit as a team in Gradescope?
 
@@ -26,7 +26,7 @@ It is possible that only one pair partner submitted for the team.  There is a wa
 
 ## Does the repo they created have the correct name?
 
-The should have created a repo with the name listed in this spreadsheet (private to mentors only):
+They should have created a repo with the name listed in this spreadsheet (private to mentors only):
 
 Use the tabs at the bottom of the sheets to select "lab02 repos"
 
@@ -34,7 +34,7 @@ Use the tabs at the bottom of the sheets to select "lab02 repos"
 
 If the name is not correct, you won't be able to find it by clicking on the link.
 
-Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2016>, type "lab02" in the search box,
+Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2017>, type "lab02" in the search box,
 and look through to see if you can find the repo. 
 
 ## Does the repo contain the right files?
