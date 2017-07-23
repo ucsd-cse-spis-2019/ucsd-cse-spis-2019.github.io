@@ -1,6 +1,6 @@
 ---
 topic: "Github: Addding members to an organization"
-desc: "SPIS instructors, mentors and students must be added to ucsd-cse-spis-2016 github organization"
+desc: "SPIS instructors, mentors and students must be added to ucsd-cse-spis-20xx github organization"
 ---
 
 # Adding member to a github organization
