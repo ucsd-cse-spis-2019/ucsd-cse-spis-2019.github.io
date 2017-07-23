@@ -9,7 +9,7 @@ Once you've done that, here are some things to check for [lab00](/lab/lab00/).
 
 # Does the repo they created have the correct name?
 
-The should have created a repo with the name listed in this spreadsheet (private to mentors only):
+They should have created a repo with the name listed in this spreadsheet (private to mentors only):
 
 <https://docs.google.com/spreadsheets/d/1YPx3YtYVFCgCFAZU7wqZBAS7n2UUHhbc2J8odHyoQZk/edit?usp=sharing>
 
