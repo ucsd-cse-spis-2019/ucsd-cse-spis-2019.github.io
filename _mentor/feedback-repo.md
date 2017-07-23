@@ -21,7 +21,7 @@ The feedback repos should be
 * no .gitignore needed, and no license needed
 
 Apart from the naming convention, this diagram illustrates what it should
-look like:
+look like (These instructions are from SPIS 2016, but we'll follow the same procedure. Just replace `2016` with `2017`):
 
 ![create-feedback-repo.png](create-feedback-repo-50.png)
 
@@ -34,12 +34,12 @@ and make them available to the SPIS students you are giving feedback to.  Those 
 
 # Copy/Paste the Feedback outline into each of the repos
 
-This repo has two .md files in it that you can use as outlines.   
+Search for the "FEEDBACK-OUTLINE" repo on the SPIS github site. This repo has two .md files in it that you can use as outlines.   
 
 * Use the individual.md file as the outline for the README.md file for individual repos.
 * Use the pair.md file as the outline for the README.md file for pair repos.
 
-You can just use the github web page to copy/paste the content as needed. 
+You can just use the github web page to copy/paste the content as needed (in editing mode). 
 
 *NOTE*: As you paste this information in, customize the top part with the correct names of the students, *and their github ids*.  Having the github ids visible in the README.md will make the next step much easier.
 
