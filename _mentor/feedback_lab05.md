@@ -1,6 +1,6 @@
 ---
 topic: "Feedback lab05"
-desc: "Feedback on lab05: DIBA TODO"
+desc: "Feedback on lab05: TODO"
 ---
 
 feedback_lab05.md
