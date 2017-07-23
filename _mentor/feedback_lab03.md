@@ -5,7 +5,7 @@ desc: "Feedback on lab03: by Diba"
 
 feedback_lab03.md
 
-Go to the ucsd-cse-spis-2016 organization on github.com and navigate to each pair's repo for lab 3. The repo should be named spis16-lab03-Name-Name
+Go to the ucsd-cse-spis-2016 organization on github.com and navigate to each pair's repo for lab 3. The repo should be named spis17-lab03-Name-Name
 
 Open the lab03.py file on github and provide your feedback by just looking through the student code. Base your feedback on the following observations. You are not required to run the student code in IDLE although feel free to do so if you like
 
