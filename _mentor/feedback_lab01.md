@@ -4,7 +4,7 @@ desc: "Feedback on lab01"
 ---
 
 
-Please refer to the solutions for solving the empty room and the maze in the git hub repo https://github.com/ucsd-cse-spis-2016/lab01-solutions
+Please refer to the solutions for solving the empty room and the maze in the git hub repo https://github.com/ucsd-cse-spis-2017/lab01-solutions
 
 For both the empty room and maze copy the student's solution code into the [Picobot simulator](https://www.cs.hmc.edu/picobot/) and try to run it.
 
