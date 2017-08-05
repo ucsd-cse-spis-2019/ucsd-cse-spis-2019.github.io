@@ -3,8 +3,8 @@ layout: lab
 num: lab01
 ready: false
 desc: "Picobot"
-assigned: 2017-08-02 09:30:00.00-7
-due: 2017-08-03 17:00:00.00-7
+assigned: 2017-08-08 08:30:00.00-7
+due: 2017-08-10 17:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
