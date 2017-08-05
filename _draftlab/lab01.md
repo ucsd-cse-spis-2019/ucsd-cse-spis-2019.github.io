@@ -42,7 +42,7 @@ Again, your goals are to write a program to cover the empty room and the maze.  
 
 Here are some steps we suggest to help you get the most out of your Picobot experience.  Even if you've solved the two main goals, you should at least skim the section below to make sure your understanding is as deep as it can be.  Also there are some fun challenge problems in step 5.
 
-Read [Chapter 1.2 of the book CS for All](https://www.cs.hmc.edu/csforall/Introduction/Introduction.html#picobot).  You are welcome to read the first part of the book as well, but it won't help you that much with Picobot, at least not directly. 
+**Read [Chapter 1.2 of the book CS for All](https://www.cs.hmc.edu/csforall/Introduction/Introduction.html#picobot).**  You are welcome to read the first part of the book as well, but it won't help you that much with Picobot, at least not directly. 
 
 As you read, make sure you can answer the following questions.  Discuss the answers with your partner.  Ask a tutor if you're stuck or want to check your answers. Put your answers to the following questions in the `answers.txt` file in your git repo. Commit your file to submit your answers.
 
@@ -65,14 +65,14 @@ As you read, make sure you can answer the following questions.  Discuss the answ
 
 ## Program Picobot to solve the empty room
 
-When you are finished reading (or even before you finish), solve the empty room problem.  That is, write a Picobot program to make Picobot visit every cell in the empty room, no matter where it starts.  Here are some hints to get you started:
+Write a Picobot program to make Picobot visit every cell in the empty room, no matter where it starts.  Hints to get you started:
 As you saw if you answered question 4 above, a simple change gets you a good part of the way there, covering half the room.
-But you'll probably notice picobot gets stuck when it reaches the NW or SW corner, because it doesn't have a rule that applies to this surrounding.  You'll need to add one.  However, before you do, you should think carefully about your algorithm.  What is it that you want Picobot to do when it reaches one of those corners?  One option is to immediately head all the way east, and then start moving N, S and W again as it was doing before.  Another option is to begin a N, S, and E sweep back the other way.  Either way you are going to need at least one new state.  We encourage you to think carefully about what this state or states will mean before you start implementing rules. 
+But you'll probably notice picobot gets stuck when it reaches the NW or SW corner, because it doesn't have a rule that applies to this surrounding.  You'll need to add one.  However, before you do, you should think carefully about your algorithm.  What is it that you want Picobot to do when it reaches one of those corners?  One option is to immediately head to the east wall, and then start moving N, S and W as it was doing before.  Another option is to begin a N, S, and E sweep back the other way.  Either way you are going to need **at least one** new state.  We encourage you to think carefully about what this state or states will mean before you start implementing rules. 
 Once you are finished with this problem, save your code for the empty room solution in the file `emptyroom.txt` in your git repo, before moving on to the next problem. 
 
 ## Program Picobot to solve the maze
 
-Finally, once you have successfully covered the empty room, use the MAP "-->" button to find the maze, and implement the maze covering program using the "right hand rule" as described in the book in Section 1.2.8.  Again, we provide some hints to get you started:
+Finally, once you have successfully covered the empty room, use the MAP "-->" button to find the maze, and implement the maze covering program using the "right hand rule" as described in the **book in Section 1.2.8**.  Again, we provide some hints to get you started:
 
 Think carefully about your states.  You will likely want to use 4 states where each state represents a different direction that you are currently moving.  
 
