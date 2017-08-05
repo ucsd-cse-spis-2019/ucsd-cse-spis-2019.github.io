@@ -81,7 +81,7 @@ Before continuing, save your code for the maze solution in the file `maze.txt` i
 
 ## SUPER-challenge problems
 
-When you've mastered the maze and you're ready for more, try these SUPER-challenge problems:
+When you've mastered the maze and you're ready for more, try some optional SUPER-challenge problems. You don't need to submit these. For example, you could challenge yourself with the following problems:
 
 * for the empty room, see if you can use only 6 rules 
 
