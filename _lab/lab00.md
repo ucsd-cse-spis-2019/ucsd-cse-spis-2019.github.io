@@ -82,7 +82,7 @@ At the github.com page, if you don't already have a github.com account, using yo
 Or, if you already have a github.com account, log in to it, and add your ucsd.edu email address to the list of email addresses associated with the account.
 
 Then, fill out the following form to let us know what your github id is:
-[https://docs.google.com/a/eng.ucsd.edu/forms/d/1JxxXs5WXmEOf54YYDWlcvrwJLNZ6yicGORuHmT6jD2](https://docs.google.com/a/eng.ucsd.edu/forms/d/1JxxXs5WXmEOf54YYDWlcvrwJLNZ6yicGORuHmT6jD2)
+[https://docs.google.com/forms/d/e/1FAIpQLSe8gIVYXj8D5AIc6KYBD3KLr-vel7LIIU8LZxiEbcyB5Ra-Cg/viewform?usp=sf_link](https://docs.google.com/forms/d/e/1FAIpQLSe8gIVYXj8D5AIc6KYBD3KLr-vel7LIIU8LZxiEbcyB5Ra-Cg/viewform?usp=sf_link)
 
 ## Step 4:  Bringing up IDLE
 
