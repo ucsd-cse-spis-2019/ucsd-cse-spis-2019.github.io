@@ -245,7 +245,10 @@ SPIS will use a series of deadlines to help you stay on track with your work as 
 
 Those deadlines are listed on the [Calendar](/info/calendar/) which is linked to from the navigation links at the top of the SPIS FOCS website (<ucsd-cse-spis-2017.github.io>), as well as from various other places on the website.
 
-Before each of these deadlines, please submit whatever you have completed on that assignment, following the instructions given.  Sometimes this means submission via [Gradescope]({{site.gradescope}}).  Other times, it may mean simply having your latest changes pushed to the appropriate repo on [github.com](https://github.com).
+Before each of these deadlines, please submit whatever you have completed on that assignment following the instructions given.
+# Sometimes this means submission via [Gradescope]({{site.gradescope}}).  Other times, it 
+This may mean simply having your latest changes pushed to the appropriate repo on [github.com](https://github.com), or this may mean
+following an alternative set of instructions to submit your assignment.
 
 You can also submit earlier if you like. 
 
