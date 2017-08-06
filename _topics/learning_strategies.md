@@ -23,6 +23,6 @@ eight strategies that have been proven to be effective.
 6.  Learning by *self-explaining*: explaining the concepts to
     yourself out loud just have you've read or heard them.
 7.  Learning by *teaching*: explaining the concepts to another
-    student just have you've read or heard them.
+    student just as you've read or heard them.
 8.  Learning by *enacting*: acting out the ideas you've just read
     or heard with some kind of movement, skit, or dialogue.
