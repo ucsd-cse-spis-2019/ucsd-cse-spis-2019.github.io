@@ -15,7 +15,7 @@ eight strategies that have been proven to be effective.
 2.  Learning by *mapping*: drawing a "concept map" (a particular
     kind of diagram) showing the relationships between/among key concepts
     from what you've just read or heard.
-3.  Learning by *drawing*: drawing a picture (any picture) that helps you organize the information you've just read or heard
+3.  Learning by *drawing*: drawing a picture (any picture) that helps you organize the information you've just read or heard.
 4.  Learning by *imagining*: similar to learning by drawing, but here you just "imagine" the picture in your mind.  (may be used when you don't have drawing materials handy.)
 5.  Learning by *self-testing*: taking a quiz about the material
     you've just read or heard; e ither a quiz devised by the instructor,
@@ -25,4 +25,4 @@ eight strategies that have been proven to be effective.
 7.  Learning by *teaching*: explaining the concepts to another
     student just have you've read or heard them.
 8.  Learning by *enacting*: acting out the ideas you've just read
-    or heard with some kind of movement, skit, or dialogue
+    or heard with some kind of movement, skit, or dialogue.
