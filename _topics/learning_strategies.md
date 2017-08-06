@@ -18,7 +18,7 @@ eight strategies that have been proven to be effective.
 3.  Learning by *drawing*: drawing a picture (any picture) that helps you organize the information you've just read or heard.
 4.  Learning by *imagining*: similar to learning by drawing, but here you just "imagine" the picture in your mind.  (may be used when you don't have drawing materials handy.)
 5.  Learning by *self-testing*: taking a quiz about the material
-    you've just read or heard; either a quiz devised by the instructor,
+    you've just read or heard: either a quiz devised by the instructor,
     of your own making, or from a fellow student.
 6.  Learning by *self-explaining*: explaining the concepts to
     yourself out loud just have you've read or heard them.
