@@ -73,7 +73,7 @@ Unix shell commmands:
 | `cd`           | Change directory to home directory (1st option)                 |
 | `cd ~`         | Change directory to home directory (2nd option)                 |
 | `cd foo`       | Change directory to `foo` inside current directory              |
-| `cd `..        | Change directory to parent of current directory (go up)         |
+| `cd ..`        | Change directory to parent of current directory (go up)         |
 | `cd ~/fum`     | Change directory to `fum` inside home directory (`~`)           |
 
 You should also learn the following concepts:
