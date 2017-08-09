@@ -87,7 +87,7 @@ When both partners have a `~/github` directory and are comfortable with shell ba
 
 ## Step 2: Create your shared lab02 repo 
 
-There are three steps involved here.  First, I'll give you an overview, and then the details:
+There are three steps involved here.  First, we'll give you an overview, and then the details:
 
 1. One of the two pair partners should log into github.com to create an empty private repo *in a particular way*, namely,    pre-populated only with a README.md, and a .gitignore for Python.  
 2. The first pair partner will then invite the second to be a collaborator with <b>Admin</b> access.   
@@ -96,7 +96,7 @@ There are three steps involved here.  First, I'll give you an overview, and then
 
 Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2017 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
 
-For purposes of the rest of these insructions, though, I'll refer to "first" as the partner
+For purposes of the rest of these instructions, though, we'll refer to "first" as the partner
 under whose github account the repo is initially created, and "second" as the partner that gets invited to collaborate.
 
 And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2017 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
@@ -391,7 +391,7 @@ fToC.
 * Be sure they are indented inside the `class`, just like the ones for `ftoc`.
 * Also, be sure that each one has a different name from all of the others.
 
-I'll give you the first one, but the rest you must come up with on your own:
+We'll give you the first one, but the rest you must come up with on your own:
 
 ```
    def test_ctof_1(self):
