@@ -9,4 +9,4 @@ layout: default
 
 Please use the same repo you use for your other [homework](/hwk/h01/). In a file named aps1.md, write a solution to [these problems](/hwk/aps1/aps1problems.pdf).
 
-You may find it helpful to refer to the [slides from class](/hwk/aps1/apsNotesAug9.pptx).
+You may find it helpful to refer to the [slides from class](/hwk/aps1/aps1NotesAug9.pptx).
