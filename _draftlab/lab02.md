@@ -3,20 +3,15 @@ layout: lab
 num: lab02
 ready: false
 desc: "Next steps with github, Python functions, testing"
-assigned: 2017-08-09 13:15:00.00-7
-due: 2017-08-10 17:00:00.00-7
+assigned: 2017-08-11 09:30:00.00-7
+due: 2017-08-15 17:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
 # Overview
 
-The first step  of this lab is something you'll take turns with your pair partner doing individually.  Each of you will 
-*set up a github repo in which you'll submit your responses to APS problems* (we provide detailed instructions below).
-
-You can also skip over this step and do it later, if you want to get started with the part you do as a pair.  Please do the APS step, though, sometime today or tomorrow, since you'll need this APS repo to work on your [APS homework aps01](/hwk/aps01/)
-
-Then, as a pair, you'll work through some steps to practice a few skills involving Python, Unix, and github.   
+The main purpose of this lab is to practice, as  pair, a few skills involving Python, Unix, and github.   
 
 
 # More specific Learning Objectives
@@ -25,7 +20,7 @@ The most important thing we want you to get out of this lab is the ability to
 * create a solution to a Python problem for which there are test cases
 * iterate until the test cases pass
 * keep every step of that development process in a github repo
-* then submit that solution for "automatic grading" using a system called Gradescope.
+
 
 Here's a more complete list of our learning objectives:
 
@@ -37,7 +32,7 @@ Here's a more complete list of our learning objectives:
 * How to store a Python file in that repo
 * The basic git workflow of `git add...`, `git commit...`, `git push...`
 * Testing of Python functions
-* Submitting a Python function for autograding using Gradescope
+
 
 # Step-by-Step through {{page.num}}
 
@@ -498,39 +493,6 @@ We can go into why that's the case some other time (what is this "event" that is
 
 For now, though it may be better to just avoid the `!` symbol in your commit messages unless you remember the backslash.
 
-### All tests passing? Then you are almost done!
+### All tests passing? Then you are done!
 
-Congratulations!  You are *almost* finished.   The last step involves submitting your code for "automatic grading".
-This way, you can be (reasonably) sure that you did the assignment correctly.
-
-## Step 8:  Submitting a Python function for autograding using Gradescope
-
-### Step 8a: Login to gradescope and find lab02
-
-The first step is to open up Gradescope, and find lab02.
-
-Navigate to gradescope.com and login.
-
-Your login id is your `____@ucsd.edu` email address, with the full `@ucsd.edu` at the end.
-
-You may have received an email to retrieve your password, or you might need to ask that the password reset email
-be resent.
-
-Once you are logged in, locate the place to submit lab02.  It should ask you to upload a .zip file with your submission.
-
-### Step 8b: Generate a .zip file for your submission
-
-As long as you have pushed all of your changes to github.com, generating a .zip file for your submission is easy.
-
-Just navigate to the page for your repo, use the "Clone or download" button, and then the "Download zip" button, as shown in the image below:
-
-![Download zip](github-download-zip-for-gradescope-50.png)
-
-### Step 8c: Upload the zip, and wait for the results
-
-Upload the zip and wait for the results: hopefully a perfect 100%.
-
-And that's it for lab02!
-
-
-If you have difficulties with the Gradescope submission, ask a mentor or instructor for assistance.
+Congratulations!
