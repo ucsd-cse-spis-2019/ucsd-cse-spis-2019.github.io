@@ -5,7 +5,7 @@ desc: "Reflect on Awesome moments, meet the mentors, appreciations"
 week: "1"
 ready: true
 link_topic_desc_only: true
-ready: false
+ready: true
 ---
 
 Here are the slides from our week 1 closing circle:
