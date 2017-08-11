@@ -7,7 +7,7 @@ assigned: 2017-08-11 09:30:00.00-7
 due: 2017-08-15 17:00:00.00-7
 ---
 
-If you find typos or problems with the lab instructions, please report them on Piazza
+If you find typos or problems with the lab instructions, please report them on Piazza. Please note that unit test will be covered on Monday 8/14 so you can leave the unit test part to Monday. But you can work on other part of this lab at this time.
 
 # Overview
 
