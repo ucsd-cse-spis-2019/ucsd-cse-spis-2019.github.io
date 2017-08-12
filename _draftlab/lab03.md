@@ -40,7 +40,7 @@ Then, you'll write two more functions:
 -   drawInitialsPB(theTurtle, letterWidth, letterHeight, letterSpacing)
 -   drawInitialsCJ(theTurtle, letterWidth, letterHeight, letterSpacing)
 
-In the event that you are paired with someone that shares an initial with you (e.g. if Riley Jones and Chris Jimenez are partners, they share the letter J), you might be able to write fewer functions. Similarly, if Chris Jimenez and Charlie Jones are together, you might be able to share the drawInitialsCJ function. However, we'll try to avoid that, because we want you to get lots of practice. In that case, please use your middle initials to at least get to three (ideally four) unique letters (and mention in your code comments what your middle name is).
+In the event that you are paired with someone that shares one or more initials with you (e.g. if Riley Jones and Chris Jimenez are partners, they share the letter J), you might have to write fewer functions. However, we'll avoid that, because we want you to get lots of practice. If you share one or more initials, please use your middle initials to get to four unique letters (and mention in your code comments what your middle name is in that case). So basically, combine the first, last and possibly middle initials (if needed), of yourself and your pair partner, to arrive at four unique letters.
 
 You'll also write a function called go() that draws each members of the pair initials three times each, at different sizes.
 
@@ -125,9 +125,8 @@ Move the turtle forward by the specified distance, in the direction the turtle i
 
 ****
 
-If you and your partner get stuck, look back at the examples we worked through together in class and try to adapt the strategies.  If you're still stuck, ask for help.
 
-Don't forget to save your work often and to add helpful comments to your code.
+Don't forget to save your work often and to add helpful comments to your code. And, of course, if you get stuck, ask for help.
 
 Next, you'll use a turtle to draw your initials.
 
