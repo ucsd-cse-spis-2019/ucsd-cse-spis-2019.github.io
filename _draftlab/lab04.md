@@ -10,13 +10,6 @@ starter-code-url: https://github.com/ucsd-cse-spis-2017/lab04-startercode.git
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
-# Please visit Piazza for a one question survey
-
-At the top of every page on the website there is a link to Piazza. Please visit that link, and log into Piazza. There is a  one question survey about laptops. Please answer the question, then log out, and have your peer partner login and take the survey.
-
-It will take less than five minutes, and it will help us plan for Friday's SPIS activities.
-
-If you already filled out the survey, thanks!
 
 # Learning Goals
 
