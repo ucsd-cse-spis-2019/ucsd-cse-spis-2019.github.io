@@ -3,8 +3,8 @@ layout: lab
 num: lab03
 ready: false
 desc: "More functions and drawing with Turtle Graphics"
-assigned: 2017-08-09 13:15:00.00-7
-due: 2017-08-10 15:00:00.00-7
+assigned: 2017-08-14 09:00:00.00-7
+due: 2017-08-16 15:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
