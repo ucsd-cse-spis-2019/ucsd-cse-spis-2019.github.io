@@ -1,9 +1,9 @@
 ---
 layout: lab
 num: lab03
-ready: false
+ready: true
 desc: "More functions and drawing with Turtle Graphics"
-assigned: 2017-08-14 09:00:00.00-7
+assigned: 2017-08-14 12:00:00.00-7
 due: 2017-08-16 15:00:00.00-7
 ---
 
