@@ -115,7 +115,7 @@ under it.    The class ends with the blank line just before the `if` test,
 which is *not* indented.   The fact that the `if` test is not indented
 indicates that it is the first line that is NOT part of the class.
 
-Now we turn to the first function definition that is part of the class:
+Now we turn to the first function definition that is part of the class. Note that for every function that you write for testing purposes, the function name should start with "test_":
 
 ```
    def test_ftoc_1(self):
