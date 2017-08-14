@@ -219,7 +219,7 @@ Again, in this strategy, all of the recursion occurs in snowflakeSide. Remember 
 if levels is zero, then snowflakeSide should produce a single line segment (this will be the base case of the recursion);
 otherwise, snowflakeSide needs to call itself four times; and, 
 keep in mind that you're only creating one of the three sides of the snowflake!
-Here are images of four steps (after three levels of recursions) of the overall Koch curve's progression:
+Here are images of four steps (after three levels of recursions) of the overall Koch curve's progression. The first one is run with levels = 0 (for snowflake() and snowflakeSide()), with the subsequent ones representing the Koch snowflake with levels = 1, 2 and 3 respectively.
 
 <p align="center">
 ![](/images/labs/images/360px-KochFlake.gif)
