@@ -4,7 +4,7 @@ num: lab04
 ready: false
 desc: "Recursion and fractals with Turtle"
 assigned: 2017-08-15 09:00:00.00-7
-due: 2017-08-18 15:15:00.00-7
+due: 2017-08-17 21:00:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2017/lab04-startercode.git
 ---
 
@@ -14,7 +14,7 @@ If you find typos or problems with the lab instructions, please report them on P
 # Learning Goals
 
 In this lab you will practice some of the key concepts from Chapter 4 of Guttag.
-This includes writing parameterized functions, developing test code and solving problems using recursion. You'll do some warm up recursive programs, predict and test what they do, and then top it all off by creating some very cool fractal art. We will build on this in the subsequent lab. 
+This includes writing parameterized functions, developing test code and solving problems using recursion. You'll do some warm up recursive programs, predict and test what they do, and then top it all off by creating some very cool fractal art. 
 
 Your learning goals are:
 
@@ -29,7 +29,7 @@ Your learning goals are:
 
 # Work Flow
 
-* Step 1: Read Chapter 4 of Guttag, Sections 4.1 -4.5
+* Step 1: Read Chapter 4 of Guttag, Sections 4.1 - 4.5
 
 * Step 2: Create a new private github repo under the "ucsd-cse-spis-2017" organization. However, the instructions are a little different this time, since we will be providing you with some starter code. 
 
