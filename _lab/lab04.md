@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab04
-ready: false
+ready: true
 desc: "Recursion and fractals with Turtle"
 assigned: 2017-08-15 09:00:00.00-7
 due: 2017-08-17 21:00:00.00-7
