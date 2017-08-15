@@ -3,15 +3,12 @@ layout: lab
 num: lab05
 ready: false
 desc: "Image Manipulation"
-assigned: 2017-08-11 09:30:00.00-7
-due: 2017-08-15 17:00:00.00-7
+assigned: 2017-08-16 09:30:00.00-7
+due: 2017-08-21 15:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
-Before you begin the lab please check your feedback repo on git.
-You should have received an email asking you to accept an invite to the repo.
-If you haven't received the email, please contact your mentor.
 
 # Learning Goals
 
@@ -19,7 +16,7 @@ In this lab you will apply your knowledge from Chapters 2-5 to manipulate and tr
 
 Your learning goals are:
 
-* Use a new data type: the tuple!
+* Use a new data type: the tuple
 * Import and export media (picture) files in PIL
 * Use your programming knowledge so far to manipulate pixels in picture files
 * Invent and implement algorithms to transform pictures 
@@ -28,19 +25,19 @@ Your learning goals are:
 
 * Step 1: Review Chapters 4 and Chapter 5 (Sections 5.1-5.5) of Guttag
 
-* Step 2: Create a private github repo called spis16-lab05-Name1-Name2 (following the naming convention in past labs). 
+* Step 2: Create a private github repo called spis17-lab05-Name1-Name2 (following the naming convention in past labs). 
 
 * Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy and your first steps.
 
 * Step 4: Unit test your code as much as possible (In most cases you should be able to inspect the outcome of your code visually but we encourage you to use the unittest framework as much as possible)
 
-* Step 5: Track your progress by committing your code frequently to git. Submit your code bu pushing it to git. You may do this multiple times.
+* Step 5: Track your progress by committing your code frequently to git. Submit your code by pushing it to git. You may do this multiple times.
 
 
 
 ## Introduction to the Python Imaging Library (PIL)
 
-Our computers encode all data (pictures, games, files) as sequences of 0s and 1s.  They are just a digital kingdom of bits! Some of the text below is review, but be sure to read it over (quickly) anyway.
+Our computers encode all data (pictures, games, files) as sequences of 0s and 1s.  They are just a digital kingdom of bits. Some of the text below is review, but be sure to read it over (quickly) anyway.
 
 In your computer, images (pictures) are files stored on your hard disk. A digital image is logically a rectangular grid of pixels, which appear as squares when enlarged; each pixel then typically consists of 1 byte (8 bits) for a Black-and-White image or 3 bytes (24 bits) for a color image, where one byte (a value between 0 and 255) each is for Red (R), Green (G), and Blue (B). R, G, B are three ingredients for all visible colors; for example: blue is 0 redness + 0 greenness + 255 blueness, white is 255 redness + 255 greenness + 255 blueness, and brown is 165 redness + 42 greenness + 42 blueness, etc.. The following figure by Wikipedia shows a color image with enlarged pixels.
 
@@ -52,7 +49,7 @@ In this lab we'll work with the Python Imaging Library (PIL) which is a graphics
 
 ## Getting familiar with PIL
 
-Download the  "stone bear" picture below and save it in your github repo working directory. You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "stoneteddybear.jpg".
+Create a private repo called `spis17-lab05-Name1-Name2`, as you have done in lab02. Download the  "stone bear" picture below and save it in your github repo working directory. You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "stoneteddybear.jpg".
 
 <p align="center">
 
@@ -129,7 +126,7 @@ After running the command above, show the bear image again and see if you can fi
 
 ## Hiding the stone bear's face
 
-Now we are going to start working in a file so that we can save our work.  If you haven't done so already, create a new Python file called "imaging.py", and place the appropriate header comment at the top that descibes the content of the file.  Don't forget your header comment!  
+Now we are going to start working in a file so that we can save our work.  If you haven't done so already, create a new Python file called "imaging.py" in your repo, and place the appropriate header comment at the top that descibes the content of the file.  Don't forget your header comment. 
 
 Now, after the header comment, tell Python that you want to use the Image module from the PIL library, as follows:
 
@@ -141,7 +138,7 @@ The stone bear is shy, and he wants you to cover his face using a dark rectangul
 
 def blockHead( im, startx, starty, endx, endy ):
 
-im is the image to modify, startx and starty represent the x and y coordinates of the upper left corner of the box to paint black and endx and endy represent the x and y coordinates of the lower right corner of the image to paint black.  Your function will not return anything.  For reasons we will discuss in the next week or two, the image will be modified even after the function returns!
+im is the image to modify, startx and starty represent the x and y coordinates of the upper left corner of the box to paint black and endx and endy represent the x and y coordinates of the lower right corner of the image to paint black.  Your function will not return anything.  For reasons we will discuss in lecture, the image will be modified even after the function returns!
 
 You might notice that blockHead is in fact not specific to blocking the head in the stone bear image, but rather will block any rectangle in any image, according to the parameters passed in. For the rest of this lab, we'll ask you to use nested loops and the putpixel method, so feel free to try this here.
 Don't forget you can access the [documentation for the Image module](http://pillow.readthedocs.io/en/3.1.x/reference/Image.html)
