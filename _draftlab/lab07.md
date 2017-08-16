@@ -2,7 +2,7 @@
 layout: lab
 num: lab07
 ready: false
-desc: "lab06 with intro to webapps by Phill"
+desc: "lab06 with intro to webapps"
 assigned: 2017-08-15 08:45:00.00-7
 due: 2017-08-22 15:45:00.00-7
 ---
