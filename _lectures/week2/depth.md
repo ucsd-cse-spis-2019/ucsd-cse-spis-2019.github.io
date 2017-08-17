@@ -5,6 +5,7 @@ desc: "Review: PIL, Recursion, Loops"
 week: "2"
 indent: true
 link_topic_desc_only: true
+ready: true
 ---
 
 
