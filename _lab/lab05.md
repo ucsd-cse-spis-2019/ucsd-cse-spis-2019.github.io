@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab05
-ready: false
+ready: true
 desc: "Image Manipulation"
 assigned: 2017-08-17 09:00:00.00-7
 due: 2017-08-21 21:00:00.00-7
