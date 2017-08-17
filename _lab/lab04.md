@@ -8,7 +8,7 @@ due: 2017-08-18 16:00:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2017/lab04-startercode.git
 ---
 
-If you find typos or problems with the lab instructions, please report them on Piazza
+If you find typos or problems with the lab instructions, please report them on Piazza.
 
 
 # Learning Goals
@@ -271,7 +271,7 @@ Continue adding new files and functions that draw interesting fractals to that r
 
 We also encourage you to continue creating interesting mashup art from the routines that you and your peers have implemented in your public drawing repo.
 
-Great job working through lab 4! Feel free to move on to the next lab.
+Great job working through lab 4. Feel free to move on to the next lab.
 
 
 
