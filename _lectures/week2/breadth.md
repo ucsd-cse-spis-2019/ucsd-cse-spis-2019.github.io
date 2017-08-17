@@ -5,6 +5,7 @@ desc: "Topic: PyGame (a package for game programming in Python)"
 week: "2"
 indent: true
 link_topic_desc_only: true
+ready: true
 ---
 
 # Huffman Encoding (Paul)
