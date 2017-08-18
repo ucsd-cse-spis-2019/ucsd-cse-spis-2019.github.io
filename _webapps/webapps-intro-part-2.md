@@ -440,6 +440,10 @@ All of the code in this example can be found in the following repo:
 
 * [https://github.com/ucsd-cse-spis-2016/spis16-webapp-example](https://github.com/ucsd-cse-spis-2016/spis16-webapp-example)
 
+# Be sure to test your web app
+
+Make sure you run and spend time on your web app to ensure that everything is working how you want it to! For example, make sure that values are being converted correctly. You want to make sure that after you click `submit`, it directs you to a different webpage, showing you the information you want it to. As you recall from previous labs, testing is an important concept we need to practice and know.
+
 
 # The next lesson
 
