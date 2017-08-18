@@ -252,7 +252,7 @@ Here's `ctof.html`:
 {% raw %}{%  endblock %}{% endraw %}
 ```
 
-Notice that the action of the form is to redirect you to a different webpage. It makes that after we submit a value, we want to go to the page where we can get the result! More on this later. 
+Notice that the action of the form is to redirect you to a different webpage. After we submit a value, we want to go to the page where we can get the result! We'll create this page and more info will be later in this lab. 
 
 Here's `ftoc.html`:
 
