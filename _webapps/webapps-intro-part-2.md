@@ -202,7 +202,7 @@ There are two parts of this file that are, strictly speaking, not HTML code. Tho
 These are placeholders where some other HTML code will be inserted, and the syntax is defined by a system called
 Jinja2, which is part of the Flask framework.    That's all you really need to know about Jinja2 for now, but if you are curious to learn more, there is documentation here: [http://jinja.pocoo.org/](http://jinja.pocoo.org/).
 
-The `title` and `content` blocks for each of our pages are going to be defined in additional files in our `templates` directory. 
+The `title` and `content` blocks for each of our pages are going to be defined in additional files in our `templates` directory. These files will be different webpages, each with their own `title` and `content` blocks.
 
 ## Creating a template for the home page
 
@@ -229,7 +229,7 @@ The template for the home page will be called `home.html` and should be in the `
 ## Creating templates for pages with user input
 
 Then you'll have three more templates for the pages where you ask the user for the input for each of these
-calculations.   Here are the first two, which you should call `ctof.html` and `ftoc.html`.  Each of these should be 
+calculations. We will be using the `<form>` and `<input>` tags to create the fields. Take note of the attributes we add. Here are the first two, which you should call `ctof.html` and `ftoc.html`.  Each of these should be 
 stored under your templates directory.
 
 Here's `ctof.html`:
@@ -244,13 +244,15 @@ Here's `ctof.html`:
 <p>Enter a temperature and click "submit" to convert to Fahrenheit</p>
 
 <form action="/ctof_result">
-  Fahrenheit Temp:<br>
+  Celsius Temp:<br>
   <input type="text" name="cTemp" value="20.0">
   <input type="submit" value="Submit">
 </form>
 
 {% raw %}{%  endblock %}{% endraw %}
 ```
+
+Notice that the action of the form is to redirect you to a different webpage. It makes that after we submit a value, we want to go to the page where we can get the result! More on this later. 
 
 Here's `ftoc.html`:
 
@@ -365,6 +367,10 @@ def renderMain():
 ```
 
 Here's a complete example of the code that we'll want to put into our hello.py file.
+
+### There are a LOT of changes
+
+Go slowly with your partner to ensure that your `hello.py` matches the complete example. Take note of all the changes that are made and follow the comments. Explain to your partner what is going in the `render_ftoc_result()` to ensure both of you understand what the function does. Ask a mentor if you're unsure.
 
 Note the the additional `import` statements that are needed:
 
