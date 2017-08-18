@@ -2,7 +2,7 @@
 layout: lab
 num: lab07
 ready: false
-desc: "lab06 with intro to webapps"
+desc: "Intro to Webapps"
 assigned: 2017-08-15 08:45:00.00-7
 due: 2017-08-22 15:45:00.00-7
 ---
@@ -15,7 +15,7 @@ We'll be add parts to it as we progress.
 
 # Part 1: Getting Started
 
-Please create a private repo called `spis16-lab07-part1-Name-Name` using [Method 2](/topics/github_create_repo/#method2)
+Please create a private repo called `spis16-lab07-part1-Name-Name` using [Method 2](/topics/github_create_repo)
 
 Then clone that repo into your `~/github` directory, cd into it, and then try all the steps in this tutorial:
 
@@ -24,7 +24,7 @@ Then clone that repo into your `~/github` directory, cd into it, and then try al
 
 # Part 2: Working with Calculations and Templates
 
-When you are done with that please create a private repo called `spis16-lab07-part2-Name-Name` using [Method 2](/topics/github_create_repo/#method2)
+When you are done with that please create a private repo called `spis16-lab07-part2-Name-Name` using [Method 2](/topics/github_create_repo)
 
 Then clone that repo into your `~/github` directory, cd into it, and then try all the steps in this tutorial:
 
