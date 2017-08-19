@@ -54,7 +54,7 @@ Finally, we have to code to get access to Bootstrap and being able to use it. Wi
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 ```
 
 Your `layout.html` file should now look a little something like this: 
@@ -73,7 +73,7 @@ Your `layout.html` file should now look a little something like this:
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
      
      <link rel="stylesheet" href="{% raw %}{{{% endraw %} url_for('static', filename='style.css') {% raw %}}}{% endraw %}">
      <title> {% raw %}{% block title %}{% endblock %}{% endraw %} - My Webpage</title>
@@ -106,4 +106,50 @@ Your final `<body>` tags should look a little something like this:
   </body>
 ```
 
+Congratulations! You finished `layout.html`! Let's move on to creating the navigation bar itself. 
+
 ## Creating the acutal navbar
+
+Inside your templates directory, create a file called `navbar.html`. Remember, this is the file that we had included in the `layout.html`.
+
+Okay. We're going to throw a lot of code at you all at once. But don't worry, we will explain it step-by-step. We highly suggest you read the explanation, think about it, and discuss it with your partner before you type or copy-and-paste it in. Your `navbar.html` should look something like this:
+
+```html
+<!-- BLOCK 1 -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  
+    <!-- BLOCK 2 --> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+      <!-- BLOCK 3 -->
+      <!-- Replace the '#' with links to each of your converters -->
+      <ul class="nav navbar-nav">
+        <li><a href="#">F to C</a></li>
+        <li><a href="#">C to F</a></li>
+        <li><a href="#">Mi to Km</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+```
+
+### Block 1
+
+Taking advantage of Bootstrap's classes, we establish our opening tags for our navbar. `<nav class="navbar navbar-default>` uses Bootstrap's standard, default navbar. `<div>` tags help us organize our web page elements. The `class=container-fluid` attribute is using Bootstrap to continuously resize our content as we change the size of our browser window.
+
+### Block 2
+
+### Block 3
