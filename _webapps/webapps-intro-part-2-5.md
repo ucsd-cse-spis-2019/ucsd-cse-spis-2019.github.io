@@ -7,7 +7,7 @@ In the part 3 of your lab, we created a simple web app that had 3 functions, all
 
 You might have noticed that after you submitted a value to convert, you couldn't get to the home page or reach any of the other forms to convert different things. 
 
-## Enter the Navigation Bar
+# Enter the Navigation Bar
 
 Most websites and web applications are designed so that you can easily get around. An easy to implement good navigation is with a navigation bar. Nav bars allow users to have links that are persistent on the web page so they can quickly get to places on your web app. What's the point of a great app if you can't get to the good stuff? 
 
