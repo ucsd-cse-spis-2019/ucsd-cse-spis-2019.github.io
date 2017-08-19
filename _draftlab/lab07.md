@@ -30,6 +30,11 @@ Then clone that repo into your `~/github` directory, cd into it, and then try al
 
 [Webapps Part 2, Calculations and Templates](/webapps/webapps-intro-part-2/)
 
+# Part 2.5: Creating a Navigation Bar
+
+Using the repo from Part 2, follow the steps in this tutorial:
+
+[Webapps Part 2.5,](/webapps/webapps-intro-part-2/)
 
 # Part 3: Getting Started with Heroku
 
