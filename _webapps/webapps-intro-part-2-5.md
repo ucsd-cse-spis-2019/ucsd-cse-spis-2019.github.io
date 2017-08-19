@@ -21,7 +21,7 @@ We're going to implement this using a library called Bootstrap. Bootstrap is a f
 
 Remember all those templates from Part 2? We're going to use them again.
 
-We want our navigation bar to be present no matter what webpage we are on so that we can always get to where we need to be. Every single one of our webpages files extend `layout.html` so we want to first add some code in there. We have to get it set up so that our web app knows to go to Bootstrap for information. The lines of code are long with a lot of links, but don't feel overwhelmed! Take your time if you're unsure. Let's start with our `<head>` tags, which should look like this: 
+We want our navigation bar to be present no matter what webpage we are on so that we can always get to where we need to be. Every single one of our webpages files extend `layout.html` so we want to first add some code in there. We have to get it set up so that our web app knows to go to Bootstrap for information. The new lines of code are long with a lot of links, but don't feel overwhelmed! Take your time if you're unsure. Let's start with our `<head>` tags, which should look like this: 
 
 ```html
 <!doctype html>
