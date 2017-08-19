@@ -112,7 +112,7 @@ Congratulations! You finished `layout.html`! Let's move on to creating the navig
 
 Inside your templates directory, create a file called `navbar.html`. Remember, this is the file that we had included in the `layout.html`.
 
-Okay. We're going to throw a lot of code at you all at once. But don't worry, we will explain it step-by-step. We highly suggest you read the explanation, think about it, and discuss it with your partner before you type or copy-and-paste it in. Your `navbar.html` should look something like this:
+Okay. We're going to throw a lot of code at you all at once. But don't worry, we will explain it step-by-step. Look for the html comments that signify different blocks of code. We highly suggest you read the explanation, think about it, and discuss it with your partner before you type or copy-and-paste it in. Your `navbar.html` should look something like this:
 
 ```html
 <!-- BLOCK 1 -->
@@ -136,7 +136,7 @@ Okay. We're going to throw a lot of code at you all at once. But don't worry, we
       <!-- BLOCK 3 -->
       <!-- Replace the '#' with links to each of your converters -->
       <ul class="nav navbar-nav">
-        <li><a href="#">F to C</a></li>
+        <li><a href="/ftoc">F to C</a></li>
         <li><a href="#">C to F</a></li>
         <li><a href="#">Mi to Km</a></li>
       </ul>
@@ -152,4 +152,27 @@ Taking advantage of Bootstrap's classes, we establish our opening tags for our n
 
 ### Block 2
 
+This block of code does a lot of cool things whenever the browser window gets small. It sets it up so that your navbar items will disappear once the window has gotten too small. In its place will be a box with 3 lines that you can click on the show a dropdown meu of the items that disappeared. The home page is not part of the disappearing items because we have set it as the brand. We want this to be persistent because it is useful to always have a quick way to get back to the homepage. The last line before the next block creates a new `<div>`, marking the start of the items we want to collapse.
+
 ### Block 3
+
+Block 3 is where you include the actual links to the pages you created in the previous part! Using an unordered list tag (`<ul>`), we create a list item (`<li>`) for each of the pages we want to include. Here, replace all the '#' in the references to direct the user to the correct webpage. 
+
+## Time to test it
+
+If everything went well, then your webapp should now have a navbar. Return to the level where `hello.py` is located and run your web app like in the previous parts (`python3 hello.py`, going to your browser, and using the localhost). Your web app should now look a little something like this:
+
+PLACEHOLDER FOR PHOTOS
+
+Don't forget to save, commit, and push to your Github!
+
+## But I want to do even more! 
+
+There are a lot more cool things you can do with CSS, Bootstrap, and the navigation bar. If you want to see some more examples, check out the article from SPIS 2016 that was linked previously. There, an example webapp has a navigation bar with dropdown menus and much more. The article has links to the webapp itself as well as the Github repo with all the code. Take a look at the `navbar.html` file and see if you understand what's going on! The link to that article can be found again [here](/_webapps/bootstrap).
+
+# The next lesson
+
+The next lesson is [Web Apps Intro (part 3)](/webapps/webapps-intro-part-3/)
+
+In that lesson, you'll learn how to start hosting your webapps on Heroku so that they can be accessed by anyone anywhere,
+and not just looking at a web browser on your local computer.
