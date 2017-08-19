@@ -447,6 +447,8 @@ Make sure you run and spend time on your web app to ensure that everything is wo
 
 # The next lesson
 
+The next lesson is [Web Apps Intro (part 2.5)](/webapps/webapps-intro-part-2-5/)
+
 The next lesson is [Web Apps Intro (part 3)](/webapps/webapps-intro-part-3/)
 
 In that lesson, you'll learn how to start hosting your webapps on Heroku so that they can be accessed by anyone anywhere,
