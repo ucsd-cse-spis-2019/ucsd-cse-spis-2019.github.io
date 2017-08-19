@@ -3,8 +3,8 @@ layout: lab
 num: lab06
 ready: false
 desc: "Python skill builder (functions, types, if/else, strings, recursion)"
-assigned: 2017-08-21 08:45:00.00-7
-due: 2017-08-23 15:45:00.00-7
+assigned: 2017-08-22 08:45:00.00-7
+due: 2017-08-25 15:45:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2017/lab06-startercode.git
 ---
 
@@ -186,8 +186,7 @@ a few steps to finish up and submit.
 
 As one last check, run all of your tests in IDLE, or at the command line.
 
-Here is an example of running each one of your tests at the command line.  Here the bash shell prompt is replaced by simply `$ ` to make the output easier to read.    If your output looks like this, it means all of your tests are passing, and you
-are ready to try submitting on Gradescope.
+Here is an example of running each one of your tests at the command line.  Here the bash shell prompt is replaced by simply `$ ` to make the output easier to read.    If your output looks like this, it means all of your tests are passing.
 
 ```
 $ python test_pyfuncs01.py 
@@ -223,15 +222,4 @@ OK
 $ 
 ```
 
-# Step 8: Submit your solution on Gradescope
-
-Navigate to gradescope.com and login. Remember, your login id is your `____@ucsd.edu` email address, with the full `@ucsd.edu` at the end.
-
-Also, as a reminder, you can easily generate the .zip file for your submssion using github.com. Navigate to the page for your repo, use the "Clone or download" button, and then the "Download zip" button.
-
-The Gradescope autograder expects a .zip file with the name `spis16-`<tt>{{page.num}}</tt>`-Name-Name-master.zip` that contains the Python files that were in your starter code repo. If you change the names of functions, or of the files,
-things may not work correctly.
-
-Upload the zip and wait for the results: hopefully a perfect 100%.
-
-And that's it for {{page.num}}!
+That's it for this lab!
