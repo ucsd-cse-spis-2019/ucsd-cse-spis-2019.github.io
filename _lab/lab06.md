@@ -36,7 +36,7 @@ all so-called "grades" are just a way to get feedback on how you are doing.  The
 
 # Overview 
 
-The basic structure of the lab is similar to [lab02](/lab/lab02.md), except for the one-time steps from that lab, and the 
+The basic structure of the lab is similar to [lab02](/lab/lab02), except for the one-time steps from that lab, and the 
 fact that the repo you create will begin with some starter code (similar to lab04)
 
 After creating the repo, you'll `git clone ... ` the repo, and then start editing Python code, trying to get
