@@ -17,7 +17,7 @@ In this part, we will create a nav bar so that users can quickly get around all 
 
 We're going to implement this using a library called Bootstrap. Bootstrap is a free and easy way to get responsive features and styles. An article written by the staff from SPIS 2016 with more information and an example web app can be found [here](/_webapps/bootstrap). We will be implementing a more simpler example.
 
-## Back to all those templates
+## Back to all those templates (layout.html)
 
 Remember all those templates from Part 2? We're going to use them again.
 
@@ -79,3 +79,31 @@ Your `layout.html` file should now look a little something like this:
      <title> {% raw %}{% block title %}{% endblock %}{% endraw %} - My Webpage</title>
    </head>
 ```
+
+We're almost done with `layout.html`! Now we need include some code inside the body. First, we'll add this line right underneath the `<body>` tags: 
+
+```html
+{% raw %}{% include 'navbar.html' %}{% endraw %}
+```
+
+This will ensure that our navbar will appear on every single web page. We'll create this file in the next step of the lab. 
+
+Now, beneath our `<div>` tags with the block content, we need to include JavaScript plugins so that Bootstrap works correctly. We won't go into too much detail here, but we will be using [jQuery](https://jquery.com), a JavaScript library. Again, W3 Schools is a great resource and you can play around in your free time with jQuery [here](https://www.w3schools.com/jquery/).
+
+Your final `<body>` tags should look a little something like this:
+
+```html
+  <body>
+    {% raw %}{% include 'navbar.html' %}{% endraw %}
+    <div id="content">{% raw %}{% block content %}{% endblock %}{% endraw %}</div>
+     
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+```
+
+## Creating the acutal navbar
