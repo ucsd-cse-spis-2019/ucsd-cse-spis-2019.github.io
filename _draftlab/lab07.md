@@ -34,7 +34,7 @@ Then clone that repo into your `~/github` directory, cd into it, and then try al
 
 Using the repo from Part 2, follow the steps in this tutorial:
 
-[Webapps Part 2.5,](/webapps/webapps-intro-part-2/)
+[Webapps Part 2.5, Nav Bar](/webapps/webapps-intro-part-2/)
 
 # Part 3: Getting Started with Heroku
 
