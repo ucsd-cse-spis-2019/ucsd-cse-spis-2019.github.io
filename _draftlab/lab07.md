@@ -24,7 +24,7 @@ Then clone that repo into your `~/github` directory, cd into it, and then try al
 
 # Part 2: Working with Calculations and Templates
 
-When you are done with that please create a private repo called `spis16-lab07-part2-Name-Name` using [Method 2](/topics/github_create_repo)
+When you are done with that please create a **different** private repo called `spis16-lab07-part2-Name-Name` using [Method 2](/topics/github_create_repo)
 
 Then clone that repo into your `~/github` directory, cd into it, and then try all the steps in this tutorial:
 
