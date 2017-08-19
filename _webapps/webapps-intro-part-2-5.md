@@ -17,7 +17,7 @@ In this part, we will create a nav bar so that users can quickly get around all 
 
 We're going to implement this using a library called Bootstrap. Bootstrap is a free and easy way to get responsive features and styles. An article written by the staff from SPIS 2016 with more information and an example web app can be found [here](/_webapps/bootstrap). We will be implementing a more simpler example.
 
-# Back to all those Templates
+## Back to all those templates
 
 Remember all those templates from Part 2? We're going to use them again.
 
@@ -27,6 +27,54 @@ We want our navigation bar to be present no matter what webpage we are on so tha
 <!doctype html>
 <html>
   <head>
+     <link rel="stylesheet" href="{% raw %}{{{% endraw %} url_for('static', filename='style.css') {% raw %}}}{% endraw %}">
+     <title> {% raw %}{% block title %}{% endblock %}{% endraw %} - My Webpage</title>
+   </head>
+```
+
+Inside the head tag and before the two lines we currently have, we are going to add some lines of code. First, We need to let the web app know what character encoding standard we are using. UTF-8 (Unicode) covers most of the characters we need. If you want more information, you can check this w3schools article [here](https://www.w3schools.com/html/html_charset.asp). 
+
+```html
+  <meta charset="utf-8">
+```
+
+Next, we have a line of code to help with the responsiveness of your web app as you change the size of the window. Note the comment: 
+
+```html
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above meta tag *must* come first in the head; any other head content must come *after* these tags -->
+ ```
+
+Finally, we have to code to get access to Bootstrap and being able to use it. With these links, we'll be able to access Bootstrap's CSS code to easily style our web app. Feel free to copy and paste the long Bootstrap links into your own file.
+
+```html
+  <!-- Bootstrap -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"
+```
+
+Your `layout.html` file should now look a little something like this: 
+
+```html
+<!doctype html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- The above meta tag *must* come first in the head; any other head content must come *after* these tags -->
+     
+     <!-- Bootstrap -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"
+     
      <link rel="stylesheet" href="{% raw %}{{{% endraw %} url_for('static', filename='style.css') {% raw %}}}{% endraw %}">
      <title> {% raw %}{% block title %}{% endblock %}{% endraw %} - My Webpage</title>
    </head>
