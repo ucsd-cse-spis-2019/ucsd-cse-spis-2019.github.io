@@ -6,72 +6,33 @@ assigned: 2017-08-19 20:00:00.00-7:00
 due: 2017-08-22 08:45:00.00-7:00
 ---
 
-# Reading Assignment
+# Why this Reading Assignment?
+
+Actually, this is really a "listening" assignment. The idea is to get you ready and prepared for Tuesday's lecture on the basics of electronics. But additionally, it will introduce you to teaching styles knows as "peer instruction" and a "flipped classroom", which are probably very different from what you are used to. In fact, peer instruction is very different from how most classes are taught at UCSD. However, in the CSE department, you will encounter several classes that do follow this structure, and this assignment, combined with the electronics lecture, will give you a little taster. Also, it is the best way to get the most out of the limited time you have to try to grasp the basic of electronics.
+
+For this assignment, you are expected to watch all the videos mentioned in the writeup, by the due date.
 
 
-Please read Chapter 1 in our textbook, "Introduction to Computation
-and Programming Using Python, Revised And Expanded Edition" by John
-Guttag:
+# What is Peer Instruction?
+Peer instruction is an educational methodology, a way of teaching classes. Well, you might wonder: Aren't classes just lectures? Why something different? To answer these questions, we should wonder "how do we learn?". Watch this short excerpt (2 min) from an interview with the inventor of peer instruction, Prof Eric Mazur: [Eric Mazur: Key Points of Flipping a Classroom](https://youtu.be/JAdpHs-Dt64).
 
-Then, we'd like to invite you to provide answers to the following
-questions.  There isevidence collected from a meta-review by UCSB
-Psychology professor Richard Mayer and his student Logan
-Fiorella&mdash;that the following eight strategies are helpful to
-learning.   Here, we are going to focus only two of those
-(a [list of all eight strategies](/topics/learning_strategies/) appears on the SPIS website).
+In a flipped classroom setting, the idea is to move the actual transmission of information to outside of the classroom. The students are responsible for getting the 'lecture information' on their own, through reading the book or watching video lectures. The limited time you have with instructors is then used much more efficiently by focussing on the most important step: the assimilation of the information. In class, the goal is to think, to be questioned, to discuss, and to talk to each other. The latter is called peer instruction, a critical component of learning, where you learn not just from the teacher but also from each other. You have already experienced some peer instruction through the clicker questions in class. But this essentially takes it a step further.
 
-*  Learning by *summarizing*: writing a summary, in your own
-    words, of what you think are the most important points from the
-    material you've just read or heard.
-*  Learning by *self-testing*: taking a quiz about the material
-    you've just read or heard; either a quiz devised by the instructor,
-    of your own making, or from a fellow student.
+Now, to summarize the entire idea and the motivations behind hit, watch this short (3 min) video: [Eric Mazur & Peer Instruction](https://www.youtube.com/watch?v=JPnijSecLK0).
 
-For the first half of the chapter, we'll provide some questions that might appear on a quiz/exam that you might be given
-after reading this passage. By answering those questions right after reading, you can 
-help the reading stick. Then, for the second half of the chapter, you'll be asked to come up with the summary and the quiz questions
-yourself.
-
-<ol>
-
-<li markdown="1" style="margin-bottom:8em;">
-
-(10 pts) Chapter 1 discusses declarative vs. imperative knowledge.  How would you explain the difference?  
-
-(You are invited to read, understand, then summarize in your own words, rather than copying verbatim from the book.)
-
-</li>
+If you want to learn more, there is this interesting talk by Eric Mazur gave at the University of Michigan: https://www.youtube.com/watch?v=8UJRNRdgyvE. Watching this video is optional (it is 1h20min).
 
 
-<li markdown="1" style="margin-bottom:8em;" >
 
-(10 pts)  How would you explain the difference between fixed-program and stored-program computers?
+# Let's Do some Flipped Classroom Learning
 
-</li>
+Hopefully by now, you are somewhat convinced that there may be some benefit to a flipped classroom, or at least you are somewhat curious about it. Well, we are going to try it out.
 
+So we are going to use peer instruction to teach you the basics of electronics. This will be useful for lab08, and robotics. And for those who are in CE, this is the start of ECE35, one of the classes you have to take anyway.
 
-<li markdown="1" style="margin-bottom:8em;" > (10 pts) In the context of describing the Church-Turing thesis, Guttag mentions that some functions are "not computable", and gives an example.  What is this example of an "uncomputable function"? 
+Your assignment is this: Before Tuesday class, you have to watch (and try to understand) this video lecture (26 min): [Basic Electronics - The Hydraulic Analogy](https://youtu.be/7CNZfMI_njg).
 
-</li>
-
-<li markdown="1" style="margin-bottom:8em;"> (10 pts) Computer Science professors and students tend to argue a lot about whether one programming language is "better" than another.   What is the signficance of the notion of Turing Completeness to this kind of discussion?   
-</li>
-
-<li markdown="1" style="margin-bottom:8em;">
-
-So far, we've provided some questions to guide your reading.  However, in many university level courses, you'll need to develop the skill of deciding for yourself what the important parts are in a reading passage.  
-
-Please read the rest of the material on pages 4, 5 and&nbsp;6 and provide your own summary of what you think the most important concepts on these pages are, confining that summary to the space provided below.    For each important concept, also come up with a practice quiz/exam question you might pose to a friend if you were helping them study.
-
-You may want to write out your answers on scratch paper first, then copy them to the space below. 
-
-</li>
-</ol>
-
-# Note on how to turn in your homework assignment 
+See you all in class!
 
 
-All your homework assignments for FOCS share a single github repo. Please name it as homework_firstname_firstLetterLastname. For example, Alexia Thompson should name her homework repo as homework_alexia_t. This repo should be under the SPIS 2017 directory which is the default location for the repo that you have created (i.e. ucsd-cse-spis-2017/homework_alexia_t). As for how you can create a repo in github, refer to [lab00](/lab/lab00/) for details.
 
-
-For every homework assignment, create a file named hwkxx.md where xx is the number of that homework assignment. For example, this homework's file should be named hwk01.md. Write your answers in that file and push it to your homework repo.
