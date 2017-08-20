@@ -162,9 +162,8 @@ Block 3 is where you include the actual links to the pages you created in the pr
 
 If everything went well, then your webapp should now have a navbar. Return to the level where `hello.py` is located and run your web app like in the previous parts (`python3 hello.py`, going to your browser, and using the localhost). Your web app should now look a little something like this:
 
-<p align="center">
-![](/_webapps/images/home-page-large.png){:height="400px"}
-</p>
+
+![](/_webapps/images/home-page-large.png)
 
 ![](/_webapps/images/home-page-small.png)
 
