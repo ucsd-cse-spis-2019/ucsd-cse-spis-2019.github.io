@@ -162,6 +162,11 @@ Block 3 is where you include the actual links to the pages you created in the pr
 
 If everything went well, then your webapp should now have a navbar. Return to the level where `hello.py` is located and run your web app like in the previous parts (`python3 hello.py`, going to your browser, and using the localhost). Your web app should now look a little something like this:
 
+<img src="/images/lab/webapps/home-page-large.png" width="400">
+
+<img src="/images/lab/webapps/home-page-small.png" width="400">
+
+<img src="/images/lab/webapps/mtokm-nav-bar.png" width="400">
 
 ![](/images/labs/webapps/home-page-large.png)
 
