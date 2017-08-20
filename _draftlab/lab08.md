@@ -28,7 +28,7 @@ Take a look at the Raspberry Pi on your workbench. You are looking at the inside
 The green base on which all the electronic components (which you see as bulgy entities) are laid out is a non-conductive substrate. This means that the green parts of the board don’t conduct electricity. However, to connect the various electrical components, conductive tracks made of copper are etched on the green base. At the very center of your Pi sits a prominent black square block. This is the brain of your Pi – the processor (a 64-bit Quadcore ARM). On the back you'll find another black block, which holds 1GB of RAM (Random Access Memory).  For now, just know that the RAM is a form of non-persistent memory. There are other components on the Pi. To identify them orient your Pi to match the circuit below.
 
 <p align="center">
-![RPi-3-modelB](/images/labs/images/RPi/rpi_pi3_detail.jpg){:height="200px"} 
+![RPi-3-modelB](/images/labs/images/RPi/rpi_pi3_detail.jpg){:height="400px"} 
 </p>
 
 
@@ -107,7 +107,7 @@ Note that physical pins 1 and 17 provide 3.3V, while physical pins 2 and 4 provi
 The GPIO breakout board shown below makes all these pins available to you on a breadboard where you will be doing your electrical wiring.
 
 <p align="center">
-![GPIO-breakout](/images/labs/images/RPi/GPIO-breakout.png){:height="400px"} 
+![GPIO-breakout](/images/labs/images/RPi/breakout.jpg){:height="300px"} 
 </p>
 
 Notice that the labels on the breakout board use the BRCM naming convention. However, we have connected the breakout board in such a way that you can easily derive the physical pin number of any pin by looking at the row number that it is connected to on the breadboard. Answer the following questions based on your understanding of the breadboard and the GPIO numbering scheme:
