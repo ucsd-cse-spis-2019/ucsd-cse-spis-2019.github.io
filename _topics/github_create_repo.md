@@ -142,7 +142,7 @@ or simply by logging into github, then navigating to [github.com/new](https://gi
 
 Then you see this screen, where you fill in the values as shown.
 
-![Create repo method 2](/_topics/github_create_repo/private-repo-method-2-50.png)
+![Create repo method 2](ucsd-cse-spis-2017.github.io/_topics/github_create_repo/private-repo-method-2-50.png)
 
 
 
