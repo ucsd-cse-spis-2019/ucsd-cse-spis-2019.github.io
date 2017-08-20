@@ -119,7 +119,7 @@ Notice that the labels on the breakout board use the BRCM naming convention. How
 ## Getting to know your desktop environment
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/desktop.JPG){:width="500px"} 
+![RPi-desktop](/images/labs/images/RPi/desktop.jpg){:width="500px"} 
 </p>
 
 The operating system on the Pi is a version of the Linux known as Raspbian. The picture above shows the Raspbian desktop environment. Feel free to poke around and see what all of these icons mean!
