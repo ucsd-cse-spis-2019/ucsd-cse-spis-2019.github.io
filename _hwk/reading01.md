@@ -23,10 +23,15 @@ Now, to summarize the entire idea and the motivations behind hit, watch this sho
 If you want to learn more, there is this interesting talk Eric Mazur gave at the University of Michigan: [Peer Instruction: Confessions of a Converted Lecturer](https://www.youtube.com/watch?v=8UJRNRdgyvE). Watching this video is optional (it is 1h20min).
 
 
+<p align="center">
+![](/images/hw/lecturecartoon.jpg)
+</p>
+
+
 
 # Let's Do some Flipped Classroom Learning
 
-Hopefully by now, you are thinking there may be some benefit to a flipped classroom, or at least you are somewhat curious about it. Well, we are going to try it out.
+Hopefully by now, you are thinking there may be some benefit to a flipped classroom, or at least you are somewhat curious about it. Flipped classrooms and peer instruction are not the magic bullet, and may not work for all topics, or some people may prefer the traditional lecture style. That's totally fine. At least, let's give it a try. 
 
 So we are going to use peer instruction to introduce you to the basics of electronics. This will be useful for lab08, and robotics. And for those who are in CE, this is the start of ECE35, one of the classes you have to take anyway (and considered to be one of the toughest ECE classes).
 
