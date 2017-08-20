@@ -1,7 +1,7 @@
 ---
 num: "reading01"
 desc: "Flipped Classroom: Basic Electronics"
-ready: false
+ready: true
 assigned: 2017-08-19 20:00:00.00-7:00
 due: 2017-08-22 08:45:00.00-7:00
 ---
@@ -20,7 +20,7 @@ In a flipped classroom setting, the idea is to move the actual transmission of i
 
 Now, to summarize the entire idea and the motivations behind hit, watch this short (3 min) video cartoon: [Eric Mazur & Peer Instruction](https://www.youtube.com/watch?v=JPnijSecLK0).
 
-If you want to learn more, there is this interesting talk Eric Mazur gave at the University of Michigan: [Peer Instruction: Confessions of a Converted Lecturer] (https://www.youtube.com/watch?v=8UJRNRdgyvE). Watching this video is optional (it is 1h20min).
+If you want to learn more, there is this interesting talk Eric Mazur gave at the University of Michigan: [Peer Instruction: Confessions of a Converted Lecturer](https://www.youtube.com/watch?v=8UJRNRdgyvE). Watching this video is optional (it is 1h20min).
 
 
 
