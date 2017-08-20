@@ -3,8 +3,8 @@ layout: lab
 num: lab08
 ready: false
 desc: "Basics of electronics with Raspberry Pi"
-assigned: 2017-08-17 09:30:00.00-7
-due: 2017-08-19 15:45:00.00-7
+assigned: 2017-08-22 08:45:00.00-7
+due: 2017-08-25 15:45:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2017/lab08-startercode.git
 ---
 
@@ -12,7 +12,7 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Learning objectives
 
-In this lab you will be introduced to the basics of electronics using a a credit-card sized computer called the Raspberry Pi (yummy!). You will build simple electronic circuits and write programs to control them. 
+In this lab you will be introduced to the basics of electronics using a a credit-card sized computer called the Raspberry Pi. You will build simple electronic circuits and write programs to control them. 
 
 # Getting started
 
@@ -23,34 +23,30 @@ Alternatively, you may also create just an empty repo with a .ignore and README 
 **Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group.**
 
 ## Observe your Raspberry Pi
-Take a look at the Raspberry Pi on your workbench. You are looking at the insides of a computer. The Pi is not shy about exposing its true self. You would see a similar circuit if you cracked open the shiny shell of your laptop (which is probably not a great idea to quench your curiosity). As you stare down at your Pi, you see an all-encompassing circuit. Your gut feeling may be that it all looks very complex. Your premonitions are not misplaced. The circuit that you are looking at is not called the motherboard for nothing! 
+Take a look at the Raspberry Pi on your workbench. You are looking at the insides of a computer. The Pi is not shy about exposing its true self. You would see a similar circuit if you cracked open the shiny shell of your laptop (which is probably not a great idea to quench your curiosity). As you stare down at your Pi, you see an all-encompassing circuit. Your gut feeling may be that it all looks very complex. Your premonitions are not misplaced. The circuit that you are looking at is not called the motherboard for nothing. 
 
-The green base on which all the electronic components (which you see as bulgy entities) are laid out is a non-conductive substrate. This means that the green parts of the board don’t conduct electricity. However, to connect the various electrical components, conductive tracks made of copper are etched on the green base. At the very center of your Pi sits a prominent black square block. This is the brain of your Pi – the processor. But the processor is not the only thing on the black square. It is clubbed with some Random Access Memory (RAM).  For now, just know that the RAM is a form of non-persistent memory. There are other components on the Pi. To identify them orient your Pi to match the circuit below.
-
-<p align="center">
-![RPi-1-modelB](/images/labs/images/RPi/RPi1_modelB.png){:height="200px"} 
-</p>
-
-A corresponding functional diagram of the Pi is also shown below:
-
+The green base on which all the electronic components (which you see as bulgy entities) are laid out is a non-conductive substrate. This means that the green parts of the board don’t conduct electricity. However, to connect the various electrical components, conductive tracks made of copper are etched on the green base. At the very center of your Pi sits a prominent black square block. This is the brain of your Pi – the processor (a 64-bit Quadcore ARM). On the back you'll find another black block, which holds 1GB of RAM (Random Access Memory).  For now, just know that the RAM is a form of non-persistent memory. There are other components on the Pi. To identify them orient your Pi to match the circuit below.
 
 <p align="center">
-![RPi-1-labeled](/images/labs/images/RPi/RPi-diagram.png){:height="200px"} 
+![RPi-3-modelB](/images/labs/images/RPi/rpi_pi3_detail.jpg){:height="200px"} 
 </p>
 
 
-Observe the components marked in the diagram (above) on your Pi. 
+
+Observe the components marked in this diagram on your Pi. 
 We will focus on a few important components on the diagram:
 
-1. Ethernet port: The Pi can get Internet connectivity through the Ethernet port, marked as LAN or through a WiFi dongle connected to one of its USB ports. In our setup, we will use the WiFi.
+1. Internet connectivity: The Pi can get Internet connectivity through the Ethernet port, or throught the built-in WiFi chip. In our setup, we will use the WiFi. 
 
-2. High Definition Multimedia Interface (HDMI): This is an interface that connects your Pi to a monitor.
+2. USB ports: The Pi3 comes with four USB ports. We will use them to connect a mouse and keyboard. 
 
-3. SD card slot: All the software that runs on the Pi, which includes the Operating System (more on the OS later) as well as your programs, will be stored on the SD card that goes into the SD card slot. The Pi without the SD card is all hardware.
+3. High Definition Multimedia Interface (HDMI): This is an interface that connects your Pi to a monitor.
 
-4. GPIO pins: This stands for General Purpose Input / Output. You won’t be able to observe the GPIO pins on the Raspberry Pi on your workbench because they are hidden under the ribbon cable that connects them to the white breadboard. These pins can be configured to send/receive signals through your python programs. You will control and sense the world around you through these pins!!
+4. SD card slot: All the software that runs on the Pi, which includes the Operating System (more on the OS later) as well as your programs, will be stored on the SD card that goes into the SD card slot. The Pi without the SD card is all hardware.
 
-5.	Power Input: Using this input you can power up your Pi using a charger or a batteries. 
+5. GPIO pins: This stands for General Purpose Input / Output. You won’t be able to observe the GPIO pins on the Raspberry Pi on your workbench because they are hidden under the ribbon cable that connects them to the white breadboard. These pins can be configured to send/receive signals through your python programs. You will control and sense the world around you through these pins!!
+
+6.	Power Input: Using this input you can power up your Pi using a charger or a batteries. 
 
 ## Observe the connections from your Pi to other peripherals
 
@@ -58,11 +54,14 @@ In the setup provided to you, the Pi has been wired to work as a desktop compute
 For the robotics projects, we will operate the Pi in a untethered fashion (so the robot can be mobile) but for now observe the following wired connections from the Pi to other peripherals:
 
 * The Pi has a connection to a monitor via the HDMI port.
-* The keyboard and mouse are connected to the in-built USB hub of your monitor. A single USB cable from the monitor connects the keyboard and mouse to the Pi.
+* The keyboard and mouse are connected via USB.
 * The Pi is powered up using a charger that is plugged into the wall.
 * The GPIO pins on the Pi are routed to a breadboard via a ribbon cable.
 
-Let's take a closer look at the breadboard and the GPIO breakout board that sits on it. You will need this information to complete the later exercises in this lab
+** Very important note: If you want to unplug anything from your Pi (keyboard, mouse, power cable, etc.) or plug anything into your Pi, your Pi needs to be shut down! Otherwise, you may damage the device. So when you start, you first connect all the peripherals and as a last step you plug in the power. When you want to unplug things, first shut the Pi down in software (select Shutdown). **
+
+Now let's take a closer look at the breadboard and the GPIO breakout board that sits on it. You will need this information to complete the later exercises in this lab.
+
 
 ## The breadboard
 
@@ -89,21 +88,21 @@ Finally, the breadboard has two vertical lines running up and down on both sides
 
 ## The GPIO pin numbering conventions
 
-The Raspberry Pi 1, model B (which is the one we are using) has 26 GPIO pins that are laid out as two rows of 13 pins each, also depicted in the diagram below:
+The Raspberry Pi 3, model B (which is the one we are using) has 40 GPIO pins that are laid out as two rows of 20 pins each, also depicted in the diagram below:
 
 <p align="center">
-![GPIO-numbering](/images/labs/images/RPi/GPIO-numbering.png){:height="400px"} 
+![GPIO-numbering](/images/labs/images/RPi/RP3_Pinout.png){:height="400px"} 
 </p>
 
-The pins that are colored in green are available for any general purpose and can be referred to and configured in your python programs! There are two different conventions used to refer to these pins:
+The pins that are colored in orange are available for any general purpose and can be referred to and configured in your python programs. Some of these orange pins have 'alternate functions' as well; this means they may not be available to do if you are using that alternate function. In case you are not sure, avoid those pins and only use the orange colored ones that do not have an alternate function. There are two different conventions used to refer to these pins:
 
-1. Physical location: One way is to just refer to the pins based on their physical location. These numbers are indicated in the circles (representing the pins) in the above diagram. All pins on the left half have odd number locations while all pins on the right half have even numbered locations.
+1. Physical location: One way is to just refer to the pins based on their physical location. These numbers are indicated in the gray boxes in the above diagram. All pins on the left half have odd number locations while all pins on the right half have even numbered locations.
 
-2. BRCM (broadcom convention): You can also use the broadcomm convention where the numbering is not based on the physical location. For example the pin at physical location 12 is referred to as pin number 18 as per the BRCM convention.
+2. BRCM (broadcom convention): You can also use the broadcomm convention where the numbering is not based on the physical location. For example the pin at physical location 12 is referred to as pin number 18 (note that you drop the 'GPIO' part) as per the BRCM convention.
 
 Either of the above conventions is okay to use in your programs as long as you define which scheme you are using before you start referring to the pins.
 
-Note that physical pins 1 and 17 provide 3.3V, while physical pins 2 and 4 provide 5V. Physical pins 6, 9, 14, 20 and 25 provide the ground signal which is also very important in your circuits. We will talk about pins 3, 5, 8 and 10 in later labs.
+Note that physical pins 1 and 17 provide 3.3V, while physical pins 2 and 4 provide 5V. Physical pins 6, 9, 14, 20 and 25 provide the ground signal which is also very important in your circuits.
 
 The GPIO breakout board shown below makes all these pins available to you on a breadboard where you will be doing your electrical wiring.
 
@@ -120,19 +119,19 @@ Notice that the labels on the breakout board use the BRCM naming convention. How
 ## Getting to know your desktop environment
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/RPi-desktop.png){:height="400px"} 
+![RPi-desktop](/images/labs/images/RPi/desktop.JPG){:height="400px"} 
 </p>
 
-The operating system on the Pi is a version of the linux known as Raspbian. The picture above shows the Raspbian desktop environment. Like Windows, or OS X (for Apple), you can run programs by double clicking them. Feel free to poke around and see what all of these icons mean! We will use two main programs on your desktop: the Wifi config tool and the LXTerminal.
+The operating system on the Pi is a version of the Linux known as Raspbian. The picture above shows the Raspbian desktop environment. Like Windows, or OS X (for Apple), you can run programs by double clicking them. Feel free to poke around and see what all of these icons mean!
 
 
 ### The WiFi config tool
 This tool shows the status of your Wifi connection and internet connectivity.
 Use the mouse navigate to the WiFi Config Tool on your desktop. Double click on it to view the status of your network connection. Take note of the IP address in the GUI of that tool. Your IP address is of the form: 137.110.XX.XX. If you see such a number then you have internet connectivity. You can use the IP to remotely access your Pi from any other computer using ssh (just like how you log into the ieng6 machines, more on this later).
 
-### LXTerminal
-LXTerminal is the command line interpreter. Double click on the icon to open it.
-When you open LXTerminal notice the prompt says `pi@spispi-XX`. This means that you are user `pi` and the name of your machine is `spispi-XX`.
+### Terminal
+Terminal is the command line interpreter. It is the icon on the top bar showing `>_`. Click it to open. You can also find it under the main menu (the raspberry icon), and the Accessories submenu. 
+When you open Terminal notice the prompt says `pi@XXXX`. This means that you are user `pi` and the name of your machine is `XXXX`.
 All the unix commands that you have learned so far can be used to navigate through the file system on your Pi. You can also use command line git just like how you would on the ieng6 machines!
 
 
@@ -162,7 +161,7 @@ On the Pi's terminal navigate to the your local git repo (~/spis17-lab08-Name-Na
 
 *A word on sudo*
 
-You might be wondering why we use the word sudo to open idle. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, “OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.”  This command to the operating system is “sudo”.  It stands for “super user do” or “substitute user do”.  In any case, it is a command to Raspbian to go ahead and run a command that you don’t really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We use the word `sudo` to open idle3 because we will be soon running programs in idle that use the Python GPIO library
+You might be wondering why we use the word sudo to open idle. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, “OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.”  This command to the operating system is “sudo”.  It stands for “super user do”.  It is a command to Raspbian to go ahead and run a command that you don’t really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We use the word `sudo` to open idle3 because we will be soon running programs in idle that use the Python GPIO library
 
 You are now ready to start working on your first exercise where you would create your own circuit and control it using the starter code given to you. 
 
@@ -243,7 +242,7 @@ Wire up the circuit shown by the following diagram. We will use the physical pin
 
 Ask an instructor or mentor is you don't understand the diagram. For more in depth information on configuring GPIO pins as outputs refer to [this website](http://www.scriptoriumdesigns.com/embedded/gpio_out.php).
 
-Now, run the `01_blinking_led.py` program that is in your repo in idle. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is most likely with your wiring. If you were successful reason about the correctness of the program. For example why does your program output a low voltage on pin 11 to turn the LED on and a high voltage to turn it off.
+Now, run the `01_blinking_led.py` program that is in your repo in idle3. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is most likely with your wiring. If you were successful reason about the correctness of the program. For example why does your program output a low voltage on pin 11 to turn the LED on and a high voltage to turn it off.
 
 Modify the program to double the frequency at which the LED blinks. Run it to check your code.
 
