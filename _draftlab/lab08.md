@@ -119,7 +119,7 @@ Notice that the labels on the breakout board use the BRCM naming convention. How
 ## Getting to know your desktop environment
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/desktop.jpg){:width="500px"} 
+![RPi-desktop](/images/labs/images/RPi/desktop.jpg){:width="800px"} 
 </p>
 
 The operating system on the Pi is a version of the Linux known as Raspbian. The picture above shows the Raspbian desktop environment. Feel free to poke around and see what all of these icons mean!
@@ -133,6 +133,8 @@ Use the mouse navigate to the WiFi Config Tool on your desktop. Double click on 
 Terminal is the command line interpreter. It is the icon on the top bar showing `>_`. Click it to open. You can also find it under the main menu (the raspberry icon), and the Accessories submenu. 
 When you open Terminal notice the prompt says `pi@XXXX`. This means that you are user `pi` and the name of your machine is `XXXX`.
 All the unix commands that you have learned so far can be used to navigate through the file system on your Pi. You can also use command line git just like how you would on the ieng6 machines!
+
+
 
 
 ## Set up your programming environment
@@ -169,7 +171,10 @@ You are now ready to start working on your first exercise where you would create
 
 # Blinking LEDs
 
-In this exercise you will create a circuit consisting of an LED and a resistor connected to the Pi. You will then periodically blink the LED using the example program provided to you in the starter code. 
+In this exercise you will create a circuit consisting of an LED and a resistor connected to the Pi. You will then periodically blink the LED using the example program provided to you in the starter code.
+
+** For all your work with Raspberry Pi, it is extremely important you do not make short circuit connections on the GPIO pins. A short circuit is when a supply or GPIO pin set to HIGH is directly connected to a GND or GPIO pin set to LOW. If you are unsure, ask a mentor or instructor to check your circuit before running your program. Always be extremely careful to avoid short circuits. It may destroy the Pi. **
+
 
 ## Understanding the code
 
