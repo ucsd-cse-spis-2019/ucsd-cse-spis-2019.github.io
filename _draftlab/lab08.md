@@ -17,10 +17,10 @@ In this lab you will be introduced to the basics of electronics using a a credit
 # Getting started
 
 ## Create a git repo and get the starter code
-Use your laptop to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}).
-Alternatively, you may also create just an empty repo with a .ignore and README just like you have in the previous labs and then copy over starter code as per instructions in the later part of this lab
+Use your laptop to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}). (If you forgot to import the starter code, no problem. There are instructions a bit further on to fix it.)
 
 **Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group.**
+
 
 ## Observe your Raspberry Pi
 Take a look at the Raspberry Pi on your workbench. You are looking at the insides of a computer. The Pi is not shy about exposing its true self. You would see a similar circuit if you cracked open the shiny shell of your laptop (which is probably not a great idea to quench your curiosity). As you stare down at your Pi, you see an all-encompassing circuit. Your gut feeling may be that it all looks very complex. Your premonitions are not misplaced. The circuit that you are looking at is not called the motherboard for nothing. 
@@ -58,7 +58,7 @@ For the robotics projects, we will operate the Pi in a untethered fashion (so th
 * The Pi is powered up using a charger that is plugged into the wall.
 * The GPIO pins on the Pi are routed to a breadboard via a ribbon cable.
 
-** Very important note: If you want to unplug anything from your Pi (keyboard, mouse, power cable, etc.) or plug anything into your Pi, your Pi needs to be shut down! Otherwise, you may damage the device. So when you start, you first connect all the peripherals and as a last step you plug in the power. When you want to unplug things, first shut the Pi down in software (select Shutdown). **
+** Very important note: If you want to unplug anything from your Pi (keyboard, mouse, power cable, etc.) or plug anything into your Pi, your Pi needs to be shut down! Otherwise, you may damage the device. So when you start, you first connect all the peripherals and as a last step you plug in the power. When you want to unplug things, first shut the Pi down in software (select Shutdown) before removing anything. **
 
 Now let's take a closer look at the breadboard and the GPIO breakout board that sits on it. You will need this information to complete the later exercises in this lab.
 
@@ -94,7 +94,7 @@ The Raspberry Pi 3, model B (which is the one we are using) has 40 GPIO pins tha
 ![GPIO-numbering](/images/labs/images/RPi/RP3_Pinout.png){:height="400px"} 
 </p>
 
-The pins that are colored in orange are available for any general purpose and can be referred to and configured in your python programs. Some of these orange pins have 'alternate functions' as well; this means they may not be available to do if you are using that alternate function. In case you are not sure, avoid those pins and only use the orange colored ones that do not have an alternate function. There are two different conventions used to refer to these pins:
+The pins that are colored in orange are available for any general purpose and can be referred to and configured in your python programs. Some of these orange pins have an 'alternate function' as well; this means they may not be available if you are using that alternate function. In case you are not sure, avoid those pins and only use the orange colored ones that do not have an alternate function. There are two different conventions used to refer to these pins:
 
 1. Physical location: One way is to just refer to the pins based on their physical location. These numbers are indicated in the gray boxes in the above diagram. All pins on the left half have odd number locations while all pins on the right half have even numbered locations.
 
@@ -119,10 +119,10 @@ Notice that the labels on the breakout board use the BRCM naming convention. How
 ## Getting to know your desktop environment
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/desktop.JPG){:height="400px"} 
+![RPi-desktop](/images/labs/images/RPi/desktop.JPG){:width="500px"} 
 </p>
 
-The operating system on the Pi is a version of the Linux known as Raspbian. The picture above shows the Raspbian desktop environment. Like Windows, or OS X (for Apple), you can run programs by double clicking them. Feel free to poke around and see what all of these icons mean!
+The operating system on the Pi is a version of the Linux known as Raspbian. The picture above shows the Raspbian desktop environment. Feel free to poke around and see what all of these icons mean!
 
 
 ### The WiFi config tool
@@ -155,7 +155,7 @@ cp ~/lab08-startercode/*.py ~/spis17-lab08-Name-Name/
 ```
 
 
-On the Pi's terminal navigate to the your local git repo (~/spis17-lab08-Name-Name/ and NOT the lab08-startercode directory) and open up idle by typing the following command
+On the Pi's terminal navigate to the your local git repo (~/spis17-lab08-Name-Name/ and NOT the /home/pi/lab08-startercode/ directory) and open up idle by typing the following command
 
 ` sudo idle3 &`
 
