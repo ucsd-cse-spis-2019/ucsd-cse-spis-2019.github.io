@@ -36,6 +36,8 @@ Hopefully by now, you are thinking there may be some benefit to a flipped classr
 So we are going to use peer instruction to introduce you to the basics of electronics. This will be useful for lab08, and robotics. And for those who are in CE, this is the start of ECE35, one of the classes you have to take anyway (and considered to be one of the toughest ECE classes).
 
 Your assignment is this: **Before Tuesday class, you have to watch (and try to understand) Curt's video lecture (26 min): [Basic Electronics - The Hydraulic Analogy](https://youtu.be/7CNZfMI_njg)**
+This is the most important part of this assignment. You will not get anything out of the lecture if you do not watch this video in advance.
+
 
 
 
