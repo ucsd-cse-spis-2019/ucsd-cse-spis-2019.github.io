@@ -1,6 +1,6 @@
 ---
 num: "reading01"
-desc: "Preparation for Electronics Lecture"
+desc: "Flipped Classroom: Basic Electronics"
 ready: false
 assigned: 2017-08-19 20:00:00.00-7:00
 due: 2017-08-22 08:45:00.00-7:00
