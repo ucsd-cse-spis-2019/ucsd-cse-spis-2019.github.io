@@ -11,7 +11,7 @@ ready: true
 
 # Depth for week 2 (Curt)
 
-In this depth section, we will look deeper into 
+In this depth section, we look deeper into 
 * Recursion
 * Mutable and immutable objects in the context of image manipulation
 
