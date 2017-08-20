@@ -164,7 +164,7 @@ If everything went well, then your webapp should now have a navbar. Return to th
 
 ![](/images/labs/webapps/home-page-large.png){:width="1000px"}
 
-![](/images/labs/webapps/home-page-small.png){:width="400px" height="800px"}
+![](/images/labs/webapps/home-page-small.png){:width="300px" height="800px"}
 
 ![](/images/labs/webapps/mtokm-nav-bar.png){:width="1000px"}
 
