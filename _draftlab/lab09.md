@@ -9,14 +9,12 @@ due: 2017-08-22 16:45:00.00-7
 
 # Working With Data
 
-In this lab you will work with some data similar to the beer data that we saw in the Facets presentation by UCSD Professor Julian McAuley.   The data he presented was about reviews of beers.   Since SPIS participants are typically under age 21, we'll focus only on the reviews of non-alcoholic beers.
+In this lab, you will work with a dataset on non-alcoholic beverages. 
 
 # References
 
 As you work through the steps below, you may find it helpful to refer to:
 
-* the notes from the lecture Miles gave on Wednesday 08/17, 
-    which can be found here: [Transcript of Python Shell Session](/lectures/week3/Lecture-08-17.txt){: data-ajax="false"}
 * The pages on the SPIS 2017 website about:
     * [Python: Dictionaries](/topics/python_dictionaries/)
     * [Python: defaultdict](/topics/python_defaultdict/)
