@@ -3,7 +3,7 @@ layout: lab
 num: lab06
 ready: true
 desc: "Python skill builder (functions, types, if/else, strings, recursion)"
-assigned: 2017-08-22 08:45:00.00-7
+assigned: 2017-08-21 16:00:00.00-7
 due: 2017-08-25 15:45:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2017/lab06-startercode.git
 ---
