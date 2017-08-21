@@ -128,6 +128,9 @@ The operating system on the Pi is a version of the Linux known as Raspbian. The 
 ### The WiFi config tool
 This tool shows the status of your Wifi connection and internet connectivity.
 Use the mouse navigate to the WiFi Config Tool on your desktop. Double click on it to view the status of your network connection. Take note of the IP address in the GUI of that tool. Your IP address is of the form: 137.110.XX.XX. If you see such a number then you have internet connectivity. You can use the IP to remotely access your Pi from any other computer using ssh (just like how you log into the ieng6 machines, more on this later).
+./xecutable.sh
+wifisetup.sh
+
 
 ### Terminal
 Terminal is the command line interpreter. It is the icon on the top bar showing `>_`. Click it to open. You can also find it under the main menu (the raspberry icon), and the Accessories submenu. 
