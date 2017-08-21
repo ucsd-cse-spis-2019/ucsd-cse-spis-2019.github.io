@@ -1,8 +1,8 @@
 ---
 layout: lab
 num: lab09
-ready: false
-desc: "Working With Data, (by Miles and Phill)"
+ready: true
+desc: "Working With Data"
 assigned: 2017-08-17 13:15:00.00-7
 due: 2017-08-22 16:45:00.00-7
 ---
