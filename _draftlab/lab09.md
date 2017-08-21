@@ -9,7 +9,7 @@ due: 2017-08-22 16:45:00.00-7
 
 # Working With Data
 
-In this lab, you will work with a dataset on non-alcoholic beverages. 
+In this lab, you will work with a dataset on beer reviews, curtesey from CSE faculty Julian McAuey. 
 
 # References
 
