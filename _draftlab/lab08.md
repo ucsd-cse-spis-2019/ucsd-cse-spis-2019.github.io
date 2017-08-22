@@ -137,7 +137,7 @@ Note: To learn the IP address of your Pi, open a Terminal window and type:
 
 `ifconfig`
 
-It was show you a bunch of information, organized in three sections. In the bottom section, labeled `wlan0`, look for `inet addr`. The numbers that follow (something like 192.168.1.233) are your IP address. Knowing this will come in handy if you want to log in remotely into your Pi.
+It will show you a bunch of information, organized in three sections. In the bottom section, labeled `wlan0`, look for `inet addr`. The numbers that follow (something like 192.168.1.233) are your IP address. Knowing this will come in handy if you want to log in remotely using ssh.
 
 
 ## Create a git repo and get the starter code
