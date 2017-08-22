@@ -9,7 +9,7 @@ due: 2017-08-25 16:45:00.00-7
 
 # Tables
 
-Welcome to lab 3!  This week, we'll learn about *tables*, which let us work with multiple arrays of data about the same things. Tables are described in [a ebook chapter](http://www.inferentialthinking.com/chapters/05/tables.html).
+In this lab, we'll learn about *tables*, which let us work with multiple arrays of data about the same things. Tables are described in [a ebook chapter](http://www.inferentialthinking.com/chapters/05/tables.html).
 
 First, setup the coding environment and start to execute code
 
