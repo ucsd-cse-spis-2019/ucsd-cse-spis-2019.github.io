@@ -37,7 +37,7 @@ from datascience import *
 
 This will import the right packages.
 
-Now let's start the lab. 
+Now let's start the lab. When turning in the lab, turn in the code that you complete for each of the questions in a python file. Clearly number the answers such as #Q2.1 etc.
 
 ## 1. Introduction
 
@@ -81,7 +81,7 @@ Now the data are all together in a single table! It's much easier to parse this 
 
 ## 2. Creating Tables
 
-**Question 2.1.** In the code below, we've created 2 arrays. Using the steps above, assign `top_10_movies` to a table that has two columns called "Rating" and "Name", which hold `top_10_movie_ratings` and `top_10_movie_names` respectively.
+**Question 2.1.** In the code below, we've created 2 arrays. Using the steps above, assign `top_10_movies` to a table that has two columns called "Rating" and "Name", which hold `top_10_movie_ratings` and `top_10_movie_names` respectively. You can copy and paste the following code into the ipython shell and complete the `top_10_movies` statement
 
 ```
 top_10_movie_ratings = make_array(9.2, 9.2, 9., 8.9, 8.9, 8.9, 8.9, 8.9, 8.9, 8.8)
@@ -99,6 +99,90 @@ top_10_movie_names = make_array(
 
 top_10_movies = ...
 # We've put this next line here so your table will get printed out when you
-# run this cell.
+# run this complete this question
 top_10_movies
+```
+#### Loading a table from a file
+In most cases, we aren't going to go through the trouble of typing in all the data manually. Instead, we can use our `Table` functions.
+
+`Table.read_table` takes one argument, a path to a data file (a string) and returns a table.  There are many formats for data files, but CSV ("comma-separated values") is the most common.
+
+**Question 2.2.** The file `imdb.csv` contains a table of information about the 250 highest-rated movies on IMDb.  Load it as a table called `imdb`.
+
+```
+imdb = ...
+imdb
+```
+Notice the part about "... (240 rows omitted)."  This table is big enough that only a few of its rows are displayed, but the others are still there.  10 are shown, so there are 250 movies total.
+
+Where did `imdb.csv` come from? Take a look at [this lab's folder](./). You should see a file called `imdb.csv`.
+
+Open up the `imdb.csv` file in that folder and look at the format. What do you notice? The `.csv` filename ending says that this file is in the [CSV (comma-separated value) format](http://edoceo.com/utilitas/csv-file-format).
+
+## 3. Using lists
+
+A *list* is another Python sequence type, similar to an array. It's different than an array because the values it contains can all have different types. A single list can contain `int` values, `float` values, and strings. Elements in a list can even be other lists! A list is created by giving a name to the list of values enclosed in square brackets and separated by commas. For example, `values_with_different_types = ['data', 8, ['lab', 3]]`
+
+Lists can be useful when working with tables because they can describe the contents of one row in a table, which often  corresponds to a sequence of values with different types. A list of lists can be used to describe multiple rows.
+
+Each column in a table is a collection of values with the same type (an array). If you create a table column from a list, it will automatically be converted to an array. A row, on the ther hand, mixes types.
+
+Here's a table. (Run the statements below.)
+
+```
+# Run this cell to recreate the table
+flowers = Table().with_columns(
+    'Number of petals', make_array(8, 34, 5),
+    'Name', make_array('lotus', 'sunflower', 'rose')
+)
+flowers
+```
+**Question 3.1.** Create a list that describes a new fourth row of this table. The details can be whatever you want, but the list must contain two values: the number of petals (an `int` value) and the name of the flower (a string). How about the "pondweed"? Its flowers have zero petals.
+
+```
+my_flower = ...
+my_flower
+```
+## 4. Analyzing datasets
+With just a few table methods, we can answer some interesting questions about the IMDb dataset.
+
+If we want just the ratings of the movies, we can get an array that contains the data in that column:
+```
+imdb.column("Rating")
+```
+The value of that expression is an array, exactly the same kind of thing you'd get if you typed in `make_array(8.4, 8.3, 8.3, [etc])`.
+
+**Question 4.1.** Find the rating of the highest-rated movie in the dataset.
+
+*Hint:* Think back to the functions you've learned about for working with arrays of numbers.  Ask for help if you can't remember one that's useful for this.
+
+```
+highest_rating = ...
+highest_rating
+```
+
+That's not very useful, though.  You'd probably want to know the *name* of the movie whose rating you found!  To do that, we can sort the entire table by rating, which ensures that the ratings and titles will stay together.
+```
+imdb.sort("Rating")
+```
+Well, that actually doesn't help much, either -- we sorted the movies from lowest -> highest ratings.  To look at the highest-rated movies, sort in reverse order:
+
+```
+imdb.sort("Rating", descending=True)
+```
+(The `descending=True` bit is called an *optional argument*. It has a default value of `False`, so when you explicitly tell the function `descending=True`, then the function will sort in descending order.)
+
+So there are actually 2 highest-rated movies in the dataset: *The Shawshank Redemption* and *The Godfather*.
+
+Some details about sort:
+
+1. The first argument to `sort` is the name of a column to sort by.
+2. If the column has strings in it, `sort` will sort alphabetically; if the column has numbers, it will sort numerically.
+3. The value of `imdb.sort("Rating")` is a *copy of `imdb`*; the `imdb` table doesn't get modified. For example, if we called `imdb.sort("Rating")`, then running `imdb` by itself would still return the unsorted table.
+4. Rows always stick together when a table is sorted.  It wouldn't make sense to sort just one column and leave the other columns alone.  For example, in this case, if we sorted just the "Rating" column, the movies would all end up with the wrong ratings.
+
+**Question 4.2.** Create a version of `imdb` that's sorted chronologically, with the earliest movies first.  Call it `imdb_by_year`.
+```
+imdb_by_year = ...
+imdb_by_year
 ```
