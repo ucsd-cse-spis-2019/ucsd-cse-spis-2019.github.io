@@ -92,7 +92,7 @@ The pins that are colored in orange are available for any general purpose and ca
 
 1. Physical location: One way is to just refer to the pins based on their physical location. These numbers are indicated in the gray boxes in the above diagram. All pins on the left half have odd number locations while all pins on the right half have even numbered locations.
 
-2. BRCM (broadcom convention): You can also use the broadcomm convention where the numbering is not based on the physical location. For example the pin at physical location 12 is referred to as pin number 18 (note that you drop the 'GPIO' part) as per the BRCM convention.
+2. BCM (broadcom convention): You can also use the broadcomm convention where the numbering is not based on the physical location. For example the pin at physical location 12 is referred to as pin number 18 (note that you drop the 'GPIO' part) as per the BCM convention.
 
 Either of the above conventions is okay to use in your programs as long as you define which scheme you are using before you start referring to the pins.
 
@@ -104,7 +104,7 @@ The GPIO breakout board shown below makes all these pins available to you on a b
 ![GPIO-breakout](/images/labs/images/RPi/breakout.jpg){:height="300px"} 
 </p>
 
-Notice that the labels on the breakout board use the BRCM naming convention. However, we have connected the breakout board in such a way that you can easily derive the physical pin number of any pin by looking at the row number that it is connected to on the breadboard. Answer the following questions based on your understanding of the breadboard and the GPIO numbering scheme:
+Notice that the labels on the breakout board use the BCM naming convention. However, we have connected the breakout board in such a way that you can easily derive the physical pin number of any pin by looking at the row number that it is connected to on the breadboard. Answer the following questions based on your understanding of the breadboard and the GPIO numbering scheme:
 
 * What is the physical number for a pin on the left half of the breadboard on the nth row number, for any 'n'? 
 * What is the physical number for a pin on the right half of the breadboard on the nth row number, for any 'n'? 
@@ -213,9 +213,9 @@ The `setup()` function takes care of the one time configurations related to usin
 GPIO.setmode(GPIO.BOARD) # Use the physical numbering scheme
 ```
 
-If we chose to use the BRCM scheme, that line should be replaced by the following:
+If we chose to use the BCM scheme, that line should be replaced by the following:
 ```
-GPIO.setmode(GPIO.BRCM) # Use the BRCM numbering scheme 
+GPIO.setmode(GPIO.BCM) # Use the BCM numbering scheme 
 ```
 
 For the remainder of the lab we will use the physical numbering scheme. Before proceeding further identify GPIO pin number 11 on your breadboard. You will need this for wiring your circuit.
