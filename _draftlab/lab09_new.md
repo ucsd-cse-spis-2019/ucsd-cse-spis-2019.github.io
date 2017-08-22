@@ -13,7 +13,7 @@ Welcome to lab 3!  This week, we'll learn about *tables*, which let us work with
 
 First, setup the coding environment and start to execute code
 
-# Step 1: Create a lab09 repo
+# First, create a lab09 repo
 
 Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab09start
 
@@ -37,6 +37,7 @@ from datascience import *
 
 This will import the right packages.
 
+Now let's start the lab. 
 
 ## 1. Introduction
 
@@ -81,3 +82,23 @@ Now the data are all together in a single table! It's much easier to parse this 
 ## 2. Creating Tables
 
 **Question 2.1.** In the code below, we've created 2 arrays. Using the steps above, assign `top_10_movies` to a table that has two columns called "Rating" and "Name", which hold `top_10_movie_ratings` and `top_10_movie_names` respectively.
+
+```
+top_10_movie_ratings = make_array(9.2, 9.2, 9., 8.9, 8.9, 8.9, 8.9, 8.9, 8.9, 8.8)
+top_10_movie_names = make_array(
+        'The Shawshank Redemption (1994)',
+        'The Godfather (1972)',
+        'The Godfather: Part II (1974)',
+        'Pulp Fiction (1994)',
+        "Schindler's List (1993)",
+        'The Lord of the Rings: The Return of the King (2003)',
+        '12 Angry Men (1957)',
+        'The Dark Knight (2008)',
+        'Il buono, il brutto, il cattivo (1966)',
+        'The Lord of the Rings: The Fellowship of the Ring (2001)')
+
+top_10_movies = ...
+# We've put this next line here so your table will get printed out when you
+# run this cell.
+top_10_movies
+```
