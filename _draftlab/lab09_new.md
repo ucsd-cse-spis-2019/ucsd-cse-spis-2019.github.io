@@ -53,6 +53,19 @@ years = np.arange(1950, 2015+1)
 print("Population column:", population_amounts)
 print("Years column:", years)
 ```
+Suppose we want to answer this question:
 
+> When did world population cross 6 billion?
+
+You could technically answer this question just from staring at the arrays, but it's a bit convoluted, since you would have to count the position where the population first crossed 6 billion, then find the corresponding element in the years array. In cases like these, it might be easier to put the data into a *`Table`*, a 2-dimensional type of dataset. 
+
+The expression below:
+
+- creates an empty table using the expression `Table()`,
+- adds two columns by calling `with_columns` with four arguments,
+- assignes the result to the name `population`, and finally
+- evaluates `population` so that we can see the table.
+
+The strings `"Year"` and `"Population"` are column labels that we have chosen. Ther names `population_amounts` and `years` were assigned above to two arrays of the same length. The function `with_columns` (you can find the documentation [here](http://data8.org/datascience/tables.html)) takes in alternating strings (to represent column labels) and arrays (representing the data in those columns), which are all separated by commas.
 
 
