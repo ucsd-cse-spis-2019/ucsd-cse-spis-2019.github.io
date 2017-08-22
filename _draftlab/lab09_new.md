@@ -186,3 +186,54 @@ Some details about sort:
 imdb_by_year = ...
 imdb_by_year
 ```
+**Question 4.3.** What's the title of the earliest movie in the dataset?  You could just look this up from the output of the previous cell.  Instead, write Python code to find out.
+
+*Hint:* Starting with `imdb_by_year`, extract the Title column to get an array, then use `item` to get its first item.
+```
+earliest_movie_title = ...
+earliest_movie_title
+```
+## 5. Finding pieces of a dataset
+Suppose you're interested in movies from the 1940s.  Sorting the table by year doesn't help you, because the 1940s are in the middle of the dataset.
+
+Instead, we use the table method `where`.
+```
+forties = imdb.where('Decade', are.equal_to(1940))
+forties
+```
+Ignore the syntax for the moment.  Instead, try to read that line like this:
+
+> Assign the name **`forties`** to a table whose rows are the rows in the **`imdb`** table **`where`** the **`'Decade'`**s **`are` `equal` `to` `1940`**.
+
+**Question 5.1.** Compute the average rating of movies from the 1940s.
+
+*Hint:* The function `np.average` computes the average of an array of numbers.
+```
+average_rating_in_forties = ...
+average_rating_in_forties
+```
+Now let's dive into the details a bit more.  `where` takes 2 arguments:
+
+1. The name of a column.  `where` finds rows where that column's values meet some criterion.
+2. Something that describes the criterion that the column needs to meet, called a predicate.
+
+To create our predicate, we called the function `are.equal_to` with the value we wanted, 1940.  We'll see other predicates soon.
+
+`where` returns a table that's a copy of the original table, but with only the rows that meet the given predicate.
+
+**Question 5.2.** Create a table called `ninety_nine` containing the movies that came out in the year 1999.  Use `where`.
+```
+ninety_nine = ...
+ninety_nine
+```
+So far we've only been finding where a column is *exactly* equal to a certain value. However, there are many other predicates.  Here are a few:
+
+|Predicate|Example|Result|
+|-|-|-|
+|`are.equal_to`|`are.equal_to(50)`|Find rows with values equal to 50|
+|`are.not_equal_to`|`are.not_equal_to(50)`|Find rows with values not equal to 50|
+|`are.above`|`are.above(50)`|Find rows with values above (and not equal to) 50|
+|`are.above_or_equal_to`|`are.above_or_equal_to(50)`|Find rows with values above 50 or equal to 50|
+|`are.below`|`are.below(50)`|Find rows with values below 50|
+|`are.between`|`are.between(2, 10)`|Find rows with values above or equal to 2 and below 10|
+
