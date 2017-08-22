@@ -68,4 +68,16 @@ The expression below:
 
 The strings `"Year"` and `"Population"` are column labels that we have chosen. Ther names `population_amounts` and `years` were assigned above to two arrays of the same length. The function `with_columns` (you can find the documentation [here](http://data8.org/datascience/tables.html)) takes in alternating strings (to represent column labels) and arrays (representing the data in those columns), which are all separated by commas.
 
+Create the population table by executing the following python statements
+```
+population = Table().with_columns(
+    "Population", population_amounts,
+    "Year", years
+)
+population
+```
+Now the data are all together in a single table! It's much easier to parse this data--if you need to know what the population was in 1959, for example, you can tell from a single glance. We'll revisit this table later.
 
+## 2. Creating Tables
+
+**Question 2.1.** In the code below, we've created 2 arrays. Using the steps above, assign `top_10_movies` to a table that has two columns called "Rating" and "Name", which hold `top_10_movie_ratings` and `top_10_movie_names` respectively.
