@@ -15,7 +15,7 @@ First, setup the coding environment and start to execute code
 
 # First, create a lab09 repo
 
-Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab09start
+Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter file from this git repo: https://github.com/ucsd-cse-spis-2017/lab09starter
 
 Then use `git clone` to clone this into your `~/github` directory.
 
@@ -26,6 +26,10 @@ Run commands in terminal
 
 ```
 ipython
+```
+Once you are in the ipython interface, run pylab by typing the following command
+
+```
 %pylab
 ```
 
@@ -114,7 +118,7 @@ imdb
 ```
 Notice the part about "... (240 rows omitted)."  This table is big enough that only a few of its rows are displayed, but the others are still there.  10 are shown, so there are 250 movies total.
 
-Where did `imdb.csv` come from? Take a look at [this lab's folder](./). You should see a file called `imdb.csv`.
+Where did `imdb.csv` come from? Take a look at your current folder. You should see a file called `imdb.csv`.
 
 Open up the `imdb.csv` file in that folder and look at the format. What do you notice? The `.csv` filename ending says that this file is in the [CSV (comma-separated value) format](http://edoceo.com/utilitas/csv-file-format).
 
@@ -136,9 +140,10 @@ flowers = Table().with_columns(
 )
 flowers
 ```
-**Question 3.1.** Create a list that describes a new fourth row of this table. The details can be whatever you want, but the list must contain two values: the number of petals (an `int` value) and the name of the flower (a string). How about the "pondweed"? Its flowers have zero petals.
+**Question 3.1.** Create a list that describes a new fourth row of this table. The details can be whatever you want, but the list must contain two values: the number of petals (an `int` value) and the name of the flower (a string). How about the "pondweed"? Its flowers have zero petals. Create the list for pondweed and insert it into the original flowers table. The new table's name is my_flower
 
 ```
+pondweed = 
 my_flower = ...
 my_flower
 ```
@@ -153,7 +158,7 @@ The value of that expression is an array, exactly the same kind of thing you'd g
 
 **Question 4.1.** Find the rating of the highest-rated movie in the dataset.
 
-*Hint:* Think back to the functions you've learned about for working with arrays of numbers.  Ask for help if you can't remember one that's useful for this.
+*Hint:* Think back to the functions you've learned about for working with arrays of numbers in the numpy package.  Ask for help if you can't remember one that's useful for this.
 
 ```
 highest_rating = ...
@@ -285,5 +290,7 @@ For your reference, here's a table of all the functions and methods you may find
 |`take`|`tbl.take(np.arange(0, 6, 2))`|Create a copy of the table with only the rows whose indices are in the given array|
 
 <br/>
+
+More information about Tables can be found [here](http://data8.org/datascience/tables.html)
 
 Alright! You're finished with lab 09!
