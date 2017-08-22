@@ -16,12 +16,6 @@ In this lab you will be introduced to the basics of electronics using a a credit
 
 # Getting started
 
-## Create a git repo and get the starter code
-Use your laptop to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}). (If you forgot to import the starter code, no problem. There are instructions a bit further on to fix it.)
-
-**Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group.**
-
-
 ## Observe your Raspberry Pi
 Take a look at the Raspberry Pi on your workbench. You are looking at the insides of a computer. The Pi is not shy about exposing its true self. You would see a similar circuit if you cracked open the shiny shell of your laptop (which is probably not a great idea to quench your curiosity). As you stare down at your Pi, you see an all-encompassing circuit. Your gut feeling may be that it all looks very complex. Your premonitions are not misplaced. The circuit that you are looking at is not called the motherboard for nothing. 
 
@@ -125,19 +119,31 @@ Notice that the labels on the breakout board use the BRCM naming convention. How
 The operating system on the Pi is a version of the Linux known as Raspbian. The picture above shows the Raspbian desktop environment. Feel free to poke around and see what all of these icons mean!
 
 
-### The WiFi config tool
-This tool shows the status of your Wifi connection and internet connectivity.
-Use the mouse navigate to the WiFi Config Tool on your desktop. Double click on it to view the status of your network connection. Take note of the IP address in the GUI of that tool. Your IP address is of the form: 137.110.XX.XX. If you see such a number then you have internet connectivity. You can use the IP to remotely access your Pi from any other computer using ssh (just like how you log into the ieng6 machines, more on this later).
-./xecutable.sh
-wifisetup.sh
-
-
 ### Terminal
 Terminal is the command line interpreter. It is the icon on the top bar showing `>_`. Click it to open. You can also find it under the main menu (the raspberry icon), and the Accessories submenu. 
 When you open Terminal notice the prompt says `pi@XXXX`. This means that you are user `pi` and the name of your machine is `XXXX`.
 All the unix commands that you have learned so far can be used to navigate through the file system on your Pi. You can also use command line git just like how you would on the ieng6 machines!
 
 
+### WiFi
+You need to configure the on-board WiFi module with your credentials to be able to use the UCSD-Protected network. Open a Terminal window. Type the command (this is execute a script to set up the WiFi with your credentials; make sure you don't forget the `./`)
+
+`./wifisetup.sh`
+
+You should be prompted for your username and password. Your Pi will automatically reboot. 
+When it is done rebooting and you are back to your desktop environment, click the WiFi icon in the top right corner. It should indicate that you are now connected to the UCSD-Protected network.
+
+Note: To learn the IP address of your Pi, open a Terminal window and type:
+
+`ifconfig`
+
+It was show you a bunch of information, organized in three sections. In the bottom section, labeled `wlan0`, look for `inet addr`. The numbers that follow (something like 192.168.1.233) are your IP address. Knowing this will come in handy if you want to log in remotely into your Pi.
+
+
+## Create a git repo and get the starter code
+Use your laptop or the Pi to create a new repo called `spis17-lab08-Name-Name` using [Method 1](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}). (If you forgot to import the starter code, no problem. There are instructions a bit further on to fix it.)
+
+**Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group.**
 
 
 ## Set up your programming environment
