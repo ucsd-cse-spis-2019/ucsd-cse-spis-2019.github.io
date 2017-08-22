@@ -34,7 +34,6 @@ This is where we will start to use tables to read in and analyze data. Firs type
 import numpy as np
 from datascience import *
 ```
-
 This will import the right packages.
 
 Now let's start the lab. When turning in the lab, turn in the code that you complete for each of the questions in a python file. Clearly number the answers such as #Q2.1 etc.
@@ -237,3 +236,54 @@ So far we've only been finding where a column is *exactly* equal to a certain va
 |`are.below`|`are.below(50)`|Find rows with values below 50|
 |`are.between`|`are.between(2, 10)`|Find rows with values above or equal to 2 and below 10|
 
+**Question 5.3.** Using `where` and one of the predicates from the table above, find all the movies with a rating higher than 8.5.  Put their data in a table called `really_highly_rated`.
+```
+really_highly_rated = ...
+really_highly_rated
+```
+**Question 5.4.** Find the average rating for movies released in the 20th century and the average rating for movies released in the 21st century for the movies in `imdb`.
+
+*Hint*: Think of the steps you need to do (take the average, find the ratings, find movies released in 20th/21st centuries), and try to put them in an order that makes sense.
+```
+average_20th_century_rating = ...
+average_21st_century_rating = ...
+print("Average 20th century rating:", average_20th_century_rating)
+print("Average 21st century rating:", average_21st_century_rating)
+```
+**Question 5.5.** Here's a challenge: Find the number of movies that came out in *even* years.
+
+*Hint:* The operator `%` computes the remainder when dividing by a number.  So `5 % 2` is 1 and `6 % 2` is 0.  A number is even if the remainder is 0 when you divide by 2.
+
+*Hint 2:* `%` can be used on arrays, operating elementwise like `+` or `*`.  So `make_array(5, 6, 7) % 2` is `array([1, 0, 1])`.
+
+*Hint 3:* Create a column called "Year Remainder" that's the remainder when each movie's release year is divided by 2.  Make a copy of `imdb` that includes that column.  Then use `where` to find rows where that new column is equal to 0.  Then use `num_rows` to count the number of such rows.
+```
+num_even_year_movies = ...
+num_even_year_movies
+```
+**Question 5.6.** Check out the `population` table from the introduction to this lab.  Compute the year when the world population first went above 6 billion.
+```
+year_population_crossed_6_billion = ...
+year_population_crossed_6_billion
+```
+## 7. Summary
+
+For your reference, here's a table of all the functions and methods you may find useful for table related functions.
+
+|Name|Example|Purpose|
+|-|-|-|
+|`Table`|`Table()`|Create an empty table, usually to extend with data|
+|`Table.read_table`|`Table.read_table("my_data.csv")`|Create a table from a data file|
+|`with_columns`|`tbl = Table().with_columns("N", np.arange(5), "2*N", np.arange(0, 10, 2))`|Create a copy of a table with more columns|
+|`column`|`tbl.column("N")`|Create an array containing the elements of a column|
+|`sort`|`tbl.sort("N")`|Create a copy of a table sorted by the values in a column|
+|`where`|`tbl.where("N", are.above(2))`|Create a copy of a table with only the rows that match some *predicate*|
+|`num_rows`|`tbl.num_rows`|Compute the number of rows in a table|
+|`num_columns`|`tbl.num_columns`|Compute the number of columns in a table|
+|`select`|`tbl.select("N")`|Create a copy of a table with only some of the columns|
+|`drop`|`tbl.drop("2*N")`|Create a copy of a table without some of the columns|
+|`take`|`tbl.take(np.arange(0, 6, 2))`|Create a copy of the table with only the rows whose indices are in the given array|
+
+<br/>
+
+Alright! You're finished with lab 09!
