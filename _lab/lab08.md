@@ -130,7 +130,7 @@ You need to configure the on-board WiFi module with your credentials to be able 
 
 `./wifisetup.sh`
 
-You should be prompted for your username and password. Your Pi will automatically reboot. 
+You should be prompted for your **wifi** username and password. Your Pi will automatically reboot. 
 When it is done rebooting and you are back to your desktop environment, click the WiFi icon in the top right corner. It should indicate that you are now connected to the UCSD-Protected network.
 
 Note: To learn the IP address of your Pi, open a Terminal window and type:
@@ -156,7 +156,7 @@ Use your laptop or the Pi to create a new repo called `spis17-lab08-Name-Name` u
 
 ```
 
-* Clone your git repo **over https** into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop (not the Pi) and navigate to your repo on github which should be called `spis17-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The **https address** should be something like `https://github.com/ucsd-cse-spis-2017/spis17-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
+* Clone your git repo **over https** into your home directory on the Pi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on your laptop or the Pi, and navigate to your repo on github which should be called `spis17-lab08-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The **https address** should be something like `https://github.com/ucsd-cse-spis-2017/spis17-lab08-Name-Name.git`. Do not use the ssh address as you have in the past.
 
 Make sure you have the starter code which are the files `01_blinking_led.py` and `02_buttonLED.py` in your repo. If you did not import the starter code when creating the repo, you can copy it over from the directory /home/pi/lab08-startercode/ on the Pi
 To do this type the following command replacing the second argument by the name of your repo
@@ -226,7 +226,7 @@ The code in setup() configures pin number 11 to be an output pin using the comma
 To summarize as part of the setup you must do two important GPIO configurations 
 
 * Specify the numbering convention (either GPIO.BOARD or GPIO.BRCM). To do this use the function GPIO.setmode(mode), where mode may be GPIO.BOARD or GPIO.BRCM
-* Set up the GPIO pins that you are using in your circuits as either input OR output pins depending on your usage of those pins. To configure any pin as an output pin you must say: GPIO.setup(mypin, GPIO.OUT). To configure the same pin as an input pin you must say: GPIO.setup(mypin, GPIO.OUT).
+* Set up the GPIO pins that you are using in your circuits as either input OR output pins depending on your usage of those pins. To configure any pin as an output pin you must say: GPIO.setup(mypin, GPIO.OUT). To configure the same pin as an input pin you must say: GPIO.setup(mypin, GPIO.IN).
 
 
 Now look at the code in the 'loop()' function. You may notice that unlike any of the programs that you have written thus far the code in the 'loop()' function repeats forever because it is in a `while True` loop. Any ideas why that is?
@@ -254,7 +254,7 @@ Wire up the circuit shown by the following diagram. We will use the physical pin
 ![RPi-desktop](/images/labs/images/RPi/led_circuit.png){:height="100px"} 
 </p>
 
-Ask an instructor or mentor is you don't understand the diagram. For more in depth information on configuring GPIO pins as outputs refer to [this website](http://www.scriptoriumdesigns.com/embedded/gpio_out.php).
+Ask an instructor or mentor is you don't understand the diagram. For more in depth information on configuring GPIO pins as outputs refer to [this website](https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/).
 
 Now, run the `01_blinking_led.py` program that is in your repo in idle3. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is most likely with your wiring. If you were successful reason about the correctness of the program. For example why does your program output a low voltage on pin 11 to turn the LED on and a high voltage to turn it off.
 
@@ -338,7 +338,11 @@ Each of the LED segments has one of its connection pins out of the package. Thes
 * Once you have a drawing of your circuit get it verified by an instructor or mentor.
 * Only after you've completed the previous step, wire your circuit.
 * Create a file called `03_7seg.py` in your git repo and write a program that displays the numerals 0 - 9 in sequence then cycles back to 0. Each numeral should be displayed for 1 second.
-* Create a file called `04_7seg.py` in your git repo. Now write a program that combines your current circuit with the button circuit from the previous exercise: display the number of button presses so far on the 7 segment display. You can only count till 9 and have to reset back to zero once the button is pressed more than 9 times. Make sure you push all your code to the github repo.
+* Create a file called `04_7seg.py` in your git repo. Now write a program that combines your current circuit with the button circuit from the previous exercise: display the number of button presses so far on the 7 segment display. You can only count till 9 and have to reset back to zero once the button is pressed more than 9 times. 
+
+
+
+**Make sure you push all your code to the github repo.**
 
 
 Congratulations on finishing lab 8!! You now have successfully built and controlled circuits via software. We will build on this knowledge as we venture deeper into hardware and robotics!
