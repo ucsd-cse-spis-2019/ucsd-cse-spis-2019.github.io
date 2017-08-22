@@ -19,7 +19,7 @@ Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using
 
 Then use `git clone` to clone this into your `~/github` directory.
 
-In the repo, you will see that there are three files, world_population.csv, imdb.csv, and farmers_markets.csv. They are used in this lab for data analysis. 
+In the repo, you will see that there are three files, world_population.csv and imdb.csv. They are used in this lab for data analysis. 
 
 # Step 2: start ipython and get into the pylab mode
 Run commands in terminal
