@@ -2,7 +2,7 @@
 num: "aps3"
 desc: "Greedy-Method-and-Iterative-Improvement"
 ready: true
-assigned: 2017-08-23 08:45:00.00-7:00
+assigned: 2017-08-23 11:00:00.00-7:00
 due: 2017-08-27 22:00:00.00-7:00
 layout: default
 ---
