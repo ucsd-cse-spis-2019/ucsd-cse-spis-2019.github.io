@@ -3,14 +3,15 @@ layout: lab
 num: lab10
 ready: false
 desc: "Functions and Visualization"
-assigned: 2017-08-28 13:15:00.00-7
-due: 2017-08-30 16:45:00.00-7
+assigned: 2017-08-27 13:15:00.00-7
+due: 2017-08-29 16:45:00.00-7
 ---
 
+## This lab is optional. If you are interesed in data analytics, it is a good lab for you!
 
 Welcome to lab 10! We'll practice functions and the table method `apply` from [this ebook description](https://www.inferentialthinking.com/chapters/07/1/applying-a-function-to-a-column.html).  We'll also learn about visualization from [a chapter in data8](https://www.inferentialthinking.com/chapters/06/visualization.html).
 
-# First, create a lab10 repo
+## First, create a lab10 repo
 
 Go to github.com and create a new repo called spis16-lab10-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab10starter
 
@@ -18,7 +19,7 @@ Then use `git clone` to clone this into your `~/github` directory.
 
 In the repo, you will see that there are three files, world_population.csv and imdb.csv. They are used in this lab for data analysis. 
 
-# Step 2: start ipython and get into the pylab mode
+## Step 2: start ipython and get into the pylab mode
 Run commands in terminal
 
 ```
