@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab10
-ready: false
+ready: ready
 desc: "Functions and Visualization"
 assigned: 2017-08-27 13:15:00.00-7
 due: 2017-08-29 16:45:00.00-7
