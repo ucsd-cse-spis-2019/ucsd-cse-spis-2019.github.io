@@ -142,3 +142,132 @@ The special instruction `return` in a function's body tells Python to make the v
         """Converts a proportion to a percentage."""
         factor = 100
         return proportion * factor
+**Question 2.1.** Define `to_percentage` in the cell below.  Call your function to convert the proportion .2 to a percentage.  Name that percentage `twenty_percent`.
+
+```
+def ...
+    """ ... """
+    ... = ...
+    return ...
+
+twenty_percent = ...
+twenty_percent
+```
+Like the built-in functions, you can use named values as arguments to your function.
+
+**Question 2.2.** Use `to_percentage` again to convert the proportion named `a_proportion` (defined below) to a percentage called `a_percentage`.
+
+*Note:* You don't need to define `to_percentage` again!  Just like other named things, functions stick around after you define them.
+```
+a_proportion = 2**(.5) / 2
+a_percentage = ...
+a_percentage
+```
+Here's something important about functions: the names assigned within a function body are only accessible within the function body. Once the function has returned, those names are gone.  So even though you defined `factor = 100` inside `to_percentage` above and then called `to_percentage`, you cannot refer to `factor` anywhere except inside the body of `to_percentage`:
+
+**Question 2.3.** Define a function called `disemvowel`.  It should take a single string as its argument.  (You can call that argument whatever you want.)  It should return a copy of that string, but with all the characters that are vowels removed.  (In English, the vowels are the characters "a", "e", "i", "o", and "u".)
+
+*Hint:* To remove all the "a"s from a string, you can use `that_string.replace("a", "")`.  And you can call `replace` multiple times.
+```
+def disemvowel(a_string):
+    ...
+    ...
+
+# An example call to your function.  (It's often helpful to run
+# an example call from time to time while you're writing a function,
+# to see how it currently works.)
+disemvowel("Can you read this without vowels?")
+```
+
+##### Calls on calls on calls
+Just as you write a series of lines to build up a complex computation, it's useful to define a series of small functions that build on each other.  Since you can write any code inside a function's body, you can call other functions you've written.
+
+If a function is a like a recipe, defining a function in terms of other functions is like having a recipe for cake telling you to follow another recipe to make the frosting, and another to make the sprinkles.  This makes the cake recipe shorter and clearer, and it avoids having a bunch of duplicated frosting recipes.  It's a foundation of productive programming.
+
+For example, suppose you want to count the number of characters *that aren't vowels* in a piece of text.  One way to do that is this to remove all the vowels and count the size of the remaining string.
+
+**Question 2.4.** Write a function called `num_non_vowels`.  It should take a string as its argument and return a number.  The number should be the number of characters in the argument string that aren't vowels.
+
+*Hint:* The function `len` takes a string as its argument and returns the number of characters in it.
+
+```
+def num_non_vowels(a_string):
+    """The number of characters in a string, minus the vowels."""
+    ...
+```
+Functions can also encapsulate code that *does things* rather than just computing values.  For example, if you call `print` inside a function, and then call that function, something will get printed.
+
+The `movies_by_year` dataset has information about movie sales in recent years.  You can read it in and show the first 10 rows by doing
+```
+movies_by_year = Table.read_table("movies_by_year.csv")
+movies_by_year
+```
+
+Suppose you'd like to display the year with the 5th-highest total gross movie sales, printed in a human-readable way.  You might do this:
+
+```
+rank = 5
+fifth_from_top_movie_year = movies_by_year.sort("Total Gross", descending=True).column("Year").item(rank-1)
+print("Year number", rank, "for total gross movie sales was:", fifth_from_top_movie_year)
+```
+After writing this, you realize you also wanted to print out the 2nd and 3rd-highest years.  Instead of copying your code, you decide to put it in a function.  Since the rank varies, you make that an argument to your function.
+
+**Question 2.5.** Write a function called `print_kth_top_movie_year`.  It should take a single argument, the rank of the year (like 2, 3, or 5 in the above examples).  It should print out a message like the one above.  It shouldn't have a `return` statement.
+
+```
+def print_kth_top_movie_year(k):
+    # Our solution used 2 lines.
+    ...
+    ...
+
+# Example calls to your function:
+print_kth_top_movie_year(2)
+print_kth_top_movie_year(3)
+```
+
+## 3. `apply`ing functions
+
+Defining a function is a lot like giving a name to a value with `=`.  In fact, a function is a value just like the number 1 or the text "the"!
+
+For example, we can make a new name for the built-in function `max` if we want:
+```
+our_name_for_max = max
+our_name_for_max(2, 6)
+```
+The old name for `max` is still around:
+```
+max(2, 6)
+```
+Try just writing `max` or `our_name_for_max` (or the name of any other function) in a cell, and run that cell.  Python will print out a (very brief) description of the function.
+```
+max
+```
+Why is this useful?  Since functions are just values, it's possible to pass them as arguments to other functions.  Here's a simple but not-so-practical example: we can make an array of functions.
+```
+make_array(max, np.average, are.equal_to)
+```
+**Question 3.1.** Make an array containing any 3 other functions you've seen.  Call it `some_functions`.
+
+```
+some_functions = ...
+some_functions
+```
+Working with functions as values can lead to some funny-looking code.  For example, see if you can figure out why this works:
+```
+make_array(max, np.average, are.equal_to).item(0)(4, -2, 7)
+```
+
+Here's a simpler example that's actually useful: the table method `apply`.
+
+`apply` calls a function many times, once on *each* element in a column of a table.  It produces an array of the results.  Here we use `apply` to convert every CEO's pay to a number, using the function you defined:
+
+```
+raw_compensation.apply(convert_pay_string_to_number, "Total Pay")
+```
+Here's an illustration of what that did:
+
+<img src="apply.png"/>
+
+Note that we didn't write something like `convert_pay_string_to_number()` or `convert_pay_string_to_number("Total Pay")`.  The job of `apply` is to call the function we give it, so instead of calling `convert_pay_string_to_number` ourselves, we just write its name as an argument to `apply`.
+
+**Question 2.** Using `apply`, make a table that's a copy of `raw_compensation` with one more column called "Total Pay (\$)".  It should be the result of applying `convert_pay_string_to_number` to the "Total Pay" column, as we did above.  Call the new table `compensation`.
