@@ -279,3 +279,21 @@ compensation = raw_compensation.with_column(
 compensation
 ```
 
+Now that we have the pay in numbers, we can compute things about them.
+
+**Question 3.3.** Compute the average total pay of the CEOs in the dataset.
+```
+average_total_pay = 
+average_total_pay
+```
+## 4. Histograms
+Earlier, we computed the average pay among the CEOs in our 102-CEO dataset.  The average doesn't tell us everything about the amounts CEOs are paid, though.  Maybe just a few CEOs make the bulk of the money, even among these 102.
+
+We can use a *histogram* to display more information about a set of numbers.  The table method `hist` takes a single argument, the name of a column of numbers.  It produces a histogram of the numbers in that column.
+
+**Question 4.1.** Make a histogram of the pay of the CEOs in `compensation`. Hint: type help(compensation.hist) to know more about drawing histograms.
+```
+...
+```
+
+**Question 2.** Looking at the histogram, how many CEOs made more than \$30 million?  (Answer the question with code.  *Hint:* Use the table method `where` and the property `num_rows`.)
