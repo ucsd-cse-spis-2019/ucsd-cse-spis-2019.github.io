@@ -49,3 +49,36 @@ Run the following command in ipython
 raw_compensation = Table.read_table('raw_compensation.csv')
 raw_compensation
 ```
+**Question 1.** We want to compute the average of the CEOs' pay. Try running the statements and **You should see an error**
+```
+np.average(raw_compensation.column("Total Pay"))
+```
+
+Let's examine why this error occured by looking at the values in the "Total Pay" column. Use the `type` function and set `total_pay_type` to the type of the first value in the "Total Pay" column.
+```
+total_pay_type = ...
+total_pay_type
+```
+
+**Question 2.** You should have found that the values in "Total Pay" column are `numpy.ndarray` which means it is not data, but most likely just text (string). It doesn't make sense to take the average of the text values, so we need to convert them to numbers if we want to do this. Extract the first value in the "Total Pay" column.  It's Mark Hurd's pay in 2015, in *millions* of dollars.  Call it `mark_hurd_pay_string`.
+```
+mark_hurd_pay_string = ...
+mark_hurd_pay_string
+```
+**Question 3.** Convert `mark_hurd_pay_string` to a number of *dollars*.  The string method `strip` will be useful for removing the dollar sign; it removes a specified character from the start or end of a string.  For example, the value of `"100%".strip("%")` is the string `"100"`.  You'll also need the function `float`, which converts a string that looks like a number to an actual number.  Last, remember that the answer should be in dollars, not millions of dollars.
+```
+mark_hurd_pay = ...
+mark_hurd_pay
+```
+To compute the average pay, we need to do this for every CEO.  But that looks like it would involve copying this code 102 times.
+
+This is where functions come in.  First, we'll define a new function, giving a name to the expression that converts "total pay" strings to numeric values.  Later in this lab we'll see the payoff: we can call that function on every pay string in the dataset at once.
+
+**Question 4.** Copy the expression you used to compute `mark_hurd_pay` as the `return` expression of the function below, but replace the specific `mark_hurd_pay_string` with the generic `pay_string` name specified in the first line of the `def` statement.
+
+```
+def convert_pay_string_to_number(pay_string):
+    """Converts a pay string like '$100' (in millions) to a number of dollars."""
+    return ...
+```
+
