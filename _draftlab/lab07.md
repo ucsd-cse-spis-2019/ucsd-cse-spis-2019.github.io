@@ -9,13 +9,15 @@ due: 2017-08-22 15:45:00.00-7
 
 If you find typos or problems with the lab instructions, please report them on Piazza.
 
-## Technical Glitches
-
-We are still working with ACMS to get Heroku installed and working properly on the SPIS accounts. We will let you all know as soon as we hear back from them. In the meantime, please complete Part 1 through 2.5 and have fun with Web Apps and Flask!
 
 # This lab is still a work in progress
 
 We'll be add parts to it as we progress.
+
+## Technical Glitches
+
+We are still working with ACMS to get Heroku installed and working properly on the SPIS accounts. We will let you all know as soon as we hear back from them. In the meantime, please complete Part 1 through 2.5 and have fun with Web Apps and Flask!
+
 
 # Part 1: Getting Started
 
