@@ -4,7 +4,7 @@ num: lab10
 ready: false
 desc: "Functions and Visualization"
 assigned: 2017-08-28 13:15:00.00-7
-due: 2017-08-22 16:45:00.00-7
+due: 2017-08-30 16:45:00.00-7
 ---
 
 
@@ -26,11 +26,26 @@ ipython
 %pylab
 ```
 
-This is where we will start to use tables to read in and analyze data. Firs type in
+This is where we will start to use tables to read in and analyze data. First type in
 ```
 import numpy as np
 from datascience import *
+import matplotlib
+import matplotlib.pyplot as plt
+plt.style.use('fivethirtyeight')
 ```
-This will import the right packages.
+This will import the right packages. The matplotlib package will allow us to have graphing capabilities
 
 Now let's start the lab. When turning in the lab, turn in the code that you complete for each of the questions in a python file. Clearly number the answers such as #Q2.1 etc.
+
+## 1. Functions and CEO Incomes
+
+Let's start with a real data analysis task.  We'll look at the 2015 compensation of CEOs at the 100 largest companies in California.  The data were compiled for a Los Angeles Times analysis [here](http://spreadsheets.latimes.com/california-ceo-compensation/), and ultimately came from [filings](https://www.sec.gov/answers/proxyhtf.htm) mandated by the SEC from all publicly-traded companies.  Two companies have two CEOs, so there are 102 CEOs in the dataset.
+
+We've copied the data in raw form from the LA Times page into a file called `raw_compensation.csv`.  (The page notes that all dollar amounts are in millions of dollars.)
+Run the following command in ipython
+
+```
+raw_compensation = Table.read_table('raw_compensation.csv')
+raw_compensation
+```
