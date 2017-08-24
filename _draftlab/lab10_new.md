@@ -291,9 +291,13 @@ Earlier, we computed the average pay among the CEOs in our 102-CEO dataset.  The
 
 We can use a *histogram* to display more information about a set of numbers.  The table method `hist` takes a single argument, the name of a column of numbers.  It produces a histogram of the numbers in that column.
 
-**Question 4.1.** Make a histogram of the pay of the CEOs in `compensation`. Hint: type help(compensation.hist) to know more about drawing histograms.
+**Question 4.1.** Make a histogram of the pay of the CEOs in `compensation`. Hint: type help(compensation.hist) to know more about drawing histograms. Can you count number of CEOs who make more than 30 million a year?
 ```
 ...
 ```
 
-**Question 2.** Looking at the histogram, how many CEOs made more than \$30 million?  (Answer the question with code.  *Hint:* Use the table method `where` and the property `num_rows`.)
+**Question 4.2.** Looking at the histogram, how many CEOs made more than \$30 million?  (Answer the question with code.  *Hint:* Use the table method `where` and the property `num_rows`.)
+```
+num_ceos_more_than_30_million = ...
+```
+Great job! :D You're finished with lab 10! 
