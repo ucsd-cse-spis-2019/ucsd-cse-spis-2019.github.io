@@ -5,6 +5,7 @@ desc: "Get started with Data Science Projects"
 week: "3"
 indent: true
 link_topic_desc_only: true
+ready: true
 ---
 
 
