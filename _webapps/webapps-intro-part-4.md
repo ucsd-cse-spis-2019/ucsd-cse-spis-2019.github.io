@@ -94,7 +94,7 @@ After doing `git push heroku master`, you'll probably see lots of output, showin
 
 If there are errors, check them by typing `heroku logs`
 
-Try entering the URL on your phone or your laptop! You should be able to convert temperatures and miles to kilometers from anywhere now!
+Try entering your unique URL for you webapp on your phone or your laptop! You should be able to convert temperatures and miles to kilometers from anywhere now!
 
 ## Brief recap on order of commands
 
