@@ -1,0 +1,164 @@
+import math
+import random
+import pylab
+import imageio
+import os
+import re
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+
+class Point(object):
+    def __init__(self, coords):
+
+        #COORDS is list of coordinates
+        self.coords = coords
+        self.X = coords[0]
+        self.Y = coords[1]
+
+    def __repr__(self):
+        return str(self.coords)
+    
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+
+class Cluster(object):
+    def __init__(self, points):
+
+        self.points = points
+        self.centroid = self.calculateCentroid()
+        
+
+    def calculateCentroid(self):
+        numPoints = len(self.points)
+        
+        xCoords, yCoords = [],[]
+        xSum, ySum = 0,0
+        
+        for p in self.points:
+            xCoords.append(p.X)
+            xSum += p.X
+            yCoords.append(p.Y)
+            ySum += p.Y
+
+        centroid = Point([xSum/len(xCoords), ySum/len(yCoords)])
+        return centroid
+
+
+    def renew(self, newPoints):
+        old_centroid = self.centroid
+        self.points = newPoints
+        self.centroid = self.calculateCentroid()
+        change = getDistance(old_centroid, self.centroid)
+        return change
+
+    def __repr__(self):
+        return str(self.points)
+    
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+
+def importData(numPoints):    
+    return [generateRandomPoint(0,200) for i in range(numPoints)]
+
+def generateRandomPoint(minimum, maximum):
+    return Point([random.randrange(minimum, maximum), random.randrange(minimum, maximum)])
+
+def getDistance(a, b):
+    dist = math.sqrt(((a.X - b.X)**2) + ((a.Y - b.Y)**2))
+    return dist
+    
+def kMeans(points, numClusters, cutoff):
+    initialCentroids = random.sample(points,numClusters) #make random centroids
+
+############### plot initial points ######################
+    xCentroids, yCentroids = [], []    
+    for i in initialCentroids:
+        xCentroids.append(i.X)
+        yCentroids.append(i.Y)
+    xVals, yVals = [],[]
+    for i in points:
+        xVals.append(i.X)
+        yVals.append(i.Y)
+    pylab.figure(0)
+    pylab.title("Initial Points & Centroid")
+    pylab.plot(xVals, yVals, "bo")
+    pylab.plot(xCentroids, yCentroids, "x", c = "r", ms = 8)
+    pylab.savefig('Iteration 0.png')
+    pylab.close()
+############### plot initial points ######################
+    clusterArray = []
+    for centroid in initialCentroids:
+        clusterArray.append(Cluster([centroid])) # make clusters with just centroid point
+
+    iteration = 0
+    while True:
+        lists = [[] for _ in clusterArray] #list of lists to hold points in cluster
+        iteration += 1
+
+        for p in points: # for each point
+            smallestDistance = getDistance(p,clusterArray[0].centroid)
+            clusterIndex = 0
+            for i in range(numClusters - 1):
+                distance = getDistance(p, clusterArray[i+1].
+                                       centroid)
+
+                if distance < smallestDistance:
+                    smallestDistance = distance
+                    clusterIndex = i+1 # find what cluster it belongs to
+                    
+            lists[clusterIndex].append(p) #assign it
+        biggestShift = 0.0
+        for i in range(numClusters):
+            shift = clusterArray[i].renew(lists[i]) # update cluster with new points
+            biggestShift = max(biggestShift, shift)
+        plot(clusterArray, iteration)
+        if biggestShift < cutoff:
+            print("Done at %s iterations" % iteration)
+            print("WAIT UNTIL FINISHED. DO NOT CLOSE")
+            break
+    return clusterArray, iteration
+
+        
+def plot(clusters, iteration):
+    pylab.figure(iteration)
+    symbols = ["o", "v", "<", "1", "2", "3", "4", "s", "p", "*", "h", "H", "+", "x", "D", "d", "|"]
+    pylab.title("Iteration %s" % iteration)
+    print("Iteration %s" % iteration)
+    symbolCounter = -1
+    for i in clusters:
+        symbolCounter += 1
+        xVals, yVals = [],[]
+        for ii in i.points:
+            xVals.append(ii.X)
+            yVals.append(ii.Y)
+        pylab.plot(xVals, yVals, symbols[symbolCounter])
+        pylab.plot(i.centroid.X, i.centroid.Y, "x",c = "r", ms = 8)
+        print(i.centroid.X, i.centroid.Y)
+    print("-----------------------------------------------------------")
+    pylab.savefig('Iteration %s.png' % iteration)
+    pylab.close()
+
+def pngToGif():
+    
+    images = []
+    path = os.path.dirname(os.path.abspath(__file__))
+    dirArray = natural_sort(os.listdir(path)) 
+    for file in dirArray:
+        if file.endswith(".png"):
+            images.append(imageio.imread(file))
+            os.remove(file)
+            kargs = { 'duration': 0.3 }
+            imageio.mimsave("animation.gif", images,'GIF', **kargs)
+
+def natural_sort(l): 
+    convert = lambda text: int(text) if text.isdigit() else text.lower() 
+    alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
+    return sorted(l, key = alphanum_key)
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+
+cutoff = 0.2
+print("", flush = True)
+numPoints =  int(input("How many random points do you want? ")) 
+numClusters = int(input("How many clusters do you want? "))
+points = importData(numPoints)
+
+finalClusterArray, iterations = kMeans(points, numClusters, cutoff) # run Main code
+pngToGif()
+
