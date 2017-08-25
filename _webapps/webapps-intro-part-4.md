@@ -94,6 +94,17 @@ After doing `git push heroku master`, you'll probably see lots of output, showin
 
 If there are errors, check them by typing `heroku logs`
 
+Try entering the URL on your phone or your laptop! You should be able to convert temperatures and miles to kilometers from anywhere now!
+
+## Brief recap on order of commands
+
+We just added another step in our software development. Just as a reminder, this is the order you should follow as you make changes to your programs:
+
+1. git add filename
+2. git commit -m "Meaningful and informative message"
+3. git push origin master
+4. git push heroku master
+
 # A side note about that "itsdangerous" thing 
 
 
