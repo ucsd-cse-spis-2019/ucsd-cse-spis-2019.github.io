@@ -8,7 +8,7 @@ link_topic_desc_only: true
 ---
 
 
-# Depth for week 3
+# Robotics Depth (Curt)
 
-TBD
+Lecture slides: [Intro to Electronics](SPIS Lecture 28 - Intro to Robotics.pdf)
 
