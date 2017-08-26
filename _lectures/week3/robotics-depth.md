@@ -11,5 +11,5 @@ ready: true
 
 # Robotics Depth (Curt)
 
-Lecture slides: [Intro to Robotics](SPIS Lecture 28 - Intro to Robotics.pdf)
+Lecture slides: [Intro to Robotics](https://ucsd-cse-spis-2017.github.io/lectures/week3/SPIS Lecture 28 - Intro to Robotics.pdf)
 
