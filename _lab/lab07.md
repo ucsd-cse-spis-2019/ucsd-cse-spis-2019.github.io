@@ -11,7 +11,7 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Technical Glitches
 
-We are still working with ACMS to get Heroku installed and working properly on the SPIS accounts. We will let you all know as soon as we hear back from them. In the meantime, please complete Part 1 through 2.5 and have fun with Web Apps and Flask!
+Everything should be working now with Heroku and ACMS! If you run into any problems, please let a mentor or instructor know. 
 
 
 # Part 1: Getting Started
@@ -52,5 +52,11 @@ apps you already created, i.e.  `spis16-lab07-part1-Name-Name` and `spis16-lab07
 [Webapps Part 4, Convert Existing Flask App to run on Heroku](/webapps/webapps-intro-part-4/)
 
 Add a link in the README.md of each of your github repos to the address of the running app on Heroku.
+
+# Part 5: Working with Sessions in Flask
+
+Read this short write-up on working with the idea of sessions. Although the example Heroku app is no longer hosted, the Github repository is still available for you and your partner. Try to go through the files and see if you and your partner understands how all the pieces fit together. This part of the lab does not require any additional code to your Lab 07 repositories.
+
+[Webapps Part 5, Working with Sessions in Flask](/webapps/webapps-intro-part-5/)
 
 When you've done that, you are finished with lab07---let your mentor know and ask them for some feedback.
