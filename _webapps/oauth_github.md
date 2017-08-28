@@ -13,8 +13,8 @@ To get there:
 
 |  Step | What it looks like |
 |-------|--------------------|
-| 1. Choose Settings from upper right drop down menu next to your personal avatar | ![choose settings menu](oauth/choose_settings_menu.png) |
-| 2. Find the Developer Menu, which is pretty far down the page on the left hand side.  Find OAuth Applications on that menu | ![choose OAUTH applications from developer menu](oauth/choose_developer_oauth_applications.png) |
+| 1. Choose Settings from upper right drop down menu next to your personal avatar | ![choose settings menu](/webapps/oauth/choose_settings_menu.png) |
+| 2. Find the Developer Menu, which is pretty far down the page on the left hand side.  Find OAuth Applications on that menu | ![choose OAUTH applications from developer menu](/webapps/oauth/choose_developer_oauth_applications.png) |
 
 
 ![The page that shows the callback url](/webapps/oauth/oauth-flask-urls-50.png)
