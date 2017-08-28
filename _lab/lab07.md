@@ -55,7 +55,7 @@ Add a link in the README.md of each of your github repos to the address of the r
 
 # Part 5: Working with Sessions in Flask
 
-Read this short write-up on working with the idea of sessions. Although the example Heroku app is no longer hosted, the Github repository is still available for you and your partner. Try to go through the files and see if you and your partner understands how all the pieces fit together. This part of the lab does not require any additional code to your Lab 07 repositories.
+Read this short write-up on working with the idea of sessions. Click the link to the web app hosted on Heroku and have each partner try the form out. Next, go through the files on Github and see if you and your partner understands how all the pieces fit together. This part of the lab does not require any additional code to your Lab 07 repositories.
 
 [Webapps Part 5, Working with Sessions in Flask](/webapps/webapps-intro-part-5/)
 
