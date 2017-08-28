@@ -93,6 +93,15 @@ Authentication successful.
 [spis15t7@ieng6-240]$ 
 ```
 
+Note: If you run into issues, delete all the Heroku files and re-update. The command to do this is:
+
+```
+cd ~/.local/share
+rm -rf heroku
+```
+
+Next, return to your web app directory and run `heroku update`. 
+
 # Step 5: Set up a new Heroku Application using the heroku command (at the Linux prompt on ACMS)
 
 Next, make sure you are inside your repo folder by using ls and pwd to check your current directory.
