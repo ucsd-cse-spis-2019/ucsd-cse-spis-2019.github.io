@@ -33,7 +33,7 @@ Maybe&mdash;maybe not.  There is a below section that will ask a few questions t
 There are a few simple questions to determine whether your web app needs user logins or not
 
 1.  <b>Do you need to save any information between sessions</b>?    
-    * If the answer is yes, then that means your web app will need a [Database](ucsd-cse-spis-2017.github.io/_webapps/databases.md).  
+    * If the answer is yes, then that means your web app will need a [Database](/_webapps/databases.md).  
     * And if you need a database, <b>you'll need user logins, so you'll need OAuth</b>
     * This is true even if you don't think you need to save any particular information about individual users.
     * The reason has to do with security and accountability.  Any webapp that let's users upload content 
