@@ -13,13 +13,56 @@ This tutorial assumes that you have already:
 
 # TODO: Insert instructions for adding OAuth to an existing non-OAuth based flask app with sessions
 
-We're going to create a basic webapp with OAuth, step-by-step. We're going to break down each and every part, especially the OAuth code that will be going in. First, create a repo on Github called `spis17-oauth-org-example-Name1-Name2`, add your partner, and then clone the repo into your github directory on your local workstation. Don't forget to commit when you finished implementing a feature or think it is a good place to save your work.
+We're going to create a basic webapp with OAuth, step-by-step, with Github, restricting it to only the people inside the 2017 SPIS Github Organization. We're going to break down each and every part, especially the OAuth code that will be going in. First, create a repo on Github called `spis17-oauth-org-example-Name1-Name2`, add your partner, and then clone the repo into your github directory on your local workstation. Don't forget to commit when you finished implementing a feature or think it is a good place to save your work.
 
 # Templates Set-Up
 
 Before we dive into OAuth, we need to get some other files set up. First, we're going to set up the templates that render the webpages themselves. Inside your `spis17-oauth-org-example-Name1-Name2` directory, create a `templates` folder using the mkdir command. Then, cd into it. 
 
-The code for `layout.html` is: 
+Here is the code for `layout.html`. Notice the similarities and differences from the lab. We'll explain the flash_messages in a bit. 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Bootstrap -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>{% raw %}{% block title %}{% endblock %}{% endraw %} - My Webpage</title>
+
+
+  </head>
+  <body>
+    {% raw %}{% include 'navbar.html' %}{% endraw %}
+
+
+    <div id="content">
+    <!-- Serves as placeholder for flash_messages depending on the result from Github login -->
+    {% raw %}{% include 'flash_messages.html' %} {% endraw %}
+
+  {% raw %}{% block content %}{% endblock %}{% endraw %}</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+```
 
 The code for `home.html` is:
 
@@ -43,5 +86,89 @@ github organization: {{ github_org }} </p>
 
 
 {% raw %}{% endblock %} {% endraw %}
+```
+
+Here is the code for `navbar.html`. Notice the if-statements using the Jinja2 templates. It checks whether or not the user is logged in and updates what is shown on the navigation bar accordingly. Where does logged_in get its value? It pulls session data, injected from `webapp.py` (more on that later).
+
+```html
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/page1">Page 1</a></li>
+        <li><a href="page2">Page 2</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+      
+   <!-- Checks if logged_in is true to display your github avatar and name -->  
+   <!-- logged_in is injected from webapp.py using the token from OAuth -->
+	{% raw %}{% if logged_in %}{% endraw %}
+
+	      <li><a class="navbar-brand" href="#">
+	      <img src="{{ session['user_data']['avatar_url'] }}&s=30" 
+		     width="30" height="30" style="display: inline-block;" ></a></li>
+     
+	      <li><p class="navbar-text">{{ session['user_data']['name']}}</p></li>	
+        <li><p class="navbar-text">Github userid: {{ session['user_data']['login']}}</li>
+	{% endif %}
+  
+        <!-- Displays the correct button to log the user in or out -->
+        <li>
+          {% raw %}{% if logged_in %}{% endraw %}
+	          <a href="/logout">Logout</a>
+	        {% raw %}{% else %}{% endraw %}
+	          <a href="/login">Login</a>
+	        {% raw %}{% endif %} {% endraw %}
+	      </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+```
+
+Next, we'll have the code for two sample pages, `page1.html` and `page2.html`. Notice the code on `page1.html`. The `<pre>` tags indicate an area for preformatted text. If this webapp has user data from being logged in via Github and Oauth, information will be presented there. If logged out, it'll remain empty. Here is `page1.html`:
+
+```html
+{% raw %}{% extends "layout.html" %}{% endraw %}
+
+{% raw %}{% block title %}{% endraw %}page1{% raw %}{% endblock %}{% endraw %}
+
+{% raw %}{% block content %}{% endraw %}
+  <h1>This is Page 1</h1>
+
+<p>Lorem ipsum sit dolor amet.</p>
+
+<pre>
+{{ dump_user_data }}
+</pre>
+
+{% raw %}{% endblock %}{% endraw %}
+```
+
+Here is `page2.html`:
+```html
+{% raw %}{% extends "layout.html" %}
+
+{% raw %}{% block title %}{% endraw %}page1{% raw %}{% endblock %}{% endraw %}
+
+{% raw %}{% block content %}{% endraw %}
+  <h1>This is Page 2</h1>
+
+<p>Lorem ipsum Tritons rule!</p>
+
+{% raw %}{% endblock %}{% endraw %}
 
 ```
