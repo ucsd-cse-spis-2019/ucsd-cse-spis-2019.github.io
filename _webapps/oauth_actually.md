@@ -64,6 +64,7 @@ Here is the code for `layout.html`. Notice the similarities and differences from
 </html>
 ```
 
+
 The code for `home.html` is:
 
 ```html
@@ -80,10 +81,7 @@ The code for `home.html` is:
 
 <p>This is a sample application to demonstrate authenticating against github oauth,
 using Flask, on Heroku.   This app restricts logins only to members of the 
-github organization: {{ github_org }} </p>
-
-<p>The source code is available on github at <a href="">TODO</a></p>
-
+github organization: {% raw %}{{ github_org }}{% endraw %} </p>
 
 {% raw %}{% endblock %} {% endraw %}
 ```
