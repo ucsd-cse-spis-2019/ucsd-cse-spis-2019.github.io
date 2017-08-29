@@ -231,7 +231,7 @@ Remember, in order for our webapp to be hosted on Heroku, we need to create thes
 web: gunicorn webapp:app --log-file=-
 ```
 
-Your `requirements.txt` should have these lines: 
+Your `requirements.txt` should have these lines (Note the additional two lines at the bottom in this lesson): 
 
 ```
 Flask==0.10.1
