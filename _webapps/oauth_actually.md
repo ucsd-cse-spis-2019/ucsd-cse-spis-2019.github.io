@@ -247,4 +247,42 @@ PyGithub==1.26.0
 
 # The fun stuff: `webapp.py` and OAuth
 
-Now, we can *finally* dive deep into actual implementing OAuth. At the same level as your `templates` and `static` directories, create a file called `webapp.py`.
+Now, we can *finally* dive deep into actual implementing OAuth. At the same level as your `templates` and `static` directories, create a file called `webapp.py`. We're going to add blocks of code, one block at a time. Each block of code should appear one after the other. With each block, we will go into detail with what it is doing. 
+
+## Step 1
+
+At the top of the file we should have all the right import statements so that we have the necessary modules. Some of these modules should look familiar. Some of the new lines include importing OAuth in line 3 and importing Github in line 5.
+
+```python
+from flask import Flask, redirect, url_for, session, request, jsonify
+from flask_oauthlib.client import OAuth
+from flask import render_template, flash, Markup
+
+from github import Github
+
+import pprint
+import os
+import sys
+import traceback
+```
+
+## Step 2
+
+As you remember from the previous lessons, there are certain variables that act as keys that need be defined for the OAuth communication between our webapp and Github to work correctly. This block of code checks if these variables have not been defined. If they have not, it raises the exception, printing a message to define the 4 variables. We will go more in depth in later steps. 
+
+```python
+class GithubOAuthVarsNotDefined(Exception):
+    '''raise this if the necessary env variables are not defined '''
+
+if os.getenv('GITHUB_CLIENT_ID') == None or \
+        os.getenv('GITHUB_CLIENT_SECRET') == None or \
+        os.getenv('APP_SECRET_KEY') == None or \
+        os.getenv('GITHUB_ORG') == None:
+    raise GithubOAuthVarsNotDefined('''
+      Please define environment variables:
+         GITHUB_CLIENT_ID
+         GITHUB_CLIENT_SECRET
+         GITHUB_ORG
+         APP_SECRET_KEY
+      ''')
+```
