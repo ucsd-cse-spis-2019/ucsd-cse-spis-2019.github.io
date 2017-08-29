@@ -26,14 +26,14 @@ During SPIS 2016, we have just about a week (from Thursday of Week 4 to Thursday
 doing something that is a "commodity feature" like account management, especially when delegating that to an OAuth provider
 is *much* more straightforward.
 
-# Do I even need user logins in my SPIS 2016 webapp project
+# Do I even need user logins in my SPIS 2017 webapp project?
 
 Maybe&mdash;maybe not.  There is a below section that will ask a few questions to see whether you need authentication (user login/logout functionality) or not.  It will also check to see what level of user authentication you might need.
 
 There are a few simple questions to determine whether your web app needs user logins or not
 
 1.  <b>Do you need to save any information between sessions</b>?    
-    * If the answer is yes, then that means your web app will need a [Database](databases).  
+    * If the answer is yes, then that means your web app will need a [Database](https://ucsd-cse-spis-2017.github.io/webapps/databases/).  
     * And if you need a database, <b>you'll need user logins, so you'll need OAuth</b>
     * This is true even if you don't think you need to save any particular information about individual users.
     * The reason has to do with security and accountability.  Any webapp that let's users upload content 
@@ -73,9 +73,9 @@ If you do need user authentication, I highly recommend using OAuth based on Gith
 
 Here's why we are using Github as the OAuth provider for our sample applications:
 
-* Everyone in SPIS 2016 has a github account, so everyone in SPIS 2016 will be able to test your application
-* For certain applications, we can use the class organization, `ucsd-cse-spis-2016` as a way to further restrict logins 
-    only to people that we know (e.g. if we are using personal data or pictures that have been shared with the SPIS 2016
+* Everyone in SPIS 2017 has a github account, so everyone in SPIS 2017 will be able to test your application
+* For certain applications, we can use the class organization, `ucsd-cse-spis-2017` as a way to further restrict logins 
+    only to people that we know (e.g. if we are using personal data or pictures that have been shared with the SPIS 2017
     community, but that members of that community may not wish to be available to the general "github account having" public.)
 * Focusing on a single provider for our initial documentation of the process makes things *much* easier.
 * The instructional staff has more experience with Github's OAuth system than with the other OAuth providers out there.
@@ -117,7 +117,7 @@ Here are the code examples:
 [Flask-OAuthlib](https://flask-oauthlib.readthedocs.io/en/latest/index.html) is a Python module that you can use to add 
 authentication to your webapp via any OAuth provider.  
 
-In this section, we'll discuss how to use Github as our OAuth provider, since every SPIS 2016 participant has a github account.
+In this section, we'll discuss how to use Github as our OAuth provider, since every SPIS 2017 participant has a github account.
 
 ## `pip install Flask-OAuthlib`
 
