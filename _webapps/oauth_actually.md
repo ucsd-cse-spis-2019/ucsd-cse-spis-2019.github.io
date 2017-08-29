@@ -144,12 +144,12 @@ Next, we'll have the code for two sample pages, `page1.html` and `page2.html`. N
 {% raw %}{% block title %}{% endraw %}page1{% raw %}{% endblock %}{% endraw %}
 
 {% raw %}{% block content %}{% endraw %}
-  <h1>This is Page 1</h1>
+<h1>This is Page 1</h1>
 
 <p>Lorem ipsum sit dolor amet.</p>
 
 <pre>
-{{ dump_user_data }}
+{% raw %}{{ dump_user_data }}{% endraw %}
 </pre>
 
 {% raw %}{% endblock %}{% endraw %}
