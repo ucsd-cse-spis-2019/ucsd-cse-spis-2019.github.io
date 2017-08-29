@@ -286,3 +286,37 @@ if os.getenv('GITHUB_CLIENT_ID') == None or \
          APP_SECRET_KEY
       ''')
 ```
+
+## Step 3
+
+The first two lines are familiar to you. We call Flask to create the app and set debug to False to ensure safety. In the next line, we set the secret key (remember from sessions?) to the value found in the environment variable called 'APP_SECRET_KEY'. Since we're hosting it on Heroku, we will set these up in the next part of this article [here](), but we'll worry about that when we finish the rest of the code. Talk to a mentor if you're wondering about how to set it up on localhost. Finally, we're going to create an OAuth object with our app.
+
+```python
+app = Flask(__name__)
+
+app.debug = False
+
+app.secret_key = os.environ['APP_SECRET_KEY']
+oauth = OAuth(app)
+```
+
+## Step 4
+
+```python
+# This code originally from https://github.com/lepture/flask-oauthlib/blob/master/example/github.py
+# Edited by P. Conrad for SPIS 2016 to add getting Client Id and Secret from
+# environment variables, so that this will work on Heroku.
+
+
+github = oauth.remote_app(
+    'github',
+    consumer_key=os.environ['GITHUB_CLIENT_ID'],
+    consumer_secret=os.environ['GITHUB_CLIENT_SECRET'],
+    request_token_params={'scope': 'read:org'},
+    base_url='https://api.github.com/',
+    request_token_url=None,
+    access_token_method='POST',
+    access_token_url='https://github.com/login/oauth/access_token',
+    authorize_url='https://github.com/login/oauth/authorize'
+)
+```
