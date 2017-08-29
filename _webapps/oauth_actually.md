@@ -174,32 +174,32 @@ Finally, we have our `flash_messages.html`. Depending on how the OAuth login wen
 
 ```html
 <div class="flash-messages">
-{% with messages = get_flashed_messages(category_filter=["message"]) %}
-  {% if messages %}
+{% raw %}{% with messages = get_flashed_messages(category_filter=["message"]) %}{% endraw %}
+  {% raw %}{% if messages %}{% endraw %}
     <div class="alert alert-info">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
       
       <ul>
-        {%- for msg in messages %}
+        {% raw %}{%- for msg in messages %}{% endraw %}
           <li>{{ msg }}</li>
-        {% endfor -%}
+        {% raw %}{% endfor -%}{% endraw %}
       </ul>
     </div>
-  {% endif %}
-{% endwith %}
+  {% raw %}{% endif %}{% endraw %}
+{% raw %}{% endwith %}{% endraw %}
 
-{% with errors = get_flashed_messages(category_filter=["error"]) %}
-  {% if errors %}
+{% raw %}{% with errors = get_flashed_messages(category_filter=["error"]) %}{% endraw %}
+  {% raw %}{% if errors %}{% endraw %}
     <div class="alert alert-warning">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
       <ul>
-        {%- for msg in errors %}
+        {% raw %}{%- for msg in errors %}{% endraw %}
           <li>{{ msg }}</li>
-        {% endfor -%}
+        {% raw %}{% endfor -%}{% endraw %}
       </ul>
     </div>
-  {% endif %}
-{% endwith %}
+  {% raw %}{% endif %}{% endraw %}
+{% raw %}{% endwith %}{% endraw %}
 </div> <!-- End of class="flash-messages" -->
 
 ```
