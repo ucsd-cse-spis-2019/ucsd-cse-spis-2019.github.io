@@ -13,6 +13,8 @@ This tutorial assumes that you have already:
 
 # TODO: Insert instructions for adding OAuth to an existing non-OAuth based flask app with sessions
 
+Note: this lesson is adapted from a sample webapp created by a SPIS instructor from 2016.
+
 We're going to create a basic webapp with OAuth, step-by-step, with Github, restricting it to only the people inside the 2017 SPIS Github Organization. We're going to break down each and every part, especially the OAuth code that will be going in. First, create a repo on Github called `spis17-oauth-org-example-Name1-Name2`, add your partner, and then clone the repo into your github directory on your local workstation. Don't forget to commit when you finished implementing a feature or think it is a good place to save your work.
 
 # Templates Set-Up
@@ -165,7 +167,39 @@ Here is `page2.html`:
   <h1>This is Page 2</h1>
 
   <p>Lorem ipsum Tritons rule!</p>
-
 {% raw %}{% endblock %}{% endraw %}
+```
+
+Finally, we have our `flash_messages.html`. Depending on how the OAuth login went (successful, unsuccessful, etc.), we will get messages. In this sample webapp, we're going to display what those messages are onto our web page. Here is the code for `flash_messages.html`:
+
+```html
+<div class="flash-messages">
+{% with messages = get_flashed_messages(category_filter=["message"]) %}
+  {% if messages %}
+    <div class="alert alert-info">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      
+      <ul>
+        {%- for msg in messages %}
+          <li>{{ msg }}</li>
+        {% endfor -%}
+      </ul>
+    </div>
+  {% endif %}
+{% endwith %}
+
+{% with errors = get_flashed_messages(category_filter=["error"]) %}
+  {% if errors %}
+    <div class="alert alert-warning">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <ul>
+        {%- for msg in errors %}
+          <li>{{ msg }}</li>
+        {% endfor -%}
+      </ul>
+    </div>
+  {% endif %}
+{% endwith %}
+</div> <!-- End of class="flash-messages" -->
 
 ```
