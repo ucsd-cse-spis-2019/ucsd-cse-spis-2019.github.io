@@ -19,6 +19,8 @@ We're going to create a basic webapp with OAuth, step-by-step. We're going to br
 
 Before we dive into OAuth, we need to get some other files set up. First, we're going to set up the templates that render the webpages themselves. Inside your `spis17-oauth-org-example-Name1-Name2` directory, create a `templates` folder using the mkdir command. Then, cd into it. 
 
+The code for `layout.html` is: 
+
 The code for `home.html` is:
 
 ```html
@@ -37,7 +39,7 @@ The code for `home.html` is:
 using Flask, on Heroku.   This app restricts logins only to members of the 
 github organization: {{ github_org }} </p>
 
-<p>The source code is available on github at <a href="">TODO/a></p>
+<p>The source code is available on github at <a href="">TODO</a></p>
 
 
 {% raw %}{% endblock %} {% endraw %}
