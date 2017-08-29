@@ -107,6 +107,7 @@ Here are the code examples:
     * If you have a github account, you can log in.
     * This app only works with sessions; no connection to a database
     * No ability to store user preferences, or any other persistent data
+    * The link on the Github is no longer working. It has been rehosted to this link [here](http://protected-stream-47486.herokuapp.com).
 * Github OAuth based on organization membership: <https://github.com/ucsd-cse-spis-2016/spis16-webapps-oauth-github-org-example>
     * Checks is you have a github account, AND if you are a member of specific github organization specified by the application (e.g. `ucsd-cse-spis-2016`, for example.)
     * Like preceding one, this app only works with sessions; no connection to a database
