@@ -201,5 +201,50 @@ Finally, we have our `flash_messages.html`. Depending on how the OAuth login wen
   {% raw %}{% endif %}{% endraw %}
 {% raw %}{% endwith %}{% endraw %}
 </div> <!-- End of class="flash-messages" -->
+```
+
+# Static & Style Set-Up
+
+Next, we need to set up how the webpage elements look. Use the `cd ..` command to go up a level in your directory. You should now be back in your `spis17-oauth-org-example-Name1-Name2`. Make a directory called static, cd into it, and create a file called `style.css`. The code for this is simple:
+
+```css
+body {
+
+}
+
+#content {
+     margin-left: 20px;
+}
+
+div.flash-messages {
+  min-height: 4em;
+}
+```
+
+Once you're done with this lesson, feel free to add, remove, or change values to this file to change your webapp to the way you want it to look. 
+
+# Procfile & Requirements.txt
+
+Remember, in order for our webapp to be hosted on Heroku, we need to create these two files. Your `Procfile` should have this line:
 
 ```
+web: gunicorn webapp:app --log-file=-
+```
+
+Your `requirements.txt` should have these lines: 
+
+```
+Flask==0.10.1
+itsdangerous==0.24
+Jinja2==2.8
+MarkupSafe==0.23
+Werkzeug==0.10.4
+wheel==0.24.0
+gunicorn==19.3.0
+Flask-OAuthlib==0.9.3
+PyGithub==1.26.0
+```
+
+# The fun stuff: `webapp.py` and OAuth
+
+Now, we can *finally* dive deep into actual implementing OAuth. At the same level as your `templates` and `static` directories, create a file called `webapp.py`.
