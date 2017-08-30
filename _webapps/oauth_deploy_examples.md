@@ -21,4 +21,13 @@ First make sure you are in the directory with all your web app files.
 3. git push heroku master
    * Do this step every time you want to push your code, so basically whenever you make changes to your code
 
+# Step 2 : Register your app on Github
+1. Go to Github -> Settings -> OAuth Apps -> Register a new OAuth application 
+2. Fill in the Application Name, Homepage URL, and Authorization Callback URL as explained below
+   * Make sure to use https (not http) when writing both the homepage URL and the authorization callback URL (the screenshot says http but MAKE SURE YOU USE https)
+   * Application Name: this can be anything
+   * Homepage URL: copy and paste the url ending with herokuapp.com which you saved previously
+   * Authorization Callback URL: write the homepage URL followed by /login/authorized (url/login/authorized)
+
+
 
