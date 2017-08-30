@@ -70,7 +70,7 @@ After you add these 4 Config Vars, it should look something like this (with your
 Now go to your herokuapp URL and your app should be running!
 
 NOTE: The app owner (you) might need to authorize SPIS 2017 in order for members of SPIS 2017 to be able to log in using github. The screen should look like the one below. All you have to do is press GRANT next to ucsd-cse-spis-2017
-![github id](/images/authorize_group.png){:height="500px" width="500px"}
+![github id](/images/authorize_group.png){width="50%"}
 
 
 
