@@ -14,11 +14,20 @@ brew install heroku
 
 # Step 1
 First make sure you are in the directory with all your web app files.
-1. heroku login
-2. heroku create
+1. 
+```
+heroku login
+```
+2.
+```
+heroku create
+```
    * You only need to do “heroku create” once for your web app. You are basically initializing the connection between your web application and heroku.
    * Save the link that ends with herokuapp.com. This heroku URL will be used to register your OAuth. 
-3. git push heroku master
+3. 
+```
+git push heroku master
+```
    * Do this step every time you want to push your code, so basically whenever you make changes to your code
 
 # Step 2 : Register on Github
