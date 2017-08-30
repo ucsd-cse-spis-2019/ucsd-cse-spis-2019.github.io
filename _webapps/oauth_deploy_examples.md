@@ -39,11 +39,11 @@ $ git push heroku master
    * Homepage URL: copy and paste the url ending with herokuapp.com which you saved previously
    * Authorization Callback URL: write the homepage URL followed by /login/authorized (url/login/authorized)
 
-![github id](/images/oauth-flask-urls-50.png)
+![github id](/images/oauth-flask-urls-50.png){:width="850px"}
 
 Once you register your heroku app, GitHub will generate a Client ID and Client Secret for your application. You will need these values for the next part.
 
-![github id](/images/github-client-id-and-client-secret-example-50.png)
+![github id](/images/github-client-id-and-client-secret-example-50.png){:width="850px"}
 
 # Step 3 : Register on Heroku
 1. Log in to your Heroku account online and select your app.
@@ -64,14 +64,14 @@ The 4 Config Vars in Heroku:
 
 After you add these 4 Config Vars, it should look something like this (with your own values filled in):
 
-![config variables](/images/config_vars.png){:width="800px"}
+![config variables](/images/config_vars.png){:width="850px"}
 
 # Step 4
 Now go to your herokuapp URL and your app should be running!
 
 NOTE: The app owner (you) might need to authorize SPIS 2017 in order for members of SPIS 2017 to be able to log in using github. The screen should look like the one below. All you have to do is press GRANT next to ucsd-cse-spis-2017
 
-![github id](/images/authorize_group.png){:width="800px"}
+![github id](/images/authorize_group.png){:width="700px"}
 
 
 
