@@ -41,13 +41,13 @@ $ git push heroku master
 
 ![github id](/images/oauth-flask-urls-50.png){:width="700px"}
 
-Once you register your heroku app, GitHub will generate a Client ID and Client Secret for your application. You will need these values for the next part.
+Once you register your heroku app, GitHub will generate Client ID and Client Secret values for your application. You will need these values for the next part.
 
 ![github id](/images/github-client-id-and-client-secret-example-50.png){:width="700px"}
 
 # Step 3 : Register on Heroku
 1. Log in to your Heroku account online and select your app.
-2. Then under “Settings,” you will find a section called “Config Vars.” This is where you will assign values to the 4 configuration variables listed below. The screenshot demonstrates how to assign values to the config vars.
+2. Then under “Settings,” you will find a section called “Config Vars.” This is where you will assign values to the 4 configuration variables listed below. The screenshot below demonstrates how to assign values to the config vars.
 
 The 4 Config Vars in Heroku:
 
