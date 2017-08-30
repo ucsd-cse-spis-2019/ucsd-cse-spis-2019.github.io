@@ -1,6 +1,6 @@
 ---
 topic: "OAuth: Deploy"
-desc: "Deploying the OAuth Code on localhost, and Heroku"
+desc: "Deploying the OAuth Code on Heroku"
 indent: True
 ---
 
