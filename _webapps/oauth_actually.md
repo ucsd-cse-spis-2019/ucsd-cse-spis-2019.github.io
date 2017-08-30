@@ -336,3 +336,17 @@ The Flask-OAuth documentation says it best: "OAuth uses a token and a secret to 
 def get_github_oauth_token():
     return session.get('github_token')
 ```
+
+## Step 6 
+
+Remember logged_in and all the information we were going to have updated on our web page from setting up our templates? Here is how we are going to give those variables their values. Using the token we got from a (hopefully) successful login in the previous step, logged_in will be set to True or False, depending on whether a 'github_token' is inside our session. In addition, we're also going to see which organization the user has to be in by accessing the environment variable. 
+
+```python
+@app.context_processor
+def inject_logged_in():
+    return dict(logged_in=('github_token' in session))
+
+@app.context_processor
+def inject_github_org():
+    return dict(github_org=os.getenv('GITHUB_ORG')
+```
