@@ -64,14 +64,14 @@ The 4 Config Vars in Heroku:
 
 After you add these 4 Config Vars, it should look something like this (with your own values filled in):
 
-![config variables](/images/config_vars.png){:width="1000px"}
+![config variables](/images/config_vars.png){:width="800px"}
 
 # Step 4
 Now go to your herokuapp URL and your app should be running!
 
 NOTE: The app owner (you) might need to authorize SPIS 2017 in order for members of SPIS 2017 to be able to log in using github. The screen should look like the one below. All you have to do is press GRANT next to ucsd-cse-spis-2017
 
-![github id](/images/authorize_group.png){:width="1000px"}
+![github id](/images/authorize_group.png){:width="800px"}
 
 
 
