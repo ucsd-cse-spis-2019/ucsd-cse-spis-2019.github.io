@@ -66,7 +66,7 @@ After you add these 4 Config Vars, it should look something like this (with your
 
 <!--![config variables](/images/config_vars.png)-->
 
-<img src = "/images/config_vars.png" width="700">
+<img src = "/images/config_vars.png" width="900">
 
 # Step 4
 Now go to your herokuapp URL and your app should be running!
