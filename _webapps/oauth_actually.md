@@ -247,7 +247,7 @@ PyGithub==1.26.0
 
 # The fun stuff: `webapp.py` and OAuth
 
-Now, we can *finally* dive deep into actual implementing OAuth. At the same level as your `templates` and `static` directories, create a file called `webapp.py`. We're going to add blocks of code, one block at a time. Each block of code should appear one after the other. With each block, we will go into detail with what it is doing. 
+Now, we can *finally* dive deep into actual implementing OAuth. At the same level as your `templates` and `static` directories, create a file called `webapp.py`. We're going to add blocks of code, one block at a time. Each block of code should appear one after the other. With each block, we will go into detail with what it is doing. Do NOT copy-and-paste until you understand each step.
 
 ## Step 1
 
@@ -302,6 +302,12 @@ oauth = OAuth(app)
 
 ## Step 4
 
+Here is where we define which other service we're going to delegate logins to. In our case, it is Github. OAuth requires certain URLs so that it knows where to send the user to be able to enter their account information. This, along with other information, needs to be passed in as paramters when we create our remote app. We define where to find the values of keys and which URLs use. For example, the access_token_url for Github is https://github.com/login/oauth/access_token.
+
+Now the application is almost ready to use OAuth. We need the tokengetter, which will be covered in the next step.
+
+Flask-OAuth documentation can be found [here](https://pythonhosted.org/Flask-OAuth/). Scroll down to the 'Defining Remote Applications' for more information specific to this block. This website is also very useful for information about OAuth with Flask in general.
+
 ```python
 # This code originally from https://github.com/lepture/flask-oauthlib/blob/master/example/github.py
 # Edited by P. Conrad for SPIS 2016 to add getting Client Id and Secret from
@@ -311,7 +317,7 @@ oauth = OAuth(app)
 github = oauth.remote_app(
     'github',
     consumer_key=os.environ['GITHUB_CLIENT_ID'],
-    consumer_secret=os.environ['GITHUB_CLIENT_SECRET'],
+    consumer_secret=os .environ['GITHUB_CLIENT_SECRET'],
     request_token_params={'scope': 'read:org'},
     base_url='https://api.github.com/',
     request_token_url=None,
