@@ -55,7 +55,9 @@ The 4 Config Vars in Heroku:
 | Key  | Value  |   
 |------|--------------|
 |   GITHUB_CLIENT_ID  | This is the Client ID value generated in the previous step |
-
+|   GITHUB_CLIENT_SECRET  | This is the Client Secret value generated in the previous step |
+|   APP_SECRET_KEY  | This can be random. Just type on the keyboard randomly |
+|   GITHUB_ORG  | ucsd-cse-spis-2017 |
 
 </div>
 
