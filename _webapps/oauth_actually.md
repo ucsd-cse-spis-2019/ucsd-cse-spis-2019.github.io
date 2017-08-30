@@ -326,3 +326,13 @@ github = oauth.remote_app(
     authorize_url='https://github.com/login/oauth/authorize'
 )
 ```
+
+## Step 5
+
+The Flask-OAuth documentation says it best: "OAuth uses a token and a secret to figure out who is connecting to the remote application. After authentication/authorization this information is passed to a function on your side and it is your responsibility to remember it." How are we going to remember it? That's right, sessions (more on that at a later step). This function will get the token given to us after the user logs in with his or her Github account. 
+
+```python
+@github.tokengetter
+def get_github_oauth_token():
+    return session.get('github_token')
+```
