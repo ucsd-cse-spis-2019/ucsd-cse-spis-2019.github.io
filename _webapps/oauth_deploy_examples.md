@@ -50,3 +50,21 @@ Once you register your heroku app, GitHub will generate a Client ID and Client S
 
 The 4 Config Vars in Heroku:
 
+<style>
+div.nicer-table table * td:first-child { 
+   text-align:center;
+   font-family: Courier New, fixed;
+}
+div.nicer-table table * td { padding: 4px; }
+</style>
+
+
+<div class="nicer-table">
+
+| Key  | Value  |   
+|------|--------------|
+|   GITHUB_CLIENT_ID  | This is the Client ID value generated in the previous step |
+
+
+</div>
+
