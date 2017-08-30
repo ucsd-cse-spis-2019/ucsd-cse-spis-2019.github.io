@@ -73,7 +73,7 @@ NOTE: The app owner (you) might need to authorize SPIS 2017 in order for members
 
 <!-- ![github id](/images/authorize_group.png) -->
 
-<img src = "/images/authorize_group.png" height="700">
+<img src = "/images/authorize_group.png" height="500">
 
 
 
