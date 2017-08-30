@@ -18,7 +18,7 @@ First make sure you are in the directory with all your web app files.
 ```
 $ heroku login
 ```
-2.
+2. 
 ```
 $ heroku create
 ```
