@@ -434,3 +434,26 @@ def authorized():
 
     return redirect(url_for('home'))    
 ```
+
+## Step 9
+
+These lines of code should also look fairly familiar. We are rendering the additional pages we created in the templates folder earlier. Take note of `renderPage1()`. The `dump_user_data` from the `<pre>` tags gets defined here. It checks if we have a user logged in by checking if we have `user_data` in our session. Try out Page 1 while logged in and logged out and see how it differs! 
+
+```python
+@app.route('/page1')
+def renderPage1():
+    if 'user_data' in session:
+        user_data_pprint = pprint.pformat(session['user_data'])
+    else:
+        user_data_pprint = '';
+    return render_template('page1.html',dump_user_data=user_data_pprint)
+
+@app.route('/page2')
+def renderPage2():
+    return render_template('page2.html')
+
+if __name__ == '__main__':
+    app.run()
+```
+
+Click [here]() to go to the next part of this lesson where we deploy this example to Heroku! 
