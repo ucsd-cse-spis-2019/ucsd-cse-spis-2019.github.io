@@ -63,7 +63,7 @@ The 4 Config Vars in Heroku:
 </div>
 
 After you add these 4 Config Vars, it should look something like this (with your own values filled in):
-![config variables](/images/config_vars.png)
+![config variables](/images/config_vars.png){:width="500px" height="500px"}
 
 <!--<img src = "/images/config_vars.png" width="900">-->
 
