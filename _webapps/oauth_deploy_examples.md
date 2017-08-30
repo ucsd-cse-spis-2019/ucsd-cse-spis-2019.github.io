@@ -14,6 +14,7 @@ $ brew install heroku
 
 # Step 1
 First make sure you are in the directory with all your web app files.
+
 1. 
 ```
 $ heroku login
