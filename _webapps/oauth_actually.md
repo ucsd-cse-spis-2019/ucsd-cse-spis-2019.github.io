@@ -329,7 +329,7 @@ github = oauth.remote_app(
 
 ## Step 5
 
-The Flask-OAuth documentation says it best: "OAuth uses a token and a secret to figure out who is connecting to the remote application. After authentication/authorization this information is passed to a function on your side and it is your responsibility to remember it." How are we going to remember it? That's right, sessions (more on that at a later step). This function will get the token given to us after the user logs in with his or her Github account. 
+The Flask-OAuth documentation says it best: "OAuth uses a token and a secret to figure out who is connecting to the remote application. After authentication/authorization this information is passed to a function on your side and it is your responsibility to remember it." How are we going to remember it? That's right, sessions. We'll do more with this later. This function will get the token given to us after the user logs in with his or her Github account. 
 
 ```python
 @github.tokengetter
@@ -349,4 +349,88 @@ def inject_logged_in():
 @app.context_processor
 def inject_github_org():
     return dict(github_org=os.getenv('GITHUB_ORG')
+```
+
+## Step 7
+
+This should be a familiar step: rendering the webpages themselves. However, notice for `login()` and `logout()`, it doesn't return a render_template of a file in our templates folder. Instead, it uses our OAuth object to log in and authorize a user by first calling the url for the function `authorized()` (which we will cover in the next step). We can also pass in other parameters needed, such as telling the program to use 'https' for secure. Don't forget the `session.clear()` in `logout()` as you need to make sure each user gets their own session.
+
+```python
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/login')
+def login():
+    return github.authorize(callback=url_for('authorized', _external=True, _scheme='https'))
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    flash('You were logged out')
+    return redirect(url_for('home'))
+```
+
+## Step 8
+
+Take note of the app.route for this function. It'll be important in the next part of this lesson when we deploy it to Heroku. `resp` is a variable that holds the message from Github after the user tries to log in. After we get this, we're going to check for several things and have error-handling so that our web app produces information for our user to act upon.
+
+The first if-body checks if we got a response at all, generating and printing an appropriate error message with info detailing the error. 
+
+If we did get a response, we're going to try save various information about the user in our session, saving the token, his or her login, etc. If we run into any kind of exception, we clear the session and print the appropriate error message to notify the user with information from the Exception variable, e.
+
+If the user is able to login, we use the token we were given by Github. We have 4 different variables, each storing a particular piece of info about our user (what organization he/she is in, etc.). If at any point there is an error extracting any one of these pieces of information, our web app will notify that we were unable to connect properly with Github using this token. isMember is a boolean that checks the list of the members of the organization and sees if our user is one of them.
+
+The next if-body checks if the isMember boolean is false, printing the appropriate error message to the user and clearing the session. Otherwise, it will notify the user that he or she has successfully logged in!
+
+Finally, after all of that, it takes you back to the home page. 
+
+```python
+@app.route('/login/authorized')
+def authorized():
+    resp = github.authorized_response()
+
+    if resp is None:
+        session.clear()
+        login_error_message = 'Access denied: reason=%s error=%s full=%s' % (
+            request.args['error'],
+            request.args['error_description'],
+            pprint.pformat(request.args)
+        )        
+        flash(login_error_message, 'error')
+        return redirect(url_for('home'))    
+
+    try:
+        session['github_token'] = (resp['access_token'], '')
+        session['user_data']=github.get('user').data
+        github_userid = session['user_data']['login']
+        org_name = os.getenv('GITHUB_ORG')
+    except Exception as e:
+        session.clear()
+        message = 'Unable to login: ' + str(type(e)) + str(e)
+        flash(message,'error')
+        return redirect(url_for('home'))
+    
+    try:
+        g = Github(resp['access_token'])
+        org = g.get_organization(org_name)
+        named_user = g.get_user(github_userid)
+        isMember = org.has_in_members(named_user)
+    except Exception as e:
+        message = 'Unable to connect to Github with accessToken: ' + resp['access_token'] + " exception info: " + str(type(e)) + str(e)
+        session.clear()
+        flash(message,'error')
+        return redirect(url_for('home'))
+    
+    if not isMember:
+        session.clear() # Must clear session before adding flash message
+        message = 'Unable to login: ' + github_userid + ' is not a member of ' + org_name + \
+          '</p><p><a href="https://github.com/logout" target="_blank">Logout of github as user:  ' + github_userid + \
+          '</a></p>' 
+        flash(Markup(message),'error')
+
+    else:
+        flash('You were successfully logged in')
+
+    return redirect(url_for('home'))    
 ```
