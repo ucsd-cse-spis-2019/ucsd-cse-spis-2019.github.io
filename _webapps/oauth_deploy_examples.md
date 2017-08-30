@@ -63,7 +63,7 @@ The 4 Config Vars in Heroku:
 
 After you add these 4 Config Vars, it should look something like this (with your own values filled in):
 
-![config variables](oauth/Config Vars.png)
+![config variables](oauth/config_vars.png)
 
 # Step 4
 Now go to your herokuapp URL and your app should be running!
