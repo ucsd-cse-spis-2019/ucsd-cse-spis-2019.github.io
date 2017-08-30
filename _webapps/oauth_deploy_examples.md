@@ -38,7 +38,7 @@ $ git push heroku master
    * Homepage URL: copy and paste the url ending with herokuapp.com which you saved previously
    * Authorization Callback URL: write the homepage URL followed by /login/authorized (url/login/authorized)
 
-![github id](oauth/github-client-id-and-client-secret-example-60.png)
+![github id](oauth/oauth-flask-urls-50.png)
 
 Once you register your heroku app, GitHub will generate a Client ID and Client Secret for your application. You will need these values for the next part.
 
