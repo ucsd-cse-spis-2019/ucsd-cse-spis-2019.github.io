@@ -43,7 +43,7 @@ $ git push heroku master
 
 Once you register your heroku app, GitHub will generate a Client ID and Client Secret for your application. You will need these values for the next part.
 
-![github id](/images/github-client-id-and-client-secret-example-50.png){:width="850px"}
+![github id](/images/github-client-id-and-client-secret-example-50.png){:width="700px"}
 
 # Step 3 : Register on Heroku
 1. Log in to your Heroku account online and select your app.
