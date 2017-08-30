@@ -21,7 +21,7 @@ First make sure you are in the directory with all your web app files.
 3. git push heroku master
    * Do this step every time you want to push your code, so basically whenever you make changes to your code
 
-# Step 2 : Register your app on Github
+# Step 2 : Register on Github
 1. Go to Github -> Settings -> OAuth Apps -> Register a new OAuth application 
 2. Fill in the Application Name, Homepage URL, and Authorization Callback URL as explained below
    * Make sure to use https (not http) when writing both the homepage URL and the authorization callback URL (the screenshot says http but MAKE SURE YOU USE https)
@@ -31,4 +31,11 @@ First make sure you are in the directory with all your web app files.
 
 ![github id](https://github-client-id-and-client-secret-example-50.png)
 
+Once you register your heroku app, GitHub will generate a Client ID and Client Secret for your application. You will need these values for the next part.
+
+# Step 3 : Register on Heroku
+1. Log in to your Heroku account online and select your app.
+2. Then under “Settings,” you will find a section called “Config Vars.” This is where you will assign values to the 4 configuration variables listed below. The screenshot demonstrates how to assign values to the config vars.
+
+The 4 Config Vars in Heroku:
 
