@@ -64,7 +64,7 @@ The 4 Config Vars in Heroku:
 
 After you add these 4 Config Vars, it should look something like this (with your own values filled in):
 
-![config variables](/images/config_vars.png){:width="500px" height="500px"}
+![config variables](/images/config_vars.png){:width="75%" height="75%"}
 
 
 # Step 4
