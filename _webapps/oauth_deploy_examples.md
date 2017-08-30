@@ -29,6 +29,6 @@ First make sure you are in the directory with all your web app files.
    * Homepage URL: copy and paste the url ending with herokuapp.com which you saved previously
    * Authorization Callback URL: write the homepage URL followed by /login/authorized (url/login/authorized)
 
-![github register](https://github-client-id-and-client-secret-example-50.png)
+![github id](https://github-client-id-and-client-secret-example-50.png)
 
 
