@@ -354,7 +354,7 @@ def inject_logged_in():
 
 @app.context_processor
 def inject_github_org():
-    return dict(github_org=os.getenv('GITHUB_ORG')
+    return dict(github_org=os.getenv('GITHUB_ORG'))
 ```
 
 ## Step 7
