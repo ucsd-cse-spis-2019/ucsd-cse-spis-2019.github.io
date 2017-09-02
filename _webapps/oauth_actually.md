@@ -187,7 +187,7 @@ Finally, we have our `flash_messages.html`. Depending on how the OAuth login wen
       
       <ul>
         {% raw %}{%- for msg in messages %}{% endraw %}
-          <li>{{ msg }}</li>
+          <li>{% raw %}{{ msg }}{% endraw %}</li>
         {% raw %}{% endfor -%}{% endraw %}
       </ul>
     </div>
@@ -200,7 +200,7 @@ Finally, we have our `flash_messages.html`. Depending on how the OAuth login wen
       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
       <ul>
         {% raw %}{%- for msg in errors %}{% endraw %}
-          <li>{{ msg }}</li>
+          <li>{% raw %}{{ msg }}{% endraw %}</li>
         {% raw %}{% endfor -%}{% endraw %}
       </ul>
     </div>
