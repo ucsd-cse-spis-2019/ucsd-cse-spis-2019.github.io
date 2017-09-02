@@ -86,4 +86,20 @@ To add a collection, click the "Add Collection Button" and choose a name for you
 * The collection name may very well be the same as the database name in many simple applications (e.g. cars, counties, etc.)
 * Perhaps the best way to choose a name is think about what kind of “thing” in the real world is represented by each item in the collection. If it’s a collection of JSON objects representing movies, call it 'movies'.
 
+We don't want to create our database user inside mLab because once you type in the password, you won't be able to see it. The best way to go about this is to (1) create an `env.sh` file to create environmental variables for local hosting or (2) create these variables in Heroku for your web app. We will be doing the latter. If you're interested in the env.sh and doing this locally, talk to a mentor. 
+
+Think of a simple username such as dbuser1. Note, this is not a *human* user, but rather a "machine user", i.e. it is the user/password credentials that will be used by your Python application to connect to this database. 
+
+Next, your password will be random characters such as weaf8jawel8f8waefjawe8fjlaw8fhalwifhaw3. We will copy-and-paste that password (not literally the one on this web page) into the mLab user creation form from Heroku. Let's get jump into this part.
+
+On Heroku, go to your app's main page, go to 'Settings', and click the 'Reveal Config Vars' (This should be very familiar from OAuth and you should see your vars from it). 
+
+Make sure to add the following variables to the Config Vars (MONGO_DBNAME, MONGO_HOST, MONGO_PASSWORD, MONGO_PORT, MONGO_USERNAME) with *your* corresponding values on Heroku as shown in the photo:
+
+IMAGE HERE
+
+For example, dbuser1 would be the value for MONGO_USERNAME. Copy the value for MONGO_PASSWORD and go back to mLab. Click the tab called 'Users' and click the 'Add database user' button. Use dbuser1 (for example) and past the password in the corresponding fields. 
+
+Now you have mLab set up with a database and collection and your mlab is connected to your Heroku account through the variables.
+
 # Step 6: Implement MongoDB in your Python file
