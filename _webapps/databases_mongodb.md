@@ -12,7 +12,7 @@ For an introduction to Databases, and their role in webapps, see the article:
 
 MongoDB is a particular implementation of a NoSQL database.   There are multiple hosting providers that offer MongoDB implementations "in the cloud" as a service.
 
-The particular one we'll be using for SPIS 2016 is called mLab (<https://www.mlab.com>.  We are using mLab because:
+The particular one we'll be using for SPIS 2016 is called mLab (<https://www.mlab.com>).  We are using mLab because:
 
 * there is free tier
 * using the free tier does not require entering a credit card
