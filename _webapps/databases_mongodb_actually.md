@@ -65,6 +65,25 @@ You need to add a collection before you are ready to try any Python code that ac
 
 The Python code for accessing an mLab database has to have certain values in it. This is very similar to all of the variables we created for OAuth. Those values are:
 
-* 
+* dbuser
+* dbpassword
+* hostname (e.g. ds135912.mlab.com)
+* port number (35912)
+* database name
+
+The hostname, port and database name can be found in the information at the top of the page for your MongoDB Deployment. Look for the text under “To connect using a driver via the standard MongoDB URI”. It should look a little something like this: 
+
+```
+mongodb://<dbuser>:<dbpassword>@YOURHOSTNAME.mlab.com:PORTNUMBER/DATABASE_NAME
+```
+
+Note that dbuser and dbpassword are in `<>` and not given to you yet. The dbuser and dbpassword are things you’ll create in a step below.
+
+You also need at least one “collection” in order to do anything interesting. The first thing you’ll want to do is to add at least one collection. For simple applications, you will likely not need more than one collection. Objects inside a collection are “documents”, which is the MongoDB terminology for a single JSON (JavaScript Object Notation) object. More about JSON can be found [here](http://www.json.org).
+
+To add a collection, click the "Add Collection Button" and choose a name for your collection.
+
+* The collection name may very well be the same as the database name in many simple applications (e.g. cars, counties, etc.)
+* Perhaps the best way to choose a name is think about what kind of “thing” in the real world is represented by each item in the collection. If it’s a collection of JSON objects representing movies, call it 'movies'.
 
 # Step 6: Implement MongoDB in your Python file
