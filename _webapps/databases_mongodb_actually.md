@@ -103,3 +103,59 @@ For example, dbuser1 would be the value for MONGO_USERNAME. Copy the value for M
 Now you have mLab set up with a database and collection and your mlab is connected to your Heroku account through the variables.
 
 # Step 6: Implement MongoDB in your Python file
+
+This implementation assumes that you have already implemented [OAuth](/webapps/oauth_actually)
+
+At the top of your file, we need an additional import statement for PyMongo in order to use MongoDB:
+
+```python
+from flask_pymongo import PyMongo
+```
+
+Next, include the following code in your Python file (Probably near where you defined the OAuth variables):
+
+```python
+app.config['MONGO_HOST'] = os.environ['MONGO_HOST']
+app.config['MONGO_PORT'] = int(os.environ['MONGO_PORT'])
+app.config['MONGO_DBNAME'] = os.environ['MONGO_DBNAME']
+app.config['MONGO_USERNAME'] = os.environ['MONGO_USERNAME']
+app.config['MONGO_PASSWORD'] = os.environ['MONGO_PASSWORD']
+mongo = PyMongo(app)
+```
+
+Note the similar pattern we have implementing MongoDB as we do with OAuth. Heroku's Config Vars are analogous to a system's os environmental variables. When we host this on Heroku, your webapp will know to look in the Config Vars.
+
+## Adding Documents
+
+The code for adding documents is: 
+
+```python
+mongo.db.NAME_OF_YOUR_COLLECTION.insert( INFO_YOU_ARE_INSERTING )
+```
+
+## Finding Documents
+
+The code for finding documents is: 
+
+```python
+mongo.db.NAME_OF_YOUR_COLLECTION.find( INFO_YOU_ARE_FINDING )
+```
+
+## Example Code
+
+This function uses both the insert and find methods to insert a new message and print all of the messages in the database:
+
+```python
+def renderList():
+ message = request.args['message']
+ login = session['user_data']['login']
+ mongo.db.messages.insert(
+                    {'message':message,
+                    'login':login })
+ total = [x for x in mongo.db.messages.find()]
+ return render_template('list.html',total=total)
+```
+
+Here is the link to the Flask-PyMongo [documentation](https://flask-pymongo.readthedocs.io/en/latest/) where you can learn about the methods available. I highly suggest researching on your own as these are just some of the basic things you can do. 
+
+An example web app running databases and OAuth can be found hosted on [http://young-waters-24831.herokuapp.com](http://young-waters-24831.herokuapp.com).
