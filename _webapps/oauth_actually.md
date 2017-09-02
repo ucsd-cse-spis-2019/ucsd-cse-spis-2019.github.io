@@ -122,12 +122,12 @@ Here is the code for `navbar.html`. Notice the if-statements using the Jinja2 te
    <!-- Checks if logged_in is true to display your github avatar and name -->  
    <!-- logged_in is injected from webapp.py using the token from OAuth -->
 	{% raw %}{% if logged_in %}{% endraw %}
-	      <li><a class="navbar-brand" href="#">
-	      <img src="{{ session['user_data']['avatar_url'] }}&s=30" 
-		     width="30" height="30" style="display: inline-block;" ></a></li>
 
-	      <li><p class="navbar-text">{{ session['user_data']['name']}}</p></li>	
-              <li><p class="navbar-text">Github userid: {{ session['user_data']['login']}}</li>
+	<li><a class="navbar-brand" href="#">
+	    <img src="{% raw %}{{ session['user_data']['avatar_url'] }}{% endraw %}&s=30" 
+		 width="30" height="30" style="display: inline-block;" ></a></li>
+	<li><p class="navbar-text">{% raw %}{{ session['user_data']['name']}}{% endraw %}</p></li>	
+        <li><p class="navbar-text">Github userid: {% raw %}{{ session['user_data']['login']}}{% endraw %}</li>
 	{% raw %}{% endif %}{% endraw %}
   
         <!-- Displays the correct button to log the user in or out -->
