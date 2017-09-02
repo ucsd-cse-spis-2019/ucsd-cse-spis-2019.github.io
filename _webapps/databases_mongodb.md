@@ -73,7 +73,21 @@ pymongo==3.3.0
 
 ## Step 3: Create an mLab account on mlab.com
 
+Go to <https://www.mlab.com> and follow the instructions on the website to create a mLab account. The account name can be the name of your Web App project. You will also a receive an email, asking you to confirm your account.
+
 ## Step 4: Creating a Database (MongoDB Deployment)
+
+Once you've created an account on mLab, we're create a deployment for your database. Make sure you are logged in and on your home page. 
+
+1. Create a new database by clicking the `Create new` under the MongoDB Deployments.
+
+2. You will then be taken to a different page to choose a provider and a plan. Make sure that the plan you choose is the one that is free, that is, the 'Sandbox' plan with up to 0.5GB of storage. For the provider, we will stick with the default of Amazon Web Services.
+
+3. Next, you will be asked to choose a region. Select 'US East (Virginia)' and click the continue button.
+
+4. You are then asked to choose a database name. Choose something that make sense for your application. For example, if your database is storing information about cars, call it `carsdb` or just `cars`. If you don’t have an application in mind, you can just use `testdb`. After choosing your name, click continue.
+
+5. Finally, review all the details to make sure they're correct and click 'Submit Order'.
 
 ## Step 5: Using your MongoDB Deployment (database)
 
