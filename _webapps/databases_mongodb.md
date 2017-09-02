@@ -10,7 +10,9 @@ For an introduction to Databases, and their role in webapps, see the article:
 
 # MongoDB on mLab
 
-MongoDB is a particular implementation of a NoSQL database.   There are multiple hosting providers that offer MongoDB implementations "in the cloud" as a service.
+MongoDB is a particular implementation of a NoSQL database. It creates a Database, which contains Collections, which contains Documents. This is an image of an example: 
+
+There are multiple hosting providers that offer MongoDB implementations "in the cloud" as a service.
 
 The particular one we'll be using for SPIS 2016 is called mLab (<https://www.mlab.com>).  We are using mLab because:
 
@@ -41,8 +43,9 @@ In fact, the only free services on Heroku that do not require entering a credit 
 * The Heroku Connect add-on 
     (which is for integration with Salesforce.com, something not of particular interest to us in SPIS.)
 
+# Now, let's go through the steps to implement a MongoDB Database
 
-# `Flask-PyMongo` Python Module 
+## Step 1: Install `Flask-PyMongo` Python Module 
 
 There is a Python module called [Flask-PyMongo](http://flask-pymongo.readthedocs.io/en/latest/) that we can install with `pip install` to make working with MongoDB easier.
 
@@ -58,6 +61,8 @@ on Windows or Mac, just:
 pip install Flask-PyMongo
 ```
 
+## Step 2: Add to your `requirements.txt`
+
 You'll also need to make sure that you add these lines to the `requirements.txt` file for any webapp that you want to 
 run on Heroku with MongoDB:
 
@@ -65,6 +70,14 @@ run on Heroku with MongoDB:
 Flask-PyMongo==0.4.1
 pymongo==3.3.0
 ```
+
+## Step 3: Create an mLab account on mlab.com
+
+## Step 4: Creating a Database (MongoDB Deployment)
+
+## Step 5: Using your MongoDB Deployment (database)
+
+## Step 6: Implement MongoDB in your Python file
 
 # References
 
