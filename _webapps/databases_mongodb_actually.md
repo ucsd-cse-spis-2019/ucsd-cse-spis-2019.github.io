@@ -141,21 +141,6 @@ The code for finding documents is:
 mongo.db.NAME_OF_YOUR_COLLECTION.find( INFO_YOU_ARE_FINDING )
 ```
 
-## Example Code
-
-This function uses both the insert and find methods to insert a new message and print all of the messages in the database:
-
-```python
-def renderList():
- message = request.args['message']
- login = session['user_data']['login']
- mongo.db.messages.insert(
-                    {'message':message,
-                     'login':login })
- total = [x for x in mongo.db.messages.find()]
- return render_template('list.html',total=total)
-```
-
 Here is the link to the Flask-PyMongo [documentation](https://flask-pymongo.readthedocs.io/en/latest/) where you can learn about the methods available. I highly suggest researching on your own as these are just some of the basic things you can do. 
 
 An example web app running databases and OAuth can be found hosted on [http://young-waters-24831.herokuapp.com](http://young-waters-24831.herokuapp.com).
