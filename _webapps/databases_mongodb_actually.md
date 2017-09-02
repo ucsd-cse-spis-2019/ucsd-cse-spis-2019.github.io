@@ -151,7 +151,7 @@ def renderList():
  login = session['user_data']['login']
  mongo.db.messages.insert(
                     {'message':message,
-                    'login':login })
+                     'login':login })
  total = [x for x in mongo.db.messages.find()]
  return render_template('list.html',total=total)
 ```
