@@ -4,7 +4,7 @@ desc: "Steps to add MongoDB to your WebApp"
 indent: true
 ---
 
-Make sure you have read these articles prior:
+Make sure you have read these articles prior to beginning:
 
 * [Webapps: Databases](/webapps/databases/)
 * [MongoDB Intro](/webapps/database_mongodb)
