@@ -74,7 +74,7 @@ We are currently looking at two possibilities:
 * MongoDB, which is a NoSQL document-based system
 * Redis, which is a NoSQL key-value store
 
-More details on these will be posted here as they become available.
+To read more on MongoDB and the steps on how to implement it, click [here](/webapps/databases_mongodb) for the next article.
 
 # References
 
