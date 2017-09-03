@@ -130,7 +130,13 @@ Note the similar pattern we have implementing MongoDB as we do with OAuth. Herok
 The code for adding documents is: 
 
 ```python
-mongo.db.NAME_OF_YOUR_COLLECTION.insert( INFO_YOU_ARE_INSERTING )
+mongo.db.NAME_OF_YOUR_COLLECTION.insert_one( INFO_YOU_ARE_INSERTING )
+```
+
+MongoDB has an unique way of adding information. It is very similar to the way dictionaries work in Python. Inside the INFO_YOU_ARE_INSERTING, it will be a set of keys and values that look like `{key1: value1, key2: value2,... }`. For example, if we were adding a document about a UCSD college student, the Python code might look something like this:
+
+```python
+mongo.db.NAME_OF_YOUR_COLLECTION.insert_one( "Name": "FirstName LastName", "Major": "Computer Science", "College": "Sixth", "Class": "2021"})
 ```
 
 ## Finding Documents
@@ -141,6 +147,12 @@ The code for finding documents is:
 mongo.db.NAME_OF_YOUR_COLLECTION.find( INFO_YOU_ARE_FINDING )
 ```
 
-Here is the link to the Flask-PyMongo [documentation](https://flask-pymongo.readthedocs.io/en/latest/) where you can learn about the methods available. I highly suggest researching on your own as these are just some of the basic things you can do. 
+You might want to only find documents that meet a certain criteria. Using the example from above, perhaps we want to have a list of only the students that are in Sixth College. The code might look something like:
 
-An example web app running databases and OAuth can be found hosted on [http://fierce-citadel-23727.herokuapp.com](http://fierce-citadel-23727.herokuapp.com) and [http://young-waters-24831.herokuapp.com](http://young-waters-24831.herokuapp.com).
+```python
+mongo.db.NAME_OF_YOUR_COLLECTION.find({"College": "Sixth"})
+```
+
+Both insert_one() and find() can take in numerous parameters that allow for specific use cases. Here is the link to the Flask-PyMongo [documentation](https://flask-pymongo.readthedocs.io/en/latest/) where you can learn about the methods available. I highly suggest researching on your own as these are just couple of the many things you can do. Finding additional resources might be beneficial for your final project.
+
+An example web app running databases and OAuth can be found hosted on [http://young-waters-24831.herokuapp.com](http://young-waters-24831.herokuapp.com). The Github repo can be found on [https://github.com/ucsd-cse-spis-2017/database-oauth-example](https://github.com/ucsd-cse-spis-2017/database-oauth-example).
