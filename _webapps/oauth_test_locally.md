@@ -37,6 +37,8 @@ Replace it with your correct and corresponding Client ID and Client Secret. Save
 ```
 echo $GITHUB_ORG
 echo $GITHUB_CLIENT_ID
+echo $GITHUB_CLIENT_SECRET
+echo $APP_SECRET_KEY
 ```
 
 Let's double check that `env.sh` is, in fact, in our `.gitignore`
