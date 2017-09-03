@@ -98,9 +98,9 @@ Make sure to add the following variables to the Config Vars (MONGO_DBNAME, MONGO
 
 IMAGE HERE
 
-For example, dbuser1 would be the value for MONGO_USERNAME. Copy the value for MONGO_PASSWORD and go back to mLab. Click the tab called 'Users' and click the 'Add database user' button. Use dbuser1 (for example) and past the password in the corresponding fields. 
+For example, dbuser1 would be the value for MONGO_USERNAME. Copy the value for MONGO_PASSWORD and go back to mLab. Click the tab called 'Users' and click the 'Add database user' button. Use dbuser1 (for example) and paste the password in the corresponding fields. 
 
-Now you have mLab set up with a database and collection and your mlab is connected to your Heroku account through the variables.
+Now you have mLab set up with a database and collection and your mLab is connected to your Heroku account through the variables.
 
 # Step 6: Implement MongoDB in your Python file
 
