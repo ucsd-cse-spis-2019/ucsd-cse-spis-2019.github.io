@@ -165,7 +165,7 @@ Next, we'll have the code for two sample pages, `page1.html` and `page2.html`. N
 
 Here is `page2.html`:
 ```html
-{% raw %}{% extends "layout.html" %}
+{% raw %}{% extends "layout.html" %} {% endraw %}
 
 {% raw %}{% block title %}{% endraw %}page1{% raw %}{% endblock %}{% endraw %}
 
