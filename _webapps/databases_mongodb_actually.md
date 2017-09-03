@@ -90,7 +90,7 @@ We don't want to create our database user inside mLab because once you type in t
 
 Think of a simple username such as dbuser1. Note, this is not a *human* user, but rather a "machine user", i.e. it is the user/password credentials that will be used by your Python application to connect to this database. 
 
-Next, your password will be random characters such as weaf8jawel8f8waefjawe8fjlaw8fhalwifhaw3. We will copy-and-paste that password (not literally the one on this web page) into the mLab user creation form from Heroku. Let's get jump into this part.
+Next, your password will be random characters such as weaf8jawel8f8waefjawe8fjlaw8fhalwifhaw3. We will copy-and-paste that password (not literally the one on this web page) into the mLab user creation form from Heroku. Let's jump into this part.
 
 On Heroku, go to your app's main page, go to 'Settings', and click the 'Reveal Config Vars' (This should be very familiar from OAuth and you should see your vars from it). 
 
