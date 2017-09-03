@@ -143,4 +143,4 @@ mongo.db.NAME_OF_YOUR_COLLECTION.find( INFO_YOU_ARE_FINDING )
 
 Here is the link to the Flask-PyMongo [documentation](https://flask-pymongo.readthedocs.io/en/latest/) where you can learn about the methods available. I highly suggest researching on your own as these are just some of the basic things you can do. 
 
-An example web app running databases and OAuth can be found hosted on [http://young-waters-24831.herokuapp.com](http://young-waters-24831.herokuapp.com).
+An example web app running databases and OAuth can be found hosted on [http://fierce-citadel-23727.herokuapp.com](http://fierce-citadel-23727.herokuapp.com) and [http://young-waters-24831.herokuapp.com](http://young-waters-24831.herokuapp.com).
