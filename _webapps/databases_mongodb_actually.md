@@ -136,7 +136,7 @@ mongo.db.NAME_OF_YOUR_COLLECTION.insert_one( INFO_YOU_ARE_INSERTING )
 MongoDB has an unique way of adding information. It is very similar to the way dictionaries work in Python. Inside the INFO_YOU_ARE_INSERTING, it will be a set of keys and values that look like `{key1: value1, key2: value2,... }`. For example, if we were adding a document about a UCSD college student, the Python code might look something like this:
 
 ```python
-mongo.db.NAME_OF_YOUR_COLLECTION.insert_one( "Name": "FirstName LastName", "Major": "Computer Science", "College": "Sixth", "Class": "2021"})
+mongo.db.NAME_OF_YOUR_COLLECTION.insert_one( {"Name": "FirstName LastName", "Major": "Computer Science", "College": "Sixth", "Class": "2021"})
 ```
 
 ## Finding Documents
