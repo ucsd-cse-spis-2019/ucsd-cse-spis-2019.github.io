@@ -21,7 +21,26 @@ Follow the instructions found [here](/webapps/oauth_github) *with a few changes*
 
 Now that we have your application's Client ID and Client Secret, we need to tell your webapp where to find it. To maintain the security of our webapp, we don't want anybody to know what the values of these keys are. What we will do is create environmental variables that are saved locally on your current workstation and not available anywhere else. We will create a file called `env.sh` and write a small script that will create and set our environmental variables. As an aside, environmental variables on our local workstations are analogous to Heroku's Config Vars.
 
-**NOTE**, we do **NOT** want to include `env.sh` in our git repository. If it is, it will get pushed to your Github repos, with the keys and values online and available for anybody to see. This will compromise the security of your webapp. We add `env.sh` to our .gitignore, a file that tells Git which files to not add. 
+**NOTE**, we do **NOT** want to include `env.sh` in our git repository. If it is, it will get pushed to your Github repos, with the keys and values online and available for anybody to see. This will compromise the security of your webapp. By default, `env.sh` is added to our `.gitignore`, a file that tells Git which files to not add. 
+
+Create a file called `env.sh` on the same level as your `webapp.py`. The file should have: 
+
+```
+export GITHUB_CLIENT_ID=clientidhere
+export GITHUB_CLIENT_SECRET=clientsecrethere
+export GITHUB_ORG=ucsd-cse-spis-2017
+export APP_SECRET_KEY=randomcharactersyoutype
+```
+
+Replace it with your correct and corresponding Client ID and Client Secret. Save and go back to the command line. There, to run this script, type `. env.sh` and hit enter. Note the period and space in between. If everything worked correctly, you should be able to type this command with the variable to print out its corresponding value:
+
+```
+echo $GITHUB_ORG
+echo $GITHUB_CLIENT_ID
+```
+
+Let's double check that `env.sh` is, in fact, in our `.gitignore`
+
 
 
 # Print Statements
