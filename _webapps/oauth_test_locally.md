@@ -22,3 +22,22 @@ Follow the instructions found [here](/webapps/oauth_github) *with a few changes*
 Now that we have your application's Client ID and Client Secret, we need to tell your webapp where to find it. To maintain the security of our webapp, we don't want anybody to know what the values of these keys are. What we will do is create environmental variables that are saved locally on your current workstation and not available anywhere else. We will create a file called `env.sh` and write a small script that will create and set our environmental variables. As an aside, environmental variables on our local workstations are analogous to Heroku's Config Vars.
 
 **NOTE**, we do **NOT** want to include `env.sh` in our git repository. If it is, it will get pushed to your Github repos, with the keys and values online and available for anybody to see. This will compromise the security of your webapp. We add `env.sh` to our .gitignore, a file that tells Git which files to not add. 
+
+
+# Print Statements
+
+Sometimes, when debugging, it is very helpful to insert print statements at certain points of the code to see where the program is running, what a certain value of a variable is, and give other useful information. You might want to include some print statements to help you debug.
+
+At the very TOP of your file, include this import statement:
+
+```python
+from __future__ import print_function
+```
+
+Now, all wherever you want a print statement, you can use this line of code:
+
+```python
+print("YOUR_MESSAGE", file=sys.stderr)
+```
+
+YOUR_MESSAGE will now be print to your terminal to help you debug!
