@@ -67,7 +67,7 @@ The Python code for accessing an mLab database has to have certain values in it.
 
 * dbuser
 * dbpassword
-* hostname (e.g. ds135912.mlab.com)
+* hostname (e.g. ds135912.mlab.com) (Be sure to include the .mlab.com as well!)
 * port number (35912)
 * database name
 
