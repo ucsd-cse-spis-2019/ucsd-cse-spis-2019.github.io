@@ -18,9 +18,9 @@ The goal of this exercise is to practice test-driven code development using the 
 
 Work with your assigned pair programming partner on this lab. If you do not have one, consult with the instructors before starting.
 
-# Setting up your git repo for lab03
+# Setting up your git repo for {{page.num}}
 
-Create a joint git repo for you and your partner for lab03, following Step 2 in the [lab02](/lab/lab02/) writeup. Assuming that you have done the one time configurations related to your ACMS account, clone your newly created private repo following Step 4 of lab02.
+Create a joint git repo for you and your partner for {{page.num}}, following Step 2 in the [lab02](/lab/lab02/) writeup. Assuming that you have done the one time configurations related to your ACMS account, clone your newly created private repo following Step 4 of lab02.
 
 
 What you'll be drawing
