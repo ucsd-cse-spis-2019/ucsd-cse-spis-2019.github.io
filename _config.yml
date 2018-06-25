@@ -1,9 +1,10 @@
-name: UCSD CSE SPIS 2017 FOCS
-github_url: https://github.com/ucsd-cse-spis-2017/ucsd-cse-spis-2017.github.io
+name: UCSD CSE SPIS 2018 FOCS
+github_url: https://github.com/ucsd-cse-spis-2018/ucsd-cse-spis-2018.github.io
 mentor_url: mentor.html
 
-url: https://ucsd-cse-spis-2017.github.io/
+url: https://ucsd-cse-spis-2018.github.io/
 
+# UPDATE THESE
 piazza: https://piazza.com/class/to-be-determined
 gradescope: https://gradescope.com/courses/to-be-determined
 
@@ -13,18 +14,18 @@ google_calendar_embed: "https://calendar.google.com/calendar/embed?mode=AGENDA&a
 
 google_calendar_embed_height_600px: "https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=eng.ucsd.edu_vpkdu3a26k3alf8rt2m19054ug%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles"
 
-course_github_url: https://github.com/ucsd-cse-spis-2017
+course_github_url: https://github.com/ucsd-cse-spis-2018
 
 guttag_url: "https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0"
 
 num_weeks: 5
-start_date: 2017-08-06 00:00:00.00-7:00
-end_date: 2017-09-16 23:59:59.00-7:00
+start_date: 2017-08-05 00:00:00.00-7:00
+end_date: 2017-09-15 23:59:59.00-7:00
 
 
 hwk_course: "CSE SPIS"
 course: "UCSD CSE SPIS: Foundations of Computer Science (FOCS)"
-year: "2017"
+year: "2018"
 
 kramdown:
    parse_block_html: true
