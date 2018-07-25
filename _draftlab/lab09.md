@@ -3,290 +3,294 @@ layout: lab
 num: lab09
 ready: true
 desc: "Working With Data"
-assigned: 2017-08-17 13:15:00.00-7
-due: 2017-08-22 16:45:00.00-7
+assigned: 2017-08-22 13:15:00.00-7
+due: 2017-08-25 16:45:00.00-7
 ---
 
-# Working With Data
+# Tables
 
-In this lab, you will work with a dataset on beer reviews, curtesey from CSE faculty Julian McAuey. 
+In this lab, we'll learn about *tables*, which let us work with multiple arrays of data about the same things. Tables are described in [a ebook chapter](http://www.inferentialthinking.com/chapters/05/tables.html).
 
-# References
+First, setup the coding environment and start to execute code
 
-As you work through the steps below, you may find it helpful to refer to:
+# First, create a lab09 repo
 
-* The pages on the SPIS 2017 website about:
-    * [Python: Dictionaries](/topics/python_dictionaries/)
-    * [Python: defaultdict](/topics/python_defaultdict/)
-
-One more hint: the dictionary methods `.keys()` and `.values()` may come in handy.  This example illustrates how they work:
-
-```python
->>> foo = {'a':3, 'b':3, 'c':5 }
->>> foo.keys()
-['a', 'c', 'b']
->>> foo.values()
-[3, 5, 3]
->>> 
-```
-
-A consequence of this is that if you want to iterate over every key in a dictionary called `foo`, 
-you can just do a for loop on `foo.keys()`, e.g.
-
-```python
-   for k in foo.keys():
-       # do something with key k and value foo[k]
-```
-
-# Step 1: Create a lab09 repo
-
-Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab09start
+Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter file from this git repo: https://github.com/ucsd-cse-spis-2017/lab09starter
 
 Then use `git clone` to clone this into your `~/github` directory.
 
-# Step 2: Work with the file `non_alcoholic_data.py` file
+In the repo, you will see that there are three files, world_population.csv and imdb.csv. They are used in this lab for data analysis. 
 
-In the starter code, you'll find the file `non_alcoholic_data.py`.   Open this file in IDLE, and run it.
-
-This file loads a variable into memory called `data`.  That `data` variable is list of dictionaries.
-
-Now, you might think that the first thing you'd want to do is type `data` at the Python prompt, and hit enter, but <span style="font-weight:bold; font-size: 110%; color:red;">PLEASE DON'T DO THAT</span>.  It isn't that anything awful will
-happen; it is just that it will temporarily lock up your computer session, and you might have to close it and start over.
-
-Let's explain two things right away: 
-1.  What you should do instead
-2.  Why typing `data` and hitting enter (which you should NOT do) is a bad idea.
-
-## What you should do instead
-
-Here are several things you can do after running the `non_alcoholic_data.py` file with the `data` variable that are
-perfectly fine:
-
-1. Type `type(data)`.
-1. Type `len(data)`
-1. Type `data[0]`
-1. Type `data[42]`
-1. Type `type(data[0])`
-1. Type `data[-1]`
-
-Try each of those, and see what you get.   Your purpose right now is simply to understand what the data represents by looking through it.  
-
-For the result of `type(data[0])` you should have gotten `dict`, which stands for dictionary.
-
-If you need a review about Python dictionaries, you can consult the lecture notes from either Phill or Miles, or you can
-review this page: [Python: Dictionaries](/topics/python_dictionaries)
-
-## Why typing `data` and hitting return is a bad idea
-
-The reason is simple: data is a *huge* list.   It takes a very long time to convert that list into its string representation and then print it out in your IDLE Python Shell.     While it is doing that string conversion, your entire
-session just locks up, and it appears that nothing is happening.  Eventually, you will get your prompt back, along with a zillion pages of output.  But that probably isn't what you wanted to see.
-
-## Some other things you could do
-
-Each element in the list `data` represents a single review by some reviewer of some beer.
-
-If we want to see all the pieces of data that we can access for a review, we can just look at the string representation of a single Python dictionary for a single review, like this:
-
-```python
->>> data[0]
-{'beer/style': 'Low Alcohol Beer', 'beer/ABV': 0.1, 'beer/beerId': '59239', 'review/timeStruct': {'wday': 5, 'isdst': 0, 'mday': 2, 'hour': 21, 'min': 31, 'sec': 21, 'year': 2011, 'yday': 183, 'mon': 7}, 'review/aroma': 3.0, 'review/appearance': 3.5, 'review/timeUnix': 1309642281, 'review/palate': 3.0, 'review/taste': 3.5, 'beer/name': 'Amstel Malt', 'beer/brewerId': '163', 'review/overall': 3.0, 'review/text': "I had this 'beer' at a beachbar in IJmuiden today. Had to drive back home so i needed something without alcohol. This was a good drink for that purpose.\t\tPoured in the original Amstel glass this beer looks quit ok to be honest. Smell in not spectacular but for a malt beer ok. Watery as expected.\t\tSome sweetness in this beer. Drinkable when you have to drive....", 'user/profileName': 'Brabander'}
->>> 
-```
-
-Or, if I want to see just the keys in the dictionary, I can use `data[0].keys()`
-
-```python
->>> data[0].keys()
-['beer/style', 'beer/ABV', 'beer/beerId', 'review/timeStruct', 'review/aroma', 'review/appearance', 'review/timeUnix', 'review/palate', 'review/taste', 'beer/name', 'beer/brewerId', 'review/overall', 'review/text', 'user/profileName']
->>> 
-```
-
-If I wanted to see a list of the names, overall scores, and the review name for the first 10 beers in the list, I could use this:
+# Step 2: start ipython and get into the pylab mode
+Run commands in terminal
 
 ```
->>> for i in range(10):
-	print data[i]['beer/name'],data[i]['review/overall'],data[i]['user/profileName']
-
-	
-Amstel Malt 3.0 Brabander
-Amstel Malt 3.5 kingcrowing
-Harboe Den Glada Danskens Lättöl 2.0 gnoff
-Harboe Den Glada Danskens Lättöl 2.0 bark
-Bernard S &#269;istou Hlavou 2.0 philipquarles
-Juleøl 4.5 jreitman
-Mørkt Hvidtøl 3.5 bark
-Buckler 3.0 drabmuh
-Buckler 4.5 McStagger
-Buckler 3.0 jifigz
->>> 
+ipython
 ```
-
-However, very quickly, doing this kind of thing at the command line is going to get very tedious.
-
-You are going to get very tired of typing these long strings over and over. You'll want to define some convenient
-functions to work with this data.   
-
-So, using IDLE, create a new file called `my_analysis.py'.
-
-In that file, put this code:
-
-```python
-from non_alcoholic_data import parseData
-
-def reviewSummary(review):
-    return "beer name: " + review['beer/name'] + \
-           " overall: " + str(review['review/overall']) + \
-           " reviewer: " + review['user/profileName']
-
-
-if __name__ == "__main__":
-
-  print "Reading Data..."
-  data = list(parseData("http://jmcauley.ucsd.edu/cse255/data/beer/non-alcoholic-beer.json"))
-
-  for i in range(10):
-    print reviewSummary(data[i])
-
-  print "done"
-```
-
-The function definition `reviewSummary` provides a way to print out three particular fields, in this case:
-* `beer/name`
-* `review/overall`
-* `user/profileName`
-
-And, it customizes the label that appears next to each of those so that we can make more sense of the data
-we are looking at.   
+Once you are in the ipython interface, run pylab by typing the following command
 
 ```
-Reading Data...
-review                                          beer name             reviewer
-beer name: Amstel Malt overall: 3.0 reviewer: Brabander
-beer name: Amstel Malt overall: 3.5 reviewer: kingcrowing
-beer name: Harboe Den Glada Danskens Lättöl overall: 2.0 reviewer: gnoff
-beer name: Harboe Den Glada Danskens Lättöl overall: 2.0 reviewer: bark
-beer name: Bernard S &#269;istou Hlavou overall: 2.0 reviewer: philipquarles
-beer name: Juleøl overall: 4.5 reviewer: jreitman
-beer name: Mørkt Hvidtøl overall: 3.5 reviewer: bark
-beer name: Buckler overall: 3.0 reviewer: drabmuh
-beer name: Buckler overall: 4.5 reviewer: McStagger
-beer name: Buckler overall: 3.0 reviewer: jifigz
-done
+%pylab
 ```
 
-However, it is still a bit messy.  To make it neater, we can decide that we want the data
-to show up in some nicely aligned columns.  Here is some code that prints a few fields from the first ten review in some nice columns:
-
-```python
-def niceReviewSummary(review):
-    return str(review['review/overall']).rjust(5) + \
-           review['beer/name'].rjust(50) + \
-           review['user/profileName'].rjust(20)
-
-
-if __name__ == "__main__":
-
-  print "Reading Data..."
-  data = list(parseData("http://jmcauley.ucsd.edu/cse255/data/beer/non-alcoholic-beer.json"))
-
-  print  "review".rjust(5), "beer name".rjust(50), "reviewer".rjust(20)
-  for i in range(10):
-    print niceReviewSummary(data[i])
-
-  print "done"
+This is where we will start to use tables to read in and analyze data. Firs type in
 ```
+import numpy as np
+from datascience import *
+```
+This will import the right packages.
 
-Now the output looks like this:
+Now let's start the lab. When turning in the lab, turn in the code that you complete for each of the questions in a python file. Clearly number the answers such as #Q2.1 etc.
+
+## 1. Introduction
+
+For a collection of things in the world, an array is useful for describing a single attribute of each thing. For example, among the collection of US States, an array could describe the land area of each. Tables extend this idea by describing multiple attributes for each element of a collection.
+
+In most data science applications, we have data about many entities, but we also have several kinds of data about each entity.
+
+For example, in the cell below we have two arrays. The first one contains the world population in each year (as [estimated](http://www.census.gov/population/international/data/worldpop/table_population.php) by the US Census Bureau), and the second contains the years themselves (in order, so the first elements in the population and the years arrays correspond).
+Next, we will read in the world population by executing the following command
 
 ```
-Reading Data...
-review                                          beer name             reviewer
-  3.0                                       Amstel Malt           Brabander
-  3.5                                       Amstel Malt         kingcrowing
-  2.0                Harboe Den Glada Danskens Lättöl               gnoff
-  2.0                Harboe Den Glada Danskens Lättöl                bark
-  2.0                      Bernard S &#269;istou Hlavou       philipquarles
-  4.5                                           Juleøl            jreitman
-  3.5                                   Mørkt Hvidtøl                bark
-  3.0                                           Buckler             drabmuh
-  4.5                                           Buckler           McStagger
-  3.0                                           Buckler              jifigz
-done
+population_amounts = Table.read_table("world_population.csv").column("Population")
+years = np.arange(1950, 2015+1)
+print("Population column:", population_amounts)
+print("Years column:", years)
+```
+Suppose we want to answer this question:
+
+> When did world population cross 6 billion?
+
+You could technically answer this question just from staring at the arrays, but it's a bit convoluted, since you would have to count the position where the population first crossed 6 billion, then find the corresponding element in the years array. In cases like these, it might be easier to put the data into a *`Table`*, a 2-dimensional type of dataset. 
+
+The expression below:
+
+- creates an empty table using the expression `Table()`,
+- adds two columns by calling `with_columns` with four arguments,
+- assignes the result to the name `population`, and finally
+- evaluates `population` so that we can see the table.
+
+The strings `"Year"` and `"Population"` are column labels that we have chosen. Ther names `population_amounts` and `years` were assigned above to two arrays of the same length. The function `with_columns` (you can find the documentation [here](http://data8.org/datascience/tables.html)) takes in alternating strings (to represent column labels) and arrays (representing the data in those columns), which are all separated by commas.
+
+Create the population table by executing the following python statements
+```
+population = Table().with_columns(
+    "Population", population_amounts,
+    "Year", years
+)
+population
+```
+Now the data are all together in a single table! It's much easier to parse this data--if you need to know what the population was in 1959, for example, you can tell from a single glance. We'll revisit this table later.
+
+## 2. Creating Tables
+
+**Question 2.1.** In the code below, we've created 2 arrays. Using the steps above, assign `top_10_movies` to a table that has two columns called "Rating" and "Name", which hold `top_10_movie_ratings` and `top_10_movie_names` respectively. You can copy and paste the following code into the ipython shell and complete the `top_10_movies` statement
+
+```
+top_10_movie_ratings = make_array(9.2, 9.2, 9., 8.9, 8.9, 8.9, 8.9, 8.9, 8.9, 8.8)
+top_10_movie_names = make_array(
+        'The Shawshank Redemption (1994)',
+        'The Godfather (1972)',
+        'The Godfather: Part II (1974)',
+        'Pulp Fiction (1994)',
+        "Schindler's List (1993)",
+        'The Lord of the Rings: The Return of the King (2003)',
+        '12 Angry Men (1957)',
+        'The Dark Knight (2008)',
+        'Il buono, il brutto, il cattivo (1966)',
+        'The Lord of the Rings: The Fellowship of the Ring (2001)')
+
+top_10_movies = ...
+# We've put this next line here so your table will get printed out when you
+# run this complete this question
+top_10_movies
+```
+#### Loading a table from a file
+In most cases, we aren't going to go through the trouble of typing in all the data manually. Instead, we can use our `Table` functions.
+
+`Table.read_table` takes one argument, a path to a data file (a string) and returns a table.  There are many formats for data files, but CSV ("comma-separated values") is the most common.
+
+**Question 2.2.** The file `imdb.csv` contains a table of information about the 250 highest-rated movies on IMDb.  Load it as a table called `imdb`.
+
+```
+imdb = ...
+imdb
+```
+Notice the part about "... (240 rows omitted)."  This table is big enough that only a few of its rows are displayed, but the others are still there.  10 are shown, so there are 250 movies total.
+
+Where did `imdb.csv` come from? Take a look at your current folder. You should see a file called `imdb.csv`.
+
+Open up the `imdb.csv` file in that folder and look at the format. What do you notice? The `.csv` filename ending says that this file is in the [CSV (comma-separated value) format](http://edoceo.com/utilitas/csv-file-format).
+
+## 3. Using lists
+
+A *list* is another Python sequence type, similar to an array. It's different than an array because the values it contains can all have different types. A single list can contain `int` values, `float` values, and strings. Elements in a list can even be other lists! A list is created by giving a name to the list of values enclosed in square brackets and separated by commas. For example, `values_with_different_types = ['data', 8, ['lab', 3]]`
+
+Lists can be useful when working with tables because they can describe the contents of one row in a table, which often  corresponds to a sequence of values with different types. A list of lists can be used to describe multiple rows.
+
+Each column in a table is a collection of values with the same type (an array). If you create a table column from a list, it will automatically be converted to an array. A row, on the ther hand, mixes types.
+
+Here's a table. (Run the statements below.)
+
+```
+# Run this cell to recreate the table
+flowers = Table().with_columns(
+    'Number of petals', make_array(8, 34, 5),
+    'Name', make_array('lotus', 'sunflower', 'rose')
+)
+flowers
+```
+**Question 3.1.** Create a list that describes a new fourth row of this table. The details can be whatever you want, but the list must contain two values: the number of petals (an `int` value) and the name of the flower (a string). How about the "pondweed"? Its flowers have zero petals. Create the list for pondweed and insert it into the original flowers table. The new table's name is my_flower
+
+```
+pondweed = 
+my_flower = ...
+my_flower
+```
+## 4. Analyzing datasets
+With just a few table methods, we can answer some interesting questions about the IMDb dataset.
+
+If we want just the ratings of the movies, we can get an array that contains the data in that column:
+```
+imdb.column("Rating")
+```
+The value of that expression is an array, exactly the same kind of thing you'd get if you typed in `make_array(8.4, 8.3, 8.3, [etc])`.
+
+**Question 4.1.** Find the rating of the highest-rated movie in the dataset.
+
+*Hint:* Think back to the functions you've learned about for working with arrays of numbers in the numpy package.  Ask for help if you can't remember one that's useful for this.
+
+```
+highest_rating = ...
+highest_rating
 ```
 
-Now that we see how to look at the data, we might want to actually calculate some things from this data.
+That's not very useful, though.  You'd probably want to know the *name* of the movie whose rating you found!  To do that, we can sort the entire table by rating, which ensures that the ratings and titles will stay together.
+```
+imdb.sort("Rating")
+```
+Well, that actually doesn't help much, either -- we sorted the movies from lowest -> highest ratings.  To look at the highest-rated movies, sort in reverse order:
 
-For example:
+```
+imdb.sort("Rating", descending=True)
+```
+(The `descending=True` bit is called an *optional argument*. It has a default value of `False`, so when you explicitly tell the function `descending=True`, then the function will sort in descending order.)
 
-* We might want to be able to filter out reviews based on whether or not we know the age of the reviewer.
-* We might want to make a list of just the ages of the reviewers.  
-   * Once we have just *that* list, we might want to do some things with it.
-* We might want to know what highest rated and lowest rated beers are.
-* etc.
+So there are actually 2 highest-rated movies in the dataset: *The Shawshank Redemption* and *The Godfather*.
 
-In order to be able to answer these types of questions, we need to be able to work with the data in various ways.  One of our most basis tools is to reduce the data down to a simpler form: for example, instead of a list of dictionaries, just a list of numbers.
+Some details about sort:
 
-Your task is to write functions that will take as their parameter, `data`, the result that is returned by the `parseData` function, and then return various things.
+1. The first argument to `sort` is the name of a column to sort by.
+2. If the column has strings in it, `sort` will sort alphabetically; if the column has numbers, it will sort numerically.
+3. The value of `imdb.sort("Rating")` is a *copy of `imdb`*; the `imdb` table doesn't get modified. For example, if we called `imdb.sort("Rating")`, then running `imdb` by itself would still return the unsorted table.
+4. Rows always stick together when a table is sorted.  It wouldn't make sense to sort just one column and leave the other columns alone.  For example, in this case, if we sorted just the "Rating" column, the movies would all end up with the wrong ratings.
 
-Here is a list of the functions you should write.  Add each of these to your `my_analysis.py` file.
+**Question 4.2.** Create a version of `imdb` that's sorted chronologically, with the earliest movies first.  Call it `imdb_by_year`.
+```
+imdb_by_year = ...
+imdb_by_year
+```
+**Question 4.3.** What's the title of the earliest movie in the dataset?  You could just look this up from the output of the previous cell.  Instead, write Python code to find out.
 
-You are also encouraged to write a file `test_my_analysis.py`, containing tests for your functions.
+*Hint:* Starting with `imdb_by_year`, extract the Title column to get an array, then use `item` to get its first item.
+```
+earliest_movie_title = ...
+earliest_movie_title
+```
+## 5. Finding pieces of a dataset
+Suppose you're interested in movies from the 1940s.  Sorting the table by year doesn't help you, because the 1940s are in the middle of the dataset.
 
-To test these functions, you'd make your own values for `data`, that contain probably far fewer reviews than the
-real value of `data`, so that you can predict, by hand, what the results of the functions would be.
+Instead, we use the table method `where`.
+```
+forties = imdb.where('Decade', are.equal_to(1940))
+forties
+```
+Ignore the syntax for the moment.  Instead, try to read that line like this:
 
-You can then write test cases for the functions, following the examples of test cases that you saw in [lab06](/lab/lab06).
+> Assign the name **`forties`** to a table whose rows are the rows in the **`imdb`** table **`where`** the **`'Decade'`**s **`are` `equal` `to` `1940`**.
 
-1. `def beerUserRating(data):` returns a list of Python tuples, where each tuple
-   consists of three values: the `beer/name`, `user/profileName`, and the `review/overall` value for each review in the list `data`.
+**Question 5.1.** Compute the average rating of movies from the 1940s.
 
-2. `def beersRatedFive(data):` returns a list of strings, which are the names of the beers that 
-    are rated 5.0 (exactly).   Ideally, your function should NOT include any duplicates.  That is, if a particular beer
-    has been rated 5.0 by more than one reviewer, the beer should still appear in the list only once.
+*Hint:* The function `np.average` computes the average of an array of numbers.
+```
+average_rating_in_forties = ...
+average_rating_in_forties
+```
+Now let's dive into the details a bit more.  `where` takes 2 arguments:
 
-3. `def reviewerToAgeInSeconds(data):` returns a dictionary (the regular kind, not a `defaultdict` where
-    the keys are the `user/profileName` values from `data`, and the values are the `user/ageInSeconds` values for each of those users.   Note that a user may appear more than once if they wrote more than one review.  We are going to
-    assume that the ages are all the same, even if that isn't the case.  And, note that a dictionary already gets
-    rid of duplicates, since if you update a value for a key that already exists, it just overwrites the old value,
-    rather than creating a duplicate entry. Note, though, that not every review has a value for age.  So, if you encounter
-    a review where the user/ageInSeconds is not present, you'll need to set the value for that user to the special
-    Python value `None`.
+1. The name of a column.  `where` finds rows where that column's values meet some criterion.
+2. Something that describes the criterion that the column needs to meet, called a predicate.
 
-4. `def ageInSecondsToAgeInYears(seconds)` should convert age in seconds to age in years.  Note that with age, we
-     don't round up.  If you are 20 years and 355 days old, you are still "age 20", not "age 21".
+To create our predicate, we called the function `are.equal_to` with the value we wanted, 1940.  We'll see other predicates soon.
 
-5.  `def reviewerToAgeInYears(data):` should provide a dictionary that maps reviewer name (those are the keys) to 
-    reviewer age in years.  In your solution, please make use of the `ageInSecondsToAgeInYears(seconds)` function 
-    that you wrote in a previous step.
+`where` returns a table that's a copy of the original table, but with only the rows that meet the given predicate.
 
-6.  `def averageReviewerAge(reviewerAgeDict)` should take, as its parameter, the result of calling `reviewerToAgeInYears`,
-     that is, a dictionary that maps reviewer names to reviewer ages.   It should return the average age, in years, of
-     a reviewer, as a floating point number (that is, the average age could be `27.6` years, for example.)  As a hint:
-     if you have a dictionary foo, you can get a list of all of its value by 
+**Question 5.2.** Create a table called `ninety_nine` containing the movies that came out in the year 1999.  Use `where`.
+```
+ninety_nine = ...
+ninety_nine
+```
+So far we've only been finding where a column is *exactly* equal to a certain value. However, there are many other predicates.  Here are a few:
 
-7.  `def beerToNumReviews(data)` should return a `defaultdict(int)` where the keys are `beer/name`, 
-    and the values are a count
-    of how many reviews appear for that beer.   
+|Predicate|Example|Result|
+|-|-|-|
+|`are.equal_to`|`are.equal_to(50)`|Find rows with values equal to 50|
+|`are.not_equal_to`|`are.not_equal_to(50)`|Find rows with values not equal to 50|
+|`are.above`|`are.above(50)`|Find rows with values above (and not equal to) 50|
+|`are.above_or_equal_to`|`are.above_or_equal_to(50)`|Find rows with values above 50 or equal to 50|
+|`are.below`|`are.below(50)`|Find rows with values below 50|
+|`are.between`|`are.between(2, 10)`|Find rows with values above or equal to 2 and below 10|
 
-8.  `def beerToListOfReviews(data)` should return a `defaultdict(list)` where the keys are `beer/name`, 
-    and the value for each key is a list of all of the individual `review/overall` values for that beer.  These lists
-    may indeed contain duplicates if multiple reviewers rated a beer the same.
+**Question 5.3.** Using `where` and one of the predicates from the table above, find all the movies with a rating higher than 8.5.  Put their data in a table called `really_highly_rated`.
+```
+really_highly_rated = ...
+really_highly_rated
+```
+**Question 5.4.** Find the average rating for movies released in the 20th century and the average rating for movies released in the 21st century for the movies in `imdb`.
 
-9.  `def beerToAvgReview(data)` should return a dictionary (the regular kind)
-    where they keys are `beer/name`, and each value is average
-    rating for that beer.  You should make use of the `beerToNumReviews(data)` and `beerToListOfReviews(data)`
+*Hint*: Think of the steps you need to do (take the average, find the ratings, find movies released in 20th/21st centuries), and try to put them in an order that makes sense.
+```
+average_20th_century_rating = ...
+average_21st_century_rating = ...
+print("Average 20th century rating:", average_20th_century_rating)
+print("Average 21st century rating:", average_21st_century_rating)
+```
+**Question 5.5.** Here's a challenge: Find the number of movies that came out in *even* years.
 
+*Hint:* The operator `%` computes the remainder when dividing by a number.  So `5 % 2` is 1 and `6 % 2` is 0.  A number is even if the remainder is 0 when you divide by 2.
 
-When you have written definitions for each of these functions, you can test them in either, or preferably both, of the following ways:
+*Hint 2:* `%` can be used on arrays, operating elementwise like `+` or `*`.  So `make_array(5, 6, 7) % 2` is `array([1, 0, 1])`.
 
-* running the test cases you came up with in your `test_my_analysis.py` file
-* call the functions on the value `data`, inside your `if __name__ == '__main__'` block, and print out the results.
-* call the functions interactively on the value `data` using the Python shell prompt.
+*Hint 3:* Create a column called "Year Remainder" that's the remainder when each movie's release year is divided by 2.  Make a copy of `imdb` that includes that column.  Then use `where` to find rows where that new column is equal to 0.  Then use `num_rows` to count the number of such rows.
+```
+num_even_year_movies = ...
+num_even_year_movies
+```
+**Question 5.6.** Check out the `population` table from the introduction to this lab.  Compute the year when the world population first went above 6 billion.
+```
+year_population_crossed_6_billion = ...
+year_population_crossed_6_billion
+```
+## 7. Summary
 
-For each function, when you are satisfied that *that* function is working, do the steps to commit your changes to github:
+For your reference, here's a table of all the functions and methods you may find useful for table related functions.
 
-* `git add my_analysis.py`
-* `git commit -m "AB/CD describe which function you worked on here"`
-* `git push origin master`
+|Name|Example|Purpose|
+|-|-|-|
+|`Table`|`Table()`|Create an empty table, usually to extend with data|
+|`Table.read_table`|`Table.read_table("my_data.csv")`|Create a table from a data file|
+|`with_columns`|`tbl = Table().with_columns("N", np.arange(5), "2*N", np.arange(0, 10, 2))`|Create a copy of a table with more columns|
+|`column`|`tbl.column("N")`|Create an array containing the elements of a column|
+|`sort`|`tbl.sort("N")`|Create a copy of a table sorted by the values in a column|
+|`where`|`tbl.where("N", are.above(2))`|Create a copy of a table with only the rows that match some *predicate*|
+|`num_rows`|`tbl.num_rows`|Compute the number of rows in a table|
+|`num_columns`|`tbl.num_columns`|Compute the number of columns in a table|
+|`select`|`tbl.select("N")`|Create a copy of a table with only some of the columns|
+|`drop`|`tbl.drop("2*N")`|Create a copy of a table without some of the columns|
+|`take`|`tbl.take(np.arange(0, 6, 2))`|Create a copy of the table with only the rows whose indices are in the given array|
 
-When they all work, you are done with lab09!
+<br/>
+
+More information about Tables can be found [here](http://data8.org/datascience/tables.html)
+
+Alright! You're finished with lab 09!

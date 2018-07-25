@@ -1,448 +1,304 @@
 ---
 layout: lab
 num: lab10
-ready: false
-desc: "Data analysis and plotting"
-assigned: 2017-08-17 13:15:00.00-7
-due: 2017-08-22 16:45:00.00-7
+ready: true
+desc: "Functions and Visualization"
+assigned: 2017-08-27 13:15:00.00-7
+due: 2017-08-29 16:45:00.00-7
 ---
 
-# Data analysis and plotting
+## This lab is optional. If you are interesed in data analytics, it is a good lab for you!
 
-In this lab you will work with some data about some cars. You will learn how to plot the data, make a histogram, find correllations between two sets of values.
+Welcome to lab 10! We'll practice functions and the table method `apply` from [this ebook description](https://www.inferentialthinking.com/chapters/07/1/applying-a-function-to-a-column.html).  We'll also learn about visualization from [a chapter in data8](https://www.inferentialthinking.com/chapters/06/visualization.html).
 
-# References
+## First, create a lab10 repo
 
-As you work through the steps below, you may find it helpful to refer to:
-
-* the notes from the lecture Miles gave on Wednesday 08/17, 
-    which can be found here: [Transcript of Python Shell Session](/lectures/week3/Lecture-08-17.txt){: data-ajax="false"}
-
-# Step 1: Create a lab10 repo
-
-Go to github.com and create a new repo called spis16-lab10-Name-Name using Method 1. When creating the repo import the starter code from this git repo:
-* https://github.com/ucsd-cse-spis-2017/lab10-startercode
+Go to github.com and create a new repo called spis16-lab10-Name-Name using Method 1. When creating the repo import the starter code from this git repo: https://github.com/ucsd-cse-spis-2017/lab10starter
 
 Then use `git clone` to clone this into your `~/github` directory.
 
-# Step 2: Work with the file `car_analysis.py` file
+In the repo, you will see that there are three files, world_population.csv and imdb.csv. They are used in this lab for data analysis. 
 
-In the starter code, you'll find the file `car_analysis.py`.   Open this file in IDLE, and run it.
-
-This file loads a variable into memory called `cardata`.  That `cardata` variable is list of dictionaries.
-
-Now, you might think that the first thing you'd want to do is type `cardata` at the Python prompt, and hit enter, but <span style="font-weight:bold; font-size: 110%; color:red;">PLEASE DON'T DO THAT</span>.  It isn't that anything awful will
-happen; it is just that it will temporarily lock up your computer session, and you might have to close it and start over.
-
-Let's explain two things right away: 
-1.  What you should do instead
-2.  Why typing `cardata` and hitting enter (which you should NOT do) is a bad idea.
-
-## What you should do instead
-
-Here are several things you can do after running the `car_analysis.py` file with the `cardata` variable that are
-perfectly fine:
-
-1. Type `cardata = cars.get_cars()` to set up the variable `cardata`.  
-     * You might want to just add that line of code immediately after the `if __name__==`__main__`: line, before
-       the `print` statement, so that it always sets up the `cardata` variable when you run the file.
-1. Type `type(cardata)`.
-1. Type `len(cardata)`
-1. Type `cardata[0]`
-1. Type `cardata[42]`
-1. Type `type(cardata[0])`
-1. Type `cardata[-1]`
-
-Try each of those, and see what you get.   Your purpose right now is simply to understand what the data represents by looking through it.  
-
-For the result of `type(cardata[0])` you should have gotten `dict`, which stands for dictionary.
-
-If you need a review about Python dictionaries, you can consult the lecture notes from either Phill or Miles, or you can
-review this page: [Python: Dictionaries](/topics/python_dictionaries)
-
-When you type `cardata[0]`, it may look a little messy to you. A way to see the data in a more attractive way is to use
-the library `pprint` which stands for pretty print.
-
-write this code in idle:
-
-```python
->>> cardata[0]
->>> import pprint
->>> pprint.pprint(cardata[0])
-
->>> cardata[0]
-{'Engine Information': {'Transmission': '6 Speed Automatic Select Shift', 'Engine Type': 
-'Audi 3.2L 6 cylinder 250hp 236ft-lbs', 'Engine Statistics': {'Horsepower': 250, 'Torque':
-236}, 'Hybrid': False, 'Number of Forward Gears': 6, 'Driveline': 'All-wheel drive'}, 
-'Identification': {'Make': 'Audi', 'Model Year': '2009 Audi A3', 'ID': '2009 Audi A3 3.2',
-'Classification': 'Automatic transmission', 'Year': 2009}, 'Dimensions': {'Width': 202, 
-'Length': 143, 'Height': 140}, 'Fuel Information': {'Highway mpg': 25, 'City mph': 18, 
-'Fuel Type': 'Gasoline'}}
-
->>> import pprint
->>> pprint.pprint(cardata[0])
-
-
-{'Dimensions': {'Height': 140, 'Length': 143, 'Width': 202},
- 'Engine Information': {'Driveline': 'All-wheel drive',
-                        'Engine Statistics': {'Horsepower': 250,
-                                              'Torque': 236},
-                        'Engine Type': 'Audi 3.2L 6 cylinder 250hp 236ft-lbs',
-                        'Hybrid': False,
-                        'Number of Forward Gears': 6,
-                        'Transmission': '6 Speed Automatic Select Shift'},
- 'Fuel Information': {'City mph': 18,
-                      'Fuel Type': 'Gasoline',
-                      'Highway mpg': 25},
- 'Identification': {'Classification': 'Automatic transmission',
-                    'ID': '2009 Audi A3 3.2',
-                    'Make': 'Audi',
-                    'Model Year': '2009 Audi A3',
-                    'Year': 2009}}
-                    
-```
-If you like the way that looks then you may use it to look at data for the rest of this lab and really for any time you 
-use a dictionary!!!!
-
-## Why typing `cardata` and hitting return is a bad idea
-
-The reason is simple: cardata is a *huge* list.   It takes a very long time to convert that list into its string representation and then print it out in your IDLE Python Shell.     While it is doing that string conversion, your entire
-session just locks up, and it appears that nothing is happening.  Eventually, you will get your prompt back, along with a zillion pages of output.  But that probably isn't what you wanted to see.
-
-## Some other things you could do
-
-Each element in the list `cardata` represents a dictionary of attributes about a specific type of car.
-
-If we want to see all the pieces of data that we can access for a car, we can just look at the string representation of a single Python dictionary for a single car, like this:
-
-```python
->>> cardata[0]
-{'Engine Information': {'Transmission': '6 Speed Automatic Select Shift', 'Engine Type': 'Audi 3.2L 6 cylinder 250hp 236ft-lbs', 'Engine Statistics': {'Horsepower': 250, 'Torque': 236}, 'Hybrid': False, 'Number of Forward Gears': 6, 'Driveline': 'All-wheel drive'}, 'Identification': {'Make': 'Audi', 'Model Year': '2009 Audi A3', 'ID': '2009 Audi A3 3.2', 'Classification': 'Automatic transmission', 'Year': 2009}, 'Dimensions': {'Width': 202, 'Length': 143, 'Height': 140}, 'Fuel Information': {'Highway mpg': 25, 'City mph': 18, 'Fuel Type': 'Gasoline'}}
->>> 
-```
-
-Or, if I want to see just the keys in the dictionary, I can use `cardata[0].keys()`
-
-```python
->>> cardata[0].keys()
-['Engine Information', 'Identification', 'Dimensions', 'Fuel Information']
->>> 
-```
-
-Note here that each entry of cardata is actually a dictionary of dictionaries.
-
-1. Type `type(cardata[0])`.
-1. Type `type(cardata[0]['Engine Information'])`.
-1. Type `cardata[0]['Engine Information'].keys()')`.
-1. Type `type(cardata[0]['Engine Inoformation']['Engine Statistics']['Horsepower'])`.
-
-For the last one, you should get type int. If we are interested in Horsepower, we must
-look through each dictionary until we find it.
-
-assign a variable to cardata[0] like this:
-
-```python
->>> car0 = cardata[0]
-```
-
-# Exercise 1
-
-Given the code from above, that is:
-
-```python
->>> car0 = cardata[0]
-```
-
-what would you write to output the year of this particular car?
-
-Once you determine the answer, you can use that answer to fill in the code for the function `def yearOfCar(car)` in the
-file `car_analysis.py` that is part of the starter code in your repo.
-
-Please fill in that function before continuing.  Then test it with:
-
-```python
->>> car0 = cardata[0]
->>> yearOfCar(car0)
-(the year of the car should appear here)
-```
-
-# What to do with a list of integers
-
-
-In order to be able to answer these types of questions, we need to be able to work with the data in various ways.  One of our most basis tools is to reduce the data down to a simpler form: for example, instead of a list of dictionaries, just a list of numbers.
-
-Your task is to write functions that will take as their parameter, `cardata` and return various things. Then we will plot 
-certain things about these cars.   The remainder of the lab walks you through doing just that.
-
-# Exercise 2: `horsepower` function
-
-Write a function `def horsepower(cardata):` in your file called `car_analysis.py` that returns a list of integers of horsepowers for each car in the list `cardata`.
-
-Set `hp_list = horsepower(cardata)`. It should be a list of integers. Try the following commands:
+## Step 2: start ipython and get into the pylab mode
+Run commands in terminal
 
 ```
-type(hp_list)
-min(hp_list)
-max(hp_list)
+ipython
+%pylab
 ```
 
-Do those seem like reasonable values? If not, maybe you should try your list again.
-
-# Plotting Data
-
-The next thing we will do is plot the data `hp_list`. We are going to use the library `matplotlib`. It can do a variety 
-of visualizations, you may remember in Miles's class last week some of the uses of `matplotlib`. For example, 
-you can plot a scatter plot, a line plot and a bar chart among other things. In this lab, we will be plotting all of those things.
-
-Type this into your car_analysis.py file:
-
-``` python
+This is where we will start to use tables to read in and analyze data. First type in
+```
+import numpy as np
+from datascience import *
+import matplotlib
 import matplotlib.pyplot as plt
+plt.style.use('fivethirtyeight')
 ```
+This will import the right packages. The matplotlib package will allow us to have graphing capabilities
 
-This is a way of giving a nickname to a library so that whenever you call matplotlib.pyplot, you only have to write plt.
-This is a standard convention for this specific library. If you are interested in more applications of
-matplotlib.pyplot, most of the literature will use this convention.
+Now let's start the lab. When turning in the lab, turn in the code that you complete for each of the questions in a python file. Clearly number the answers such as #Q2.1 etc.
 
-Let's plot `hp_list` as a scatter plot.
+## 1. Functions and CEO Incomes
 
-The scatter plot plt.scatter(xs,ys) takes two lists of numbers (integers or floats) where each list is of equal length 
-and it plots a point at each coordinate xs[i],ys[i].
+Let's start with a real data analysis task.  We'll look at the 2015 compensation of CEOs at the 100 largest companies in California.  The data were compiled for a Los Angeles Times analysis [here](http://spreadsheets.latimes.com/california-ceo-compensation/), and ultimately came from [filings](https://www.sec.gov/answers/proxyhtf.htm) mandated by the SEC from all publicly-traded companies.  Two companies have two CEOs, so there are 102 CEOs in the dataset.
 
-`hp_list` is only one list so we are going to have to make up another list so that we can plot it.
-The other list we will use is the list `range(len(hp_list))`. This is a list of integers `[0,1,...,len(hp_list)-1]`.
-We put in the `len` function to be sure that it will have the same length as `hp_list`.
-
-So, in your python shell write
-
-```python
-plt.scatter(range(len(hp_list)),hp_list)
-```
-
-It should output something like
-
-```python
-<matplotlib.collections.PathCollection object at 0x00000000096B4EB8>
-```
-
-This is just saying that it has built your plot but it hasn't actually shown you yet because you may add
-things to the plot if you like. for example, you could write
-
-```python
-plt.title('Horsepower of cars in cardata')
-```
-
-and it will add a title to the plot.
-Let's view the plot that we made
-
-```python
-plt.show()
-```
-
-This will generate a scatter plot with your title. Notice that in your idle, the >>> hasn't reappeared. 
-To get back to that, you must close the picture. If you would like to save that picture for later, then you
-could click the little disk image on the bottom of the picture.
-
-There is another way to save the image. That is to write
-```python
-plt.savefig('filename')
-```
-and it will save the plot as the 'filename' in the same repo that you started in.
-
-Both plt.show() and plt.savefig('filename') "reset" the plot and it will start fresh the next time you define a plot.
-
-What happens if you write plt.show() again?
-Nothing! It is because now the plot has been erased. You must build another plot every time.
-
-* Go ahead and make the plot again on your own, and instead of writing plt.show(), write plt.savefig('scatter_HP') and it will
-save it as that name.
-
-
-
-## Histograms
-
-This scatter plot that we made is kind of a mess. There is a much better way to visualize a list of numbers as an image.
-It is called a Histogram. Basically, a histogram is a bar chart of ranges where the height of the bar is based on how many 
-data points fall into that range.
-
-add this function into your car_analysis.py file
-
-```python
-from collections import defaultdict
-
-def histogramify(data,bins):
-	M = max(data)
-	m = min(data)
-	interval = (M-m)/bins
-	hist = defaultdict(int)
-	for d in data:
-		for i in range(bins):
-			
-			#This line originally said: if d>m+i*interval:
-			if d>m+i*interval and d<=m+(i+1)*interval:
-				f=m+i*interval
-		hist[f]+=1
-	return hist
-```
-
-This is a function that takes as an input a list of data `data` and the number of bins `bins`. The number of bins will
-evenly divide the set of values into that many ranges. For example, if the maximum of your list is 200 and the minimum is
-100 and bins is ten, then histogramify will split your data range into 10 equal "bins" i.e. 100-110,111-120,121-130,...etc.
-Then it will output a defaultdict where the keys and values are both integers. The keys are the lower bound of each "bin"
-and the values are how many data points fall in that "bin".
-
-We are going to use histogramify to plot a histogram of the horsepower data.
-Assign 
-```python
-hist_HP = histogramify(hp_list,25)
-```
-
-We are going to plot a bar chart, plt.bar(xs,ys) takes two lists of data, each the same length where the height of the bar at 
-xs[i] is ys[i].
-
-I am going to show you how to make the lists.
-```python
-xs = range(min(hp_list),max(hp_list))
-```
-The x axis represents the actual horsepower values so we want xs to range through each value.
-The y axis represents the number of cars with horsepower in a specific range. `hist_HP` holds all of that data 
-in a defaultdict format so if you input a key that hasn't been assigned, it will give you a value of 0.
-However all other keys that have been assigned will give you the amount of cars that have horsepower in that range.
-
-```python
-ys = [hist_HP[x] for x in xs]
-
-plt.bar(xs,ys)
-plt.show()
-```
-
-If you have done it right, you should get something that looks like
-
-![horsepower histogram](Histogramlab10.PNG)
-
-Notice that the bars are really thin. The default width is set to 1. So let's change the width. The way to do that is to add another
-argument to plt.bar
-
-So now call
-
-```python
-plt.bar(xs,ys,20)
-plt.show()
-```
-It should have made the bars wider.
-
-Now, let's make a histogram with a title and labels for the x-axis and y-axis
-
-```python
-plt.bar(xs,ys,20)
-plt.title('Histogram of Horsepower Data')
-plt.ylabel('Number of cars')
-plt.xlabel('Horsepower')
-plt.savefig('Histogram_HP')
-```
-This picture will be saved in your repo.
-
-* Exercise 4: Write a function `def MPG(cardata):` in your file called `car_analysis.py` that returns a list of integers of 'Highway MPG' for each car in the list `cardata`. Assign `MPG_list = MPG(cardata)`. Make a histogram of `MPG_list` with 25 bins just as we did for
-`hp_list` and save the figure as `Histogram_MPG`.
-(Remember to histogramify your data and label your axes and title.)
-
-## More than one set of data.
-
-Right now, we have two lists of data i.e. `hp_list` and `MPG_list`. It could be that there is a relation between these two values.
-What do you think the relationship is?
-
-It's hard to say without looking at the data. It's hard to read if you look at the actual numbers so instead let's plot the data
-as a scatter plot. Run this code:
-
-```python
-plt.scatter(hp_list,MPG_list)
-plt.title('Horsepower vs MPG')
-plt.ylabel('Highway MPG')
-plt.xlabel('Horsepower')
-plt.savefig('scatter_HP_MPG')
+We've copied the data in raw form from the LA Times page into a file called `raw_compensation.csv`.  (The page notes that all dollar amounts are in millions of dollars.)
+Run the following command in ipython
 
 ```
-
-What do you see? It looks as though the more horsepower you have, the less MPG your car gets.
-Does this make sense? As scientists, it is important to think about your results and see if they make sense. 
-This is where some hypotheses come from.
-
-It would be nice to have some numbers to describe this relation and not just qualitative descriptions.
-
-We are going to use the library called numpy. It has many uses, especially for statistics and mathematics. 
-We are only going to use one function called `numpy.linalg.lstsq(X,y)`
-
-What it does is give you the equation of a line that "best fits" the data. What does that mean? Well, it means that
-it is the line that has the least sum of squares of errors. This is important but we will not discuss this here. This
-space is to practice using the computer where least squares error is mathematics. (Don't worry, we'll discuss it in lecture ;)
-
-What this function does is output 4 values. The first value is all that we need. It will be a pair of numbers. These numbers
-are the b and m values in the equation of a line y = mx+b.
-
-What are the inputs X and y? X is a list of pairs that look like this [1,HP] and y is a list of MPG. In fact, y is just the
-list `MPG_list`.
-
-Let's define `X` as
-
-```python
-import numpy
-X = [[1,h] for h in hp_list]
-y = MPG_list
-numpy.linalg.lstsq(X,y)
+raw_compensation = Table.read_table('raw_compensation.csv')
+raw_compensation
 ```
-After calling the last line, you should have an output like this
-
-```python
-(array([  3.68625612e+01,  -3.62427603e-02]), array([ 13404.2422533]), 2, array([ 8784.95244788,    12.94173734]))
+**Question 1.1** We want to compute the average of the CEOs' pay. Try running the statements and **You should see an error**
 ```
-The first "array" contains two values, these are the b and m of y=mx+b.
-I want to assign a value to just the first element of this and let's call it theta. 
-
-```python
-theta = numpy.linalg.lstsq(X,y)[0]
+np.average(raw_compensation.column("Total Pay"))
 ```
 
-Then we will plot the line
-
-```python
-xs = range(min(hp_list),max(hp_list))
-ys = [theta[1]*x + theta[0] for x in xs]
-plt.plot(xs,ys)
-plt.show()
+Let's examine why this error occured by looking at the values in the "Total Pay" column. Use the `type` function and set `total_pay_type` to the type of the first value in the "Total Pay" column.
+```
+total_pay_type = ...
+total_pay_type
 ```
 
-It should just give you a line. This line does not mean much on its own. Let's plot it with the scatter plot
+**Question 1.2.** You should have found that the values in "Total Pay" column are `numpy.ndarray` which means it is not data, but most likely just text (string). It doesn't make sense to take the average of the text values, so we need to convert them to numbers if we want to do this. Extract the first value in the "Total Pay" column.  It's Mark Hurd's pay in 2015, in *millions* of dollars.  Call it `mark_hurd_pay_string`.
+```
+mark_hurd_pay_string = ...
+mark_hurd_pay_string
+```
+**Question 1.3.** Convert `mark_hurd_pay_string` to a number of *dollars*.  The string method `strip` will be useful for removing the dollar sign; it removes a specified character from the start or end of a string.  For example, the value of `"100%".strip("%")` is the string `"100"`.  You'll also need the function `float`, which converts a string that looks like a number to an actual number.  Last, remember that the answer should be in dollars, not millions of dollars.
+```
+mark_hurd_pay = ...
+mark_hurd_pay
+```
+To compute the average pay, we need to do this for every CEO.  But that looks like it would involve copying this code 102 times.
 
-```python
-plt.plot(xs,ys)
-plt.scatter(hp_list,MPG_list)
-plt.title('horsepower versus mpg')
-plt.ylabel('Highway MPG')
-plt.xlabel('Horsepower')
-plt.show()
+This is where functions come in.  First, we'll define a new function, giving a name to the expression that converts "total pay" strings to numeric values.  Later in this lab we'll see the payoff: we can call that function on every pay string in the dataset at once.
+
+**Question 1.4.** Copy the expression you used to compute `mark_hurd_pay` as the `return` expression of the function below, but replace the specific `mark_hurd_pay_string` with the generic `pay_string` name specified in the first line of the `def` statement.
+
+```
+def convert_pay_string_to_number(pay_string):
+    """Converts a pay string like '$100' (in millions) to a number of dollars."""
+    return ...
+```
+Running that cell doesn't convert any particular pay string. Instead, it creates a function called `convert_pay_string_to_number` that can convert any string with the right format to a number representing millions of dollars.
+
+We can call our function just like we call the built-in functions we've seen. It takes one argument, a string, and it returns a number.
+
+```
+convert_pay_string_to_number('$42')
+convert_pay_string_to_number(mark_hurd_pay_string)
+# We can also compute Safra Catz's pay in the same way:
+convert_pay_string_to_number(raw_compensation.where("Name", are.containing("Safra")).column("Total Pay").item(0))
 ```
 
-Save this figure as `HP_MPG_line`
+What have we gained?  Well, without the function, we'd have to copy that `10**6 * float(pay_string.strip("$"))` stuff each time we wanted to convert a pay string.  Now we just call a function whose name says exactly what it's doing.
 
-What we have done is made a very simple predictor. What we can do with it is predict your car's MPG, given its horsepower.
-It is not a perfect predictor but maybe it is pretty good. Make a function to predict this.
+Soon, we'll see how to apply this function to every pay string in a single expression. First, let's write some more functions.
 
-```python
-def cars_MPG_given_HP(horsepower):
-	return theta[1]*horsepower+theta[0]
+## 2. Defining functions
+
+Let's write a very simple function that converts a proportion to a percentage by multiplying it by 100.  For example, the value of `to_percentage(.5)` should be the number 50.  (No percent sign.)
+
+A function definition has a few parts.
+
+##### `def`
+It always starts with `def` (short for **def**ine):
+
+    def
+
+##### Name
+Next comes the name of the function.  Let's call our function `to_percentage`.
+    
+    def to_percentage
+
+##### Signature
+Next comes something called the *signature* of the function.  This tells Python how many arguments your function should have, and what names you'll use to refer to those arguments in the function's code.  `to_percentage` should take one argument, and we'll call that argument `proportion` since it should be a proportion.
+
+    def to_percentage(proportion)
+
+We put a colon after the signature to tell Python it's over.
+
+    def to_percentage(proportion):
+
+##### Documentation
+Functions can do complicated things, so you should write an explanation of what your function does.  For small functions, this is less important, but it's a good habit to learn from the start.  Conventionally, Python functions are documented by writing a triple-quoted string:
+
+    def to_percentage(proportion):
+        """Converts a proportion to a percentage."""
+    
+    
+##### Body
+Now we start writing code that runs when the function is called.  This is called the *body* of the function.  We can write anything we could write anywhere else.  First let's give a name to the number we multiply a proportion by to get a percentage.
+
+    def to_percentage(proportion):
+        """Converts a proportion to a percentage."""
+        factor = 100
+
+##### `return`
+The special instruction `return` in a function's body tells Python to make the value of the function call equal to whatever comes right after `return`.  We want the value of `to_percentage(.5)` to be the proportion .5 times the factor 100, so we write:
+
+    def to_percentage(proportion):
+        """Converts a proportion to a percentage."""
+        factor = 100
+        return proportion * factor
+**Question 2.1.** Define `to_percentage` in the cell below.  Call your function to convert the proportion .2 to a percentage.  Name that percentage `twenty_percent`.
+
+```
+def ...
+    """ ... """
+    ... = ...
+    return ...
+
+twenty_percent = ...
+twenty_percent
+```
+Like the built-in functions, you can use named values as arguments to your function.
+
+**Question 2.2.** Use `to_percentage` again to convert the proportion named `a_proportion` (defined below) to a percentage called `a_percentage`.
+
+*Note:* You don't need to define `to_percentage` again!  Just like other named things, functions stick around after you define them.
+```
+a_proportion = 2**(.5) / 2
+a_percentage = ...
+a_percentage
+```
+Here's something important about functions: the names assigned within a function body are only accessible within the function body. Once the function has returned, those names are gone.  So even though you defined `factor = 100` inside `to_percentage` above and then called `to_percentage`, you cannot refer to `factor` anywhere except inside the body of `to_percentage`:
+
+**Question 2.3.** Define a function called `disemvowel`.  It should take a single string as its argument.  (You can call that argument whatever you want.)  It should return a copy of that string, but with all the characters that are vowels removed.  (In English, the vowels are the characters "a", "e", "i", "o", and "u".)
+
+*Hint:* To remove all the "a"s from a string, you can use `that_string.replace("a", "")`.  And you can call `replace` multiple times.
+```
+def disemvowel(a_string):
+    ...
+    ...
+
+# An example call to your function.  (It's often helpful to run
+# an example call from time to time while you're writing a function,
+# to see how it currently works.)
+disemvowel("Can you read this without vowels?")
 ```
 
-If you know the horsepower of your car or of a family car, plug it into the function and see what MPG your car should get!!!
+##### Calls on calls on calls
+Just as you write a series of lines to build up a complex computation, it's useful to define a series of small functions that build on each other.  Since you can write any code inside a function's body, you can call other functions you've written.
 
-* Exercise 5: plot the scatterplot of the horsepower vs the torque. Run the numpy.linalg.lstsq to get theta[0] and theta[1] so that you can plot the "best fit" line on the same plot as the scatter plot. Name your title and axes and save the figure as `Torque_HP_plot` in 
-your repo.
+If a function is a like a recipe, defining a function in terms of other functions is like having a recipe for cake telling you to follow another recipe to make the frosting, and another to make the sprinkles.  This makes the cake recipe shorter and clearer, and it avoids having a bunch of duplicated frosting recipes.  It's a foundation of productive programming.
 
-After each exercise, commit your changes to github:
+For example, suppose you want to count the number of characters *that aren't vowels* in a piece of text.  One way to do that is this to remove all the vowels and count the size of the remaining string.
 
-* `git add my_analysis.py`
-* `git commit -m "AB/CD describe which function you worked on here"`
-* `git push origin master`
+**Question 2.4.** Write a function called `num_non_vowels`.  It should take a string as its argument and return a number.  The number should be the number of characters in the argument string that aren't vowels.
 
-Make sure you have saved all the figures specified and completed all the functions in your `car_analysis.py` file.
+*Hint:* The function `len` takes a string as its argument and returns the number of characters in it.
 
+```
+def num_non_vowels(a_string):
+    """The number of characters in a string, minus the vowels."""
+    ...
+```
+Functions can also encapsulate code that *does things* rather than just computing values.  For example, if you call `print` inside a function, and then call that function, something will get printed.
 
+The `movies_by_year` dataset has information about movie sales in recent years.  You can read it in and show the first 10 rows by doing
+```
+movies_by_year = Table.read_table("movies_by_year.csv")
+movies_by_year
+```
+
+Suppose you'd like to display the year with the 5th-highest total gross movie sales, printed in a human-readable way.  You might do this:
+
+```
+rank = 5
+fifth_from_top_movie_year = movies_by_year.sort("Total Gross", descending=True).column("Year").item(rank-1)
+print("Year number", rank, "for total gross movie sales was:", fifth_from_top_movie_year)
+```
+After writing this, you realize you also wanted to print out the 2nd and 3rd-highest years.  Instead of copying your code, you decide to put it in a function.  Since the rank varies, you make that an argument to your function.
+
+**Question 2.5.** Write a function called `print_kth_top_movie_year`.  It should take a single argument, the rank of the year (like 2, 3, or 5 in the above examples).  It should print out a message like the one above.  It shouldn't have a `return` statement.
+
+```
+def print_kth_top_movie_year(k):
+    # Our solution used 2 lines.
+    ...
+    ...
+
+# Example calls to your function:
+print_kth_top_movie_year(2)
+print_kth_top_movie_year(3)
+```
+
+## 3. `apply`ing functions
+
+Defining a function is a lot like giving a name to a value with `=`.  In fact, a function is a value just like the number 1 or the text "the"!
+
+For example, we can make a new name for the built-in function `max` if we want:
+```
+our_name_for_max = max
+our_name_for_max(2, 6)
+```
+The old name for `max` is still around:
+```
+max(2, 6)
+```
+Try just writing `max` or `our_name_for_max` (or the name of any other function) in a cell, and run that cell.  Python will print out a (very brief) description of the function.
+```
+max
+```
+Why is this useful?  Since functions are just values, it's possible to pass them as arguments to other functions.  Here's a simple but not-so-practical example: we can make an array of functions.
+```
+make_array(max, np.average, are.equal_to)
+```
+**Question 3.1.** Make an array containing any 3 other functions you've seen.  Call it `some_functions`.
+
+```
+some_functions = ...
+some_functions
+```
+Working with functions as values can lead to some funny-looking code.  For example, see if you can figure out why this works:
+```
+make_array(max, np.average, are.equal_to).item(0)(4, -2, 7)
+```
+
+Here's a simpler example that's actually useful: the table method `apply`.
+
+`apply` calls a function many times, once on *each* element in a column of a table.  It produces an array of the results.  Here we use `apply` to convert every CEO's pay to a number, using the function you defined:
+
+```
+raw_compensation.apply(convert_pay_string_to_number, "Total Pay")
+```
+Here's an illustration of what that did:
+
+<img src="apply.png"/>
+
+Note that we didn't write something like `convert_pay_string_to_number()` or `convert_pay_string_to_number("Total Pay")`.  The job of `apply` is to call the function we give it, so instead of calling `convert_pay_string_to_number` ourselves, we just write its name as an argument to `apply`.
+
+**Question 3.2.** Using `apply`, make a table that's a copy of `raw_compensation` with one more column called "Total Pay (\$)".  It should be the result of applying `convert_pay_string_to_number` to the "Total Pay" column, as we did above.  Call the new table `compensation`.
+
+```
+compensation = raw_compensation.with_column(
+    "Total Pay ($)",
+    ...
+compensation
+```
+
+Now that we have the pay in numbers, we can compute things about them.
+
+**Question 3.3.** Compute the average total pay of the CEOs in the dataset.
+```
+average_total_pay = 
+average_total_pay
+```
+## 4. Histograms
+Earlier, we computed the average pay among the CEOs in our 102-CEO dataset.  The average doesn't tell us everything about the amounts CEOs are paid, though.  Maybe just a few CEOs make the bulk of the money, even among these 102.
+
+We can use a *histogram* to display more information about a set of numbers.  The table method `hist` takes a single argument, the name of a column of numbers.  It produces a histogram of the numbers in that column.
+
+**Question 4.1.** Make a histogram of the pay of the CEOs in `compensation`. Hint: type help(compensation.hist) to know more about drawing histograms. Can you count number of CEOs who make more than 30 million a year?
+```
+...
+```
+
+**Question 4.2.** Looking at the histogram, how many CEOs made more than \$30 million?  (Answer the question with code.  *Hint:* Use the table method `where` and the property `num_rows`.)
+```
+num_ceos_more_than_30_million = ...
+```
+Great job! :D You're finished with lab 10! 
