@@ -94,7 +94,7 @@ Continuing with the Roomba vacuum cleaner analogy, you might know that the edges
 
 ## Submitting your code
 
-As stated before, please create a private github repo with the name spis17-lab01-pair1name-pair2name.
+As stated before, please create a private github repo with the name spis18-lab01-pair1name-pair2name.
 
 In the repo, create three files called answers.txt, emptyroom.txt and maze.txt
 
