@@ -46,7 +46,7 @@ It also covers some basics of the commands you can use at the bash shell prompt&
 `pwd`, `cd`, `mkdir`, and others that you'll need to know for SPIS (and in your later UCSD CSE courses) for working
 with your ACMS account.
 
-If *both* you *and* your pair partner are already thoroughly familiar with Unix command basics&mdash;that is, you know how to create `~/github`, and you are *throughly* familiar with everything in the table below, you can just create ~/mkdir, and skip the tutorial.
+If *both* you *and* your pair partner are already thoroughly familiar with Unix command basics&mdash;that is, you know how to create `~/github`, and you are *throughly* familiar with everything in the table below, you can just create `~/github`, and skip the tutorial.
 
 But if either or both of you has any doubt, you are strongly encourage to go through this page carefully and slowly,
 to learn some of the basics of working with Unix commands at the bash shell.  That is one of the most fundamental skills you'll need throughout all of the courses that use the ACMS unix accounts during your entire stay at UCSD.
@@ -221,7 +221,7 @@ if __name__ == '__main__':
     unittest.main()      
 ```
 
-Save each of the files by choosing 'File -> Save' from the Idle menu.  
+Save each of the files by choosing `File -> Save` from the Idle menu.  
 
 Save them with the *exact* names: `tempFuncs.py` and `test_tempFuncs.py`.  It is important to get the upper vs. lowercase, and the punctuation correct.
 
