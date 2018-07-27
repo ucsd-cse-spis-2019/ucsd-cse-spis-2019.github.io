@@ -4,6 +4,7 @@ desc: "Enrichment Video 1"
 ready: true
 assigned: 2018-08-05 15:00:00.00-7:00
 due: 2018-08-09 09:00:00.00-7:00
+layout: default
 ---
 
 # Enrichment Videos
