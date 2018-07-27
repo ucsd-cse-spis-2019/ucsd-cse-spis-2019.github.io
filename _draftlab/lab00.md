@@ -15,7 +15,7 @@ For your first lab, you'll be using the computers in B230, a lab in the basement
 
 These computer run the Linux operating system, and you'll log into them with your SPIS ACMS account.
 
-# Administrative one-time tasks for lab00
+# Administrative one-time tasks for {{page.num}}
 
 During this lab you will achieve the following administrative one-time steps
 
