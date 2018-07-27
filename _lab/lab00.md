@@ -25,7 +25,7 @@ During this lab you will achieve the following administrative one-time steps
 * Access your UCSD email account to get your invitation to Piazza
 * Create an account on github.com using your UCSD email address
 * Fill out a Google Form so that we know your github id
-* Accept an invitation to the ucsd-cse-spis-2017 github organization
+* Accept an invitation to the ucsd-cse-spis-2018 github organization
 * Activate your Piazza account
 
 # Learning Goals
@@ -50,7 +50,7 @@ And to obtain those, you'll need to be able to access a web browser.   Catch-22!
 
 But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to lookup your ACMS username, and reset your password:
 
-[https://ucsd-cse-spis-2018.github.io/topics/acms/](/topics/acms/)
+[{{site.github}}/topics/acms/](/topics/acms/)
 
 Once you know your username and password, please sit down at a workstation next to your pair partner.
 
@@ -181,12 +181,12 @@ Click that button, and upload your photo from the place where you saved it out o
 
 Navigate again to the main page for your repo, e.g. 
 
-`https://github.com/ucsd-cse-spis-2017/practice-alex-t`
+`{{site.github}}/practice-alex-t`
 
 You'll see a file called README.md.  Click on the filename.  This should take you a page for just that file,
 where you'll see, among other things, a pencil icon that allows you to make changes to the file.
 
-In that file, add a few lines of text that introduces yourself to the SPIS 2017 instructional staff. 
+In that file, add a few lines of text that introduces yourself to the SPIS 2018 instructional staff. 
 Tell us where you are from, some of things you are hoping to learn during SPIS, and perhaps some
 outside interests and activities you might like to participate in during our non-academic sessions
 (e.g. sports, musical instruments you play, board games, etc.)
