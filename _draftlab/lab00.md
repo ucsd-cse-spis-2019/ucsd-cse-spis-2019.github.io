@@ -15,6 +15,8 @@ For your first lab, you'll be using the computers in B230, a lab in the basement
 
 These computer run the Linux operating system, and you'll log into them with your SPIS ACMS account.
 
+While in some labs you will be doing pair programming (working at one computer with your partner on a single program), for this lab we would like everyone to complete the lab themselves.  However, you should work next to your partner, and work at the same speed as your partner, helping each other out.  Do not leave your partner in the dust!
+
 # Administrative one-time tasks for {{page.num}}
 
 During this lab you will achieve the following administrative one-time steps
@@ -35,7 +37,7 @@ After completing this lab, you should be able to
 * Bring up a terminal window to access the "bash shell prompt"
 * Bring up IDLE, the programming environment for Python
 * Create a short Python program and run it
-* Create a Github repository under the UCSD-CSE-SPIS-2017 organization
+* Create a Github repository under the UCSD-CSE-SPIS-2018 organization
 * Use the github web interface to upload files and edit text in a README.md file
 
 # {{page.num}}, step-by-step 
@@ -48,32 +50,17 @@ And to obtain those, you'll need to be able to access a web browser.   Catch-22!
 
 But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to lookup your ACMS username, and reset your password:
 
-[https://ucsd-cse-spis-2017.github.io/topics/acms/](/topics/acms/)
+[https://ucsd-cse-spis-2018.github.io/topics/acms/](/topics/acms/)
 
-Once you know your username and password, please sit down at a workstation with your pair partner.
+Once you know your username and password, please sit down at a workstation next to your pair partner.
 
-## Step 1: Choose initial "driver" and "navigator"
-
-During SPIS, we'll be using *Pair Programming*, a system where two people collaborate on a single solution to a problem.
-
-You will share a single workstation with your pair partner, and alternate being the "driver" and the "navigator".
-
-The "driver" is the one typing, and the "navigator" provides guidance to the driver as to what to do.
-
-Please take a moment to visit this link and learn more about [Pair Programming](/topics/pair_programming/).
-
-To "learn the do’s and don’ts" of pair programming and to see pairs in action, you may also want to check out this entertaining (if a bit corny/cheesey) video about pair programming from North Carolina State University: [An Introduction to Pair Programming for Students](https://www.youtube.com/watch?v=rG_U12uqRhE).
-
-## Step 2: Log in and bring up web browser and a terminal
+## Step 1: Log in and bring up web browser and a terminal
 
 This step should be straightforward, but if you need assistance, ask a mentor or instructor for help.
 
-## Step 3: Visit github.com to create or update your account
+Make sure both you and your partner are logged in before continuing.
 
-
-<div class="redbox">
-Each pair partner should take a turn completing this step separately.
-</div>
+## Step 2: Visit github.com to create or update your account
 
 Open a web browser, and navigate to github.com.
 
@@ -82,7 +69,7 @@ At the github.com page, if you don't already have a github.com account, using yo
 Or, if you already have a github.com account, log in to it, and add your ucsd.edu email address to the list of email addresses associated with the account.
 
 Then, fill out the following form to let us know what your github id is:
-[https://goo.gl/forms/fzjqoTXPgawBF14q2](https://goo.gl/forms/fzjqoTXPgawBF14q2)
+[https://goo.gl/forms/kwGyChjztIuaxbeh2](https://goo.gl/forms/kwGyChjztIuaxbeh2)
 
 ## Step 4:  Bringing up IDLE
 
@@ -90,7 +77,7 @@ IDLE is the program we'll use to do Python programming during SPIS.
 
 In IDLE, you you create, edit, and run Python code.
 
-To bring up IDLE, type `idle3` at the bash shell prompt (which you get by opening a Terminal window: select “Applications”, the "System Tools", then either “Terminal” or “Konsole” from the menu that pops up). Since we are using Python 3 (rather than Python 2) this year, the version of IDLE we need is 'idle3' (which is also the command we need to run it). 
+To bring up IDLE, type `idle3` at the bash shell prompt (which you get by opening a Terminal window: select “Applications”, the "System Tools", then either “Terminal” or “Konsole” from the menu that pops up).  
 
 For this step, there is one goal: write a Python 3 program that prints the string `Hello, World!` as its output.
 
@@ -101,14 +88,14 @@ In Python, this program is very short.  It looks like this:
 ```Python
 print('Hello, World!')
 ```
-That's it!   Now, you can also add, on the first line, a *comment* with your name, your pair partner's name,
+That's it!   Now, you can also add, on the first line, a *comment* with your name
 and the reason you wrote the program.
 
 ```Python
-# Alex Triton and Chris La Jolla for CSE SPIS 2017
+# Alex Triton for CSE SPIS 2018
 print('Hello, World!')
 ```
-You are encouraged to do that, because it helps someone looking at your code know that *you* wrote it.  But, other than that, it isn't necessary.  In general, in computer programming, a *comment* is something that is intended only for human readers of the code, and is otherwise "ignored by the system".   Nearly every programming language has some way to express comments, though the exact rules for formatting of comments--that is, the *syntax* of comments--differs from one language to another.
+You are encouraged to write this comment, because it helps someone looking at your code know that *you* wrote it.  But, comments do not affect the functionality of the program.  In general, in computer programming, a *comment* is something that is intended only for human readers of the code, and is otherwise "ignored by the system".   Nearly every programming language has some way to express comments, though the exact rules for formatting of comments--that is, the *syntax* of comments--differs from one language to another.
 
 In Python, a `#` starts a comment.  Everything from the `#` to the end of that line is part of the comment.
 
@@ -116,34 +103,27 @@ As far as how to create, save and run this program in IDLE, it's easier to just 
 to read an explanation.  So, we'll demonstrate this in Lecture.  But if you need a refresher, this [Youtube video
 explains Hello World in IDLE](http://www.youtube.com/watch?v=Cdk20r2dgFU)
 
-Once you've run your "Hello World!" program, you are ready to move on to the next step.
-
-BTW, if you are familiar with Python 2, you may notice that the syntax of the print command has changed in Python 3. This is a little confusing, but it is good to know that there are some key differences between Python 2 and Python 3 (the syntax options for the print command being one of them). We will be using Python 3 in SPIS this year.
+Once both you and your partner have run your "Hello World!" program, you are ready to move on to the next step.  Remember, check in with your partner to make sure they are ready to move on.  Do not leave your partner in the dust!
 
 
-## Step 5:  Accept invitation to UCSD-CSE-SPIS-2017 github organization
+## Step 4:  Accept invitation to UCSD-CSE-SPIS-2018 github organization
 
-The mentors/instructors should have invited you to the UCSD-CSE-SPIS-2017 github organization (if they haven't, the invitation will come soon).
+The mentors/instructors should have invited you to the UCSD-CSE-SPIS-2018 github organization (if they haven't, the invitation will come soon).
 
 You should find a place where you can accept this invitation if you click on this link and look near the top of the page:
 
-<https://github.com/ucsd-cse-spis-2017>
+<https://github.com/ucsd-cse-spis-2018>
 
-Click on the invitation so that you are part of the ucsd-cse-spis-2017 organization.
+Click on the invitation so that you are part of the ucsd-cse-spis-2018 organization.
 
-## Step 6:  Create your first github repo, a practice repo.
-
-<div class="redbox">
-Each pair partner should take a turn at this step.
-</div>
+## Step 5:  Create your first github repo, a practice repo.
 
 Your next step will be to create a github *repository* or repo for short.  
 
 Your first repository will have a name that corresponds to your first name and last initial such as:
 
-* `ucsd-cse-spis-2017/practice-alex-t`
-* `ucsd-cse-spis-2017/practice-chris-l`
-* `ucsd-cse-spis-2017/practice-diba-m`
+* `ucsd-cse-spis-2018/practice-alex-t`
+* `ucsd-cse-spis-2018/practice-chris-l`
 
 To create this repo:
 
@@ -155,7 +135,7 @@ To create this repo:
 
 On the next screen:
 
-* Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2017`, NOT your own github id.
+* Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2018`, NOT your own github id.
 * Put `practice-alex-t` as the name (BUT PUT YOUR OWN NAME AND FIRST INITIAL, not literally `alex-t` :-) )
 * check the box to "Initialize this repository with a README"
 * Select a `.gitignore` file for Python
@@ -165,7 +145,7 @@ Then, once you've entered all of this information, click to create the repositor
 
 After you've done that, logout of github.com, and let your pair partner take a turn doing the same thing.
 
-## Step 6:  Add a message and a photo to your `ucsd-cse-spis-2017/practice-alex-t` repo.
+## Step 6:  Add a message and a photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
 
 For this step, please ask one of the mentors to take a photo of you, with your face and your name tag visible, and
 then email the photo to you.
@@ -183,11 +163,11 @@ Once you've located it, your next job will be to upload it to your github practi
 in the next step.
 
 
-# Step 7: Upload your photo to your `ucsd-cse-spis-2017/practice-alex-t` repo.
+# Step 7: Upload your photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
 
 Navigate to the web page for your repo.  It will be something like:
 
-`https://github.com/ucsd-cse-spis-2017/practice-alex-t`
+`{{site.github}}/practice-alex-t`
 
 except it will be your name instead of `alex-t`.
 
@@ -227,17 +207,13 @@ Save it (click the "Commit change" button), and take a look at your README.md fi
 If so, you are almost finished with lab00!
 
 
-# Step 8: Piazza Invitation
-
-<div class="redbox">
-Each pair partner should take a turn doing this step.
-</div>
+# Step 7: Piazza Invitation
 
 In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
 
 Then visit [https://piazza.com](piazza.com) to log in to Piazza
 
-Find the UCSD CSE SPIS 2017 course and familiarize yourself with the Piazza site.
+Find the UCSD CSE SPIS 2018 course and familiarize yourself with the Piazza site.
 
 # A note about assignment deadlines
 
