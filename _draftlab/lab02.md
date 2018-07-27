@@ -112,7 +112,7 @@ The <b>Pair Name</b> column in the [SPIS 2018 Pairs List](/info/pairs/) page cor
 
 An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be: 
 
-`spis17-lab02-Alex-Chris`.
+`spis18-lab02-Alex-Chris`.
 
 ### Step 2b: First pair partner invites second pair partner to be a collaborator
 
@@ -154,7 +154,7 @@ When you've done that, we are finally ready for some Python programming!
 
 To review what you've done so far:
 
-* You create a repo called `spis17-lab02-Name1-Name2` on github.com
+* You create a repo called `spis18-lab02-Name1-Name2` on github.com
 * You cloned that repo into your ACMS account under the `~/github` directory.
 * That means you actually have *two* repos now. 
     * The repo on github.com and the repo on your ACMS account are *separate*, but *linked*
@@ -163,21 +163,21 @@ To review what you've done so far:
 What you will do now is put some Python code into the local repo&mdash;or more precisely, you'll put some Python
 code into the directory that corresponds to that repo.   You won't actually commit it to the repo until the next step.
 
-So, what we want to do first is make `~/github/spis17-lab02-Name-Name` (except with your pair's names, not literally `Name-Name`) be your current directory.     Use the `cd` command to make that happen.  
+So, what we want to do first is make `~/github/spis18-lab02-Name-Name` (except with your pair's names, not literally `Name-Name`) be your current directory.     Use the `cd` command to make that happen.  
 
 When you've done it, you 
-should be able to type `pwd` and see that your current directory path ends in `github/spis17-lab02-Name-Name`, just like in the example output below:
+should be able to type `pwd` and see that your current directory path ends in `github/spis18-lab02-Name-Name`, just like in the example output below:
 
 ```
-[spis17t3@ieng6-240]:spis17-lab02-Alex-Chris:118$ pwd
-/home/linux/ieng6/spis17/spis17t3/github/spis17-lab02-Alex-Chris
-[spis17t3@ieng6-240]:spis17-lab02-Alex-Chris:119$ 
+[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:118$ pwd
+/home/linux/ieng6/spis18/spis18t3/github/spis18-lab02-Alex-Chris
+[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:119$ 
 ```
 
 Then, start up IDLE by typing `idle3`:
 
 ```
-[spis17t3@ieng6-240]:spis17-lab02-Alex-Chris:119$ idle3
+[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:119$ idle3
 ```
 
 Once you do, use the `File -> New File` menu item twice to open *two* windows in which you can type Python code.
@@ -227,14 +227,14 @@ Save them with the *exact* names: `tempFuncs.py` and `test_tempFuncs.py`.  It is
 
 When you save, the save dialog should indicate that they are being saved inside the ~/github/spis16-lab02-Name-Name folder that corresponds to your local github repo (you should see a .git directory already present).   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
 
-Onve you have saved both files, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis17-lab02-Name-Name` folder, and do an ls command as shown here.  You should see both the files, with names exactly as shown here.
+Onve you have saved both files, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis18-lab02-Name-Name` folder, and do an ls command as shown here.  You should see both the files, with names exactly as shown here.
 
 Note that if you also have a .pyc file, that's fine (or if you don't, that's fine too).  You don't need to worry about that one, or remove it.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
 
 ```
-[spis17t3@ieng6-240]:spis17-lab02-Alex-Chris:170$ ls
+[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ ls
 README.md  tempFuncs.py  tempFuncs.pyc  test_tempFuncs.py
-[spis17t3@ieng6-240]:spis17-lab02-Alex-Chris:170$ 
+[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ 
 ```
 
 ### Now try running the test_tempFuncs.py file.
