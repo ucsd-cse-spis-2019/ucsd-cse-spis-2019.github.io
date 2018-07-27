@@ -50,7 +50,7 @@ And to obtain those, you'll need to be able to access a web browser.   Catch-22!
 
 But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to lookup your ACMS username, and reset your password:
 
-[{{"site.github"}}/topics/acms/](/topics/acms/)
+[{{"site.course_github_url"}}/topics/acms/](/topics/acms/)
 
 Once you know your username and password, please sit down at a workstation next to your pair partner.
 
@@ -167,7 +167,7 @@ in the next step.
 
 Navigate to the web page for your repo.  It will be something like:
 
-`{{site.github}}/practice-alex-t`
+`{{site.course_github_url}}/practice-alex-t`
 
 except it will be your name instead of `alex-t`.
 
@@ -181,7 +181,7 @@ Click that button, and upload your photo from the place where you saved it out o
 
 Navigate again to the main page for your repo, e.g. 
 
-`{{site.github}}/practice-alex-t`
+`{{site.course_github_url}}/practice-alex-t`
 
 You'll see a file called README.md.  Click on the filename.  This should take you a page for just that file,
 where you'll see, among other things, a pencil icon that allows you to make changes to the file.
