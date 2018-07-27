@@ -104,7 +104,7 @@ To create the repo follow the instructions at the link: [github create repo Meth
 
 As you follow these instructions, create:
 * a private github repo under the `ucsd-cse-spis-2018` github organizaiton,
-* with the name `spis17-lab02-Name1-Name2` where,
+* with the name `spis18-lab02-Name1-Name2` where,
     * `Name1` is the first pair partner's preferred first name
     * `Name2` is the second pair partner's preferred first name
 
