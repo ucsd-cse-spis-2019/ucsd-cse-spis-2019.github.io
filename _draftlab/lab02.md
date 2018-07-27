@@ -1,24 +1,24 @@
 ---
 layout: lab
 num: lab02
-ready: true
+ready: false
 desc: "Next steps with github, Python functions, testing"
-assigned: 2017-08-11 09:30:00.00-7
-due: 2017-08-15 17:00:00.00-7
+assigned: 2018-08-11 09:30:00.00-7
+due: 2018-08-15 17:00:00.00-7
 ---
 
-If you find typos or problems with the lab instructions, please report them on Piazza. Please note that unit test will be covered on Monday 8/14 so you can leave the unit test part to Monday. But you can work on other part of this lab at this time.
+If you find typos or problems with the lab instructions, please report them on Piazza.  But you can work on other part of this lab at this time.
 
 # Overview
 
-The main purpose of this lab is to practice, as  pair, a few skills involving Python, Unix, and github.   
+The main purpose of this lab is to practice, as pairs, a few skills involving Python, Unix, and github.   
 
 
 # More specific Learning Objectives
 
 The most important thing we want you to get out of this lab is the ability to
-* create a solution to a Python problem for which there are test cases
-* iterate until the test cases pass
+* create a solution to a Python problem 
+* iterate until your solution produces the correct behavior on a wide as possible range on inputs
 * keep every step of that development process in a github repo
 
 
@@ -89,26 +89,26 @@ There are three steps involved here.  First, we'll give you an overview, and the
 3. Finally, the second pair partner needs to accept the invitation to be a collaborator.    
 
 
-Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2017 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
+Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2018 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
 
 For purposes of the rest of these instructions, though, we'll refer to "first" as the partner
 under whose github account the repo is initially created, and "second" as the partner that gets invited to collaborate.
 
-And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2017 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
+And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2018 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
    
 ### Step 2a: Create a private repo with a README.md and a .gitignore file for Python.
 
 Choose which pair partner is going to create the repo&mdash;that pair partner should be the one that is logged into github.com.
 
-To create the repo follow the instructions at the link: [github create repo Method 2](http://ucsd-cse-spis-2017.github.io/topics/github_create_repo/#method2).
+To create the repo follow the instructions at the link: [github create repo Method 2](http://ucsd-cse-spis-2018.github.io/topics/github_create_repo/#method2).
 
 As you follow these instructions, create:
-* a private github repo under the `ucsd-cse-spis-2017` github organizaiton,
+* a private github repo under the `ucsd-cse-spis-2018` github organizaiton,
 * with the name `spis17-lab02-Name1-Name2` where,
     * `Name1` is the first pair partner's preferred first name
     * `Name2` is the second pair partner's preferred first name
 
-The <b>Pair Name</b> column in the [SPIS 2017 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
+The <b>Pair Name</b> column in the [SPIS 2018 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
 
 An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be: 
 
@@ -119,14 +119,14 @@ An example correct repo name for the ficticious SPIS students Alex Triton and Ch
 The pair partner that created the repo will automatically have access.  That partner needs to invite the second
 partner to be a collaborator with admin access.
 
-The instructions to do that are found here: [Github: Adding collaborators](https://ucsd-cse-spis-2017.github.io/topics/github_add_collaborators)
+The instructions to do that are found here: [Github: Adding collaborators](https://ucsd-cse-spis-2018.github.io/topics/github_add_collaborators)
 
 ### Step 2c: Second pair partner accepts the invitation
 
 The second pair partner should accept the invitation.  This is usually straightforward: there is an invitation in the second pair partner's incoming email with a link to click, and it is clear what to do.
 
 If the email doesn't arrive, though, or anything is not clear, there are troubleshooting instructions later on the same page you accessed in the previous step to add the partner as a collaborator:  
-[Github: Adding collaborators](https://ucsd-cse-spis-2017.github.io/topics/github_add_collaborators)
+[Github: Adding collaborators](https://ucsd-cse-spis-2018.github.io/topics/github_add_collaborators)
 
 ## Step 3: One time steps for configurating your ACMS account for git
 
