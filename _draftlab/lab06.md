@@ -76,6 +76,7 @@ Are each of the following grids internally connected on the above shown breadboa
 * 1j and 2j
 * 1a and 1e
 
+
 Finally, the breadboard has two vertical lines running up and down on both sides.  The pins on each of these lines are electrically connected but the lines are electrically disconnected from each other. The convention is to connect a positive voltage (5V pin) to the line that has a '+' sign above it and connect the 'ground' (GND pin) to the line with the '-' sign above it.
 
 
@@ -104,7 +105,6 @@ The GPIO breakout board shown below makes all these pins available to you on a b
 </p>
 
 The labels on the breakout board use the BCM naming convention. However, we have connected the breakout board in such a way that you can easily derive the physical pin number of any pin by looking at the row number that it is connected to on the breadboard. 
-
 
 
 ## Getting to know your desktop environment
@@ -245,6 +245,7 @@ Now, run the `01_blinking_LED.py` program. Hopefully you should have a blinking 
 Now, modify the program (and rename it to `01_blinking_LED_sol.py`) to double the frequency at which the LED blinks. Make sure you commit this code to your github repo.
 
 
+
 # Controlling an LED using a button
 
 Next, we are going one step further and we'll use a button to control the LED. You don't need to undo the wiring you already created for the previous problem. This can stay the same. We will just add circuitry for a button.
@@ -253,24 +254,24 @@ Buttons are switches that are used to connect or disconnect circuits. In the fig
 
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/button.png){:height="100px"} 
+![RPi-desktop](/images/labs/images/RPi/button.png){:height="150px"} 
 </p>
 
 
 Now, let's start by wiring the circuit. You should keep the LED circuit from the precious exercise. Then add the button as per the circuit diagram below.
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/schematic_button.jpg){:height="200px"} 
+![RPi-desktop](/images/labs/images/RPi/schematic_button.jpg){:height="100px"} 
 </p>
 
 
 Next, open the program `02_buttonLED.py` in IDLE3. One of the key differences in this exercise compared to the previous one is that you will configure the pin connected to the button as an INPUT pin. Here is a nice excerpt from [a website](http://blmrgnn.blogspot.com/2016/02/gpio-general-purpose-inputoutput-inputs.html) explaining such a configuration:
 
-*A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is 'high'¬ù (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is 'low'¬ù (near GND), reading the pin will result in reading a logic 0.*
+*A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is 'high'ù (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is 'low'ù (near GND), reading the pin will result in reading a logic 0.*
 
 So, the bottom line is that when we configure a GPIO pin as an input, we can read the voltage at that pin in our Python program. 
 
-But, what is the expected voltage if the pin is not connected to anything at all? The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is 'floating'¬ù and has no defined voltage level. For us to be able to reliably detect whether the input is high or low we need to tie it so that it is always connected and either reads high or low. This can be done by using a pullup resistor, as shown in the diagram below.
+But, what is the expected voltage if the pin is not connected to anything at all? The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is 'floating'ù and has no defined voltage level. For us to be able to reliably detect whether the input is high or low we need to tie it so that it is always connected and either reads high or low. This can be done by using a pullup resistor, as shown in the diagram below.
 
 <p align="center">
 ![RPi-desktop](/images/labs/images/RPi/schematic_button_pullup.jpg){:height="200px"} 
