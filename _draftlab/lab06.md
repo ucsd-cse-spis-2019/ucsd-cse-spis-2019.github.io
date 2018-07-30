@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab06
-ready: true
+ready: false
 desc: "Basics of electronics with Raspberry Pi"
 assigned: 2018-08-22 08:45:00.00-7
 due: 2018-08-25 15:45:00.00-7
@@ -267,11 +267,11 @@ Now, let's start by wiring the circuit. You should keep the LED circuit from the
 
 Next, open the program `02_buttonLED.py` in IDLE3. One of the key differences in this exercise compared to the previous one is that you will configure the pin connected to the button as an INPUT pin. Here is a nice excerpt from [a website](http://blmrgnn.blogspot.com/2016/02/gpio-general-purpose-inputoutput-inputs.html) explaining such a configuration:
 
-*A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is 'high'ù (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is 'low'ù (near GND), reading the pin will result in reading a logic 0.*
+*A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is 'high'¬ù (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is 'low'¬ù (near GND), reading the pin will result in reading a logic 0.*
 
 So, the bottom line is that when we configure a GPIO pin as an input, we can read the voltage at that pin in our Python program. 
 
-But, what is the expected voltage if the pin is not connected to anything at all? The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is 'floating'ù and has no defined voltage level. For us to be able to reliably detect whether the input is high or low we need to tie it so that it is always connected and either reads high or low. This can be done by using a pullup resistor, as shown in the diagram below.
+But, what is the expected voltage if the pin is not connected to anything at all? The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is 'floating'¬ù and has no defined voltage level. For us to be able to reliably detect whether the input is high or low we need to tie it so that it is always connected and either reads high or low. This can be done by using a pullup resistor, as shown in the diagram below.
 
 <p align="center">
 ![RPi-desktop](/images/labs/images/RPi/schematic_button_pullup.jpg){:height="200px"} 
