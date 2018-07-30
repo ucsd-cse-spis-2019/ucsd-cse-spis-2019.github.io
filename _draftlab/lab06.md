@@ -235,7 +235,7 @@ The longer leg of the LED is called the 'anode' and the shorter leg is called th
 Wire up the circuit shown by the following diagram. Remember: we are using physical pin numbering for the RPi. You should use jumper wires and the breadboard to make the physical connections. 
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/schematic_led.jpg){:height="100px"} 
+![RPi-desktop](/images/labs/images/RPi/schematic_led.jpg){:height="150px"} 
 </p>
 
 Ask an instructor or mentor is you don't understand the diagram. For more in depth information on configuring GPIO pins as outputs refer to [this website](https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/).
