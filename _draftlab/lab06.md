@@ -2,224 +2,334 @@
 layout: lab
 num: lab06
 ready: true
-desc: "Python skill builder (functions, types, if/else, strings, recursion)"
-assigned: 2017-08-21 16:00:00.00-7
-due: 2017-08-25 15:45:00.00-7
-starter-code-url: https://github.com/ucsd-cse-spis-2017/lab06-startercode.git
+desc: "Basics of electronics with Raspberry Pi"
+assigned: 2018-08-22 08:45:00.00-7
+due: 2018-08-25 15:45:00.00-7
+starter-code-url: https://github.com/ucsd-cse-spis-2018/lab06-startercode.git
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
 
-# What you'll do in this lab
+# Learning objectives
 
-This lab is intended to be an opportunity to review, reinforce, and build your confidence with basic programming
-skills.
+In this lab you will be introduced to the basics of electronics using a a credit-card sized computer called the Raspberry Pi. You will build simple electronic circuits and write programs to control them. 
 
-Before we move into more advanced labs and projects, we want to give you an opportunity to be sure that your
-understanding of the following is solid.
+# Getting started
 
-* Simple python functions
-* Working with if/else
-* Working with types in Python
-* Python Strings
-* Loops
-* Recursion
+## Observe your Raspberry Pi
+Take a look at the Raspberry Pi (or RPi for short) on your workbench. You are looking at the insides of a computer. As you stare down at your RPi, you see an all-encompassing circuit. Your gut feeling may be that it all looks very complex. Your premonitions are not misplaced. The circuit that you are looking at is not called the motherboard for nothing. 
 
-So, we've set up a series of files that contain stubs for various Python functions, along with
-tests for those functions.
+The green base on which all the electronic components (which you see as bulgy entities) are laid out is a non-conductive substrate. This means that the green parts of the board don't conduct electricity. However, to connect the various electrical components, conductive tracks made of copper are etched on the green base. At the very center of your RPi sits a prominent black square block. This is the brain of your RPi: the processor (a 64-bit Quadcore ARM). On the back you'll find another black block, which holds 1GB of RAM (Random Access Memory). For now, just know that the RAM is a form of non-persistent memory. There are other components on the RPi. To identify them orient your RPi to match the circuit below.
 
-Your job is very simple: see if you replace each of the stubs with code that passes the tests that go along with that
-file.
-
-When you are finished, you can submit your solution to Gradescope for automatic "grading".  (Keep in mind that in SPIS, 
-all so-called "grades" are just a way to get feedback on how you are doing.  They don't "count" on your permanent record in any way.  Treat them as "practice" grades.)
-
-# Overview 
-
-The basic structure of the lab is similar to [lab02](/lab02), except for the one-time steps from that lab, and the 
-fact that the repo you create will begin with some starter code (similar to lab04)
-
-After creating the repo, you'll `git clone ... ` the repo, and then start editing Python code, trying to get
-test cases to pass.
-
-Each time you get one more test case to pass, or each time you need to take a break from coding, be sure to do the
-`git add file.py ; git commit -m "AB/CD message"; git push origin master` steps.   
-
-The instructions below will give you some additional hints about each of the functions that you'll be writing,
-including hints, references to help articles on the website, and/or suggestions of relevant passages in the text.
-
-When all done, and all test cases are passing, you'll download your project as a `.zip` file and submit to
-Gradescope for automatic checking of all your test cases.
-
-Ok, let's get started!
-
-# Step-by-Step Instructions
-
-# Step 1: Create your repository.
-
-For this lab, we have made starter code available for you. Following the same procedure we had for lab04, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
-importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
-
-The name of your repo should be `spis17-`<tt>{{page.num}}</tt>`-Name1-Name2`, as before. And invite your pair partner to be a collaborator with admin access. 
+<p align="center">
+![RPi-3-modelB](/images/labs/images/RPi/rpi_pi3_detail.jpg){:height="400px"} 
+</p>
 
 
-# Step 2: Python coding.
 
-In this step you will work, one file at a time, trying to replace the function stubs in each file with running code.
+Observe the components marked in this diagram on your Pi. 
+We will focus on a few important components on the diagram:
 
-The process consists of:
+1. Internet connectivity: The RPi can get Internet connectivity through the Ethernet port, or throught the built-in WiFi chip. In our setup, we will use the WiFi. 
 
-* choosing a Python file to work on, e.g `pyfuncs01.py`
-* running its tests e.g. `test_pyfuncs01.py`
-* seeing the tests fail
-* then replacing the stubs in `pyfuncs01.py` with correct code so 
-    that the tests pass
-* doing the git workflow to commit your changes, e.g. for `pyfuncs01.py`:
-    * `git status`
-    * `git add pyfuncs01.py`
-    * `git status`
-    * `git commit -m "AT/CL tests passing for pyfuncs01.py`
-    * `git status`
-    * `git push origin master`
-    * `git status`
-    
-You'll repeat this process for each of the files pyfuncs01.py,
-pyfuncs02.py, etc.
+2. USB ports: The RPi3 comes with four USB ports (older versions had fewer of these ports). We will use them to connect a mouse and keyboard. 
 
-* As a reminder, the `CL/AT` is used to indicate that you were working as a pair, with:
-    * `CL` (Chris La Jolla) driving (driver's initials first)
-    * `AT` (Alex Triton) navigating (navigator's initials second).
-    * Of course, you should use your own pair's initials, not `CL/AT`
-    
-* When you have *all* the tests passing,<br> do one more commit with
-    the commit message `"CL/AT all tests passing"`.
+3. High Definition Multimedia Interface (HDMI): This is an interface that connects your RPi to a monitor.
 
-For each, there some additional hints below.
+4. SD card slot: All the software that runs on the RPi, which includes the Operating System (more on the OS later) as well as your programs, will be stored on the SD card that goes into the SD card slot. The SD card is essentially the Hard Drive of the RPi.
 
-## `pyfuncs01.py`: Simple Python functions
+5. GPIO pins: This stands for General Purpose Input / Output. You won't be able to observe the GPIO pins on the Raspberry Pi on your workbench because they are hidden under the ribbon cable that connects them to the white breadboard. These pins can be configured to send/receive signals through your python programs. You will control and sense the world around you through these pins!!
 
-In pyfuncs01.py, we have two simple python functions that just return a value based on their parameters.
+6. Power Input: Using this input you can power up your RPi using a wall charger or a battery. 
 
-Load the file `pyfuncs01.py` and the file `test_pyfuncs01.py` into IDLE.
+## Observe the connections from your RPi to other peripherals
 
-You'll need to edit and save changes to both of these files, but its the 
-file `test_pyfuncs01.py` that you need to run to see if the test cases pass.
+In the setup provided to you, the RPi has been wired to work as a desktop computer! Actually its more than a desktop because it is set up to connect to an electronic circuit that you will soon create (something you can't do with standard desktops).
+For the robotics projects, we will operate the RPi in an untethered fashion (so the robot can be mobile) but for now observe the following wired connections from the RPi to other peripherals:
 
-Here, you are just calculating a result by using the arithmetic operators (such as `+`,`-`,`*`,`/`,`**`,`%` etc.) and returning it.  
+* The RPi has a connection to a monitor via the HDMI port.
+* The keyboard and mouse are connected via USB.
+* The RPi is powered up using a charger that is plugged into the wall.
+* The GPIO pins on the RPi are routed to a breadboard via a ribbon cable.
 
-You are also asked to add a few test cases for one of the functions
-in `test_pyfuncs01.py`.
+** Very important note: If you want to unplug anything from your RPi (keyboard, mouse, power cable, etc.) or plug anything into your RPi, your RPi needs to be shut down (an exception is a USB thumb drive)! Otherwise, you may damage the device. So when you start, you first connect all the peripherals and as a last step you plug in the power. When you want to unplug things, first shut the RPi down in software (select Shutdown under the raspberry icon in the menu bar) before removing anything. **
+
+Now let's take a closer look at the breadboard and the GPIO breakout board that sits on it. You will need this information to complete the later exercises in this lab.
 
 
-## `pyfuncs02.py`: Checking types
+## The breadboard
 
-For this step, you should open the files `pyfuncs02.py`, and
-`test_pyfuncs02.py`.   
+The RPi chip itself is very small, so we will be attaching an electronic component called a breadboard  -- which is designed to make it possible to experiment with circuits by extending the available space.  For electricity to flow you need connections.  Think of a breadboard as a way of giving you more space to make those connections.  The main feature of the breadboard is that it comes with a set of in-built electrical connections which significantly simplifies the wiring involved in complicated circuits. Let's try to understand the electrical connections on the breadboard using the figures below:
 
-(This pattern repeats itself for each of the remaining files
-`pyfuncs03.py`, `pyfuncs04.py`, and `pyfuncs05.py`; each one has a
-test file starting with `test_` that goes along with it.  So we won't
-repeat those instructions for each step below.)
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/breadboard.png){:height="400px"} 
+</p>
 
-These functions return True or False based on whether their parameter is of a certain type.
+The figure on the left shows a picture of the breadboard as visible to you, while the one on the right shows in internal electrical connections when the back of the breadboard is uncovered. The rows are numbered 1 through 30 and the columns 'a' through 'j'. In the figure on the right observe how the conductive metal strips run across the rows.  This means that any two grids that are on columns 'a' through 'e' are at the same *potential* as long as they are also on the same row. Similarly, any two grids that are on columns 'f' through 'j' are at the same potential as long as they are also on the same row. However, the two halves of a row are electronically disconnected.  As you will see, this helps you out a lot! 
 
-You can read more about types in Python here: [Python: types](/topics/python_types/)
+Are each of the following grids internally connected on the above shown breadboard?
 
-You are given one example of a function that checks for type, and you are asked to write another one.
+* 1a and 2a
+* 1a and 1b
+* 1a and 2b
+* 14c and 14f
+* 1j and 2j
+* 1a and 1e
 
-You are also asked to write some test cases for a function.  Note that if you don't write those test cases, your
-`test_pyfuncs02.py` may appear to pass even when you haven't yet replaced the stub for one of the functions
-you are supposed to write.
 
-# `pyfuncs03.py`: boolean functions involving `or`
+Finally, the breadboard has two vertical lines running up and down on both sides.  The pins on each of these lines are electrically connected but the lines are electrically disconnected from each other. The convention is to connect a positive voltage (5V pin) to the line that has a '+' sign above it and connect the 'ground' (GND pin) to the line with the '-' sign above it.
 
-In this file, you are given a correct function definition for
-`isAdditivePrimaryColor` as an example.   There is a comment that invites
-you to try a different way of writing the function: one that many students
-sometimes think will work, but that doesn't.  You are encouraged to read
-the comment, and experiment with that function a bit to convince yourself
-that the "alternative" way of writing it doesn't work, and to try to understand
-why.
 
-Then you are asked to write a correct implementation of the function
-`isSimpleNumeric`.   You can use the function `isAdditivePrimaryColor` as
-an example.  You may also want to consult the functions from `pyfuncs02.py`
-as a reminder of how to check for types. 
+## The GPIO pin numbering conventions
 
-As a reminder, run `test_pyfuncs03.py` to test the functions in this
-file.    You actually can run these tests from the Unix command line too,
-by typing `python test_pyfuncs03.py`&mdash;you don't actually have to open
-up `test_pyfuncs03.py` in IDLE, since you don't have to make any changes to 
-it.  
+The Raspberry Pi 3, model B (which is the one we are using) has 40 GPIO pins that are laid out as two rows of 20 pins each, also depicted in the diagram below:
 
-# `pyfuncs04.py`: `first`, `rest`, `last`, `allButLast` functions for lists and tuples
+<p align="center">
+![GPIO-numbering](/images/labs/images/RPi/RP3_Pinout.png){:height="400px"} 
+</p>
 
-These functions are based on the idea of indexing into lists and tuples with 
-notations such as `[0]`, `[1:]`, and so forth.
+The pins that are colored in orange are available for any general purpose and can be referred to and configured in your python programs. Some of these orange pins have an 'alternate function' as well; this means they may not be available if you are using that alternate function. In case you are not sure, avoid those pins and only use the orange colored ones that do not have an alternate function. There are two different conventions used to refer to these pins:
 
-You may want to review the sections of Chapter 5 of your book. You are given two function
-definitions as examples, and then asked to replace the stubs for two more.
+1. Physical location: One way is to just refer to the pins based on their physical location. These numbers are indicated in the gray boxes in the above diagram. All pins on the left half have odd number locations while all pins on the right half have even numbered locations.
 
-# `pyfuncs05.py`: Recursion on lists and tuples
+2. BCM (broadcom convention): You can also use the broadcomm convention where the numbering is not based on the physical location. For example the pin at physical location 12 is referred to as pin number 18 (note that you drop the 'GPIO' part) as per the BCM convention.
 
-The final set of functions uses the `first` and `rest` functions to 
-do some calculations on lists, via recursion.  This is a nice opportunity to 
-check your understanding of recursion, and practice more with the idea.
+Either of the above conventions is okay to use in your programs as long as you define which scheme you are using before you start referring to the pins.
 
-Try to understand how the `totalValue` function works to add up all the number
-in a list or tuple of numeric values. Then see if you can apply those ideas to write similar definition for `productOfAll`, using recursion in a similar fashion.
+Note that physical pins 1 and 17 provide 3.3V, while physical pins 2 and 4 provide 5V. Physical pins 6, 9, 14, 20 and 25 provide the ground (GND) signal which is also very important in your circuits.
 
-Next, you are asked to write two simple functions: `isOdd` and `isEven`.
-Those don't involve recursion or lists; but the `isOdd` function is used
-as a helper function in two more functions in `pyfuncs05.py` that do
-involve recursion.
+The GPIO breakout board shown below makes all these pins available to you on a breadboard where you will be doing your electrical wiring.
 
-Once you've written those and gotten the test cases to pass, 
-try to understand how the `countOdds` function works.
-Then see if you can apply those ideas to write 
- `sumOdds`, using a similar recursive technique.
+<p align="center">
+![GPIO-breakout](/images/labs/images/RPi/breakout.jpg){:height="300px"} 
+</p>
 
-If you got all those tests to pass, you are pretty much done.  Just
-a few steps to finish up and submit.
+The labels on the breakout board use the BCM naming convention. However, we have connected the breakout board in such a way that you can easily derive the physical pin number of any pin by looking at the row number that it is connected to on the breadboard. 
 
-# Step 7: Final check of all your tests
 
-As one last check, run all of your tests in IDLE, or at the command line.
+## Getting to know your desktop environment
 
-Here is an example of running each one of your tests at the command line.  Here the bash shell prompt is replaced by simply `$ ` to make the output easier to read.    If your output looks like this, it means all of your tests are passing.
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/desktop.jpg){:width="800px"} 
+</p>
+
+The operating system on the RPi is a version of the Linux known as Raspbian. The picture above shows the Pixel desktop environment under Raspbian. Feel free to poke around and see what all of these icons mean!
+
+
+### Terminal
+Terminal is the command line interpreter. It is the icon on the top bar showing `>_`. Click it to open. You can also find it under the Accessories submenu of the main menu (the raspberry icon). 
+When you open Terminal notice the prompt says `pi@XXXX`. This means that you are user `pi` and the name of your machine is `XXXX`.
+All the unix commands that you have learned so far can be used to navigate through the file system on your RPi. You can also use command line git just like how you would on the ieng6 machines!
+
+
+### WiFi
+You need to configure the on-board WiFi module with your credentials to be able to use the UCSD-Protected network. Open a Terminal window. Type the command (this is execute a script to set up the WiFi with your credentials; make sure you don't forget the `./`)
+
+`./wifisetup.sh`
+
+You should be prompted for your **wifi** username and password. Your RPi will automatically reboot. 
+When it is done rebooting and you are back to your desktop environment, click the WiFi icon in the top right corner. It should indicate that you are now connected to the UCSD-Protected network.
+
+While not necessary for this lab, if you want to know the IP address of your RPi, open a Terminal window and type:
+
+`ifconfig`
+
+It will show you a bunch of information, organized in three sections. In the bottom section, labeled `wlan0`, look for `inet addr`. The numbers that follow (something like 192.168.1.233) are your IP address. Knowing this will come in handy if you want to log in remotely using ssh.
+
+
+## Create a git repo and get the starter code
+Use your laptop or the RPi to create a new repo called `spis18-lab06-Name-Name`, for example using [Method 1](http://ucsd-cse-spis-2018.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}).
+
+**Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the Pi at the end of the lab session! This is to ensure that the hardware is ready for use by the next group. So don't forget to push your code to the online repo at the end of the lab, and preferably also a few times in between.**
+
+
+## Set up your programming environment
+
+* Configure your git credentials on the RPi. In the home directory `/home/pi` type the following commands replacing the name and email credentials with yours.
 
 ```
-$ python test_pyfuncs01.py 
-......
-----------------------------------------------------------------------
-Ran 6 tests in 0.000s
+ git config --global user.name "Bert Sesame"
+ git config --global user.email bsesame@eng.ucsd.edu
 
-OK
-$ python test_pyfuncs02.py 
-..........
-----------------------------------------------------------------------
-Ran 10 tests in 0.000s
-
-OK
-$ python test_pyfuncs03.py 
-........
-----------------------------------------------------------------------
-Ran 8 tests in 0.000s
-
-OK
-$ python test_pyfuncs04.py 
-....................
-----------------------------------------------------------------------
-Ran 20 tests in 0.000s
-
-OK
-$ python test_pyfuncs05.py 
-................................................
-----------------------------------------------------------------------
-Ran 48 tests in 0.001s
-
-OK
-$ 
 ```
 
-That's it for this lab!
+* Clone your git repo **over https** into your home directory on the RPi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on the RPi (or your laptop), and navigate to your repo on github which should be called `spis18-lab06-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The **https address** should be something like `https://github.com/ucsd-cse-spis-2018/spis18-lab06-Name-Name.git`. Do not use the ssh address as you have in the past.
+
+Make sure you have the starter code in your repo. If you did not import the starter code when creating the repo, ask the mentors for help.
+
+On the Pi's terminal navigate to the your local git repo (~/spis18-lab06-Name-Name/ and open up idle by typing the following command
+
+` sudo idle3 &`
+
+As an alternative, you can also navigate to the repo using the file browser, right-click one of the .py files and select `Python 3 (IDLE)`. 
+ 
+*A word on sudo*
+
+You might be wondering why we use the word sudo to open idle. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, 'OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.' This command to the operating system is 'sudo'. It stands for 'super user do'.  It is a command to Raspbian to go ahead and run a command that you don't really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We use the word `sudo` to open idle3 because we will be soon running programs that use the Python GPIO library
+
+You are now ready to start working on your first exercise where you would create your own circuit and control it using the starter code given to you. 
+
+
+
+# Blinking LED
+
+In this exercise you will create a circuit consisting of an LED and a resistor connected to the RPi. You will then periodically blink the LED using the example program provided to you in the starter code.
+
+** For all your work with Raspberry Pi, it is extremely important you do not make short circuit connections on the GPIO pins. A short circuit is when a supply or GPIO pin set to HIGH is directly connected to a GND or GPIO pin set to LOW. If you are unsure, ask a mentor or instructor to check your circuit before running your program. Always be extremely careful to avoid short circuits. It may corrupt the SD card or possibly even destroy the RPi. **
+
+
+## Understanding the code
+
+In IDLE3 open the file `01_blinking_LED.py`. Let's begin by trying to understand the given code.
+
+
+The first two statements import the modules needed for this exercise:
+
+``` 
+import RPi.GPIO as GPIO
+import time
+
+```
+
+The `RPi.GPIO` module provides routines for configuring the GPIO pins on the RPi and for sending and receiving signals on these pins. Since the GPIO pins are digital we can only send high or low voltages. 
+
+The `time` module provides routines that make use of the clock on the Pi. Using the time module you can make the RPi wait for sometime before executing the next python command in your program. For exmample, `time.sleep(0.5)` makes your program wait for half a second before moving on to the next line of code. 
+
+The lines immediately after the import statements take care of one time configurations related to using the GPIO pins. The first one specifies that we are using the physical numbering scheme. 
+
+```
+GPIO.setmode(GPIO.BOARD) 
+```
+
+If we chose to use the BCM scheme, that line should be replaced by the following:
+```
+GPIO.setmode(GPIO.BCM) 
+```
+
+Before proceeding further identify pin number 11 on your breadboard (remember, we are using physical numbering, so you will need to count the pins to find the location of pin 11). You will need this for wiring your circuit.
+
+The Python GPIO library allows configuring certain pins to be either input or output pins using the `setup(Pin, mode)` function, where Pin is the pin number and mode is either GPIO.OUT (for output) or GPIO.IN (for input). If we want our program to generate high or low voltages on a pin that potentially drives other electronic components (such as LEDs or servos), then configure the pin to be an OUTPUT pin. If we want to read the signal generated by sensors into our program, then configure the pin to be an INPUT pin. 
+
+In our code here, pin number 11 is configured to be an output pin using the command `GPIO.setup(LedPin, GPIO.OUT)`. It also sets the initial state of that pin to be LOW via the command `GPIO.output(LedPin, GPIO.LOW)`.
+
+After these inital settings and definitions, comes the main program. For now ignore the try ...except structure. The key part of the code is the `while True:` loop. As a result, the code in this loop runs forever. This unlike any of the programs that you have written thus far. Any ideas why we are doing this?
+
+
+## Wiring the circuit 
+
+To create the circuit you will need the following components
+
+* One LED (any color)
+* Two wires
+* One 100 ohm resistor (the resistor with bands colored brown, black, black, black, brown). The colored bands on encode the resistor value. A good explanation of how to decipher this code is given on this [website](https://www.wikihow.com/Read-Axial-Lead-Resistors).
+
+ 
+The picture of a LED and the symbol used for it in circuits is shown below:
+
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/LED.jpg){:height="200px"} 
+</p>
+
+The longer leg of the LED is called the 'anode' and the shorter leg is called the 'cathode'. When there is a positive voltage difference between the anode and the cathode, the LED is in forward biased or "on state" and current flows through the circuit lighting it up, otherwise the LED is in the "off state". 
+
+Wire up the circuit shown by the following diagram. Remember: we are using physical pin numbering for the RPi. You should use jumper wires and the breadboard to make the physical connections. 
+
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/schematic_led.jpg){:height="100px"} 
+</p>
+
+Ask an instructor or mentor is you don't understand the diagram. For more in depth information on configuring GPIO pins as outputs refer to [this website](https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/).
+
+Now, run the `01_blinking_LED.py` program. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is most likely with your wiring. If you were successful, take a close look at the code. 
+
+Now, modify the program (and rename it to `01_blinking_LED_sol.py`) to double the frequency at which the LED blinks. Make sure you commit this code to your github repo.
+
+
+# Controlling an LED using a button
+
+Next, we are going one step further and we'll use a button to control the LED. You don't need to undo the wiring you already created for the previous problem. This can stay the same. We will just add circuitry for a button.
+
+Buttons are switches that are used to connect or disconnect circuits. In the figure below, pins pointed out by the arrows of the same color are internally connected. When the button is pressed, the pins pointed by the blue arrow will connect to the pins pointed by the red arrow.
+
+
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/button.png){:height="100px"} 
+</p>
+
+
+Now, let's start by wiring the circuit. You should keep the LED circuit from the precious exercise. Then add the button as per the circuit diagram below.
+
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/schematic_button.jpg){:height="200px"} 
+</p>
+
+
+Next, open the program `02_buttonLED.py` in IDLE3. One of the key differences in this exercise compared to the previous one is that you will configure the pin connected to the button as an INPUT pin. Here is a nice excerpt from [a website](http://blmrgnn.blogspot.com/2016/02/gpio-general-purpose-inputoutput-inputs.html) explaining such a configuration:
+
+*A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is 'high'ù (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is 'low'ù (near GND), reading the pin will result in reading a logic 0.*
+
+So, the bottom line is that when we configure a GPIO pin as an input, we can read the voltage at that pin in our Python program. 
+
+But, what is the expected voltage if the pin is not connected to anything at all? The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is 'floating'ù and has no defined voltage level. For us to be able to reliably detect whether the input is high or low we need to tie it so that it is always connected and either reads high or low. This can be done by using a pullup resistor, as shown in the diagram below.
+
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/schematic_button_pullup.jpg){:height="200px"} 
+</p>
+
+However, you don't actually have to wire up a separate resistor in your circuit. Instead, the RPi has these pullup resistors internally built-in. You just have to specify in the software that you would like to use it. In the code, you will find the line: 
+
+```
+GPIO.setup(BtnPin, GPIO.IN, pull_up_down = GPIO.PUD_UP) 
+```
+
+This makes the BtnPin an input AND internally attaches the pullup resistor. Note that pulldown resistors are available as well. When would you need those? If you want to specify a pin as simply an input, without the pullup or pulldown resistor, you can write:
+
+```
+GPIO.setup(Pin, GPIO.IN) 
+```
+
+Now, let's have a closer look at the starter code. This program polls pin 15 (the pin connected to the button) and prints the status of that pin (1 indicates true or high voltage, 0 indicates False or a low voltage). It doesn't do much more, at the moment. You will need to modify it so that the button presses control the led. However, before you do this, try to understand the starter code first. What do you expect the output to be?
+
+Run the code. What do you get? Come up with a simple test to check the correctness of the program. 
+
+Now, it's time to write some code of your own.
+
+(1) Modify the program such that the LED is on when you press the button and off when you don't press the button. Name it `02_buttonLED_sol1.py` and commit it to the github repo.
+
+(2) Now change the functionality: toggle the LED every time the button is pressed. So, if the LED is ON and the button is pressed, it should turn OFF. If the LED is OFF and the button is pressed, it should turn ON. So pressing the button, changes the state of the LED, from ON to OFF to ON to OFF etc. Name this version of your code `02_buttonLED_sol2.py` and commit it to the github repo.
+
+
+# Controlling a servo motor
+
+A servo is an electrical motor that comes with built-in control circuitry. There are two types of servos: standard servos and continuous rotation servos. In this lab, we will be working with standard servos. A stardard servo can its arm half a rotation, from an angle of 0 degrees to an angle of 180 degrees. Servo are used in a lot of applications, for example to control flaps and rudders of RC aircraft.
+
+Keep the circuitry from the previous problems, and add a servo. The wiring is shown in the diagram below.
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/schematic_servo.jpg){:height="200px"} 
+</p>
+
+Now look at the starter code for the servo in `03_servo.py`. The first few lines of code should look familiar to you: we are configuring pin 7 as an output as it will be used to control the servo. However, the control signal we will send to the servo is a PWM or Pulse Width Modulation signal. What this means is that it alternates between HIGH and LOW at a certain frequency, while the percentage of time the signal is HIGH, called the duty cycle, is variable. By change this duty cycle, we can signal to the servo to which angle we want it to move. The program includes code between `#--- Start of the PWM setup --- ` and `#--- End of the PWM setup --- ` that takes care of this signaling. It is not important to understand the details here. Just leave the code as is and know it takes care of the PWM signal generation. The only thing you really need to know is that it defines a function `set_duty_cycle(angle)` that makes sure the PWM signal has the correct setting to signal to the servo to move to the position indicated by 'angle' (between 0 and 180).
+
+Try out the starter code. You should see the servo move between positions 0 and 180.
+
+You will notice that the `pwm_servo.start()` command tells the servo to *start* moving to the new angle. The actual motion will take some time. This is why there are the  `time.sleep()` commands: we want to halt the code execution long enough so that the servo can move to its final destination.
+
+What happens when you reduce the sleep time? Try decreasing it to 0.8 seconds, 0.5 seconds, 0.1 second, etc. Can you explain what you observe?
+
+Next, open the starter code in `04_timing.py`. This shows an alternative way for a program to delay execution without explicitly adding in sleep time. Execute the code to verify its functionality. It prints a comment every second, but the way this delay is implemented is much more flexible than using time.sleep(). Can you see why?
+
+Now, let's use this knowledge to improve the servo example code. These last two coding challenges are not easy and will challenge your ability to think about real-time coding. If you can't figure it out, don't despair. Part of the goal is to realize the challenges that result from dealing with the concept of time in embedded systems. Thinking about functionality as a collections of states (as in Picobot. Remember that lab?) is very useful here. We also discuss this more in lecture. Just give it a shot and see what you can come up with.
+
+(1) Modify the code from `03_servo.py` to perform the same functionality, but without using time.sleep(). Instead, use the technique shown in `04_timing.py`. Name this version of your code `03_servo_sol1.py` and commit it to the github repo.
+
+(2) Now, let's modify the functionality a bit. The way you modified your code in part (1) will allow you to do this. Now we want the servo to move as we did before. However, also add a button. *As soon as* the button is pressed, the servo should move back to position 0 and stay there as long as the button is pressed. Why would this be hard to implement if you use time.sleep()? Name this version of your code `03_servo_sol2.py` and commit it to the github repo. 
+
+
+# [Optional] Trying out the camera and other sensors
+
+If you are interested, we have a lot of other sensors available for you to try out. Ask one of the instructors or mentors. They can give you the hardware and sample code to try out.
+
+We have distance sensors, light sensor and a camera. The camera is especially interesting as it allows you to now apply the image processing you've learned to real-time processing of video streams.
+
+
+ 
