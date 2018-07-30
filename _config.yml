@@ -5,10 +5,12 @@ mentor_url: mentor.html
 url: https://ucsd-cse-spis-2018.github.io/
 
 # UPDATE THESE
-piazza: https://piazza.com/class/to-be-determined
-gradescope: https://gradescope.com/courses/to-be-determined
+piazza: "https://piazza.com/ucsd/summer2018/spis/home"
+gradescope: "https://gradescope.com/courses/20062"
 
-weekly_google_calendar_prefix: "https://sites.google.com/a/eng.ucsd.edu/spis/home/2017_academicprogram/2017-foundations#week"
+weekly_google_calendar_prefix: "https://sites.google.com/a/eng.ucsd.edu/spis/home/academicprogram/2018-foundations#week"
+
+spis_academic_program: "https://sites.google.com/a/eng.ucsd.edu/spis/home/academicprogram/"
 
 google_calendar_embed: "https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=eng.ucsd.edu_vpkdu3a26k3alf8rt2m19054ug%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles"
 
