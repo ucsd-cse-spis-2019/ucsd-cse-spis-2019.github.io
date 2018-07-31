@@ -1,5 +1,5 @@
 ---
-title: "Calendar (Calendar of assignments)"
+title: "Calendar (overview of assignment deadlines)"
 layout: calendar
 ---
 
