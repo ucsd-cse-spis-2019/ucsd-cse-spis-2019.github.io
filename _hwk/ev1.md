@@ -13,9 +13,8 @@ Every week during SPIS we will have a video of set of videos that you will watch
 
 The first assigned video gives you an overview of the field of computer science and it can be found here:
 [https://www.youtube.com/watch?v=SzJ46YA_RaA/](
-https://www.youtube.com/watch?v=SzJ46YA_RaA/)!
+https://www.youtube.com/watch?v=SzJ46YA_RaA/).
 
-https://www.youtube.com/watch?v=SzJ46YA_RaA
 
 Watch the video, and then enter your responses to the questions in [this Google form](https://goo.gl/forms/HYpffhEsu1AMA5TC2).
 
