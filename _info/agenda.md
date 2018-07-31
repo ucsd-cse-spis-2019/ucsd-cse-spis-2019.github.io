@@ -1,5 +1,5 @@
 ---
-title: Agenda
+title: Agenda (SPIS overall calendar)
 layout: default
 ---
 
