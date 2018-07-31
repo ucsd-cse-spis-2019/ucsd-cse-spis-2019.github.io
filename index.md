@@ -25,20 +25,20 @@ title: "UCSD CSE SPIS: Foundations of Computer Science"
   {% include lectures_for_week.html week="4"
     collapsible="true" collapsed="true" %}
   {% include lectures_for_week.html week="5" section_title="Projects"
-    collapsible="true" collapsed="false" extra_item="0902" %}
+    collapsible="true" collapsed="true" extra_item="0902" %}
 </div>
 
-<div data-role="collapsible" data-collapsed="false" >
+<div data-role="collapsible" data-collapsed="true" >
 <h2 id="homework">Homework</h2>
 {% include hwk_table.html %}
 </div>
 
-<div data-role="collapsible" data-collapsed="false" >
+<div data-role="collapsible" data-collapsed="true" >
 <h2 id="labs">Labs</h2>
 {% include lab_table.html %}
 </div>
 
-<div data-role="collapsible" data-collapsed="false" >
+<div data-role="collapsible" data-collapsed="true" >
 <h2 id="labs">Topics</h2>
  <ul>
  {% for item in site.topics %}
@@ -48,10 +48,10 @@ title: "UCSD CSE SPIS: Foundations of Computer Science"
 </div>
 
 
-<div data-role="collapsible" data-collapsed="false" >
+<div data-role="collapsible" data-collapsed="true" >
 <h2 id="projects">Projects</h2>
 
- <div data-role="collapsible" data-collapsed="false" id="bigdata">
+ <div data-role="collapsible" data-collapsed="true" id="bigdata">
  <h3>The Marvelous Big Data Guide</h3>
  <p>(Procured by your ever-faithful data tour guide, Maxwell Bland)</p>
  <ul>
@@ -61,7 +61,7 @@ title: "UCSD CSE SPIS: Foundations of Computer Science"
  </ul>
  </div>
 
- <div data-role="collapsible" data-collapsed="false" id="robotics">
+ <div data-role="collapsible" data-collapsed="true" id="robotics">
  <h3>Robotics</h3>
  <ul>
  {% for item in site.robotics %}
@@ -70,7 +70,7 @@ title: "UCSD CSE SPIS: Foundations of Computer Science"
  </ul>
  </div>
  
- <div data-role="collapsible" data-collapsed="false" id="webapps"> 
+ <div data-role="collapsible" data-collapsed="true" id="webapps"> 
  <h3>Web Apps</h3>
  <ul>
  {% for item in site.webapps %}
