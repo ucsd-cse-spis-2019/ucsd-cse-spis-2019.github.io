@@ -15,7 +15,7 @@ For your first lab, you'll be using the computers in B230, a lab in the basement
 
 These computer run the Linux operating system, and you'll log into them with your SPIS ACMS account.
 
-While in some labs you will be doing pair programming (working at one computer with your partner on a single program), for this lab we would like everyone to complete the lab themselves.  However, you should work next to your partner, and work at the same speed as your partner, helping each other out.  Do not leave your partner in the dust!
+While in some labs you will be doing pair programming (working at one computer on a single program, with your partner ), for this lab we would like everyone to complete the lab themselves.  However, you should work next to your partner, and work at the same speed as your partner, helping each other out.  Do not leave your partner in the dust!
 
 # Administrative one-time tasks for {{page.num}}
 
@@ -46,13 +46,13 @@ After completing this lab, you should be able to
 
 Before you can even sit down and begin using a workstation in B230, even to surf the web, you need to know your ACMS username and password.
 
-And to obtain those, you'll need to be able to access a web browser.   Catch-22!
+And to obtain those, you'll need to be able to access a web browser.  **Catch-22!**
 
-But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to lookup your ACMS username, and reset your password:
+But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to look up your ACMS username, and reset your password:
 
 [https://ucsd-cse-spis-2018.github.io/topics/acms/](/topics/acms/)
 
-Once you know your username and password, please sit down at a workstation next to your pair partner.
+Once you know your username and password, please sit down at a workstation next to where your partner is sitting.
 
 ## Step 1: Log in and bring up web browser and a terminal
 
@@ -77,7 +77,7 @@ IDLE is the program we'll use to do Python programming during SPIS.
 
 In IDLE, you you create, edit, and run Python code.
 
-To bring up IDLE, type `idle3` at the bash shell prompt (which you get by opening a Terminal window: select “Applications”, the "System Tools", then either “Terminal” or “Konsole” from the menu that pops up).  
+To bring up IDLE, type `idle3` at the bash shell prompt (which you get by opening a Terminal window: select “Applications”, the "System Tools", then either “Terminal” or “Konsole” from the menu that pops up). BTW, the '3' at the end of idle indicated that we are using Python3 (there are different versions of the Python language, with Python3 being slightly different from the older Python2).
 
 For this step, there is one goal: write a Python 3 program that prints the string `Hello, World!` as its output.
 
@@ -95,7 +95,7 @@ and the reason you wrote the program.
 # Alex Triton for CSE SPIS 2018
 print('Hello, World!')
 ```
-You are encouraged to write this comment, because it helps someone looking at your code know that *you* wrote it.  But, comments do not affect the functionality of the program.  In general, in computer programming, a *comment* is something that is intended only for human readers of the code, and is otherwise "ignored by the system".   Nearly every programming language has some way to express comments, though the exact rules for formatting of comments--that is, the *syntax* of comments--differs from one language to another.
+You are encouraged to write this comment, because it helps someone looking at your code know that *you* wrote it.  But, comments do not affect the functionality of the program.  In general, in computer programming, a *comment* is something that is intended only for human readers of the code, and is otherwise "ignored by the system".   Nearly every programming language has some way to express comments, though the exact rules for formatting of comments -- that is, the *syntax* of comments -- differs from one language to another.
 
 In Python, a `#` starts a comment.  Everything from the `#` to the end of that line is part of the comment.
 
@@ -131,7 +131,7 @@ To create this repo:
 
 * Login to your github.com account, and 
 
-* Then create a new repository. You do this by pressing the green button with the words "New repository". Alternatively, on the menu bar on top, there is a '+' sign with a down arrow next to it. If you click it, you also get the option of creating a new repository. 
+* Then create a new repository. You do this by pressing the green button with the words "New". Alternatively, on the menu bar on top, there is a '+' sign with a down arrow next to it. If you click it, you also get the option of creating a new repository. 
 
 On the next screen:
 
@@ -143,21 +143,18 @@ On the next screen:
 
 Then, once you've entered all of this information, click to create the repository.
 
-After you've done that, logout of github.com, and let your pair partner take a turn doing the same thing.
+Periodically, check in on your partner. You are there to help each other.
+
 
 ## Step 6:  Add a message and a photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
 
-For this step, please ask one of the mentors to take a photo of you, with your face and your name tag visible, and
-then email the photo to you.
+For this step, please ask someone to take a photo of you, with your face and your name tag visible. We will use these pictures to create a roster, so please make sure you are easily recognizable. They can then send you the photo through email.
 
-* If you, your pair partner, or a fellow SPISer happen to have a phone with a camera and email capability, you can also
-    just take the photo yourself.
-
-Once you have the photo in your email, access your email from the web browser of the ACMS linux machine at which you are
-seated.   Save the photo (i.e. the .png, .jpg, or whatever) to a file.    Depending on the browser you are using, this 
+Once you have the photo in your email, access it from the web browser of the ACMS linux machine at which you are
+seated.   Save the photo (i.e. the .png, .jpg, or whatever) to a file.  Depending on the browser you are using, this 
 file may end up in your "home directory", or in some other directory (e.g. `~/Downloads`, `~/Desktop`, etc.)
 
-Once you've located it, change the name to `alex-t.jpg` or `alex-t.png` or whatever.   You need to keep the .jpg or .png exactly as it is, but change the first part of the filename to match your first name and last initial, in lowercase, separated by a hyphen (`-`). The naming convention is important, because the SPIS staff is going to access all of these images to create a SPIS photo album so that we can all learn your names more quickly.
+Once you've located it, change the name to `alex-t.jpg` or `alex-t.png` or whatever. You need to keep the .jpg or .png exactly as it is, but change the first part of the filename to match your first name and last initial, in lowercase, separated by a hyphen (`-`). The naming convention is important, because the SPIS staff is going to access all of these images to create a SPIS photo album so that we can all learn your names more quickly.
 
 Once you've located it, your next job will be to upload it to your github practice repository.  We'll discuss how
 in the next step.
@@ -171,7 +168,7 @@ Navigate to the web page for your repo.  It will be something like:
 
 except it will be your name instead of `alex-t`.
 
-On the right hand side, there is a great big green button labelled "Clone or Download".   Eventually, we'll be using that button a lot.  But for now, look just a few buttons to the left, and you'll find a button that says "Upload files".
+On the right hand side, there is a great big green button labelled "Clone or Download". Eventually, we'll be using that button a lot.  But for now, look just a few buttons to the left, and you'll find a button that says "Upload files".
 
 Click that button, and upload your photo from the place where you saved it out of your email. Click the green "Commit changes" button.
 
@@ -204,12 +201,12 @@ of your image file is:
 
 Save it (click the "Commit change" button), and take a look at your README.md file.  You should see your photo embedded in the README.md text.
 
-If so, you are almost finished with lab00!
+If so, you are almost finished with lab00! How is your partner doing?
 
 
 # Step 7: Piazza Invitation
 
-In your UCSD email you should find an invitation to Piazza.   Please accept the invitation.
+In your UCSD email you should find an invitation to Piazza.   Please accept the invitation, if you have not done so already.
 
 Then visit [https://piazza.com](piazza.com) to log in to Piazza
 
@@ -222,11 +219,11 @@ SPIS will use a series of deadlines to help you stay on track with your work as 
 Those deadlines are listed on the [Calendar](/info/calendar/) which is linked to from the navigation links at the top of the [SPIS FOCS website](/), as well as from various other places on the website.
 
 Before each of these deadlines, please submit whatever you have completed on that assignment following the instructions given.
-This may mean simply having your latest changes pushed to the appropriate repo on [github.com](https://github.com), or this may mean
-following an alternative set of instructions to submit your assignment.
+This may mean simply having your latest changes pushed to the appropriate repo on [github.com](https://github.com), or this may mean following an alternative set of instructions to submit your assignment.
 
 You can also submit earlier if you like. 
 
-However, please know that while we want to encouage you to try to complete assignments by the given deadlines, if you find that you are working at a slower pace, just keep working.  Because SPIS is not graded, it's OK if you don't get everything done, but we'd like you to do as much as you can.   If you aren't finished, submit what you have, but then *keep working on the assignment* as long as it is helping you learn the material.
+However, please know that while we want to encouage you to try to complete assignments by the given deadlines, if you find that you are working at a slower pace, just keep working.  Because SPIS is not graded, it's OK if you don't get everything done, but we'd like you to do as much as you can. If you aren't finished, submit what you have, but then *keep working on the assignment* as long as it is helping you learn the material.
 
-Periodically, you'll get feedback from your mentors and instructors about your progress on the assignments.     Trying to stay ahead of the deadlines is good practice for the regular quarter, and it will help you get the most out of SPIS.  But the most important thing is to work at the pace at which you will learn the material best.
+Periodically, you'll get feedback from your mentors and instructors about your progress on the assignments. Trying to stay ahead of the deadlines is good practice for the regular quarter, and it will help you get the most out of SPIS.  But the most important thing is to work at the pace at which you will learn the material best.
+
