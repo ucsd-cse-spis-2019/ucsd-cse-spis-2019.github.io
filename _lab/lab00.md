@@ -216,7 +216,7 @@ Find the UCSD CSE SPIS 2018 course and familiarize yourself with the Piazza site
 
 SPIS will use a series of deadlines to help you stay on track with your work as well as to allow us to keep track of your progress. 
 
-Those deadlines are listed on the [Calendar](/info/calendar/) which is linked to from the navigation links at the top of the [SPIS FOCS website](/), as well as from various other places on the website.
+Those deadlines are listed on the Calendar, which is linked to from the navigation links at the top of the [SPIS FOCS website](/), as well as from various other places on the website.
 
 Before each of these deadlines, please submit whatever you have completed on that assignment following the instructions given.
 This may mean simply having your latest changes pushed to the appropriate repo on [github.com](https://github.com), or this may mean following an alternative set of instructions to submit your assignment.
