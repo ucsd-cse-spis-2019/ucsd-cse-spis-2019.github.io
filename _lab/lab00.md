@@ -208,7 +208,7 @@ If so, you are almost finished with lab00! How is your partner doing?
 
 In your UCSD email you should find an invitation to Piazza.   Please accept the invitation, if you have not done so already.
 
-Then visit [https://piazza.com](piazza.com) to log in to Piazza
+Then visit [https://piazza.com](https://piazza.com) to log in to Piazza
 
 Find the UCSD CSE SPIS 2018 course and familiarize yourself with the Piazza site.
 
