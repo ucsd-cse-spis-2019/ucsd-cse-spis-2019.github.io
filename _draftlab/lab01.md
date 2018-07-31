@@ -122,5 +122,11 @@ For example, you could challenge yourself with the following problems:
 
 * for the empty room, can you build a machine that covers each cell in the room exactly once? 
 
+* for the maze, see if you can use only 8 rules 
+
+Scroll through the different maps and see if you can write Picobot programs to solve these other rooms. Can you write a single program that works for ALL provided mazes?
+In the Roomba vacuum cleaner analogy, you might know that the edges of a room get dirtier than the middle of the room (dust kicked up accumulates near the walls). Can you program Picobot to cover the cells that are adjacent to walls at least twice and cover interior cells exactly once?  Can you formulate other criteria you might want to solve? Are there unsolvable requirements?
+
+We hope you enjoyed these Picobot puzzels ...
 
 
