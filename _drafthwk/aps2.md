@@ -1,26 +1,12 @@
 ---
 num: "aps2"
-desc: "Greedy Method"
-ready: false
-assigned: 2017-08-14 08:45:00.00-7:00
-due: 2017-08-21 21:00:00.00-7:00
-resubmit: 2016-08-16 22:00:00.00-7:00
+desc: "Dynamic-Programming"
+ready: true
+assigned: 2017-08-16 11:00:00.00-7:00
+due: 2017-08-20 22:00:00.00-7:00
 layout: default
 ---
 
+Please use the same repo you use for your other [homework](/hwk/h01/). In a file named aps2.md, write a solution to [these problems](/hwk/aps2/aps2problems.pdf).
 
-
-| [APS 1](/hwk/aps1/) | [APS 2](/hwk/aps2/) | [APS 3](/hwk/aps3/)   | [APS 4](/hwk/aps4/) | 
-|---------------------|---------------------|-----------------------|---------------------|
-| Divide and Conquer  | Greedy Algorithms   | Backtracking          |  Iterative Improvement |
-
-
-Please create an APS repo with a Week2.md file, following these instructions:
-
-[Github: Creating Repos for APS writeups](/topics/github_aps_writeups/)
-
-Then, in your Week2.md file, please write a solution to these problems:
-
-[APS Greedy Method problems (pdf)](spis_gr_problems.pdf){: data-ajax="false" }
-
-See also: [Main SPIS 2016 APS Page](https://sites.google.com/a/eng.ucsd.edu/spis/home/AcademicProgram/2016_aps)
+You may find it helpful to refer to the [slides from class](/hwk/aps2/aps2NotesAug16.pptx).
