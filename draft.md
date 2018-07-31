@@ -5,7 +5,7 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
 
 # {{site.course}}, {{site.year}}
 
-<div data-role="collapsible" data-collapsed="true" >
+<div data-role="collapsible" data-collapsed="false" >
 <h2 id="homework">Draft Homework</h2>
 {% include draft_hwk_table.html %}
 </div>
@@ -16,8 +16,8 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
 </div>
 
 <div data-role="collapsible" data-collapsed="false" >
-<h2 id="labs">Draft Lectures</h2>
-{% include draft_lab_table.html %}
+<h2 id="lectures">Draft Lectures</h2>
+{% include draft_lectures_table.html %}
 </div>
 
 
