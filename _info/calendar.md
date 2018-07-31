@@ -1,5 +1,5 @@
 ---
-title: "Calendar"
+title: "Calendar (Calendar of assignments)"
 layout: calendar
 ---
 
