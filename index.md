@@ -14,7 +14,7 @@ title: "UCSD CSE SPIS: Foundations of Computer Science"
 </ul>
 </div>
 
-<div data-role="collapsible" data-collapsed="false" markdown="0">
+<div data-role="collapsible" data-collapsed="true" markdown="0">
 <h2 id="labs">Lectures</h2>
   {% include lectures_for_week.html week="1"
     collapsible="true" collapsed="true" %}
