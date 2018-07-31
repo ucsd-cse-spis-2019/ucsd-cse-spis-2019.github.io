@@ -15,6 +15,12 @@ title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
 {% include draft_lab_table.html %}
 </div>
 
+<div data-role="collapsible" data-collapsed="false" >
+<h2 id="lectures">Draft Lectures</h2>
+{% include draft_lecture_table.html %}
+</div>
+
+
 ----
 
 ![SPIS_logo](images/SPIS_logo.jpg)
