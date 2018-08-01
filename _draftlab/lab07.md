@@ -1,25 +1,31 @@
 ---
 layout: lab
-num: lab09
-ready: true
+num: lab07
+ready: false
 desc: "Working With Data"
-assigned: 2017-08-22 13:15:00.00-7
-due: 2017-08-25 16:45:00.00-7
+assigned: 2018-08-22 13:15:00.00-7
+due: 2018-08-25 16:45:00.00-7
 ---
 
-# Tables
+# Working with and learning from data
 
-In this lab, we'll learn about *tables*, which let us work with multiple arrays of data about the same things. Tables are described in [a ebook chapter](http://www.inferentialthinking.com/chapters/05/tables.html).
+This lab will give you a taste of the very hot field of machine learning.  The basic idea of machine learning is to use data to build a program/model that can geneate or make predictions about new data.  In this lab, you will:
+ * use basic Python libraries and functions to read date from a file and do basic processing of data
+ * build models to generate or predict data
 
-First, setup the coding environment and start to execute code
+# First, create a lab07 repo
 
-# First, create a lab09 repo
-
-Go to github.com and create a new repo called spis16-lab09-part1-Name-Name using Method 1. When creating the repo import the starter file from this git repo: https://github.com/ucsd-cse-spis-2017/lab09starter
+Go to github.com and create a new repo called spis18-lab07-part1-Name-Name using Method 1. When creating the repo import the starter file from this git repo: TBA
 
 Then use `git clone` to clone this into your `~/github` directory.
 
 In the repo, you will see that there are three files, world_population.csv and imdb.csv. They are used in this lab for data analysis. 
+
+# Lab outline (to be completed later)
+ * Part 1: reading from files, working with dictionaries and building Markov models to predict text
+ * Part 2: training and using a classifier (naive Bayes (binary) and regression (ordinal/continuous))
+ 
+
 
 # Step 2: start ipython and get into the pylab mode
 Run commands in terminal
