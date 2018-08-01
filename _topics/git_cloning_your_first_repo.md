@@ -13,7 +13,7 @@ of our own Windows, Mac or Linux machine.
 
 To do that, we need to do a step called "cloning" a repo.
 
-This creates a "clone" of the repo on our local disk.
+This creates a "clone"(copy) of the repo on our local disk (i.e. in your lab account on the lab machine you are working on).
 
 The clone has a link back to something called the `origin`, which is the *remote server* (or just *remote*, for short) where the clone came frome.
 
@@ -41,10 +41,10 @@ What comes up looks like one of these two figures
 | ![clone with ssh](clone-with-ssh-40.png) |  ![clone with https](clone-with-https-40.png) | 
 
 
-If you get the "clone with HTTPS" figure, click where it says "Use ssh" as shown in the diagram below.
-That spot "toggles" (switches back-and-forth) between `ssh` and `https`.  We want `ssh`.
+If you get the "clone with ssh" figure, click the "use HTTPS" link.
+That spot "toggles" (switches back-and-forth) between `ssh` and `https`.  We want `https`.
 
-Once it says `clone with ssh`, keep this web page open, but set it aside for a moment.  We'll need to 
+Once it says `clone with HTTPS`, keep this web page open, but set it aside for a moment.  We'll need to 
 copy the link from there in just a moment.  But first, we need to do some work at the ACMS command line.
 
 
@@ -83,7 +83,7 @@ Be sure to replace the URL shown below with the one you copied
 from the web page.
 
 ```
-    git clone git@github.com:ucsd-cse-spis-2016/spis16-lab02-Alex-Chris.git
+    git clone https://github.com/ucsd-cse-spis-2018/spis18-lab02-Alex-Chris.git
     ...
 ```
 
@@ -96,12 +96,10 @@ RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
 Are you sure you want to continue connecting (yes/no)? yes
 ```
 
-You should then see something like this, and you should have a new subdirectory of `~/github` with the
-same name as the repo you cloned, e.g. `spis16-lab02-Alex-Chris`
+You should then be prompted to enter your username and your password.  These are your github username and password.  Enter them now.  If you are successful, you will see a message saying that the repository is being cloned.  
 
 ```
-[spis16t3@ieng6-240]:github:107$ git clone git@github.com:ucsd-cse-spis-2016/spis16-lab02-Alex-Chris.git
-Cloning into 'spis16-lab02-Alex-Chris'...
+Cloning into 'spis18-lab02-Alex-Chris'...
 remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
@@ -114,7 +112,7 @@ Checking connectivity... done.
 
 If it worked:
 * Try typing `ls`.  You should see the new directory for your repo.  
-* Use `cd repo-name` (e.g. `cd spis16-lab02-Alex-Chris`) to cd into your cloned repo
+* Use `cd repo-name` (e.g. `cd spis18-lab02-Alex-Chris`) to cd into your cloned repo
 * Type `pwd` and `ls` to see the files in your cloned repo.
 
 If it all looks like the following transcript, then you are good to go&mdash;you've cloned your first repo successfully!
@@ -134,22 +132,4 @@ README.md
 
 # What if it didn't work
 
-What you might see instead is something like this:
-
-```
-[spis16t3@ieng6-240]:github:99$ git clone git@github.com:ucsd-cse-spis-2016/spis16-lab02-Alex-Chris.git
-Cloning into 'spis16-lab02-Alex-Chris'...
-Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-[spis16t3@ieng6-240]:github:100$ 
-```
-
-That signifies that you probably either:
-* haven't yet done the ssh public key steps in these instructions for [one-time ACMS github setup](/topics/acms_git_one_time_setup/) (in which case, follow that link and do those steps now), OR
-* something went wrong with the ssh public key setup (so review those instructions again)
-* maybe you have the wrong link to the repo
-
-Try reviewing the steps above first, and if you are still having trouble, ask a mentor or instructor for help.
+If you get a message stating that there was an authentification failure, or your username or password was incorrect, you probably entered your github username and/or password wrong.  Try again to clone your repository.  If you are still having trouble, ask a mentor or instructor for help.
