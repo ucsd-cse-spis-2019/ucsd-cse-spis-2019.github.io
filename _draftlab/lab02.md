@@ -11,7 +11,11 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Overview
 
-The main purpose of this lab is to practice, as pairs, a few skills involving Python, Unix, and github.   
+The main purpose of this lab is to practice, as pairs, a few skills involving Python, Unix, and github.
+
+# Partner structure for {{site.num}}
+
+Each person will complete all parts of this lab, but you should work in parallel with your partner.  That is, you should sit next to your partner and check in with your partner as you complete each part of this lab.  Do not leave your partner in the dust!
 
 
 # More specific Learning Objectives
