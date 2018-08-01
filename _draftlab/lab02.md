@@ -15,8 +15,7 @@ The main purpose of this lab is to practice, as pairs, a few skills involving Py
 
 # Partner structure for {{site.num}}
 
-Each person will complete all parts of this lab, but you should work in parallel with your partner.  That is, you should sit next to your partner and check in with your partner as you complete each part of this lab.  Do not leave your partner in the dust!
-
+You will work with a partner for the programming part of this lab.  However, you should work through the Unix part of this lab by yourself.  You should work next to your partner, making sure you both understand what you are doing.  
 
 # More specific Learning Objectives
 
@@ -52,7 +51,7 @@ with your ACMS account.
 
 If *both* you *and* your pair partner are already thoroughly familiar with Unix command basics&mdash;that is, you know how to create `~/github`, and you are *throughly* familiar with everything in the table below, you can just create `~/github`, and skip the tutorial.
 
-But if either or both of you has any doubt, you are strongly encourage to go through this page carefully and slowly,
+But if either or both of you has any doubt, you are strongly encourage each of you to go through this page carefully and slowly,
 to learn some of the basics of working with Unix commands at the bash shell.  That is one of the most fundamental skills you'll need throughout all of the courses that use the ACMS unix accounts during your entire stay at UCSD.
 
 We would encourage you to go through the entire tutorial at least once in one pair partner's account, and then repeat it briefly in the second pair partner's account so that each partner has a ~/github subdirectory.
@@ -131,22 +130,9 @@ The second pair partner should accept the invitation.  This is usually straightf
 
 If the email doesn't arrive, though, or anything is not clear, there are troubleshooting instructions later on the same page you accessed in the previous step to add the partner as a collaborator:  
 [Github: Adding collaborators](https://ucsd-cse-spis-2018.github.io/topics/github_add_collaborators)
-
-## Step 3: One time steps for configurating your ACMS account for git
-
-There are a few steps that we only have to do one time in order to get our ACMS account ready for use with git and github.
-
-Those steps are outlined here.  Please repeat these steps under each pair partner's account.
-
-* [ACMS Account: git/github one-time setup steps](/topics/acms_git_one_time_setup/)
-
-<b>TIME-SAVING TIP:</b> You do not have to log "all the way out" and log back in to be able to do these steps for both pair partners.    Instead, if the first pair partner is logged in, they can just allow the second pair partner to drive for a moment, and ssh into their account from a terminal window.  This article explains how:
-
-* [ACMS: ssh'ing to access another account](/topics/acms_ssh_into_another_account/)
  
 
-
-## Step 4: Cloning a private repo at the bash (Unix) command line
+## Step 3: Cloning a private repo at the bash (Unix) command line
 
 Next, you need to clone your private repo into the `~/github` directory of one of your ACMS accounts (either one will do.)
 
