@@ -140,7 +140,7 @@ The instructions to do that are here: [cloning your first repo](/topics/git_clon
 
 When you've done that, we are finally ready for some Python programming!
 
-## Step 5:  How to store a Python file in a repo
+## Step 4:  How to store a Python file in a repo
 
 To review what you've done so far:
 
@@ -170,50 +170,21 @@ Then, start up IDLE by typing `idle3`:
 [spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:119$ idle3
 ```
 
-Once you do, use the `File -> New File` menu item twice to open *two* windows in which you can type Python code.
+Once you do, use the `File -> New File` menu item to open a new window in which you can type Python code.
 
-In the first window, enter this function definition.  This function converts Fahrenheit temperatures to Celsius.
+Into this window, enter this function definition.  This function uses the the gender wage gap in the United States to calculate a woman's wage based on the corresponding male wage.  The wage gap is defined as the difference between a man's salary and a woman's salary, expressed as a percentage of a man's salary.  In the United states the wage gap is 18.2%.  To calculate a woman's salary, given a man's salary using the wage gap we can multiply the man's salary by 1-wageGap.  You can learn more about the wage gap and see more data [here](https://data.oecd.org/earnwage/gender-wage-gap.htm).
 
 It should make sense to you based on what you've learned about Python functions so far.
 
 ```python
-# tempFuncs.py
-def ftoc(fTemp):
-   return (fTemp - 32)*(5.0/9.0)
+# wageCalculator.py
+def convertWageMtoW(mWage):
+   wageGap = 0.182
+   ratio = 1-wageGap
+   return ratio*mWage
 ```
 
-In the second window, enter this code.   Don't just copy and paste it; read through it and try to understand it.
-
-If you would like a more detailed, line-by-line explanation of this code, plus some background on unit testing in general,
-read the article [Python: Unit Testing](/topics/python_unittest/).
-
-```python
-# test_tempFuncs.py
-
-import unittest
-from tempFuncs import ftoc
-
-class Test_tempFuncs(unittest.TestCase):
-
-   def test_ftoc_1(self):
-      self.assertAlmostEqual(ftoc(212.0),100.0)
-
-   def test_ftoc_2(self):
-      self.assertAlmostEqual(ftoc(32.0),0.0)
-
-   def test_ftoc_3(self):
-      self.assertAlmostEqual(ftoc(-40.0),-40.0)
-
-   def test_ftoc_4(self):
-      self.assertAlmostEqual(ftoc(67.0),19.4444,places=3)
-
-if __name__ == '__main__':
-    unittest.main()      
-```
-
-Save each of the files by choosing `File -> Save` from the Idle menu.  
-
-Save them with the *exact* names: `tempFuncs.py` and `test_tempFuncs.py`.  It is important to get the upper vs. lowercase, and the punctuation correct.
+Save this file by choosing `File -> Save` from the Idle menu, giving it the name `wageCalculator.py`.  
 
 When you save, the save dialog should indicate that they are being saved inside the ~/github/spis16-lab02-Name-Name folder that corresponds to your local github repo (you should see a .git directory already present).   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
 
@@ -227,49 +198,74 @@ README.md  tempFuncs.py  tempFuncs.pyc  test_tempFuncs.py
 [spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ 
 ```
 
-### Now try running the test_tempFuncs.py file.
 
-Now, in the window with the `test_tempFuncs.py` file, try selecting "Run -> Run Module" from the menu.
+### Now run and test your code
 
-You should get output that looks like this:
+So now you've got a function, but how do we know this code is correct?  We need to test it!  And in order to test it, we need to define some test cases--in other words, we need to calculate the expected output for several inputs.  The first step to testing is to define these input-output pairs.  We can use a calculator to do this, for example:
 
+* men's wage of 100 should output 81.8
+* men's wage of 76.2 should output 62.3316
+* men's wage of 0 should output 0.0
+
+It's good to try a range of inputs that are qualitatively different.  Notice in the test cases above, I have selected one non-zero integer input, one decimal number and the number 0.
+
+Now we need to run these tests cases.  We can do this in one of two ways:
+
+*Option 1: Running test cases in the interactive shell*
+Load the Python code into the interacive Python window by selecting "Run -> Run Module" from the menu at the top of the window with the function definition you copied in above (wageCalculator.py), or simply by pressing F5 in the window with the code.  Now in the Python shell at the `>>>` prompt, run each test case one at a time, and visually verify that that the answers are correct:
 ```
->>> ================================ RESTART ================================
->>> 
-....
-----------------------------------------------------------------------
-Ran 4 tests in 0.031s
-
-OK
->>> 
-```
-
-### What if the names are not exactly right? `mv` and `rm` to the rescue
-
-If the names of your `tempFuncs.py` and `test_tempFuncs.py` are not exactly right, you can use the unix `mv` command, which functions both as a *move* command as as a *rename* command.    The syntax is:
-
-```
-mv oldname newname
-```
-
-For example to change `temp_funcs.py` to `tempFuncs.py`, you would type:
-
-```
-mv temp_funcs.py tempFuncs.py
+>>> convertWageMtoW(100)
+81.8
+>>> convertWageMtoW(76.2)
+62.3316
+>>> convertWageMtoW(0)
+0.0
 ```
 
-If you end up with extra files, you can use the rm command to delete files you dont want.  For example, to remove the file `temp_Fenks.py` that you perhaps saved by mistake, you can type:
+*Option 2: write tests in a main method*
+The second option for writing test cases is to write a special method, called a main method, that will be automatically run when you load your code into the interpreter using F5.  Add the following code to your `wageCalculator.py` file, below the code for your `convertWageMtoW` method:
+
+```python
+def main():
+    print("Testing convertMtoW(100)...")
+    ans = convertWageMtoW(100)
+    expected = 81.8
+    if ans == expected:
+        print("Correct!")
+    else:
+        print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
+
+    print("Testing convertMtoW(76.2)...")
+    ans = convertWageMtoW(76.2)
+    expected = 62.3316
+    if ans == expected:
+        print("Correct!")
+    else:
+        print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
+
+    print("Testing convertMtoW(0)...")
+    ans = convertWageMtoW(0)
+    expected = 0.0
+    if ans == expected:
+        print("Correct!")
+    else:
+        print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
+
+
+if __name__ == "__main__": main()
 
 ```
-rm temp_Fenks.py
-```
+
+Now when you run your code using F5 from the window, all the tests will run automatically.  Make sure you understanding the code above.  What do you think the last line does?  Talk to your partner, and if you have questions, ask the tutors or instructors.
+
+You can use either method to test your code throughut SPIS.  Or you can check out [Option 3: Unit Testing](https://docs.python.org/3.7/library/unittest.html).
 
 Ok, so now you have a Python file with a function definition in it, and you have some test cases.
 
 What's next?  We want to get this Python code into your local git repo, and then push the changes up to github.com.
 
 
-## Step 6:  The basic git workflow of `git add...`, `git commit...`, `git push...`
+## Step 5:  The basic git workflow of `git add...`, `git commit...`, `git push...`
 
 So, having the code in the directory isn't enough to get it into the git repo.
 
@@ -297,152 +293,27 @@ Essentially, though here's what you are going to do:
 Congratulations, you've just done your first of many dozens of git commits you'll do during SPIS, and the first
 of hundreds or thousands you'll do during your four years at UCSD.
 
-## Step 7: Testing of Python functions
+## Step 6: Adding (and testing) additional functionality to your wage converter
 
-Now, in this case, we had some code that already worked right out of the gate.   But the normal case is that we 
+Finally, it's time for you to write your own code.  
 
-1. Start with a *stub*, and some test cases and make sure they fail.
-2. Replace the stub with working code so that the test cases pass.
-3. See if there is any way to refactor the code to improve it.
+Extend the functionality of your wageCalculator function so that:
+* It takes at least one additional parameter
+* It uses an if-statement (or if-else statement, or if-elif-else statement, etc) in its functionality
 
-In this step, you'll:
+You can use the data on [this page](https://data.oecd.org/earnwage/gender-wage-gap.htm), or any other data you find on the web in your functions.
 
-* add a stub for a second function to the `tempFuncs.py` file
-    * after doing so, you'll commit this change to practice the sequence:
-        ```
-        git add ... ; git commit -m "message"; git push origin master
-        ```
-* add some additioal test cases
-    * you'll commit this change too with the same sequence:
-        ```
-        git add ... ; git commit -m "message"; git push origin master
-        ```
-* see the test cases fail
-    * you won't have to commit at this step, because you won't have changed anything
-* then add code to make the tests cases pass
-    * You guessed it: yet another round of
-        ```
-        git add ... ; git commit -m "message"; git push origin master
-        ```
+Exactly what your extended function does is up to you and your partner, but it should still be focused on calculating salaries based on the gender wage gap.  Here are some ideas for extensions, but feel free to come up with your own:
+* Add race/ethnicity information to the calculator.  For example, the calculator might take an additional parameter, which is race, and calculate the salary of a woman of that race, assuming the wage input is for a man of that same race (or alternatively the wage of a white man).
+* Add a country parameter, and calculate salaries differently based on wage gaps in different countries.
 
-Ok, so let's get started:
+### Comment your code
+In a comment above your modified function, make sure you describe what it does.  Include a description of what each parameter means, and what is returned.
 
+### Test your code
+Come up with several test cases, and then run your code on these test cases using one of the two testing methods described above.  If any of your test cases fail, fix your code so that they pass.  Make sure you test enough cases so that you are confident your code works in all cases.  For example, if you take a country name as one of your parameters, what happens if the user enters a country your code does not know about?  Does it behave as you expect?
 
-
-## Step 7a: Add a stub for `ctof(cTemp)` to `tempFuncs.py`
-
-Add a stub for a second function to the `tempFuncs.py` file by adding this code to the file:
-
-```
-def ctof(cTemp):
-   return "stub"
-```
-
-This code is "always" the wrong answer, so it should fail every test.  That's what we want from a stub. It helps us
-"test the test" to make sure that it is successful at detecting bad code.
-
-After adding this code, save the file `tempFuncs.py`.  Then at the command prompt, inside the ~/github/spis16-lab02-Name-Name` direcory, type:
-
-* `git status`
-* `git add tempFuncs.py`
-* `git status`
-* `git commit -m "stub for ctof"`
-* `git status`
-* `git push origin master`
-* `git status`
- 
-Then check the repo's page on github.com to see that the changes appear.
-
-## Step 7b: Add import, and test cases for `ctof` to `test_tempFuncs.py`
-        
-Next, edit the `test_tempFuncs.py` file in IDLE3, and after the line
-
-```
-from tempFuncs import ftoc
-```
-
-add this line:
-
-```
-from tempFuncs import ctof
-```
-
-This line is needed so that we can pull the definition of `ctof` from the file `tempFuncs.py` and run our tests
-on it.    
-
-Now add some test cases for the cToF function.   
-* You simply add the function definitions for these test cases immediately below the ones for
-fToC.    
-* Be sure they are indented inside the `class`, just like the ones for `ftoc`.
-* Also, be sure that each one has a different name from all of the others.
-
-We'll give you the first one, but the rest you must come up with on your own:
-
-```
-   def test_ctof_1(self):
-      self.assertAlmostEqual(ctof(100.0),212.0)
-```
-
-Add at least four more so that you have a total of five tests.
-
-Once you are done and saved the file, its time to commit the changes:
-
-* `git status`
-* `git add test_tempFuncs.py`
-* `git status`
-* `git commit -m "tests for ctof"`
-* `git status`
-* `git push origin master`
-* `git status`
-
-Then check the repo's page on github.com to see that the changes appear.
-
-## Step 7c: See the test cases fail
-
-Now, run the test cases by selecting "Run -> Run Module" from the menu in the window for `test_tempFuncs.py`.
-
-What you want to see is that the test cases for ftoc passed, but that the ones you added for ctof fail.
-In general, test cases where you have a "stub" function should fail either because:
-
-* the expected output didn't equal "stub", or
-* in the case of `assertAlmostEqual`, a message like this:
-    ```
-    TypeError: unsupported operand type(s) for -: 'float' and 'str'
-    ```
-The second type of error comes because the `assertAlmostEqual` function tries to subtract the expected result from the actual result, and then take the absolute value.  It can't subtract from a string value such as `"stub"`, hence the error.
-
-You could also use a stub with a value of something like `return -99999.999` if you like; then you'll get a slightly
-different error, but the test will still fail&mdash;which is want you want for a stub. Note that this case is reported as a 'failure' rather than an 'error'.
-
-### Are the tests *failing* the expected way?
-
-If the tests are failing in the way we are *hoping for*, you can move on to the next step.
-
-If on the other hand, there were *errors of another kind* (e.g. indentation errors, missing :, etc.) then you'll want to 
-fix those.  And if that involves change either, or both of the two files, you'll want to do another round of the steps to do a commit.
-
-If the commit involves changes to both files, you can combine those into a single commit.  Here's how:
-
-* EITHER:  `git add tempFuncs.py` followed by a separate `git add test_tempFuncs.py` 
-* OR: `git add *.py` which adds all files ending in .py from the current directory to the next commit (but only if they      are new or have changed.)
-* Then continue with the `git status`, git commit...` as before.
-
-## Step 7d: Replace the stub in `ctof` with correct code so that the tests pass
-
-Now, you should write a correct version of the ctof function so that tests pass.
-
-That will be a line of code that starts with `return` and ends with an expression involving the variable
-`cTemp`, and some math operations to convert that to an equivalent Fahrenheit value. 
-
-Try running the tests, and when all of your tests pass, you are ready to commit.  What you are looking for is this:
-
-```
-.........
-----------------------------------------------------------------------
-Ran 9 tests in 0.000s
-
-OK
-```
+If you chose Option 1 for your testing strategy (entering tests at the interactive prompt), please _copy and paste_ your test runs (including the output) into comments in your wageCalculator.py file so we can see how you tested your code.
 
 If you get part-way done, and *some* of your tests pass, but not others, or you are in the middle of working
 when it is time for a break, that is STILL a good time to do a commit.   Add the letters "WIP" to the start of your
@@ -450,9 +321,9 @@ commit message so you know that this is not a finished product.  "WIP" stands fo
 
 ```
 git status
-git add tempFuncs.py
+git add wageConverter.py
 git status
-git commit -m "WIP CL/AT  Some ctof tests passing, others failing"
+git commit -m "WIP CL/AT  Some tests passing, others failing"
 git status
 git push origin master
 ```
@@ -485,4 +356,4 @@ For now, though it may be better to just avoid the `!` symbol in your commit mes
 
 ### All tests passing? Then you are done!
 
-Congratulations!
+Congratulations!  If you still have time, explore [unit testing](https://docs.python.org/3.7/library/unittest.html), extend your code in some other way, read more about the wage gap, or anything else related to this lab!
