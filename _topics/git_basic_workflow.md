@@ -15,18 +15,18 @@ Consider this as a kind of "cheat sheet", rather than as a full tutorial on the 
 
 ```
 cd ~/github
-git clone ssh-clone-url-of-your-repo
+git clone https-clone-url-of-your-repo
 cd repo-name
 ```
 
 ## Longer version:
 
 * Find the repository's web page on github.com
-* Find the SSH clone URL on the right hand side, about half way down.
-* If the link says HTTPS clone URL instead of SSH clone URL, click the blue SSH link.
+* Find the HTTPS clone URL on the right hand side, about half way down.
+* If the link says SSH clone URL instead of HTTPS clone URL, click the blue HTTPS link.
 * Copy the link.
 * cd into your ~/github directory on your ACMS account (or wherever you want the repo to be stored).
-* Do the command `git clone paste-your-ssh-clone-url-here`
+* Do the command `git clone paste-your-https-clone-url-here`
 * Do an `ls` command, and you should now have a directory with the same name as your repositority.  
 * `cd` into that directory to do your work.
 
