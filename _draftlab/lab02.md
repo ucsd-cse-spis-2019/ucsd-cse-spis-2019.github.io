@@ -186,15 +186,15 @@ def convertWageMtoW(mWage):
 
 Save this file by choosing `File -> Save` from the Idle menu, giving it the name `wageCalculator.py`.  
 
-When you save, the save dialog should indicate that they are being saved inside the ~/github/spis16-lab02-Name-Name folder that corresponds to your local github repo (you should see a .git directory already present).   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
+When you save, the save dialog should indicate that they are being saved inside the ~/github/spis18-lab02-Name-Name folder that corresponds to your local github repo (you should see a .git directory already present).   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
 
-Onve you have saved both files, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis18-lab02-Name-Name` folder, and do an ls command as shown here.  You should see both the files, with names exactly as shown here.
+Onve you have saved your file, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis18-lab02-Name-Name` folder, and do an ls command as shown here.  You should see your file, with the name exactly as shown here.
 
 Note that if you also have a .pyc file, that's fine (or if you don't, that's fine too).  You don't need to worry about that one, or remove it.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
 
 ```
 [spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ ls
-README.md  tempFuncs.py  tempFuncs.pyc  test_tempFuncs.py
+README.md  wageConverter.py  wageConverter.pyc
 [spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ 
 ```
 
