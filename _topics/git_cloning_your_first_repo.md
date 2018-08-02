@@ -68,8 +68,7 @@ Type these commands into your ACMS terminal window:
 ```
 
 Next you will "clone" your repository. This creates a copy of your
-repository—which is a separate repository in its own right—in your
-cs56 directory on the CSIL systems.
+repository—which is a separate repository in its own right—in your directory on the ACMS systems.
 
 Copy the clone URL from the github window.
 
