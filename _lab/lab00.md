@@ -23,6 +23,7 @@ During this lab you will achieve the following administrative one-time steps
 
 * Learn what your ACMS username/password for SPIS is
 * Access your UCSD email account to get your invitation to Piazza
+* Register your iClicker
 * Create an account on github.com using your UCSD email address
 * Fill out a Google Form so that we know your github id
 * Accept an invitation to the ucsd-cse-spis-2018 github organization
@@ -60,7 +61,11 @@ This step should be straightforward, but if you need assistance, ask a mentor or
 
 Make sure both you and your partner are logged in before continuing.
 
-## Step 2: Visit github.com to create or update your account
+## Step 2: Register your iClicker
+
+Go to [this survey](https://goo.gl/forms/v3sbJ25HozJSk3Z02) to enter your iClicker remote ID (the number on the sticker on the back) and your PID.  If you have previously done this step, you do not need to do it again now.
+
+## Step 3: Visit github.com to create or update your account
 
 Open a web browser, and navigate to github.com.
 
