@@ -27,7 +27,7 @@ During SPIS, most of your lab assignments will use *Pair Programming*. This is a
 
 In this system, you have two different roles, and you will alternate between them. These roles are being the "driver" and being the "navigator". The "driver" is the one typing, and the "navigator" provides guidance to the driver as to what to do.
 
-Please take a moment to visit this link and learn more about [Pair Programming](../topics/pair_programming/).
+Please take a moment to visit this link and learn more about [Pair Programming](/topics/pair_programming/).
 
 To "learn the do’s and don’ts" of pair programming and to see pairs in action, you may also want to check out this entertaining (if a bit corny/cheesey) video about pair programming from North Carolina State University: [An Introduction to Pair Programming for Students](https://www.youtube.com/watch?v=rG_U12uqRhE).
 
