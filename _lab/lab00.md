@@ -84,7 +84,7 @@ IDLE is the program we'll use to do Python programming during SPIS.
 
 In IDLE, you you create, edit, and run Python code.
 
-To bring up IDLE, type `idle3` at the bash shell prompt.  THe "shell prompt" is the line where you can type commands in the terminal window you opened in step 1, and it shoudl look something like this:
+To bring up IDLE, type `idle3` at the bash shell prompt.  The "shell prompt" is the line where you can type commands in the terminal window you opened in step 1, and it should look something like this:
 ```
 [sp18t1@ieng6-248]:~:14$ 
 ```
@@ -177,7 +177,7 @@ Once you've located it, your next job will be to upload it to your github practi
 in the next step.
 
 
-# Step 9: Upload your photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
+## Step 9: Upload your photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
 
 Navigate to the web page for your repo.  It will be something like:
 
@@ -191,7 +191,7 @@ Click that button, and upload your photo from the place where you saved it out o
 
 
 
-# Step 10: Edit your README.md file to add some information about you, and a link to your photo
+## Step 10: Edit your README.md file to add some information about you, and a link to your photo
 
 Navigate again to the main page for your repo, e.g. 
 
@@ -221,7 +221,7 @@ Save it (click the "Commit change" button), and take a look at your README.md fi
 If so, you are almost finished with lab00! How is your partner doing?
 
 
-# Step 7: Piazza Invitation
+## Step 11: Piazza Invitation
 
 In your UCSD email you should find an invitation to Piazza.   Please accept the invitation, if you have not done so already.
 
