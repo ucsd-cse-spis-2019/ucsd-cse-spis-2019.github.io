@@ -52,8 +52,7 @@ title: "UCSD CSE SPIS: Foundations of Computer Science"
 <h2 id="projects">Projects</h2>
 
  <div data-role="collapsible" data-collapsed="true" id="bigdata">
- <h3>The Marvelous Big Data Guide</h3>
- <p>(Procured by your ever-faithful data tour guide, Maxwell Bland)</p>
+ <h3>Machine Learning</h3>
  <ul>
  {% for item in site.bigdata %}
    <li><a href="{{item.url}}">{{item.topic}}&mdash;{{item.desc}}</a></li>
