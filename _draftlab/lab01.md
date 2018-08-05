@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab01
-ready: false
+ready: true
 desc: "Picobot"
 assigned: 2018-08-07 08:30:00.00-7
 due: 2018-08-09 17:00:00.00-7
