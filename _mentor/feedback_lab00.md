@@ -15,7 +15,7 @@ They should have created a repo with the name listed in this spreadsheet (privat
 
 If the name is not correct, you won't be able to find it by clicking on the link.
 
-Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2016>, type "practice-" in the search box,
+Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2018>, type "practice-" in the search box,
 and look through to see if you can find the repo.  They may have used a capital letter, or something.
 
 In that case, the easiest thing to do for now is just correct the name yourself.  Until after lab03, we aren't going to
