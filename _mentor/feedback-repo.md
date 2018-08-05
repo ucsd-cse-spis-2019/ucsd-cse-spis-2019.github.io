@@ -21,7 +21,7 @@ The feedback repos should be
 * no .gitignore needed, and no license needed
 
 Apart from the naming convention, this diagram illustrates what it should
-look like (These instructions are from SPIS 2016, but we'll follow the same procedure. Just replace `2016` with `2017`):
+look like (These instructions are from SPIS 2016, but we'll follow the same procedure. Just replace `2016` with `2018`):
 
 ![create-feedback-repo.png](create-feedback-repo-50.png)
 
