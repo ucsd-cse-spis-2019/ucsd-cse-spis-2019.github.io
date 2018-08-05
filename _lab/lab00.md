@@ -57,9 +57,11 @@ Once you know your username and password, please sit down at a workstation next 
 
 ## Step 1: Log in and bring up web browser and a terminal
 
-This step should be straightforward, but if you need assistance, ask a mentor or instructor for help.
+You can open a web browser by going to the Applications menu at the top of the screen, and then going to Internet Tools and selecting Firefox from that menu.  
 
-Make sure both you and your partner are logged in before continuing.
+To open a "terminal" window (a window where you can type commands--we'll work a lot with the terminal throughout SPIS), you can select “Applications”, the "System Tools", then either “Terminal” or “Konsole” from the menu that pops up.  Alternatively, you can right-click on the desktop and select "Terminal".  
+
+Make sure both you and your partner are logged in and have both a web browser and a terminal window open before continuing.
 
 ## Step 2: Register your iClicker
 
@@ -82,13 +84,23 @@ IDLE is the program we'll use to do Python programming during SPIS.
 
 In IDLE, you you create, edit, and run Python code.
 
-To bring up IDLE, type `idle3` at the bash shell prompt (which you get by opening a Terminal window: select “Applications”, the "System Tools", then either “Terminal” or “Konsole” from the menu that pops up). BTW, the '3' at the end of idle indicated that we are using Python3 (there are different versions of the Python language, with Python3 being slightly different from the older Python2).
+To bring up IDLE, type `idle3` at the bash shell prompt.  THe "shell prompt" is the line where you can type commands in the terminal window you opened in step 1, and it shoudl look something like this:
+```
+[sp18t1@ieng6-248]:~:14$ 
+```
+You type `idle3` after the `$` and then press `Enter`.  You should see a new window pop up called the "Python shell".  This is where Python code can be run.  
+
+BTW, the '3' at the end of idle indicated that we are using Python3 (there are different versions of the Python language, with Python3 being slightly different from the older Python2).
+
+## Step 5: Write and run your first Python program
 
 For this step, there is one goal: write a Python 3 program that prints the string `Hello, World!` as its output.
 
 In this sense, we are following a long tradition: for [more than 40 years](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) it has been a tradition to make printing `Hello, World!` be the first thing you do when learning a new programming language.
 
-In Python, this program is very short.  It looks like this:
+First, open a window where you can write your program in a new file.  (Anything you type at the termial is temporary--Python will run it, but it will not be saved, and we want to save our program.)   In the Python shell go to the "File" menu and select "New File".  Another new window will appear, labled "Untitled".  
+
+Into this new window, type or copy and paste the code for the `Hello World` program, shown below.  In Python, this program is very short.  It looks like this:
 
 ```Python
 print('Hello, World!')
@@ -105,13 +117,13 @@ You are encouraged to write this comment, because it helps someone looking at yo
 In Python, a `#` starts a comment.  Everything from the `#` to the end of that line is part of the comment.
 
 As far as how to create, save and run this program in IDLE, it's easier to just watch someone do it than to try 
-to read an explanation.  So, we'll demonstrate this in Lecture.  But if you need a refresher, this [Youtube video
-explains Hello World in IDLE](http://www.youtube.com/watch?v=Cdk20r2dgFU)
+to read an explanation.  So, we'll demonstrate this in Lecture.  But if you need a refresher or you're doing this before we've demonstrated it in class, this [Youtube video
+explains Hello World in IDLE](http://www.youtube.com/watch?v=Cdk20r2dgFU) explains how to do it.  However, notice that this video is using Python 2, so the format of the print command is a little different (in particular, it does not include the parentheses).
 
-Once both you and your partner have run your "Hello World!" program, you are ready to move on to the next step.  Remember, check in with your partner to make sure they are ready to move on.  Do not leave your partner in the dust!
+Once both you and your partner have run your "Hello World!" programs, you are ready to move on to the next step.  Remember, check in with your partner to make sure they are ready to move on.  Do not leave your partner in the dust!
 
 
-## Step 4:  Accept invitation to UCSD-CSE-SPIS-2018 github organization
+## Step 6:  Accept invitation to UCSD-CSE-SPIS-2018 github organization
 
 The mentors/instructors should have invited you to the UCSD-CSE-SPIS-2018 github organization (if they haven't, the invitation will come soon).
 
@@ -121,7 +133,7 @@ You should find a place where you can accept this invitation if you click on thi
 
 Click on the invitation so that you are part of the ucsd-cse-spis-2018 organization.
 
-## Step 5:  Create your first github repo, a practice repo.
+## Step 7:  Create your first github repo, a practice repo.
 
 Your next step will be to create a github *repository* or repo for short.  
 
@@ -151,7 +163,7 @@ Then, once you've entered all of this information, click to create the repositor
 Periodically, check in on your partner. You are there to help each other.
 
 
-## Step 6:  Add a message and a photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
+## Step 8:  Add a message and a photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
 
 For this step, please ask someone to take a photo of you, with your face and your name tag visible. We will use these pictures to create a roster, so please make sure you are easily recognizable. They can then send you the photo through email.
 
@@ -165,7 +177,7 @@ Once you've located it, your next job will be to upload it to your github practi
 in the next step.
 
 
-# Step 7: Upload your photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
+# Step 9: Upload your photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
 
 Navigate to the web page for your repo.  It will be something like:
 
@@ -179,7 +191,7 @@ Click that button, and upload your photo from the place where you saved it out o
 
 
 
-# Step 8: Edit your README.md file to add some information about you, and a link to your photo
+# Step 10: Edit your README.md file to add some information about you, and a link to your photo
 
 Navigate again to the main page for your repo, e.g. 
 
