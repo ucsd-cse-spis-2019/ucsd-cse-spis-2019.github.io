@@ -13,7 +13,7 @@ If you find typos or problems with the lab instructions, please report them on P
 
 The main purpose of this lab is to practice, as pairs, a few skills involving Python, Unix, and github.
 
-# Partner structure for {{site.num}}
+# Partner structure for {{page.num}}
 
 You will work with a partner for the programming part of this lab.  However, you should work through the Unix part of this lab by yourself.  You should work next to your partner, making sure you both understand what you are doing.  
 
