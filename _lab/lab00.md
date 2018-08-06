@@ -33,7 +33,7 @@ During this lab you will achieve the following administrative one-time steps
 
 After completing this lab, you should be able to
 
-* Login to your SPIS TS account on the Linux Systems in B230 of the CSE Building
+* Login to your SPIS ETS account on the Linux Systems in B230 of the CSE Building
 * Bring up a web browser on those machines
 * Bring up a terminal window to access the "bash shell prompt"
 * Bring up IDLE, the programming environment for Python
