@@ -13,7 +13,7 @@ If you find typos or problems with the lab instructions, please report them on [
 
 For your first lab, you'll be using the computers in B230, a lab in the basement of the CSE building.
 
-These computer run the Linux operating system, and you'll log into them with your SPIS ACMS account.
+These computer run the Linux operating system, and you'll log into them with your SPIS ETS account.
 
 While in some labs you will be doing pair programming (working at one computer on a single program, with your partner ), for this lab we would like everyone to complete the lab themselves.  However, you should work next to your partner, and work at the same speed as your partner, helping each other out.  Do not leave your partner in the dust!
 
@@ -21,7 +21,7 @@ While in some labs you will be doing pair programming (working at one computer o
 
 During this lab you will achieve the following administrative one-time steps
 
-* Learn what your ACMS username/password for SPIS is
+* Learn what your ETS username/password for SPIS is
 * Access your UCSD email account to get your invitation to Piazza
 * Register your iClicker
 * Create an account on github.com using your UCSD email address
@@ -33,7 +33,7 @@ During this lab you will achieve the following administrative one-time steps
 
 After completing this lab, you should be able to
 
-* Login to your SPIS ACMS account on the Linux Systems in B230 of the CSE Building
+* Login to your SPIS TS account on the Linux Systems in B230 of the CSE Building
 * Bring up a web browser on those machines
 * Bring up a terminal window to access the "bash shell prompt"
 * Bring up IDLE, the programming environment for Python
@@ -43,13 +43,13 @@ After completing this lab, you should be able to
 
 # {{page.num}}, step-by-step 
 
-## Step 0: Obtain your ACMS username and password.
+## Step 0: Obtain your ETS username and password.
 
-Before you can even sit down and begin using a workstation in B230, even to surf the web, you need to know your ACMS username and password.
+Before you can even sit down and begin using a workstation in B230, even to surf the web, you need to know your ETS username and password.
 
 And to obtain those, you'll need to be able to access a web browser.  **Catch-22!**
 
-But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to look up your ACMS username, and reset your password:
+But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to look up your ETS username, and reset your password:
 
 [https://ucsd-cse-spis-2018.github.io/topics/acms/](/topics/acms/)
 
@@ -167,7 +167,10 @@ Periodically, check in on your partner. You are there to help each other.
 
 For this step, please ask someone to take a photo of you, with your face and your name tag visible. We will use these pictures to create a roster, so please make sure you are easily recognizable. They can then send you the photo through email.
 
-Once you have the photo in your email, access it from the web browser of the ACMS linux machine at which you are
+Once you have the photo in your email, access it from the web browser of the ETS
+
+
+linux machine at which you are
 seated.   Save the photo (i.e. the .png, .jpg, or whatever) to a file.  Depending on the browser you are using, this 
 file may end up in your "home directory", or in some other directory (e.g. `~/Downloads`, `~/Desktop`, etc.)
 
