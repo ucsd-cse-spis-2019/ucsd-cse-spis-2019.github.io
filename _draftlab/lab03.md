@@ -3,24 +3,27 @@ layout: lab
 num: lab03
 ready: true
 desc: "More functions and drawing with Turtle Graphics"
-assigned: 2017-08-14 12:00:00.00-7
-due: 2017-08-16 15:00:00.00-7
+assigned: 2018-08-13 12:00:00.00-7
+due: 2018-08-16 15:00:00.00-7
 ---
 
-If you find typos or problems with the lab instructions, please report them on Piazza
+If you find typos or problems with the lab instructions, please report them on [Piazza]({site.piazza}}
 
 
 Goal
 ====
 
-The goal of this exercise is to practice test-driven code development using the unittest framework as well as making cool drawings with Turtle Graphics in Python to make particular shapes.
+The goal of this exercise is to begin to implement more complex programs and to become familiar with Python's Turtle package.  In particular, you will:
+* Read data from a (csv) file
+* Use a loop to process data
+* Create graphical programs using Python's Turtle package
+* Visualize the path and strength of hurricanes
 
-
-Work with your assigned pair programming partner on this lab. If you do not have one, consult with the instructors before starting.
+There is both a pair and an individual component of this lab.  The individual component will be completed first.  You *may not start* the pair portion until both you and your partner have completed the individual component.  When you get to the pair portion, you must use *pair programming*.
 
 # Setting up your git repo for {{page.num}}
 
-Create a joint git repo for you and your partner for {{page.num}}, following Step 2 in the [lab02](/lab/lab02/) writeup. Assuming that you have done the one time configurations related to your ACMS account, clone your newly created private repo following Step 4 of lab02.
+Create a joint git repo for you and your partner for {{page.num}}, following Step 2 in the [lab02](/lab/lab02/) writeup. Assuming that you have done the one time configurations related to your ETS account, clone your newly created private repo following the instructions in lab02.
 
 
 What you'll be drawing
