@@ -24,6 +24,7 @@ Apart from the naming convention, this diagram illustrates what it should
 look like (These instructions are from SPIS 2016, but we'll follow the same procedure. Just replace `2016` with `2018`). The naming convention is
 * for individual feedback repos: FEEDBACK-first_name-first_initial_last_name  (for example: FEEDBACK-Alex-T)
 * for pair feedback repos: FEEDBACK-first_name_first_person-first_name_second_person (for example: FEEDBACK-Alex-Chris)
+
 You can find the names and pair partners under the "Pairs" link on the website. 
  
 
