@@ -25,12 +25,9 @@ look like (These instructions are from SPIS 2016, but we'll follow the same proc
 
 ![create-feedback-repo.png](create-feedback-repo-50.png)
 
-This spreadsheet (available only to mentors and SPIS staff) has links to each of the FEEDBACK repos that you should create for your teams.
+Make sure you have created these repos successfully. In the github organization, in the *search repositories*, type "FEEDBACK". Find the repositories you created and verify that the naming is correct (corresponding to the pair-list on the website).
 
-<https://docs.google.com/spreadsheets/d/1YPx3YtYVFCgCFAZU7wqZBAS7n2UUHhbc2J8odHyoQZk/edit?usp=sharing>
-
-When each of the links in your section of the spreadsheet above works properly, you've created the repos successfully, and are ready to add content,
-and make them available to the SPIS students you are giving feedback to.  Those are the next steps below.
+When you have verified this, you are ready to add content, and make the repos available to the SPIS students you are giving feedback to.  Those are the next steps below.
 
 # Copy/Paste the Feedback outline into each of the repos
 
