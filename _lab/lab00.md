@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab00
-ready: false
+ready: true
 desc: "The basics"
 assigned: 2018-08-06 08:30:00.00-7
 due: 2018-08-07 17:00:00.00-7
