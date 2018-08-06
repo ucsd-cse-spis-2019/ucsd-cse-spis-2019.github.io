@@ -39,7 +39,7 @@ Here's a more complete list of our learning objectives:
 
 # Step-by-Step through {{page.num}}
 
-## Step 1: Create a `~/github` directory on your ACMS account
+## Step 1: Create a `~/github` directory on your ETS (i.e. "lab") account
 
 The following article explains how to create a `~/github` directory on your ACMS account.
 
@@ -47,7 +47,7 @@ The following article explains how to create a `~/github` directory on your ACMS
 
 It also covers some basics of the commands you can use at the bash shell prompt&mdash;commands such as
 `pwd`, `cd`, `mkdir`, and others that you'll need to know for SPIS (and in your later UCSD CSE courses) for working
-with your ACMS account.
+with your ETS account.
 
 If *both* you *and* your pair partner are already thoroughly familiar with Unix command basics&mdash;that is, you know how to create `~/github`, and you are *throughly* familiar with everything in the table below, you can just create `~/github`, and skip the tutorial.
 
