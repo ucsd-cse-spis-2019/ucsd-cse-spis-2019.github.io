@@ -8,6 +8,6 @@ link_topic_desc_only: true
 ready: false
 ---
 
-# Breadth lecture on 8/10 ()
+# Breadth Lecture for week 1 ()
 
 Lecture slides:
