@@ -1,8 +1,8 @@
 ---
-lecture_date: "2018-08-17 09:00:00.00-7:00"
+lecture_date: "2018-08-31 09:00:00.00-7:00"
 topic: "Depth"
 desc: ""
-week: "2"
+week: "4"
 indent: true
 link_topic_desc_only: true
 ready: false
