@@ -1,23 +1,21 @@
 ---
-topic: "First looks"
-desc: "Overview and introduction to CS, SPIS, UNIX, github and lab00"
-lecture_date: 2017-08-06 09:00:00.00-7:00
+topic: ""
+desc: ""
+lecture_date: 2018-08-13 09:00:00.00-7:00
 week: "2"
-ready: true
+ready: false
 ---
 
-# FOCS 8:45am - 10:00am (Curt)
-Introduction to CS, overview and expectations of SPIS
+# FOCS 8:45am - 10:00am ()
 
-Lecture slides: [Introduction](/lectures/week1/SPIS Lecture 01 - Introduction.pdf)
-
+Lecture slides: 
 
 
 
 
 
-# FOCS 10:15am - 11:30am (Gary)
-Unix, github and introduction to [lab00](/lab/lab00/)
+
+# FOCS 10:15am - 11:30am ()
 
 Lecture slides: 
 
