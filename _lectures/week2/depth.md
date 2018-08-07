@@ -1,6 +1,6 @@
 ---
 lecture_date: "2018-08-17 09:00:00.00-7:00"
-topic: "Week 2: Depth"
+topic: "Depth"
 desc: ""
 week: "2"
 indent: true
