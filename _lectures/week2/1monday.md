@@ -2,7 +2,7 @@
 topic: "First looks"
 desc: "Overview and introduction to CS, SPIS, UNIX, github and lab00"
 lecture_date: 2017-08-06 09:00:00.00-7:00
-week: "1"
+week: "2"
 ready: true
 ---
 
