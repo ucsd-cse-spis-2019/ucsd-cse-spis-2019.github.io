@@ -9,7 +9,7 @@ ready: false
 ---
 
 
-# Depth for week 1 ()
+# Depth Lecture for week 1 ()
 
 Lectures slides:
 
