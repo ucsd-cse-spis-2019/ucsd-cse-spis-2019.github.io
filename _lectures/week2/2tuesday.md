@@ -2,7 +2,7 @@
 lecture_date: 2017-08-07 09:00:00.00-7:00
 topic: "Picobot "
 desc: "Introduction to Picobot and lab01"
-week: "1"
+week: "2"
 ready: false
 ---
 
