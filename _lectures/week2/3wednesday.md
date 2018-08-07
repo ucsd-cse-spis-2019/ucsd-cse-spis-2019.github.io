@@ -1,14 +1,14 @@
 ---
-lecture_date: 2017-08-08 09:00:00.00-7:00
-topic: "Variables, Data, Functions and Conditionals"
-desc: "Introduction to programming basics in Python"
+lecture_date: 2018-08-15 09:00:00.00-7:00
+topic: ""
+desc: ""
 week: "2"
 ready: false
 ---
 
-# FOCS 8:45am - 10:00am (Christine)
+# FOCS 8:45am - 10:00am ()
 
-Lecture slides: [Variables and Data](../W1Wed845_PythonVariablesDataMethods.pdf)
+Lecture slides:
 
 
 
