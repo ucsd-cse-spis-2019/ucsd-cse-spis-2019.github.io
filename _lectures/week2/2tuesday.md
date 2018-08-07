@@ -1,7 +1,7 @@
 ---
-lecture_date: 2017-08-07 09:00:00.00-7:00
-topic: "Picobot "
-desc: "Introduction to Picobot and lab01"
+lecture_date: 2018-08-14 09:00:00.00-7:00
+topic: ""
+desc: ""
 week: "2"
 ready: false
 ---
@@ -11,8 +11,7 @@ ready: false
 
 
 
-# FOCS 10:15am - 11:30am (Curt)
-State machines, Picobot environment, and introduction to [lab01](/lab/lab01/)
+# FOCS 10:15am - 11:30am ()
 
 Lecture slides: 
 
