@@ -1,8 +1,8 @@
 ---
 topic: ""
 desc: ""
-lecture_date: 2018-08-13 09:00:00.00-7:00
-week: "2"
+lecture_date: 2018-08-20 09:00:00.00-7:00
+week: "3"
 ready: false
 ---
 
