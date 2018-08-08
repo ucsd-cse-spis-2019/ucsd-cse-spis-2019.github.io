@@ -116,7 +116,7 @@ Move the turtle forward by the specified distance, in the direction the turtle i
 
 
 ### Add and commit your code
-Now is a good time to make sure you've got helpful comments in your file and that you've saved it.  Also add your file to your repository at this point (if you don't remember how, check the instructions in [lab02](/lab/lab02)) and then commit your code so far.
+Now is a good time to make sure you've got helpful comments in your file and that you've saved it.  Also add your file to your repository at this point (if you don't remember how, check the instructions in [lab02](/lab/lab02)) and then commit your code so far.  You do not need to push it to github yet, though you can if you want to.
 
 ## Step 1.2: Write a method to draw the first letter of your first name
 Create a new file named `drawLetter_YourFirstName.py` in idle.  In that file, write the following method:
@@ -132,7 +132,17 @@ Feel free to be creative here.  Right now, you can draw the letter any size, usi
 ### Test your function
 Test your function to see if it works by creating at least *two* different Turtles, moving one of these Turtles away from its default position (you probably want to lift the pen before moving the Turtle), and then calling your `drawA` function with *each* Turtle.  Does the output look good?  Do both the Turtles draw?  If there are bugs in your code (we'd be surprised if there weren't!) fix them before moving on (though remember you can always add and commit non-working code to your repo with an appropriate comment).
 
-### Once you are done, add your file to your (shared) repo and commit
+### add, commit and push
+At this point you are almost finished with the individual portion and ready to commit and push your code so far.  Here's a checklist to make sure you haven't forgotten anything:
+1.  Do you have a comment at the top of your files? 	
+2.  Do you have a draw function for your first initial?
+3.  Does this function have one parameter: a turtle?
+4.  Does this function have a reasonable docstring (recall from class what a docstring is)
+5.  Did you test your function with at least two Turtles to make sure it's working correctly? (And is it?)
+If so, you are ready to submit!
+
+To submit, use the command line tools `git add`, `git commit` and `git push`. You must only push working versions of your code (though you can commit code in progress locally). Make sure your code is pushed to git by navigating to your repo on github.com and viewing your latest changes.
+
 At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE.  Here are some things you can do while you wait for your partner:
 * Work on APS
 * View and respond to the enrichment video
@@ -156,8 +166,8 @@ drawPicture(myTurtle)
 3. Imagine that I have a turtle in a variable named `myTurtle`.  What line of code will change that turtle's y-position to 100?
 
 
-## Step 2.1: Extend your `drawA` method
-Choose one of your `drawA` (or whatever letter you used) and copy it into your `lab03letters_pair.py` file.    Then, modify this function as follows:
+## Step 2.1: Extend your `drawA` function
+Choose one of your `drawA` (or whatever letter you used) functions and copy it into your `lab03letters_pair.py` file.    Then, modify this function as follows:
 
 1. Add another parameter to your `drawA` function:
 ```python
@@ -165,13 +175,14 @@ drawA(theTurtle, size)
 ```
 `size` will determine the size of your letter.
 
-2. Modify the code in the method so that it respects the size parameter.  You are free to use any interpretation of `size` that you wish, but your letter must be drawn in different sizes for different values of that parameter.
+2. Modify the code in the method so that it respects the size parameter.  You are free to use any interpretation of `size` that you wish, but your letter must be drawn in different sizes for different values of that parameter.  Make sure you modify the docstring for your modified function so that it accurately reflects what this new version of the function does.
 
-Finally, test your new method to make sure that it respects the size parameter.  Fix any bugs you find, then add this file to your repository and commit.
+Finally, test your new function to make sure that it respects the size parameter.  Fix any bugs you find, then add this file to your repository, commit and push.
 
+### Step 2.2: Tracking Hurricanes!
+**Switch driver and navigator if you have not yet done so**
+Finally, we'll be using the 
 
-
-### Step 1.2: Create a new Turtle
 We are going to be using the pre-written functions in the Turtle package to draw on the screen.  However, unlike other build-in functions (e.g. `len` or `print`) these functions work with a kind of data called an "object".  You'll learn much more about objects in CSE 8A or CSE 11, but for now you can think of objects as complex types of data that also have built-in functions associated with them. 
 
 To work with a Turtle, we first need to ask Python to create a new Turtle object.  We can do this with the line:
