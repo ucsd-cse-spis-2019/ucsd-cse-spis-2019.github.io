@@ -206,16 +206,16 @@ These files and directories, though exist in the context of a larger directory t
 
 This output `/home/linux/ieng6/spis18/spis18t3/github` from the pwd command is called a *path*, since it shows the path from the root directory of the disk space on our machine, which is represented by the symbol `/`, all the way down to the directory `github` that we just created.
 
-Our home directories for spis this year are all located inside `/home/linux/ieng6/spis17`.   They are, for example:
+Our home directories for spis this year are all located inside `/home/linux/ieng6/spis18`.   They are, for example:
 
-* /home/linux/ieng6/spis17/spis17aa
-* /home/linux/ieng6/spis17/spis17ab
-* /home/linux/ieng6/spis17/spis17ac
-* /home/linux/ieng6/spis17/spis17ad
-* /home/linux/ieng6/spis17/spis17ae
+* /home/linux/ieng6/spis18/spis18aa
+* /home/linux/ieng6/spis1/spis18ab
+* /home/linux/ieng6/spis18/spis18ac
+* /home/linux/ieng6/spis18/spis18ad
+* /home/linux/ieng6/spis18/spis18ae
 * etc...
 
-Each of you has their own home directory.  
+Each of you has your own home directory.  
 
 # Step 8: Various directory navigation commands
 
