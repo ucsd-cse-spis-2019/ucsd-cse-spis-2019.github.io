@@ -161,7 +161,7 @@ At this point you are done with the individual portion.  If your partner is not 
 
 # The Pair Portion: Doing more with the Turtle
 
-**STOP!  Do not start on this part of the lab until BOTH partners have completed the individual portion.  When you do start, make sure you use *pair programming* **
+**STOP!  Do not start on this part of the lab until BOTH partners have completed the individual portion.  When you do start, make sure you use _pair programming_**
 
 ## Step 2.0: Discuss with your partner
 Discuss the following questions with your partner, then put your joint answers into comments at the top of a new file named `lab3Letters_pair.py`. 
