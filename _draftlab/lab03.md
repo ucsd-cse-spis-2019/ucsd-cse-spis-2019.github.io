@@ -29,7 +29,156 @@ You will complete the individual portion of your assignment in this pair reposit
 
 
 # The individual portion: Getting familiar with the Turtle
-To warm up with the Turtle, you use the Turtle to draw your first initial (the first letter of your first name) on the screen.  
+To warm up with the Turtle, you will use the Turtle to draw your first initial (the first letter of your first name) on the screen.  
+You should complete this part individually.  You may talk to your partner and have them help you, or give help to your partner, but you should try to do as much of it on your own as possible, and all the code you write should be done individually.  
+
+## Step 1.1: Get familiar with the Turtle
+In idle, create a new file and at the top of this file put a comment with your name and a description of what this file will do (a program to draw the first letter of your name).  Save this file as `lab03Warmup_YourName.py` where YourName is replaced with your first name.
+
+In order to work with the Turtle, you need to import the `turtle` module.  Do this by putting the line:
+
+```python
+import turtle
+```
+at the top of your file, either before or after the comment you wrote.  This above line tells Python about the turtle library and allows you to call its functions. 
+
+Next, let's write a simple function that uses the Turtle package to draw a shape.  Copy the following code into your file.
+
+```python
+def drawPicture(theTurtle):
+    ''' Draw a simple picture using a turtle '''
+    theTurtle.forward(100)
+    theTurtle.left(90)
+    theTurtle.forward(100)
+    theTurtle.left(90)
+    theTurtle.forward(100)
+    theTurtle.left(90)
+    theTurtle.forward(100)
+    theTurtle.left(90)    
+
+myTurtle = turtle.Turtle()  # Create a new Turtle object
+drawPicture(myTurtle)   # make the new Turtle draw the shape
+```
+
+What happens when you run your file?
+
+Modify the function in various ways to see what happens:
+Change the number in the first `theTurtle.forward()` call in the drawPicture function. What's the role of the number?
+
+Change the values in the calls to `theTurtle.left()`. What units are being used?
+
+### What's the difference between `theTurtle`, `myTurtle` and `turtle`?
+You might notice that there seem to be three names "turtle" in the code above.  What's going on?!  The Turtle library works a little differently than other libraries we've looked at so far, in that it uses a style of coding called "Object Oriented Programming".  You'll learn much more about objects in CSE 8A or CSE 11, but for now you can think of objects as complex types of data that also have built-in functions associated with them.   
+
+So, `turtle` on the line
+```python
+myTurtle = turtle.Turtle()
+```
+is the name of the package, i.e. the built-in Python library where you will find all of the functions for the Turtle.  `myTurtle` and `theTurtle` are variable names.  They each store references to (the same) Turtle object.  Finally `Turtle()` is a special function that creates a new Turtle object.  
+
+We can create more than one Turtle to work with at a time.  For example, try adding the following code to your warmup file:
+
+```python
+turtle1 = turtle.Turtle()
+turtle2 = turtle.Turtle()
+turtle1.setpos(-50, -50)
+turtle2.setpos(200, 100)
+turtle1.forward(100)
+turtle2.left(90)
+turtle2.forward(100)
+```
+
+Can you explain what's happening?
+
+### Python's "anonymous" Turtle
+In the code above you noticed that by calling `Turtle()` three times we got three Turtles that we could control independently.  However, if you *know* you only want to use one Turtle, Python will provide an "anonymous Turtle" that you can control without actually creating explicitly.  So you might sometimes see lines of code that look like 
+
+`turtle.forward(100)`
+
+`turtle` is still the package name, and the `forward` call will control the first Turtle created.  Python will always create this first Turtle, even if you do not include any call to `Turtle()`.
+
+### The turtle documentation
+
+It's a good idea to check out the [library documentation](http://pydoc-zh.readthedocs.io/en/latest/library/turtle.html) (a.k.a. reference manual, API docs, etc.) when you're learning how to use a new library (set of methods).  Google can be very helpful when exploring a new tool. Here are a couple of links that can help you get started drawing pictures and seeing what's possible.
+
+Here's the entry in the documentation for the function that lets us move forward:
+
+****
+
+```python
+ turtle.forward(distance) turtle.fd(distance)
+```
+
+Parameters:	distance – a number (integer or float)
+Move the turtle forward by the specified distance, in the direction the turtle is headed.
+
+****
+
+
+### Add and commit your code
+Now is a good time to make sure you've got helpful comments in your file and that you've saved it.  Also add your file to your repository at this point (if you don't remember how, check the instructions in [lab02](/lab/lab02)) and then commit your code so far.
+
+## Step 1.2: Write a method to draw the first letter of your first name
+Create a new file named `drawLetter_YourFirstName.py` in idle.  In that file, write the following method:
+
+```python
+drawA(theTurtle)
+```
+
+Note that the name of this method should correspond to the letter you are drawing.  So if my name is Chris, my function would be named `drawC`.  The parameter to this method `theTurtle` is the turtle you should use to draw the letter.  
+
+Feel free to be creative here.  Right now, you can draw the letter any size, using any style.  You will probably find the functions `penup` and `pendown` useful, but check the documentation for other functions that will allow you to change the style of the lines your turtle draws.
+
+### Test your function
+Test your function to see if it works by creating at least *two* different Turtles, moving one of these Turtles away from its default position (you probably want to lift the pen before moving the Turtle), and then calling your `drawA` function with *each* Turtle.  Does the output look good?  Do both the Turtles draw?  If there are bugs in your code (we'd be surprised if there weren't!) fix them before moving on (though remember you can always add and commit non-working code to your repo with an appropriate comment).
+
+### Once you are done, add your file to your (shared) repo and commit
+At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE.  Here are some things you can do while you wait for your partner:
+* Work on APS
+* View and respond to the enrichment video
+* Make your letter prettier/more interesting
+* Make more functions to draw more letters
+
+
+# The Pair Portion: Doing more with the Turtle
+
+**STOP!  Do not start on this part of the lab until BOTH partners have completed the individual portion.  When you do start, make sure you use *pair programming* **
+
+## Step 2.0: Discuss with your partner
+Discuss the following questions with your partner, then put your joint answers into comments at the top of a new file named `lab3Letters_pair.py`. 
+
+1. What is the "anonymous turtle"?
+2. In the code below, what is the difference between `turtle` and `Turtle()`?
+```python
+myTurtle = turtle.Turtle()  
+drawPicture(myTurtle)   
+```
+3. Imagine that I have a turtle in a variable named `myTurtle`.  What line of code will change that turtle's y-position to 100?
+
+
+## Step 2.1: Extend your `drawA` method
+Choose one of your `drawA` (or whatever letter you used) and copy it into your `lab03letters_pair.py` file.    Then, modify this function as follows:
+
+1. Add another parameter to your `drawA` function:
+```python
+drawA(theTurtle, size)
+```
+`size` will determine the size of your letter.
+
+2. Modify the code in the method so that it respects the size parameter.  You are free to use any interpretation of `size` that you wish, but your letter must be drawn in different sizes for different values of that parameter.
+
+Finally, test your new method to make sure that it respects the size parameter.  Fix any bugs you find, then add this file to your repository and commit.
+
+
+
+### Step 1.2: Create a new Turtle
+We are going to be using the pre-written functions in the Turtle package to draw on the screen.  However, unlike other build-in functions (e.g. `len` or `print`) these functions work with a kind of data called an "object".  You'll learn much more about objects in CSE 8A or CSE 11, but for now you can think of objects as complex types of data that also have built-in functions associated with them. 
+
+To work with a Turtle, we first need to ask Python to create a new Turtle object.  We can do this with the line:
+```python
+myTurtle = turtle.Turtle()
+```
+In this file, you will first need to import the 
 
 Write a function that uses the Turtle to draw the first letter of your first name.  
 
