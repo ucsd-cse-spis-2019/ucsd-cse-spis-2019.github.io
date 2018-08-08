@@ -7,7 +7,7 @@ assigned: 2018-08-08 13:15:00.00-7
 due: 2018-08-14 17:00:00.00-7
 ---
 
-If you find typos or problems with the lab instructions, please report them on Piazza.  
+If you find typos or problems with the lab instructions, please report them on Piazza.  Throughout this lab you might sometimes see accounts or directories using `spis16`.  This is leftover from 2 years ago, but shouldn't change the overall meaning of the explanations and examples.  You should expect to see and use `spis18` instead of `spis16`.  
 
 # Overview
 
