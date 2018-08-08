@@ -257,5 +257,4 @@ As shown above, use `pwd` to verify that you are indeed in your `~/github direct
 
 Your output won't say `spis18t3`, but instead will show your own ETS username in place of that.
 
-If you were doing these steps as part of SPIS 2017 lab02,<br>
-you can use this link to return there now: [SPIS 2017 lab02](/lab/lab02/)
+If you were doing these steps as part of lab02, use the back button to return to lab02.
