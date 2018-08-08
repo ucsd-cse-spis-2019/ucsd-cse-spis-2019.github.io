@@ -222,6 +222,8 @@ Load the Python code into the interacive Python window by selecting "Run -> Run 
 0.0
 ```
 
+You might find that your imlementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
+
 *Option 2: write tests in a main method*
 The second option for writing test cases is to write a special method, called a main method, that will be automatically run when you load your code into the interpreter using F5.  Add the following code to your `wageCalculator.py` file, below the code for your `convertWageMtoW` method:
 
