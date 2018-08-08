@@ -19,12 +19,19 @@ The goal of this exercise is to begin to implement more complex programs and to 
 * Create graphical programs using Python's Turtle package
 * Visualize the path and strength of hurricanes
 
-There is both a pair and an individual component of this lab.  The individual component will be completed first.  You *may not start* the pair portion until both you and your partner have completed the individual component.  When you get to the pair portion, you must use *pair programming*.
+There is both a pair and an individual component of this lab.  The individual component will be completed first.  You *may not start* the pair portion until both you and your partner have completed the individual component.  When you get to the pair portion, you must use *pair programming*.  Reemember that this means two people will work at the same computer, one driver and one navigator. The driver does the typing and using the mouse, while the navigator makes suggestions, points out errors, and helps guide the process.  You should switch roles every 15-30 minutes.
 
 # Setting up your git repo for {{page.num}}
 
 Create a joint git repo for you and your partner for {{page.num}}, following Step 2 in the [lab02](/lab/lab02/) writeup. Assuming that you have done the one time configurations related to your ETS account, clone your newly created private repo following the instructions in lab02.
 
+You will complete the individual portion of your assignment in this pair repository.
+
+
+# The individual portion: Getting familiar with the Turtle
+To warm up with the Turtle, you use the Turtle to draw your first initial (the first letter of your first name) on the screen.  
+
+Write a function that uses the Turtle to draw the first letter of your first name.  
 
 What you'll be drawing
 ----------------------
