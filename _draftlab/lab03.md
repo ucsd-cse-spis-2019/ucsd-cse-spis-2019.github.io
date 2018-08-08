@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab03
-ready: true
+ready: false
 desc: "More functions and drawing with Turtle Graphics"
 assigned: 2018-08-13 12:00:00.00-7
 due: 2018-08-16 15:00:00.00-7
@@ -19,14 +19,17 @@ The goal of this exercise is to begin to implement more complex programs and to 
 * Create graphical programs using Python's Turtle package
 * Visualize the path and strength of hurricanes
 
-There is both a pair and an individual component of this lab.  The individual component will be completed first.  You *may not start* the pair portion until both you and your partner have completed the individual component.  When you get to the pair portion, you must use *pair programming*.  Reemember that this means two people will work at the same computer, one driver and one navigator. The driver does the typing and using the mouse, while the navigator makes suggestions, points out errors, and helps guide the process.  You should switch roles every 15-30 minutes.
+There is both a pair and an individual component of this lab.  The individual component will be completed first.  You *may not start* the pair portion until both you and your partner have completed the individual component.  When you get to the pair portion, you must use *pair programming*.  Remember that this means two people will work at the same computer, one driver and one navigator. The driver does the typing and using the mouse, while the navigator makes suggestions, points out errors, and helps guide the process.  You should switch roles every 15-30 minutes.
 
 # Setting up your git repo for {{page.num}} (WITH your partner)
 
 You will create one repository for this assignment between the two of you, but you will need to import some starter code.  Create a joint git repo for you and your partner for {{page.num}}. However, create a completely empty repository with no Readme, no .gitignore, and no license.  
 
 After you create the new repository, you will see a new screen with the option to import code from another repository.  You should import the code from this repository:
-```https://github.com/ucsd-cse-spis-2018/lab03starter.git```
+
+```
+https://github.com/ucsd-cse-spis-2018/lab03starter.git
+```
 
 It will take a few minutes, but when you return to the repo on github you should see some starter code.
 
@@ -105,7 +108,7 @@ In the code above you noticed that by calling `Turtle()` three times we got thre
 
 ### The turtle documentation
 
-It's a good idea to check out the [library documentation](http://pydoc-zh.readthedocs.io/en/latest/library/turtle.html) (a.k.a. reference manual, API docs, etc.) when you're learning how to use a new library (set of methods).  Google can be very helpful when exploring a new tool. Here are a couple of links that can help you get started drawing pictures and seeing what's possible.
+It's a good idea to check out the [library documentation](https://docs.python.org/3/library/turtle.html) (a.k.a. reference manual, API docs, etc.) when you're learning how to use a new library (set of methods).  Google can be very helpful when exploring a new tool. Here are a couple of links that can help you get started drawing pictures and seeing what's possible.
 
 Here's the entry in the documentation for the function that lets us move forward:
 
