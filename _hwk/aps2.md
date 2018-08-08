@@ -1,9 +1,9 @@
 ---
-num: "aps1"
-desc: "APS homework 1"
-ready: true
-assigned: 2018-08-07 9:00:00.00-7:00
-due: 2018-08-12 21:00:00.00-7:00
+num: "aps2"
+desc: "APS homework 2"
+ready: false
+assigned: 2018-08-14 9:00:00.00-7:00
+due: 2018-08-19 21:00:00.00-7:00
 layout: default
 ---
 
