@@ -7,7 +7,7 @@ assigned: 2018-08-13 12:00:00.00-7
 due: 2018-08-16 15:00:00.00-7
 ---
 
-If you find typos or problems with the lab instructions, please report them on [Piazza]({site.piazza}}
+If you find typos or problems with the lab instructions, please report them on [Piazza]({{site.piazza}})
 
 
 Goal
@@ -244,33 +244,4 @@ Once you've got your hurricane tracker working, make sure of the following:
 * Did you use meaninful variable names?
 * Did you use appropriate commenting in your code when something might be unclear to the reader?
 
-Once you can answer yes to all of the following make sure you add ALL of your files from this lab (the two files from the individual part (4 between the two of you) and the two files you created for the pair part) to your repo, then commit and push to github.  Then you are done! But if you still have time... keep reading!
-
-# Additional Fun with Turtle
-
-When you are finished with the main part of lab03, here is an extension that you can start working on, and continue
-to contribute to throughout SPIS.
-
-You are invited to create a *public* github repo under the ucsd-cse-spis-2017 organization with this naming convention:
-
-* `spis16-drawings-Name-Name`  (e.g. `spis16-drawings-Alex-Chris` )
-
-In this repo, you can add files that provide drawing routines to draw whatever you like.
-
-You can use the code from [https://github.com/ucsd-cse-spis-2017/spis16-lecture-0809](https://github.com/ucsd-cse-spis-2016/spis16-lecture-0809) as a model.
-
-Then, try looking at the code from some of your fellow classmates public `spis16-drawings...` repos.
-
-See if you can copy some of their files into your repo (add a comment indicating where the code came from,
-e.g.
-
-```python
-# This file copied from spis16-drawings-Alex-Chris
-```
-
-Then try using `import` to get access to those functions, and use them in your own drawings.
-
-See how creative you can get in terms of combining different drawings together from many other fellow SPISers.
-
-Put the code for these additional "mash-ups" in the same `spis16-drawings-Name-Name` repo, just perhaps in a different python file, e.g. `mashups.py`.
-
+Once you can answer yes to all of the following make sure you add ALL of your files from this lab (the two files from the individual part (4 between the two of you) and the two files you created for the pair part) to your repo, then commit and push to github.  Then you are done!   But of course, you're never done, so keep working on creative extensions of your own!
