@@ -21,12 +21,18 @@ The goal of this exercise is to begin to implement more complex programs and to 
 
 There is both a pair and an individual component of this lab.  The individual component will be completed first.  You *may not start* the pair portion until both you and your partner have completed the individual component.  When you get to the pair portion, you must use *pair programming*.  Reemember that this means two people will work at the same computer, one driver and one navigator. The driver does the typing and using the mouse, while the navigator makes suggestions, points out errors, and helps guide the process.  You should switch roles every 15-30 minutes.
 
-# Setting up your git repo for {{page.num}}
+# Setting up your git repo for {{page.num}} (WITH your partner)
 
-Create a joint git repo for you and your partner for {{page.num}}, following Step 2 in the [lab02](/lab/lab02/) writeup. Assuming that you have done the one time configurations related to your ETS account, clone your newly created private repo following the instructions in lab02.
+You will create one repository for this assignment between the two of you, but you will need to import some starter code.  Create a joint git repo for you and your partner for {{page.num}}. However, create a completely empty repository with no Readme, no .gitignore, and no license.  
 
-You will complete the individual portion of your assignment in this pair repository.
+After you create the new repository, you will see a new screen with the option to import code from another repository.  You should import the code from this repository:
+```https://github.com/ucsd-cse-spis-2018/lab03starter.git```
 
+It will take a few minutes, but when you return to the repo on github you should see some starter code.
+
+Finally, clone your newly created private repo following the instructions in lab02.
+
+Next, you will complete the individual portion of your assignment, adding your files to this shared repo.
 
 # The individual portion: Getting familiar with the Turtle
 To warm up with the Turtle, you will use the Turtle to draw your first initial (the first letter of your first name) on the screen.  
