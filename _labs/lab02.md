@@ -3,11 +3,11 @@ layout: lab
 num: lab02
 ready: false
 desc: "Next steps with github, Python functions, testing"
-assigned: 2018-08-09 09:30:00.00-7
+assigned: 2018-08-08 13:15:00.00-7
 due: 2018-08-14 17:00:00.00-7
 ---
 
-If you find typos or problems with the lab instructions, please report them on Piazza.  But you can work on other part of this lab at this time.
+If you find typos or problems with the lab instructions, please report them on Piazza.  
 
 # Overview
 
@@ -194,7 +194,7 @@ Note that if you also have a .pyc file, that's fine (or if you don't, that's fin
 
 ```
 [spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ ls
-README.md  wageConverter.py  wageConverter.pyc
+README.md  wageCalculator.py  wageCalculator.pyc
 [spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ 
 ```
 
@@ -226,11 +226,19 @@ Load the Python code into the interacive Python window by selecting "Run -> Run 
 The second option for writing test cases is to write a special method, called a main method, that will be automatically run when you load your code into the interpreter using F5.  Add the following code to your `wageCalculator.py` file, below the code for your `convertWageMtoW` method:
 
 ```python
+def approximatelyEqual(expected, val, epsilon):
+    ''' Returns true if expected and val are equal within a difference of
+        epsilon '''
+    diff = abs(expected-val)
+    return diff < epsilon
+
 def main():
+    epsilon = 0.001
     print("Testing convertMtoW(100)...")
     ans = convertWageMtoW(100)
     expected = 81.8
-    if ans == expected:
+    # Make sure 
+    if approximatelyEqual(ans, expected, epsilon):
         print("Correct!")
     else:
         print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
@@ -238,7 +246,7 @@ def main():
     print("Testing convertMtoW(76.2)...")
     ans = convertWageMtoW(76.2)
     expected = 62.3316
-    if ans == expected:
+    if approximatelyEqual(ans, expected, epsilon):
         print("Correct!")
     else:
         print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
@@ -246,17 +254,16 @@ def main():
     print("Testing convertMtoW(0)...")
     ans = convertWageMtoW(0)
     expected = 0.0
-    if ans == expected:
+    if approximatelyEqual(ans, expected, epsilon):
         print("Correct!")
     else:
         print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
-
 
 if __name__ == "__main__": main()
 
 ```
 
-Now when you run your code using F5 from the window, all the tests will run automatically.  Make sure you understanding the code above.  What do you think the last line does?  Talk to your partner, and if you have questions, ask the tutors or instructors.
+Now when you run your code using F5 from the window, all the tests will run automatically.  Notice that main uses the method approximatelyEqual, which we wrote above to compare floating point numbers taking into consideration roundoff error. Make sure you understanding the code above.  What do you think the last line does?  Talk to your partner, and if you have questions, ask the tutors or instructors.
 
 You can use either method to test your code throughut SPIS.  Or you can check out [Option 3: Unit Testing](https://docs.python.org/3.7/library/unittest.html).
 
@@ -279,11 +286,11 @@ The process is described in two articles:
 
 Essentially, though here's what you are going to do:
 
-1.  Make sure you are in your ~/github/spis16-lab02-Name-Name directory
+1.  Make sure you are in your ~/github/spis18-lab02-Name-Name directory
 2.  Type `git status` and read what it says
-3.  Type `git add tempFuncs.py test_tempFuncs.py` to *stage* these two files (get them ready to be added to the repo)
+3.  Type `git add wageCalculator.py` to *stage* this file (get it ready to be added to the repo)
 4.  Type `git status` and read what it says
-5.  Type `git commit -m "ftoc function and tests"` to commit the changes and provide an explanation of what you did
+5.  Type `git commit -m "wageCalculator functions and tests"` to commit the changes and provide an explanation of what you did
 6.  Type `git status` and read the messages
 7.  Type `git push origin master` to push the changes from your local repo to the origin repo (on github.com)
 8.  Type `git status` and read the messages
@@ -321,7 +328,7 @@ commit message so you know that this is not a finished product.  "WIP" stands fo
 
 ```
 git status
-git add wageConverter.py
+git add wageCalculator.py
 git status
 git commit -m "WIP CL/AT  Some tests passing, others failing"
 git status
