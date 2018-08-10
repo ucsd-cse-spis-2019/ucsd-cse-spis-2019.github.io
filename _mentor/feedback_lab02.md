@@ -1,5 +1,5 @@
 ---
-topic: "Feedback lab02 -- TODO"
+topic: "Feedback lab02"
 desc: "Feedback on lab02"
 ---
 
@@ -13,12 +13,12 @@ They should have created a repo with the name listed in this spreadsheet (privat
 
 Use the tabs at the bottom of the sheets to select "lab02 repos"
 
-<https://docs.google.com/spreadsheets/d/1YPx3YtYVFCgCFAZU7wqZBAS7n2UUHhbc2J8odHyoQZk/edit?usp=sharing>
+<https://docs.google.com/spreadsheets/d/114wsTYJw8B94peK2gn1aQTYOxlsprSttTSeCn2_zhvA/edit?usp=sharing>
 
 If the name is not correct, you won't be able to find it by clicking on the link.
 
-Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2017>, type "lab02" in the search box,
-and look through to see if you can find the repo. 
+Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2018>, type "lab02" in the search box,
+and look through to see if you can find the repo.   Let them know what the correct name should have been in your feedback.
 
 ## Does the repo contain the right files?
 
@@ -26,40 +26,24 @@ The files should be:
 
 * `.gitignore`	
 * `README.md`	
-* `tempFuncs.py`	
-* `test_tempFuncs.py`
+* `wageCalculator.py`	
 
 If they dont have the right files, or the file names are wrong, provide some feedback on that.
 
-##  tempFuncs.py: two function definitions
+##  wageCalculator.py: extended functionality
 
-Check that tempFuncs.py has function definitions for both `ftoc` and `ctof`
+Check to make sure they have extended the functionality of `convertWageMtoW` function so that:
 
-These are pretty straightforward, so there probably isn't much you can say, unless you see something that jumps out at you.
+* It takes at least one additional parameter
+* It uses an if-statement (or if-else statement, or if-elif-else statement, etc) in its functionality
 
-## test_tempFuncs.py
+They might have written another function with this extended functionality.  That's fine (the instructions left this open).  
 
-They were supposed to add four tests for ctof that were NOT in the starter code so that there are nine tests in all.  
+Comment on their extension.  What is interesting about it?  Does it meet the requirements?  If not, what is missing?
 
-Check whether they did.
+## Check their tests
 
-One common error is to have the same name repeated.  You may want to try cloning the repo and running the tests yourself.
+They were supposed to add tests, either in a main method, or in comments, on which they tested their new function.  Use these tests to run their code and ensure that they pass.  Comment on the quality of their tests.  Are they a good set?  Are there any obvious cases missing?  
 
-It is not necessary to fire up IDLE to do so.   The easiest way is just to type this at the unix shell prompt:
-
-```
-python test_tempFuncs.py
-```
-
-Ideally, you should see that it ran nine tests and they all passed:
-
-```
-$ python test_tempFuncs.py 
-.........
-----------------------------------------------------------------------
-Ran 9 tests in 0.000s
-
-OK
-$
-```
+If they do not have tests, make sure that you leave them some feedback letting them know that they should.  Talk about the importance of testing their code (and following assignment instructions!).  Let them know they can come to you if they need help with writing or running tests.
 
