@@ -7,23 +7,6 @@ desc: "Feedback on lab02"
 
 Here's what to look for when giving feedback on lab02 (a pair lab.)
 
-## Did they submit to Gradescope?
-
-This is the first thing to check.  If they did, and if they got a perfect score, add a congratulations in their feedback
-repo.  Everything else is an additional sanity check after that.  
-
-If they did NOT submit on Gradescope, or if they did not get a perfect score, then something is definitely amiss, and we'll
-want to look into it further.
-
-To check: Log into Gradescope.  If you haven't logged in yet, it is gradescope.com, and you use your ucsd email address
-as your login.  If you haven't logged in before, you may need to ask for a password reset.
-
-You should have access to the SPIS 2017 course in Gradescope.
-
-## Did they submit as a team in Gradescope?
-
-It is possible that only one pair partner submitted for the team.  There is a way for them to create teams of two in Gradescope, but it may not have been clear to them how to do this.  If they didn't submit as a team, check why.
-
 ## Does the repo they created have the correct name?
 
 They should have created a repo with the name listed in this spreadsheet (private to mentors only):
