@@ -207,9 +207,9 @@ In the `irma_setup` function, the following are done for you:
 Also in the starter code you imported into your repo there is a file named `irma.csv` in the data directory. This data was scraped from https://www.wunderground.com/hurricane/atlantic/2017/hurricane-irma,
 last access 9/14/2017. This file contains data about hurricane Irma. Each line contains 6 columns separated by commas (thus the .csv file extension). The file can be opened directly in idle or opened in Excel for a columnar view. The first line of the file describes what each column is. Here are the first 3 lines of the file, separated into their columns:
 
-  Date	    Time	    Lat	    Lon	    Wind	Pressure
-  30-Aug	15:00 GMT	16.4	-30.3	50	    1004
-  30-Aug	21:00 GMT	16.4	-31.2	60	    1001
+    Date	    Time	    Lat	    Lon	    Wind	Pressure
+    30-Aug	    15:00 GMT	16.4	-30.3	50	    1004
+    30-Aug	    21:00 GMT	16.4	-31.2	60	    1001
 
 The only columns relevant to your code are Lat (the latitude), Lon (the longitude), and Wind (the wind speed in miles per hour).
 
