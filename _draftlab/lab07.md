@@ -15,16 +15,36 @@ This lab will give you a taste of the very hot field of machine learning.  The b
 
 # First, create a lab07 repo
 
-Go to github.com and create a new repo called spis18-lab07-part1-Name-Name using Method 1. When creating the repo import the starter file from this git repo: TBA
+Go to github.com and create a new empty repo called spis18-lab07-Name1-Name2. When creating the repo import the starter file from this git repo: TBA
 
 Then use `git clone` to clone this into your `~/github` directory.
 
-In the repo, you will see that there are three files, world_population.csv and imdb.csv. They are used in this lab for data analysis. 
+In the repo, you will see that there are XXX files. They will be used to train the machine learning models we will build in this lab.
 
-# Lab outline (to be completed later)
+# Lab outline (TODO)
  * Part 1: reading from files, working with dictionaries and building Markov models to predict text
  * Part 2: training and using a classifier (naive Bayes (binary) and regression (ordinal/continuous))
  
+# Part 1: Markov chains and text generation
+The basic idea behind machine learning (ML) is to use data to build a "model".  You can think of a model as a computer program that "knows" something about the world. In our case, the model knows how to respond to data in some kind of a human-like way.  
+
+There are three basic steps to any ML task:
+1. Select an appropriate model and an appropriate data representation
+2. Train the model on some examples
+3. Use the model to perform some kind of human-like task
+
+## The task: Writing text
+In the first part of lab07, we will build a model that is capable of writing text.  It can write tweets, or your English essay.  And they will seem (almost) like a human could have written them.
+
+## Step 1 (nothing to do, but do read): Model selection and data representation
+In this part, we will use a model called a Markov Chain.  The basic idea behind the Markov Chain we will build is that the probability of a word in a sentence is based only on the word that immediately precedes it.  For example, if I see the word "sunny" then there is a relatively high probability that the word "day," "disposition," or "side" (as in "sunny side up") will come next, but a much lower probability that I will next see the word "the", "down" or "shark".  So just by hearing the word "sunny", you have a pretty good idea of the words that might come next.  We will build a Markov chain that has this same knowldege.
+
+Of course, if you heard "It's going to be a sunny..." you'd be almost certain that the next word is "day". Unfortunately, Markov Chains are not that smart.  There can only think about one word at a time.  Fortunately, though, this makes the model simple to learn.
+
+The data representation we will use here is simple: we will represent text as words, in plain text.
+
+## Step 2: Train the model
+
 
 
 # Step 2: start ipython and get into the pylab mode
