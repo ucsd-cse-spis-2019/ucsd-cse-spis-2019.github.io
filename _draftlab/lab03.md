@@ -23,7 +23,7 @@ There is both a pair and an individual component of this lab.  The individual co
 
 # Setting up your git repo for {{page.num}} (WITH your partner)
 
-You will create one repository for this assignment between the two of you, but you will need to import some starter code.  Create a joint git repo for you and your partner for {{page.num}}. However, create a completely empty repository with no Readme, no .gitignore, and no license.  
+You will create one repository for this assignment between the two of you, but you will need to import some starter code.  Create a joint git repo for you and your partner for {{page.num}}. However, create a completely empty repository with no Readme, no .gitignore, and no license named `spis18-lab03-name1-name2`.  
 
 After you create the new repository, you will see a new screen with the option to import code from another repository.  You should import the code from this repository:
 
@@ -33,7 +33,7 @@ https://github.com/ucsd-cse-spis-2018/lab03starter.git
 
 It will take a few minutes, but when you return to the repo on github you should see some starter code.
 
-Finally, clone your newly created private repo following the instructions in lab02.
+Finally, clone your newly created private repo following the instructions in [lab02](/lab/lab02/).
 
 Next, you will complete the individual portion of your assignment, adding your files to this shared repo.
 
@@ -108,7 +108,7 @@ In the code above you noticed that by calling `Turtle()` three times we got thre
 
 ### The turtle documentation
 
-It's a good idea to check out the [library documentation](https://docs.python.org/3/library/turtle.html) (a.k.a. reference manual, API docs, etc.) when you're learning how to use a new library (set of methods).  Google can be very helpful when exploring a new tool. Here are a couple of links that can help you get started drawing pictures and seeing what's possible.
+It's a good idea to check out the [library documentation](https://docs.python.org/3/library/turtle.html) (a.k.a. reference manual, API docs, etc.) when you're learning how to use a new library (set of methods).  
 
 Here's the entry in the documentation for the function that lets us move forward:
 
@@ -139,7 +139,7 @@ Note that the name of this method should correspond to the letter you are drawin
 Feel free to be creative here.  Right now, you can draw the letter any size, using any style.  You will probably find the functions `penup` and `pendown` useful, but check the documentation for other functions that will allow you to change the style of the lines your turtle draws.
 
 ### Test your function
-Test your function to see if it works by creating at least *two* different Turtles, moving one of these Turtles away from its default position (you probably want to lift the pen before moving the Turtle), and then calling your `drawA` function with *each* Turtle.  Does the output look good?  Do both the Turtles draw?  If there are bugs in your code (we'd be surprised if there weren't!) fix them before moving on (though remember you can always add and commit non-working code to your repo with an appropriate comment).
+Test your function to see if it works by creating at least *two* different Turtles, moving one of these Turtles away from its default position (you probably want to lift the pen before moving the Turtle), and then calling your `drawA` function with *each* Turtle.  You should see two letters drawn, one drawn by each Turtle (one after the other).  Does the output look good?  Do both the Turtles draw?  If there are bugs in your code (we'd be surprised if there weren't!) fix them before moving on (though remember you can always add and commit non-working code to your repo with an appropriate comment).
 
 ### add, commit and push
 At this point you are almost finished with the individual portion and ready to commit and push your code so far.  Here's a checklist to make sure you haven't forgotten anything:
@@ -207,9 +207,10 @@ In the `irma_setup` function, the following are done for you:
 Also in the starter code you imported into your repo there is a file named `irma.csv` in the data directory. This data was scraped from https://www.wunderground.com/hurricane/atlantic/2017/hurricane-irma,
 last access 9/14/2017. This file contains data about hurricane Irma. Each line contains 6 columns separated by commas (thus the .csv file extension). The file can be opened directly in idle or opened in Excel for a columnar view. The first line of the file describes what each column is. Here are the first 3 lines of the file, separated into their columns:
 
-Date	Time	Lat	Lon	Wind	Pressure
-30-Aug	15:00 GMT	16.4	-30.3	50	1004
-30-Aug	21:00 GMT	16.4	-31.2	60	1001
+  Date	    Time	    Lat	    Lon	    Wind	Pressure
+  30-Aug	15:00 GMT	16.4	-30.3	50	    1004
+  30-Aug	21:00 GMT	16.4	-31.2	60	    1001
+
 The only columns relevant to your code are Lat (the latitude), Lon (the longitude), and Wind (the wind speed in miles per hour).
 
 Using the data in irma.csv, your irma function must show hurricane Irma's path. Your solution must include the following:
