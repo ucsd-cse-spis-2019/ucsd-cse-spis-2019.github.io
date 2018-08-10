@@ -9,5 +9,6 @@ ready: true
 ---
 
 # Breadth Lecture (Curt)
+Compressing data using Huffman coding and the concept of entropy.
 
-Lecture slides:
+Lecture slides: [Compressing Information](/lectures/week1/SPIS Lecture 08 - Breadth - Compressing Information.pdf)
