@@ -195,6 +195,7 @@ This part of the assignment is based on the following assignment: http://nifty.s
 
 In this part, you and your partner will use the Turtle to animate the paths of some real hurricanes!  Your goal is to build a program that functions like the one in [this video](https://youtu.be/c2uRG42M_nc).  Here are the details.
 
+### Understand the starter code
 Open the starter file `irma.py` in idle.  
 
 In the `irma_setup` function, the following are done for you:
@@ -204,7 +205,9 @@ In the `irma_setup` function, the following are done for you:
 * Loading a background image of the Atlantic
 * Setting the world coordinates of the screen to match the latitude and longitude on the map
 
-Also in the starter code you imported into your repo there is a file named `irma.csv` in the data directory. This data was scraped from https://www.wunderground.com/hurricane/atlantic/2017/hurricane-irma,
+You will add your code into the function `irma()`.  Read the comments and the code in that function and make sure you understand what it does so far.  Try moving the turtle (t) around and see it animate.  Notice the coordinates of the world have been changed from their default.  The x values in the new coordinate system range from -90 to -17.66 and the y values range from 0 to 45.  Since the Turtle starts at (0,0) you cannot see it.  Try moving it to a location where you can see it in the new coordinate frame and making it move.
+
+You will also notice that this starter code uses a file named `irma.csv` in the data directory. This data was scraped from https://www.wunderground.com/hurricane/atlantic/2017/hurricane-irma,
 last access 9/14/2017. This file contains data about hurricane Irma. Each line contains 6 columns separated by commas (thus the .csv file extension). The file can be opened directly in idle or opened in Excel for a columnar view. The first line of the file describes what each column is. Here are the first 3 lines of the file, separated into their columns:
 
     Date	    Time        Lat     Lon     Wind    Pressure
@@ -213,7 +216,8 @@ last access 9/14/2017. This file contains data about hurricane Irma. Each line c
 
 The only columns relevant to your code are Lat (the latitude), Lon (the longitude), and Wind (the wind speed in miles per hour).
 
-Using the data in irma.csv, your irma function must show hurricane Irma's path. Your solution must include the following:
+### Add code to make the Turtle trace the hurricane's path
+Using the data in `irma.csv`, your irma function must show hurricane Irma's path. Your solution should look like [the video](https://youtu.be/c2uRG42M_nc) and must include the following:
 
 * Correctly show each point in the data file (together with lines between each point)
 * At each point, you must display what category the storm is, if it has hurricane strength winds, otherwise, draw no text.
@@ -228,15 +232,19 @@ Using the data in irma.csv, your irma function must show hurricane Irma's path. 
 
 You can use Google to find the wind speeds for each category of hurricane.
 
-Make sure you run your code, and look at the data, to test your code.  Ensure the following:
+Notice that the starter code already uses the csv package to read the lines from the data file.  The csv package is already imported at the top of the irma.py file, and we've provided some comments and code to help you understand how you can read the lines and get the data out of the lines in the file.  Make sure you understand how this works before you attempt to change the code.  If you have questions, ask a mentor.
+
+**We have provided some comments in the starter code to help you out, but this is a more open-ended task than you've
+done in the past.  Make a plan with your partner before you attempt to start coding**
+
+### Run, test and debug your code
+Make sure you run your code, and look at the data, to test your code.  
+
+**Ensure the following:**
 * Does your line start in the same position as the demo?  Remember, you need to move the turtle to the starting latitude/longitude with the pen UP so you don't draw a line that's not part of the hurricane data.
-* Do you have the same number of 1, 2, 3, etc as in the demo?
-* Does the path look the same as in the demo?
+* Do the number and order of 1s, 2s, 3s, etc, on your path as well as the color of the points in your path, match the demo?
+* Does the path go in the same direction as in the demo?
 * When you run your code on other data files, do you get the path you'd expect (after looking at the data)?
-
-
-### A note about reading from csv files:
-The easiest way to read data from a csv file is to use Python's csv package.  You can see that this package is already imported at the top of the irma.py file.  We've also provided some code and some comments to get you started with how to use this package, and we'll go over it in class as well.
 
 ## Submit everything!
 Once you've got your hurricane tracker working, make sure of the following:
