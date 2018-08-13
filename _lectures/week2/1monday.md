@@ -9,7 +9,7 @@ ready: true
 # FOCS 8:45am - 10:00am (Christine)
 
 Lecture slides: Turtle, Lists and Loops
-* [Before](/lecture/week2/W2Mon845_TurtleListsLoops.pdf)
+* [Before](/lectures/week2/W2Mon845_TurtleListsLoops.pdf)
 * After
 
 Code (from Friday):
