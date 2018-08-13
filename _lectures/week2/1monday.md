@@ -17,8 +17,8 @@ Code (from Friday):
 
 
 
-# FOCS 10:15am - 11:30am (Curt)
+# FOCS 10:15am - 11:30am (Gary)
 
-Lecture slides: 
+Lecture slides: Introduction to recursion
 
 
