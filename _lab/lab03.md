@@ -152,6 +152,15 @@ If so, you are ready to submit!
 
 To submit, use the command line tools `git add`, `git commit` and `git push`. You must only push working versions of your code (though you can commit code in progress locally). Make sure your code is pushed to git by navigating to your repo on github.com and viewing your latest changes.
 
+### What happens if it won't let you push?
+You might get a message at this point telling you that your push failed.  This will happen if your partner has pushed before you.  Now you need to incorporate their changes to the central repository into your local version of the repository before github will allow you to push.  To do this you will need to execute a `pull` command:
+
+`git pull origin master`
+
+Then you will be able to push and everything should be OK.  Since you and your partner have been editing different files, you should not have any merge conflicts, but if you do, stop and ask a mentor for help.
+
+See the documentation on [this page](https://help.github.com/articles/dealing-with-non-fast-forward-errors/) for a bit more information.
+
 At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE.  Here are some things you can do while you wait for your partner:
 * Work on APS
 * View and respond to the enrichment video
@@ -162,6 +171,8 @@ At this point you are done with the individual portion.  If your partner is not 
 # The Pair Portion: Doing more with the Turtle
 
 **STOP!  Do not start on this part of the lab until BOTH partners have completed the individual portion.  When you do start, make sure you use _pair programming_**
+
+**WARNING: Throughout this section make sure that you always start with an updated version of the repository (use `git pull` as described above to pull the latest version into your account).  If you ever switch to working on the other partner's lab account make sure you do `git add`, `git commit`, `git push` before you switch, and then `git pull` when you switch to the new account.  If you make changes to the same file in the same repo from two different clones, you are likely to get merge conflicts, which are no fun to deal with.**
 
 ## Step 2.0: Discuss with your partner
 Discuss the following questions with your partner, then put your joint answers into comments at the top of a new file named `lab3Letters_pair.py`. 
