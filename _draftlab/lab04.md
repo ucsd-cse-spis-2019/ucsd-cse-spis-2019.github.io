@@ -3,8 +3,8 @@ layout: lab
 num: lab04
 ready: true
 desc: "Recursion and fractals with Turtle"
-assigned: 2017-08-15 09:00:00.00-7
-due: 2017-08-18 16:00:00.00-7
+assigned: 2017-08-14 09:00:00.00-7
+due: 2018-08-17 16:00:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2017/lab04-startercode.git
 ---
 
@@ -13,7 +13,6 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Learning Goals
 
-In this lab you will practice some of the key concepts from Chapter 4 of Guttag.
 This includes writing parameterized functions, developing test code and solving problems using recursion. You'll do some warm up recursive programs, predict and test what they do, and then top it all off by creating some very cool fractal art. 
 
 Your learning goals are:
@@ -29,15 +28,13 @@ Your learning goals are:
 
 # Work Flow
 
-* Step 1: Read Chapter 4 of Guttag, Sections 4.1 - 4.5
+* Step 1: Create a new private github repo under the "ucsd-cse-spis-2018" organization. However, the instructions are a little different this time, since we will be providing you with some starter code. 
 
-* Step 2: Create a new private github repo under the "ucsd-cse-spis-2017" organization. However, the instructions are a little different this time, since we will be providing you with some starter code. 
+* Step 2: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy.
 
-* Step 3: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy.
+* Step 3: Unit test your code as you write new code using the unittest framework
 
-* Step 4: Unit test your code as you write new code using the unittest framework
-
-* Step 5: Commit your code frequently. Push working versions of your code to github. 
+* Step 4: Commit your code frequently. Push working versions of your code to github. 
 
 Developing code is an iterative process. Your code will probably not work as expected on the very first try. Don't be dismayed. Work through your code to identify bugs, test new code frequently and seek help if you feel you are stuck!
 
@@ -48,7 +45,7 @@ The way that you create the repo will be a little different this time, since we 
 Instead of creating the repo from scratch, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
 importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
 
-The name of your repo should be `spis17-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2017.github.io/info/pairs/), as we have done for the previous labs.
+The name of your repo should be `spis18-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2017.github.io/info/pairs/), as we have done for the previous labs.
 
 
 # Programming Exercises
