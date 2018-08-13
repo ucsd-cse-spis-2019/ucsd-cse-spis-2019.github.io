@@ -19,6 +19,6 @@ Code (from Friday):
 
 # FOCS 10:15am - 11:30am (Gary)
 
-Lecture slides: [Introduction to recursion and loops and arrays] (/lectures/week2/SPIS_Lecture_Week_2_1015am)
+Lecture slides: [Introduction to recursion and loops and arrays] (/lectures/week2/SPIS Lecture Week 2 Monday 1015am.pdf)
 
 
