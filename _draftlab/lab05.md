@@ -290,6 +290,15 @@ Function `randomGrid` also returns a copy of the original image.  To create this
 Now it's time to create your own effects!! Please be sure to include a comment or note to the tutors explaining what you did. Be creative!  There is literally no end to this assignment. Add any creative routines that you come up with to your public repo and continue working on the joint group mashup project.
 
 
+<p align="center">
+
+![alt-art1](/images/labs/images/PIL/art1.png){:height="400px"} 
+![alt-art2](/images/labs/images/PIL/art2.jpg){:height="400px"} 
+![alt-art3](/images/labs/images/PIL/art3.png){:height="400px"} 
+![alt-art4](/images/labs/images/PIL/art4.png){:height="400px"} 
+
+
+</p>
 
 
 Congratulations on finishing lab 5!!
