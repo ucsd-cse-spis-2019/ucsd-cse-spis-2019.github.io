@@ -12,14 +12,14 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Learning Goals
 
-In this lab you will manipulate and transform images. A key focus is to give you lots of practice with using loops in your python code, as well as seeing the practical effects of working with mutable data structures. 
+In this lab you will manipulate and transform images. A key focus is to give you lots of practice with using loops, as well as seeing the practical implications of working with mutable data structures. 
 
 Your learning goals are:
 
 * Import and export picture files in PIL
 * Use your programming knowledge to manipulate pixels in picture files
 * Implement algorithms to transform pictures 
-* Apply concepts of data mutation
+* Understanding how mutable data structures behave
 * Dream up new creative image manipulations
 
 
@@ -27,14 +27,14 @@ Your learning goals are:
 
 This assignment consists of both individual and pair programming exercises. As in previous assignments, you will create only one private repository between the two of you. Following our naming convention, your repo should be called `spis18-lab05-Name1-Name2`. There is no starter code to import for this assignment. Go ahead an create this repo now on github.
 
-What comes next is the individual portion of the lab. However, sit next to your partner and help each other out when you get stuck. The goal is for each of you to get familiar with the PIL library and how to work with images, before moving on to the pair programming portion of the assignment. 
+What comes next is the individual portion of the lab. The goal is for each of you to get familiar with the PIL library and how to work with images, before moving on to the pair programming portion of the assignment. 
 
 
 # Individual portion: Getting familiar with PIL
 
-This first part of the lab is individual. However, we want you to work next to your partner and support them as they go through these exercises. First, each of you should clone the private repo to their own account, following the instructions in [lab02](/lab/lab02/). You will create your own files as part of this individual portion and then at the end add them to the shared repo.
+This first part of the lab is individual. However, we want you to work next to your partner and support them as they go through these exercises. First, each of you should clone the private repo to their own account, following the instructions in [lab02](/lab/lab02/). In this individual lab portion, you will each create your own unique files and then add them to the shared repo.
 
-Before you get started with programming, we need to point out one important fact. The goal of the lab is to practice coding, and specifically the use of (nested) loops and the intricacies of data referencing. For many of the tasks we ask you to do, there already exists a function in  the PIL library that implements it. However, it is important you re-implement the functionality from 'first principles' so you get to practice and hone your programming skills. 
+Before you get started with programming, we need to point out one important fact. The goal of the lab is to practice coding, and specifically the use of (nested) loops and the intricacies of data referencing. For many of the tasks we ask you to do, there already exists a function in  the PIL library that implements it. However, it is important you re-implement the functionality from 'first principles' so you get to practice and hone your programming skills. So implement the functions as we ask, don't simply notice that a similar function already exists somewhere in a Python library.
 
 
 
@@ -48,7 +48,7 @@ In this lab, we'll work with the Python Imaging Library (PIL) which is a graphic
 
 </p>
 
-Next, launch idle in the same directory where you stored the bear image. There, create a new file and at the top of this file put a comment stating your name. Save this file as `lab05Warmup_YourName.py` where YourName is replaced with your first name.
+Next, launch idle in the same directory where you stored the bear image. In idle, create a new file and at the top of this file put a comment stating your name. Save this file as `lab05Warmup_YourName.py` where YourName is replaced with your first name.
 
 In this file, write the following lines of code. 
 
@@ -66,7 +66,7 @@ The first line instructs Python to import the Image portion of the PIL image lib
 
 Before you move on, add comments to your file to explain each line of code.
 
-How many pixels is your image? The following command could be helpful:
+How many pixels is your image composed of? The following command could be helpful:
 
 ```
 bear.size
@@ -85,7 +85,7 @@ Note that in the image grid, the axis is a little different from the usual 2D Ca
 </p>
 
 
-In the shell, you can check the value of the pixel and verify it is a typle of RGB values:
+In the shell, you can check the value of the pixel and verify it is a tuple of RGB values (3 numbers, one each for R, G and B):
 
 ```
 >>> pixel
@@ -98,7 +98,7 @@ Now that we have accessed a pixel, let's see how to modify the colors of individ
 
 The `putpixel` function modifies one pixel at a time and takes two arguments: (1) a pixel coordinate  represented by an (x, y) tuple, in this case (100,200); and (2) a tuple representing the RGB color to set the pixel to, in this case color (0, 0, 0), i.e. black.
 
-Add the `putpixel` command to your code and check the bear image. Can you find the modified pixel? If you have a hard time seeing the modified pixel, try instead the following code to turn a range of pixels black. Make sure you understand what this code is doing.
+Add the `putpixel` command above to your code and check the bear image. Can you find the modified pixel at (100,200)? If you have a hard time seeing the modified pixel, try instead the following code to turn a range of pixels black. Make sure you understand what this code is doing.
 
 ```
 for i in range(100):
@@ -112,9 +112,9 @@ For detailed information on the functions we have used so far and the PIL librar
 
 ## Inverting the colors
 
-Now, let's try to modifying our image in an interesting way. Way back in the days of film cameras and chemical processing of photo images, one step in the processing produced a negative image. We can achieve the negative (aka inverted effect) digitally by subtracting each of the original RGB values of a pixel from 255. For example, if the pixel RGB values are (34, 67, 87), the new RGB values of that same pixel should be (221, 188, 168), basically 255-34, 255-67, and 255-87. Of course, you need to do this not only for one pixel, but for all the pixels in the image. 
+Now, let's try to modify our image in an interesting way. Way back in the days of film cameras and chemical processing of photo images, one step in the processing produced a negative image. We can achieve the negative (aka inverted effect) digitally by subtracting each of the original RGB values of a pixel from 255. For example, if the pixel RGB values are (34, 67, 87), the new RGB values of that same pixel should be (221, 188, 168), basically 255-34, 255-67, and 255-87. Of course, you need to do this not only for one pixel, but for all the pixels in the image. 
 
-In your file, create a function `invert` as shown below, which implements this operation for all pixels of an image. Note that the function below is incomplete, so it is up to you to fill in the missing lines of codes.  
+Clear your file. Then create a function `invert` there as shown below, which implements this operation for all pixels of an image. Note that the function below is incomplete. It is up to you to fill in the missing lines of codes.  
 
 ```
 def invert( im ):
@@ -133,25 +133,24 @@ def invert( im ):
 
 ```
 
-To call this function on the bear image, you will need to add the following line of code in your file. Basically, the code above specifies the new function and the code below calls this function on a specific image (in this case, referenced by the variable `bear`).
+Now add the required code to import the PIL library, open the "bear.jpg" image and call the `invert` function on the variable that points to this image. 
 ```
 invert(bear)
 ```
-
-When you now run the code, your result should look similar to this.
+Basically, the code above calls the new function on a specific image (in this case, referenced by the variable `bear`). When you now run the code, your result should look similar to this.
 
 <p align="center">
 ![](/images/labs/images/PIL/invertedbear.jpg){:height="300px"}
 </p>
 
-For this exercise and for all subsequent one, make sure you test your code on the bear image, and at least one other image. We suggest using your own picture available in one your earlier git hub repos :)
+For this exercise and for all subsequent ones, make sure you test your code on the bear image, and at least one other image. We suggest using your own picture available in one your earlier git hub repos :)
 
 
 ## Saving modified pictures
 
-At the moment, you are only modifying a copy of the image that is stored in local memory. You are not actually changing the `bear.jpg` file and any of the changes you make, will not be saved when you exit Python. The reason is that the Python functions you've used are not directly processing the stone bear image on the hard disk.  Rather,  when you open an image, PIL makes a duplicate of that image and loads that duplicate copy into  memory. This technique of loading a copy of a file to memory (which is relatively fast) rather than directly handing a file on the disk (slow) is very common. 
+At the moment, you are only modifying a copy of the image that is stored in local memory. You are not actually changing the `bear.jpg` file, and any of the changes you make will not be saved when you exit Python. The reason is that the Python functions you've used are not directly processing the stone bear image on the hard disk.  Rather,  when you open an image, PIL makes a duplicate of that image and loads that duplicate copy into  memory. This technique of loading a copy of a file to memory (which is relatively fast) rather than directly handing a file on the disk (slow) is very common. 
 
-To save changes to disk, you should use the `Image.save` function. Read the documentation, mentioned earlier, to see how it works (hint: It takes one argument, which is a string specifying where you want the file saved including its name). Give this new file a different name (i.e., don't use `bear.jpg`), as we will be using the original file throughout this lab. 
+To save changes to disk, you should use the `Image.save` function. Read the documentation, mentioned earlier, to see how it works (hint: It takes one argument, which is a string specifying where you want the file saved including its name). Make sure you give this new file you save to a different name (i.e., don't use `bear.jpg`), as we will be using the original file throughout this lab. 
 
 Add the save function to your code and test it.
 
@@ -175,7 +174,7 @@ Now, what happens if you apply `invert()` first and then next apply `invert_bloc
 ## Submit your code
 Submit your code using the command line tools `git add`, `git commit` and `git push`. Verify that your code is pushed properly to git by navigating to your repo on github.com and viewing your latest changes.
 
-At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE; instead have fun with creating new image transformations of your own. For example, what happens if you swap color channels (R becomes G, G becomes B, B becomes R)? What happens when you delete (i.e., set to 0) one or more of the color channels? Can you modify your code such that these transformations only apply to every other pixel rather than every pixel or to a specific area in your image? Check out some of the things that are possible at the end of this assignment uner **extra creative challenges**, including green screen manipulations. You could be busy for many hours ... However, once your partner finishes the individual portion, sync up again and start the pair programming portion of the lab. At the end, you can get back to creating new artistic image manipulations if you want ...
+At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE; instead have fun with creating new image transformations of your own. For example, what happens if you swap color channels (R becomes G, G becomes B, B becomes R)? What happens when you delete (i.e., set to 0) one or more of the color channels? Can you modify your code such that these transformations only apply to every other pixel rather than every pixel or to a specific area in your image? Check out some of the things that are possible at the end of this assignment under **extra creative challenges**, including green screen manipulations. You could be busy for many hours ... However, once your partner finishes the individual portion, sync up again and start the pair programming portion of the lab. At the end, you can get back to creating new artistic image manipulations ...
 
 
 # Pair programming portion: More advanced image manipulations
@@ -184,13 +183,15 @@ At this point you are done with the individual portion.  If your partner is not 
 
 First, create a new Python file called "imaging.py" in your repo. You will place all the code of the pair programming exercises in this file. Make sure you add appropriate comments, including a header comment. For each exercise, come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have come to a fairly clear idea of a solution strategy and your first steps.
 
-## Greyscale
+# Reducing the color space
+Now that we have some experience changing the colors in a picture, we will continue of with some more color manipulation examples that manipulate each pixel individually.
 
-Now that we have some experience changing the colors in a picture, we'll write functions to make greyscale and black and white (binary) images.  The concept of image luminance will help us out. In layman's terms, luminance is how bright or dark the colors in a pixel are (compared to white).
+### Greyscale
+To create greyscale images, we make use of the concept of image luminance. In layman's terms, luminance is how bright or dark the colors in a pixel are (compared to white).
 
 As Wikipedia calculates it, luminance is 21% red, 72% green, and 7% blue. Intuitively, this makes sense because if you think of standard red, green, and blue, green is the lightest and thus has highest positive impact luminance, while blue is darker and has a lower value for luminance. This is useful! You're going to calculate luminance for pixel operations.
 
-Write a new function called greyscale that takes an image as a parameter and modifies it to make it greyscale. For this, you'll want to do something similar to `invert`, except that we will first calculate the luminance of a pixel and then set each of the three color channels to this value.  Since luminance is an indication of how white/black a pixel is, just insert the same value in each of the three color channels!
+Write a new function called greyscale that takes an image as a parameter and modifies it to make it greyscale. For this, you'll want to do something similar to `invert`, except that we will first calculate the luminance of a pixel and then set each of the three color channels to this value.  Since luminance is an indication of how white/black a pixel is, just insert the same value in each of the three color channels.
 
 
 <p align="center">
@@ -203,9 +204,9 @@ Write a new function called greyscale that takes an image as a parameter and mod
 
 Hint: Getting an OverflowError: unsigned byte integer is greater than maximum? This might be because your luminance calculation results in RGB values higher than 255. Make sure that all of your percentages add up to 1. Also, if you get "integer argument expected, got float", it may mean you are trying to assign red, green or blue a floating point value. You may solve this by using a typecast c = int(a/b) or doing an integer division c = a//b versus the floating point one c = a/b (See also http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#integer-division).
 
-## Binarize
+### Binarize
 
-Now, write a function called `binarize( im, thresh,  startx, starty, endx, endy)`, which modifies a portion of im to be black and white based on a threshold luminance value (thresh) specified by the user. This threshold is a brightness value between 0 and 255 - if a pixel's luminance (see earlier) is greater than the threshold value, then it should turn white, and if it is less than the threshold value, then it should turn black. It should only apply this operation to pixels that are inside a box, where startx and starty represent the coordinates of the upper left corner of the box and endx and endy represent the x and y coordinates of the lower right corner. Your function should check that these numbers are valid. If they are not, the function should do not modify the image, but print a warning instead.
+Now, write a function called `binarize(im, thresh,  startx, starty, endx, endy)`, which modifies a portion of `im` to be black and white based on a threshold luminance value (thresh) specified by the user. This threshold is a brightness value between 0 and 255 - if a pixel's luminance (see earlier) is greater than the threshold value, then it should turn white, and if it is less than the threshold value, then it should turn black. It should only apply this operation to pixels that are inside a box, where startx and starty represent the coordinates of the upper left corner of the box and endx and endy represent the x and y coordinates of the lower right corner. Your function should check that these numbers are valid (make sure your checks are complete!). If they are not, the function should do not modify the image, but print a warning instead.
 
 <p align="center">
 
@@ -249,7 +250,8 @@ Write `flipVert`, a function which flips the image in a picture along its horizo
 
 ## Geometric transformations returning a copy of the image
 
-The next three methods create and return a copy of the image passed in (i.e., use the return statement). They should NOT modify the original image. This is different from what we have done thus far. 
+The next three methods operate differently from what we have done thus far. Instead of manipulating the original image, they create a modified copy of the image and return it (i.e., use the return statement). They should NOT modify the original image.
+
 The command below can be helpful. It creates a new image im, as a color image (this is what the RGB means), of a certain width and height given by the tuple.
 ```
     im = Image.new('RGB',(width,height))
@@ -260,7 +262,7 @@ Function `scale` takes an image as a parameter and creates a copy of that image 
 ### Blur
 Function `blur` also returns a modified copy of the image. This copy will be a blur of the original image, created by combining neighboring pixels in some way (entirely up to you). You might consider averaging the RGB values of a designated 'square' of pixels, then changing each of these pixels' values to the average.
 
-### Random grid
+### Random grid (challenge problem)
 Function `randomGrid` also returns a copy of the original image.  To create this copy it divides the image into an NxN grid (where the N is up to you, or make it an argument of the function) and randomly sorts the pieces of the grid across the image - "sliding puzzle"-style. Hint: you can use the random library (just google this).
 ```
     import random
@@ -268,12 +270,14 @@ Function `randomGrid` also returns a copy of the original image.  To create this
 
 ## Submission
 
-Submit the pair programming portion of your code, which should all be in the `imaging.py`file, to github using the usual `git add`, `git commit`, `git push` commands
+Submit the pair programming portion of your code, which should all be in the `imaging.py` file, to github using the usual `git add`, `git commit`, `git push` commands
 
 
 # Extra creative challenges
 
-Now it's time to create your own effects!! Create a new python file and be creative. Please be sure to include a comment or note to the tutors explaining what you did. There is literally no end to this assignment. Below you find some examples of what you can do (all of this was created with Python code, not Photoshop :-) Ask the mentors about using a green screen; we have one available for you and you can try out green screen substitution. For this, you need to identify all pixels that correspond to a range of green and then replace them with pixels from another image. Have fun!
+Now it's time to create your own effects!! These challenges are optional, and you can do them individually, as a pair, or with another partner if you wish (in which case, just select one of your repos and put in a header comment specifying who worked together on this).
+
+Create a new python file and be creative. Please be sure to include a comment or note to the tutors explaining what you did. There is literally no end to this assignment. Below you find some examples of what you can do (all of this was created with Python code, not Photoshop :-) Ask the mentors about using a green screen; we have one available for you and you can try out green screen substitution. For this, you need to identify all pixels that correspond to a range of green and then replace them with pixels from another image. Have fun!
 
 
 <p align="center">
