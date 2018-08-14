@@ -114,7 +114,7 @@ For detailed information on the functions we have used so far and the PIL librar
 
 Now, let's try to modify our image in an interesting way. Way back in the days of film cameras and chemical processing of photo images, one step in the processing produced a negative image. We can achieve the negative (aka inverted effect) digitally by subtracting each of the original RGB values of a pixel from 255. For example, if the pixel RGB values are (34, 67, 87), the new RGB values of that same pixel should be (221, 188, 168), basically 255-34, 255-67, and 255-87. Of course, you need to do this not only for one pixel, but for all the pixels in the image. 
 
-Clear your file. Then create a function `invert` there as shown below, which implements this operation for all pixels of an image. Note that the function below is incomplete. It is up to you to fill in the missing lines of codes.  
+Create a function `invert` there as shown below, which implements this operation for all pixels of an image. Also delete any code you no longer need. Note that the function below is incomplete. It is up to you to fill in the missing lines of codes.  
 
 ```
 def invert( im ):
