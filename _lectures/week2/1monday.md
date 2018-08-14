@@ -10,7 +10,7 @@ ready: true
 
 Lecture slides: Turtle, Lists and Loops
 * [Before](/lectures/week2/W2Mon845_TurtleListsLoops.pdf)
-* After
+* [After](/lectures/week2/W2Mon845_TurtleListsLoopsAfter.pdf)
 
 Code (from Friday):
 * [Playing with the turtle](/lectures/week1/turtleFun.py)
