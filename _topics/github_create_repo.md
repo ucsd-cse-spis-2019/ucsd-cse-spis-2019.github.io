@@ -93,7 +93,7 @@ your partner will share the same repo by following these instructions
     using the `git clone` command as in the following example:
 
     ```
-    $ git clone git@github.com:ucsd-cse-spis-2016/spis16-lab04-Phill-Diba.git
+    $ git clone git@github.com:ucsd-cse-spis-2018/spis18-lab04-Phill-Diba.git
 
     ```
     
@@ -101,8 +101,8 @@ your partner will share the same repo by following these instructions
     provided above. To check if your repo has been cloned correctly, type
     `ls` on the command prompt and you should see a directory with your
     repo name. Navigate into that directory using the `cd` command. For
-    example if the directory name is `spis16-lab04-Phill-Diba`, at the
-    command prompt type `cd spis16-lab04-Phill-Diba`
+    example if the directory name is `spis18-lab04-Phill-Diba`, at the
+    command prompt type `cd spis18-lab04-Phill-Diba`
 
 
 ## Submitting your code via github
