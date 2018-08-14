@@ -259,14 +259,7 @@ Here are some pictures for inspiration:
 
 # Additional exercises
 
-When you have completed lab 4, you can continue working on the fun group drawing project that you started in lab 3. 
-
-We presume that you have already created the public repo `spis18-drawings-Name1-Name2`.
-If you haven't refer to the instructions at the end of lab 3.
-
-Continue adding new files and functions that draw interesting fractals to that repo. Please DO NOT include the code for the (spiral, tree and snowflake) in your public repo. We don't want spoilers for the SPISers who may still be working on the core lab 4 exercises.
-
-We also encourage you to continue creating interesting mashup art from the routines that you and your peers have implemented in your public drawing repo.
+As an individual, you could create an art gallery out of the fractals!  Consider the fractals you created in this lab and imagine what you could create by making changes to your existing code.  Please be sure to name your art gallery fractal files differently from the lab fractal files so that your mentor can review all that you created.
 
 Great job working through lab 4. Feel free to move on to the next lab.
 
