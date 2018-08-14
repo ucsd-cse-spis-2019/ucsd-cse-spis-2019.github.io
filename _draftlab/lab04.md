@@ -4,7 +4,7 @@ num: lab04
 ready: true
 desc: "Recursion and fractals with Turtle"
 assigned: 2018-08-14 09:00:00.00-7
-due: 2018-08-15:30:00.00-7
+due: 2018-08-17 15:30:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2018/lab04-startercode.git
 ---
 
@@ -80,8 +80,8 @@ Your recursive step should be something like:
 
 a * b = a + a * (b-1)
 
-Bring up idle3, and open "recursiveFuncs.py" and "test_recursiveFuncs.py". These two files were part the starter code for your repo. Note that the code is still incomplete. 
-Now, implement the recursive multiplication function recProduct(a,b) in "recursiveFuncs.py". Once you have that, its time to test you code using the unittest framework (see lab02). The file "test_recursiveFuncs.py" is where you unit test your code.
+Bring up idle3, and open "recursiveFuncs.py" and "test_recursiveFuncs.py". These two files were part of the starter code for your repo. Note that the code is still incomplete. 
+Now, implement the recursive multiplication function recProduct(a,b) in "recursiveFuncs.py". Once you have that, it's time to test your code using the unittest framework (see lab02). The file "test_recursiveFuncs.py" is where you unit test your code.
 
 For example check that your program does the following:
 
@@ -93,7 +93,7 @@ For example check that your program does the following:
  
 
 If any of your test cases fail, it means either there is an error in your code or your code doesn't cover that particular case and you need to write additional code. You have to re-examine your code and figure out what is wrong.
-This process is known as debugging. If you are not sure how to debug your code, refer to this link to begin debugging your code in a systematic way. 
+This process is known as debugging.
 
 Once you have tested your code for the cases where the parameter `b` is non-negative, while `a` is any integer that maybe positive, negative or zero, try to write a few additional test cases where the parameters `b` is negative. Here are a few example cases:
 
@@ -261,7 +261,7 @@ Here are some pictures for inspiration:
 
 When you have completed lab 4, you can continue working on the fun group drawing project that you started in lab 3. 
 
-We presume that you have already created the public repo `spis18-drawings-Name1-Name2`.
+We presume that you have already created the public repo `spis17-drawings-Name1-Name2`.
 If you haven't refer to the instructions at the end of lab 3.
 
 Continue adding new files and functions that draw interesting fractals to that repo. Please DO NOT include the code for the (spiral, tree and snowflake) in your public repo. We don't want spoilers for the SPISERS who may still be working on the core lab 4 exercises.
