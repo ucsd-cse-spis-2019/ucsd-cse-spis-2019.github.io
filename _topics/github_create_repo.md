@@ -19,17 +19,17 @@ Other github topics:
 # <a name="method1"></a>Method 1: Create empty private repo, optionally adding starter code from a link
 
 We ask that you create a new private github repo *inside the
-ucsd-cse-spis-2017 organization* for each lab assignment.  You and
+ucsd-cse-spis-2018 organization* for each lab assignment.  You and
 your partner will share the same repo by following these instructions
 
 1. Navigate to 
-   the [ucsd-cse-spis-2017 organization](https://github.com/ucsd-cse-spis-2017)
+   the [ucsd-cse-spis-2018 organization](https://github.com/ucsd-cse-spis-2018)
 
 1. Click on the "New repository" button to create a new repo as shown below (for 2016; note that the github layout has changed somewhat; look for a green "New" button instead): 
 
    ![new repo](/images/new-repo-begin.png)
    
-   Be sure that the "owner" of the repository is *ucsd-cse-spis-2017*
+   Be sure that the "owner" of the repository is *ucsd-cse-spis-2018*
    as shown in the image, and NOT your own github account.  If the
    owner shows as your own github id, you may have to change the pull
    down menu on the left where it says owner.
@@ -37,7 +37,7 @@ your partner will share the same repo by following these instructions
    When creating your repo use the naming convention
    `spis17-labXX-<pair name>`. Enter your pair name exactly as listed
    under the `Pair_Name` column [at this
-   link](http://ucsd-cse-spis-2017.github.io/info/pairs/). For
+   link](http://ucsd-cse-spis-2018.github.io/info/pairs/). For
    example, if you are creating a repo for lab04, and the name of your
    pair is Phill-Diba, then your repo should be named
    "spis17-lab04-Phill-Diba". Select the "private" option when
