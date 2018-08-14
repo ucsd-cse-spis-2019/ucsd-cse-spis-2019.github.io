@@ -25,7 +25,7 @@ your partner will share the same repo by following these instructions
 1. Navigate to 
    the [ucsd-cse-spis-2018 organization](https://github.com/ucsd-cse-spis-2018)
 
-1. Click on the "New repository" button to create a new repo as shown below (for 2016; note that the github layout has changed somewhat; look for a green "New" button instead): 
+1. Click on the "New repository" button to create a new repo as shown below (note that the github layout has changed somewhat; look for a green "New" button instead for "New respository"): 
 
    ![new repo](/images/new-repo-begin.png)
    
