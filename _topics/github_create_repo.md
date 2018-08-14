@@ -86,7 +86,7 @@ your partner will share the same repo by following these instructions
 
     Clicking on this link gives you either an ssh or https
     address that you will need in the cloning process clone. Copy the ssh
-    address with starts with a `git@`. See the screenshot below:
+    address that starts with a `git@`. See the screenshot below:
 	
     ![new repo](/images/get-repo-url.png) 
     
