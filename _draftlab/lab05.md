@@ -172,9 +172,9 @@ Now, what happens if you apply `invert()` first and then next apply `invert_bloc
 
 
 ## Submit your code
-Submit your code using the command line tools `git add`, `git commit` and `git push`. Verify that your code is pushed properly to git by navigating to your repo on github.com and viewing your latest changes.
+Submit your code using the command line tools `git add`, `git commit` and `git push`. If your partner has already pushed to the git repo, you may get an error message if you try to push your changes as well. To resolve this, before you do `git push`, first do `"git pull origin master`. This will make sure your local branch is up to date with the github master first. Verify that your code is pushed properly to git by navigating to your repo on github.com and viewing your latest changes.
 
-At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE; instead have fun with creating new image transformations of your own. For example, what happens if you swap color channels (R becomes G, G becomes B, B becomes R)? What happens when you delete (i.e., set to 0) one or more of the color channels? Can you modify your code such that these transformations only apply to every other pixel rather than every pixel or to a specific area in your image? Check out some of the things that are possible at the end of this assignment under **extra creative challenges**, including green screen manipulations. You could be busy for many hours ... However, once your partner finishes the individual portion, sync up again and start the pair programming portion of the lab. At the end, you can get back to creating new artistic image manipulations ...
+At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE; instead have fun with creating new image transformations of your own. For example, what happens if you swap color channels (R becomes G, G becomes B, B becomes R)? What happens when you delete (i.e., set to 0) one or more of the color channels? Can you modify your code such that these transformations only apply to every other pixel rather than every pixel or to a specific area in your image? Check out some of the things that are possible at the end of this assignment under **creative challenges**, including green screen manipulations. You could be busy for many hours ... However, once your partner finishes the individual portion, sync up again and start the pair programming portion of the lab. At the end, you can get back to creating new artistic image manipulations ...
 
 
 # Pair programming portion: More advanced image manipulations
@@ -273,9 +273,9 @@ Function `randomGrid` also returns a copy of the original image.  To create this
 Submit the pair programming portion of your code, which should all be in the `imaging.py` file, to github using the usual `git add`, `git commit`, `git push` commands
 
 
-# Extra creative challenges
+# Creative challenges
 
-Now it's time to create your own effects!! These challenges are optional, and you can do them individually, as a pair, or with another partner if you wish (in which case, just select one of your repos and put in a header comment specifying who worked together on this).
+Now it's time to create your own effects!! These challenges are not required, but highly encouraged. You can do them individually, as a pair, or with another partner if you wish (in which case, just select one of your repos and put in a header comment specifying who worked together on this). 
 
 Create a new python file and be creative. Please be sure to include a comment or note to the tutors explaining what you did. There is literally no end to this assignment. Below you find some examples of what you can do (all of this was created with Python code, not Photoshop :-) Ask the mentors about using a green screen; we have one available for you and you can try out green screen substitution. For this, you need to identify all pixels that correspond to a range of green and then replace them with pixels from another image. Have fun!
 
