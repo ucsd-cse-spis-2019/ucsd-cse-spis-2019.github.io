@@ -44,7 +44,8 @@ your partner will share the same repo by following these instructions
    creating your repo to make sure your repo is only visible to the
    collaborators of the repo (you and your partner) and the course
    instructors. Click on the "Create repository" button. See the
-   screenshot below (note, this example shows this for 2016):
+   screenshot below (note, Many examples show screenshots for 2016.
+   Your responses should use 2018, of course.):
 	
    ![new repo](/images/create-new-repo.png)
 
