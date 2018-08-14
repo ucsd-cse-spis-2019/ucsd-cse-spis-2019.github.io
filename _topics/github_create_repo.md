@@ -35,12 +35,12 @@ your partner will share the same repo by following these instructions
    down menu on the left where it says owner.
    
    When creating your repo use the naming convention
-   `spis17-labXX-<pair name>`. Enter your pair name exactly as listed
+   `spis18-labXX-<pair name>`. Enter your pair name exactly as listed
    under the `Pair_Name` column [at this
    link](http://ucsd-cse-spis-2018.github.io/info/pairs/). For
    example, if you are creating a repo for lab04, and the name of your
    pair is Phill-Diba, then your repo should be named
-   "spis17-lab04-Phill-Diba". Select the "private" option when
+   "spis18-lab04-Phill-Diba". Select the "private" option when
    creating your repo to make sure your repo is only visible to the
    collaborators of the repo (you and your partner) and the course
    instructors. Click on the "Create repository" button. See the
