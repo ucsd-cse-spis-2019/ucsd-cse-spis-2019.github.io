@@ -4,7 +4,7 @@ num: lab04
 ready: true
 desc: "Recursion and fractals with Turtle"
 assigned: 2018-08-14 09:00:00.00-7
-due: 2018-08-17 16:00:00.00-7
+due: 2018-08-17 15:30:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2018/lab04-startercode.git
 ---
 
