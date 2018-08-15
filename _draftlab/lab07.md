@@ -13,17 +13,17 @@ This lab will give you a taste of the very hot field of machine learning.  The b
  * use basic Python libraries and functions to read date from a file and do basic processing of data
  * build models to generate or predict data
 
+You will complete this entire lab using *pair programming*.  Of course, you are free to work on the extension by yourself, especially if you decide to do a machine learning project and your partner does not.  But, as usual, **do not leave your partner in the dust!**
+
 # First, create a lab07 repo
 
 Go to github.com and create a new empty repo called spis18-lab07-Name1-Name2. When creating the repo import the starter file from this git repo: TBA
 
 Then use `git clone` to clone this into your `~/github` directory.
 
-In the repo, you will see that there are XXX files. They will be used to train the machine learning models we will build in this lab.
-
-# Lab outline (TODO)
- * Part 1: reading from files, working with dictionaries and building Markov chains to predict text
- * Part 2: training and using a classifier (naive Bayes (binary) and regression (ordinal/continuous))
+# Lab outline 
+ * Part 1: Reading from files, working with dictionaries and building Markov chains to predict text
+ * Part 2: Training and using a classifier using the `nltk` library
  
 # Machine Learning: Very Basic Overview
 The basic idea behind machine learning (ML) is to use data to build a "model".  You can think of a model as a computer program that "knows" something about the world. In our case, the model knows how to respond to data in some kind of a human-like way.  
@@ -124,9 +124,6 @@ Now that you can train a model and generate text, play around with generating te
 ## Add, Commit and Push
 Once you have tested your code and you think it is working, you are done with the first part of the lab.  Make sure you have added all of your files to your repo, committed them, and pushed them to github.
 
-## Possible project idea!
-* Write a Markov chain to generate text where you represent each "basic unit" as a character instead of a full word.  That is, build a model that predicts the next character, given one (or more) preceding characters.  If you do this with a first-order Markov model, you are likely to get garbarge, so you'll need to figure out how to increase the order of your model.  Once you can build a model of order 8 or so, you'll be surprised at how realistic the text sounds!  And it will be much more original than the order-one word-based model.
-
 
 # Part 2: Classification of text sentiment
 The second half of this lab will introduce you to another major task in Machine Learning: classification.  In the previous section we built a model to *generate* new data.  In this section we will build models to *classify* data that already exists.  In particular, we will be building our own version of Rotten Tomatoes by automatically classifying the sentiment of movie reviews.  
@@ -203,8 +200,32 @@ means that the word in question is 33.8 times more likely to appear in a negativ
 
 Look at the most useful features.  Again, discuss these with your partner.  Do they make sense?
 
-### Explore more about how the classifier performs
+### (If you have time) Explore more about how the classifier performs 
+Finally, you will write your own code to help you understand more about how the classifier is performing.  
 
+Near the bottom of the `classifyReviews` function, **write code that will display the accuracy of your classifier on positive examples
+and on negative examples, separately.**  There are some hints in the comments of the starter code about how you can do this.  You will need to count the number of misclassified examples and divide it by the total number of examples of that class.  
+
+Compare these numbers to the overall classification accuracy.  Is your classifier better at classifying positive or negative documents?  Why do you think this is?
+
+Finally, again next the bottom of the `classifyReviews` function, **write code that displays the misclassified reviews**.  This can help you understand how your classifier is performing and give you some hints about what it might be getting wrong and how to improve it. 
+Once you have done this look at the misclassified examples.  Does it make sense why these were misclassified?  Discuss this with your partner.
+
+# Add, commit, push
+You've made it to the end of lab07.  Congratulations!  Make sure you push your code to github.  I hope you are excited about ML and are interested in exploring a machine learning project.  If you are, we've got some ideas for you below.
+
+# Possible project ideas!
+You are done with lab07, but if you're interested in completing a machine learning project (or you just want to explore more), here are some ideas!  They are labeled with what we think will be the relative difficulty of each.
+
+* (*low to medium difficulty*) Explore small extensions to the review classification code you wrote in this lab.  These extensions could include: removing stop words, including more reviews in the positive and negative sets (e.g. the 3s and the 1s), or exploring sentiment classification on other datasets that you find online, or anything else you want to explore.
+
+* (*medium difficulty*) Write a Markov chain to generate text where you represent each "basic unit" as a character instead of a full word.  That is, build a model that predicts the next character, given one (or more) preceding characters.  If you do this with a first-order Markov model, you are likely to get garbarge, so you'll need to figure out how to increase the order of your model.  Once you can build a model of order 8 or so, you'll be surprised at how realistic the text sounds!  And it will be much more original than the order-one word-based model.
+
+* (*medium to high difficulty*) Explore other text classification algorithms included in the `nltk` library.  Compare their performance to the Naive Bayes clasifier.
+
+* (*high difficulty*) The `nltk` library is fairly limited in what it can support.  But it is just a wrapper on top of the much more powerful `scikit.learn` library.  Use the `scikit.learn` library to build more flexible or powerful classification models.  You might use a different feature set (e.g. Bag of Words with counts instead of binary), or try a different classification task entirely (e.g. using linear regression to predict the actual rating score of the reviews).  
+
+* (*high difficulty*) Find a completely new dataset and do any kind of classification task using `nltk`, `scikit.learn` or just coding a classification algorithm by hand.  (A good one to code by hand is K-Nearest-Neighbors). 
 
 Alright! You're finished with lab 08!
 
