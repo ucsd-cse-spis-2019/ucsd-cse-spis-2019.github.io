@@ -56,7 +56,7 @@ You would calculate that given the word "Yeah" the only word that can follow is 
 
 This is the approach we will use.
 
-### Finally, the code to write!
+### Write a method to train the model
 Write a python function `train(s)` that takes a string, `s` and returns a dictionary representing the transition probabilities in the representation described above. That is, each word `w` in `s` should be a key in the dictionary.  `w`'s associated value should be a list containing all of the words that followed `w` in `s` in their relative proportions to what is in the string `s`.  For example, for the string above, the dictionary returned would be:
 ```
 {
@@ -88,6 +88,43 @@ I said I like it like that"
 
 Then the word "that." (with a period) would be treated separately from the word "that" (with no period).
 
+*Hint: You will find the python string function `split` to be useful in breaking the string `s` into a list of words.  You can find documentation for the [`split` function here](https://docs.python.org/3/library/stdtypes.html#string-methods)*
+
+### Write a method to generate text based on a model
+Now write a python function `generate(model, firstWord, numWords)`.  This method takes the following parameters:
+* `model` -- a dictionary representing the trained model as output from the `train` method.
+* `firstWord` -- the word to use as the first word in the generated text.  This word *must* be a key in the model.
+* `numWords` -- the number of words in the returned generated string.
+The function returns a string generated randomly from the model, starting with `firstWord` and containing `numWords`.  To generate the next word in the returned string, the funciton should randomly pick one of the words in the model that has non-zero probability of occurring next.  That is, randomly pick one of the words from the list associated with the current word!
+
+For our model above, here are the results of several calls to `generate`:
+
+```python
+>>> cardiB = train("Yeah baby I like it like that You gotta believe me when I tell you I said I like it like that")
+>>> generate(cardiB, "I", 10)
+'I said I tell you I like it like it'
+>>> generate(cardiB, "I", 10)
+'I said I tell you I said I tell you'
+>>> generate(cardiB, "I", 10)
+'I said I like it like that Yeah baby I'
+>>> generate(cardiB, "Yeah", 15)
+'Yeah baby I like it like that You gotta believe me when I like that'
+```
+
+Notice that it will generate different strings with the same input.  You will need to use the `random.randrange` function to select your next word.  We will go over some examples in class, or you can look at the [documentation here](https://docs.python.org/3/library/random.html).
+
+#### How do you test code with randomness?
+It can be tough to test your code when it relies on randomness to function.  There are ways to do it, but for now, just try running your code several times, and make sure you eventually get different strings, and that all of the words that should be represented seem to be represented.
+
+### Add, Commit and Push
+Once you have tested your code and you think it is working, you are done with the first part of the lab.  Make sure you have added all of your files to your repo, committed them, and pushed them to github.
+
+### Possible project idea!
+* Write a Markov chain to generate text where you represent each "basic unit" as a character instead of a full word.  That is, build a model that predicts the next character, given one (or more) preceding characters.  If you do this with a first-order Markov model, you are likely to get garbarge, so you'll need to figure out how to increase the order of your model.  Once you can build a model of order 8 or so, you'll be surprised at how realistic the text sounds!  And it will be much more original than the order-one word-based model.
+
+
+# Part 2: Classification of text sentiment
+The second half of this lab will introduce you to another major task in Machine Learning: classification.  In the previous section we built a model to *generate* new data.  In this section we will build models to *classify* data that already exists.  In particular, we will be building our own version of Rotten Tomatoes by automatically classifying the sentiment of movie reviews.  
 
 # Step 2: start ipython and get into the pylab mode
 Run commands in terminal
