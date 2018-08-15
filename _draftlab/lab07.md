@@ -17,7 +17,7 @@ You will complete this entire lab using *pair programming*.  Of course, you are 
 
 # First, create a lab07 repo
 
-Go to github.com and create a new empty repo called spis18-lab07-Name1-Name2. When creating the repo import the starter file from this git repo: TBA
+Go to github.com and create a new empty repo called spis18-lab07-Name1-Name2. When creating the repo import the starter file from this git repo: `https://github.com/ucsd-cse-spis-2018/lab07starter.git`
 
 Then use `git clone` to clone this into your `~/github` directory.
 
