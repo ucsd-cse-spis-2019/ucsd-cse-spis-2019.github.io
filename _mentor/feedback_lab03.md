@@ -5,22 +5,26 @@ desc: "Feedback on lab03"
 
 feedback_lab03.md
 
-Go to the ucsd-cse-spis-2016 organization on github.com and navigate to each pair's repo for lab 3. The repo should be named spis17-lab03-Name-Name
+Go to the ucsd-cse-spis-2018 organization on github.com and navigate to each pair's repo for lab 3. The repo should be named spis18-lab03-Name-Name
 
-Open the lab03.py file on github and provide your feedback by just looking through the student code. Base your feedback on the following observations. You are not required to run the student code in IDLE although feel free to do so if you like
+Open each of the warmup files.  These were completed individually.  Run the `drawA` (or whatever letter) in idle and make sure it draws a letter.  Make sure it respects the turtle parameter (i.e. call it on two different turtles and make sure it moves both).  Then look at their code and make sure its well-structured, with good variable names, etc.  In their individual feedback repos give them some feedback on the individual section.  Comment on any creativity they used in creating their letters.
 
-* Check that the student's code has the following structure. 
-	* One function to draw each of the letters in their initials. Each function should be named as draw_X()
-	* Two functions, each drawing the first and last initial of each student by appropriately calling on the functions that draw individual letters. These functions should be of the form draw_XY()
-   If the students have followed the above structure acknowledge the same by saying "Well done on breaking down your code into appropriate functions". If you find that they have written all their code in a single function, mention that a more mdular approach to structuring their code is highly encouraged. 
+Then open their `lab3Letters_pair.py` file.  You do not need to run it.  Look for:
+ * Did they answer the three questions at the top of the file?
+     1. What is the “anonymous turtle”?
+     2. In the code below, what is the difference between turtle and Turtle()
+     ```python
+     myTurtle = turtle.Turtle() 
+     drawPicture(myTurtle)
+     ```
+      3. Imagine that I have a turtle in a variable named myTurtle. What line of code will change that turtle’s y-position to 100?
+    If they got any answers incorrect or if their answers are missing, provide feedback.  If they answered the questions correctly, give them a positive encouragement.
+  * Does their letter function properly use the size parameter?
+  * Does their code use good style.
+Provide feedback on the above in their pair feedback repository.
 
-* Check that each function takes as input the parameters: width and height and that the parameters are used in the code. If this is the case, mention "Good job on customizing the size of your drawings using function parameters" else add an appropriate comment encouraging them to write additional code that customizes the size of their drawings using function parameters.
+Finally, open their `irma.py` file and run it.  Does it run correctly?  Then look at their code.  Make sure they are using good format and style and a simple, clean approach.  Do they have proper commenting and variable names?  Commenting on every line is not necessary, but make sure they have at least a few.  If they have done anything overly complicated or in an improper way, comment on how they can improve their code.  If a helper method would be appropriate, suggest it.  This is your opportunity to help them become better programmers!  Leave this feedback in their pair feedback repo.
 
-* Check the code for comments. If there are too few, encourage them to add more comments for readability.
-
-* Check to see if the students have attempted to draw rounded letters instead of block style letters. If so acknowledge their effort in the feedback.
-
-You are not required to check whether the trigonometry in the student code checks outs. Just that the code is readable and well organized. However, if you find that the lab was not completed, please reach out to the pair to find out of what they had difficulty with.
 
 
 
