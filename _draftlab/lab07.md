@@ -22,7 +22,7 @@ Then use `git clone` to clone this into your `~/github` directory.
 In the repo, you will see that there are XXX files. They will be used to train the machine learning models we will build in this lab.
 
 # Lab outline (TODO)
- * Part 1: reading from files, working with dictionaries and building Markov models to predict text
+ * Part 1: reading from files, working with dictionaries and building Markov chains to predict text
  * Part 2: training and using a classifier (naive Bayes (binary) and regression (ordinal/continuous))
  
 # Part 1: Markov chains and text generation
@@ -37,14 +37,56 @@ There are three basic steps to any ML task:
 In the first part of lab07, we will build a model that is capable of writing text.  It can write tweets, or your English essay.  And they will seem (almost) like a human could have written them.
 
 ## Step 1 (nothing to do, but do read): Model selection and data representation
-In this part, we will use a model called a Markov Chain.  The basic idea behind the Markov Chain we will build is that the probability of a word in a sentence is based only on the word that immediately precedes it.  For example, if I see the word "sunny" then there is a relatively high probability that the word "day," "disposition," or "side" (as in "sunny side up") will come next, but a much lower probability that I will next see the word "the", "down" or "shark".  So just by hearing the word "sunny", you have a pretty good idea of the words that might come next.  We will build a Markov chain that has this same knowldege.
-
-Of course, if you heard "It's going to be a sunny..." you'd be almost certain that the next word is "day". Unfortunately, Markov Chains are not that smart.  There can only think about one word at a time.  Fortunately, though, this makes the model simple to learn.
+In this part, we will use a model called a Markov Chain.  The basic idea behind the Markov Chain we will build is that the probability of a word in a sentence is based only on the word(s) that immediately precede(s) it.  The number of preceding words (or generally, data items) that we consider defines the "order" of the Markov chain.  A first-order Markov chain considers only the word immediately preceding the next, a second-order chain would use the two words immediately preceding, etc.  In this lab we will work with first-order Markov chains, which themselves can be quite powerful when applied to words.  For example, if I see the word "sunny" then there is a relatively high probability that the word "day," "disposition," or "side" (as in "sunny side up") will come next, but a much lower probability that I will next see the word "the", "down" or "shark".  So just by hearing the word "sunny", you have a pretty good idea of the words that might come next.  We will build a Markov chain that has this same knowldege.  Of course, if you heard "It's going to be a sunny..." you'd be almost certain that the next word is "day".  This certainty would require a higher-order Markov chain.
 
 The data representation we will use here is simple: we will represent text as words, in plain text.
 
 ## Step 2: Train the model
+The way the Markov chain actually works is by using what are called "transition probabilities".  In our specific application, the transition probabilities specify the probabilities of each word following next, given the current word you are looking at.  So in our example above, the transition probability for the word "sunny" might be P("day"|"sunny") = 0.6, P("side"|"sunny") = 0.3, P("disposition"|"sunny")=0.1, and P(*any other word*|"sunny")=0.  Each of these probabilities can be read as "The probability of the next word being "day" given that the word I'm on now is "sunny" is 0.6".  Notice that the transition probabilities given a single word (in this case the word is "sunny") will always sum to 1.  
 
+Training our model  involves learning these transition probabilities for each word in our vocbulary.  We will do this using "training data", i.e. some sample pieces of text.  You will write a program to "read" the text and to keep track of the distribution of words that follow each word in the text.  For example, if you were given the following line of text:
+
+"Yeah baby I like it like that
+You gotta believe me when I tell you
+I said I like it like that"
+
+You would calculate that given the word "Yeah" the only word that can follow is "baby".  Given "baby" the only word that follows is "I".  Given "I" the words that might following are: "like", "tell" and "said".  "like" occurs twice after "I", while "tell" and "said" each occur once.  In other words, P("like"|"I")=0.5, P("tell"|"I")=0.25, and P("said"|"I")=0.25.  Another way we can represent these proportions is to use a list: `["like", "tell", "said", "like"]` where each word is represented in the relative proportion that it occurs.  Then we can associate it with the word we are transitioning from using a dictionary, like this:
+
+`{"I" : ["like", "tell", "said", "like"]} `
+
+This is the approach we will use.
+
+### Finally, the code to write!
+Write a python function `train(s)` that takes a string, `s` and returns a dictionary representing the transition probabilities in the representation described above. That is, each word `w` in `s` should be a key in the dictionary.  `w`'s associated value should be a list containing all of the words that followed `w` in `s` in their relative proportions to what is in the string `s`.  For example, for the string above, the dictionary returned would be:
+```
+{
+  'Yeah': ['baby'], 
+  'baby': ['I'], 
+  'I': ['like', 'tell', 'said', 'like'], 
+  'like': ['it', 'that', 'it', 'that'], 
+  'it': ['like', 'like'], 
+  'that': ['You', 'Yeah'], 
+  'You': ['gotta'], 
+  'gotta': ['believe'], 
+  'believe': ['me'], 
+  'me': ['when'], 
+  'when': ['I'], 
+  'tell': ['you'], 
+  'you': ['I'], 
+  'said': ['I']
+}
+```
+
+Note the following:
+ * You can preserve capitalization, treating capitalized words as different from lowercase words.  Notice in the dictionary above "You" is different from "you".
+ * You should imagine that your string wraps around, and that the last word is followed by the first word.  Notice that in the dictory above, "Yeah" (the last word) follows "that" (the first word).
+ * You can keep punctuation attached to the word it is associated with, and treat a word with punctuation as different from a word without punctuation.  For example, if the text were:
+ 
+ "Yeah baby I like it like that.
+You gotta believe me when I tell you
+I said I like it like that"
+
+Then the word "that." (with a period) would be treated separately from the word "that" (with no period).
 
 
 # Step 2: start ipython and get into the pylab mode
