@@ -25,7 +25,7 @@ Your learning goals are:
 
 # Setting up your git repo for {{page.num}} (WITH your partner)
 
-This assignment consists of both individual and pair programming exercises. As in previous assignments, you will create only one private repository between the two of you. Following our naming convention, your repo should be called `spis18-lab05-Name1-Name2`. There is no starter code to import for this assignment. Go ahead an create this repo now on github.
+This assignment consists of both individual and pair programming exercises. As in previous assignments, you will create only one private repository between the two of you. Following our naming convention, your repo should be called `spis18-lab05-Name1-Name2`. There is no starter code to import for this assignment. Go ahead an create this repo now on github (select .gitignore to include Python and add a README).
 
 What comes next is the individual portion of the lab. The goal is for each of you to get familiar with the PIL library and how to work with images, before moving on to the pair programming portion of the assignment. 
 
@@ -137,7 +137,7 @@ Now add the required code to import the PIL library, open the "bear.jpg" image a
 ```
 invert(bear)
 ```
-Basically, the code above calls the new function on a specific image (in this case, referenced by the variable `bear`). When you now run the code, your result should look similar to this.
+Basically, the code above calls the new function on a specific image (in this case, referenced by the variable `bear`). Finally, don't forget to add a line of code to actually show the new image. When you now run the code, your result should look similar to this.
 
 <p align="center">
 ![](/images/labs/images/PIL/invertedbear.jpg){:height="300px"}
