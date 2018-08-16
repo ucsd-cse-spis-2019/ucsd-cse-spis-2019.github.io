@@ -1,5 +1,5 @@
 ---
-lecture_date: "2018-08-17 09:00:00.00-7:00"
+lecture_date: "2018-08-17 10:15:00.00-7:00"
 topic: "Breadth: Advanced Recursion, Seam Carving and Dynamic Programming"
 desc: ""
 week: "2"
