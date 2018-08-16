@@ -10,7 +10,8 @@ ready: true
 
 Lecture slides: Recursion practice
 * [Before](/lectures/week2/W2Wed845_RecursionPractice.pdf)
-* After
+* After is basically the same
+* Code from class: [recursionPractice.py](/lectures/week2/recursionPractice.py)
 
 
 # FOCS 10:15am - 11:30am (Curt)
