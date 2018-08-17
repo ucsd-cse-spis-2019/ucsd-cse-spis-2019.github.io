@@ -120,7 +120,8 @@ It can be tough to test your code when it relies on randomness to function.  The
 
 ## Have fun!
 Now that you can train a model and generate text, play around with generating text using different training data.  We've provided some song lyrics and some tweets for you to use.  Have fun and see what you get!
-\Song Files: Each file is titled after the artist whose songs are in that file. Each line in the file contains all the lyrics to one of their songs. You can train one song at a time or all the songs at once and generate your own lyrics. Play around with the songs, artists, and maybe even try to mash some files together!  
+
+Song Files: Each file is titled after the artist whose songs are in that file. Each line in the file contains all the lyrics to one of their songs. You can train one song at a time or all the songs at once and generate your own lyrics. Play around with the songs, artists, and maybe even try to mash some files together!  
 
 ## Add, Commit and Push
 Once you have tested your code and you think it is working, you are done with the first part of the lab.  Make sure you have added all of your files to your repo, committed them, and pushed them to github.
