@@ -208,7 +208,7 @@ Now, write a function called `binarize(im, thresh,  startx, starty, endx, endy)`
 
 <p align="center">
 
-![](/images/labs/images/PIL/binarizedbear.png){:height="400px"}
+![](/images/labs/images/PIL/binarizedbear.png){:height="300px"}
 
 </p>
 
