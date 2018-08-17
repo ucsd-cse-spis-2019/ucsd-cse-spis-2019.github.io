@@ -12,3 +12,5 @@ ready: true
 
 Lecture slides:
 * [Before](/lectures/week2/Breadth2_SeamCarvingAndAdvancedRecursion.pdf)
+
+Code from class: [advancedRecursionSolutions.py](/lectures/week2/advancedRecursionSolutions.py]
