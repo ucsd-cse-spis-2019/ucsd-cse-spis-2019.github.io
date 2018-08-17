@@ -241,10 +241,13 @@ Wire up the circuit shown by the following diagram. Remember: we are using physi
 
 Ask an instructor or mentor is you don't understand the diagram. For a more in depth information on configuring GPIO pins as outputs refer to [this website](https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/).
 
-Now, run the `01_blinking_LED.py` program. Hopefully you should have a blinking LED. If you were unsuccessful, the problem is most likely with your wiring. If you were successful, take a close look at the code. 
+Now, run the `01_blinking_LED.py` program. Hopefully you should have a blinking LED. To stop the program, press 'Ctrl+C' on the keyboard. This will force the code the execute the `KeyboardInterrupt:` portion.
+
+If you were unsuccessful, the problem is most likely with your wiring. If you were successful, take a close look at the code. 
 
 Now, modify the program (and rename it to `01_blinking_LED_sol.py`) to double the frequency at which the LED blinks. Make sure you commit this code to your github repo.
 
+Note: If you ever get an error about the GPIO resources being occupied, the reason is that a program was exited at some point without executing the `GPIO.cleanup()` line in the `KeyboardInterrupt` portion. To resolve this issue, just execute `GPIO.cleanup()` in the Python shell, and you can try your program again. 
 
 
 # Controlling an LED using a button
