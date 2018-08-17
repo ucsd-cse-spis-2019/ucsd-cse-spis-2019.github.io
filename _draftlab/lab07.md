@@ -227,5 +227,5 @@ You are done with lab07, but if you're interested in completing a machine learni
 
 * (*high difficulty*) Find a completely new dataset and do any kind of classification task using `nltk`, `scikit.learn` or just coding a classification algorithm by hand.  (A good one to code by hand is K-Nearest-Neighbors). 
 
-Alright! You're finished with lab 08!
+Alright! You're finished with lab 07!
 
