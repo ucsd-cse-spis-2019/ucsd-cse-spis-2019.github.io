@@ -25,7 +25,7 @@ Your learning goals are:
 
 # Setting up your git repo for {{page.num}} (WITH your partner)
 
-This assignment consists of both individual and pair programming exercises. As in previous assignments, you will create only one private repository between the two of you. Following our naming convention, your repo should be called `spis18-lab05-Name1-Name2`. There is no starter code to import for this assignment. Go ahead an create this repo now on github (select .gitignore to include Python and add a README).
+This assignment consists of both individual and pair programming exercises. As in previous assignments, you will create only one private repository between the two of you. Following our naming convention, your repo should be called `spis18-lab05-Name1-Name2`. There is no starter code to import for this assignment. Go ahead and create this repo now on github (select .gitignore to include Python and add a README).
 
 What comes next is the individual portion of the lab. The goal is for each of you to get familiar with the PIL library and how to work with images, before moving on to the pair programming portion of the assignment. 
 
@@ -172,9 +172,9 @@ Now, what happens if you apply `invert()` first and then next apply `invert_bloc
 
 
 ## Submit your code
-Submit your code using the command line tools `git add`, `git commit` and `git push`. If your partner has already pushed to the git repo, you may get an error message if you try to push your changes as well. To resolve this, before you do `git push`, first do `"git pull origin master`. This will make sure your local branch is up to date with the github master first. Verify that your code is pushed properly to git by navigating to your repo on github.com and viewing your latest changes.
+Submit your code using the command line tools `git add`, `git commit` and `git push`. If your partner has already pushed to the git repo, you may get an error message if you try to push your changes as well. To resolve this, before you do `git push`, first do `git pull origin master`. This will make sure your local branch is up to date with the github master first. Verify that your code is pushed properly by navigating to your repo on github.com and viewing your latest changes.
 
-At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE; instead have fun with creating new image transformations of your own. For example, what happens if you swap color channels (R becomes G, G becomes B, B becomes R)? What happens when you delete (i.e., set to 0) one or more of the color channels? Can you modify your code such that these transformations only apply to every other pixel rather than every pixel or to a specific area in your image? Check out some of the things that are possible at the end of this assignment under **creative challenges**, including green screen manipulations. You could be busy for many hours ... However, once your partner finishes the individual portion, sync up again and start the pair programming portion of the lab. At the end, you can get back to creating new artistic image manipulations ...
+At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE; instead have fun with creating new image transformations of your own. For example, what happens if you swap color channels (R becomes G, G becomes B, B becomes R)? What happens when you delete (i.e., set to 0) one or more of the color channels? Can you modify your code such that these transformations only apply to every other pixel rather than every pixel or to a specific area in your image? Check out some of the things that are possible at the end of this assignment under **creative challenges**, including green screen manipulations. You could be busy for many hours ... However, once your partner finishes the individual portion, sync up again and start the pair programming portion of the lab. At the end, get back to creating new artistic image manipulations ...
 
 
 # Pair programming portion: More advanced image manipulations
@@ -187,9 +187,7 @@ First, create a new Python file called "imaging.py" in your repo. You will place
 Now that we have some experience changing the colors in a picture, we will continue of with some more color manipulation examples that manipulate each pixel individually.
 
 ### Greyscale
-To create greyscale images, we make use of the concept of image luminance. In layman's terms, luminance is how bright or dark the colors in a pixel are (compared to white).
-
-As Wikipedia calculates it, luminance is 21% red, 72% green, and 7% blue. Intuitively, this makes sense because if you think of standard red, green, and blue, green is the lightest and thus has highest positive impact luminance, while blue is darker and has a lower value for luminance. This is useful! You're going to calculate luminance for pixel operations.
+To create greyscale images, we make use of the concept of image luminance. In layman's terms, luminance is how bright or dark the colors in a pixel are (compared to white). As Wikipedia calculates it, luminance is 21% red, 72% green, and 7% blue. Intuitively, this makes sense because if you think of standard red, green, and blue, green is the lightest and thus has highest positive impact luminance, while blue is darker and has a lower value for luminance. 
 
 Write a new function called greyscale that takes an image as a parameter and modifies it to make it greyscale. For this, you'll want to do something similar to `invert`, except that we will first calculate the luminance of a pixel and then set each of the three color channels to this value.  Since luminance is an indication of how white/black a pixel is, just insert the same value in each of the three color channels.
 
@@ -250,14 +248,14 @@ Write `flipVert`, a function which flips the image in a picture along its horizo
 
 ## Geometric transformations returning a copy of the image
 
-The next three methods operate differently from what we have done thus far. Instead of manipulating the original image, they create a modified copy of the image and return it (i.e., use the return statement). They should NOT modify the original image.
+The next three methods operate differently from what we have done thus far. Instead of manipulating the original image, they will create a modified copy of the image and return it (i.e., use the return statement). They should NOT modify the original image.
 
 The command below can be helpful. It creates a new image im, as a color image (this is what the RGB means), of a certain width and height given by the tuple.
 ```
     im = Image.new('RGB',(width,height))
 ```
 ### Scale
-Function `scale` takes an image as a parameter and creates a copy of that image that is scaled to be half its original size.  Then return this scale copy. Hint: one way to do this is to skip every other pixel when copying from one image to the other. Be careful with your coordinates so that you do not go out of bounds in the smaller image.
+Function `scale` takes an image as a parameter and creates a copy of that image that is scaled to be half its original size.  Then return this scale copy (so you are going to have a return statement now). Hint: one way to do this is to skip every other pixel when copying from one image to the other. Be careful with your coordinates so that you do not go out of bounds in the smaller image.
 
 ### Blur
 Function `blur` also returns a modified copy of the image. This copy will be a blur of the original image, created by combining neighboring pixels in some way (entirely up to you). You might consider averaging the RGB values of a designated 'square' of pixels, then changing each of these pixels' values to the average.
@@ -267,6 +265,11 @@ Function `randomGrid` also returns a copy of the original image.  To create this
 ```
     import random
 ```
+<p align="center">
+
+![](/images/labs/images/PIL/beargrid.jpg){:height="300px"}
+
+</p>
 
 ## Submission
 
@@ -275,7 +278,7 @@ Submit the pair programming portion of your code, which should all be in the `im
 
 # Creative challenges
 
-Now it's time to create your own effects!! These challenges are not required, but highly encouraged. You can do them individually, as a pair, or with another partner if you wish (in which case, just select one of your repos and put in a header comment specifying who worked together on this). 
+Now it's time to create your own effects!! These challenges are not required, but highly encouraged. You can do them individually, as a pair, or with another partner if you wish (in which case, just select one of your repos and put in a header comment specifying who worked on this). 
 
 Create a new python file and be creative. Please be sure to include a comment or note to the tutors explaining what you did. There is literally no end to this assignment. Below you find some examples of what you can do (all of this was created with Python code, not Photoshop :-) Ask the mentors about using a green screen; we have one available for you and you can try out green screen substitution. For this, you need to identify all pixels that correspond to a range of green and then replace them with pixels from another image. Have fun!
 
