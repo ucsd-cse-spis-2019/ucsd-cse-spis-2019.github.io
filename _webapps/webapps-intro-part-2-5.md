@@ -15,7 +15,7 @@ In this part, we will create a nav bar so that users can quickly get around all 
 
 ## Bootstrap: A simple way to get started
 
-We're going to implement this using a library called Bootstrap. Bootstrap is a free and easy way to get responsive features and styles. An article written by the staff from SPIS 2016 with more information and an example web app can be found [here](/_webapps/bootstrap). We will be implementing a more simpler example.
+We're going to implement this using a library called Bootstrap. Bootstrap is a free and easy way to get responsive features and styles. An article written by the staff from SPIS 2016 with more information and an example web app can be found [here](/_webapps/bootstrap/). We will be implementing a more simpler example.
 
 ## Back to all those templates (layout.html)
 
