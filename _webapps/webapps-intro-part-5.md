@@ -32,7 +32,7 @@ Before you can use sessions in your flask webapp, you need to do two preliminary
    The secret key is used to encrypt our session to avoid something called "session hijacking", which
    is a way that an evildoer can hack into a running web app session and take it over (potentially stealing private data, or creating other mayhem).
 
-   The value of the secret key can be pretty much any string of letters and digits.  More information on the secret key can be found here: [http://flask.pocoo.org/docs/0.10/quickstart/#sessions](http://flask.pocoo.org/docs/0.10/quickstart/#session)
+   The value of the secret key can be pretty much any string of letters and digits.  More information on the secret key can be found here: [http://flask.pocoo.org/docs/1.0/quickstart/#sessions](http://flask.pocoo.org/docs/1.0/quickstart/#sessions)
 
    Set the secret key sometime after the `app = Flask(__name__)` line.
 
