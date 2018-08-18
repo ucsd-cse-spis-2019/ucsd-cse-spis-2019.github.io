@@ -8,9 +8,9 @@ In part 2 of the SPIS webapps tutorial, we'll learn about how to:
 * Perform a calculation based on a parameter that's in the url
 * Start building a larger multi-page web application
 
-## Keeping your ACMS Account Safe: turn debug mode off.
+## Keeping your ETS Account Safe: turn debug mode off.
 
-So, trying to teach web development in an academic computing environment such as ACMS is always a bit of a risk.   The basic problem is this combination of things:
+So, trying to teach web development in an academic computing environment such as ETS is always a bit of a risk.   The basic problem is this combination of things:
 
 * Web servers, by their very nature while under development, can contain security vulnerabilities
 * Because of this, web developers typically test web apps on systems that "have one job", i.e. to test a web app, 
@@ -20,18 +20,18 @@ So, trying to teach web development in an academic computing environment such as
 
 This is not a show-stopper of a problem.  There are some reasonable things you can do to mitigate the risk.   You should definitely do these things. 
 
-To use Flask safely on ACMS, do NOT enable debug mode:
+To use Flask safely on ETS, do NOT enable debug mode:
 
 ```python
-app.run(port=5000,debug=True)  # DO NOT do this on your ACMS ACCOUNT
+app.run(port=5000,debug=True)  # DO NOT do this on your ETS ACCOUNT
 ```
 
 If you do set `debug=True`, that allows anyone that can bring up your web app to execute any line of Python code they want, but as you, in your account.  That means they could launch a spambot, delete all your files, or do something even more awful.
 
 ```python
-app.run(port=5000,debug=False)   # ALWAYS DO THIS when  RUNNING ON ACMS, THIS IS THE SAFE THING TO DO
+app.run(port=5000,debug=False)   # ALWAYS DO THIS when  RUNNING ON ETS, THIS IS THE SAFE THING TO DO
 ```
-This is the safe thing to do when running on ACMS.
+This is the safe thing to do when running on ETS.
 
 Note that debug mode is really useful, but if you want to be able to use it, you'll need to invest the time in installing Python on your own personal computer (laptop or desktop) and then running Flask there.   That's the only safe environment to turn debug mode on—when you can be totally sure that no-one but you can get to the web browser where debug mode is enabled.
 
