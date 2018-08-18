@@ -11,7 +11,7 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Technical Glitches
 
-Everything should be working now with Heroku and ACMS! If you run into any problems, please let a mentor or instructor know. 
+Everything should be working now with Heroku and ETS! If you run into any problems, please let a mentor or instructor know. 
 
 
 # Part 1: Getting Started
