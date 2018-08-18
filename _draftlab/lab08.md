@@ -16,11 +16,11 @@ Everything should be working now with Heroku and ACMS! If you run into any probl
 
 # Part 1: Getting Started
 
-Please create a private repo called `spis18-lab08-part1-Name-Name` using [Method 2](/topics/github_create_repo)
+Please create a private repo called `spis18-lab08-part1-Name-Name` using [Method 2](/topics/github_create_repo/)
 
 Then clone that repo into your `~/github` directory, cd into it, and then try all the steps in this tutorial:
 
-[Webapps Part 1, Flask, Getting Started](/webapps/webapps-intro-part-1-flask-getting-started)
+[Webapps Part 1, Flask, Getting Started](/webapps/webapps-intro-part-1-flask-getting-started/)
 
 
 # Part 2: Working with Calculations and Templates
