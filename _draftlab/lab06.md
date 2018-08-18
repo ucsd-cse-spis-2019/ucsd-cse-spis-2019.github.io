@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab06
-ready: false
+ready: true
 desc: "Basics of electronics with Raspberry Pi"
 assigned: 2018-08-22 08:45:00.00-7
 due: 2018-08-25 15:45:00.00-7
