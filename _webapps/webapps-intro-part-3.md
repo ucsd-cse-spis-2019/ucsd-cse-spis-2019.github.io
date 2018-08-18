@@ -1,16 +1,16 @@
 ---
 topic: "Webapps Intro, Part 3"
-desc: "Getting started with Heroku on ACMS"
+desc: "Getting started with Heroku on ETS"
 ---
 
-# Getting started with Heroku on ACMS.
+# Getting started with Heroku on ETS.
 
 Outline:
 
 * Create a free Heroku account
 * Clone a repo with a basic flask app
 * Run it locally first
-* Use the Heroku toolbelt on ACMS to get it set up
+* Use the Heroku toolbelt on ETS to get it set up
 
 # Step 1: Create a free Heroku Account
 
@@ -22,7 +22,7 @@ It is probably a good idea to sign up with your ucsd.edu email, because companie
 
 Once you've created your account, there will be "getting started" options.  
 
-* If you are completing part three on ACMS: 
+* If you are completing part three on ETS: 
     * DO NOT FOLLOW THOSE "getting started" options from the Heroku site yet.
     * Those are appropriate for using Heroku on your own machine, and they are appropriate for using Heroku with Django on Python.  WE AREN'T DOING EITHER OF THOSE YET!
     
@@ -31,9 +31,9 @@ Once you've created your account, there will be "getting started" options.
     * You'll also need to make sure you have [Python 2.7 on your Windows, Mac or Linux box](https://www.python.org/downloads/), and
     * Also install git (for [Windows](Git-2.9.3-32-bit), [Mac](https://git-scm.com/download/mac) or [Linux](https://git-scm.com/download/linux).
     * Finally, be sure that you have set up an ssh key *for your laptop* (this is separate from when you did it for your
-        ACMS acccount), and upload that key to github.com.  Instructions are here: 
+        ETS acccount), and upload that key to github.com.  Instructions are here: 
         [git one time setup](http://ucsd-cse-spis-2016.github.io/topics/acms_git_one_time_setup/), but do these
-        directly on your laptop at the shell prompt, not on ACMS (all the same steps.)
+        directly on your laptop at the shell prompt, not on ETS (all the same steps.)
     * At that point, return to these instructions
     
 
@@ -41,7 +41,7 @@ Once you've created your account, there will be "getting started" options.
 
 # Step 2:  Clone our starting code github repo
 
-`cd` into the `~/github` directory of your ACMS account and clone this repo:
+`cd` into the `~/github` directory of your ETS account and clone this repo:
 
 ```
 git@github.com:pconrad/heroku-flask-try-one.git
@@ -82,7 +82,7 @@ Make sure that works.  If so, you are ready to try running on Heroku.
 
 # Step 4: Login to Heroku
 
-You should be able to type the command heroku login at the ACMS Unix prompt and enter your heroku login credentials.  Try that now:
+You should be able to type the command heroku login at the ETS Unix prompt and enter your heroku login credentials.  Try that now:
 
 ```
 [spis15t7@ieng6-240]$ heroku login
@@ -102,7 +102,7 @@ rm -rf heroku
 
 Next, return to your web app directory and run `heroku update`. 
 
-# Step 5: Set up a new Heroku Application using the heroku command (at the Linux prompt on ACMS)
+# Step 5: Set up a new Heroku Application using the heroku command (at the Linux prompt on ETS)
 
 Next, make sure you are inside your repo folder by using ls and pwd to check your current directory.
 
