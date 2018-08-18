@@ -113,7 +113,7 @@ For our model above, here are the results of several calls to `generate`:
 'Yeah baby I like it like that You gotta believe me when I like that'
 ```
 
-Notice that it will generate different strings with the same input.  You will need to use the `random.randrange` function to select your next word.  We will go over some examples in class, or you can look at the [documentation here](https://docs.python.org/3/library/random.html).
+Notice that it will generate different strings with the same input.  You will need to use the `random.randrange` function to select your next word (make sure to 'import random' in order to use random.randrange).  We will go over some examples in class, or you can look at the [documentation here](https://docs.python.org/3/library/random.html).
 
 ### How do you test code with randomness?
 It can be tough to test your code when it relies on randomness to function.  There are ways to do it, but for now, just try running your code several times, and make sure you eventually get different strings, and that all of the words that should be represented seem to be represented.
