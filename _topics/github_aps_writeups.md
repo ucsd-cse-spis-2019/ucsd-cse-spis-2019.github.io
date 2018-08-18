@@ -158,4 +158,4 @@ Maybe you already have that picture on the web somewhere. Or maybe you draw it o
 
 But, if you don't already have a picture, one easy way to create one is with Google Drawings, as explained here: [Github: Google Drawings in Markdown files](/topics/github_google_drawings/).
 
-<div style="display:none;">https://ucsd-cse-spis-2016.github.io/topics/github_aps_writeups/</div>
+<div style="display:none;">https://ucsd-cse-spis-2018.github.io/topics/github_aps_writeups/</div>
