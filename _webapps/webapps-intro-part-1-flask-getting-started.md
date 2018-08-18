@@ -9,7 +9,7 @@ More specifically, this page describes how to get started with Flask on your ACM
 
 # Audience
 
-These notes were written for students in the 2015 CSE SPIS program at UC San Diego that want to learn about how to do basic web programming in Python using Flask.    
+These notes were written for students in the CSE SPIS program at UC San Diego that want to learn about how to do basic web programming in Python using Flask.    
 
 We will do this using the student's ACMS account, i.e. by logging into the systems on the server ieng6-240.ucsd.edu
 
