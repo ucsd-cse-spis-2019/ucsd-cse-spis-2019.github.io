@@ -11,16 +11,16 @@ One of the most basic ways to get started with using git and github is to simply
 
 We'll invite you to use github.com to create, edit and submit your solutions to the APS Homework assignments.
 
-To get started, create a private github repo under the ucsd-cse-spis-2016 organization that has this name:
+To get started, create a private github repo under the ucsd-cse-spis-2018 organization that has this name:
 
-* spis16-aps-yourfirstname-yourlastinitial
+* spis18-aps-yourfirstname-yourlastinitial
 
 Use the names and initials from the [pairs list](/info/pairs/), which we have updated with the preferred first name you gave us on the github survey.  For example:
 
-* spis16-aps-Lavanya-S
-* spis16-aps-Njambi-N
-* spis16-aps-Andrew-T
-* spis16-aps-Anthony-V
+* spis18-aps-Lavanya-S
+* spis18-aps-Njambi-N
+* spis18-aps-Andrew-T
+* spis18-aps-Anthony-V
 * etc.
 
 This image shows how to set up the repo at the [github.com/new](https://github.com/new) page:
