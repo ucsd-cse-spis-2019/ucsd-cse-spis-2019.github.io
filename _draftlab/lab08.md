@@ -3,7 +3,7 @@ layout: lab
 num: lab08
 ready: true
 desc: "Intro to Webapps"
-assigned: 2017-08-22 18:45:00.00-7
+assigned: 2018-08-22 18:45:00.00-7
 due: 2018-08-29 15:45:00.00-7
 ---
 
