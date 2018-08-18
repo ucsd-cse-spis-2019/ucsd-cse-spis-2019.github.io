@@ -3,7 +3,7 @@ topic: "Webapps Intro, Part 2"
 desc: "ftoc (from url), and intro to templates"
 ---
 
-In part 2 of the SPIS 2018 webapps tutorial, we'll learn about how to:
+In part 2 of the SPIS webapps tutorial, we'll learn about how to:
 
 * Perform a calculation based on a parameter that's in the url
 * Start building a larger multi-page web application
