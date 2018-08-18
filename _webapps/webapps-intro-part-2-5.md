@@ -15,7 +15,7 @@ In this part, we will create a nav bar so that users can quickly get around all 
 
 ## Bootstrap: A simple way to get started
 
-We're going to implement this using a library called Bootstrap. Bootstrap is a free and easy way to get responsive features and styles. An article written by the staff from SPIS 2016 with more information and an example web app can be found [here](/_webapps/bootstrap/). We will be implementing a more simpler example.
+We're going to implement this using a library called Bootstrap. Bootstrap is a free and easy way to get responsive features and styles. An article written by the staff from SPIS 2016 with more information and an example web app can be found [here](/webapps/bootstrap/). We will be implementing a more simpler example.
 
 ## Back to all those templates (layout.html)
 
@@ -172,7 +172,7 @@ Don't forget to save, commit, and push to your Github!
 
 ## But I want to do even more! 
 
-There are a lot more cool things you can do with CSS, Bootstrap, and the navigation bar. If you want to see some more examples, check out the article from SPIS 2016 that was linked previously. There, an example webapp has a navigation bar with dropdown menus and much more. The article has links to the webapp itself as well as the Github repo with all the code. Take a look at the `navbar.html` file and see if you understand what's going on! The link to that article can be found again [here](/_webapps/bootstrap/).
+There are a lot more cool things you can do with CSS, Bootstrap, and the navigation bar. If you want to see some more examples, check out the article from SPIS 2016 that was linked previously. There, an example webapp has a navigation bar with dropdown menus and much more. The article has links to the webapp itself as well as the Github repo with all the code. Take a look at the `navbar.html` file and see if you understand what's going on! The link to that article can be found again [here](/webapps/bootstrap/).
 
 # The next lesson
 
