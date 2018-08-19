@@ -309,9 +309,9 @@ Now, it's time to write some code of your own.
 
 # Controlling a servo motor
 
-A servo is an electrical motor that comes with built-in control circuitry. There are two types of servos: standard servos and continuous rotation servos. In this lab, we will be working with standard servos. A stardard servo can move its arm half a rotation, from an angle of 0 degrees to an angle of 180 degrees. Servos are used in a lot of applications, for example to control flaps and rudders of RC aircraft or rotate camera turrets.
+A servo is an electrical motor that comes with built-in control circuitry. There are two types of servos: standard servos and continuous rotation servos. In this lab, we will be working with standard servos. A stardard servo can move its arm half a rotation, from an angle of 0 degrees to an angle of 180 degrees, and back. Servos are used in a lot of applications, for example to control flaps and rudders of RC aircraft or to rotate camera turrets.
 
-Keep the circuitry from the previous problems, and add a servo. The wiring is shown in the diagram below.
+Keep the circuitry from the previous problems (the wiring of the LED and button), and add a servo. The extra wiring is shown in the diagram below.
 <p align="center">
 ![RPi-desktop](/images/labs/images/RPi/schematic_servo.jpg){:height="200px"} 
 </p>
@@ -322,22 +322,22 @@ Now look at the starter code for the servo in `03_servo.py`. The first few lines
 
 The program includes code between the comments `#--- Start of the PWM setup --- ` and `#--- End of the PWM setup --- ` that takes care of this signaling. It is not important to understand the details here. Just leave the code as is and realize that it takes care of the PWM signal generation. The only thing you really need to know is that it defines a function `set_duty_cycle(angle)`. This function generates the PWM signal to tell the servo to move to the position indicated by 'angle' (between 0 and 180).
 
-Try out the starter code. You should see the servo move between positions 0 and 180.
+Try out the starter code. You should see the servo move between angle 0 and angle 180.
 
-You will notice that the `pwm_servo.start()` command tells the servo to *start* moving to the new angle. The actual motion will take some time. This is why there are the  `time.sleep()` commands: we want to halt the code execution long enough so that the servo can move to its desired destination.
+You will notice that the `pwm_servo.start()` command tells the servo to *start* moving to the new angle. The actual motion will take some time. This is why there are the  `time.sleep()` commands: we want to halt the code execution long enough so that the servo can move to its desired destination. Specifically, `time.sleep(x)` is a function in the `time` library that halts execution for x seconds.
 
-What happens when you reduce the sleep time? Try decreasing it to 0.8 seconds, 0.5 seconds, 0.1 second, etc. Can you explain what you observe?
+What happens when you reduce this sleep time? Try decreasing it to 0.8 seconds, 0.5 seconds, 0.1 second, etc. Can you explain what you observe?
 
 
 ### Modifying how we implement delays 
 
-Next, open the starter code in `04_timing.py`. This shows an alternative way for a program to delay execution without explicitly adding in sleep time with time.sleep(). Execute the code to verify its functionality. It prints a comment every second, but the way this delay is implemented is much more flexible than when using time.sleep(). Can you see why?
+Next, open the starter code in `04_timing.py`. This shows an alternative way for a program to delay execution without explicitly adding in sleep time with time.sleep(). Execute the code to verify its functionality. It prints a comment every second, but the way this delay is implemented is much more flexible than when using `time.sleep()`. Go through the code in detail and make sure you understand how it works.
 
-Now, let's use this knowledge to improve the servo example code. These last two coding assignments are not easy and will challenge your ability to think about real-time coding. If you are sturggling, don't despair. Part of the goal is to realize the challenges that result from dealing with the concept of time in embedded systems. Thinking about functionality as a collections of states (as in Picobot. Remember that lab?) is very useful here. We also discuss this more in lecture. Just give it a shot and see what you can come up with.
+Now, let's use this knowledge to change the servo example code. These last two coding assignments will challenge your ability to think about real-time coding. If you are sturggling, don't despair. Part of the goal is to realize the challenges that result from dealing with the concept of time in embedded systems. Thinking about functionality as a collections of states (as in Picobot. Remember that lab?) is very useful here. We also discuss this more in lecture. Just give it a shot and see what you can come up with.
 
-(1) Modify the code from `03_servo.py` to perform the same functionality, but without using time.sleep(). Instead, use the technique shown in `04_timing.py`. Name this version of your code `03_servo_sol1.py` and commit it to the github repo.
+(1) Modify the code from `03_servo.py` to perform the same functionality, but without using `time.sleep()`. Instead, use the technique shown in `04_timing.py`. Name this version of your code `03_servo_sol1.py` and commit it to the github repo. The easiest way to get started may be to begin with the `04_timing.py` code and copy in the servo functionality from `03_servo.py`.
 
-(2) Now, let's modify the functionality a bit. The way you rewrote your code in part (1) will allow you to do this. We want the servo to move as we did before, but we also add a button. *As soon as* the button is pressed, the servo should move back to position 0 and stay there as long as the button is pressed. Why would this be hard to implement if you use time.sleep()? Name this version of your code `03_servo_sol2.py` and commit it to the github repo. 
+(2) Now, let's modify the functionality a bit. The code you wrote in part (1) will allow you to do this. We want the servo to move as we did before, but we also add a button. *As soon as* the button is pressed, the servo should move back to position 0 and stay there as long as the button is pressed. Why would this be hard to implement if you use `time.sleep()`? Name this version of your code `03_servo_sol2.py` and commit it to the github repo. 
 
 
 
