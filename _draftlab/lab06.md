@@ -12,7 +12,9 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Learning objectives
 
-In this lab you will be introduced to the basics of electronics using a a credit-card sized computer called the Raspberry Pi. You will build simple electronic circuits and write programs to control them. 
+In this lab you will be introduced to the basics of electronics using a a credit-card sized computer called the Raspberry Pi. You will build simple electronic circuits and write programs to control them.
+Because this lab requires special hardware, which we need to share amongst groups, you only have limited time to work on this assignment. If you are not able to get all the way to the end, don't worry. The main goal is to learn and have fun.
+
 
 # Getting started
 
@@ -340,10 +342,41 @@ Now, let's use this knowledge to change the servo example code. These last two c
 (2) Now, let's modify the functionality a bit. The code you wrote in part (1) will allow you to do this. We want the servo to move as we did before, but we also add a button. *As soon as* the button is pressed, the servo should move back to position 0 and stay there as long as the button is pressed. Why would this be hard to implement if you use `time.sleep()`? Name this version of your code `03_servo_sol2.py` and commit it to the github repo. 
 
 
+# Reading from a distance sensor
+An ultrasound distance sensor is able to detect the distance to an object by sending out an ultrasonic pulse and measuring how long it takes for the reflection to come back. With this two-way travel time and knowledge of the speed of sound, it can calculate the distance. This is pretty much how echo-location for bats works as well.
 
-# [Optional] Trying out the camera and other sensors
+Keep the circuitry from the previous problems, and add an ultrasound sensor. The extra wiring is shown in the diagram below.
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/schematic_ultrasound.png){:height="200px"} 
+</p>
 
-If you are interested, we have a lot of other sensors available for you to try out. Ask one of the instructors or mentors. They can give you the hardware, wiring diagrams and sample code to try them out. We have distance sensors, light sensors and a camera. The camera is especially interesting as it allows you to now apply the image processing you've learned, to real-time processing of video streams.
+### Testing the ultrasound sensor 
+
+Run the starter code `05_ultrasound.py`. If successful, it will print the distances measured by the sensor every 0.5 seconds. If it prints -1, it means it was not able to detect an object in front of the sensor. The reason is that it only has a limited range.
+
+Now have a close look at the code. Most of the interfacing with the sensor is in a helper function, which you shouldn't modify. This function reads from the sensor and uses this reading to calculate the distance. If you are interested in the details, you can go through the code and also have a look at this [tutorial] (https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/). It is written for another embedded board, the Arduino, but the most interesting part for you is the description of how the sensor sends out sound signals to measure distance.
+
+
+### Implementing your own functionality
+Now it is time to be creative with the ultrasound sensor. Modify the code to include an LED and have the LED blink at different rates based on the distance measured by the sensor. When the distance is smaller, the LED should blink faster. Make sure you include comments in your code to explain how the blinking rate depends on the distance.
+Save this code as `05_ultrasoundLED.py` and commit it to the github repo. 
+
+Next, add code that also moves the servo to a position of x degrees (with x between 0 and 180), based on the measured distance. Again, make sure your comments explain this mapping.
+Save this code as `05_ultrasoundSevo.py` and commit it to the github repo. 
+
+
+# Trying out the picam camera
+We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. Ask the mentors or instructors for help with this. 
+
+Once you have the picam attached, try out the program `06_picam_preview.py`. This will open a preview window that automatically closes after 5 seconds. It is a good test to see if the camera is connected correctly and working properly.
+
+Next, run the program `06_picam_video.py`. It will open two video windows. One with the original video, and one where the center part has inverted colors. Basically, this example shows how we can apply what we have learned about image processing to the RPi. All the image manipulations we did in that lab, we could implement here as well, but now on video streams. Note that for efficiency reasons, we are no longer using the PIL library here. Instead, we use the very powerful OpenCV (which stands for Open Computer Vision) library cv2. To store images, we will not do this in Image objects anymore (as PIL does), but instead we will be using numpy array objects. Calculations on these numpy arrays are much faster. Essentially, a numpy array is a 3-dimensional array of pixels: the first two dimensions are the x and y of the pixel and the third dimension is of size 3, containing the values of R, G, and B for that pixel. For example, if img_np is a numpy array containing an image, then img_np(2,5,0) is the R value of the pixel at location x = 2, y = 5. Similarly, img_np(2,5,1) is the G value for the pixel at (2,5) and img_np(2,5,2) is the B value. For detailed information on numpy and how to manipulate these arrays, you can check out this [website] (https://docs.scipy.org/doc/numpy/user/quickstart.html). 
+
+Now you can try to modify the picam video starter code. What you decide is totally up to you. You could convert to grayscale, black our certain regions, mirror the image, look for a particular color, etc. Save your code as `06_picam_ourcode.py` and make sure you add comments to explain what it does. Upload to github.
+
+We hope you enjoyed this lab and got a bit of a taster of what is possible with RPis and robotics ...
+
+
 
 
  
