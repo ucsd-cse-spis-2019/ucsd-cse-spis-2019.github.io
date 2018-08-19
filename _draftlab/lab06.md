@@ -347,7 +347,7 @@ An ultrasound distance sensor is able to detect the distance to an object by sen
 
 Keep the circuitry from the previous problems, and add an ultrasound sensor. The extra wiring is shown in the diagram below.
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/schematic_ultrasound.png){:height="200px"} 
+![RPi-desktop](/images/labs/images/RPi/schematic_ultrasound.png){:height="300px"} 
 </p>
 
 ### Testing the ultrasound sensor 
