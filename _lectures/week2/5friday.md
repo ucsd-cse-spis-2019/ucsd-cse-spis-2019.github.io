@@ -8,7 +8,7 @@ ready: true
 
 # FOCS 8:45am - 10:00am (Curt)
  
-Lecture slides: [Variables, references and mutation](/lectures/week1/SPIS Lecture 16 - Mutable References.pdf)
+Lecture slides: [Variables, references and mutation](/lectures/week2/SPIS Lecture 16 - Mutable References.pdf)
 
 
 
