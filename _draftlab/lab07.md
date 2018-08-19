@@ -59,7 +59,7 @@ You would calculate that given the word "Yeah" the only word that can follow is 
 This is the approach we will use.
 
 ### Write a method to train the model
-Write a python function `train(s)` that takes a string. You are not given starter code for train or generate so make a file titled `markov.py` and write both funcitons here. You should also write a main method and test the two functions as well as see your hard work in action! `train(s)` takes in a string, `s` and returns a dictionary representing the transition probabilities in the representation described above. That is, each word `w` in `s` should be a key in the dictionary.  `w`'s associated value should be a list containing all of the words that followed `w` in `s` in their relative proportions to what is in the string `s`.  For example, for the string above, the dictionary returned would be:
+Write a python function `train(s)` that takes a string, `s` and returns a dictionary representing the transition probabilities in the representation described above. That is, each word `w` in `s` should be a key in the dictionary.  `w`'s associated value should be a list containing all of the words that followed `w` in `s` in their relative proportions to what is in the string `s`.  For example, for the string above, the dictionary returned would be:
 ```
 {
   'Yeah': ['baby'], 
@@ -80,6 +80,7 @@ Write a python function `train(s)` that takes a string. You are not given starte
 ```
 
 Note the following:
+ * You are not given starter code for train or generate so make a file titled `markov.py` and write both funcitons here. You should also write a main method and test the two functions as well as see your hard work in action!
  * You can preserve capitalization, treating capitalized words as different from lowercase words.  Notice in the dictionary above "You" is different from "you".
  * You should imagine that your string wraps around, and that the last word is followed by the first word.  Notice that in the dictory above, "Yeah" (the last word) follows "that" (the first word).
  * You can keep punctuation attached to the word it is associated with, and treat a word with punctuation as different from a word without punctuation.  For example, if the text were:
