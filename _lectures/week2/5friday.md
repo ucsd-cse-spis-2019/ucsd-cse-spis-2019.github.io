@@ -1,7 +1,7 @@
 ---
 lecture_date: 2018-08-17 09:00:00.00-7:00
 topic: "FoCS  and Breadth/Depth"
-desc: "Mutabel references / Two options for lecture"
+desc: "Mutable references / Two options for lecture"
 week: "2"
 ready: true
 ---
