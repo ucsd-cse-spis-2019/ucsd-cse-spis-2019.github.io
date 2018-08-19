@@ -230,7 +230,7 @@ To create the circuit you will need the following components
 The picture of an LED and the symbol used for it in circuits is shown below:
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/LED.jpg){:height="200px"} 
+![LED](/images/labs/images/RPi/LED.jpg){:height="200px"} 
 </p>
 
 The longer leg of the LED is called the 'anode' and the shorter leg is called the 'cathode'. When there is a positive voltage difference between the anode and the cathode, the LED is forward biased or "on state" and current flows through the circuit lighting it up, otherwise the LED is in the "off state". 
@@ -238,7 +238,7 @@ The longer leg of the LED is called the 'anode' and the shorter leg is called th
 Wire up the circuit shown by the following diagram. Remember: we are using physical pin numbering for the RPi. You should use jumper wires and the breadboard to make the physical connections. 
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/schematic_led.jpg){:height="150px"} 
+![LED_schematic](/images/labs/images/RPi/schematic_led.jpg){:height="150px"} 
 </p>
 
 Ask an instructor or mentor is you don't understand the diagram. For a more in depth information on configuring GPIO pins as outputs refer to [this website](https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/).
@@ -260,7 +260,7 @@ Buttons are switches that are used to connect or disconnect circuits. In the fig
 
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/button.png){:height="150px"} 
+![button_schematic](/images/labs/images/RPi/button.png){:height="150px"} 
 </p>
 
 ### Understanding how to use a button 
@@ -268,7 +268,7 @@ Buttons are switches that are used to connect or disconnect circuits. In the fig
 Now, let's start wiring the circuit. You should keep the LED circuit from the precious exercise. Then add the button as per the circuit diagram below.
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/schematic_button.jpg){:height="100px"} 
+![button](/images/labs/images/RPi/schematic_button.jpg){:height="100px"} 
 </p>
 
 
@@ -281,7 +281,7 @@ So, the bottom line is that when we configure a GPIO pin as an input, we can rea
 But, what is the expected voltage if the pin is not connected to anything at all? This would occur in the button circuit we just built and the button is not pressed. The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is 'floating' and has no defined voltage level. For us to be able to reliably detect whether the input is high or low, we need to tie it so that it is always connected to something and either reads high or low. This can be done by using a pullup resistor, as shown in the diagram below. (If you are interested in exactly how this work, you can ask the instructors).
 
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/schematic_button_pullup.jpg){:height="200px"} 
+![buttonpullup_schematic](/images/labs/images/RPi/schematic_button_pullup.jpg){:height="200px"} 
 </p>
 
 However, you don't actually have to wire up a separate resistor in your circuit. Instead, the RPi has these pullup resistors internally built-in. You just have to specify in the software that you would like to use it. In the code, you will find the line: 
@@ -315,7 +315,7 @@ A servo is an electrical motor that comes with built-in control circuitry. There
 
 Keep the circuitry from the previous problems (the wiring of the LED and button), and add a servo. The extra wiring is shown in the diagram below.
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/schematic_servo.jpg){:height="200px"} 
+![servo_schematic](/images/labs/images/RPi/schematic_servo.jpg){:height="200px"} 
 </p>
 
 ### Testing the servo 
@@ -347,7 +347,7 @@ An ultrasound distance sensor is able to detect the distance to an object by sen
 
 Keep the circuitry from the previous problems, and add an ultrasound sensor. The extra wiring is shown in the diagram below.
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/schematic_ultrasound.png){:height="300px"} 
+![ultrasound_schematic](/images/labs/images/RPi/schematic_ultrasound.png){:height="300px"} 
 </p>
 
 ### Testing the ultrasound sensor 
@@ -367,8 +367,9 @@ Save this code as `05_ultrasound_sol2.py` and commit it to the github repo.
 
 # Trying out the picam camera
 We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. Ask the mentors or instructors for help with this. 
+
 <p align="center">
-![RPi-desktop](/images/labs/images/RPi/picam.jpg){:height="200px"} 
+![picam](/images/labs/images/RPi/picam.jpg){:height="200px"} 
 </p>
 
 Once you have the picam attached, try out the program `06_picam_preview.py`. This will open a preview window that automatically closes after 5 seconds. It is a good test to see if the camera is connected correctly and working properly.
