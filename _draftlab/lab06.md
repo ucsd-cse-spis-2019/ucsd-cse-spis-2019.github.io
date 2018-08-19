@@ -359,10 +359,10 @@ Now have a close look at the code. Most of the interfacing with the sensor is in
 
 ### Implementing your own functionality
 Now it is time to be creative with the ultrasound sensor. Modify the code to include an LED and have the LED blink at different rates based on the distance measured by the sensor. When the distance is smaller, the LED should blink faster. Make sure you include comments in your code to explain how the blinking rate depends on the distance.
-Save this code as `05_ultrasoundLED.py` and commit it to the github repo. 
+Save this code as `05_ultrasound_sol1.py` and commit it to the github repo. 
 
 Next, add code that also moves the servo to a position of x degrees (with x between 0 and 180), based on the measured distance. Again, make sure your comments explain this mapping.
-Save this code as `05_ultrasoundSevo.py` and commit it to the github repo. 
+Save this code as `05_ultrasound_sol2.py` and commit it to the github repo. 
 
 
 # Trying out the picam camera
@@ -372,7 +372,7 @@ Once you have the picam attached, try out the program `06_picam_preview.py`. Thi
 
 Next, run the program `06_picam_video.py`. It will open two video windows. One with the original video, and one where the center part has inverted colors. Basically, this example shows how we can apply what we have learned about image processing to the RPi. All the image manipulations we did in that lab, we could implement here as well, but now on video streams. Note that for efficiency reasons, we are no longer using the PIL library here. Instead, we use the very powerful OpenCV (which stands for Open Computer Vision) library cv2. To store images, we will not do this in Image objects anymore (as PIL does), but instead we will be using numpy array objects. Calculations on these numpy arrays are much faster. Essentially, a numpy array is a 3-dimensional array of pixels: the first two dimensions are the x and y of the pixel and the third dimension is of size 3, containing the values of R, G, and B for that pixel. For example, if img_np is a numpy array containing an image, then img_np(2,5,0) is the R value of the pixel at location x = 2, y = 5. Similarly, img_np(2,5,1) is the G value for the pixel at (2,5) and img_np(2,5,2) is the B value. For detailed information on numpy and how to manipulate these arrays, you can check out this [website] (https://docs.scipy.org/doc/numpy/user/quickstart.html). 
 
-Now you can try to modify the picam video starter code. What you decide is totally up to you. You could convert to grayscale, black our certain regions, mirror the image, look for a particular color, etc. Save your code as `06_picam_ourcode.py` and make sure you add comments to explain what it does. Upload to github.
+Now you can try to modify the picam video starter code. What you decide is totally up to you. You could convert to grayscale, black our certain regions, mirror the image, look for a particular color, etc. Save your code as `06_picam_video_sol1.py` and make sure you add comments to explain what it does. Upload to github.
 
 We hope you enjoyed this lab and got a bit of a taster of what is possible with RPis and robotics ...
 
