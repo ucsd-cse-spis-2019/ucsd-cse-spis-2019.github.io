@@ -59,7 +59,7 @@ You would calculate that given the word "Yeah" the only word that can follow is 
 This is the approach we will use.
 
 ### Write a method to train the model
-Write a python function `train(s)` that takes a string, `s` and returns a dictionary representing the transition probabilities in the representation described above. That is, each word `w` in `s` should be a key in the dictionary.  `w`'s associated value should be a list containing all of the words that followed `w` in `s` in their relative proportions to what is in the string `s`.  For example, for the string above, the dictionary returned would be:
+Write a python function `train(s)` that takes a string. You are not given starter code for train or generate so make a file titled 'markov.py' and write both funcitons here, you should also write a main method and test the two in that file as well. `train(s)` takes in a string, `s` and returns a dictionary representing the transition probabilities in the representation described above. That is, each word `w` in `s` should be a key in the dictionary.  `w`'s associated value should be a list containing all of the words that followed `w` in `s` in their relative proportions to what is in the string `s`.  For example, for the string above, the dictionary returned would be:
 ```
 {
   'Yeah': ['baby'], 
