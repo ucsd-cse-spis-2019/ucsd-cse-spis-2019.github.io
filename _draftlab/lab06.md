@@ -367,6 +367,9 @@ Save this code as `05_ultrasound_sol2.py` and commit it to the github repo.
 
 # Trying out the picam camera
 We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. Ask the mentors or instructors for help with this. 
+<p align="center">
+![RPi-desktop](/images/labs/images/RPi/picam.jpg){:height="200px"} 
+</p>
 
 Once you have the picam attached, try out the program `06_picam_preview.py`. This will open a preview window that automatically closes after 5 seconds. It is a good test to see if the camera is connected correctly and working properly.
 
