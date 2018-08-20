@@ -36,7 +36,7 @@ There are three basic steps to any ML task:
 # Part 1: Markov chains and text generation
 
 ## The task: Writing text
-In the first part of lab07, we will build a model that is capable of writing text.  It can write tweets, or your English essay.  And they will seem (almost) like a human could have written them.
+In the first part of lab07, we will build a model that is capable of writing text.  It will be able to write tweets, song lyrics, or an English essay!  And they will seem (almost) like a human could have written them.
 
 ## Step 1 (nothing to do, but do read): Model selection and data representation
 In this part, we will use a model called a Markov Chain.  The basic idea behind the Markov Chain we will build is that the probability of a word in a sentence is based only on the word(s) that immediately precede(s) it.  The number of preceding words (or generally, data items) that we consider defines the "order" of the Markov chain.  A first-order Markov chain considers only the word immediately preceding the next, a second-order chain would use the two words immediately preceding, etc.  In this lab we will work with first-order Markov chains, which themselves can be quite powerful when applied to words.  For example, if I see the word "sunny" then there is a relatively high probability that the word "day," "disposition," or "side" (as in "sunny side up") will come next, but a much lower probability that I will next see the word "the", "down" or "shark".  So just by hearing the word "sunny", you have a pretty good idea of the words that might come next.  We will build a Markov chain that has this same knowldege.  Of course, if you heard "It's going to be a sunny..." you'd be almost certain that the next word is "day".  This certainty would require a higher-order Markov chain.
@@ -59,7 +59,7 @@ You would calculate that given the word "Yeah" the only word that can follow is 
 This is the approach we will use.
 
 ### Write a method to train the model
-Write a python function `train(s)` that takes a string, `s` and returns a dictionary representing the transition probabilities in the representation described above. That is, each word `w` in `s` should be a key in the dictionary.  `w`'s associated value should be a list containing all of the words that followed `w` in `s` in their relative proportions to what is in the string `s`.  For example, for the string above, the dictionary returned would be:
+In a new file named `markov.py`, write a python function `train(s)` that takes a string, `s` and returns a dictionary representing the transition probabilities in the representation described above. That is, each word `w` in `s` should be a key in the dictionary.  `w`'s associated value should be a list containing all of the words that followed `w` in `s` in their relative proportions to what is in the string `s`.  For example, for the string above, the dictionary returned would be:
 ```
 {
   'Yeah': ['baby'], 
@@ -80,7 +80,7 @@ Write a python function `train(s)` that takes a string, `s` and returns a dictio
 ```
 
 Note the following:
- * You are not given starter code for train or generate so make a file titled `markov.py` and write both funcitons here. You should also write a main method and test the two functions as well as see your hard work in action! 
+ * You are not given starter code for train or generate so make a file titled `markov.py` and write both part 1 funcitons here. You should also write a main method and test the two functions as well as see your hard work in action! 
  * You can preserve capitalization, treating capitalized words as different from lowercase words.  Notice in the dictionary above "You" is different from "you".
  * You should imagine that your string wraps around, and that the last word is followed by the first word.  Notice that in the dictory above, "Yeah" (the last word) follows "that" (the first word).
  * You can keep punctuation attached to the word it is associated with, and treat a word with punctuation as different from a word without punctuation.  For example, if the text were:
@@ -92,6 +92,8 @@ I said I like it like that"
 Then the word "that." (with a period) would be treated separately from the word "that" (with no period).
 
 *Hint: You will find the python string function `split` to be useful in breaking the string `s` into a list of words.  You can find documentation for the [`split` function here](https://docs.python.org/3/library/stdtypes.html#string-methods)*
+
+Make sure you test your function on a few simple strings to make sure it's giving you the dictionary you expect!  You can use the example above as one test case, but also come up with a few more.  
 
 ## Step 3: The Human-like task: Generating Text
 Write a python function `generate(model, firstWord, numWords)`.  This method takes the following parameters:
@@ -120,11 +122,10 @@ Notice that it will generate different strings with the same input.  You will ne
 It can be tough to test your code when it relies on randomness to function.  There are ways to do it, but for now, just try running your code several times, and make sure you eventually get different strings, and that all of the words that should be represented seem to be represented.
 
 ## Have fun!
-Now that you can train a model and generate text, play around with generating text using different training data.  We've provided some song lyrics and some tweets for you to use.  Have fun and see what you get!
+Now that you can train a model and generate text, play around with generating text using different training data.  We've provided some song lyrics and some tweets for you to use.  We will go over in class how to read text from a file, or you can look at [the documentation](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files).  Have fun and see what you get!
 
 Song Files: Each file is titled after the artist whose songs are in that file. Each line in the file contains all the lyrics to one of their songs. You can train one song at a time or all the songs at once and generate your own lyrics. Play around with the songs, artists, and maybe even try to mash some files together! 
 
-(Hint: Look at the hurricane lab for help on how to read files in the data directory)
 
 ## Add, Commit and Push
 Once you have tested your code and you think it is working, you are done with the first part of the lab.  Make sure you have added all of your files to your repo, committed them, and pushed them to github.
