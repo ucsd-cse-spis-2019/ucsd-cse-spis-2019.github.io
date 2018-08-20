@@ -3,8 +3,8 @@ layout: lab
 num: lab06
 ready: true
 desc: "Basics of electronics with Raspberry Pi"
-assigned: 2018-08-22 08:45:00.00-7
-due: 2018-08-25 15:45:00.00-7
+assigned: 2018-08-20 16:25:00.00-7
+due: 2018-08-28 14:45:00.00-7
 starter-code-url: https://github.com/ucsd-cse-spis-2018/lab06-startercode.git
 ---
 
