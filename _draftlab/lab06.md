@@ -366,13 +366,13 @@ Save this code as `05_ultrasound_sol2.py` and commit it to the github repo.
 
 
 # Trying out the picam camera
-We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. Ask the mentors or instructors for help with this. 
+We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. **Very Important: Do not attach or remove the picam when the RPi is powered on. Always turn it off first.** Ask the mentors or instructors for help with this.
 
 <p align="center">
 ![picam](/images/labs/images/RPi/picam.jpg){:height="200px"} 
 </p>
 
-Once you have the picam attached, try out the program `06_picam_preview.py`. This will open a preview window that automatically closes after 5 seconds. It is a good test to see if the camera is connected correctly and working properly.
+Once you have the picam attached, try out the program `06_picam_preview.py`. This will open a preview window that automatically closes after 5 seconds. It is a good test to see if the camera is connected correctly and working properly. If you get an error stating something like "Camera is not enabled", you need to go into the RPi configuration and enable it there and reboot. A mentor can help with this.
 
 Next, run the program `06_picam_video.py`. It will open two video windows. One with the original video, and one where the center part has inverted colors. Basically, this example shows how we can apply what we have learned about image processing to the RPi. All the image manipulations we did in that lab, we could implement here as well, but now on video streams. Note that for efficiency reasons, we are no longer using the PIL library here. Instead, we use the very powerful OpenCV (which stands for Open Computer Vision) library cv2. To store images, we will not do this in Image objects anymore (as PIL does), but instead we will be using numpy array objects. Calculations on these numpy arrays are much faster. Essentially, a numpy array is a 3-dimensional array of pixels: the first two dimensions are the x and y of the pixel and the third dimension is of size 3, containing the values of R, G, and B for that pixel. For example, if img_np is a numpy array containing an image, then img_np(2,5,0) is the R value of the pixel at location x = 2, y = 5. Similarly, img_np(2,5,1) is the G value for the pixel at (2,5) and img_np(2,5,2) is the B value. For detailed information on numpy and how to manipulate these arrays, you can check out this [website] (https://docs.scipy.org/doc/numpy/user/quickstart.html). 
 
