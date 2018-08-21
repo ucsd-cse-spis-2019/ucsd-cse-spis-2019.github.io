@@ -11,9 +11,9 @@ ready: false
 
 
 
-# FOCS 10:15am - 11:30am ()
+# FOCS 10:15am - 11:30am (Curt)
 
-Lecture slides: 
+Lecture slides: [Intro to Electronics](/lectures/week3/SPIS Lecture 21 - Intro to Electronics.pdf)
 
 
 
