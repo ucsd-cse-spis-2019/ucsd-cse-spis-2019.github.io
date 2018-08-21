@@ -126,6 +126,8 @@ Now that you can train a model and generate text, play around with generating te
 
 Song Files: Each file is titled after the artist whose songs are in that file. Each line in the file contains all the lyrics to one of their songs. You can train one song at a time or all the songs at once and generate your own lyrics. Play around with the songs, artists, and maybe even try to mash some files together! 
 
+Tweet FIles: Each file that is titled with "tweet(s)" in it contains tweets from the FLOTUS, Trump, and tweets around the Floyd-Mayweather boxing match. Read in from these text files and try to generate tweets that imitate these three personalities/events! Have fun!
+
 
 ## Add, Commit and Push
 Once you have tested your code and you think it is working, you are done with the first part of the lab.  Make sure you have added all of your files to your repo, committed them, and pushed them to github.
