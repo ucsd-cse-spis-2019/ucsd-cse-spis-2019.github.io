@@ -1,7 +1,7 @@
 ---
 lecture_date: 2018-08-21 09:00:00.00-7:00
-topic: ""
-desc: ""
+topic: "Introduction to electronics"
+desc: "KCL, KVL, Ohm's law"
 week: "3"
 ready: true
 ---
