@@ -128,6 +128,38 @@ Song Files: Each file is titled after the artist whose songs are in that file. E
 
 Tweet Files: Each file that is ended with `tweet(s)` in it contains tweets from the FLOTUS, Trump, and tweets around the Floyd-Mayweather boxing match. Use the files starting with `small_...` to read in directly from the file first, then you can figure out how to read in bigger files. Read in from these text files and try to generate tweets that imitate these three personalities/events! Have fun!
 
+## Improvements to your model (optional)
+Your basic model should give you pretty OK results.  You can improve these results with a simple upgrade to your model.  In your dictionary, add a marker for the end of a sentence (which you might also apply to the end of a tweet).  For example, you might use the string "$" to represent the end of a sentence.  Then, any word that ends with ".", "!", or "?" should be considered the end of a sentence, and instead of being followed immediately by the first word of the next sentence, they are followed by "$".  Then the first word of the next sentence follows the "$" symbol.
+
+For example, the text:
+
+"Yeah baby I like it like that.
+You gotta believe me when I tell you
+I said I like it like that."
+
+Would lead to the model:
+
+```
+{
+  '$': ['Yeah', 'You']
+  'Yeah': ['baby'], 
+  'baby': ['I'], 
+  'I': ['like', 'tell', 'said', 'like'], 
+  'like': ['it', 'that', 'it', 'that'], 
+  'it': ['like', 'like'], 
+  'that.': ['$', '$'], 
+  'You': ['gotta'], 
+  'gotta': ['believe'], 
+  'believe': ['me'], 
+  'me': ['when'], 
+  'when': ['I'], 
+  'tell': ['you'], 
+  'you': ['I'], 
+  'said': ['I']
+}
+```
+
+Then you can eliminate the need for the first world parameter in your generate function, and simply start with the "$" symbol.
 
 ## Add, Commit and Push
 Once you have tested your code and you think it is working, you are done with the first part of the lab.  Make sure you have added all of your files to your repo, committed them, and pushed them to github.
