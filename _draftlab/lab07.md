@@ -80,7 +80,7 @@ In a new file named `markov.py`, write a python function `train(s)` that takes a
 ```
 
 Note the following:
- * You are not given starter code for train or generate so make a file titled `markov.py` and write both part 1 funcitons here. You should also write a main method and test the two functions as well as see your hard work in action! 
+ * You are not given starter code for train or generate so make a file titled `markov.py` and write both part 1 functions here. You should also write a main method and test the two functions as well as see your hard work in action! 
  * You can preserve capitalization, treating capitalized words as different from lowercase words.  Notice in the dictionary above "You" is different from "you".
  * You should imagine that your string wraps around, and that the last word is followed by the first word.  Notice that in the dictory above, "Yeah" (the last word) follows "that" (the first word).
  * You can keep punctuation attached to the word it is associated with, and treat a word with punctuation as different from a word without punctuation.  For example, if the text were:
@@ -126,7 +126,7 @@ Now that you can train a model and generate text, play around with generating te
 
 Song Files: Each file is titled after the artist whose songs are in that file. Each line in the file contains all the lyrics to one of their songs. You can train one song at a time or all the songs at once and generate your own lyrics. Play around with the songs, artists, and maybe even try to mash some files together! 
 
-Tweet FIles: Each file that is titled with "tweet(s)" in it contains tweets from the FLOTUS, Trump, and tweets around the Floyd-Mayweather boxing match. Read in from these text files and try to generate tweets that imitate these three personalities/events! Have fun!
+Tweet Files: Each file that is ended with `tweet(s)` in it contains tweets from the FLOTUS, Trump, and tweets around the Floyd-Mayweather boxing match. Use the files starting with `small_...` to read in directly from the file first, then you can figure out how to read in bigger files. Read in from these text files and try to generate tweets that imitate these three personalities/events! Have fun!
 
 
 ## Add, Commit and Push
