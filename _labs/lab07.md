@@ -1,10 +1,10 @@
 ---
 layout: lab
 num: lab07
-ready: false
+ready: true
 desc: "Working With Data"
-assigned: 2018-08-22 13:15:00.00-7
-due: 2018-08-25 16:45:00.00-7
+assigned: 2018-08-23 13:15:00.00-7
+due: 2018-08-29 16:45:00.00-7
 ---
 
 # Working with and learning from data
