@@ -52,7 +52,7 @@ Training our model  involves learning these transition probabilities for each wo
 You gotta believe me when I tell you
 I said I like it like that"
 
-You would calculate that given the word "Yeah" the only word that can follow is "baby".  Given "baby" the only word that follows is "I".  Given "I" the words that might following are: "like", "tell" and "said".  "like" occurs twice after "I", while "tell" and "said" each occur once.  In other words, *P("like" | "I")=0.5*, *P("tell" | "I")=0.25*, and 
+YOU would calculate that given the word "Yeah" the only word that can follow is "baby".  Given "baby" the only word that follows is "I".  Given "I" the words that might following are: "like", "tell" and "said".  "like" occurs twice after "I", while "tell" and "said" each occur once.  In other words, *P("like" | "I")=0.5*, *P("tell" | "I")=0.25*, and 
 *P("said" | "I")=0.25*.  Another way we can represent these proportions is to use a list: `["like", "tell", "said", "like"]` where each word is represented in the relative proportion that it occurs.  Then we can associate it with the word we are transitioning from using a dictionary, like this:
 
 `{"I" : ["like", "tell", "said", "like"]} `
