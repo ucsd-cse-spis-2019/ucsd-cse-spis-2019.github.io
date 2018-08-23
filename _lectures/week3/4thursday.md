@@ -1,9 +1,9 @@
 ---
 lecture_date: 2018-08-23 09:00:00.00-7:00
-topic: ""
+topic: "Markov chains, dictionaries and files"
 desc: ""
 week: "3"
-ready: false
+ready: true
 ---
 
 
@@ -14,7 +14,8 @@ ready: false
 
 
 
-# FOCS 10:15am - 11:30am ()
+# FOCS 10:15am - 11:30am (Christine)
 
 Lecture slides: 
+* [Before](/lectures/week3/W3Thur1015_DictionariesMMAndProb.pdf)
 
