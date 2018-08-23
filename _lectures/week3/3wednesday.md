@@ -15,4 +15,4 @@ Lecture slides: [Intro to Raspberry Pi](/lectures/week3/SPIS Lecture 22 - Intro 
 
 # FOCS 10:15am - 11:30am (Gary)
 
-Lecture slides: Intro to WebApps [Part 1](/lectures/week3/lec4.pdf) [Part 1](/lectures/week3/lec4.pdf) [Part 2](/lectures/week3/lec5.pdf) [Part 3](/lectures/week3/lec6.pdf) [Part 4](/lectures/week3/lec7.pdf)
+Lecture slides: Intro to WebApps [Part 1](/lectures/week3/lec4.pdf) [Part 2](/lectures/week3/lec5.pdf) [Part 3](/lectures/week3/lec6.pdf) [Part 4](/lectures/week3/lec7.pdf)
