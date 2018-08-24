@@ -8,7 +8,7 @@ ready: true
 
 # FoCS class 8:45 (Christine)
 Slides:
-* Before 
+* [Before](/lectures/week3/W3Fri845_ProbAndNB.pdf)
 
 # About Breadth/Depth
 
