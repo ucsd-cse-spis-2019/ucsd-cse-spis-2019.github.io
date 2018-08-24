@@ -1,7 +1,7 @@
 ---
 lecture_date: "2018-08-24 09:00:00.00-7:00"
 topic: "Depth"
-desc: ""
+desc: "Mutable data, Images, Nested Loops and If-Statements"
 week: "3"
 indent: true
 link_topic_desc_only: true
@@ -9,7 +9,8 @@ ready: false
 ---
 
 
-# Depth Lecture ()
+# Depth Lecture (Christine)
 
 Lectures slides:
+* [Before](/lectures/week3/Depth3_Loops_Images.pdf)
 
