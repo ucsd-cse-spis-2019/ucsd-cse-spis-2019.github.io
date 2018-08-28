@@ -1,7 +1,7 @@
 ---
 num: "aps2"
 desc: "APS homework 2"
-ready: false
+ready: true
 assigned: 2018-08-14 9:00:00.00-7:00
 due: 2018-08-19 21:00:00.00-7:00
 layout: default
