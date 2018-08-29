@@ -10,6 +10,8 @@ ready: false
 
 * Depth: Robotics (CSE 2154)
 * Depth: Web Apps (CSE 4140)
+    * [Overview of Machine Learning video](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
+    * [How do self driving cars work video](https://www.youtube.com/watch?v=yt015gM-ync)
 * Depth: Machine Learning (CSE 4258)
 
 We will give a bit more information about each area and brainstorm topics for projects.  
