@@ -11,4 +11,4 @@ Here are some general ideas for directions you might go.  See the linked website
 * Learn how to use the scikit.learn library to apply another classifier to the data from Lab 7, or another data set.
 * Implement a clustering or classification algorithm from scratch.
 
-For structured guidance, we highly recommend you follow the ideas and instructions on this page, which provides 8 hands-on machine learning projects for beginners: ((https://elitedatascience.com/machine-learning-projects-for-beginners))
+For structured guidance, we highly recommend you follow the ideas and instructions on this page, which provides 8 hands-on machine learning projects for beginners: <https://elitedatascience.com/machine-learning-projects-for-beginners>
