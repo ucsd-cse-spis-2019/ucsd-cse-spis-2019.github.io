@@ -4,7 +4,7 @@ desc: " What to do when you don't know what to do."
 ---
 
 
-Lab 7 gave you a taste of machine learning, applied specifically to the domain of text classification and text generation.  At the bottom of that lab there are some ideas for extensions you can implement for your project.  But if you're looking for even more ideas, here's what we recommend.
+[Lab 7](/labs/lab07) gave you a taste of machine learning, applied specifically to the domain of text classification and text generation.  At the bottom of that lab there are some ideas for extensions you can implement for your project.  But if you're looking for even more ideas, here's what we recommend.
 
 Here are some general ideas for directions you might go.  See the linked website below for specific guidance on many of these:
 * Choose a different data set (text or otherwise) and perform some classification (using Naive Bayes or another classifier).  We've linked some [possible data sets here](https://docs.google.com/document/d/1MTV7qL_siAVdsbfis0K_KfBQKXnZdc9p6KAbga5hrVM/edit?usp=sharing), or many more are linked to from the link below.
