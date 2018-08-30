@@ -1,9 +1,9 @@
 ---
 lecture_date: 2018-08-30 09:00:00.00-7:00
-topic: ""
-desc: ""
+topic: "APS only"
+desc: "Start of Projects"
 week: "4"
-ready: false
+ready: true
 ---
 
 
@@ -14,7 +14,6 @@ ready: false
 
 
 
-# FOCS 10:15am - 11:30am ()
+# Project Time 10:15am - 11:30am ()
 
-Lecture slides: 
 
