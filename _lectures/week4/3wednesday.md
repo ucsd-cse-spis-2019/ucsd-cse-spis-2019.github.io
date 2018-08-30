@@ -1,7 +1,7 @@
 ---
 lecture_date: 2018-08-29 09:00:00.00-7:00
-topic: ""
-desc: ""
+topic: "Introduction to the Project Areas"
+desc: "Three parallel depth sessions, followed by open house"
 week: "4"
 ready: false
 ---
@@ -9,6 +9,8 @@ ready: false
 # FOCS 8:45am - 10:00am (Christine, Curt and Gary)
 
 * Depth: Robotics (CSE 2154)
+    * [Overview of Robotics](/lectures/week4/SPIS Lecture 32a - Overview of Robotics.pdf)
+    * [Intro to Robotics Projects](/lectures/week4/SPIS Lecture 32b - Intro to Robotics Projects.pdf)
 * Depth: Web Apps (CSE 4140)
     * [Overview of Machine Learning video](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
     * [How do self driving cars work video](https://www.youtube.com/watch?v=yt015gM-ync)
