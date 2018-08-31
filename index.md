@@ -50,6 +50,8 @@ title: "UCSD CSE SPIS: Foundations of Computer Science"
 
 <div data-role="collapsible" data-collapsed="true" >
 <h2 id="projects">Projects</h2>
+  
+  <a href="https://docs.google.com/document/d/1G3xkaaQ5wiTvDV7IlZuC_MvlSL5kofi-0xDPwThecL0"> Presentation Guidelines </a>
 
  <div data-role="collapsible" data-collapsed="true" id="bigdata">
  <h3>Machine Learning</h3>
