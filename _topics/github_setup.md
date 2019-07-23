@@ -16,7 +16,7 @@ With an educational discount, you may be able to have access to create
 unlimited number of private repos.   Apply for that at 
 http://education.github.com
 
-You can also create private repos under the ucsd-cse-spis-2018 organization
+You can also create private repos under the ucsd-cse-spis-2019 organization
 at no charge.  You should *never* need to add a credit card to your github
 account for any SPIS related activity. If you get asked for one, there is
 either a mistake in the instructions, or you may have missed something :-) 

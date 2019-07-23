@@ -3,8 +3,8 @@ layout: lab
 num: lab05
 ready: true
 desc: "Image Manipulation"
-assigned: 2018-08-17 09:00:00.00-7
-due: 2018-08-24 15:30:00.00-7
+assigned: 2019-08-16 09:00:00.00-7
+due: 2019-08-23 15:30:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza
@@ -25,7 +25,7 @@ Your learning goals are:
 
 # Setting up your git repo for {{page.num}} (WITH your partner)
 
-This assignment consists of both individual and pair programming exercises. As in previous assignments, you will create only one private repository between the two of you. Following our naming convention, your repo should be called `spis18-lab05-Name1-Name2`. There is no starter code to import for this assignment. Go ahead and create this repo now on github (select .gitignore to include Python and add a README).
+This assignment consists of both individual and pair programming exercises. As in previous assignments, you will create only one private repository between the two of you. Following our naming convention, your repo should be called `spis19-lab05-Name1-Name2`. There is no starter code to import for this assignment. Go ahead and create this repo now on github (select .gitignore to include Python and add a README).
 
 What comes next is the individual portion of the lab. The goal is for each of you to get familiar with the PIL library and how to work with images, before moving on to the pair programming portion of the assignment. 
 

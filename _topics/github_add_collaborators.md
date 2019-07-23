@@ -10,17 +10,17 @@ Here's how, described as both a list of steps, and a list of images.  In this ex
 
 * The first pair partner is Alex Triton, github id `atriton`
 * The second pair partner is Chris La Jolla, github id `chrislajolla`
-* Alex has create a repo called spis16-lab02-Alex-Chris under the github organization ucsd-cse-spis-2016 and wants to give Chris access to this repo as well.
+* Alex has create a repo called spis19-lab02-Alex-Chris under the github organization ucsd-cse-spis-2016 and wants to give Chris access to this repo as well.
 
 These are the steps Alex should take to invite Chris as a collaborator:
 
 1. Navigate to the repo page, and click on <b>Settings</b> for the repo
 
-    ![spis16-lab02-Alex-Chris-repo-page-50.png](spis16-lab02-Alex-Chris-repo-page-click-Settings-50.png){: title="Click settings on repo page" }
+    ![spis19-lab02-Alex-Chris-repo-page-50.png](spis19-lab02-Alex-Chris-repo-page-click-Settings-50.png){: title="Click settings on repo page" }
 
 1. Select <b>Collaborators &amp; Teams</b> from the menu at the left side of the page.
 
-    ![spis16-lab02-Alex-Chris-repo-settings-50.png](spis16-lab02-Alex-Chris-repo-settings-click-collaborators-50.png){: title="click 'Collaborators &amp; teams' " }
+    ![spis19-lab02-Alex-Chris-repo-settings-50.png](spis19-lab02-Alex-Chris-repo-settings-click-collaborators-50.png){: title="click 'Collaborators &amp; teams' " }
 
 1. On the lower half of the page, in the "Add Collaborator" section, start typing in the github id
     of the pair partner that you want to add as a collaborator.
@@ -73,7 +73,7 @@ Note that if Alex provided <b>Admin</b> access, Chris will have full privileges 
 the repo.  If Alex only provided <b>Write</b> access (as in the example shown below), Chris's
 repo page will not have the <b>Setting</b> page.    To fix that, see the section "Changing access levels for collaborators", later on this page.
 
-![you-now-have-access-to-the-spis16-lab02-Alex-Chris-repo-50.png](you-now-have-access-to-the-spis16-lab02-Alex-Chris-repo-50.png){: title="you-now-have-access-to-the-spis16-lab02-Alex-Chris-repo-50.png" }
+![you-now-have-access-to-the-spis19-lab02-Alex-Chris-repo-50.png](you-now-have-access-to-the-spis19-lab02-Alex-Chris-repo-50.png){: title="you-now-have-access-to-the-spis19-lab02-Alex-Chris-repo-50.png" }
 
 # What if Chris doesn't get an invitation email?
 

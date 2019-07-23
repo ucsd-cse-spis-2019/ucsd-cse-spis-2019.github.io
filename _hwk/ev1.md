@@ -2,8 +2,8 @@
 num: "ev1"
 desc: "Enrichment Video 1"
 ready: true
-assigned: 2018-08-05 15:00:00.00-7:00
-due: 2018-08-09 09:00:00.00-7:00
+assigned: 2019-08-04 15:00:00.00-7:00
+due: 2019-08-08 09:00:00.00-7:00
 layout: default
 ---
 

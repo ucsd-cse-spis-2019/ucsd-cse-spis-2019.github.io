@@ -1,5 +1,5 @@
 ---
-lecture_date: 2018-08-29 09:00:00.00-7:00
+lecture_date: 2019-08-28 09:00:00.00-7:00
 topic: "Introduction to the Project Areas"
 desc: "Three parallel depth sessions, followed by open house"
 week: "4"

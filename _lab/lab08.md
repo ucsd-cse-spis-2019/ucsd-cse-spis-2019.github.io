@@ -3,8 +3,8 @@ layout: lab
 num: lab08
 ready: true
 desc: "Intro to Webapps"
-assigned: 2018-08-23 13:30:00.00-7
-due: 2018-08-29 15:45:00.00-7
+assigned: 2019-08-22 13:30:00.00-7
+due: 2019-08-28 15:45:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza.
@@ -12,7 +12,7 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Part 1: Getting Started
 
-Please create a private repo called `spis18-lab08-part1-Name-Name` using [Method 2](/topics/github_create_repo/)
+Please create a private repo called `spis19-lab08-part1-Name-Name` using [Method 2](/topics/github_create_repo/)
 
 Then clone that repo into your `~/github` directory, cd into it, and then try all the steps in this tutorial:
 
@@ -21,7 +21,7 @@ Then clone that repo into your `~/github` directory, cd into it, and then try al
 
 # Part 2: Working with Calculations and Templates
 
-When you are done with that please create a **different** private repo called `spis18-lab08-part2-Name-Name` using [Method 2](/topics/github_create_repo/)
+When you are done with that please create a **different** private repo called `spis19-lab08-part2-Name-Name` using [Method 2](/topics/github_create_repo/)
 
 Then clone that repo into your `~/github` directory, cd into it, and then try all the steps in this tutorial:
 
@@ -43,7 +43,7 @@ sample web app on Heroku.
 # Part 4: Converting an existing Flask app to use Heroku
 
 For the final part of this lab, please try following the steps in the tutorial below (part 4) to convert both of the web 
-apps you already created, i.e.  `spis18-lab08-part1-Name-Name` and `spis18-lab08-part1-Name-Name` to run on Heroku:
+apps you already created, i.e.  `spis19-lab08-part1-Name-Name` and `spis19-lab08-part1-Name-Name` to run on Heroku:
 
 [Webapps Part 4, Convert Existing Flask App to run on Heroku](/webapps/webapps-intro-part-4/)
 

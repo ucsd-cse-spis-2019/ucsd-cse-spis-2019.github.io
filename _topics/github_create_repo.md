@@ -19,29 +19,29 @@ Other github topics:
 # <a name="method1"></a>Method 1: Create empty private repo, optionally adding starter code from a link
 
 We ask that you create a new private github repo *inside the
-ucsd-cse-spis-2018 organization* for each lab assignment.  You and
+ucsd-cse-spis-2019 organization* for each lab assignment.  You and
 your partner will share the same repo by following these instructions
 
 1. Navigate to 
-   the [ucsd-cse-spis-2018 organization](https://github.com/ucsd-cse-spis-2018)
+   the [ucsd-cse-spis-2019 organization](https://github.com/ucsd-cse-spis-2019)
 
 1. Click on the "New repository" button to create a new repo as shown below (note that the github layout has changed somewhat; look for a green "New" button instead of the "New respository" button as show in the screenshot.  Also, these screenshots are from 2016.
-   Your screens should show 2018, of course.): 
+   Your screens should show 2019, of course.): 
 
    ![new repo](/images/new-repo-begin.png)
    
-   Be sure that the "owner" of the repository is *ucsd-cse-spis-2018*
+   Be sure that the "owner" of the repository is *ucsd-cse-spis-2019*
    as shown in the image, and NOT your own github account.  If the
    owner shows as your own github id, you may have to change the pull
    down menu on the left where it says owner.
    
    When creating your repo use the naming convention
-   `spis18-labXX-<pair name>`. Enter your pair name exactly as listed
+   `spis19-labXX-<pair name>`. Enter your pair name exactly as listed
    under the `Pair_Name` column [at this
-   link](http://ucsd-cse-spis-2018.github.io/info/pairs/). For
+   link](http://ucsd-cse-spis-2019.github.io/info/pairs/). For
    example, if you are creating a repo for lab04, and the name of your
    pair is Phill-Diba, then your repo should be named
-   "spis18-lab04-Phill-Diba". Select the "private" option when
+   "spis19-lab04-Phill-Diba". Select the "private" option when
    creating your repo to make sure your repo is only visible to the
    collaborators of the repo (you and your partner) and the course
    instructors. Click on the "Create repository" button. See the
@@ -94,7 +94,7 @@ your partner will share the same repo by following these instructions
     using the `git clone` command as in the following example:
 
     ```
-    $ git clone git@github.com:ucsd-cse-spis-2018/spis18-lab04-Phill-Diba.git
+    $ git clone git@github.com:ucsd-cse-spis-2019/spis19-lab04-Phill-Diba.git
 
     ```
     
@@ -102,8 +102,8 @@ your partner will share the same repo by following these instructions
     provided above. To check if your repo has been cloned correctly, type
     `ls` on the command prompt and you should see a directory with your
     repo name. Navigate into that directory using the `cd` command. For
-    example if the directory name is `spis18-lab04-Phill-Diba`, at the
-    command prompt type `cd spis18-lab04-Phill-Diba`
+    example if the directory name is `spis19-lab04-Phill-Diba`, at the
+    command prompt type `cd spis19-lab04-Phill-Diba`
 
 
 ## Submitting your code via github

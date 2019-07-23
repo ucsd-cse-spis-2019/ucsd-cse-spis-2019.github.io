@@ -3,8 +3,8 @@ layout: lab
 num: lab00
 ready: true
 desc: "The basics"
-assigned: 2018-08-06 08:30:00.00-7
-due: 2018-08-07 17:00:00.00-7
+assigned: 2019-08-05 08:30:00.00-7
+due: 2019-08-06 17:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on [Piazza]({{site.piazza}})
@@ -26,7 +26,7 @@ During this lab you will achieve the following administrative one-time steps
 * Register your iClicker
 * Create an account on github.com using your UCSD email address
 * Fill out a Google Form so that we know your github id
-* Accept an invitation to the ucsd-cse-spis-2018 github organization
+* Accept an invitation to the ucsd-cse-spis-2019 github organization
 * Activate your Piazza account
 
 # Learning Goals
@@ -38,7 +38,7 @@ After completing this lab, you should be able to
 * Bring up a terminal window to access the "bash shell prompt"
 * Bring up IDLE, the programming environment for Python
 * Create a short Python program and run it
-* Create a Github repository under the UCSD-CSE-SPIS-2018 organization
+* Create a Github repository under the ucsd-cse-spis-2019 organization
 * Use the github web interface to upload files and edit text in a README.md file
 
 # {{page.num}}, step-by-step 
@@ -51,7 +51,7 @@ And to obtain those, you'll need to be able to access a web browser.  **Catch-22
 
 But if someone else (a mentor or instructor) has a web browser, then the information at this page can be used to look up your ETS username, and reset your password:
 
-[https://ucsd-cse-spis-2018.github.io/topics/acms/](/topics/acms/)
+[https://ucsd-cse-spis-2019.github.io/topics/acms/](/topics/acms/)
 
 Once you know your username and password, please sit down at a workstation next to where your partner is sitting.
 
@@ -109,7 +109,7 @@ That's it!   Now, you can also add, on the first line, a *comment* with your nam
 and the reason you wrote the program.
 
 ```Python
-# Alex Triton for CSE SPIS 2018
+# Alex Triton for CSE SPIS 2019
 print('Hello, World!')
 ```
 You are encouraged to write this comment, because it helps someone looking at your code know that *you* wrote it.  But, comments do not affect the functionality of the program.  In general, in computer programming, a *comment* is something that is intended only for human readers of the code, and is otherwise "ignored by the system".   Nearly every programming language has some way to express comments, though the exact rules for formatting of comments -- that is, the *syntax* of comments -- differs from one language to another.
@@ -123,15 +123,15 @@ explains Hello World in IDLE](http://www.youtube.com/watch?v=Cdk20r2dgFU) explai
 Once both you and your partner have run your "Hello World!" programs, you are ready to move on to the next step.  Remember, check in with your partner to make sure they are ready to move on.  Do not leave your partner in the dust!
 
 
-## Step 6:  Accept invitation to UCSD-CSE-SPIS-2018 github organization
+## Step 6:  Accept invitation to ucsd-cse-spis-2019 github organization
 
-The mentors/instructors should have invited you to the UCSD-CSE-SPIS-2018 github organization (if they haven't, the invitation will come soon).
+The mentors/instructors should have invited you to the ucsd-cse-spis-2019 github organization (if they haven't, the invitation will come soon).
 
 You should find a place where you can accept this invitation if you click on this link and look near the top of the page:
 
-<https://github.com/ucsd-cse-spis-2018>
+<https://github.com/ucsd-cse-spis-2019>
 
-Click on the invitation so that you are part of the ucsd-cse-spis-2018 organization.
+Click on the invitation so that you are part of the ucsd-cse-spis-2019 organization.
 
 ## Step 7:  Create your first github repo, a practice repo.
 
@@ -139,8 +139,8 @@ Your next step will be to create a github *repository* or repo for short.
 
 Your first repository will have a name that corresponds to your first name and last initial such as:
 
-* `ucsd-cse-spis-2018/practice-alex-t`
-* `ucsd-cse-spis-2018/practice-chris-l`
+* `ucsd-cse-spis-2019/practice-alex-t`
+* `ucsd-cse-spis-2019/practice-chris-l`
 
 To create this repo:
 
@@ -152,7 +152,7 @@ To create this repo:
 
 On the next screen:
 
-* Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2018`, NOT your own github id.
+* Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2019`, NOT your own github id.
 * Put `practice-alex-t` as the name (BUT PUT YOUR OWN NAME AND FIRST INITIAL, not literally `alex-t` :-) )
 * check the box to "Initialize this repository with a README"
 * Select a `.gitignore` file for Python
@@ -163,7 +163,7 @@ Then, once you've entered all of this information, click to create the repositor
 Periodically, check in on your partner. You are there to help each other.
 
 
-## Step 8:  Add a message and a photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
+## Step 8:  Add a message and a photo to your `ucsd-cse-spis-2019/practice-alex-t` repo.
 
 For this step, please ask someone to take a photo of you, with your face and your name tag visible. We will use these pictures to create a roster, so please make sure you are easily recognizable. They can then send you the photo through email.
 
@@ -180,7 +180,7 @@ Once you've located it, your next job will be to upload it to your github practi
 in the next step.
 
 
-## Step 9: Upload your photo to your `ucsd-cse-spis-2018/practice-alex-t` repo.
+## Step 9: Upload your photo to your `ucsd-cse-spis-2019/practice-alex-t` repo.
 
 Navigate to the web page for your repo.  It will be something like:
 
@@ -203,7 +203,7 @@ Navigate again to the main page for your repo, e.g.
 You'll see a file called README.md.  Click on the filename.  This should take you a page for just that file,
 where you'll see, among other things, a pencil icon that allows you to make changes to the file.
 
-In that file, add a few lines of text that introduces yourself to the SPIS 2018 instructional staff. 
+In that file, add a few lines of text that introduces yourself to the SPIS 2019 instructional staff. 
 Tell us where you are from, some of things you are hoping to learn during SPIS, and perhaps some
 outside interests and activities you might like to participate in during our non-academic sessions
 (e.g. sports, musical instruments you play, board games, etc.)
@@ -230,7 +230,7 @@ In your UCSD email you should find an invitation to Piazza.   Please accept the 
 
 Then visit [https://piazza.com](https://piazza.com) to log in to Piazza
 
-Find the UCSD CSE SPIS 2018 course and familiarize yourself with the Piazza site.
+Find the UCSD CSE SPIS 2019 course and familiarize yourself with the Piazza site.
 
 # A note about assignment deadlines
 

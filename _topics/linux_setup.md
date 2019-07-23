@@ -26,10 +26,10 @@ You can use these machines:
 ## Using ACMS over ssh
 
 To use ACMS computers over ssh, you can just bring up a command line on your machine and type the following
-at the command prompt.  This assumes that your spis username is `spis16xy`.  Put your own username in instead:
+at the command prompt.  This assumes that your spis username is `spis19xy`.  Put your own username in instead:
 
 ```
-ssh spis16xy@ieng6-240.ucsd.edu
+ssh spis19xy@ieng6-240.ucsd.edu
 ```
 
 However, this method will NOT work for bringing up graphics programs such as `idle`.  You will ONLY have access to command line programs (including the command line Python prompt `python`).
@@ -37,13 +37,13 @@ However, this method will NOT work for bringing up graphics programs such as `id
 For that, you'll need to enable X11 forwarding with the -X or -Y flags:
 
 ```
-ssh -X spis16xy@ieng6-240.ucsd.edu
+ssh -X spis19xy@ieng6-240.ucsd.edu
 ```
 
 OR 
 
 ```
-ssh -Y spis16xy@ieng6-240.ucsd.edu
+ssh -Y spis19xy@ieng6-240.ucsd.edu
 ```
 
 Use the `-X` version if it works for you.  If it gives you problems, sometimes the -Y version works better.

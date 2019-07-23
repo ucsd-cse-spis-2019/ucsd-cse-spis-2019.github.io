@@ -1,5 +1,5 @@
 ---
-lecture_date: 2018-08-17 09:00:00.00-7:00
+lecture_date: 2019-08-16 09:00:00.00-7:00
 topic: "FoCS  and Breadth/Depth"
 desc: "Mutable references / Two options for lecture"
 week: "2"

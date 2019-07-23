@@ -1,5 +1,5 @@
 ---
-lecture_date: 2018-08-30 09:00:00.00-7:00
+lecture_date: 2019-08-29 09:00:00.00-7:00
 topic: "APS only"
 desc: "Start of Projects"
 week: "4"

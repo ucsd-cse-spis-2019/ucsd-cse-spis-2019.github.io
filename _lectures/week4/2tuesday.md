@@ -1,5 +1,5 @@
 ---
-lecture_date: 2018-08-28 09:00:00.00-7:00
+lecture_date: 2019-08-27 09:00:00.00-7:00
 topic: "Finite State Machines"
 desc: "Mealy and Moore FSM"
 week: "4"

@@ -3,8 +3,8 @@ layout: lab
 num: lab03
 ready: true
 desc: "More functions and drawing with Turtle Graphics"
-assigned: 2018-08-13 12:00:00.00-7
-due: 2018-08-16 17:00:00.00-7
+assigned: 2019-08-12 12:00:00.00-7
+due: 2019-08-15 17:00:00.00-7
 ---
 
 If you find typos or problems with the lab instructions, please report them on [Piazza]({{site.piazza}})
@@ -23,12 +23,12 @@ There is both a pair and an individual component of this lab.  The individual co
 
 # Setting up your git repo for {{page.num}} (WITH your partner)
 
-You will create one repository for this assignment between the two of you, but you will need to import some starter code.  Create a joint git repo for you and your partner for {{page.num}}. However, create a completely empty repository with no Readme, no .gitignore, and no license named `spis18-lab03-name1-name2`.  
+You will create one repository for this assignment between the two of you, but you will need to import some starter code.  Create a joint git repo for you and your partner for {{page.num}}. However, create a completely empty repository with no Readme, no .gitignore, and no license named `spis19-lab03-name1-name2`.  
 
 After you create the new repository, you will see a new screen with the option to import code from another repository.  You should import the code from this repository:
 
 ```
-https://github.com/ucsd-cse-spis-2018/lab03starter.git
+https://github.com/ucsd-cse-spis-2019/lab03starter.git
 ```
 
 It will take a few minutes, but when you return to the repo on github you should see some starter code.

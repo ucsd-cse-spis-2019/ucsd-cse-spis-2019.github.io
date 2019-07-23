@@ -77,7 +77,7 @@ Unlike "disk space", there isn't a nice handy utility built into unix to count t
 
 I've put that in my own directory on ACMS for SPIS 15, so you can run it with this command:
 
-<div><code>~spis16t3/bin/countfiles</code></div>
+<div><code>~spis19t3/bin/countfiles</code></div>
 <div><br>
 </div>
 <div>If you run that, it will show you which directory has lots of files under it. &nbsp;You can cd into that directory, and repeat the command. &nbsp;Eventually you may find something you can delete to reduce your file count below your quota.</div>

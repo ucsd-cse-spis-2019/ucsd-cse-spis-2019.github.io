@@ -1,7 +1,7 @@
 ---
 topic: "Image processing and binary numbers"
 desc: "HSV color space, image processing filters, bits and number representations"
-lecture_date: 2018-08-20 09:00:00.00-7:00
+lecture_date: 2019-08-19 09:00:00.00-7:00
 week: "3"
 ready: true
 ---

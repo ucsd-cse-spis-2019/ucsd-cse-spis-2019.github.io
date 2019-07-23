@@ -179,7 +179,7 @@ Phills-MacBook-Pro: pconrad$
 <div><br>
 </div>
 <div>
-<div style="display:block;text-align:left"><a href="http://www.cs.ucsb.edu/~pconrad/topics/CSILviaPutty/images/Picture%2018.png" imageanchor="1"><img border="0" src="http://www.cs.ucsb.edu/~pconrad/topics/CSILviaPutty/images/Picture%2018.png"></a></div>
+<div style="display:block;text-align:left"><a href="https://sites.cs.ucsb.edu/~pconrad/topics/CSILviaPutty/images/Picture%2018.png" imageanchor="1"><img border="0" src="https://sites.cs.ucsb.edu/~pconrad/topics/CSILviaPutty/images/Picture%2018.png"></a></div>
 </div>
 </div>
 <div style="display:block;text-align:left"><br>

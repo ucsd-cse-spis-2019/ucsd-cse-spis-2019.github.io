@@ -3,8 +3,8 @@ layout: lab
 num: lab07
 ready: true
 desc: "Working With Data"
-assigned: 2018-08-23 13:15:00.00-7
-due: 2018-08-29 14:45:00.00-7
+assigned: 2019-08-22 13:15:00.00-7
+due: 2019-08-28 14:45:00.00-7
 ---
 
 # Working with and learning from data
@@ -17,7 +17,7 @@ You will complete this entire lab using *pair programming*.  Of course, you are 
 
 # First, create a lab07 repo
 
-Go to github.com and create a new empty repo called spis18-lab07-Name1-Name2. When creating the repo import the starter file from this git repo: `https://github.com/ucsd-cse-spis-2018/lab07starter.git`
+Go to github.com and create a new empty repo called spis19-lab07-Name1-Name2. When creating the repo import the starter file from this git repo: `https://github.com/ucsd-cse-spis-2019/lab07starter.git`
 
 Then use `git clone` to clone this into your `~/github` directory.
 

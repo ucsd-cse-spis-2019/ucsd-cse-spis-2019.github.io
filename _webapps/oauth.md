@@ -93,7 +93,7 @@ Each of the repos below requires a bit more explanation---the code won't just "r
     * You have to do this from scratch each time you move the application to a different host or port number
     * That means you have to do this step once for running on your local machine (e.g. `http://127.0.0.1:4000` and 
         a second time if/when you run on Heroku
-    * Instructions for creating those are here: [Github OAuth Setup](http://ucsd-cse-spis-2016.github.io/webapps/oauth_github/)
+    * Instructions for creating those are here: [Github OAuth Setup](http://ucsd-cse-spis-2019.github.io/webapps/oauth_github/)
     
 2.  Putting the client_id and client_secret, along with perhaps other configuration, into either:
     * an appropriate `env.sh` file (if running locally on ACMS or your own computer), OR
@@ -103,13 +103,13 @@ Each of the repos below requires a bit more explanation---the code won't just "r
 
 Here are the code examples:
 
-* Simple github oauth: <https://github.com/ucsd-cse-spis-2016/spis16-webapps-oauth-example>
+* Simple github oauth: <https://github.com/ucsd-cse-spis-2019/spis19-webapps-oauth-example>
     * If you have a github account, you can log in.
     * This app only works with sessions; no connection to a database
     * No ability to store user preferences, or any other persistent data
     * The link on the Github is no longer working. It has been rehosted to this link [here](http://protected-stream-47486.herokuapp.com).
-* Github OAuth based on organization membership: <https://github.com/ucsd-cse-spis-2016/spis16-webapps-oauth-github-org-example>
-    * Checks is you have a github account, AND if you are a member of specific github organization specified by the application (e.g. `ucsd-cse-spis-2016`, for example.)
+* Github OAuth based on organization membership: <https://github.com/ucsd-cse-spis-2019/spis19-webapps-oauth-github-org-example>
+    * Checks is you have a github account, AND if you are a member of specific github organization specified by the application (e.g. `ucsd-cse-spis-2019`, for example.)
     * Like preceding one, this app only works with sessions; no connection to a database
     * No ability to store user preferences, or any other persistent data
 

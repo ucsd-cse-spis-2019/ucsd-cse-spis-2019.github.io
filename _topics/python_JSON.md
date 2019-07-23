@@ -79,7 +79,7 @@ The short version is that you should write your request like this, except put yo
 
 ```python
 import requests
-result = requests.get("http://www.reddit.com/r/ucsd.json", headers = {'User-agent': 'spis16 your-name-here'})
+result = requests.get("http://www.reddit.com/r/ucsd.json", headers = {'User-agent': 'spis19 your-name-here'})
 ```
 
 Now, if we type `result.text`, we get the entire contents of that web page (in this case, all the JSON that
@@ -342,7 +342,7 @@ Let's go back to the original example.   We now know that these four lines of co
 
 ```python
 >>> import requests
->>> result = requests.get("http://www.reddit.com/r/ucsd.json", headers = {'User-agent': 'spis16 your-name-here'})
+>>> result = requests.get("http://www.reddit.com/r/ucsd.json", headers = {'User-agent': 'spis19 your-name-here'})
 >>> import json
 >>> rdata = json.loads(result.text)
 >>> 

@@ -60,7 +60,7 @@ Ok, let's get started!
 For this lab, we have made starter code available for you. Following the same procedure we had for lab04, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
 importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
 
-The name of your repo should be `spis17-`<tt>{{page.num}}</tt>`-Name1-Name2`, as before. And invite your pair partner to be a collaborator with admin access. 
+The name of your repo should be `spis19-`<tt>{{page.num}}</tt>`-Name1-Name2`, as before. And invite your pair partner to be a collaborator with admin access. 
 
 
 # Step 2: Python coding.

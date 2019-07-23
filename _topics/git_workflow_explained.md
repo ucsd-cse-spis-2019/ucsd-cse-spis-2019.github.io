@@ -124,11 +124,11 @@ Normally, if we were working with other people, or perhaps doing work on more th
 
 In this case, we probably don't need to do that, because we've just been working with this one clone of this one repo, but just because we want to establish a good set of habits, let's start with the `git` `pull`. You'll have to type in your github username and password for this step.
 
-    [spis16t3@ieng6-240]:~:81$ git pull
+    [spis19t3@ieng6-240]:~:81$ git pull
     Username for 'https://github': bnieder
     Password for 'https://bnieder@github.com': 
     Already up-to-date.
-    [spis16t3@ieng6-240]:~:82$ 
+    [spis19t3@ieng6-240]:~:82$ 
 
 The git pull is necessary when you (or someone else) has made changes to the repo on github on *some other computer*, or by editing directly on the github web page.
 
@@ -159,7 +159,7 @@ There are exceptions to those rules, and later things may get more complicated, 
 
 Here is what a git status looks like:
 
-    [spis16t3@ieng6-240]:~:82$ git status
+    [spis19t3@ieng6-240]:~:82$ git status
     On branch master
     Your branch is up-to-date with 'origin/master'.
 
@@ -169,7 +169,7 @@ Here is what a git status looks like:
             hello.py
 
     nothing added to commit but untracked files present (use "git add" to track)
-    [spis16t3@ieng6-240]:~:83$    
+    [spis19t3@ieng6-240]:~:83$    
 
 The message here shows that we've made a change to `hello.py` that hasn't been committed.
 
@@ -183,19 +183,19 @@ Type the following: `git add hello.py`
 
 It should look like this:
 
-    [spis16t3@ieng6-240]:~:83$ git add hello.py
-    [spis16t3@ieng6-240]:~:84$ 
+    [spis19t3@ieng6-240]:~:83$ git add hello.py
+    [spis19t3@ieng6-240]:~:84$ 
 
 In typical "unix command" fashion, there is no output, which means "it worked." But if we want to really see that it worked, we can type "git status" again:
 
-    [spis16t3@ieng6-240]:~:84$ git status
+    [spis19t3@ieng6-240]:~:84$ git status
     # On branch master
     # Changes to be committed:
     #   (use "git reset HEAD <file>..." to unstage)
     #
     #   modified:   hello.py
     #
-    [spis16t3@ieng6-240]:~:85$ 
+    [spis19t3@ieng6-240]:~:85$ 
 
 Now we see that when we do our next commit, `hello.py` will be part of the commit. So, let's do that now.
 
@@ -211,10 +211,10 @@ So type this command: git commit -m "Added Javadoc Comment"
 
 Here's an example:
 
-    [spis16t3@ieng6-240]:~:85$ git commit -m "Added Javadoc Comment"
+    [spis19t3@ieng6-240]:~:85$ git commit -m "Added Javadoc Comment"
     [master 7180ef4] Added Javadoc Comment
      1 file changed, 7 insertions(+), 1 deletion(-)
-    [spis16t3@ieng6-240]:~:86$ 
+    [spis19t3@ieng6-240]:~:86$ 
 
 Note that there is a hex number that goes with the commit—in this
 case, 7180ef4. That hex number is the first few hex digits of the
@@ -246,13 +246,13 @@ Then try your commit again.
 It you now type git status, you'll see this message. Read it carefully
 (it helps if you read it out loud.)
 
-    [spis16t3@ieng6-240]:~:86$ git status
+    [spis19t3@ieng6-240]:~:86$ git status
     # On branch master
     # Your branch is ahead of 'origin/master' by 1 commit.
     #   (use "git push" to publish your local commits)
     #
     nothing to commit, working directory clean
-    [spis16t3@ieng6-240]:~:87$ 
+    [spis19t3@ieng6-240]:~:87$ 
 
 The important part here is that you are being told that you need to
 git push to "publish" your local commits. That is, your commits are
@@ -273,7 +273,7 @@ Here's what that should look like.    (If you cloned your repo with an ssh link
 you won't need to type in your username/password as shown below.)
 
 
-    [spis16t3@ieng6-240]:~:87$ git push origin master
+    [spis19t3@ieng6-240]:~:87$ git push origin master
     Username for 'https://github.com': atriton
     Password for 'https://atriton@github.com': 
     Counting objects: 5, done.
@@ -281,9 +281,9 @@ you won't need to type in your username/password as shown below.)
     Compressing objects: 100% (3/3), done.
     Writing objects: 100% (3/3), 563 bytes, done.
     Total 3 (delta 0), reused 0 (delta 0)
-    To https://github.com/ucsd-cse-spis-2016/spis16-lab02-Alex-Chris.git
+    To https://github.com/ucsd-cse-spis-2019/spis19-lab02-Alex-Chris.git
        2d598d9..7180ef4  master -> master
-    [spis16t3@ieng6-240]:~:88$ 
+    [spis19t3@ieng6-240]:~:88$ 
 
 # Seeing the effect on github
 

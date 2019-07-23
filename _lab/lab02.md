@@ -2,12 +2,12 @@
 layout: lab
 num: lab02
 ready: true
-desc: "Next steps with github, Python functions, testing"
-assigned: 2018-08-08 13:15:00.00-7
-due: 2018-08-14 17:00:00.00-7
+desc: "Next steps with GitHub, Python functions, testing"
+assigned: 2019-08-07 13:15:00.00-7
+due: 2019-08-13 17:00:00.00-7
 ---
 
-If you find typos or problems with the lab instructions, please report them on Piazza.  Throughout this lab you might sometimes see accounts or directories using `spis16`.  This is leftover from 2 years ago, but shouldn't change the overall meaning of the explanations and examples.  You should expect to see and use `spis18` instead of `spis16`.  
+If you find typos or problems with the lab instructions, please report them on Piazza.
 
 # Overview
 
@@ -92,44 +92,44 @@ There are three steps involved here.  First, we'll give you an overview, and the
 3. Finally, the second pair partner needs to accept the invitation to be a collaborator.    
 
 
-Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2018 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
+Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2019 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
 
 For purposes of the rest of these instructions, though, we'll refer to "first" as the partner
 under whose github account the repo is initially created, and "second" as the partner that gets invited to collaborate.
 
-And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2018 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
+And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2019 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
    
 ### Step 2a: Create a private repo with a README.md and a .gitignore file for Python.
 
 Choose which pair partner is going to create the repo&mdash;that pair partner should be the one that is logged into github.com.
 
-To create the repo follow the instructions at the link: [github create repo Method 2](http://ucsd-cse-spis-2018.github.io/topics/github_create_repo/#method2).
+To create the repo follow the instructions at the link: [github create repo Method 2](http://ucsd-cse-spis-2019.github.io/topics/github_create_repo/#method2).
 
 As you follow these instructions, create:
-* a private github repo under the `ucsd-cse-spis-2018` github organizaiton,
-* with the name `spis18-lab02-Name1-Name2` where,
+* a private github repo under the `ucsd-cse-spis-2019` github organizaiton,
+* with the name `spis19-lab02-Name1-Name2` where,
     * `Name1` is the first pair partner's preferred first name
     * `Name2` is the second pair partner's preferred first name
 
-The <b>Pair Name</b> column in the [SPIS 2018 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
+The <b>Pair Name</b> column in the [SPIS 2019 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
 
 An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be: 
 
-`spis18-lab02-Alex-Chris`.
+`spis19-lab02-Alex-Chris`.
 
 ### Step 2b: First pair partner invites second pair partner to be a collaborator
 
 The pair partner that created the repo will automatically have access.  That partner needs to invite the second
 partner to be a collaborator with admin access.
 
-The instructions to do that are found here: [Github: Adding collaborators](https://ucsd-cse-spis-2018.github.io/topics/github_add_collaborators)
+The instructions to do that are found here: [GitHub: Adding collaborators](https://ucsd-cse-spis-2019.github.io/topics/github_add_collaborators)
 
 ### Step 2c: Second pair partner accepts the invitation
 
 The second pair partner should accept the invitation.  This is usually straightforward: there is an invitation in the second pair partner's incoming email with a link to click, and it is clear what to do.
 
 If the email doesn't arrive, though, or anything is not clear, there are troubleshooting instructions later on the same page you accessed in the previous step to add the partner as a collaborator:  
-[Github: Adding collaborators](https://ucsd-cse-spis-2018.github.io/topics/github_add_collaborators)
+[GitHub: Adding collaborators](https://ucsd-cse-spis-2019.github.io/topics/github_add_collaborators)
  
 
 ## Step 3: Cloning a private repo at the bash (Unix) command line
@@ -144,7 +144,7 @@ When you've done that, we are finally ready for some Python programming!
 
 To review what you've done so far:
 
-* You create a repo called `spis18-lab02-Name1-Name2` on github.com
+* You create a repo called `spis19-lab02-Name1-Name2` on github.com
 * You cloned that repo into your ACMS account under the `~/github` directory.
 * That means you actually have *two* repos now. 
     * The repo on github.com and the repo on your ACMS account are *separate*, but *linked*
@@ -153,21 +153,21 @@ To review what you've done so far:
 What you will do now is put some Python code into the local repo&mdash;or more precisely, you'll put some Python
 code into the directory that corresponds to that repo.   You won't actually commit it to the repo until the next step.
 
-So, what we want to do first is make `~/github/spis18-lab02-Name-Name` (except with your pair's names, not literally `Name-Name`) be your current directory.     Use the `cd` command to make that happen.  
+So, what we want to do first is make `~/github/spis19-lab02-Name-Name` (except with your pair's names, not literally `Name-Name`) be your current directory.     Use the `cd` command to make that happen.  
 
 When you've done it, you 
-should be able to type `pwd` and see that your current directory path ends in `github/spis18-lab02-Name-Name`, just like in the example output below:
+should be able to type `pwd` and see that your current directory path ends in `github/spis19-lab02-Name-Name`, just like in the example output below:
 
 ```
-[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:118$ pwd
-/home/linux/ieng6/spis18/spis18t3/github/spis18-lab02-Alex-Chris
-[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:119$ 
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:118$ pwd
+/home/linux/ieng6/spis19/spis19t3/github/spis19-lab02-Alex-Chris
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:119$ 
 ```
 
 Then, start up IDLE by typing `idle3`:
 
 ```
-[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:119$ idle3
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:119$ idle3
 ```
 
 Once you do, use the `File -> New File` menu item to open a new window in which you can type Python code.
@@ -186,16 +186,16 @@ def convertWageMtoW(mWage):
 
 Save this file by choosing `File -> Save` from the Idle menu, giving it the name `wageCalculator.py`.  
 
-When you save, the save dialog should indicate that they are being saved inside the ~/github/spis18-lab02-Name-Name folder that corresponds to your local github repo (you should see a .git directory already present).   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
+When you save, the save dialog should indicate that they are being saved inside the ~/github/spis19-lab02-Name-Name folder that corresponds to your local github repo (you should see a .git directory already present).   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
 
-Onve you have saved your file, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis18-lab02-Name-Name` folder, and do an ls command as shown here.  You should see your file, with the name exactly as shown here.
+Onve you have saved your file, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis19-lab02-Name-Name` folder, and do an ls command as shown here.  You should see your file, with the name exactly as shown here.
 
 Note that if you also have a .pyc file, that's fine (or if you don't, that's fine too).  You don't need to worry about that one, or remove it.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
 
 ```
-[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ ls
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:170$ ls
 README.md  wageCalculator.py  wageCalculator.pyc
-[spis18t3@ieng6-240]:spis18-lab02-Alex-Chris:170$ 
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:170$ 
 ```
 
 
@@ -288,7 +288,7 @@ The process is described in two articles:
 
 Essentially, though here's what you are going to do:
 
-1.  Make sure you are in your ~/github/spis18-lab02-Name-Name directory
+1.  Make sure you are in your ~/github/spis19-lab02-Name-Name directory
 2.  Type `git status` and read what it says
 3.  Type `git add wageCalculator.py` to *stage* this file (get it ready to be added to the repo)
 4.  Type `git status` and read what it says
@@ -354,9 +354,9 @@ git commit -m "CL/AT All tests passing \!"
 Otherwise, the bash shell may get confused about the meaning of the `!` symbol, and you'll get this error:
 
 ```
-[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:140$ git commit -m "CL/AT All tests passing!"
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:140$ git commit -m "CL/AT All tests passing!"
 -bash: !": event not found
-[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:141$
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:141$
 ```
 
 We can go into why that's the case some other time (what is this "event" that is not found?)    

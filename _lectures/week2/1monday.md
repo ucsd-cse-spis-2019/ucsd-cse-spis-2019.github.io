@@ -1,7 +1,7 @@
 ---
 topic: "Turtle, Lists, Loops, and Begin Recursion"
 desc: "Do more with the Turtle, use lists and loops and start recursion"
-lecture_date: 2018-08-13 09:00:00.00-7:00
+lecture_date: 2019-08-12 09:00:00.00-7:00
 week: "2"
 ready: true
 ---

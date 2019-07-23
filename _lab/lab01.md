@@ -3,8 +3,8 @@ layout: lab
 num: lab01
 ready: true
 desc: "Picobot"
-assigned: 2018-08-07 08:30:00.00-7
-due: 2018-08-09 17:00:00.00-7
+assigned: 2019-08-06 08:30:00.00-7
+due: 2019-08-08 17:00:00.00-7
 ---
 
 ## Learning Goals
@@ -85,7 +85,7 @@ For the remainder of the lab, you will be doing Pair Programmming. First, decide
 
 ## First steps
 
-Create a new github repo under the "ucsd-cse-spis-2018" organization. Your github repo should be called spis18-lab01-Name1_Name2 (where Name1 and Name2 are the pair names). This was explained in lab00. Feel free to refer back to this lab if you forgot how to do this.
+Create a new github repo under the "ucsd-cse-spis-2019" organization. Your github repo should be called spis19-lab01-Name1_Name2 (where Name1 and Name2 are the pair names). This was explained in lab00. Feel free to refer back to this lab if you forgot how to do this.
 
 Then Create two text files in your git repo: `emptyroom.txt` and `maze.txt`. These files will be used to submit your Picobot code for the empty room and maze exercises. See additional instructions in the subsequent sections. Ask for the mentors' help if you have any questions.
 

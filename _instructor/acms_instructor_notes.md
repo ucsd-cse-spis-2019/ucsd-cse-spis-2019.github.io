@@ -5,28 +5,28 @@ desc: "What instructors should know about the ACMS setup"
 
 The typical ACMS setup for spis has the following kinds of accounts:
 
-* a master instructor account, e.g. `spis16`, with some special privileges
-* instructor/mentor accounts for speicifc individuals, e.g. spis16t1, spis16t2, spis16t3, etc.
-* student acconts for the SPIS participants, that are typically named spis16aa, spis16ab, etc.
+* a master instructor account, e.g. `spis19`, with some special privileges
+* instructor/mentor accounts for speicifc individuals, e.g. spis19t1, spis19t2, spis19t3, etc.
+* student acconts for the SPIS participants, that are typically named spis19aa, spis19ab, etc.
 
 The directory hierarchy is typically as shown here:
 
 ```
-[spis16@ieng6-240]:spis16:222$ pwd
-/home/linux/ieng6/spis16
-[spis16@ieng6-240]:spis16:223$ ls
-hold      spis16ai  spis16at  spis16be  spis16bp  spis16ca  spis16cl  sps16t10
-public    spis16aj  spis16au  spis16bf  spis16bq  spis16cb  spis16t1  sps16t11
-spis16    spis16ak  spis16av  spis16bg  spis16br  spis16cc  spis16t2  sps16t12
-spis16aa  spis16al  spis16aw  spis16bh  spis16bs  spis16cd  spis16t3  sps16t13
-spis16ab  spis16am  spis16ax  spis16bi  spis16bt  spis16ce  spis16t4  sps16t14
-spis16ac  spis16an  spis16ay  spis16bj  spis16bu  spis16cf  spis16t5  sps16t15
-spis16ad  spis16ao  spis16az  spis16bk  spis16bv  spis16cg  spis16t6  sps16t16
-spis16ae  spis16ap  spis16ba  spis16bl  spis16bw  spis16ch  spis16t7  sps16t17
-spis16af  spis16aq  spis16bb  spis16bm  spis16bx  spis16ci  spis16t8
-spis16ag  spis16ar  spis16bc  spis16bn  spis16by  spis16cj  spis16t9
-spis16ah  spis16as  spis16bd  spis16bo  spis16bz  spis16ck  spis16zz
-[spis16@ieng6-240]:spis16:224$ 
+[spis19@ieng6-240]:spis19:222$ pwd
+/home/linux/ieng6/spis19
+[spis19@ieng6-240]:spis19:223$ ls
+hold      spis19ai  spis19at  spis19be  spis19bp  spis19ca  spis19cl  sps16t10
+public    spis19aj  spis19au  spis19bf  spis19bq  spis19cb  spis19t1  sps16t11
+spis19    spis19ak  spis19av  spis19bg  spis19br  spis19cc  spis19t2  sps16t12
+spis19aa  spis19al  spis19aw  spis19bh  spis19bs  spis19cd  spis19t3  sps16t13
+spis19ab  spis19am  spis19ax  spis19bi  spis19bt  spis19ce  spis19t4  sps16t14
+spis19ac  spis19an  spis19ay  spis19bj  spis19bu  spis19cf  spis19t5  sps16t15
+spis19ad  spis19ao  spis19az  spis19bk  spis19bv  spis19cg  spis19t6  sps16t16
+spis19ae  spis19ap  spis19ba  spis19bl  spis19bw  spis19ch  spis19t7  sps16t17
+spis19af  spis19aq  spis19bb  spis19bm  spis19bx  spis19ci  spis19t8
+spis19ag  spis19ar  spis19bc  spis19bn  spis19by  spis19cj  spis19t9
+spis19ah  spis19as  spis19bd  spis19bo  spis19bz  spis19ck  spis19zz
+[spis19@ieng6-240]:spis19:224$ 
 ```
 
 # Custom code for the student's path, etc.
@@ -34,7 +34,7 @@ spis16ah  spis16as  spis16bd  spis16bo  spis16bz  spis16ck  spis16zz
 If you want to customize things for the students account, the place to do it is in the directory 
 
 ```
-/home/linux/ieng6/spis16/public
+/home/linux/ieng6/spis19/public
 ```
 
 In that folder, there will likely be a file called `README.instructor` that explains the `modulefiles` directory, and

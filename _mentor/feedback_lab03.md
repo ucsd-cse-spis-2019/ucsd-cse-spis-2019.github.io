@@ -5,7 +5,7 @@ desc: "Feedback on lab03"
 
 feedback_lab03.md
 
-Go to the ucsd-cse-spis-2018 organization on github.com and navigate to each pair's repo for lab 3. The repo should be named spis18-lab03-Name-Name
+Go to the ucsd-cse-spis-2019 organization on github.com and navigate to each pair's repo for lab 3. The repo should be named spis19-lab03-Name-Name
 
 Open each of the warmup files.  These were completed individually.  Run the `drawA` (or whatever letter) in idle and make sure it draws a letter.  Make sure it respects the turtle parameter (i.e. call it on two different turtles and make sure it moves both).  Then look at their code and make sure its well-structured, with good variable names, etc.  In their individual feedback repos give them some feedback on the individual section.  Comment on any creativity they used in creating their letters.
 

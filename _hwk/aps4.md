@@ -2,10 +2,10 @@
 num: "aps4"
 desc: "APS homework 4"
 ready: true
-assigned: 2018-08-28 9:00:00.00-7:00
-due: 2018-09-02 21:00:00.00-7:00
+assigned: 2019-08-27 9:00:00.00-7:00
+due: 2019-09-01 21:00:00.00-7:00
 layout: default
 ---
 
-For more information on the APS homework assignment, visit the [APS page](https://sites.google.com/a/eng.ucsd.edu/spis/home/academicprogram/2018_aps).
+For more information on the APS homework assignment, visit the [APS page](https://sites.google.com/a/eng.ucsd.edu/spis/home/academicprogram/2019_aps).
 

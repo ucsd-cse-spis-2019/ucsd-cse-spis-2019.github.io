@@ -12,7 +12,7 @@ This tutorial assumes that you have already:
 
 Note: this lesson is adapted from a sample webapp created by a SPIS instructor from 2016.
 
-We're going to create a basic webapp with OAuth, step-by-step, with Github, restricting it to only the people inside the 2017 SPIS Github Organization. We're going to break down each and every part, especially the OAuth code that will be going in. First, create a repo on Github called `spis17-oauth-org-example-Name1-Name2`, add your partner, and then clone the repo into your github directory on your local workstation. Don't forget to commit when you finished implementing a feature or think it is a good place to save your work.
+We're going to create a basic webapp with OAuth, step-by-step, with Github, restricting it to only the people inside the 2017 SPIS Github Organization. We're going to break down each and every part, especially the OAuth code that will be going in. First, create a repo on Github called `spis19-oauth-org-example-Name1-Name2`, add your partner, and then clone the repo into your github directory on your local workstation. Don't forget to commit when you finished implementing a feature or think it is a good place to save your work.
 
 # Getting the right modules
 
@@ -25,7 +25,7 @@ pip install --user PyGithub
 
 # Templates Set-Up
 
-Before we dive into OAuth, we need to get some other files set up. First, we're going to set up the templates that render the webpages themselves. Inside your `spis17-oauth-org-example-Name1-Name2` directory, create a `templates` folder using the mkdir command. Then, cd into it. 
+Before we dive into OAuth, we need to get some other files set up. First, we're going to set up the templates that render the webpages themselves. Inside your `spis19-oauth-org-example-Name1-Name2` directory, create a `templates` folder using the mkdir command. Then, cd into it. 
 
 Here is the code for `layout.html`. Notice the similarities and differences from the lab. We'll explain the flash_messages in a bit. 
 
@@ -211,7 +211,7 @@ Finally, we have our `flash_messages.html`. Depending on how the OAuth login wen
 
 # Static & Style Set-Up
 
-Next, we need to set up how the webpage elements look. Use the `cd ..` command to go up a level in your directory. You should now be back in your `spis17-oauth-org-example-Name1-Name2`. Make a directory called static, cd into it, and create a file called `style.css`. The code for this is simple:
+Next, we need to set up how the webpage elements look. Use the `cd ..` command to go up a level in your directory. You should now be back in your `spis19-oauth-org-example-Name1-Name2`. Make a directory called static, cd into it, and create a file called `style.css`. The code for this is simple:
 
 ```css
 body {

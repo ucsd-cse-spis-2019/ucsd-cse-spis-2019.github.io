@@ -17,7 +17,7 @@ Use the tabs at the bottom of the sheets to select "lab02 repos"
 
 If the name is not correct, you won't be able to find it by clicking on the link.
 
-Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2018>, type "lab02" in the search box,
+Instead, go to the organization page: <https://github.com/ucsd-cse-spis-2019>, type "lab02" in the search box,
 and look through to see if you can find the repo.   Let them know what the correct name should have been in your feedback.
 
 ## Does the repo contain the right files?

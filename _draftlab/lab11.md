@@ -12,7 +12,7 @@ due: 2017-08-24 15:00:00.00-7
 This lab should be completed during the Open Lab time on Wednesday of Spis Week 4, together with your [New Pair Partner for the Project Phase](/info/pairs/).
 
 In this lab, you'll create a github repo called <br>
-`spis17-project-planning-`<em>areaname</em>`-`<em>Name</em>`-`<em>Name</em>. In the `README.md` of that repo,
+`spis19-project-planning-`<em>areaname</em>`-`<em>Name</em>`-`<em>Name</em>. In the `README.md` of that repo,
 you'll start writing some plans for your project.
 
 # About the due date of 3pm Wednesday of Week 4

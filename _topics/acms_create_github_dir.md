@@ -3,7 +3,7 @@ topic: "ETS Account: Creating ~/github"
 desc: "Bash shell command intro, and creating your ~/github directory"
 ---
 
-**Note: In some of the figures in this lab spis16 is used.  Imagine these are replaced wtih spis18, which is the name that corresponds to this year's SPIS**
+**Note: In some of the figures in this lab spis19 is used.  Imagine these are replaced wtih spis19, which is the name that corresponds to this year's SPIS**
 
 # Creating ~/github
 ## And learning some shell commands in the process
@@ -73,16 +73,16 @@ the two can be saved for later.
 When you open up a terminal session on the lab machines the bash terminal prompt typically looks like this:
 
 ```
-[spis18t3@ieng6-240]:~:32$ 
+[spis19t3@ieng6-240]:~:32$ 
 ```
 
 It is called a *prompt* because it *prompts* you to enter some a command.  One of the most basic commands you can enter is
 the `date` command.  Try it: type in `date` and press return *Enter*.
 
 ```
-[spis18t3@ieng6-240]:~:32$ date
+[spis19t3@ieng6-240]:~:32$ date
 Thu Aug  4 13:56:29 PDT 2016
-[spis18t3@ieng6-240]:~:33$ 
+[spis19t3@ieng6-240]:~:33$ 
 ```
 
 The date is printed, and you get a new prompt.  Note that the last
@@ -94,7 +94,7 @@ command `history`, you'll see a list of all the recent commands you
 have typed.  Try it:
 
 ```
-[spis18t3@ieng6-240]:~:33$ history
+[spis19t3@ieng6-240]:~:33$ history
     1  idle
     2  idle
     3  pwd
@@ -104,7 +104,7 @@ have typed.  Try it:
    31  exit
    32  date
    33  history
-[spis18t3@ieng6-240]:~:34$ 
+[spis19t3@ieng6-240]:~:34$ 
 ```
 
 You can see that the next command I type will be "number 34" in my history.
@@ -113,7 +113,7 @@ You can see that the next command I type will be "number 34" in my history.
 
 There are a few others parts of the prompt.  
 
-* The `spis18t3` part is my account name. Your's will be something like `spis18xy` 
+* The `spis19t3` part is my account name. Your's will be something like `spis19xy` 
     where `xy` are two letters
 * The `ieng6-240` part is the machine I'm logged into.  It's full name is `ieng6-240.ucsd.edu`
 * Finally, the `~` part is a symbol for your *home directory*.  That home directory is a 
@@ -130,8 +130,8 @@ by itself on the command line.  The letters `cd` stand for *change
 directory*.  Try it:
 
 ```
-[spis18t3@ieng6-240]:~:34$ cd
-[spis18t3@ieng6-240]:~:35$ 
+[spis19t3@ieng6-240]:~:34$ cd
+[spis19t3@ieng6-240]:~:35$ 
 ```
 
 In this case, nothing changed, because we were already in our home
@@ -142,9 +142,9 @@ To see what other directories exist, we can type the `ls` command,
 which is the *list files* command. Try it:
 
 ```
-[spis18t3@ieng6-240]:~:39$ ls
+[spis19t3@ieng6-240]:~:39$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
-[spis18t3@ieng6-240]:~:40$ 
+[spis19t3@ieng6-240]:~:40$ 
 ```
 
 You can see that there are eight folders (directories) under our home
@@ -156,10 +156,10 @@ directory.  We are going to create one more.  We'll do that with the
 Type this at the bash prompt: `mkdir github` and the press enter.  Then type `ls` again and press enter:
 
 ```
-[spis18t3@ieng6-240]:~:40$ mkdir github
-[spis18t3@ieng6-240]:~:41$ ls
+[spis19t3@ieng6-240]:~:40$ mkdir github
+[spis19t3@ieng6-240]:~:41$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  github
-[spis18t3@ieng6-240]:~:42$ 
+[spis19t3@ieng6-240]:~:42$ 
 ```
 
 Now you see that there is an additional directory.  Do you see it? It's called github, and its the last one listed.
@@ -172,9 +172,9 @@ github directory by typing `cd github`, as shown here.  Try it, and
 try typing `ls` right after that.
 
 ```
-[spis18t3@ieng6-240]:~:42$ cd github
-[spis18t3@ieng6-240]:github:43$ ls
-[spis18t3@ieng6-240]:github:44$ 
+[spis19t3@ieng6-240]:~:42$ cd github
+[spis19t3@ieng6-240]:github:43$ ls
+[spis19t3@ieng6-240]:github:44$ 
 ```
 
 You can see that the second part of the prompt changes to `github` to
@@ -187,14 +187,14 @@ located "under" our home directory, we sometimes call this a
 The next command we are going to learn is the `pwd` command, for *print working directory*.  Try it:
 
 ```
-[spis18t3@ieng6-240]:github:44$ pwd
-/home/linux/ieng6/spis18/spis18t3/github
-[spis18t3@ieng6-240]:github:45$ 
+[spis19t3@ieng6-240]:github:44$ pwd
+/home/linux/ieng6/spis19/spis19t3/github
+[spis19t3@ieng6-240]:github:45$ 
 ```
 
 You see that this command prints out our "working directory".   *Current directory* and *working directory* are just two different ways to say the same thing.
 
-Lets look more closely at what was printed: `/home/linux/ieng6/spis18/spis18t3/github`
+Lets look more closely at what was printed: `/home/linux/ieng6/spis19/spis19t3/github`
 
 This is a list of parent directories (or folders), each of which contains the one below it.
 
@@ -206,15 +206,15 @@ These files and directories, though exist in the context of a larger directory t
 
 <img src="https://docs.google.com/drawings/d/18JSwrUBKVmKx9fIL7vX3eexCJI35AMpzIO7g_azldkM/pub?w=853&amp;h=578">
 
-This output `/home/linux/ieng6/spis18/spis18t3/github` from the pwd command is called a *path*, since it shows the path from the root directory of the disk space on our machine, which is represented by the symbol `/`, all the way down to the directory `github` that we just created.
+This output `/home/linux/ieng6/spis19/spis19t3/github` from the pwd command is called a *path*, since it shows the path from the root directory of the disk space on our machine, which is represented by the symbol `/`, all the way down to the directory `github` that we just created.
 
-Our home directories for spis this year are all located inside `/home/linux/ieng6/spis18`.   They are, for example:
+Our home directories for spis this year are all located inside `/home/linux/ieng6/spis19`.   They are, for example:
 
-* /home/linux/ieng6/spis18/spis18aa
-* /home/linux/ieng6/spis1/spis18ab
-* /home/linux/ieng6/spis18/spis18ac
-* /home/linux/ieng6/spis18/spis18ad
-* /home/linux/ieng6/spis18/spis18ae
+* /home/linux/ieng6/spis19/spis19aa
+* /home/linux/ieng6/spis1/spis19ab
+* /home/linux/ieng6/spis19/spis19ac
+* /home/linux/ieng6/spis19/spis19ad
+* /home/linux/ieng6/spis19/spis19ae
 * etc...
 
 Each of you has your own home directory.  
@@ -230,7 +230,7 @@ You can change the current working directory in a variety of ways.  Try changing
 exploring the directory tree shown in the diagram above, and using `pwd` and `ls` to show the effect.
 
 * `cd ~` or `cd` to go your home directory
-* `cd ~spis18t1` or `cd ~spis18t2` to go to a specific user's home directory
+* `cd ~spis19t1` or `cd ~spis19t2` to go to a specific user's home directory
 * `cd ..` to go *up one level in the tree* from where you are now.  
 * `cd /` to go to the root of the directory
 * `cd foo` to go into a directory foo that is located in the current directory
@@ -247,14 +247,14 @@ When you are all finished, cd into your `~/github` directory.  Note that you can
 from anywhere with a single command: `cd ~/github`, as shown here:
 
 ```
-[spis18t3@ieng6-240]:~:79$ cd ~/github
-[spis18t3@ieng6-240]:github:80$ pwd
-/home/linux/ieng6/spis18/spis18t3/github
-[spis18t3@ieng6-240]:github:81$ 
+[spis19t3@ieng6-240]:~:79$ cd ~/github
+[spis19t3@ieng6-240]:github:80$ pwd
+/home/linux/ieng6/spis19/spis19t3/github
+[spis19t3@ieng6-240]:github:81$ 
 ```
 
 As shown above, use `pwd` to verify that you are indeed in your `~/github directory`.
 
-Your output won't say `spis18t3`, but instead will show your own ETS username in place of that.
+Your output won't say `spis19t3`, but instead will show your own ETS username in place of that.
 
 If you were doing these steps as part of lab02, use the back button to return to lab02.

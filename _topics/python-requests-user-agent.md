@@ -35,7 +35,7 @@ Instead of:
 
 Use this:
 ```python
->>> result = requests.get("http://www.reddit.com/r/ucsd.json", headers = {'User-agent': 'spis16t3 bot 1.0'})
+>>> result = requests.get("http://www.reddit.com/r/ucsd.json", headers = {'User-agent': 'spis19t3 bot 1.0'})
 >>>
 ```
 

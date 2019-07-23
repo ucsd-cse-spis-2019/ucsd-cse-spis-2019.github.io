@@ -42,15 +42,15 @@ You will be asked a series of questions. For each question, just press the enter
 
 That will look like this:
 ```
-[spis16t3@ieng6-240]:~:82$ ssh-keygen
+[spis19t3@ieng6-240]:~:82$ ssh-keygen
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/linux/ieng6/spis16/spis16t3/.ssh/id_rsa): 
+Enter file in which to save the key (/home/linux/ieng6/spis19/spis19t3/.ssh/id_rsa): 
 Enter passphrase (empty for no passphrase): 
 Enter same passphrase again: 
-Your identification has been saved in /home/linux/ieng6/spis16/spis16t3/.ssh/id_rsa.
-Your public key has been saved in /home/linux/ieng6/spis16/spis16t3/.ssh/id_rsa.pub.
+Your identification has been saved in /home/linux/ieng6/spis19/spis19t3/.ssh/id_rsa.
+Your public key has been saved in /home/linux/ieng6/spis19/spis19t3/.ssh/id_rsa.pub.
 The key fingerprint is:
-16:e9:a8:b4:5e:4e:2a:ab:38:e9:35:8a:ee:9e:6c:b3 spis16t3@ieng6-240
+16:e9:a8:b4:5e:4e:2a:ab:38:e9:35:8a:ee:9e:6c:b3 spis19t3@ieng6-240
 The key's randomart image is:
 +--[ RSA 2048]----+
 |                 |
@@ -63,7 +63,7 @@ The key's randomart image is:
 |*o=..=           |
 |XE+oo .          |
 +-----------------+
-[spis16t3@ieng6-240]:~:83$ 
+[spis19t3@ieng6-240]:~:83$ 
 ```
 
 
@@ -72,17 +72,17 @@ The effect of that is to create two files in a hidden directory of your account 
 If you type `cd` to go to your home directory, and `ls` at your terminal prompt, you will not see this directory. Example:
 
 ```
-[spis16t3@ieng6-240]:~:84$ ls
+[spis19t3@ieng6-240]:~:84$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  bin  github
-[spis16t3@ieng6-240]:~:85$ 
+[spis19t3@ieng6-240]:~:85$ 
 ```
 
 But if you use `ls -a` you WILL see the `.ssh` directory along with *many* other hidden directories and files.  Check out the difference between `ls` and `ls -a`:
 
 ```
-[spis16t3@ieng6-240]:~:86$ ls
+[spis19t3@ieng6-240]:~:86$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  bin  github
-[spis16t3@ieng6-240]:~:87$ ls -a
+[spis19t3@ieng6-240]:~:87$ ls -a
 .              .cache       .gnome2          .imsettings.log  .mozilla       .xsession-errors      Downloads  github
 ..             .config      .gnome2_private  .kde             .nautilus      .xsession-errors.old  Music
 .ICEauthority  .cshrc       .gnote           .kshrc           .pki           .zprofile             Pictures
@@ -90,7 +90,7 @@ Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  bin  
 .bash_history  .fontconfig  .gtk-bookmarks   .locallogin      .profile       .zshrc                Templates
 .bash_profile  .gconf       .gvfs            .login           .pulse-cookie  Desktop               Videos
 .bashrc        .gconfd      .idlerc          .modulesbegenv   .ssh           Documents             bin
-[spis16t3@ieng6-240]:~:88$ 
+[spis19t3@ieng6-240]:~:88$ 
 ```
 
 This is the same home directory!  As you can see, `ls -a` shows us many more files and folders than we normally see with just plain `ls`.
@@ -102,10 +102,10 @@ Next, type the command `cd ~/.ssh` at the Terminal prompt.   Then use `ls` to li
 You should see two files `id_rsa` and `id_rsa.pub` as follows. (If you see other files, for example `known_hosts`, don't worry; this is normal.)
 
 ```
-[spis16t3@ieng6-240]:~:88$ cd ~/.ssh
-[spis16t3@ieng6-240]:.ssh:89$ ls
+[spis19t3@ieng6-240]:~:88$ cd ~/.ssh
+[spis19t3@ieng6-240]:.ssh:89$ ls
 id_rsa  id_rsa.pub  known_hosts
-[spis16t3@ieng6-240]:.ssh:90$ 
+[spis19t3@ieng6-240]:.ssh:90$ 
 ```
 
 You want to now look at the contents of `id_rsa.pub`.  This file is your public key. 
@@ -114,9 +114,9 @@ That is the one you are going to share with `github.com`. (The contents of `id_r
 To see the contents of `id_rsa.pub`, we use the cat command:
 
 ```
-[spis16t3@ieng6-240]:.ssh:90$ cat id_rsa.pub 
-ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA1vEvo1gXCAjIv52HaBTXBTup9mzJJucosNDr4VfPhpBKUH3XSlNCPFokLPyanKp0n/ppoqkEc2AtAR/WIHPrtlRUB/Eo2Y+U7xZjQZDCM8PtKevkYbwUQfKTJE+tlCuF9U6PyZI2fnJ34vnav/PC3Y2JqLUzcPpMlnL0uuiOhw4odN1KZ8zvw+DVBNrJD8fFm9MLwRTetjzLvNuxVGvKqmGCwaZTgzlluuc3Rfh0ykMm3FenXKp1LDtqBtyecpWocLUjhiILOkD31HxUjEeVJ0iB2Xk1MBa3czxBuGjVEqAmz/GiHi0zSjUmD+mKx+3mv98mRAUALPGii92ge0RclQ== spis16t3@ieng6-240
-[spis16t3@ieng6-240]:.ssh:91$ 
+[spis19t3@ieng6-240]:.ssh:90$ cat id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA1vEvo1gXCAjIv52HaBTXBTup9mzJJucosNDr4VfPhpBKUH3XSlNCPFokLPyanKp0n/ppoqkEc2AtAR/WIHPrtlRUB/Eo2Y+U7xZjQZDCM8PtKevkYbwUQfKTJE+tlCuF9U6PyZI2fnJ34vnav/PC3Y2JqLUzcPpMlnL0uuiOhw4odN1KZ8zvw+DVBNrJD8fFm9MLwRTetjzLvNuxVGvKqmGCwaZTgzlluuc3Rfh0ykMm3FenXKp1LDtqBtyecpWocLUjhiILOkD31HxUjEeVJ0iB2Xk1MBa3czxBuGjVEqAmz/GiHi0zSjUmD+mKx+3mv98mRAUALPGii92ge0RclQ== spis19t3@ieng6-240
+[spis19t3@ieng6-240]:.ssh:91$ 
 ```
 
 

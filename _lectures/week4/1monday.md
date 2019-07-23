@@ -1,7 +1,7 @@
 ---
 topic: "More probability, debugging and resume workshop"
 desc: ""
-lecture_date: 2018-08-27 09:00:00.00-7:00
+lecture_date: 2019-08-26 09:00:00.00-7:00
 week: "4"
 ready: true
 ---

@@ -21,7 +21,7 @@ You should see the webpage shown in the screenshot below. In this example the st
 </div>
 
 If you don't yet know your SPIS username and password, you'll need to
-enter your last name and PID and click the submit button. Then click on the account that starts with `spis18` (note that in the screenshots the accounts start with `spis16` but yours will start with `spis18`):
+enter your last name and PID and click the submit button. Then click on the account that starts with `spis19` (note that in the screenshots the accounts start with `spis19` but yours will start with `spis19`):
 
 <div>
 

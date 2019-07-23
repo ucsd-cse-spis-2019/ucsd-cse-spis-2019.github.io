@@ -13,9 +13,9 @@ There is an easier and quicker way, as long as you trust one another.
 Here's what to do:
 
 * Ask your pair partner/friend that is logged in to open a new terminal window, and pass you the keyboard.
-* In this new terminal window,  type this (where `spis16xy` is replaced by your own ACMS SPIS username.)
+* In this new terminal window,  type this (where `spis19xy` is replaced by your own ACMS SPIS username.)
 
-`ssh spis16xy@localhost`
+`ssh spis19xy@localhost`
 
 The terminal session below shows an example of what that might look like.   But first, a few notes about this output:
 
@@ -35,23 +35,23 @@ The terminal session below shows an example of what that might look like.   But 
 
 
 ```
-[spis16t3@ieng6-240]:~:79$ ssh spis16t4@localhost
+[spis19t3@ieng6-240]:~:79$ ssh spis19t4@localhost
 The authenticity of host 'localhost (127.0.0.1)' can't be established.
 RSA key fingerprint is 2c:07:da:be:44:8d:67:70:7f:4b:5e:51:88:d0:18:ce.
 Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added 'localhost' (RSA) to the list of known hosts.
-spis16t3@localhost's password: 
+spis19t3@localhost's password: 
 Last login: Sun Aug  7 13:27:29 2016 from cpe-76-88-3-252.san.res.rr.com
 ============================ NOTICE =================================
 Authorized use of this system is limited to password-authenticated
 ...
 
-Sun Aug 07, 2016  1:27pm - Prepping spis16
-[spis16t4@ieng6-240]:~:79$ 
+Sun Aug 07, 2016  1:27pm - Prepping spis19
+[spis19t4@ieng6-240]:~:79$ 
 ```
 
-You can see that the prompt has changed from `spis16t3` to `spis16t4`.
+You can see that the prompt has changed from `spis19t3` to `spis19t4`.
 
-When you are finished, type `exit` to leave the `spis16t4` session and return to the `spis16t3` session.
+When you are finished, type `exit` to leave the `spis19t4` session and return to the `spis19t3` session.
 
 

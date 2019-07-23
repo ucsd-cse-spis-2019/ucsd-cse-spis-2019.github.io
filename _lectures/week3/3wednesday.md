@@ -1,5 +1,5 @@
 ---
-lecture_date: 2018-08-22 09:00:00.00-7:00
+lecture_date: 2019-08-21 09:00:00.00-7:00
 topic: "Raspberry Pi and Webapps"
 desc: "Introduction to RPi and Webapps"
 week: "3"

@@ -11,16 +11,16 @@ One of the most basic ways to get started with using git and github is to simply
 
 We'll invite you to use github.com to create, edit and submit your solutions to the APS Homework assignments.
 
-To get started, create a private github repo under the ucsd-cse-spis-2018 organization that has this name:
+To get started, create a private github repo under the ucsd-cse-spis-2019 organization that has this name:
 
-* spis18-aps-yourfirstname-yourlastinitial
+* spis19-aps-yourfirstname-yourlastinitial
 
 Use the names and initials from the [pairs list](/info/pairs/), which we have updated with the preferred first name you gave us on the github survey.  For example:
 
-* spis18-aps-Lavanya-S
-* spis18-aps-Njambi-N
-* spis18-aps-Andrew-T
-* spis18-aps-Anthony-V
+* spis19-aps-Lavanya-S
+* spis19-aps-Njambi-N
+* spis19-aps-Andrew-T
+* spis19-aps-Anthony-V
 * etc.
 
 This image shows how to set up the repo at the [github.com/new](https://github.com/new) page:
@@ -158,4 +158,4 @@ Maybe you already have that picture on the web somewhere. Or maybe you draw it o
 
 But, if you don't already have a picture, one easy way to create one is with Google Drawings, as explained here: [Github: Google Drawings in Markdown files](/topics/github_google_drawings/).
 
-<div style="display:none;">https://ucsd-cse-spis-2018.github.io/topics/github_aps_writeups/</div>
+<div style="display:none;">https://ucsd-cse-spis-2019.github.io/topics/github_aps_writeups/</div>

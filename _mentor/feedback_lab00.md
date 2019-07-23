@@ -15,7 +15,7 @@ They should have created a repo with the name listed in this spreadsheet (privat
 
 If the name is not correct, you won't be able to find it by clicking on the link.  **NOTE:** It's encouraged that students use their preferred first names to name their repos.  If they used their "formal" first name for lab00, give them feedback that they can and should start using their preferred first name in the future.
 
-Anyway, if you can't find their name, go to the organization page: <https://github.com/ucsd-cse-spis-2018>, type "practice-" in the search box, and look through to see if you can find the repo.  They may have used a capital letter, or something.
+Anyway, if you can't find their name, go to the organization page: <https://github.com/ucsd-cse-spis-2019>, type "practice-" in the search box, and look through to see if you can find the repo.  They may have used a capital letter, or something.
 
 If the name they used is incorrect (e.g. not their name or preferred name, or used a capital letter, etc), the easiest thing to do for now is just correct the name yourself.  Until after lab03, we aren't going to get picky about names---we'll just fix them for them.
 

@@ -12,9 +12,9 @@ paperjs may be the tool you want.
 
 # Example of `paper.js` with Flask
 
-Here is an running example on Heroku: <https://spis16-webapps-paperjs.herokuapp.com/>
+Here is an running example on Heroku: <https://spis19-webapps-paperjs.herokuapp.com/>
 
-And here is the repository of code that makes that example work: <https://github.com/ucsd-cse-spis-2016/spis16-webapps-paperjs>
+And here is the repository of code that makes that example work: <https://github.com/ucsd-cse-spis-2016/spis19-webapps-paperjs>
 
 # Alternatives to `paper.js`
 
@@ -30,4 +30,4 @@ Another option is [processingjs](http://processing.js), which is a browser-based
   
 
 
- https://spis16-webapps-paperjs.herokuapp.com/
+ https://spis19-webapps-paperjs.herokuapp.com/

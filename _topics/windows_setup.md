@@ -31,7 +31,7 @@ The "MobaXterm Home Edition (Installer edition)" is free and is the best choice 
 To use it: 
 * Install it
 * Open up a new "session", and choose "ssh"
-* Fill in the host with `ieng6-240.ucsd.edu`, click the "enter username" box, and enter your `spis16xy` username (yours won't be `xy`, necessarily.  It will be whatever username you were assigned.
+* Fill in the host with `ieng6-240.ucsd.edu`, click the "enter username" box, and enter your `spis19xy` username (yours won't be `xy`, necessarily.  It will be whatever username you were assigned.
 * Enter your password when prompted.
 
 # Installing Python

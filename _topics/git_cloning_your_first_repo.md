@@ -60,11 +60,11 @@ Type these commands into your ACMS terminal window:
 * Use `ls` to list the files in that directory. (It may currently be empty)
 
 ```
-[spis16t3@ieng6-240]:~:95$ cd ~/github
-[spis16t3@ieng6-240]:github:96$ pwd
-/home/linux/ieng6/spis16/spis16t3/github
-[spis16t3@ieng6-240]:github:97$ ls
-[spis16t3@ieng6-240]:github:98$ 
+[spis19t3@ieng6-240]:~:95$ cd ~/github
+[spis19t3@ieng6-240]:github:96$ pwd
+/home/linux/ieng6/spis19/spis19t3/github
+[spis19t3@ieng6-240]:github:97$ ls
+[spis19t3@ieng6-240]:github:98$ 
 ```
 
 Next you will "clone" your repository. This creates a copy of your
@@ -77,12 +77,12 @@ Copy the clone URL from the github window.
 
 Next, in the terminal window where you are in your `~/github` directory,
 type the command below to clone the repository into a new directory 
-that has the same name as your repo (e.g. `spis16-lab02-Alex_Chris`).
+that has the same name as your repo (e.g. `spis19-lab02-Alex_Chris`).
 Be sure to replace the URL shown below with the one you copied 
 from the web page.
 
 ```
-    git clone https://github.com/ucsd-cse-spis-2018/spis18-lab02-Alex-Chris.git
+    git clone https://github.com/ucsd-cse-spis-2019/spis19-lab02-Alex-Chris.git
     ...
 ```
 
@@ -98,35 +98,35 @@ Are you sure you want to continue connecting (yes/no)? yes
 You should then be prompted to enter your username and your password.  These are your github username and password.  Enter them now.  If you are successful, you will see a message saying that the repository is being cloned.  
 
 ```
-Cloning into 'spis18-lab02-Alex-Chris'...
+Cloning into 'spis19-lab02-Alex-Chris'...
 remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (4/4), done.
 Checking connectivity... done.
-[spis16t3@ieng6-240]:github:108$ 
+[spis19t3@ieng6-240]:github:108$ 
 ```
 
 (If you got an error message, skip down to the section "What if it didn't work".)
 
 If it worked:
 * Try typing `ls`.  You should see the new directory for your repo.  
-* Use `cd repo-name` (e.g. `cd spis18-lab02-Alex-Chris`) to cd into your cloned repo
+* Use `cd repo-name` (e.g. `cd spis19-lab02-Alex-Chris`) to cd into your cloned repo
 * Type `pwd` and `ls` to see the files in your cloned repo.
 
 If it all looks like the following transcript, then you are good to go&mdash;you've cloned your first repo successfully!
 
 ```
-[spis16t3@ieng6-240]:github:108$ ls
-spis16-lab02-Alex-Chris
-[spis16t3@ieng6-240]:github:109$ pwd
-/home/linux/ieng6/spis16/spis16t3/github
-[spis16t3@ieng6-240]:github:110$ cd spis16-lab02-Alex-Chris/
-[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:111$ pwd
-/home/linux/ieng6/spis16/spis16t3/github/spis16-lab02-Alex-Chris
-[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:112$ ls
+[spis19t3@ieng6-240]:github:108$ ls
+spis19-lab02-Alex-Chris
+[spis19t3@ieng6-240]:github:109$ pwd
+/home/linux/ieng6/spis19/spis19t3/github
+[spis19t3@ieng6-240]:github:110$ cd spis19-lab02-Alex-Chris/
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:111$ pwd
+/home/linux/ieng6/spis19/spis19t3/github/spis19-lab02-Alex-Chris
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:112$ ls
 README.md
-[spis16t3@ieng6-240]:spis16-lab02-Alex-Chris:113$ 
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:113$ 
 ```
 
 # What if it didn't work
