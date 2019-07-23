@@ -1,33 +1,33 @@
-name: UCSD CSE SPIS 2018 FOCS
-github_url: https://github.com/ucsd-cse-spis-2018/ucsd-cse-spis-2018.github.io
+name: UCSD CSE SPIS 2019 FOCS
+github_url: https://github.com/ucsd-cse-spis-2019/ucsd-cse-spis-2019.github.io
 mentor_url: mentor.html
 
-url: https://ucsd-cse-spis-2018.github.io/
+url: https://ucsd-cse-spis-2019.github.io/
 
 # UPDATE THESE
-piazza: "https://piazza.com/ucsd/summer2018/spis2018/home" 
-gradescope: "https://gradescope.com/courses/20062"
+piazza: "https://piazza.com/class/jyfvgi8c8pv4in"
+gradescope: "https://www.gradescope.com/courses/54239"
 
-weekly_google_calendar_prefix: "https://sites.google.com/a/eng.ucsd.edu/spis/home/academicprogram/2018-foundations#week"
+weekly_google_calendar_prefix: "https://sites.google.com/a/eng.ucsd.edu/spis/home/academicprogram/2019_focs#week"
 
 spis_academic_program: "https://sites.google.com/a/eng.ucsd.edu/spis/home/academicprogram/"
 
-google_calendar_embed: "https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=eng.ucsd.edu_vpkdu3a26k3alf8rt2m19054ug%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles"
+google_calendar_embed: "https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=eng.ucsd.edu_vpkdu3a26k3alf8rt2m19054ug@group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles"
 
-google_calendar_embed_height_600px: "https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=eng.ucsd.edu_vpkdu3a26k3alf8rt2m19054ug%40group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles"
+google_calendar_embed_height_600px: "https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=eng.ucsd.edu_vpkdu3a26k3alf8rt2m19054ug@group.calendar.google.com&amp;color=%232F6213&amp;ctz=America%2FLos_Angeles"
 
-course_github_url: https://github.com/ucsd-cse-spis-2018
+course_github_url: https://github.com/ucsd-cse-spis-2019
 
 guttag_url: "https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0"
 
 num_weeks: 5
-start_date: 2018-08-05 00:00:00.00-7:00
-end_date: 2018-09-15 23:59:59.00-7:00
+start_date: 2019-08-04 00:00:00.00-7:00
+end_date: 2019-09-14 23:59:59.00-7:00
 
 
 hwk_course: "CSE SPIS"
 course: "UCSD CSE SPIS: Foundations of Computer Science (FOCS)"
-year: "2018"
+year: "2019"
 
 kramdown:
    parse_block_html: true
