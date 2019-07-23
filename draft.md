@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UCSD CSE 2016 SPIS: Foundations of Computer Science"
+title: "UCSD CSE 2019 SPIS: Foundations of Computer Science"
 ---
 
 # {{site.course}}, {{site.year}}
