@@ -1,13 +1,14 @@
 ---
-lecture_date: "2017-08-11 09:00:00.00-7:00"
-topic: "Week 1: Breadth"
-desc: "Steganography"
+lecture_date: "2019-08-09 09:00:00.00-7:00"
+topic: "Breadth"
+desc: "Compressing information"
 week: "1"
 indent: true
 link_topic_desc_only: true
-ready: True
+ready: true
 ---
 
-# Breadth lecture  on 8/11: Paul Cao
-In this lecture, we will look at steganography, aka. hiding information in plain sight. Here is the link to our slides
-[lecture slide](https://drive.google.com/open?id=0B4nPq7yIvSF_VEdBcVNNb25rSFk)
+# Breadth Lecture (Curt)
+Compressing data using Huffman coding and the concept of entropy.
+
+Lecture slides: [Compressing Information](/lectures/week1/SPIS Lecture 08 - Breadth - Compressing Information.pdf)
