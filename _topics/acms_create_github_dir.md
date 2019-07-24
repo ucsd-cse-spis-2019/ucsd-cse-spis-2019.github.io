@@ -13,7 +13,7 @@ This brief tutorial has two purposes.
 1.  By the time you are finished, you should have a `github` directory immediately under the home directory of your
     SPIS ETS account, that is a directory called `~/github`
     
-2.  By the time you are finished, you'll have learned about a few basic Linux/Unix commands, including the ones in the table below. Note that Linux is an operating system that is a clone of the Unix operating system. Everyone you learn will apply to both, and we will talk about Unix and Linux interchangeably throughout the SPIS labs.
+2.  By the time you are finished, you'll have learned about a few basic Linux/Unix commands, including the ones in the table below. Note that Linux is an operating system that is a clone of the Unix operating system. However, everything you learn here will apply to both, and we will talk about Unix and Linux interchangeably throughout the SPIS labs.
 
 If *both* you *and* your pair partner are already thoroughly familiar with Unix command basics&mdash;that is, you know how to create
 `~/github`, and you are *throughly* familiar with everything in the table below, you can just create ~/mkdir, and skip
