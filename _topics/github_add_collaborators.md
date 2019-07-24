@@ -73,7 +73,7 @@ Note that if Alex provided <b>Admin</b> access, Chris will have full privileges 
 the repo.  If Alex only provided <b>Write</b> access (as in the example shown below), Chris's
 repo page will not have the <b>Setting</b> page.    To fix that, see the section "Changing access levels for collaborators", later on this page.
 
-![you-now-have-access-to-the-spis19-lab02-Alex-Chris-repo-50.png](you-now-have-access-to-the-spis19-lab02-Alex-Chris-repo-50.png){: title="you-now-have-access-to-the-spis19-lab02-Alex-Chris-repo-50.png" }
+![you-now-have-access-to-the-spis16-lab02-Alex-Chris-repo-50.png](you-now-have-access-to-the-spis16-lab02-Alex-Chris-repo-50.png){: title="you-now-have-access-to-the-spis16-lab02-Alex-Chris-repo-50.png" }
 
 # What if Chris doesn't get an invitation email?
 
