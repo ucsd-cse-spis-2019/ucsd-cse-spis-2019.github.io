@@ -10,7 +10,7 @@ Here's how, described as both a list of steps, and a list of images.  In this ex
 
 * The first pair partner is Alex Triton, github id `atriton`
 * The second pair partner is Chris La Jolla, github id `chrislajolla`
-* Alex has create a repo called spis19-lab02-Alex-Chris under the github organization ucsd-cse-spis-2016 and wants to give Chris access to this repo as well.
+* Alex has create a repo called spis16-lab02-Alex-Chris under the github organization ucsd-cse-spis-2016 and wants to give Chris access to this repo as well.
 
 These are the steps Alex should take to invite Chris as a collaborator:
 
