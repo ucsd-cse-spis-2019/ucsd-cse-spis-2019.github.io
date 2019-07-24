@@ -65,7 +65,7 @@ Make sure both you and your partner are logged in and have both a web browser an
 
 ## Step 2: Register your iClicker
 
-Go to [this survey](https://goo.gl/forms/v3sbJ25HozJSk3Z02) to enter your iClicker remote ID (the number on the sticker on the back) and your PID.  If you have previously done this step, you do not need to do it again now.
+Go to [this survey](https://forms.gle/6ckwCFyTJs6SdesU9) to enter your iClicker remote ID (the number on the sticker on the back) and your PID.  If you have previously done this step, you do not need to do it again now.
 
 ## Step 3: Visit github.com to create or update your account
 
@@ -76,7 +76,7 @@ At the github.com page, if you don't already have a github.com account, using yo
 Or, if you already have a github.com account, log in to it, and add your ucsd.edu email address to the list of email addresses associated with the account.
 
 Then, fill out the following form to let us know what your github id is:
-[https://goo.gl/forms/kwGyChjztIuaxbeh2](https://goo.gl/forms/kwGyChjztIuaxbeh2)
+[https://forms.gle/cNv6mT7uA8z9wbKT7](https://forms.gle/cNv6mT7uA8z9wbKT7)
 
 ## Step 4:  Bringing up IDLE
 
@@ -86,7 +86,7 @@ In IDLE, you you create, edit, and run Python code.
 
 To bring up IDLE, type `idle3` at the bash shell prompt.  The "shell prompt" is the line where you can type commands in the terminal window you opened in step 1, and it should look something like this:
 ```
-[sp18t1@ieng6-248]:~:14$ 
+[sp19t1@ieng6-248]:~:14$ 
 ```
 You type `idle3` after the `$` and then press `Enter`.  You should see a new window pop up called the "Python shell".  This is where Python code can be run.  
 
