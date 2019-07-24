@@ -3,7 +3,7 @@ topic: "ETS Account: Creating ~/github"
 desc: "Bash shell command intro, and creating your ~/github directory"
 ---
 
-**Note: In some of the figures in this lab spis19 is used.  Imagine these are replaced wtih spis19, which is the name that corresponds to this year's SPIS**
+**Note: In some of the figures in this lab spis16 is used.  Imagine these are replaced wtih spis19, which is the name that corresponds to this year's SPIS**
 
 # Creating ~/github
 ## And learning some shell commands in the process
