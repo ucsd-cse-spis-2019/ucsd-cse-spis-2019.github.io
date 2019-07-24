@@ -43,7 +43,7 @@ This first part of the lab is individual, so you need your own workstation. Howe
 
 Now, let's get going with Picobot. Fist, log into a computer, and open a web browser. 
 
-For a resource on Picobot, check out **[Chapter 1.2 of the book CS for All](https://www.cs.hmc.edu/csforall/Introduction/Introduction.html#picobot).**  BTW, this is just one of the chapters of the online textbook we recommend as your go-to resource for your journey throughout SPIS. But if you are eager to get started, and we hope you are, you can focus on this chapter on picobot first.
+For a resource on Picobot, check out **[Chapter 1.2 of the book CS for All](http://www.cs.bc.edu/~muller/teaching/cs101/s13/dist/docs/HMCS5book.pdf).**  BTW, this is just one of the chapters of the online textbook we recommend as your go-to resource for your journey throughout SPIS. But if you are eager to get started, and we hope you are, you can focus on this chapter on picobot first.
 
 Based on the information in this *CS for All* chapter or what you learned in class, try to answer the following questions for yourself. If you are not sure, feel free to discuss with your partner or a mentor. You don't need to submit these answers, but make sure you are able to formulate an answer for yourself. Confer with your partner to see if they are thinking the same.
 
@@ -87,7 +87,7 @@ For the remainder of the lab, you will be doing Pair Programmming. First, decide
 
 Create a new github repo under the "ucsd-cse-spis-2019" organization. Your github repo should be called spis19-lab01-Name1_Name2 (where Name1 and Name2 are the pair names). This was explained in lab00. Feel free to refer back to this lab if you forgot how to do this.
 
-Then Create two text files in your git repo: `emptyroom.txt` and `maze.txt`. These files will be used to submit your Picobot code for the empty room and maze exercises. See additional instructions in the subsequent sections. Ask for the mentors' help if you have any questions.
+Then create two text files in your git repo: `emptyroom.txt` and `maze.txt`. These files will be used to submit your Picobot code for the empty room and maze exercises. See additional instructions in the subsequent sections. Ask for the mentors' help if you have any questions.
 
 
 
@@ -102,7 +102,7 @@ Once you are finished with this problem, save your code for the empty room solut
 
 ## Program Picobot to solve the maze
 
-Once you have successfully covered the empty room, use the MAP "-->" button to find the maze, and implement the maze covering algorithm. Think carefully about your states.  You will likely want to use 4 states where each state represents a different direction that you are currently moving.  
+Once you have successfully covered the empty room, use the MAP "-->" button to find the maze, and implement the maze covering algorithm. Think carefully about your states.  You will likely want to use 4 states where each state represents a different direction that you are currently moving in.  
 
 A good way to solve this kind of maze is by using the "right hand rule". Basically, the idea is best explained if you imagine you are Picobot and you have to go through this maze with your eyes closed (so you can only feel what is directly around you). If you would keep your right hand always to a wall on your right, and keep following that wall as it twists and turns through the maze, you will eventually cover the entire maze. Convince yourself that this is indeed true. Does this algorithm make sense? In what kind of maze would this break down? (Fortunately, we are given a maze where this idea will work).
 
@@ -110,26 +110,26 @@ Now, how can you implement this in Picobot? If you want, here are some hints to 
 
 When you are done and have tested your solution thoroughly, save your code fin the file `maze.txt` in your github repo. 
 
-Are you up for more? There are some fun challenge problems in the next section. They are optional. 
+Are you up for more? There are some fun challenge problems in the next section. You are highly encouraged to try these, but they are not required. 
 
 BTW, the style of coding that Picobot uses is an example of finite state machines. We will explore it further later on in SPIS. The concept of state machines is particularly useful if you are interested in robotics, for example. However, many other applications use this style as well.
 
 
-## SUPER-challenge problems
+## Challenge problems
 
-When you've mastered the maze and you're ready for more, try some optional SUPER-challenge problems. You don't need to submit these, but you could if you wanted to; just create additional files in your github repo with .txt endings, and put an explanation for each of those files in your README.md. 
+When you've mastered the maze and you're ready for more, try some optional challenge problems (some of these are super challenging). You don't need to submit these, but you could if you wanted to; just create additional files in your github repo with .txt endings, and put an explanation for each of those files in your README.md. 
 
 For example, you could challenge yourself with some of the following problems:
 
 * For the empty room, see if you can use only 6 rules. 
 
-* For the empty room, can you build a machine that covers each cell in the room exactly once? 
-
 * For the maze, see if you can use only 8 rules. 
 
-* In the Roomba vacuum cleaner analogy, you might know that the edges of a room get dirtier than the middle of the room (dust kicked up accumulates near the walls). Can you program Picobot to cover the cells that are adjacent to walls at least twice and cover interior cells exactly once? 
-
 * Scroll through the different maps and see if you can write Picobot programs to solve these other rooms. 
+
+* For the empty room, can you build a machine that covers each cell in the room exactly once? 
+
+* In the Roomba vacuum cleaner analogy, you might know that the edges of a room get dirtier than the middle of the room (dust kicked up accumulates near the walls). Can you program Picobot to cover the cells that are adjacent to walls at least twice and cover interior cells exactly once? 
 
 * Can you write a single program that works for ALL provided mazes?
 
