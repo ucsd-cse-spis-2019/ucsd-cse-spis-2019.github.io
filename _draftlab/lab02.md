@@ -11,11 +11,11 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Overview
 
-The main purpose of this lab is to practice, as pairs, a few skills involving Python, Unix, and github.
+The main purpose of this lab is to practice, as pairs, a few skills involving Python, Linux, and github.
 
 # Partner structure for {{page.num}}
 
-You will work with a partner for the programming part of this lab.  However, you should work through the Unix part of this lab by yourself.  You should work next to your partner, making sure you both understand what you are doing.  
+You will work with a partner for the programming part of this lab.  However, you should work through the Linux part of this lab by yourself.  You should work next to your partner, making sure you both understand what you are doing.  
 
 # More specific Learning Objectives
 
@@ -49,10 +49,10 @@ It also covers some basics of the commands you can use at the bash shell prompt&
 `pwd`, `cd`, `mkdir`, and others that you'll need to know for SPIS (and in your later UCSD CSE courses) for working
 with your ETS account.
 
-If *both* you *and* your pair partner are already thoroughly familiar with Unix command basics&mdash;that is, you know how to create `~/github`, and you are *throughly* familiar with everything in the table below, you can just create `~/github`, and skip the tutorial.
+If *both* you *and* your pair partner are already thoroughly familiar with Linux/Unix command basics&mdash;that is, you know how to create `~/github`, and you are *throughly* familiar with everything in the table below, you can just create `~/github`, and skip the tutorial.
 
 But if either or both of you has any doubt, you are strongly encourage each of you to go through this page carefully and slowly,
-to learn some of the basics of working with Unix commands at the bash shell.  That is one of the most fundamental skills you'll need throughout all of the courses that use the ACMS unix accounts during your entire stay at UCSD.
+to learn some of the basics of working with Unix commands at the bash shell.  That is one of the most fundamental skills you'll need throughout all of the courses that use the ACMS Unix accounts during your entire stay at UCSD.
 
 We would encourage you to go through the entire tutorial at least once in one pair partner's account, and then repeat it briefly in the second pair partner's account so that each partner has a ~/github subdirectory.
 
@@ -132,7 +132,7 @@ If the email doesn't arrive, though, or anything is not clear, there are trouble
 [GitHub: Adding collaborators](https://ucsd-cse-spis-2019.github.io/topics/github_add_collaborators)
  
 
-## Step 3: Cloning a private repo at the bash (Unix) command line
+## Step 3: Cloning a private repo at the bash (Linux/Unix) command line
 
 Next, you need to clone your private repo into the `~/github` directory of one of your ACMS accounts (either one will do.)
 
@@ -265,7 +265,7 @@ if __name__ == "__main__": main()
 
 ```
 
-Now when you run your code using F5 from the window, all the tests will run automatically.  Notice that main uses the method approximatelyEqual, which we wrote above to compare floating point numbers taking into consideration roundoff error. Make sure you understanding the code above.  What do you think the last line does?  Talk to your partner, and if you have questions, ask the tutors or instructors.
+Now when you run your code using F5 from the window, all the tests will run automatically.  Notice that main uses the method approximatelyEqual, which we wrote above to compare floating point numbers taking into consideration roundoff error. Make sure you understand the code above.  What do you think the last line does?  Talk to your partner, and if you have questions, ask the tutors or instructors.
 
 You can use either method to test your code throughut SPIS.  Or you can check out [Option 3: Unit Testing](https://docs.python.org/3.7/library/unittest.html).
 
@@ -283,8 +283,8 @@ a third step to update the `origin` repo on github.com with that code.
 
 The process is described in two articles: 
 
-* a longer version that goes into more detail: [Git: basic workflow](/topics/git_basic_workflow/)
-* a shorter version that is more handy reference: [Git: worflow explained](/topics/git_workflow_explained/)
+* a longer version that goes into more detail: [Git: worflow explained](/topics/git_workflow_explained/)
+* a shorter version that is more handy reference: [Git: basic workflow](/topics/git_basic_workflow/)
 
 Essentially, though here's what you are going to do:
 
