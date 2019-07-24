@@ -16,11 +16,11 @@ These are the steps Alex should take to invite Chris as a collaborator:
 
 1. Navigate to the repo page, and click on <b>Settings</b> for the repo
 
-    ![spis19-lab02-Alex-Chris-repo-page-50.png](spis19-lab02-Alex-Chris-repo-page-click-Settings-50.png){: title="Click settings on repo page" }
+    ![spis16-lab02-Alex-Chris-repo-page-50.png](spis16-lab02-Alex-Chris-repo-page-click-Settings-50.png){: title="Click settings on repo page" }
 
 1. Select <b>Collaborators &amp; Teams</b> from the menu at the left side of the page.
 
-    ![spis19-lab02-Alex-Chris-repo-settings-50.png](spis19-lab02-Alex-Chris-repo-settings-click-collaborators-50.png){: title="click 'Collaborators &amp; teams' " }
+    ![spis16-lab02-Alex-Chris-repo-settings-50.png](spis16-lab02-Alex-Chris-repo-settings-click-collaborators-50.png){: title="click 'Collaborators &amp; teams' " }
 
 1. On the lower half of the page, in the "Add Collaborator" section, start typing in the github id
     of the pair partner that you want to add as a collaborator.
