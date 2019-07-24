@@ -1,12 +1,11 @@
 ---
 num: "aps3"
-desc: "Greedy-Method-and-Iterative-Improvement"
+desc: "APS homework 3"
 ready: true
-assigned: 2017-08-23 11:00:00.00-7:00
-due: 2017-08-27 22:00:00.00-7:00
+assigned: 2019-08-20 9:00:00.00-7:00
+due: 2019-08-25 21:00:00.00-7:00
 layout: default
 ---
 
-Please use the same repo you use for your other [homework](/hwk/h01/). In a file named aps3.md, write a solution to [these problems](/hwk/aps3/aps3problems.pdf).
+For more information on the APS homework assignment, visit the [APS page](https://sites.google.com/a/eng.ucsd.edu/spis/home/academicprogram/2019_aps).
 
-You may find it helpful to refer to the [slides from class](/hwk/aps3/aps3NotesAug23.pptx).
