@@ -16,5 +16,5 @@ The first assigned video gives you an overview of the field of computer science 
 https://www.youtube.com/watch?v=SzJ46YA_RaA/).
 
 
-Watch the video, and then enter your responses to the questions in [this Google form](https://goo.gl/forms/HYpffhEsu1AMA5TC2).
+Watch the video, and then enter your responses to the questions in [this Google form](https://forms.gle/e6vKEaCHvhbTFqS48).
 
