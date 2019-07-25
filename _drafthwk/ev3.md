@@ -14,5 +14,5 @@ The enrichment video this week talks about bias in machine learning.  It's a lig
 [Bias in Machine Learning](https://youtu.be/59bMh59JQDo)
 # UPDATE THESE
 
-After watching this video, respond to the questions in [this Google form](https://goo.gl/forms/CcrSQG1vXHHXKBGp2).
+After watching this video, respond to the questions in [this Google form](https://forms.gle/ZBveWQ8hcVjVecmB8).
 
