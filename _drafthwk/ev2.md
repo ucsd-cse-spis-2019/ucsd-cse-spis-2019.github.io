@@ -16,5 +16,5 @@ The enrichment videos this week introduce you to two women who made big contribu
 
 Then do some research to find another person from history who had an influence in computing in any way (large or small), who is of interest to you.  Find a website and/or video that talks about that person to learn a bit about them and their influence in computing.
 
-Finally, enter your responses to the questions in [this Google form](https://goo.gl/forms/loyF1PvTA7vBSs9G2).
+Finally, enter your responses to the questions in [this Google form](https://forms.gle/vWjvb3T7QsuRnBYTA).
 
