@@ -140,19 +140,19 @@ Note that, when we ran our program, we called `python3` instead of just `python`
 Once both you and your partner have run your "Hello World!" programs, you are ready to move on to the next step.  Remember, check in with your partner to make sure they are ready to move on.  Do not leave your partner in the dust!
 
 
-## Step 6:  Accept invitation to ucsd-cse-spis-2019 github organization
+## Step 6:  Accept invitation to ucsd-cse-spis-2019 GitHub organization
 
-The mentors/instructors should have invited you to the ucsd-cse-spis-2019 github organization (if they haven't, the invitation will come soon).
+The mentors/instructors should have invited you to the [ucsd-cse-spis-2019](https://github.com/ucsd-cse-spis-2019) GitHub organization (if they haven't, the invitation will come soon).
 
 You should find a place where you can accept this invitation if you click on this link and look near the top of the page:
 
 <https://github.com/ucsd-cse-spis-2019>
 
-Click on the invitation so that you are part of the ucsd-cse-spis-2019 organization.
+Click on the invitation so that you are part of the [ucsd-cse-spis-2019](https://github.com/ucsd-cse-spis-2019) organization.
 
-## Step 7:  Create your first github repo, a practice repo.
+## Step 7:  Create your first GitHub repo, a practice repo.
 
-Your next step will be to create a github *repository* or repo for short.  
+Your next step will be to create a GitHub *repository* (or *repo* for short).  
 
 Your first repository will have a name that corresponds to your first name and last initial such as:
 
@@ -161,15 +161,15 @@ Your first repository will have a name that corresponds to your first name and l
 
 To create this repo:
 
-* In your web browser, navigate to [https://github.com](https://github.com)
+* In your web browser, navigate to [github.com](https://github.com)
 
-* Login to your github.com account, and 
+* Login to your GitHub account, and 
 
 * Then create a new repository. You do this by pressing the green button with the words "New". Alternatively, on the menu bar on top, there is a '+' sign with a down arrow next to it. If you click it, you also get the option of creating a new repository. 
 
 On the next screen:
 
-* Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2019`, NOT your own github id.
+* Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2019`, NOT your own GitHub id.
 * Put `practice-alex-t` as the name (BUT PUT YOUR OWN NAME AND FIRST INITIAL, not literally `alex-t` :-) )
 * check the box to "Initialize this repository with a README"
 * Select a `.gitignore` file for Python
@@ -184,16 +184,13 @@ Periodically, check in on your partner. You are there to help each other.
 
 For this step, please ask someone to take a photo of you, with your face and your name tag visible. We will use these pictures to create a roster, so please make sure you are easily recognizable. They can then send you the photo through email.
 
-Once you have the photo in your email, access it from the web browser of the ETS
-
-
-linux machine at which you are
-seated.   Save the photo (i.e. the .png, .jpg, or whatever) to a file.  Depending on the browser you are using, this 
+Once you have the photo in your email, access it from the web browser of the ETS linux machine at which you are
+seated.   Save the photo (i.e., the `.png`, `.jpg`, or whatever) to a file.  Depending on the browser you are using, this 
 file may end up in your "home directory", or in some other directory (e.g. `~/Downloads`, `~/Desktop`, etc.)
 
-Once you've located it, change the name to `alex-t.jpg` or `alex-t.png` or whatever. You need to keep the .jpg or .png exactly as it is, but change the first part of the filename to match your first name and last initial, in lowercase, separated by a hyphen (`-`). The naming convention is important, because the SPIS staff is going to access all of these images to create a SPIS photo album so that we can all learn your names more quickly.
+Once you've located it, change the name to `alex-t.jpg` or `alex-t.png` or whatever. You need to keep the `.jpg` or `.png` file extension exactly as it is, but change the first part of the filename to match your first name and last initial, in lowercase, separated by a hyphen (`-`). The naming convention is important, because the SPIS staff is going to access all of these images to create a SPIS photo album so that we can all learn your names more quickly.
 
-Once you've located it, your next job will be to upload it to your github practice repository.  We'll discuss how
+Once you've located it, your next job will be to upload it to your GitHub practice repository.  We'll discuss how
 in the next step.
 
 
@@ -217,7 +214,7 @@ Navigate again to the main page for your repo, e.g.
 
 `{{site.course_github_url}}/practice-alex-t`
 
-You'll see a file called README.md.  Click on the filename.  This should take you a page for just that file,
+You'll see a file called `README.md`.  Click on the filename.  This should take you a page for just that file,
 where you'll see, among other things, a pencil icon that allows you to make changes to the file.
 
 In that file, add a few lines of text that introduces yourself to the SPIS 2019 instructional staff. 
@@ -231,12 +228,10 @@ Copying it exactly, except for changing the `alex-t.jpg` part to whatever the na
 of your image file is:
 
 ```
-
 ![me](alex-t.jpg)
-
 ```
 
-Save it (click the "Commit change" button), and take a look at your README.md file.  You should see your photo embedded in the README.md text.
+Save it (click the "Commit change" button), and take a look at your README.md file.  You should see your photo embedded in the `README.md` text.
 
 If so, you are almost finished with lab00! How is your partner doing?
 
@@ -256,7 +251,7 @@ SPIS will use a series of deadlines to help you stay on track with your work as 
 Those deadlines are listed on the Calendar, which is linked to from the navigation links at the top of the [SPIS FOCS website](/), as well as from various other places on the website.
 
 Before each of these deadlines, please submit whatever you have completed on that assignment following the instructions given.
-This may mean simply having your latest changes pushed to the appropriate repo on [github.com](https://github.com), or this may mean following an alternative set of instructions to submit your assignment.
+This may mean simply having your latest changes pushed to the appropriate repo on [GitHub](https://github.com), or this may mean following an alternative set of instructions to submit your assignment.
 
 You can also submit earlier if you like. 
 
