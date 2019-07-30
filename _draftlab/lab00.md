@@ -2,7 +2,7 @@
 layout: lab
 num: lab00
 ready: true
-desc: "The basics"
+desc: "The Basics"
 assigned: 2019-08-05 08:30:00.00-7
 due: 2019-08-06 17:00:00.00-7
 ---
@@ -24,9 +24,9 @@ During this lab you will achieve the following administrative one-time steps
 * Learn what your ETS username/password for SPIS is
 * Access your UCSD email account to get your invitation to Piazza
 * Register your iClicker
-* Create an account on github.com using your UCSD email address
-* Fill out a Google Form so that we know your github id
-* Accept an invitation to the ucsd-cse-spis-2019 github organization
+* Create an account on [GitHub](https://github.com) using your UCSD email address
+* Fill out a Google Form so that we know your GitHub username
+* Accept an invitation to the [ucsd-cse-spis-2019](https://github.com/ucsd-cse-spis-2019) GitHub organization
 * Activate your Piazza account
 
 # Learning Goals
@@ -36,10 +36,10 @@ After completing this lab, you should be able to
 * Login to your SPIS ETS account on the Linux Systems in B230 of the CSE Building
 * Bring up a web browser on those machines
 * Bring up a terminal window to access the "bash shell prompt"
-* Bring up IDLE, the programming environment for Python
+* Bring up [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) (a basic text editor) and [gVim](https://en.wikipedia.org/wiki/Vim_(text_editor)#Interface) (the graphical interface of Vim)
 * Create a short Python program and run it
-* Create a Github repository under the ucsd-cse-spis-2019 organization
-* Use the github web interface to upload files and edit text in a README.md file
+* Create a GitHub repository under the [ucsd-cse-spis-2019](https://github.com/ucsd-cse-spis-2019) organization
+* Use the GitHub web interface to upload files and edit text in a `README.md` file
 
 # {{page.num}}, step-by-step 
 
@@ -67,58 +67,75 @@ Make sure both you and your partner are logged in and have both a web browser an
 
 Go to [this survey](https://forms.gle/6ckwCFyTJs6SdesU9) to enter your iClicker remote ID (the number on the sticker on the back) and your PID.  If you have previously done this step, you do not need to do it again now.
 
-## Step 3: Visit github.com to create or update your account
+## Step 3: Visit GitHub to create or update your account
 
-Open a web browser, and navigate to github.com.
+Open a web browser, and navigate to [github.com](https://github.com).
 
-At the github.com page, if you don't already have a github.com account, using your UCSD email address, create one on the "free plan".   
+At the GitHub home page, if you don't already have a GitHub account, using your UCSD email address, create one on the "free plan".   
 
-Or, if you already have a github.com account, log in to it, and add your ucsd.edu email address to the list of email addresses associated with the account.
+Or, if you already have a GitHub account, log into it, and add your `@ucsd.edu` email address to the list of email addresses associated with the account.
 
-Then, fill out the following form to let us know what your github id is:
+Then, fill out the following form to let us know what your GitHub username is:
 [https://forms.gle/cNv6mT7uA8z9wbKT7](https://forms.gle/cNv6mT7uA8z9wbKT7)
 
-## Step 4:  Bringing up IDLE
+## Step 4:  Bringing up gVim
 
-IDLE is the program we'll use to do Python programming during SPIS.
+[Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) is the text editor we'll use to do Python programming during SPIS. Specifically, we will be using its graphical interface, [gVim](https://en.wikipedia.org/wiki/Vim_(text_editor)#Interface), but students who are interested may wish to become proficient with Vim.
 
-In IDLE, you you create, edit, and run Python code.
+To bring up gVim, type `gvim` at the bash shell prompt.  The "shell prompt" is the line where you can type commands in the terminal window you opened in step 1, and it should look something like this:
 
-To bring up IDLE, type `idle3` at the bash shell prompt.  The "shell prompt" is the line where you can type commands in the terminal window you opened in step 1, and it should look something like this:
-```
+```bash
 [sp19t1@ieng6-248]:~:14$ 
 ```
-You type `idle3` after the `$` and then press `Enter`.  You should see a new window pop up called the "Python shell".  This is where Python code can be run.  
 
-BTW, the '3' at the end of idle indicated that we are using Python3 (there are different versions of the Python language, with Python3 being slightly different from the older Python2).
+You type `gvim` after the `$` and then press `Enter`.  You should see a new window pop up called "GVIM".  This is where we will be writing our Python programs.
 
 ## Step 5: Write and run your first Python program
 
-For this step, there is one goal: write a Python 3 program that prints the string `Hello, World!` as its output.
+For this step, there is one goal: write a Python program that prints the string `Hello, World!` as its output.
 
 In this sense, we are following a long tradition: for [more than 40 years](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) it has been a tradition to make printing `Hello, World!` be the first thing you do when learning a new programming language.
 
-First, open a window where you can write your program in a new file.  (Anything you type at the termial is temporary--Python will run it, but it will not be saved, and we want to save our program.)   In the Python shell go to the "File" menu and select "New File".  Another new window will appear, labled "Untitled".  
+Note that, in this course, we will be using Python 3 (there are different versions of the Python language, with Python 3 being slightly different from the older Python 2).
 
-Into this new window, type or copy and paste the code for the `Hello World` program, shown below.  In Python, this program is very short.  It looks like this:
+First, we will create a new file in which we will write our program. In gVim, go to the "File" menu and select "New".  The window will go blank, and the window title will say "[No Name]".
 
-```Python
+Before we start coding, let's save this new file as `hello_world.py`. The file extension `.py` denotes that this will be Python code. In gVim, go to the "File" menu and select "Save As...". This wil bring up a pop up window that will let you choose where to save your file. Let's create a new folder for this assignment. Click on your account name (`spis19xx`), click the "Create Folder" button, replace "Type name of new folder" with `lab00`, and click the "Enter" button on your keyboard to create the folder. Once in the folder, type `hello_world.py` in the box that says "Name:", and click "Save". Now, your file will be saved on your account's desktop. In the future, to save changes this program, go to the "File" menu and select "Save".
+
+Note that gVim has different "modes." When it is first opened, gVim starts in "Command Mode," which lets us run various commands to perform operations on the text or to navigate the file, which is not what we want to do right now. If you want to actually *edit* the file, gVim has to be in "Insert Mode," which lets us edit the text like any other text editor. In order to go from "Command Mode" to "Insert Mode," simply click the `i` key on your keyboard; the bottom of the gVim window should now say `-- INSERT --`. To go back to "Command Mode" from "Insert Mode," simply click the `Escape` key on your keyboard; the `-- INSERT --` text should now disappear. For more information about gVim's modes, see [this tutorial](https://supportweb.cs.bham.ac.uk/documentation/tutorials/docsystem/build/tutorials/gvim/gvim.html#gVim-Core-Commands-Modes).
+
+Now, let's start actually writing our `Hello World` program. Enter "Insert Mode" (by pressing the `i` key), and type or copy/paste the code for the `Hello World` program, shown below. To paste in gVim, go to the "Edit" menu and click "Paste". In Python, this program is very short. It looks like this:
+
+```python
 print('Hello, World!')
 ```
-That's it!   Now, you can also add, on the first line, a *comment* with your name
-and the reason you wrote the program.
 
-```Python
+That's it! Notice that different words and symbols of our code were automatically highlighted different colors. Vim (and most modern text editors) have a feature called "syntax highlighting": if you specify that you're programming in a specific language, the text editor will highlight your code based on that programming language's syntax to make your code easier to read. When we saved our program with the `.py` extension, we essentially told gVim that we will be programming in Python.
+
+Now, you can also add, on the first line, a *comment* with your name and the reason you wrote the program.
+
+```python
 # Alex Triton for CSE SPIS 2019
 print('Hello, World!')
 ```
+
 You are encouraged to write this comment, because it helps someone looking at your code know that *you* wrote it.  But, comments do not affect the functionality of the program.  In general, in computer programming, a *comment* is something that is intended only for human readers of the code, and is otherwise "ignored by the system".   Nearly every programming language has some way to express comments, though the exact rules for formatting of comments -- that is, the *syntax* of comments -- differs from one language to another.
 
-In Python, a `#` starts a comment.  Everything from the `#` to the end of that line is part of the comment.
+In Python, a `#` starts a comment.  Everything from the `#` to the end of that line is part of the comment (and is thus ignored when the program is run).
 
-As far as how to create, save and run this program in IDLE, it's easier to just watch someone do it than to try 
-to read an explanation.  So, we'll demonstrate this in Lecture.  But if you need a refresher or you're doing this before we've demonstrated it in class, this [Youtube video
-explains Hello World in IDLE](http://www.youtube.com/watch?v=Cdk20r2dgFU) explains how to do it.  However, notice that this video is using Python 2, so the format of the print command is a little different (in particular, it does not include the parentheses).
+Now, let's save our program! Remember from before that, in gVim, you can save by going to the "File" menu and clicking "Save".
+
+In order to run your program, go to the terminal, and navigate to the folder we created earlier. You can do so with the following command: `cd ~/lab00`
+
+If you run the `ls` command, you'll **l**i**s**t the files in this folder; you should see our `hello_world.py` program. To run our program using Python 3, you can use the following command:
+
+```bash
+[sp19t1@ieng6-248]:~:14$ python3 hello_world.py
+```
+
+When you run the program, if everything worked correctly, you should see our message: `Hello, world!`
+
+Note that, when we ran our program, we called `python3` instead of just `python`. Some computers have both Python 2 and Python 3 installed at the same time, and just calling `python` can potentially call Python 2 *or* Python 3 depending on how the computer was set up! Thus, for the sake of clarity and to be safe, it's best to specify which version you want to call by using `python3`.
 
 Once both you and your partner have run your "Hello World!" programs, you are ready to move on to the next step.  Remember, check in with your partner to make sure they are ready to move on.  Do not leave your partner in the dust!
 
