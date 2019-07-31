@@ -100,7 +100,7 @@ Note that, in this course, we will be using Python 3 (there are different versio
 
 First, we will create a new file in which we will write our program. In gVim, go to the "File" menu and select "New".  The window will go blank, and the window title will say "[No Name]".
 
-Before we start coding, let's save this new file as `hello_world.py`. The file extension `.py` denotes that this will be Python code. In gVim, go to the "File" menu and select "Save As...". This wil bring up a pop up window that will let you choose where to save your file. Let's create a new folder for this assignment. Click on your account name (`spis19xx`), click the "Create Folder" button, replace "Type name of new folder" with `lab00`, and click the "Enter" button on your keyboard to create the folder. Once in the folder, type `hello_world.py` in the box that says "Name:", and click "Save". Now, your file will be saved on your account's desktop. In the future, to save changes this program, go to the "File" menu and select "Save".
+Before we start coding, let's save this new file as `hello_world.py`. The file extension `.py` denotes that this will be Python code. In gVim, go to the "File" menu and select "Save As...". This wil bring up a pop up window that will let you choose where to save your file. Let's create a new folder for this assignment. Click on your account name (`spis19xx`), click the "Create Folder" button, replace "Type name of new folder" with `lab00`, and click the "Enter" button on your keyboard to create the folder. Once in the folder, type `hello_world.py` in the box that says "Name:", and click "Save". Now, your file will be saved in your account's home directory. In the future, to save changes this program, go to the "File" menu and select "Save".
 
 Note that gVim has different "modes." When it is first opened, gVim starts in "Command Mode," which lets us run various commands to perform operations on the text or to navigate the file, which is not what we want to do right now. If you want to actually *edit* the file, gVim has to be in "Insert Mode," which lets us edit the text like any other text editor. In order to go from "Command Mode" to "Insert Mode," simply click the `i` key on your keyboard; the bottom of the gVim window should now say `-- INSERT --`. To go back to "Command Mode" from "Insert Mode," simply click the `Escape` key on your keyboard; the `-- INSERT --` text should now disappear. For more information about gVim's modes, see [this tutorial](https://supportweb.cs.bham.ac.uk/documentation/tutorials/docsystem/build/tutorials/gvim/gvim.html#gVim-Core-Commands-Modes).
 
@@ -112,7 +112,7 @@ print('Hello, World!')
 
 That's it! Notice that different words and symbols of our code were automatically highlighted different colors. Vim (and most modern text editors) have a feature called "syntax highlighting": if you specify that you're programming in a specific language, the text editor will highlight your code based on that programming language's syntax to make your code easier to read. When we saved our program with the `.py` extension, we essentially told gVim that we will be programming in Python.
 
-Now, you can also add, on the first line, a *comment* with your name and the reason you wrote the program.
+Now, you can also add, on the first line, a *comment* with your name and the reason you wrote the program (replace 'Alex Triton' with your own name).
 
 ```python
 # Alex Triton for CSE SPIS 2019
