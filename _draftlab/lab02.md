@@ -11,7 +11,7 @@ If you find typos or problems with the lab instructions, please report them on P
 
 # Overview
 
-The main purpose of this lab is to practice, as pairs, a few skills involving Python, Linux, and github.
+The main purpose of this lab is to practice, as pairs, a few skills involving Python, Linux, and GitHub.
 
 # Partner structure for {{page.num}}
 
@@ -22,14 +22,14 @@ You will work with a partner for the programming part of this lab.  However, you
 The most important thing we want you to get out of this lab is the ability to
 * create a solution to a Python problem 
 * iterate until your solution produces the correct behavior on a wide as possible range on inputs
-* keep every step of that development process in a github repo
+* keep every step of that development process in a GitHub repo
 
 
 Here's a more complete list of our learning objectives:
 
 * A few Unix commands, including:  `pwd`, `ls`, `cd`, `mkdir`
-* Some new options for creating a private github repo for a lab
-   * Creating it with a README.md and .gitignore for Python
+* Some new options for creating a private GitHub repo for a lab
+   * Creating it with a `README.md` and `.gitignore` for Python
    * Adding a pair partner as a collaborator.
 * How to clone a private repo at the Bash (Unix) command line
 * How to store a Python file in that repo
@@ -87,31 +87,31 @@ When both partners have a `~/github` directory and are comfortable with shell ba
 
 There are three steps involved here.  First, we'll give you an overview, and then the details:
 
-1. One of the two pair partners should log into github.com to create an empty private repo *in a particular way*, namely,    pre-populated only with a README.md, and a .gitignore for Python.  
-2. The first pair partner will then invite the second to be a collaborator with <b>Admin</b> access.   
+1. One of the two pair partners should log into [GitHub](https://github.com) to create an empty private repo *in a particular way*, namely, pre-populated only with a `README.md`, and a .`gitignore` for Python.  
+2. The first pair partner will then invite the second to be a collaborator with **Admin** access.   
 3. Finally, the second pair partner needs to accept the invitation to be a collaborator.    
 
 
-Note: it doesn't matter which pair partner creates the repo&mdash;it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the <b>Pair Name</b> column on the [SPIS 2019 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
+Note: it doesn't matter which pair partner creates the repo—it can be the one listed first, or the one listed second in the pair name.  For example, if the pair is listed as Alex_Chris in the **Pair Name** column on the [SPIS 2019 list of pairs](/info/pairs/), it doesn't matter whether Chris creates and then invites Alex, or Alex creates and then invites Chris.   
 
 For purposes of the rest of these instructions, though, we'll refer to "first" as the partner
-under whose github account the repo is initially created, and "second" as the partner that gets invited to collaborate.
+under whose GitHub account the repo is initially created, and "second" as the partner that gets invited to collaborate.
 
-And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the <b>Pair Name</b> column on the [SPIS 2019 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
+And regardless of who creates and who invites, *please* name the repo according to the pair order that is listed in the **Pair Name** column on the [SPIS 2019 list of pairs](/info/pairs/).  That makes it MUCH easier for us to find your work!
    
-### Step 2a: Create a private repo with a README.md and a .gitignore file for Python.
+### Step 2a: Create a private repo with a `README.md` and a `.gitignore` file for Python.
 
 Choose which pair partner is going to create the repo&mdash;that pair partner should be the one that is logged into github.com.
 
-To create the repo follow the instructions at the link: [github create repo Method 2](http://ucsd-cse-spis-2019.github.io/topics/github_create_repo/#method2).
+To create the repo follow the instructions at the link: [GitHub create repo Method 2](http://ucsd-cse-spis-2019.github.io/topics/github_create_repo/#method2).
 
 As you follow these instructions, create:
-* a private github repo under the `ucsd-cse-spis-2019` github organizaiton,
+* a private github repo under the `ucsd-cse-spis-2019` GitHub organizaiton,
 * with the name `spis19-lab02-Name1-Name2` where,
     * `Name1` is the first pair partner's preferred first name
     * `Name2` is the second pair partner's preferred first name
 
-The <b>Pair Name</b> column in the [SPIS 2019 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
+The **Pair Name** column in the [SPIS 2019 Pairs List](/info/pairs/) page corresponds to this `First-Second` part of your repo name.
 
 An example correct repo name for the ficticious SPIS students Alex Triton and Chris La Jolla would be: 
 
@@ -144,13 +144,13 @@ When you've done that, we are finally ready for some Python programming!
 
 To review what you've done so far:
 
-* You create a repo called `spis19-lab02-Name1-Name2` on github.com
+* You create a repo called `spis19-lab02-Name1-Name2` on GitHub
 * You cloned that repo into your ACMS account under the `~/github` directory.
 * That means you actually have *two* repos now. 
-    * The repo on github.com and the repo on your ACMS account are *separate*, but *linked*
-    * More specifically, the one on ACMS points to the one on github.com as its `origin` repo
+    * The repo on GitHub and the repo on your ACMS account are *separate*, but *linked*
+    * More specifically, the one on ACMS points to the one on GitHub as its `origin` repo
     
-What you will do now is put some Python code into the local repo&mdash;or more precisely, you'll put some Python
+What you will do now is put some Python code into the local repo—or more precisely, you'll put some Python
 code into the directory that corresponds to that repo.   You won't actually commit it to the repo until the next step.
 
 So, what we want to do first is make `~/github/spis19-lab02-Name-Name` (except with your pair's names, not literally `Name-Name`) be your current directory.     Use the `cd` command to make that happen.  
@@ -164,15 +164,15 @@ should be able to type `pwd` and see that your current directory path ends in `g
 [spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:119$ 
 ```
 
-Then, start up IDLE by typing `idle3`:
+Then, start up gVim by typing `gvim`:
 
 ```
-[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:119$ idle3
+[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:119$ gvim
 ```
 
-Once you do, use the `File -> New File` menu item to open a new window in which you can type Python code.
+Once you do, use the `File -> New` menu item to open a new file in which you can type Python code. As before, before we acctually start coding, we should save it by choosing the `File -> Save As...` menu item, giving it the name `wageCalculator.py`. When you save, the save dialog should allow you to select a folder. Be sure to save inside the `~/github/spis19-lab02-Name-Name` folder that corresponds to your local GitHub repo.   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
 
-Into this window, enter this function definition.  This function uses the the gender wage gap in the United States to calculate a woman's wage based on the corresponding male wage.  The wage gap is defined as the difference between a man's salary and a woman's salary, expressed as a percentage of a man's salary.  In the United states the wage gap is 18.2%.  To calculate a woman's salary, given a man's salary using the wage gap we can multiply the man's salary by 1-wageGap.  You can learn more about the wage gap and see more data [here](https://data.oecd.org/earnwage/gender-wage-gap.htm).
+Now to code! In the gVim window, type (or copy/paste) this function definition.  This function uses the the gender wage gap in the United States to calculate a woman's wage based on the corresponding male wage.  The wage gap is defined as the difference between a man's salary and a woman's salary, expressed as a percentage of a man's salary.  In the United states the wage gap is 18.2%.  To calculate a woman's salary, given a man's salary using the wage gap we can multiply the man's salary by 1-wageGap.  You can learn more about the wage gap and see more data [here](https://data.oecd.org/earnwage/gender-wage-gap.htm).
 
 It should make sense to you based on what you've learned about Python functions so far.
 
@@ -184,13 +184,9 @@ def convertWageMtoW(mWage):
    return ratio*mWage
 ```
 
-Save this file by choosing `File -> Save` from the Idle menu, giving it the name `wageCalculator.py`.  
+Now, we want to run our code. First, save the file again (`File -> Save`), and open a second terminal window. In this new terminal window, navigate to the `~/github/spis19-lab02-Name-Name` folder, and do an `ls` command as shown here.  You should see your file, with the name exactly as shown here.
 
-When you save, the save dialog should indicate that they are being saved inside the ~/github/spis19-lab02-Name-Name folder that corresponds to your local github repo (you should see a .git directory already present).   It is important that they are saved there, and not somewhere else.   If you save them in another place, the next few steps of the lab won't work properly.
-
-Onve you have saved your file, with IDLE still open, open a second terminal window and navigate in that window into the `~/github/spis19-lab02-Name-Name` folder, and do an ls command as shown here.  You should see your file, with the name exactly as shown here.
-
-Note that if you also have a .pyc file, that's fine (or if you don't, that's fine too).  You don't need to worry about that one, or remove it.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
+Note that if you also have a `.pyc` file, that's fine (or if you don't, that's fine too).  You don't need to worry about that one, or remove it if you want.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
 
 ```
 [spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:170$ ls
@@ -201,7 +197,7 @@ README.md  wageCalculator.py  wageCalculator.pyc
 
 ### Now run and test your code
 
-So now you've got a function, but how do we know this code is correct?  We need to test it!  And in order to test it, we need to define some test cases--in other words, we need to calculate the expected output for several inputs.  The first step to testing is to define these input-output pairs.  We can use a calculator to do this, for example:
+So now you've got a function, but how do we know this code is correct?  We need to test it!  And in order to test it, we need to define some test cases—in other words, we need to calculate the expected output for several inputs.  The first step to testing is to define these input-output pairs.  We can use a calculator to do this, for example:
 
 * men's wage of 100 should output 81.8
 * men's wage of 76.2 should output 62.3316
@@ -212,7 +208,17 @@ It's good to try a range of inputs that are qualitatively different.  Notice in 
 Now we need to run these tests cases.  We can do this in one of two ways:
 
 *Option 1: Running test cases in the interactive shell*
-Load the Python code into the interacive Python window by selecting "Run -> Run Module" from the menu at the top of the window with the function definition you copied in above (wageCalculator.py), or simply by pressing F5 in the window with the code.  Now in the Python shell at the `>>>` prompt, run each test case one at a time, and visually verify that that the answers are correct:
+
+Load the Python code into the interactive Python window by running the `python3` command in the bash shell, WITHOUT specifying a file (i.e., JUST `python3` and nothing else).  Now, in the Python shell at the `>>>` prompt, we can import the `convertWageMtoW` function we wrote:
+
+```
+>>> from wageCalculator import convertWageMtoW
+```
+
+Notice that, in this import statement, when we wanted to specify the Python file from which we wanted to import, we said `from wageCalculator` instead of `from wageCalculator.py`. This is because, when we specify `wageCalculator` as the Python "module" we want to import, Python will automatically know that it should try looking for a file called `wageCalculator.py`.
+
+Then, we can run each test case one at a time, and visually verify that that the answers are correct:
+
 ```
 >>> convertWageMtoW(100)
 81.8
@@ -225,7 +231,8 @@ Load the Python code into the interacive Python window by selecting "Run -> Run 
 You might find that your imlementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
 
 *Option 2: write tests in a main method*
-The second option for writing test cases is to write a special method, called a main method, that will be automatically run when you load your code into the interpreter using F5.  Add the following code to your `wageCalculator.py` file, below the code for your `convertWageMtoW` method:
+
+The second option for writing test cases is to write a special method, called a "main" method, that will be automatically run when the Python script is run.  Add the following code to your `wageCalculator.py` file, below the code for your `convertWageMtoW` method:
 
 ```python
 def approximatelyEqual(expected, val, epsilon):
@@ -261,17 +268,17 @@ def main():
     else:
         print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
 
-if __name__ == "__main__": main()
-
+if __name__ == "__main__":
+    main()
 ```
 
-Now when you run your code using F5 from the window, all the tests will run automatically.  Notice that main uses the method approximatelyEqual, which we wrote above to compare floating point numbers taking into consideration roundoff error. Make sure you understand the code above.  What do you think the last line does?  Talk to your partner, and if you have questions, ask the tutors or instructors.
+Now, when you run your code from the terminal by calling `python3 wageCalculator.py`, all the tests will run automatically.  Notice that main uses the method `approximatelyEqual`, which we wrote above to compare floating point numbers taking into consideration roundoff error. Make sure you understand the code above.  What do you think the last line does?  Talk to your partner, and if you have questions, ask the tutors or instructors.
 
 You can use either method to test your code throughut SPIS.  Or you can check out [Option 3: Unit Testing](https://docs.python.org/3.7/library/unittest.html).
 
 Ok, so now you have a Python file with a function definition in it, and you have some test cases.
 
-What's next?  We want to get this Python code into your local git repo, and then push the changes up to github.com.
+What's next?  We want to get this Python code into your local git repo, and then push the changes up to GitHub.
 
 
 ## Step 5:  The basic git workflow of `git add...`, `git commit...`, `git push...`
@@ -279,7 +286,7 @@ What's next?  We want to get this Python code into your local git repo, and then
 So, having the code in the directory isn't enough to get it into the git repo.
 
 You actually have to go through a series of two steps to get the code into your local repo, and then
-a third step to update the `origin` repo on github.com with that code.
+a third step to update the `origin` repo on GitHub with that code.
 
 The process is described in two articles: 
 
@@ -288,7 +295,7 @@ The process is described in two articles:
 
 Essentially, though here's what you are going to do:
 
-1.  Make sure you are in your ~/github/spis19-lab02-Name-Name directory
+1.  Make sure you are in your `~/github/spis19-lab02-Name-Name` directory
 2.  Type `git status` and read what it says
 3.  Type `git add wageCalculator.py` to *stage* this file (get it ready to be added to the repo)
 4.  Type `git status` and read what it says
@@ -296,7 +303,7 @@ Essentially, though here's what you are going to do:
 6.  Type `git status` and read the messages
 7.  Type `git push origin master` to push the changes from your local repo to the origin repo (on github.com)
 8.  Type `git status` and read the messages
-9.  Navigate to your repo's page at https://github.com and see that the two files now appear there, along
+9.  Navigate to your repo's page on [GitHub](https://github.com) and see that the two files now appear there, along
     with your commit message. You may need to refresh the page if you were already on it.
 
 Congratulations, you've just done your first of many dozens of git commits you'll do during SPIS, and the first
@@ -307,6 +314,7 @@ of hundreds or thousands you'll do during your four years at UCSD.
 Finally, it's time for you to write your own code.  
 
 Extend the functionality of your wageCalculator function so that:
+
 * It takes at least one additional parameter
 * It uses an if-statement (or if-else statement, or if-elif-else statement, etc) in its functionality
 
