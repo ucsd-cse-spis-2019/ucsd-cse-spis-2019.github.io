@@ -51,8 +51,8 @@ with your ETS account.
 
 If *both* you *and* your pair partner are already thoroughly familiar with Linux/Unix command basics&mdash;that is, you know how to create `~/github`, and you are *throughly* familiar with everything in the table below, you can just create `~/github`, and skip the tutorial.
 
-But if either or both of you has any doubt, you are strongly encourage each of you to go through this page carefully and slowly,
-to learn some of the basics of working with Unix commands at the bash shell.  That is one of the most fundamental skills you'll need throughout all of the courses that use the ACMS Unix accounts during your entire stay at UCSD.
+But if either or both of you has any doubt, we strongly encourage each of you to go through this page carefully and slowly,
+to learn some of the basics of working with Linux/Unix commands at the bash shell.  That is one of the most fundamental skills you'll need throughout all of the courses that use the ACMS Unix accounts during your entire stay at UCSD.
 
 We would encourage you to go through the entire tutorial at least once in one pair partner's account, and then repeat it briefly in the second pair partner's account so that each partner has a ~/github subdirectory.
 
@@ -85,7 +85,7 @@ When both partners have a `~/github` directory and are comfortable with shell ba
 
 ## Step 2: Create your shared lab02 repo 
 
-There are three steps involved here.  First, we'll give you an overview, and then the details:
+There are three steps involved here.  We will explain each of these in detail shortly. But to give you an idea of the process at a high level, we've listed the three steps you will be asked to do, below:
 
 1. One of the two pair partners should log into [GitHub](https://github.com) to create an empty private repo *in a particular way*, namely, pre-populated only with a `README.md`, and a .`gitignore` for Python.  
 2. The first pair partner will then invite the second to be a collaborator with **Admin** access.   
@@ -228,7 +228,7 @@ Then, we can run each test case one at a time, and visually verify that that the
 0.0
 ```
 
-You might find that your imlementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
+You might find that your implementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
 
 *Option 2: write tests in a main method*
 
