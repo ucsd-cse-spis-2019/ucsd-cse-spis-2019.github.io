@@ -141,9 +141,9 @@ If you run the `ls` command, you'll **l**i**s**t the files in this folder; you s
 [sp19t1@ieng6-248]:~:14$ python3 hello_world.py
 ```
 
-When you run the program, if everything worked correctly, you should see our message: `Hello, world!`
+When you run the program, if everything worked correctly, you should see our message: `Hello, world!`. If it complained that `python3` is not known, type `python` instead of `python3`.
 
-Note that, when we ran our program, we called `python3` instead of just `python`. Some computers have both Python 2 and Python 3 installed at the same time, and just calling `python` can potentially call Python 2 *or* Python 3 depending on how the computer was set up! Thus, for the sake of clarity and to be safe, it's best to specify which version you want to call by using `python3`.
+Note that, when we ran our program, we called `python3` instead of just `python`. Some computers have both Python 2 and Python 3 installed at the same time, and just calling `python` can potentially call Python 2 *or* Python 3 depending on how the computer was set up! Thus, for the sake of clarity and to be safe, it's best to specify which version you want to call by using `python3`. However, sometimes this specific alias is not defined; in that case, just use `python`. You can check which version you are using by typing `python --version`.
 
 Once both you and your partner have run your "Hello World!" programs, you are ready to move on to the next step.  Remember, check in with your partner to make sure they are ready to move on.  Do not leave your partner in the dust!
 
