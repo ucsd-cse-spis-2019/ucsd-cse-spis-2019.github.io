@@ -251,7 +251,6 @@ Once you have opened the file, add a new function: `getNumber`, as shown below.
 
 ```python
 def getNumber():
-
    symbols = input("Enter a digit: ")
    number = int(symbols)
    return number
@@ -286,9 +285,7 @@ You are going to add one more function to `testSum.py`, called `sumDigits`. This
 ```python
 # sumDigits.py
 def sumDigits(x):
-
    # You will need to complete this function
-
    return sum
 ```
 
