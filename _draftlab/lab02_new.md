@@ -240,7 +240,43 @@ Since we are still doing lab02, we will be putting all our files in the same fol
 
 ## Adding another function
 
-Open your existing file, `testSum.py`, in gVim. In that file, add a new function: `getNumber`. Your goal is to create this new function.
+Open your existing file, `testSum.py`, in gVim. In that file, add a new function: `getNumber`, as shown below. 
+
+
+```python
+def getNumber():
+
+   symbols = input("Enter a digit: ")
+   number = int(symbols)
+   return number
+
+```
+
+Let's go over this code together. The first line inside getNumber uses the built-in Python function `input()` to ask the user to type in something.  This could be a single symbol (e.g., 'a'), a word (e.g., 'apple') or even an entire novel. You can keep typing until you hit the Return/Enter key. We will assume the user only types in a single digit (so one of '0','1', ... '9'), as this is what we asked the user to do (in the text that is between " "). 
+However, Python interprets whatever is returned by the `input`-function as a *string*, which basically means a collection of symbols. The `int()`-function is used to convert the symbol to a corresponding number (if this is possible). For example, the symbol (letter) '1' gets converted to the number 1. Even though they look the same to use, a computer needs to know whether you are talking about a symbol or a number, and treats those differently. For example, you could multiple the number 1 by two, but what would it even mean to multiple the symbol '1' by two? Finally, now that we have a number, the function returns is number.
+
+Now, you need to modify the `getNumber` function. It should repeatedly ask the number to enter a digit, instead of only once. This means that you probably want to put the bit of code that asks for a user input in some kind of loop (remember `while` from lecture?) The number that is returned by the function should be the combination of these digits. For example if the user enters 4, then 7, then 0 and then 9, the function should return the number 4709.
+You may wonder, if we are putting the user input inside a loop, when do we know to stop? We will assume that as soon as the user answers with a number that is negative, you can stop asking (and ignore this negative number). So in the example above, the user would really enter 4, then 7, then 0, then 9 and then -1 (or any other number). 
+
+When you think you have your function, or even part of it written, you should also test it. To do this, call the function in your code. This is similar how we called `sumTwo` in `testSum`. Test your function thoroughly to convince yourself it works correctly. We will talk about testing a little more soon.
+
+Once you are satisfied your new function works properly, you are ready to "push" your changes to github.  
+
+1.  Type `git status` and read what it says. You have made changes to a file. Did git notice? What is it telling you? What do you notice about the command prompt?
+2.  The first step in pushing a file to your repo was to exectue a `git add`. However, in this case, you have modified a file that was already added to git tracking, so you don't need to do it again. You only need to do a `git add` on a file that you did not track before. However, it won't hurt if you do it again, so you might as well, just to be sure. 
+3.  Type `git status` and read what it says. Did it change? Why/why not?
+4.  Type `git commit -m "xxx"` to commit the changes. However, replace xxx by a brief explanation of what was changed (e.g., "new function bar added to file foo". Remember, you want to make these git commit messsages meaningful. 
+5.  Type `git status` and read the messages
+6.  Type `git push origin master` to push the changes from your local repo to the origin repo (on github.com)
+7.  Type `git status` and read the messages
+8.  Navigate to your repo's page on [GitHub](https://github.com) and see that the two files now appear there, along with your commit message. You may need to refresh the page if you were already on it.
+
+
+
+
+## Adding yet another function
+
+You are going to add one more function to `testSum.py`, called `sumDigits`. This function should take a single parameter, which is a multi-digit number. The result it returns is the sum of the digits of this number. For example `sumDigits(236)` should return 11.
 
 ```python
 # sumDigits.py
@@ -251,67 +287,23 @@ def sumDigits(x):
    return sum
 ```
 
+Complete the code for this function. Two useful operations here are `%` (modulo; which returns the remainder of a division) and `\\` (integer division; which divides the number and rounds it to the nearest integer). For example, 11\\2 is 5 and 11%2 is 1. 
 
+Now you need to come up with an algorithm that lets you extract each individual digit from a number, so you can add these together. We will give you some hints, but it's good to try to see if you can figure it out without them. Brainstorm with your partner. Don't think about it on your own and then explain to the other person. Just start talking ... let the ideas flow and see if you can really think together. This is a good exercise to get you in the habit to do this throughout your pair programming exercises. If one partner already knows the answer (maybe you've seen it somewhere before), don't simply tell the other person. Let them figure it out gradually.
 
+After you've thought about it for a bit, here are some hints. First, think about how you can use division and/or modulo to get the *least significant* (i.e., right-most) digit of a number. So, how can you extract 6 from 236? Once you have that, how can you get the number that would result from chopping of the least significant digit. So, how can you get 23 from 236? If you are able to do this, how can you get the next digit?
 
-
-
- What the function should do is to ask the user repeatedly to enter a decimal digit (i.e., a number between 0 and 9)
-
-
-
-It should asks the user repeatedly to enter a digit of a number (i.e., 0 to 9) and then return the final number. 
-
-For example, if the user enters 9, then 4, then  
-
-
-
-
- does not take any input paramters. The result it returns is the sum of the digits of this number. For example `sumDigits(236)` should return 11.
-
-```python
-# sumDigits.py
-def sumDigits(x):
-
-   # You will need to complete this function
-
-   return sum
-```
-
-
-
-
-
-## Adding another function
-
-Open your existing file, `testSum.py`, in gVim. In that file, add a new function: `sumDigits`. This function should take a single parameter, which is a multi-digit number. The result it returns is the sum of the digits of this number. For example `sumDigits(236)` should return 11.
-
-```python
-# sumDigits.py
-def sumDigits(x):
-
-   # You will need to complete this function
-
-   return sum
-```
-
-Complete the code for this function. Two useful operations here are `%` (modulo; which returns the remainder of a division) and `\\` (integer division; which divides the number and rounds it to the nearest integer). For example, 11\\2 is 5 and 11%2 is 1. How can you use these operations to get the least significant (i.e., right-most digit) of a number? Keep in mind that our number system is base-10. 
-
-Now how can you get the next digit? Well, you could remove the right-most digit from the original number first. For this new number, the right-most digit is what was the second digit from the right of our original number. So we could simply get the right-most digit of your new number. This operation is exactly what we did before. This suggests that a loop could be useful. Remember `while`?
-
-When you think you have your function, or even part of it written, you should also test it. To do this, call the function in your code. This is similar how we called `sumTwo` in `testSum`. Test your function for a few different values to convince yourself it works correctly. We will talk about testing a little more soon.
-
-Once you are satisfied your new function works properly, you are ready to  
-
+Again, test your function for a few different values to convince yourself it works correctly. When you are done and your code works correctly, push the updated file to github (as we did for the previous function you added).
 
 
 
 # Python Testing {{page.num}}
 
-# ----------------------------------
-Now to code! In the gVim window, type (or copy/paste) this function definition.  This function uses the the gender wage gap in the United States to calculate a woman's wage based on the corresponding male wage.  The wage gap is defined as the difference between a man's salary and a woman's salary, expressed as a percentage of a man's salary.  In the United states the wage gap is 18.2%.  To calculate a woman's salary, given a man's salary using the wage gap we can multiply the man's salary by 1-wageGap.  You can learn more about the wage gap and see more data [here](https://data.oecd.org/earnwage/gender-wage-gap.htm).
+For this last part, we are going to explore a bit more how you can approach testing your Python code ... and give you a few more open ended coding challenges. 
 
-It should make sense to you based on what you've learned about Python functions so far.
+## Exploring our base code
+
+Create a new file in gVim and type (or copy/paste) this function definition. Save the file as `wageCalculator.py`. Make sure you save it in the `~/github/spis19-lab02-Name-Name` folder.
 
 ```python
 # wageCalculator.py
@@ -321,22 +313,10 @@ def convertWageMtoW(mWage):
    return ratio*mWage
 ```
 
+This function uses the the gender wage gap in the United States to calculate a woman's wage based on the corresponding male wage.  The wage gap is defined as the difference between a man's salary and a woman's salary, expressed as a percentage of a man's salary.  In the United states the wage gap is 18.2%.  To calculate a woman's salary, given a man's salary using the wage gap we can multiply the man's salary by 1-wageGap.  You can learn more about the wage gap and see more data [here](https://data.oecd.org/earnwage/gender-wage-gap.htm).
 
 
-Now, we want to run our code. First, save the file again (`File -> Save`), and open a second terminal window. In this new terminal window, navigate to the `~/github/spis19-lab02-Name-Name` folder, and do an `ls` command as shown here.  You should see your file, with the name exactly as shown here.
-
-Note that if you also have a `.pyc` file, that's fine (or if you don't, that's fine too).  You don't need to worry about that one, or remove it if you want.  Files ending in `.pyc` are "compiled Python" code. They are temporary files used to speed up the execution of your Python code.   Mostly, just leave them alone and they'll come and go as needed.  
-
-```
-[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:170$ ls
-README.md  wageCalculator.py  wageCalculator.pyc
-[spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:170$ 
-```
-
-
-### Now run and test your code
-
-So now you've got a function, but how do we know this code is correct?  We need to test it!  And in order to test it, we need to define some test cases—in other words, we need to calculate the expected output for several inputs.  The first step to testing is to define these input-output pairs.  We can use a calculator to do this, for example:
+So now you've got a function, but how do we know this code is correct?  As we did before, we need to test it! So what is the procedure to follow? To test our code, we need to define some test cases; in other words, we need to calculate the expected output for several inputs.  The first step to testing is to define these input-output pairs.  We can use a calculator to do this, for example:
 
 * men's wage of 100 should output 81.8
 * men's wage of 76.2 should output 62.3316
@@ -344,85 +324,14 @@ So now you've got a function, but how do we know this code is correct?  We need 
 
 It's good to try a range of inputs that are qualitatively different.  Notice in the test cases above, I have selected one non-zero integer input, one decimal number and the number 0.
 
-Now we need to run these tests cases.  We can do this in one of two ways:
+Add code to the program to verify these cases. Add two more test cases of your own.
 
-*Option 1: Running test cases in the interactive shell*
-
-Load the Python code into the interactive Python window by running the `python3` command in the bash shell, WITHOUT specifying a file (i.e., JUST `python3` and nothing else).  Now, in the Python shell at the `>>>` prompt, we can import the `convertWageMtoW` function we wrote:
-
-```
->>> from wageCalculator import convertWageMtoW
-```
-
-Notice that, in this import statement, when we wanted to specify the Python file from which we wanted to import, we said `from wageCalculator` instead of `from wageCalculator.py`. This is because, when we specify `wageCalculator` as the Python "module" we want to import, Python will automatically know that it should try looking for a file called `wageCalculator.py`.
-
-Then, we can run each test case one at a time, and visually verify that that the answers are correct:
-
-```
->>> convertWageMtoW(100)
-81.8
->>> convertWageMtoW(76.2)
-62.3316
->>> convertWageMtoW(0)
-0.0
-```
-
-You might find that your implementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
-
-*Option 2: write tests in a main method*
-
-The second option for writing test cases is to write a special method, called a "main" method, that will be automatically run when the Python script is run.  Add the following code to your `wageCalculator.py` file, below the code for your `convertWageMtoW` method:
-
-```python
-def approximatelyEqual(expected, val, epsilon):
-    ''' Returns true if expected and val are equal within a difference of
-        epsilon '''
-    diff = abs(expected-val)
-    return diff < epsilon
-
-def main():
-    epsilon = 0.001
-    print("Testing convertMtoW(100)...")
-    ans = convertWageMtoW(100)
-    expected = 81.8
-    # Make sure 
-    if approximatelyEqual(ans, expected, epsilon):
-        print("Correct!")
-    else:
-        print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
-
-    print("Testing convertMtoW(76.2)...")
-    ans = convertWageMtoW(76.2)
-    expected = 62.3316
-    if approximatelyEqual(ans, expected, epsilon):
-        print("Correct!")
-    else:
-        print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
-
-    print("Testing convertMtoW(0)...")
-    ans = convertWageMtoW(0)
-    expected = 0.0
-    if approximatelyEqual(ans, expected, epsilon):
-        print("Correct!")
-    else:
-        print("Incorrect.  Expected " + str(expected) + " but got " + str(ans))
-
-if __name__ == "__main__":
-    main()
-```
-
-Now, when you run your code from the terminal by calling `python3 wageCalculator.py`, all the tests will run automatically.  Notice that main uses the method `approximatelyEqual`, which we wrote above to compare floating point numbers taking into consideration roundoff error. Make sure you understand the code above.  What do you think the last line does?  Talk to your partner, and if you have questions, ask the tutors or instructors.
-
-You can use either method to test your code throughut SPIS.  Or you can check out [Option 3: Unit Testing](https://docs.python.org/3.7/library/unittest.html).
-
-Ok, so now you have a Python file with a function definition in it, and you have some test cases.
+When doing this testing, y\You might find that your implementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
 
 What's next?  We want to get this Python code into your local git repo, and then push the changes up to GitHub.
 
 
-## Step 6: Adding (and testing) additional functionality to your wage converter
-
-Finally, it's time for you to write your own code.  
+## Adding (and testing) additional functionality to your wage converter
 
 Extend the functionality of your wageCalculator function so that:
 
@@ -440,8 +349,6 @@ In a comment above your modified function, make sure you describe what it does. 
 
 ### Test your code
 Come up with several test cases, and then run your code on these test cases using one of the two testing methods described above.  If any of your test cases fail, fix your code so that they pass.  Make sure you test enough cases so that you are confident your code works in all cases.  For example, if you take a country name as one of your parameters, what happens if the user enters a country your code does not know about?  Does it behave as you expect?
-
-If you chose Option 1 for your testing strategy (entering tests at the interactive prompt), please _copy and paste_ your test runs (including the output) into comments in your wageCalculator.py file so we can see how you tested your code.
 
 If you get part-way done, and *some* of your tests pass, but not others, or you are in the middle of working
 when it is time for a break, that is STILL a good time to do a commit.   Add the letters "WIP" to the start of your
@@ -484,7 +391,7 @@ For now, though it may be better to just avoid the `!` symbol in your commit mes
 
 ### All tests passing? Then you are done!
 
-Congratulations!  If you still have time, explore [unit testing](https://docs.python.org/3.7/library/unittest.html), extend your code in some other way, read more about the wage gap, or anything else related to this lab!
+Congratulations!  If you still have time, you can explore [unit testing](https://docs.python.org/3.7/library/unittest.html), which is a more formal testing strategy. You can also extend your code in some other way, read more about the wage gap, or anything else related to this lab!
 
 
 
