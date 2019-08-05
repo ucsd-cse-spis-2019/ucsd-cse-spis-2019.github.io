@@ -15,7 +15,7 @@ The main purpose of this lab is to practice, as pairs, a few skills involving Py
 
 # Partner structure for {{page.num}}
 
-You will work with a partner for the programming part of this lab.  However, you should work through the Linux part of this lab by yourself.  You should work next to your partner, making sure you both understand what you are doing.  
+For this lab, you will work together with your pair partner. The only exception is the first task, where you familiarize yourself with Linux/Unix.
 
 # More specific Learning Objectives
 
@@ -37,9 +37,11 @@ Here's a more complete list of our learning objectives:
 * Testing of Python functions
 
 
-# Workflow Step-by-Step {{page.num}}
+# Workflow Step-by-Step
 
 ## Step 1: Create a `~/github` directory on your ETS (i.e. "lab") account
+
+This step is the only part of the lab you will do individually. However, you should work next to your partner, making sure you both understand what you are doing.
 
 The following article explains how to create a `~/github` directory on your ACMS account.
 
@@ -85,7 +87,9 @@ When both partners have a `~/github` directory and are comfortable with shell ba
 
 ## Step 2: Create your shared lab02 repo 
 
-There are three steps involved here.  We will explain each of these in detail shortly. But to give you an idea of the process at a high level, we've listed the three steps you will be asked to do, below:
+For the remainder of this lab, you will be working directly with your pair partner. Follow the driver-navigator model and switch roles frequently.
+
+For step 2 of our workflow, there are three tasks.  We will explain each of these in detail shortly. But to give you an idea of the process at a high level, we've listed the three tasks you will be asked to do, below:
 
 1. One of the two pair partners should log into [GitHub](https://github.com) to create an empty private repo *in a particular way*, namely, pre-populated only with a `README.md`, and a .`gitignore` for Python.  
 2. The first pair partner will then invite the second to be a collaborator with **Admin** access.   
@@ -144,7 +148,7 @@ When you've done that, we are finally ready for some Python programming!
 
 To review what you've done so far:
 
-* You create a repo called `spis19-lab02-Name1-Name2` on GitHub
+* You created a repo called `spis19-lab02-Name1-Name2` on GitHub
 * You cloned that repo into your ACMS account under the `~/github` directory.
 * That means you actually have *two* repos now. 
     * The repo on GitHub and the repo on your ACMS account are *separate*, but *linked*
@@ -164,16 +168,16 @@ should be able to type `pwd` and see that your current directory path ends in `g
 [spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:119$ 
 ```
 
-Then, start up gVim by typing `gvim`:
+Then, launch gVim by typing `gvim`:
 
 ```
 [spis19t3@ieng6-240]:spis19-lab02-Alex-Chris:119$ gvim
 ```
 
-Now create a new file and paste the Python code below. This process was explained in lab00. If you don't remember exactly how you did it, just have another look at that lab assignment. 
+Now create a new file and in it paste the Python code below. This process was explained in lab00. If you don't remember exactly how you did it, just have another look at that lab assignment. 
 
 ```python
-# sum.py
+# The goal of this program is to practice some important Python constructs
 def sumTwo(a,b):
    c = a + b
    return c
@@ -182,11 +186,11 @@ x = sumTwo(3,5)
 print(x)
 ```
 
-Save the file as `testSum.py`. When you save the file, be sure you save it inside the `~/github/spis19-lab02-Name-Name` folder that corresponds to your local GitHub repo. It is important that it is saved there, and not somewhere else.  If you save it in another place, the next few steps of the lab won't work properly.
+Save the file as `testSum.py`. When you save the file, make sure you save it inside the `~/github/spis19-lab02-Name-Name` folder that corresponds to your local GitHub repo. It is important that it is saved there, and not somewhere else.  If you save it in another place, the next few steps of the lab won't work properly.
 
-Have a look at the code. It consists of a simple function that returns the sum of two input arguments; this function is called and the result is printed. This should make sense to you based on what you've learned about Python so far.
+Have a look at the code. It consists of a function that returns the sum of two input arguments; this function is called and the result is printed. This should make sense to you based on what you've learned about Python so far.
 
-Now let's run the program. Open a second terminal window and navigate to the `~/github/spis19-lab02-Name-Name` folder. Before we run the code, however, let's quickly double check the file is indeed there. Do `ls` command as shown below.  You should see your file.
+Now let's run the program. Open a second terminal window and navigate to the `~/github/spis19-lab02-Name-Name` folder. Before we run the code, however, let's quickly double check the file is indeed there. Run the `ls` command as shown below.  You should see your file.
 
 
 ```
@@ -214,7 +218,7 @@ The process is described in two articles:
 * a longer version that goes into more detail: [Git: worflow explained](/topics/git_workflow_explained/)
 * a shorter version that is more handy reference: [Git: basic workflow](/topics/git_basic_workflow/)
 
-Essentially, though here's what you are going to do:
+Essentially, here's what you are going to do:
 
 1.  Make sure you are in your `~/github/spis19-lab02-Name-Name` directory
 2.  Type `git status` and read what it says
@@ -231,16 +235,18 @@ Congratulations, you've just done your first of many dozens of git commits you'l
 of hundreds or thousands you'll do during your four years at UCSD.
 
 
-# Python Challenges {{page.num}}
+
+# Python Challenges
 
 Now that you have gone through the workflow (creating a repo, cloning it, adding files, committing those to git and then pushing them to github), it is time to do some more coding.
 
-Since we are still doing lab02, we will be putting all our files in the same folder as before. So make sure you are still in the `~/github/spis19-lab02-Name-Name` folder. Remember, you can do this using the `pwd` command. If you are not in this folder, navigate there using `cd`.
+Since we are still doing lab02, we will be putting all our files in the same directory as before. So make sure you are still in  `~/github/spis19-lab02-Name-Name`. Remember, you can check this using the `pwd` command. If you are not in this folder, navigate there using `cd`.
 
 
 ## Adding another function
 
-Open your existing file, `testSum.py`, in gVim. In that file, add a new function: `getNumber`, as shown below. 
+Open your existing file, `testSum.py`, in gVim. You can do this by launching gVim as before, and then go to File -> Open. Alternatively, you can type `gvim testSum.py` on the commnand line to open gVim with this file automatically loaded.
+Once you have opened the file, add a new function: `getNumber`, as shown below. 
 
 
 ```python
@@ -252,18 +258,17 @@ def getNumber():
 
 ```
 
-Let's go over this code together. The first line inside getNumber uses the built-in Python function `input()` to ask the user to type in something.  This could be a single symbol (e.g., 'a'), a word (e.g., 'apple') or even an entire novel. You can keep typing until you hit the Return/Enter key. We will assume the user only types in a single digit (so one of '0','1', ... '9'), as this is what we asked the user to do (in the text that is between " "). 
-However, Python interprets whatever is returned by the `input`-function as a *string*, which basically means a collection of symbols. The `int()`-function is used to convert the symbol to a corresponding number (if this is possible). For example, the symbol (letter) '1' gets converted to the number 1. Even though they look the same to use, a computer needs to know whether you are talking about a symbol or a number, and treats those differently. For example, you could multiple the number 1 by two, but what would it even mean to multiple the symbol '1' by two? Finally, now that we have a number, the function returns is number.
+Let's go over this code together. The first line inside `getNumber()` uses the built-in Python function `input()` to ask the user to type in something.  This could be a single symbol (e.g., 'a'), a word (e.g., 'apple') or even an entire novel. You can keep typing until you hit the Return/Enter key. We will assume the user only types in a single decimal digit (so one of '0','1', ... '9'), as this is what we asked the user to do (in the text that is between " " in the `input`-function). 
 
-Now, you need to modify the `getNumber` function. It should repeatedly ask the number to enter a digit, instead of only once. This means that you probably want to put the bit of code that asks for a user input in some kind of loop (remember `while` from lecture?) The number that is returned by the function should be the combination of these digits. For example if the user enters 4, then 7, then 0 and then 9, the function should return the number 4709.
-You may wonder, if we are putting the user input inside a loop, when do we know to stop? We will assume that as soon as the user answers with a number that is negative, you can stop asking (and ignore this negative number). So in the example above, the user would really enter 4, then 7, then 0, then 9 and then -1 (or any other number). 
+However, Python interprets whatever is returned by the `input`-function as a *string*. A string is basically a collection of symbols. Since we only entered a single character ('0', '1', .. '9'), this string would be a single symbol. The `int()`-function is used to convert this symbol to a corresponding number (if this is possible). For example, the symbol (letter) '1' gets converted to the number 1. Even though they look the same to us, a computer needs to know whether you are talking about a symbol or a number, and treats those differently. For example, it can multiply the number 1 by two, but what would it even mean to multiply the symbol '1' by two? This is why we had to use the `int`-function to convert from a symbol to a number. Finally, now that we have a number, it is returend by the function.
 
-When you think you have your function, or even part of it written, you should also test it. To do this, call the function in your code. This is similar how we called `sumTwo` in `testSum`. Test your function thoroughly to convince yourself it works correctly. We will talk about testing a little more soon.
+Now, your task is to modify the `getNumber` function. It should repeatedly ask the user to enter a single digit, instead of only once. This means that you probably want to put the bit of code that asks for a user input in some kind of loop (remember `while` from lecture?) The number that is returned at the end of the function should be the combination of these individual digits. For example if the user enters 4, then 7, then 0 and then 9, the function should return the number 4709.
+You may wonder, if we are putting the user input inside a loop, how do we know when to stop? We will assume that as soon as the user answers with a number that is negative, you can stop asking (and ignore this negative number). So in the example above, the user would really enter 4, then 7, then 0, then 9 and then -1 (or any other number). 
 
-Once you are satisfied your new function works properly, you are ready to "push" your changes to github.  
+When you think you have your function, or even part of it, written, you should also test it. To do this, call the function in your code. This is similar how we called `sumTwo` in `testSum`. Test your function thoroughly to convince yourself it works correctly. Once this is done, you are ready to "push" your changes to github.  
 
-1.  Type `git status` and read what it says. You have made changes to a file. Did git notice? What is it telling you? What do you notice about the command prompt?
-2.  The first step in pushing a file to your repo was to exectue a `git add`. However, in this case, you have modified a file that was already added to git tracking, so you don't need to do it again. You only need to do a `git add` on a file that you did not track before. However, it won't hurt if you do it again, so you might as well, just to be sure. 
+1.  Type `git status` and read what it says. You have made changes to a file. Did git notice? What is it telling you?
+2.  We saw earlier that the first step in the git workflow was to execute a `git add`. However, in this case, you have modified a file that was already added to git tracking, so you don't need to do it again. You only need to do a `git add` on a file that you did not track before. However, it won't hurt if you do it again, so you might as well, just to be sure.
 3.  Type `git status` and read what it says. Did it change? Why/why not?
 4.  Type `git commit -m "xxx"` to commit the changes. However, replace xxx by a brief explanation of what was changed (e.g., "new function bar added to file foo". Remember, you want to make these git commit messsages meaningful. 
 5.  Type `git status` and read the messages
@@ -289,15 +294,15 @@ def sumDigits(x):
 
 Complete the code for this function. Two useful operations here are `%` (modulo; which returns the remainder of a division) and `\\` (integer division; which divides the number and rounds it to the nearest integer). For example, 11\\2 is 5 and 11%2 is 1. 
 
-Now you need to come up with an algorithm that lets you extract each individual digit from a number, so you can add these together. We will give you some hints, but it's good to try to see if you can figure it out without them. Brainstorm with your partner. Don't think about it on your own and then explain to the other person. Just start talking ... let the ideas flow and see if you can really think together. This is a good exercise to get you in the habit to do this throughout your pair programming exercises. If one partner already knows the answer (maybe you've seen it somewhere before), don't simply tell the other person. Let them figure it out gradually.
+Now you need to come up with an algorithm that lets you extract each individual digit from a number, so you can add these together. We will give you some hints, but it's good to try and figure out the algorithm without them. Brainstorm with your partner. Don't think about it on your own and then explain to the other person. Just start talking ... let the ideas flow and see if you can really think together. This is a good exercise to get you in the habit to do this throughout your pair programming exercises. If one partner already knows the answer (maybe you've seen it somewhere before), don't simply tell the other person. Let them figure it out gradually.
 
-After you've thought about it for a bit, here are some hints. First, think about how you can use division and/or modulo to get the *least significant* (i.e., right-most) digit of a number. So, how can you extract 6 from 236? Once you have that, how can you get the number that would result from chopping of the least significant digit. So, how can you get 23 from 236? If you are able to do this, how can you get the next digit?
+After you've realy thought about it and you need some help, here are some hints. First, think about how you can use division and/or modulo to get the *least significant* (i.e., right-most) digit of a number. So, how can you extract 6 from 236? Is it helpful to consider that our number system uses base 10 (hence the name "decimal")? Once you have that, how can you get the number that would result from chopping of the least significant digit? So, how can you get 23 from 236? If you are able to do this, how can you get the next digit? Is there a repeating pattern here? This would suggest once again ... a loop.
 
-Again, test your function for a few different values to convince yourself it works correctly. When you are done and your code works correctly, push the updated file to github (as we did for the previous function you added).
+Once you have figured out the answer, test your function for a few different values to convince yourself it works correctly. When you are done and your code works correctly, push the updated file to github (as we did for the previous function you added).
 
 
 
-# Python Testing {{page.num}}
+# More Python Practice
 
 For this last part, we are going to explore a bit more how you can approach testing your Python code ... and give you a few more open ended coding challenges. 
 
@@ -316,24 +321,26 @@ def convertWageMtoW(mWage):
 This function uses the the gender wage gap in the United States to calculate a woman's wage based on the corresponding male wage.  The wage gap is defined as the difference between a man's salary and a woman's salary, expressed as a percentage of a man's salary.  In the United states the wage gap is 18.2%.  To calculate a woman's salary, given a man's salary using the wage gap we can multiply the man's salary by 1-wageGap.  You can learn more about the wage gap and see more data [here](https://data.oecd.org/earnwage/gender-wage-gap.htm).
 
 
-So now you've got a function, but how do we know this code is correct?  As we did before, we need to test it! So what is the procedure to follow? To test our code, we need to define some test cases; in other words, we need to calculate the expected output for several inputs.  The first step to testing is to define these input-output pairs.  We can use a calculator to do this, for example:
+To verify our code is correct, we need to test it, as we did before. More formally, this means that we need to define test cases. A test case is a combination of an input and the expected output. The first step to testing is to define these input-output pairs.  We can use a calculator to do this, for example:
 
 * men's wage of 100 should output 81.8
 * men's wage of 76.2 should output 62.3316
 * men's wage of 0 should output 0.0
 
-It's good to try a range of inputs that are qualitatively different.  Notice in the test cases above, I have selected one non-zero integer input, one decimal number and the number 0.
+It's good to try a range of inputs that are qualitatively different.  Notice in the test cases above, we have selected one non-zero integer input, one decimal number and the number 0.
 
-Add code to the program to verify these cases. Add two more test cases of your own.
+Add code to the program to verify these cases, and make sure  the output is as you expect.
 
-When doing this testing, y\You might find that your implementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
+Now add two more test cases of your own.
 
-What's next?  We want to get this Python code into your local git repo, and then push the changes up to GitHub.
+When doing this testing, you might find that your implementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
+
+What's next?  We want to get this Python code into your local git repo, and then push the changes up to GitHub. Again, follow the procedure you've learned.
 
 
 ## Adding (and testing) additional functionality to your wage converter
 
-Extend the functionality of your wageCalculator function so that:
+Now, extend the functionality of your wageCalculator function so that:
 
 * It takes at least one additional parameter
 * It uses an if-statement (or if-else statement, or if-elif-else statement, etc) in its functionality
@@ -348,7 +355,7 @@ Exactly what your extended function does is up to you and your partner, but it s
 In a comment above your modified function, make sure you describe what it does.  Include a description of what each parameter means, and what is returned.
 
 ### Test your code
-Come up with several test cases, and then run your code on these test cases using one of the two testing methods described above.  If any of your test cases fail, fix your code so that they pass.  Make sure you test enough cases so that you are confident your code works in all cases.  For example, if you take a country name as one of your parameters, what happens if the user enters a country your code does not know about?  Does it behave as you expect?
+Come up with several test cases.  If any of your test cases fail, fix your code so that they pass.  Make sure you test enough cases so that you are confident your code works in all cases.  For example, if you take a country name as one of your parameters, what happens if the user enters a country your code does not know about?  Does it behave as you expect?
 
 If you get part-way done, and *some* of your tests pass, but not others, or you are in the middle of working
 when it is time for a break, that is STILL a good time to do a commit.   Add the letters "WIP" to the start of your
@@ -389,9 +396,15 @@ We can go into why that's the case some other time (what is this "event" that is
 
 For now, though it may be better to just avoid the `!` symbol in your commit messages unless you remember the backslash.
 
-### All tests passing? Then you are done!
+### All tests passing? Then you are done (kind of) ..
 
-Congratulations!  If you still have time, you can explore [unit testing](https://docs.python.org/3.7/library/unittest.html), which is a more formal testing strategy. You can also extend your code in some other way, read more about the wage gap, or anything else related to this lab!
+Congratulations! You are done with this lab, but consider some of the additional challenges below ...
+
+
+
+# Additional Challenges 
+If you still have time, you can explore [unit testing](https://docs.python.org/3.7/library/unittest.html), which is a more formal testing strategy. You can also extend your code in some other way, read more about the wage gap, or anything else related to this lab!
+Or do some more picobot ...
 
 
 
