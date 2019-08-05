@@ -78,6 +78,14 @@ Or, if you already have a GitHub account, log into it, and add your `@ucsd.edu` 
 Then, fill out the following form to let us know what your GitHub username is:
 [https://forms.gle/cNv6mT7uA8z9wbKT7](https://forms.gle/cNv6mT7uA8z9wbKT7)
 
+*Optional: Setting Up GitHub Education*
+
+In addition to its many great features for regular free accounts, GitHub has special features for students and academics! You can request your account to be given "GitHub Education" student benefits via the following link:
+
+[https://education.github.com/discount_requests/new](https://education.github.com/discount_requests/new)
+
+Again, requesting GitHub Education student benefits is completely optional, but it is something we strongly suggest as it's quite nice and is completely free.
+
 ## Step 4:  Bringing up gVim
 
 [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) is the text editor we'll use to do Python programming during SPIS. Specifically, we will be using its graphical interface, [gVim](https://en.wikipedia.org/wiki/Vim_(text_editor)#Interface), but students who are interested may wish to become proficient with Vim.
