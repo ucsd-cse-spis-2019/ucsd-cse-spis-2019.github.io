@@ -11,7 +11,7 @@ If you find typos or problems with the lab instructions, please report them on [
 
 # Your first lab in SPIS
 
-For your first lab, you'll be using the computers in B230, a lab in the basement of the CSE building.
+For your first lab, you'll be using the computers in B230 and B240, labs in the basement of the CSE building.
 
 These computer run the Linux operating system, and you'll log into them with your SPIS ETS account.
 
@@ -59,7 +59,7 @@ Once you know your username and password, please sit down at a workstation next 
 
 You can open a web browser by going to the Applications menu at the top of the screen, and then going to Internet Tools and selecting Firefox from that menu.  
 
-To open a "terminal" window (a window where you can type commands--we'll work a lot with the terminal throughout SPIS), you can select “Applications”, the "System Tools", then either “Terminal” or “Konsole” from the menu that pops up.  Alternatively, you can right-click on the desktop and select "Terminal".  
+To open a "terminal" window (a window where you can type commands--we'll work a lot with the terminal throughout SPIS), you can select “Applications”, then "System Tools", then either “Terminal” or “Konsole” from the menu that pops up.  Alternatively, you can right-click on the desktop and select "Terminal".  
 
 Make sure both you and your partner are logged in and have both a web browser and a terminal window open before continuing.
 
@@ -100,7 +100,7 @@ Note that, in this course, we will be using Python 3 (there are different versio
 
 First, we will create a new file in which we will write our program. In gVim, go to the "File" menu and select "New".  The window will go blank, and the window title will say "[No Name]".
 
-Before we start coding, let's save this new file as `hello_world.py`. The file extension `.py` denotes that this will be Python code. In gVim, go to the "File" menu and select "Save As...". This wil bring up a pop up window that will let you choose where to save your file. Let's create a new folder for this assignment. Click on your account name (`spis19xx`), click the "Create Folder" button, replace "Type name of new folder" with `lab00`, and click the "Enter" button on your keyboard to create the folder. Once in the folder, type `hello_world.py` in the box that says "Name:", and click "Save". Now, your file will be saved in your account's home directory. In the future, to save changes this program, go to the "File" menu and select "Save".
+Before we start coding, let's save this new file as `hello_world.py`. The file extension `.py` denotes that this will be Python code. In gVim, go to the "File" menu and select "Save As...". This will bring up a pop up window that will let you choose where to save your file. Let's create a new folder for this assignment. Click on your account name (`spis19xx`), click the "Create Folder" button, replace "Type name of new folder" with `lab00`, and click the "Enter" button on your keyboard to create the folder. Once in the folder, type `hello_world.py` in the box that says "Name:", and click "Save". Now, your file will be saved in your account's home directory. In the future, to save changes this program, go to the "File" menu and select "Save".
 
 Note that gVim has different "modes." When it is first opened, gVim starts in "Command Mode," which lets us run various commands to perform operations on the text or to navigate the file, which is not what we want to do right now. If you want to actually *edit* the file, gVim has to be in "Insert Mode," which lets us edit the text like any other text editor. In order to go from "Command Mode" to "Insert Mode," simply click the `i` key on your keyboard; the bottom of the gVim window should now say `-- INSERT --`. To go back to "Command Mode" from "Insert Mode," simply click the `Escape` key on your keyboard; the `-- INSERT --` text should now disappear. For more information about gVim's modes, see [this tutorial](https://supportweb.cs.bham.ac.uk/documentation/tutorials/docsystem/build/tutorials/gvim/gvim.html#gVim-Core-Commands-Modes).
 
