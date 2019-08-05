@@ -20,5 +20,9 @@ Lecture slides: [Introduction](/lectures/week1/SPIS Lecture 01 - Introduction.pd
 Unix, github and introduction to [lab00](/lab/lab00/)
 
 
+# FOCS 1:15pm - 2:30pm (Curt)
+Picobot and intro to finite state machines
+
+Lecture slides: [Picobot](/lectures/week1/SPIS Lecture 03 - Picobot.pdf)
 
 
