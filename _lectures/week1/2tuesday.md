@@ -7,7 +7,9 @@ ready: true
 ---
 
 # APS Lecture 8:45am - 10:00am (Niema)
+Divide-and-Conquer Algorithms
 
+Lecture Slides: [Divide-and-Conquer](/lectures/week1/APS Lecture 1 - Divide and Conquer.pdf)
 
 
 
