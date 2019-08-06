@@ -398,6 +398,11 @@ For now, though it may be better to just avoid the `!` symbol in your commit mes
 Congratulations! You are done with this lab, but consider some of the additional challenges below ...
 
 
+# Challenge Problem: Implement the Hangman game 
+Even though you just started learning Python, you already have all the knowledge required to implement a fun little game, such as [hangman](https://www.coolmathgames.com/0-hangman). The goal of this game is to guess a word or phrase, by asking if a letter appears in it. You win by guessing all the letters before you made 7 mistakes (i.e., asked for a letter that did not appear). You can try out the game [here](https://www.coolmathgames.com/0-hangman).
+
+
+
 
 # Additional Challenges 
 If you still have time, you can explore [unit testing](https://docs.python.org/3.7/library/unittest.html), which is a more formal testing strategy. You can also extend your code in some other way, read more about the wage gap, or anything else related to this lab!
