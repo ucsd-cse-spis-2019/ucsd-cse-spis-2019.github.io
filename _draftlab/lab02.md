@@ -332,7 +332,7 @@ Now add two more test cases of your own.
 
 When doing this testing, you might find that your implementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
 
-What's next? As before, you need to get this Python code into your local git repo, and then push the changes up to GitHub. Again, follow the procedure you've learned. Note that when doing a `git add` followed by the filename, you can instead do **`git add .`**, where the "dot" signifies "all the files". This is a very convenient shortcut. When you have pushed your changes, verify that they indeed appear in your online github repo!
+What's next? As before, you need to get this Python code into your local git repo, and then push the changes up to GitHub. Again, follow the procedure you've learned. Note that when doing a "`git add`" followed by the filename, you can instead do "**`git add .`**", where the dot signifies "all the files". This is a very convenient shortcut. When you have pushed your changes, verify that they indeed appear in your online github repo!
 
 
 ## Adding (and testing) additional functionality to your wage converter
