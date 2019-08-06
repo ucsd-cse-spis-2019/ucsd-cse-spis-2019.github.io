@@ -227,16 +227,16 @@ you commit a change, this hex number changes.
 
 **Help! I tried the commit command and my screen went all weird!**
 
-If you see something like the picture at right when doing a commit
-command, it means you forgot the -m, or somehow the -m got messed up.
+When doing a commit command, if you suddenly find yourself in a semi-blank screen 
+that reminds you of vim, well, it means you are in vim. The reason is 
+that you forgot the -m, or somehow the -m got messed up. In this case, git is 
+giving you a text editor so you can enter a longer commit message.
 
-So, the git commit command put you in the vi editor so you could
-finish typing the message. This is all well and good if you know how
-to edit in vi. In that case, just type your commit message, then type
+In that case, just type your commit message, then type
 escape, and use **:wq** to save your changes. Then your commit will go
 through just fine.
 
-But if you don't know how to edit in vi, you are likely to be very
+But if you don't know how to edit in vi/vim, you are likely to be very
 confused. To get out, just type escape, then **:q!**
 
 Then try your commit again.
