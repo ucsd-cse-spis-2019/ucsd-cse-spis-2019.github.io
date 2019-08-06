@@ -17,7 +17,8 @@ Lecture slides: [Introduction](/lectures/week1/SPIS Lecture 01 - Introduction.pd
 
 
 # FOCS 10:15am - 11:30am (Gary)
-Unix, github and introduction to [lab00](/lab/lab00/)
+Unix, vim, github and introduction to [lab00](/lab/lab00/) <br>
+Lecture slides:  [Unix](/lectures/week1/SPIS Lecture 02 - Unix.pdf)
 
 
 # FOCS 1:15pm - 2:30pm (Curt)
