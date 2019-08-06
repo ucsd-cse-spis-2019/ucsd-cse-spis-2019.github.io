@@ -43,7 +43,8 @@ Here's a more complete list of our learning objectives:
 
 This step is the only part of the lab you will do individually. However, you should work next to your partner, making sure you both understand what you are doing.
 
-The following article explains how to create a `~/github` directory on your ACMS account.
+The following article explains how to create a `~/github` directory on your ACMS account. Note that the name of the directory you create actually does not need to be `github`. The entire process of creating git repos and pushing these to github is not impacted by the name of the directory where the repos are in. Instead of `~/github`, you could have created, for example, `~/SPISlabs` and use that as the directory to store your lab files in. If you are confident or adventurous (and yes, who doesn't want to be confident or adventurous), we recommend you actually pick a different name, to force you to think more about what you are doing, rather than simply copying our directions (as you need to really understand *why* you are doing things).
+
 
 * [Creating `~/github` and learning some shell commands in the process](/topics/acms_create_github_dir/)
 
@@ -331,7 +332,7 @@ Now add two more test cases of your own.
 
 When doing this testing, you might find that your implementation returns values that are *almost* correct, e.g. 0.000000000000000000001 for 0.0 or something similar.  This is due to imprecision in the way Python represents floating point numbers and is completely normal.  You should consider your results correct if they "very close" to the expected results.
 
-What's next? As before, you need to get this Python code into your local git repo, and then push the changes up to GitHub. Again, follow the procedure you've learned. Verify the changes appear in your online github repo!
+What's next? As before, you need to get this Python code into your local git repo, and then push the changes up to GitHub. Again, follow the procedure you've learned. Note that when doing a `git add` followed by the filename, you can instead do **`git add .`**, where the "dot" signifies "all the files". This is a very convenient shortcut. When you have pushed your changes, verify that they indeed appear in your online github repo!
 
 
 ## Adding (and testing) additional functionality to your wage converter
