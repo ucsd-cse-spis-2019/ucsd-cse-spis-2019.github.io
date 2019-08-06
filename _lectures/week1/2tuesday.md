@@ -14,9 +14,9 @@ Lecture Slides: [Divide-and-Conquer](/lectures/week1/APS Lecture 1 - Divide and 
 
 
 # FOCS 10:15am - 11:30am (Gary)
-Summary...
+Foundations of Programming...
 
-Lecture slides: [title](link)
+Lecture slides: [Python3 First Lecture](/lectures/week1/SPIS 2019 Lecture02.pdf)
 
 
 
