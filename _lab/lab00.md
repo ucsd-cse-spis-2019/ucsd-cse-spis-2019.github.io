@@ -179,6 +179,7 @@ On the next screen:
 
 * Be sure that you select to create your repository with the owner being `ucsd-cse-spis-2019`, NOT your own GitHub id.
 * Put `practice-alex-t` as the name (BUT PUT YOUR OWN NAME AND FIRST INITIAL, not literally `alex-t` :-) )
+* Select to make the repo **Private** (rather than Public)
 * check the box to "Initialize this repository with a README"
 * Select a `.gitignore` file for Python
 * You don't need to select a license file.
