@@ -141,7 +141,7 @@ for Python, right from the start.   The following diagram illustrates the steps 
 You create a repo by selecting the small + sign with the triangle at the upper left corner of the github.com page, 
 or simply by logging into github, then navigating to [github.com/new](https://github.com/new)
 
-Then you see this screen, where you fill in the values as shown.
+Then you see this screen, where you fill in the values as shown. Make sure you make your repo **Private** (not Public).
 
 ![Create repo method 2](/images/private-repo-method-2-50.png)
 
