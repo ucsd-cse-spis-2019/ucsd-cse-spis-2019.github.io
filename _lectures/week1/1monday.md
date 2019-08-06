@@ -1,6 +1,6 @@
 ---
-topic: "First looks"
-desc: "Overview and introduction to CS, SPIS, UNIX, github and lab00"
+topic: ""
+desc: ""
 lecture_date: 2019-08-05 09:00:00.00-7:00
 week: "1"
 ready: true
