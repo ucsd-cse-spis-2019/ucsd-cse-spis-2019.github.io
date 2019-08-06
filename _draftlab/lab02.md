@@ -288,7 +288,7 @@ def sumDigits(x):
    return sum
 ```
 
-Complete the code for this function. Two useful operations here are `%` (modulo; which returns the remainder of a division) and `\\` (integer division; which divides the number and rounds it to the nearest integer). For example, 11\\\2 is 5 and 11%2 is 1. 
+Complete the code for this function. Two useful operations here are `%` (modulo; which returns the remainder of a division) and `//` (integer division; which divides the number and rounds it to the nearest integer). For example, 11//2 is 5 and 11%2 is 1. 
 
 Now you need to come up with an algorithm that lets you extract each individual digit from a number, so you can add these together. We will give you some hints, but it's good to try and figure out the algorithm without them. Brainstorm with your partner. Don't think about it on your own and then explain to the other person. Just start talking ... let the ideas flow and see if you can really think together. This is a good exercise to get you in the habit to do this throughout your pair programming exercises. If one partner already knows the answer (maybe you've seen it somewhere before), don't simply tell the other person. Let them figure it out gradually.
 
@@ -314,7 +314,7 @@ def convertWageMtoW(mWage):
    return mWage/ratio
 ```
 
-This function uses the the gender wage gap in the United States to calculate a woman's wage based on the corresponding male wage.  The wage gap is defined as the difference between a man's salary and a woman's salary, expressed as a percentage of a man's salary.  In the United states the wage gap is 18.2%.  To calculate a woman's salary, given a man's salary using the wage gap we can multiply the man's salary by 1-wageGap.  You can learn more about the wage gap and see more data [here](https://data.oecd.org/earnwage/gender-wage-gap.htm).
+This function uses the the gender wage gap in the United States to calculate a woman's wage based on the corresponding male wage.  The wage gap is defined as the difference between a man's salary and a woman's salary, expressed as a percentage of a man's salary.  In the United States the wage gap is 18.2%.  To calculate a woman's salary, given a man's salary using the wage gap we can multiply the man's salary by 1-wageGap.  You can learn more about the wage gap and see more data [here](https://data.oecd.org/earnwage/gender-wage-gap.htm).
 
 
 To verify our code is correct, we need to test it, as we did before. More formally, this means that we need to define test cases. A test case is a combination of an input and the expected output. The first step to testing is to define these input-output pairs.  We can use a calculator to do this, for example:
