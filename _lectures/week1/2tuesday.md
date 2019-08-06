@@ -6,15 +6,15 @@ week: "1"
 ready: true
 ---
 
-# APS Lecture 8:45am - 10:00am
+# APS Lecture 8:45am - 10:00am (Niema)
 
 
 
 
-# FOCS 10:15am - 11:30am (Curt)
-State machines, Picobot environment, and introduction to [lab01](/lab/lab01/)
+# FOCS 10:15am - 11:30am (Gary)
+Summary...
 
-Lecture slides: [Picobot](/lectures/week1/SPIS Lecture 03 - Picobot.pdf)
+Lecture slides: [title](link)
 
 
 
