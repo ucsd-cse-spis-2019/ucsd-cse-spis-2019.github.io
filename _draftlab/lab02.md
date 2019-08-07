@@ -398,10 +398,18 @@ For now, though it may be better to just avoid the `!` symbol in your commit mes
 Congratulations! You are done with this lab, but consider some of the additional challenges below ...
 
 
-# Challenge Problem: Implement the Hangman game 
-Even though you just started learning Python, you already have all the knowledge required to implement a fun little game, such as [hangman](https://www.coolmathgames.com/0-hangman). The goal of this game is to guess a word or phrase, by asking if a letter appears in it. You win by guessing all the letters before you made 7 mistakes (i.e., asked for a letter that did not appear). You can try out the game [here](https://www.coolmathgames.com/0-hangman).
+# Challenge Problem: Implement a word-guessing game 
+Even though you have just started learning Python, you already have all the knowledge required to implement a fun little game you are probably familiar with. The goal of the game is to guess a word or phrase, by asking if a letter appears in it. You win by guessing all the letters before you made 7 mistakes (i.e., asked for a letter that did not appear). You can try out a version of this game [here](https://www.coolmathgames.com/0-hangman).
 
+You can be creative in how you implement this game. The code below shows a few useful constructs. Note that the `[]` operation lets you extract individual characters from a string. Note that the indexing starts at 0 (this means the first letter is at position 0, the second one at position 1, etc.). Play around with this to figure out what it does.
 
+```python
+a = "hello"
+b = a[0]      # Get the 0th letter in a, in this case "h"
+c = len(a)    # This gives the number of letter (length) of a
+```
+
+You can also make the game flexible, where the number of mistakes allowed is a parameter.
 
 
 # Additional Challenges 
