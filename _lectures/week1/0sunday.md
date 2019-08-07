@@ -1,6 +1,6 @@
 ---
 topic: "SPIS Orientation Session"
-desc: "Meet the staff, get your stuff, including first homework assignment."
+desc: ""
 lecture_date: 2019-08-04 15:00:00.00-7:00
 week: "1"
 ready: true
@@ -9,8 +9,8 @@ ready: true
 # Welcome to SPIS
 
 * Speakers
-    * Prof. Dean Tullsen (Chair CSE Dept.)
-    * Prof. Olivia Graeve (MAE Dept. and CREATE)
+    * Prof. John Moore (Linguistics and Dean of Undergraduate Education)
+    * Prof. Christine Alvarado (CSE Dept. and JSOE Associate Dean for Students)
 * Introducing the instructional team
     * Instructors
     * Mentors
