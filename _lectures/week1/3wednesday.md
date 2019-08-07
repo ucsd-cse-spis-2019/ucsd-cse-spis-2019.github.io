@@ -9,10 +9,13 @@ ready: true
 # FOCS 8:45am - 10:00am (Gary)
 
 Lecture slides: 
+Foundations of Programming...
+
+Lecture slides: [Python3 First Lecture](/lectures/week1/SPIS Wednesday Lecture Week 1.pdf)
 
 
 
 
 # FOCS 10:15am - 11:30am (Gary)
 
-Lecture slides: 
+Lecture slides: (included in the 8:45am lecture slides)
