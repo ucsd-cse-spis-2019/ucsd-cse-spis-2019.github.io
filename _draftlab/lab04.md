@@ -238,7 +238,6 @@ Create a new file `triangles.py`. Use recursion to have your turtle create the f
 
 <p align="center">
 ![alt-frac-3](/images/labs/images/fractals/Sierpinski.png){: height="200px" }
-![alt-frac-4](/images/labs/images/fractals/fern.png){: height="200px" }
 </p>
 
 
