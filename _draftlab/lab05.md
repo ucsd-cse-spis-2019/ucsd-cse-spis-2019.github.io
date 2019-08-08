@@ -56,13 +56,21 @@ In this file, write the following lines of code.
 
 from PIL import Image
 
-bear = Image.open( "bear.jpg" )
+bear = Image.open( "bear.png" )
 
 bear.show()
 
 ```
 
-The first line instructs Python to import the Image portion of the PIL image library. Whenever you use a function from this library, it will start with `Image.`, indicating you are looking for that function in this specific library. The next line of code opens an image and stores a reference to it in the `bear` variable. If you are getting an error here it's probably because you either placed the file in the wrong place or launched gVim  from a directory different from where the image was stored. You could resolve this issue by including the path (i.e., complete location in the directory structure), or by moving the file to the correct location.
+The first line instructs Python to import the Image portion of the PIL image library. Whenever you use a function from this library, it will start with `Image.`, indicating you are looking for that function in this specific library. The next line of code opens an image and stores a reference to it in the `bear` variable. 
+
+If you are getting an error complaining that it does not know the "PIL" library, you may need to install it first. You do this by going to a command prompt and typing the following:
+
+```bash
+[sp19t1@ieng6-248]:~:14$ pip3 install --user pillow 
+```
+
+Another error that may occur is that it cannot open the file "bear.png". This happens when you either placed the file in the wrong place or launched gVim  from a directory different from where the image was stored. You could resolve this issue by including the path (i.e., complete location in the directory structure), or by moving the file to the correct location.
 
 Before you move on, add comments to your file to explain each line of code.
 
@@ -289,7 +297,7 @@ For this challenge, you will hide a secret black-and-white image inside a standa
 
 Basically, we are hiding the black-and-white image in the least significant bit of one of our color channels. To get the hidden message back, you simply need to check the least significant bit. A value of 0 means the hidden message has a black pixel there, while a 1 means it has a white pixel.
 
-For the first part of this challenge, download the image below. It has a secret message embedded inside its red color channel in the manner described above. Decode this message!
+For the first part of this challenge, download the image below ("hiddenbear.png"). It has a secret message embedded inside its red color channel in the manner described above. Decode this message!
 
 <p align="center">
 
