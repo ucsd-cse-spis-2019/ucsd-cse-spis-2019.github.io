@@ -301,7 +301,7 @@ For the second part, write your own function to hide a secret message. Create a 
 You can extend your code to hide three images, one in each color channel. 
 
 
-# Challenge Problem 2: Time to get creative
+# Challenge Problem 2 - Time to get creative
 
 Now it's time to create your own effects!! You can do them individually, as a pair, or with another partner if you wish (in which case, just select one of your repos and put in a header comment specifying who worked on this). 
 
