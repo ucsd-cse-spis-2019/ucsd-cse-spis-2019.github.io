@@ -285,7 +285,7 @@ Submit the pair programming portion of your code, which should all be in the `im
 # Challenge Problem 1 - Hiding images in plain sight
 Steganography is a way to hide a secret message inside an ordinary file. There is a great [article](https://www.bbc.com/news/technology-19370581) on BBC.com about this idea and how criminals may be using it. 
 
-For this challenge, you will hide a secret black-and-white image inside a standard image. The idea is to pick a color channel (R, G or B; the choice is yours) in the standard image. Let's assume you chose to work with R. Each pixel has a value for R, which is between 0 and 255. The reason of this range is that it is represented by an 8-bit number. With 8-bits, we can represent numbers from binary 00000000<sup>2</sup> (0 in decimal) to 11111111<sub>2</sub> (255 in decimal). Now, imagine we have a pixel with an R value of 01011101<sub>2</sub> (93 decimal). Would you be able to tell the difference if I change that value to 01011100<sub>2</sub> (92 decimal)? Probably not. This is what we will use to hide our secret black-and-white image. We will take the R value of each pixel in the standard image and replace its least significant bit (i.e., the right-most bit if I were to write the value in binary) to either 0 or 1 based on whether the correspoding image in the secret message is black or white. 
+For this challenge, you will hide a secret black-and-white image inside a standard image. The idea is to pick a color channel (R, G or B; the choice is yours) in the standard image. Let's assume you chose to work with R. Each pixel has a value for R, which is between 0 and 255. The reason of this range is that it is represented by an 8-bit number. With 8-bits, we can represent numbers from binary 00000000<sub>2</sub> (0 in decimal) to 11111111<sub>2</sub> (255 in decimal). Now, imagine we have a pixel with an R value of 01011101<sub>2</sub> (93 decimal). Would you be able to tell the difference if I change that value to 01011100<sub>2</sub> (92 decimal)? Probably not. This is what we will use to hide our secret black-and-white image. We will take the R value of each pixel in the standard image and replace its least significant bit (i.e., the right-most bit if I were to write the value in binary) to either 0 or 1 based on whether the correspoding image in the secret message is black or white. 
 
 Basically, we are hiding the black-and-white image in the least significant bit of one of our color channels. To get the hidden message back, you simply need to check the least significant bit. A value of 0 means the hidden message has a black pixel there, while a 1 means it has a white pixel.
 
@@ -301,7 +301,7 @@ For the second part, write your own function to hide a secret message. Create a 
 You can extend your code to hide three images, one in each color channel. 
 
 
-# Challenge Problem 2: Time to get creatives
+# Challenge Problem 2: Time to get creative
 
 Now it's time to create your own effects!! You can do them individually, as a pair, or with another partner if you wish (in which case, just select one of your repos and put in a header comment specifying who worked on this). 
 
