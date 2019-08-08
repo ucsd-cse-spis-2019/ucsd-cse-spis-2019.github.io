@@ -16,4 +16,5 @@ ready: true
 
 # FOCS 10:15am - 11:30am (Gary)
 
-Lecture slides: 
+Lecture slides: [while and for (each) loops](/lectures/week1/SPIS Thursday Lecture Week 1.pdf)
+ 
