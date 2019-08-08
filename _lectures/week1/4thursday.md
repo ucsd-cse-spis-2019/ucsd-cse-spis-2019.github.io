@@ -3,7 +3,7 @@ lecture_date: 2019-08-08 09:00:00.00-7:00
 topic: ""
 desc: ""
 week: "1"
-ready: false
+ready: true
 ---
 
 
