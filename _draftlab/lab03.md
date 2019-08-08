@@ -291,18 +291,18 @@ def speedup():
     speed1 = speed1 * 2
 
 # This code makes the turtle library listen to key strokes
-# Then for the keys listed, e.g., the left arrow or the letter "d" or the left arrow,
+# Then for the keys listed, e.g., the left arrow or the "d" key,
 # it specifies which function will be executed when that key is pressed. 
 # You can list additional keys and tie them to your own functions
 turtle.listen()
 turtle.onkey(turnleft, "Left")
 turtle.onkey(speedup,"d")
 
-# The initial speed the player 1 turtle is moving forward with
+# The initial speed of player 1
 speed1 = 0.25
 
 # This is the main game loop
-# It is an infinite loop; this is code is executed forever
+# It is an infinite loop; this code is executed forever
 while True:
     player1.forward(speed1)
 
