@@ -1,6 +1,6 @@
 ---
 lecture_date: 2019-08-08 09:00:00.00-7:00
-topic: ""
+topic: "Python3:  while and for (each) loops"
 desc: ""
 week: "1"
 ready: true
