@@ -268,6 +268,10 @@ Once you can answer yes to all of the following make sure you add ALL of your fi
 
 
 # Challenge Problem - Build your own game
+For this challenge problem, you are asked to build your own game with turtles. Check out the sample code below. The comments should help you figure out what is going on. The main bit of functionality that is new is the ability to have to turtle react to key strokes. For each key that is pressed, you can associate that key press with a function that is executed in response.
+
+One new element of Python syntax is the use of the keyword `global`. In the example below, this was used inside the function `speedup()`. It tells the function that the variable speed1 is a global variable, which means that it is defined outside of the function. Without specifying that speed1 is something Python can find outside the function, it would complain that inside the function is has never heard of speed1 before. Remember, inside a function, only the variables that are defined (e.g., the arguments that are passed to a function) there are available. The way you have modified global variables before was to pass them as arguments to a function and then return the result. Directly modifying a global variable is an alternate way of doing this. It is generally considered less desirable, as it is not as obvious what is going on to someone reading your code and if you make a mistake it can cause undesired effects that are hard to debug. However, since we are tying a function to a keystroke in our interactive turtle example and we cannot return anything, it is useful here. 
+
 
 ```python
 import turtle
