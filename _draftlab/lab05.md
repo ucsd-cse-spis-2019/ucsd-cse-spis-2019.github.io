@@ -44,7 +44,7 @@ In this lab, we'll work with the Python Imaging Library (PIL) which is a graphic
 
 <p align="center">
 
-![](/images/labs/images/bear.jpg){:height="300px"}
+![](/images/labs/images/bear.png){:height="300px"}
 
 </p>
 
@@ -293,7 +293,7 @@ For the first part of this challenge, download the image below. It has a secret 
 
 <p align="center">
 
-![](/images/labs/images/hiddenbear.jpg){:height="300px"}
+![](/images/labs/images/hiddenbear.png){:height="300px"}
 
 </p>
 
