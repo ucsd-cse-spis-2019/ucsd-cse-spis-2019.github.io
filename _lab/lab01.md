@@ -43,7 +43,7 @@ This first part of the lab is individual, so you need your own workstation. Howe
 
 Now, let's get going with Picobot. Fist, log into a computer, and open a web browser. 
 
-For a resource on Picobot, check out **[Chapter 1.2 of the book CS for All](http://www.cs.bc.edu/~muller/teaching/cs101/s13/dist/docs/HMCS5book.pdf).**  BTW, this is just one of the chapters of the online textbook we recommend as your go-to resource for your journey throughout SPIS. But if you are eager to get started, and we hope you are, you can focus on this chapter on picobot first.
+For a resource on Picobot, check out **[Chapter 1.2 of the book CS for All](https://www.cs.hmc.edu/twiki/bin/view/CSforAll/)** or its [pdf version](http://www.cs.bc.edu/~muller/teaching/cs101/s13/dist/docs/HMCS5book.pdf).  BTW, this is just one of the chapters of the online textbook we recommend as your go-to resource for your journey throughout SPIS. But if you are eager to get started, and we hope you are, you can focus on this chapter on picobot first.
 
 Based on the information in this *CS for All* chapter or what you learned in class, try to answer the following questions for yourself. If you are not sure, feel free to discuss with your partner or a mentor. You don't need to submit these answers, but make sure you are able to formulate an answer for yourself. Confer with your partner to see if they are thinking the same.
 
