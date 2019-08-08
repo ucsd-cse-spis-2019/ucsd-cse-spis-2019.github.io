@@ -40,7 +40,7 @@ Before you get started with programming, we need to point out one important fact
 
 ## Getting familiar with PIL
 
-In this lab, we'll work with the Python Imaging Library (PIL) which is a graphics library, like turle, but designed for working with image files. Download the picture below and save it in your github repo working directory for this lab (the one you cloned above). You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "bear.jpg".
+In this lab, we'll work with the Python Imaging Library (PIL) which is a graphics library, like turle, but designed for working with image files. Download the picture below and save it in your github repo working directory for this lab (the one you cloned above). You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "bear.png".
 
 <p align="center">
 
