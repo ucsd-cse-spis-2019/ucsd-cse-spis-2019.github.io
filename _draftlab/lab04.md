@@ -229,11 +229,21 @@ Test your implementation by calling snowflake(280, 4); you should get the follow
 </p>
 
 
-Drawing the snowflake is challenging. If you have completed this exercise consider it a major accomplishment!! Congratulations!!!
+Drawing the snowflake is challenging. If you have completed this exercise consider it a major accomplishment!! Congratulations on working your way through recursion and lab04! 
+However, you may find that you may want to hone your recursion skills a little more. So try out the challenge problems.
+
+
+# Challenge Problem - Sierpinski Triangles
+Create a new file `triangles.py`. Use recursion to have your turtle create the famous Sierpinski triangles, shown below. 
+
+<p align="center">
+![alt-frac-3](/images/labs/images/fractals/Sierpinski.png){: height="200px" }
+![alt-frac-4](/images/labs/images/fractals/fern.png){: height="200px" }
+</p>
 
 
 
-# More fractal fun (optional)
+# More fractal challenge problems
 
 If you want to go still deeper into fractals and recursion, get creative drawing new fractals. There is a general way to recursively create many types of fractals, called fractal decomposition. One starts with a shape oriented in a space along with a replacement rule which is used to refine the picture.  One useful (but optional) rule of thumb is to not remove any shapes once they have been put down, but only to add on to what already exists. Another is to use different replacement rules with various probabilities. Try several of these out, and figure out what kinds of rules lead to beautiful designs. Put all of your code for the optional fractal drawing in a new file called "fractalChallenge.py". 
 
@@ -251,7 +261,6 @@ Here are some pictures for inspiration:
 
 
 <p align="center">
-![alt-frac-3](/images/labs/images/fractals/Sierpinski.png){: height="200px" }
 ![alt-frac-4](/images/labs/images/fractals/fern.png){: height="200px" }
 </p>
 
