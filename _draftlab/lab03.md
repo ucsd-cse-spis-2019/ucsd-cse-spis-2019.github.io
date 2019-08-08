@@ -265,3 +265,46 @@ Once you've got your hurricane tracker working, make sure of the following:
 * Did you use appropriate commenting in your code when something might be unclear to the reader?
 
 Once you can answer yes to all of the following make sure you add ALL of your files from this lab (the two files from the individual part (4 between the two of you) and the two files you created for the pair part) to your repo, then commit and push to github.  Then you are done!   But of course, you're never done, so keep working on creative extensions of your own!
+
+
+# Challenge Problem - Build your own game
+
+```python
+import turtle
+
+# Create a turtle
+player1 = turtle.Turtle()
+
+# Set the simulation speed to maximum. This is not the speed of the turtle, but specifies
+# how fast the animations are updated. A value of "0" is best for smooth animations
+player1.speed(0)
+
+# Function that will be executed on a specific key stroke (see below)
+# It causes player1 to turn left
+def turnleft():
+    player1.left(30)
+
+# Function that will be executed on a specific key stroke (see below)
+# It causes the speed of player 1 to double
+def speedup():
+    global speed1
+    speed1 = speed1 * 2
+
+# This code makes the turtle library listen to key strokes
+# Then for the keys listed, e.g., the left arrow or the letter "d" or the left arrow,
+# it specifies which function will be executed when that key is pressed. 
+# You can list additional keys and tie them to your own functions
+turtle.listen()
+turtle.onkey(turnleft, "Left")
+turtle.onkey(speedup,"d")
+
+# The initial speed the player 1 turtle is moving forward with
+speed1 = 0.25
+
+# This is the main game loop
+# It is an infinite loop; this is code is executed forever
+while True:
+    player1.forward(speed1)
+
+```
+
