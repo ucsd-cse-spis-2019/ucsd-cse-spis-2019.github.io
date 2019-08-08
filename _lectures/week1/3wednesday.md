@@ -1,6 +1,6 @@
 ---
 lecture_date: 2019-08-07 09:00:00.00-7:00
-topic: ""
+topic: "Python 3:  Identifiers, Variables, Assignments, Expressions, Scope, If"
 desc: ""
 week: "1"
 ready: true
