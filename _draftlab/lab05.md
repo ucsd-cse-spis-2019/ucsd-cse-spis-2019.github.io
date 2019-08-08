@@ -23,7 +23,7 @@ Your learning goals are:
 * Dream up new creative image manipulations
 
 
-# Setting up your git repo for {{page.num}} (WITH your partner)
+# Setting up your git repo for {{page.num}} (with your partner)
 
 This assignment consists of both individual and pair programming exercises. As in previous assignments, you will create only one private repository between the two of you. Following our naming convention, your repo should be called `spis19-lab05-Name1-Name2`. There is no starter code to import for this assignment. Go ahead and create this repo now on github (select .gitignore to include Python and add a README).
 
@@ -40,7 +40,7 @@ Before you get started with programming, we need to point out one important fact
 
 ## Getting familiar with PIL
 
-In this lab, we'll work with the Python Imaging Library (PIL) which is a graphics library, like turle, but designed for working with image files. Download the picture below and save it in your github repo working directory. You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "bear.jpg".
+In this lab, we'll work with the Python Imaging Library (PIL) which is a graphics library, like turle, but designed for working with image files. Download the picture below and save it in your github repo working directory for this lab (the one you cloned above). You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "bear.jpg".
 
 <p align="center">
 
@@ -48,7 +48,7 @@ In this lab, we'll work with the Python Imaging Library (PIL) which is a graphic
 
 </p>
 
-Next, launch idle in the same directory where you stored the bear image. In idle, create a new file and at the top of this file put a comment stating your name. Save this file as `lab05Warmup_YourName.py` where YourName is replaced with your first name.
+Next, go to the same directory where you stored the bear image and launch gVim. Create a new file and at the top of this file put a comment stating your name. Save this file as `lab05Warmup_YourName.py` where YourName is replaced with your first name.
 
 In this file, write the following lines of code. 
 
@@ -62,7 +62,7 @@ bear.show()
 
 ```
 
-The first line instructs Python to import the Image portion of the PIL image library. Whenever you use a function from this library, it will start with `Image.`, indicating you are looking for that function in this specific library. The next line of code opens an image and stores a reference to it in the `bear` variable. If you are getting an error here it's probably because you either placed the file in the wrong place or launched idle  from a directory different from where the image was stored. You could resolve this issue by including the path (i.e., complete location in the directory structure), or by moving the file to the correct location.
+The first line instructs Python to import the Image portion of the PIL image library. Whenever you use a function from this library, it will start with `Image.`, indicating you are looking for that function in this specific library. The next line of code opens an image and stores a reference to it in the `bear` variable. If you are getting an error here it's probably because you either placed the file in the wrong place or launched gVim  from a directory different from where the image was stored. You could resolve this issue by including the path (i.e., complete location in the directory structure), or by moving the file to the correct location.
 
 Before you move on, add comments to your file to explain each line of code.
 
@@ -72,28 +72,28 @@ How many pixels is your image composed of? The following command could be helpfu
 bear.size
 ```
 
-Next, we are going to access a specific pixel from the image by using the `getpixel()` function. The arguments of this function are a picture object and the pixel's X position and its Y position. The function returns the resulting pixel object. This pixel  is a tuple representing the RGB values of the pixel (in the case below, at location x = 100 and y = 200).
+Next, we are going to access a specific pixel from the image by using the `getpixel()` function. The arguments of this function are a picture object and the pixel's X position and its Y position. The function returns the resulting pixel object. This pixel is a tuple representing the RGB values of the pixel (in the case below, at location x = 100 and y = 200).
 ```
 pixel = bear.getpixel( ( 100, 200) )
 
 ```
 
-Note that in the image grid, the axis is a little different from the usual 2D Cartesian axis, in that it counts from upper left to bottom right. For example, in the following 18 x 18 image grid, the coordinate (11, 7) is the grey block. Note the index starts at 0.
+Note that in the image grid, the axis is a little different from the usual 2D Cartesian axis, in that it counts from upper left to bottom right. For example, in the following 18 x 18 image grid, the coordinate (11, 7) is the grey block. Note that the index starts at 0.
 
 <p align="center">
 ![](/images/labs/images/coordinates.gif){:height="300px"}
 </p>
 
 
-In the shell, you can check the value of the pixel and verify it is a tuple of RGB values (3 numbers, one each for R, G and B):
+You can check the value of the pixel and verify it is a tuple of RGB values (3 numbers, one each for R, G and B), by adding this line of code to your Python file:
 
 ```
->>> pixel
+print(pixel)
 ```
 
 Now that we have accessed a pixel, let's see how to modify the colors of individual pixels in the image.  To modify a pixel use the putpixel function
 ```
->>> bear.putpixel( (100, 200), (0, 0, 0) )
+bear.putpixel( (100, 200), (0, 0, 0) )
 ```
 
 The `putpixel` function modifies one pixel at a time and takes two arguments: (1) a pixel coordinate  represented by an (x, y) tuple, in this case (100,200); and (2) a tuple representing the RGB color to set the pixel to, in this case color (0, 0, 0), i.e. black.
@@ -102,7 +102,7 @@ Add the `putpixel` command above to your code and check the bear image. Can you 
 
 ```
 for i in range(100):
-    stonebear.putpixel( (i, 200) , (0, 0, 0) )
+    bear.putpixel( (i, 200) , (0, 0, 0) )
 
 ```
 
@@ -148,7 +148,7 @@ For this exercise and for all subsequent ones, make sure you test your code on t
 
 ## Saving modified pictures
 
-At the moment, you are only modifying a copy of the image that is stored in local memory. You are not actually changing the `bear.jpg` file, and any of the changes you make will not be saved when you exit Python. The reason is that the Python functions you've used are not directly processing the stone bear image on the hard disk.  Rather,  when you open an image, PIL makes a duplicate of that image and loads that duplicate copy into  memory. This technique of loading a copy of a file to memory (which is relatively fast) rather than directly handing a file on the disk (slow) is very common. 
+At the moment, you are only modifying a copy of the image that is stored in local memory. You are not actually changing the `bear.jpg` file, and any of the changes you make will not be saved when you exit Python. The reason is that the Python functions you've used are not directly processing the stone bear image on the hard disk.  Rather,  when you open an image, PIL makes a duplicate of that image and loads that duplicate copy into RAM memory. This technique of loading a copy of a file to memory (which is relatively fast) rather than directly handing a file on the disk (slow) is very common. 
 
 To save changes to disk, you should use the `Image.save` function. Read the documentation, mentioned earlier, to see how it works (hint: It takes one argument, which is a string specifying where you want the file saved including its name). Make sure you give this new file you save to a different name (i.e., don't use `bear.jpg`), as we will be using the original file throughout this lab. 
 
@@ -174,17 +174,17 @@ Now, what happens if you apply `invert()` first and then next apply `invert_bloc
 ## Submit your code
 Submit your code using the command line tools `git add`, `git commit` and `git push`. If your partner has already pushed to the git repo, you may get an error message if you try to push your changes as well. To resolve this, before you do `git push`, first do `git pull origin master`. This will make sure your local branch is up to date with the github master first. Verify that your code is pushed properly by navigating to your repo on github.com and viewing your latest changes.
 
-At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE; instead have fun with creating new image transformations of your own. For example, what happens if you swap color channels (R becomes G, G becomes B, B becomes R)? What happens when you delete (i.e., set to 0) one or more of the color channels? Can you modify your code such that these transformations only apply to every other pixel rather than every pixel or to a specific area in your image? Check out some of the things that are possible at the end of this assignment under **creative challenges**, including green screen manipulations. You could be busy for many hours ... However, once your partner finishes the individual portion, sync up again and start the pair programming portion of the lab. At the end, get back to creating new artistic image manipulations ...
+At this point you are done with the individual portion.  If your partner is not yet done DO NOT CONTINUE; instead have fun with creating new image transformations of your own. For example, what happens if you swap color channels (R becomes G, G becomes B, B becomes R)? What happens when you delete (i.e., set to 0) one or more of the color channels? Can you modify your code such that these transformations only apply to every other pixel rather than every pixel or to a specific area in your image? Check out some of the things that are possible at the end of this assignment under **creative challenges**, including greenscreen manipulations. You could be busy for many hours ... However, once your partner finishes the individual portion, sync up again and start the pair programming portion of the lab. At the end, get back to creating new artistic image manipulations ...
 
 
 # Pair programming portion: More advanced image manipulations
 
 **STOP!  Do not start on this part of the lab until BOTH partners have completed the individual portion.  When you do start, make sure you use _pair programming_**
 
-First, create a new Python file called "imaging.py" in your repo. You will place all the code of the pair programming exercises in this file. Make sure you add appropriate comments, including a header comment. For each exercise, come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have come to a fairly clear idea of a solution strategy and your first steps.
+First, create a new Python file called "imaging.py" in your repo. You will place all the code of the pair programming exercises in this file. Make sure you add appropriate comments, including a header comment. For each exercise, come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have come to a fairly clear idea of a solution strategy and your first steps. Also, push your code to github regularly! This gives you an online copy to guard against accidentally deleting your work. Also, it is a good habit to get into.
 
 # Reducing the color space
-Now that we have some experience changing the colors in a picture, we will continue of with some more color manipulation examples that manipulate each pixel individually.
+Now that we have some experience changing the colors in a picture, we will continue with some more color manipulation examples that manipulate each pixel individually.
 
 ### Greyscale
 To create greyscale images, we make use of the concept of image luminance. In layman's terms, luminance is how bright or dark the colors in a pixel are (compared to white). As Wikipedia calculates it, luminance is 21% red, 72% green, and 7% blue. Intuitively, this makes sense because if you think of standard red, green, and blue, green is the lightest and thus has highest positive impact luminance, while blue is darker and has a lower value for luminance. 
@@ -204,7 +204,7 @@ Hint: Getting an OverflowError: unsigned byte integer is greater than maximum? T
 
 ### Binarize
 
-Now, write a function called `binarize(im, thresh,  startx, starty, endx, endy)`, which modifies a portion of `im` to be black and white based on a threshold luminance value (thresh) specified by the user. This threshold is a brightness value between 0 and 255 - if a pixel's luminance (see earlier) is greater than the threshold value, then it should turn white, and if it is less than the threshold value, then it should turn black. It should only apply this operation to pixels that are inside a box, where startx and starty represent the coordinates of the upper left corner of the box and endx and endy represent the x and y coordinates of the lower right corner. Your function should check that these numbers are valid (make sure your checks are complete!). If they are not, the function should do not modify the image, but print a warning instead.
+Now, write a function called `binarize(im, thresh,  startx, starty, endx, endy)`, which modifies a portion of `im` to be black and white based on a threshold luminance value (thresh) specified by the user. This threshold is a brightness value between 0 and 255 - if a pixel's luminance (see earlier) is greater than the threshold value, then it should turn white, and if it is less than the threshold value, then it should turn black. It should only apply this operation to pixels that are inside a box, where startx and starty represent the coordinates of the upper left corner of the box and endx and endy represent the x and y coordinates of the lower right corner. Your function should check that these numbers are valid (make sure your checks are complete!). If they are not, the function should not modify the image, but print a warning instead.
 
 <p align="center">
 
@@ -212,7 +212,9 @@ Now, write a function called `binarize(im, thresh,  startx, starty, endx, endy)`
 
 </p>
 
-        
+
+Did you push your code to github?
+
 
 ## Geometric transformations
 
@@ -245,6 +247,8 @@ Write `flipVert`, a function which flips the image in a picture along its horizo
 
 </p>
 
+When is the last time you pushed your code to github?
+
 
 ## Geometric transformations returning a copy of the image
 
@@ -255,10 +259,12 @@ The command below can be helpful. It creates a new image im, as a color image (t
     im = Image.new('RGB',(width,height))
 ```
 ### Scale
-Function `scale` takes an image as a parameter and creates a copy of that image that is scaled to be half its original size.  Then return this scale copy (so you are going to have a return statement now). Hint: one way to do this is to skip every other pixel when copying from one image to the other. Be careful with your coordinates so that you do not go out of bounds in the smaller image.
+Function `scale` takes an image as a parameter and creates a copy of that image that is scaled to be half its original size.  Then return this scaled copy (so you are going to have a return statement now). Hint: one way to do this is to skip every other pixel when copying from one image to the other. Be careful with your coordinates so that you do not go out of bounds in the smaller image.
 
 ### Blur
 Function `blur` also returns a modified copy of the image. This copy will be a blur of the original image, created by combining neighboring pixels in some way (entirely up to you). You might consider averaging the RGB values of a designated 'square' of pixels, then changing each of these pixels' values to the average.
+
+.... github!! ...
 
 ### Random grid (challenge problem)
 Function `randomGrid` also returns a copy of the original image.  To create this copy it divides the image into an NxN grid (where the N is up to you, or make it an argument of the function) and randomly sorts the pieces of the grid across the image - "sliding puzzle"-style. Hint: you can use the random library (just google this).
@@ -273,7 +279,7 @@ Function `randomGrid` also returns a copy of the original image.  To create this
 
 ## Submission
 
-Submit the pair programming portion of your code, which should all be in the `imaging.py` file, to github using the usual `git add`, `git commit`, `git push` commands
+Submit the pair programming portion of your code, which should all be in the `imaging.py` file, to github using the usual `git add`, `git commit`, `git push` commands.
 
 
 # Creative challenges
