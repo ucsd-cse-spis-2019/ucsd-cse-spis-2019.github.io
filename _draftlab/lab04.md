@@ -80,8 +80,8 @@ Your recursive step should be something like:
 
 a * b = a + a * (b-1)
 
-Bring up idle3, and open "recursiveFuncs.py" and "test_recursiveFuncs.py". These two files were part of the starter code for your repo. Note that the code is still incomplete. 
-Now, implement the recursive multiplication function recProduct(a,b) in "recursiveFuncs.py". Once you have that, it's time to test your code using the unittest framework (see lab02). The file "test_recursiveFuncs.py" is where you unit test your code.
+Bring up gVim, and open "recursiveFuncs.py" and "test_recursiveFuncs.py". These two files were part of the starter code for your repo. Note that the code is still incomplete. 
+Now, implement the recursive multiplication function recProduct(a,b) in "recursiveFuncs.py". Once you have that, it's time to test your code.
 
 For example check that your program does the following:
 
