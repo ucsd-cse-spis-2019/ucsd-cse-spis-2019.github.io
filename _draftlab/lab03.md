@@ -42,7 +42,7 @@ To warm up with the Turtle, you will use the Turtle to draw your first initial (
 You should complete this part individually.  You may talk to your partner and have them help you, or give help to your partner, but you should try to do as much of it on your own as possible, and all the code you write should be done individually.  
 
 ## Step 1.1: Get familiar with the Turtle
-In idle, create a new file and at the top of this file put a comment with your name and a description of what this file will do (a program to draw the first letter of your name).  Save this file as `lab03Warmup_YourName.py` where YourName is replaced with your first name.
+In gVim, create a new file and at the top of this file put a comment with your name and a description of what this file will do (a program to draw the first letter of your name).  Save this file as `lab03Warmup_YourName.py` where YourName is replaced with your first name.
 
 In order to work with the Turtle, you need to import the `turtle` module.  Do this by putting the line:
 
@@ -128,7 +128,7 @@ Move the turtle forward by the specified distance, in the direction the turtle i
 Now is a good time to make sure you've got helpful comments in your file and that you've saved it.  Also add your file to your repository at this point (if you don't remember how, check the instructions in [lab02](/lab/lab02)) and then commit your code so far.  You do not need to push it to github yet, though you can if you want to.
 
 ## Step 1.2: Write a method to draw the first letter of your first name
-Create a new file named `drawLetter_YourFirstName.py` in idle.  In that file, write the following method:
+Create a new file named `drawLetter_YourFirstName.py` in gVim.  In that file, write the following method:
 
 ```python
 drawA(theTurtle)
@@ -207,7 +207,7 @@ This part of the assignment is based on the following assignment: http://nifty.s
 In this part, you and your partner will use the Turtle to animate the paths of some real hurricanes!  Your goal is to build a program that functions like the one in [this video](https://youtu.be/c2uRG42M_nc).  Here are the details.
 
 ### Understand the starter code
-Open the starter file `irma.py` in idle.  
+Open the starter file `irma.py` in gVim.  
 
 In the `irma_setup` function, the following are done for you:
 
