@@ -1,5 +1,5 @@
 ---
-topic: ""
+topic: "Introduction, Overview, Unix, vim, Picobot"
 desc: ""
 lecture_date: 2019-08-05 09:00:00.00-7:00
 week: "1"
