@@ -268,13 +268,14 @@ Once you can answer yes to all of the following make sure you add ALL of your fi
 
 
 # Challenge Problem - Build your own game
-For this challenge problem, you are asked to build your own game with turtles. Check out the sample code below. The comments should help you figure out what is going on. The main bit of functionality that is new is the ability to have to turtle react to key strokes. For each key that is pressed, you can associate that key press with a function that is executed in response.
+For this challenge problem, you are asked to build your own game with turtle. Check out the sample code below. The only really new concept is how to react to key strokes. The way it works is that for each key stroke event (i.e., pressing that key), there is an associated function that is executed in response. For example, `turtle.onkey(speedup,"d")` causes the `speedup()` function to be called each time the "d" key is pressed. That line of code doesn't actually call the function; it simply informs the program that each tim "d" is pressed, the function should be executed. 
 
-One new element of Python syntax is the use of the keyword `global`. In the example below, this was used inside the function `speedup()`. It tells the function that the variable speed1 is a global variable, which means that it is defined outside of the function. Without specifying that speed1 is something Python can find outside the function, it would complain that inside the function is has never heard of speed1 before. Remember, inside a function, only the variables that are defined (e.g., the arguments that are passed to a function) there are available. The way you have modified global variables before was to pass them as arguments to a function and then return the result. Directly modifying a global variable is an alternate way of doing this. It is generally considered less desirable, as it is not as obvious what is going on to someone reading your code and if you make a mistake it can cause undesired effects that are hard to debug. However, since we are tying a function to a keystroke in our interactive turtle example and we cannot return anything, it is useful here. 
+Also note the use of the keyword `global` in the `speedup()` function. It tells the function that the variable speed1 is a global variable, which means that it is defined outside of the function. Without specifying that speed1 is something Python can find outside the function, it would complain that inside the function is has never heard of speed1 before. Remember, inside a function, only the variables that are defined there (such as the arguments that are passed to a function) are available. The way you have modified global variables before was to pass them as arguments to a function and then return the result. Directly modifying a global variable is an alternate way of doing this. It is generally considered less desirable, as it is not as obvious what is going on to someone reading your code and if you make a mistake it can cause undesired effects that are hard to debug. However, since we are tying a function to a keystroke in our interactive turtle example and we cannot return anything, it is useful here. 
 
 
 ```python
 import turtle
+import time
 
 # Create a turtle
 player1 = turtle.Turtle()
@@ -305,10 +306,22 @@ turtle.onkey(speedup,"d")
 # The initial speed of player 1
 speed1 = 0.25
 
+# Print the current time
+# This is Unix time, i.e., the time in seconds since 1/1/1970
+print(time.time())
+
 # This is the main game loop
 # It is an infinite loop; this code is executed forever
 while True:
     player1.forward(speed1)
 
 ```
+
+**Task 1:** Expand the game where the speed of the player is doubled automatically every 5 seconds. Remove the "d" key input, but instead use the right arrow to turn right. The player dies when they go outside of the field. Define as the score, the number of seconds the player was able to stay alive.
+
+**Task 2:** Add other fun features to the game. Maybe have another turtle run around randomly, which you also must avoid. You can also use another turtle to implement objects you can grab, which would lower the speed again. Maybe the right and left key swap functionality every so often. Think of some more variations ...
+
+**Task 3:** Create your own game. How about a multiplayer game? We'd all love to see what you can come up with.
+
+
 
