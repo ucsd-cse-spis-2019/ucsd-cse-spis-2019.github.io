@@ -1,6 +1,6 @@
 ---
 lecture_date: 2019-08-06 09:00:00.00-7:00
-topic: ""
+topic: "APS: Divide and Conquer, Learning Programming with Python3"
 desc: ""
 week: "1"
 ready: true
