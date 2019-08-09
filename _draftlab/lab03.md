@@ -219,7 +219,7 @@ In the `irma_setup` function, the following are done for you:
 You will add your code into the function `irma()`.  Read the comments and the code in that function and make sure you understand what it does so far.  Try moving the turtle (t) around and see it animate.  Notice the coordinates of the world have been changed from their default.  The x values in the new coordinate system range from -90 to -17.66 and the y values range from 0 to 45.  Since the Turtle starts at (0,0) you cannot see it.  Try moving it to a location where you can see it in the new coordinate frame and making it move.
 
 You will also notice that this starter code uses a file named `irma.csv` in the data directory. This data was scraped from https://www.wunderground.com/hurricane/atlantic/2017/hurricane-irma (https://www.wunderground.com/hurricane/atlantic/2017/hurricane-irma),
-last access 9/14/2017. This file contains data about hurricane Irma. Each line contains 6 columns separated by commas (thus the .csv file extension). The file can be opened directly in idle or opened in Excel for a columnar view. The first line of the file describes what each column is. Here are the first 3 lines of the file, separated into their columns:
+last access 9/14/2017. This file contains data about hurricane Irma. Each line contains 6 columns separated by commas (thus the .csv file extension). The file can be opened directly in gvim or opened in Excel for a columnar view. The first line of the file describes what each column is. Here are the first 3 lines of the file, separated into their columns:
 
     Date	    Time        Lat     Lon     Wind    Pressure
     30-Aug      15:00 GMT   16.4    -30.3   50      1004
