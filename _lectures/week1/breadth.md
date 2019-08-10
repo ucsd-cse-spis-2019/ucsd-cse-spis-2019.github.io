@@ -9,5 +9,6 @@ ready: true
 ---
 
 # Breadth Lecture (Curt)
+Compression algorithm, prefix-codes, Huffman coding, entropy
 
-Lecture slides:
+Lecture slides: [Compressing Information](/lectures/week1/SPIS Lecture 11 - Breadth - Compressing Information.pdf)
