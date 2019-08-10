@@ -1,14 +1,15 @@
 ---
 lecture_date: 2019-08-09 09:00:00.00-7:00
-topic: ""
+topic: "Parameters, for-loops, lists, tuples"
 desc: ""
 week: "1"
 ready: true
 ---
 
 # FOCS 8:45am - 10:00am (Curt)
+Review of parameters in Python, for-loops, lists and tuples
 
-Lecture slides: 
+Lecture slides: [More Python constructs](/lectures/week1/SPIS Lecture 10 - Lists, Tuples and For.pdf)
 
 
 # About Breadth/Depth
