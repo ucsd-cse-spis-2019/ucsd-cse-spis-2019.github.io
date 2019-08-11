@@ -152,6 +152,13 @@ Implement the function and use it to draw an interesting spiral of your own.
 
 Help!  Stack Overflow!  Do not be alarmed if you find you are getting stack overflow errors when you try to run the "growing spiral" example above.  This error is caused by an infinite recursion.  I.e. a recursion that never hits its base case.  Not sure why?  This is a perfect time to practice some of those debugging skills you learned above.  :)  Ask a tutor if you need help.
 
+Useful debugging hint: You can change the speed with which your turtle draws. Assuming your turtle is `bob`, adding the code below causes it to move as slow as possible, which can help you figure out what is going on in your algorithm. If you change 1 to higher numbers, your turtle will speed up. However, somewhat counter-intuitively, `speed(0)` has the turtle move as fast as possible, which is useful when your algorithm is working and you want to try it out with a larger recursion depth. 
+
+```python
+bob.speed(1)
+```
+
+
 ## Grow a Tree
 
 Next, you will write the tree function.  It has the following signature:
