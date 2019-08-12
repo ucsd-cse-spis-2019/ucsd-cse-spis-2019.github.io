@@ -1,14 +1,14 @@
 ---
 lecture_date: 2019-08-16 09:00:00.00-7:00
-topic: "FoCS  and Breadth/Depth"
-desc: "Mutable references / Two options for lecture"
+topic: ""
+desc: ""
 week: "2"
 ready: true
 ---
 
-# FOCS 8:45am - 10:00am (Curt)
+# FOCS 8:45am - 10:00am ()
  
-Lecture slides: [Variables, references and mutation](/lectures/week2/SPIS Lecture 16 - Mutable References.pdf)
+Lecture slides: 
 
 
 
