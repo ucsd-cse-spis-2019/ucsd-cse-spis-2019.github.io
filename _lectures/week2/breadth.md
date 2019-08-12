@@ -8,9 +8,8 @@ link_topic_desc_only: true
 ready: true
 ---
 
-# Breadth Lecture (Christine)
+# Breadth Lecture (Igor)
+How to build your own grass-powered submarine
 
 Lecture slides:
-* [Before](/lectures/week2/Breadth2_SeamCarvingAndAdvancedRecursion.pdf)
 
-Code from class: [advancedRecursionSolutions.py](/lectures/week2/advancedRecursionSolutions.py)
