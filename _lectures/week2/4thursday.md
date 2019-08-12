@@ -11,6 +11,6 @@ ready: true
 
 
 
-# FOCS 10:15am - 11:30am (Curt)
+# FOCS 10:15am - 11:30am ()
 
-Lecture slides: [Pictures and Loops (continued)](/lectures/week1/SPIS Lecture 15 - Images - part2.pdf) (same file, different link: [Pictures and Loops (continued)](https://drive.google.com/file/d/1jxDkVbstjqAlgc3dY3H04qrLcuOEcuOy/view?usp=sharing))
+Lecture slides: 
