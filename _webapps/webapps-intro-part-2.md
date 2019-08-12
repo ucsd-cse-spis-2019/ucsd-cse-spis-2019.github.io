@@ -69,9 +69,10 @@ if __name__ == "__main__":
 
 Now, you can test your function by doing this: 
 * Save your file
-* Go to IDLE shell prompt and type `from hello import ftoc`
+* Go to the python3 shell prompt and you do this by typing `python3` into the terminal
+* Once in the python3 shell type `from hello import ftoc`
 * Try various values of ftoc, such as ftoc(212.0) and ftoc(32.0)
-* If your ftoc function works, then you are good to go the next step where we hook this up to the web app.
+* If your ftoc function works, then you are good to go to the next step where we hook this up to the web app.
 
 # Hooking this up to the web app
 
