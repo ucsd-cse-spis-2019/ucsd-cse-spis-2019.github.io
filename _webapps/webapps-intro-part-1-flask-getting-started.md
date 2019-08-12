@@ -28,7 +28,7 @@ The easiest way to get started is to try some small examples.     Below is a sma
 * Make a directory in your SPIS account called web-app-intro
 * As a reminder, the command is mkdir web-app-intro
 * Then, cd into that directory
-* Open up IDLE, because we are going to write some code.
+* Open up gvim, because we are going to write some code.
 
 Put these lines of code in a file called hello.py
 
@@ -47,13 +47,13 @@ if __name__ == "__main__":
 To get this working, all you have to do is type:
 
 ```
-python hello.py
+python3 hello.py
 ```
 
 Sadly, it probably won't work the first time you try it.  You'll probably get a message like this one:
 
 ```
-[spis15t7@ieng6-240]:~:107$ python hello.py
+[spis15t7@ieng6-240]:~:107$ python3 hello.py
 Traceback (most recent call last):
   File "hello.py", line 1, in 
     from flask import Flask
@@ -106,12 +106,12 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 Once the Flask module is added to your individual user's Python installation, you can run the file again by typing:
 
 ```
-python hello.py
+python3 hello.py
 ```
 Here is what that should look like:
 
 ```
-[spis15t7@ieng6-240]:~:179$ python hello.py
+[spis15t7@ieng6-240]:~:179$ python3 hello.py
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
@@ -141,9 +141,9 @@ There will be times later when we will want to dive deep into that long "Traceba
 * There is a very specific reason that the maximum number is exactly 65535.  Can you guess what it is?   It has to do with our lecture on number representation.
 And yes, if you thought: wait, can we write some code to do this, instead of doing by hand—then congratuations! You are thinking like a programmer! Eventually, we'll look at that, but if you just can't wait, check this out.
 
-Now let's suppose it "works", meaning that when you type in python hello.py you get a message such as this one:
+Now let's suppose it "works", meaning that when you type in python3 hello.py you get a message such as this one:
 ```
-[spis15t7@ieng6-240]:~:179$ python hello.py
+[spis15t7@ieng6-240]:~:179$ python3 hello.py
  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
 ```
 
@@ -167,10 +167,10 @@ This is the web address where your server is located.   If you enter this in you
 
 Now, here are a few things to try, and some questions to answer.  As you try these things and think through what is happening, you should begin to understand a few things about how this code is working.
 
-Before you start, arrange the windows on your screen so that you have the window where you typed python hello.py on the left side of your screen (we'll call this the server window), and the browser window on the right side of your screen.
+Before you start, arrange the windows on your screen so that you have the window where you typed python3 hello.py on the left side of your screen (we'll call this the server window), and the browser window on the right side of your screen.
 
 * In the browser window, hit 'refresh' a few times.     What do you see in the server window?   
-* In the window where you originally typed python hello.py, type a CTRL+C (that is, "Control-C"). Then try hitting "refresh" in the browser where you typed localhost:5000, and see what happens. Then, type the python hello.py command again, and try hitting refresh in the browser again.
+* In the window where you originally typed python3 hello.py, type a CTRL+C (that is, "Control-C"). Then try hitting "refresh" in the browser where you typed localhost:5000, and see what happens. Then, type the python3 hello.py command again, and try hitting refresh in the browser again.
 * Use CTRL+C on the server side to stop the server, edit the hello.py file to change the string "Hello World" to something else, for example, if your name is Cory, make it say: "Hello from Cory's server".  Start the server up again and then hit refresh in your browser a few times.
 
 # What to do next?   
@@ -216,7 +216,7 @@ div.nicer-table table * td { padding: 4px; }
 | 4	| The `@` signals that what follows is a Python annotation. It indicates that there is some special way the following function definition should be handled. In this case, the annotation `app.route("/")` indicates that this function is called whenever we ask for the main page on this web server (i.e. `"/"`. This will make more sense when we add other pages later. |
 | 5	 | Lines 5 and 6 are a regular plain old Python function definition. We can see that the function is called `"hello"`, and takes no parameters.
 | 6	 |  	This function returns a string, `"Hello World!"`, which is used as the page to display for the main page of the web server (`"/"`).
-| 8	| Line 8 has an if test that checks the special variable `__name__` to see if it has the special value "__main__". This is the mysterious "conditional script stanza", which we aren't going to explain in detail here. Instead, we'll just say that whatever "main thing" a Python code is supposed to do when you select "Run" in IDLE, or type python filename.py, in this case python hello.py, should typically be wrapped in this if test. That makes your file much more useful, because then the definitions it contains can be included as a module in another file.
+| 8	| Line 8 has an if test that checks the special variable `__name__` to see if it has the special value "__main__". This is the mysterious "conditional script stanza", which we aren't going to explain in detail here. Instead, we'll just say that whatever "main thing" a Python code is supposed to do when you type python3 filename.py, in this case python3 hello.py, should typically be wrapped in this if test. That makes your file much more useful, because then the definitions it contains can be included as a module in another file.
 | 9	 | 	Line 9 is the line that actually causes our web server to start running. The dot-notation app.run() tells us that run is a method of the object app. By putting () after it, we are making a function call to that method, and starting things in motion.   The `port=5000` part indicates the port number we are going to listen for connections on.   By default, web servers listen for connections on port 80, and web browsers send requests to port 80.  We don't have the necessary permissions to set up a server on port 80 (port numbers lower than 1024 are restricted to system administrators), but we can set up a server on a "high numbered port", basically anywhere between 1024 and 65536.  For various reasons, its better to choose a number starting at 5000 (less likely to conflict with some other network service.)   Being able to specify a port number both on the server side and the browser side allows many users to set up servers and connect to them all on the same machine. |
 
 </div>
