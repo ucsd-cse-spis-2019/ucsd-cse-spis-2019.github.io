@@ -1,6 +1,6 @@
 ---
 lecture_date: "2019-08-16 10:15:00.00-7:00"
-topic: "Breadth: Advanced Recursion, Seam Carving and Dynamic Programming"
+topic: "Breadth"
 desc: ""
 week: "2"
 indent: true
