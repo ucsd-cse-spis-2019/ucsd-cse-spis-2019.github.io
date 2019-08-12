@@ -1,7 +1,7 @@
 ---
 lecture_date: 2019-08-15 09:00:00.00-7:00
-topic: "Pictures"
-desc: "Basics and working with loops"
+topic: ""
+desc: ""
 week: "2"
 ready: true
 ---
