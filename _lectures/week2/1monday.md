@@ -14,6 +14,7 @@ Lecture slides: [Turtles](/lectures/week2/SPIS Lecture 13 - Turtles.pdf)
 
 
 # FOCS 10:15am - 11:30am (Gary)
+Recursion
 
-Lecture slides: 
+Lecture slides: [Recursion](/lectures/week2/SPIS Monday Lecture Week 2.pdf)
 
