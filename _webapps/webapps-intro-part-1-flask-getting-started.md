@@ -70,7 +70,7 @@ There are many ways to install a Python module, but two of the most common are: 
 Here's how to do it.
 
 ```
-pip install --user flask
+pip3 install --user flask
 ```
 
 Here is an example of what that would look like.    The reason the output is so long is that Flask depends on other pieces of software to work properly.  The pip command figures out what those pieces are, and installs them as well along with everything else.
@@ -118,21 +118,21 @@ Here is what that should look like:
 If that works, great!   But if it doesn't work, it is likely that the problem will be this error message:
 
 ``` 
-socket.error: [Errno 98] Address already in use
+OSError: [Errno 98] Address already in use
 ```
 
 Actually, that error message will be the last line of a long sequence of messages, that look like these (the ... means I've left out many lines of output).
 
 ``` 
 Traceback (most recent call last):
-  File "hello.py", line 9, in 
+  File "hello.py", line 9, in <module>
     app.run()
-  File "/home/linux/ieng6/spis15/spis15t7/.local/lib/python2.7/site-packages/flask/app.py", line 772, in run
+  File "/software/Python/python-3.7/lib/python3.7/site-packages/flask/app.py", line 990, in run
     run_simple(host, port, self, **options)
 ...
-  File "/software/common/python-2.7.10/lib/python2.7/socket.py", line 228, in meth
-    return getattr(self._sock,name)(*args)
-socket.error: [Errno 98] Address already in use
+File "/software/Python/python-3.7/lib/python3.7/socketserver.py", line 463, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
 ```
 
 There will be times later when we will want to dive deep into that long "Traceback", but this is not one of those times. The last line, in this case, tells us everything we need to know. It tells us that the default port number that Flask listens for connections on, `5000`, is already being used by some other program on `ieng6-240.ucsd.edu`. In that case, no worries. We'll just choose a different number. We do that by change the line of code: `app.run(port=5000)` to `app.run(port=5001)`.  We keep doing this, i.e. adding one to the port number, until we find a port number that works for us.  
