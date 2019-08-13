@@ -5,7 +5,6 @@ ready: true
 desc: "Recursion and fractals with Turtle"
 assigned: 2019-08-13 09:00:00.00-7
 due: 2019-08-20 17:00:00.00-7
-starter-code-url: https://github.com/ucsd-cse-spis-2019/lab04-startercode.git
 ---
 
 If you find typos or problems with the lab instructions, please report them on Piazza.
@@ -28,24 +27,13 @@ Your learning goals are:
 
 # Work Flow
 
-* Step 1: Create a new private github repo under the "ucsd-cse-spis-2019" organization. However, the instructions are a little different this time, since we will be providing you with some starter code. 
-
-* Step 2: For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy.
-
-* Step 3: Unit test your code as you write new code using the unittest framework
-
-* Step 4: Commit your code frequently. Push working versions of your code to github. 
+For each of the programming exercises in this lab come up with a solution outline by discussing with your partner. Don't be in a hurry to start coding unless you have a fairly clear idea of a solution strategy. Only when you have come up with a clear strategy, start the coding process. Test your code constantly, maybe starting with simple cases first. Make sure to commit your code frequently. Push working versions of your code to github. 
 
 Developing code is an iterative process. Your code will probably not work as expected on the very first try. Don't be dismayed. Work through your code to identify bugs, test new code frequently and seek help if you feel you are stuck!
 
 
 # Setting up your repo
-The way that you create the repo will be a little different this time, since we have "starter code" available for you.
-
-Instead of creating the repo from scratch, you'll set up the repo with [Method 1](/topics/github_create_repo/#method1){: data-ajax="false"},
-importing the starter code from this link:  [{{ page.starter-code-url }}]({{ page.starter-code-url }})
-
-The name of your repo should be `spis19-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2019.github.io/info/pairs/), as we have done for the previous labs.
+Create a new shared repo for this lab assignment as you did in lab02. There is no starter code this time. The name of your repo should be `spis19-`<tt>{{page.num}}</tt>`-Name1-Name2` where the `Name1-Name2` part matches the *Pair Name* column of the [Pairs table from the SPIS FOCS Website](http://ucsd-cse-spis-2019.github.io/info/pairs/), as we have done for the previous labs.
 
 
 # Programming Exercises
@@ -61,7 +49,7 @@ E.g.,
 
 3 * 4 = 3 + 3 + 3 + 3
 
-In other words, we want to define a function recProduct(a, b) which will have integers as arguments and will return the product of its arguments.  But, the function won't use the operation *.
+In other words, we want to define a function recProduct(a, b) which will have integers as arguments and will return the product of its arguments.  **But, the function shouldn't use the operation *.**
 
 Just for practice, take a minute to (a) determine the base case and (b) write the recursive step without looking below.  After you've got it, read on. If you don't know where to start, please ask for help. Scroll down when you have an answer.
 
@@ -80,10 +68,15 @@ Your recursive step should be something like:
 
 a * b = a + a * (b-1)
 
-Bring up gVim, and open "recursiveFuncs.py" and "test_recursiveFuncs.py". These two files were part of the starter code for your repo. Note that the code is still incomplete. 
-Now, implement the recursive multiplication function recProduct(a,b) in "recursiveFuncs.py". Once you have that, it's time to test your code.
+Bring up gVim, and create a new file "recursiveProd.py". Your task is to complete the function below, which implements recursive multiplication.
 
-For example check that your program does the following:
+```python
+def recProd(a,b):
+	'''Calculate product a*b recursively'''
+	
+```
+
+When you are done, test your code. For example check that your program does the following:
 
 `recProduct(0,5)` returns 0
 
@@ -95,7 +88,7 @@ For example check that your program does the following:
 If any of your test cases fail, it means either there is an error in your code or your code doesn't cover that particular case and you need to write additional code. You have to re-examine your code and figure out what is wrong.
 This process is known as debugging.
 
-Once you have tested your code for the cases where the parameter `b` is non-negative, while `a` is any integer that maybe positive, negative or zero, try to write a few additional test cases where the parameters `b` is negative. Here are a few example cases:
+Once you have tested your code for the cases where the parameter `b` is non-negative, while `a` is any integer that maybe positive, negative or zero, test a few additional cases where the parameters `b` is negative. Here are a few example cases:
 
 `recProduct(5,-1)` should return -5
 
@@ -107,14 +100,14 @@ If your code passes these cases, great! If not implement the logic needed to han
 ## Recursive Rendering
 It is time for you to start showing off your skills visually. You will do this by writing programs to create cool fractal art, which is based on internal self-similarity. 
 
-We'll start by creating two classical fractals: a spiral and a tree. Afterward, try your hand at creating snowflakes too, or any fractals beyond the problems below!
+We'll start by creating two classical fractals: a spiral and a tree. AThen you get to try your hand at creating snowflakes.
 
 
 *The Python Turtle Library*
 
 You've already started playing with Python's Turtle library in the previous lab. For more information on the turtle library refer to the [documentation on the turtle library](http://pydoc-zh.readthedocs.io/en/latest/library/turtle.html).
 
-In your git repo create a file called "recursiveDrawings.py" and put all your code for this lab in that file. Remember, to be able to use our turtle, we need to import the turtle library:
+In your git repo create a file called "recursiveDrawings.py" and put all your upcoming code in that file. Remember, to be able to use our turtle, we need to import the turtle library:
 
 ```python
 import turtle
@@ -122,7 +115,7 @@ import turtle
 
 
 ## Draw a Spiral
-In the file "recursiveDrawings.py" add a stub for the spiral function which has the following signature. 
+In the file "recursiveDrawings.py" create the spiral function which has the following signature. 
 
 ```python
  spiral(initialLength, angle, multiplier)
@@ -152,7 +145,7 @@ Implement the function and use it to draw an interesting spiral of your own.
 
 Help!  Stack Overflow!  Do not be alarmed if you find you are getting stack overflow errors when you try to run the "growing spiral" example above.  This error is caused by an infinite recursion.  I.e. a recursion that never hits its base case.  Not sure why?  This is a perfect time to practice some of those debugging skills you learned above.  :)  Ask a tutor if you need help.
 
-Useful debugging hint: You can change the speed with which your turtle draws. Assuming your turtle is `bob`, adding the code below causes it to move as slow as possible, which can help you figure out what is going on in your algorithm. If you change 1 to higher numbers, your turtle will speed up. However, somewhat counter-intuitively, `speed(0)` has the turtle move as fast as possible, which is useful when your algorithm is working and you want to try it out with a larger recursion depth. 
+Useful debugging hint: You can change the speed with which your turtle draws. Assuming your turtle is `bob`, adding the code below causes it to move as slow as possible, which can help you figure out what is going on in your algorithm. If you change '1' to higher numbers, your turtle will speed up. However, somewhat counter-intuitively, `speed(0)` has the turtle move as fast as possible, which is useful when your algorithm is working and you want to try it out with a larger recursion depth. 
 
 ```python
 bob.speed(1)
@@ -188,9 +181,9 @@ Your tree is planted on the ground and should grow upward.
 Draw some interesting trees using your function.
 
 
-## Create Snowflakes ... in San Diego!
+## Create Snowflakes
 
-By now you should be very skilled at creating fractals using recursions. Congratulations! Now you can do much more, even making it snow during summer in sunny San Diego! In this exercise you will create the following snowflake structure (a.k.a. Koch Snowflake).
+By now you should be very skilled at creating fractals using recursions. Congratulations! Now you can do much more, even making it snow during summer in sunny San Diego. In this exercise you will create the following snowflake structure (a.k.a. Koch Snowflake).
 
 <p align="center">
 ![](/images/labs/images/Von_Koch_curve.gif)
@@ -209,7 +202,7 @@ a sideLength of the initial equilateral triangle, and
 the levels indicating the number of recursive levels performed to create the final snowflake.
 Observe that the base case is simply an equilateral triangle with side length equal to sideLength. Each increment of level replaces the middle third of all of the snowflake's sides with a "bump" that is, itself, a smaller equilateral triangle.
 
-Hint: It might be useful to write a helper function with the following signature:
+**Hint:** It is useful to write a helper function with the following signature:
 
 ```python
 snowflakeSide(sideLength, levels)
@@ -217,7 +210,7 @@ snowflakeSide(sideLength, levels)
 
 The above functions should draw just one side of the underlying equilateral triangle -- along with all of its squiggles or bumps, recursively! 
 
-All of the recursion will then be in snowflakeSide. So, first try creating snowflakeSide and make sure that it works and draws a single side of the snowflake curve at the appropriate level of recursion. Once snowflakeSide works, then your snowflake function will call snowflakeSide three times, with appropriate angles between them.
+**All of the recursion will then be in snowflakeSide.** So, first try creating snowflakeSide and make sure that it works and draws a single side of the snowflake curve at the appropriate level of recursion. Once snowflakeSide works, then your snowflake function will call snowflakeSide three times, with appropriate angles between them.
 
 Again, in this strategy, all of the recursion occurs in snowflakeSide. Remember that 
 if levels is zero, then snowflakeSide should produce a single line segment (this will be the base case of the recursion);
@@ -236,7 +229,7 @@ Test your implementation by calling snowflake(280, 4); you should get the follow
 </p>
 
 
-Drawing the snowflake is challenging. If you have completed this exercise consider it a major accomplishment!! Congratulations on working your way through recursion and lab04! 
+Drawing the snowflake is definitely challenging. If you have completed this exercise consider it a major accomplishment!! Congratulations on working your way through recursion and lab04! 
 However, you may find that you may want to hone your recursion skills a little more. So try out the challenge problems.
 
 
@@ -246,6 +239,7 @@ Create a new file `triangles.py`. Use recursion to have your turtle create the f
 <p align="center">
 ![alt-frac-3](/images/labs/images/fractals/Sierpinski.png){: height="200px" }
 </p>
+
 
 
 
