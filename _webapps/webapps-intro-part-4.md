@@ -5,7 +5,7 @@ desc: "Deploying an existing Flask App on Heroku"
 
 # Deploying an existing Flask App on Heroku
 
-If you already have a Flask app running locally by just running it in IDLE, or at the command line (e.g. python hello.py), and you want to convert it to run on Heroku, you need to do three things.  Each is very simple.
+If you already have a Flask app running locally by just running it at the command line (e.g. python3 hello.py) and you want to convert it to run on Heroku, you need to do three things.  Each is very simple.
 
 * It needs to be in a git repository.
 * You need a Procfile—this is usually just one line of code (see below.)
@@ -41,18 +41,18 @@ git push origin master
 We also need a file called  `requirements.txt` which is a list of the Python modules that are needed for our Heroku flask application.   
 
 This file will list all of the Python modules that we may have installed using 
-`pip install --user blah`, including `flask`, and anything else that `flask` might have required.
+`pip3 install --user blah`, including `flask`, and anything else that `flask` might have required.
 
-Note that before you do the next step, you should do the following `pip install` command if you haven't already.  While this next line isn't necessarily needed for running Flask applications locally, it is needed for Heroku.
+Note that before you do the next step, you should do the following `pip3 install` command if you haven't already.  While this next line isn't necessarily needed for running Flask applications locally, it is needed for Heroku.
 
 ```
-pip install --user gunicorn
+pip3 install --user gunicorn
 ```
 
 We  <span style="font-weight:bold; font-size: 110%; color:red;">can</span> create the file `requirements.txt` with this command:
 
 ```
-pip freeze > requirements.txt
+pip3 freeze > requirements.txt
 ```
 
  <span style="font-weight:bold; font-size: 110%; color:red;">But we won't do that! Because</span> "pip freeze" outputs the installed packages in the requirements format; however, over the course of SPIS, we have installed **many** packages, and the list is very *very* long; also heroku does not like some of the packages.
