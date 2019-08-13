@@ -28,11 +28,11 @@ Once you've created your account, there will be "getting started" options.
     
 * But if you are doing the lab *directly* on your own machine:
     * Then you will want to install the Heroku toolbelt for [Windows](https://toolbelt.heroku.com/windows), [Mac](https://toolbelt.heroku.com/osx) or [Linux](https://toolbelt.heroku.com/), as appropriate
-    * You'll also need to make sure you have [Python 2.7 on your Windows, Mac or Linux box](https://www.python.org/downloads/), and
-    * Also install git (for [Windows](Git-2.9.3-32-bit), [Mac](https://git-scm.com/download/mac) or [Linux](https://git-scm.com/download/linux).
+    * You'll also need to make sure you have [Python 3.7 on your Windows, Mac or Linux box](https://www.python.org/downloads/), and
+    * Also install git (for [Windows](https://git-scm.com/download/win), [Mac](https://git-scm.com/download/mac) or [Linux](https://git-scm.com/download/linux).
     * Finally, be sure that you have set up an ssh key *for your laptop* (this is separate from when you did it for your
         ETS acccount), and upload that key to github.com.  Instructions are here: 
-        [git one time setup](http://ucsd-cse-spis-2016.github.io/topics/acms_git_one_time_setup/), but do these
+        [git one time setup](http://ucsd-cse-spis-2019.github.io/topics/acms_git_one_time_setup/), but do these
         directly on your laptop at the shell prompt, not on ETS (all the same steps.)
     * At that point, return to these instructions
     
@@ -68,10 +68,9 @@ $ cd heroku-flask-try-one
   
 # Step 3: Try running the app locally.
 
-You should be able to run this "Hello World" type Flask app in the normal way by either:
+You should be able to run this "Hello World" type Flask app in the normal way by:
 
-* Loading it in IDLE and choosing Run, OR
-* `cd`'ing into the directory that contains `hello.py` and typing `python hello.py`
+* `cd`'ing into the directory that contains `hello.py` and typing `python3 hello.py`
 
 You'll test by visiting your `localhost:5000` URL (or if you need to change the port, whatever you change it to).
 
