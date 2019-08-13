@@ -71,7 +71,7 @@ a * b = a + a * (b-1)
 Bring up gVim, and create a new file "recursiveProd.py". Your task is to complete the function below, which implements recursive multiplication.
 
 ```python
-def recProd(a,b):
+def recProduct(a,b):
 	'''Calculate product a*b recursively'''
 	
 ```
@@ -100,7 +100,7 @@ If your code passes these cases, great! If not implement the logic needed to han
 ## Recursive Rendering
 It is time for you to start showing off your skills visually. You will do this by writing programs to create cool fractal art, which is based on internal self-similarity. 
 
-We'll start by creating two classical fractals: a spiral and a tree. AThen you get to try your hand at creating snowflakes.
+We'll start by creating two classical fractals: a spiral and a tree. Then you get to try your hand at creating snowflakes.
 
 
 *The Python Turtle Library*
