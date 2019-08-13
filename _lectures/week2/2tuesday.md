@@ -9,7 +9,7 @@ ready: false
 # APS Lecture 8:45am - 10:00am
 Greedy Method
 
-Lecture Slides: [Greedy Method](/lectures/week1/APS Lecture 2 - Greedy Method.pdf)
+Lecture Slides: [Greedy Method](/lectures/week2/APS Lecture 2 - Greedy Method.pdf)
 
 
 
