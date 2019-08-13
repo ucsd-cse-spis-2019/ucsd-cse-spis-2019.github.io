@@ -175,7 +175,7 @@ Here is an example of how that would look.  You need to create a subdirectory ca
 
 Into that directory, the first file you should create and store is one called `layout.html`
 
-That file should look like this.   You can use idle to create a new file, copy/paste the following HTML code into the
+That file should look like this.   You can use gvim to create a new file, copy/paste the following HTML code into the
 file, and then save it in your templates directory with the name `layout.html`.
 
 ```html
