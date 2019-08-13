@@ -9,5 +9,5 @@ layout: default
 
 Homework Assignment: [Greedy Method](/hwk/aps2/APS Homework 2 - Greedy Method.pdf)
 
-Optional Challenge Problems
+[Optional Challenge Problems](/hwk/aps2/APS Homework 2 - Greedy Method (Optional Challenge Problems).pdf)
 
