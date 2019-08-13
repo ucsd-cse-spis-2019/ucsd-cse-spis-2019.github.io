@@ -9,5 +9,5 @@ layout: default
 
 Homework Assignment: [Divide-and-Conquer](/hwk/aps1/APS Homework 1 - Divide and Conquer.pdf)
 
-[Optional Challenge Problems](APS Homework 1 - Divide and Conquer (Optional Challenge Problems).pdf)
+[Optional Challenge Problems](/hwk/aps1/APS Homework 1 - Divide and Conquer (Optional Challenge Problems).pdf)
 
