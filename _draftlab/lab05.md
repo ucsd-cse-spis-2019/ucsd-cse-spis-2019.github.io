@@ -40,7 +40,7 @@ Before you get started with programming, we need to point out one important fact
 
 ## Getting familiar with PIL
 
-In this lab, we'll work with the Python Imaging Library (PIL) which is a graphics library, like turle, but designed for working with image files. Download the picture below and save it in your github repo working directory for this lab (the one you cloned above). You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "bear.png".
+In this lab, we'll work with the Python Imaging Library (PIL) which is a graphics library, like turle, but designed for working with image files. Download the picture below and store it in your github repo working directory for this lab (the one you cloned above). You can do this by right clicking on the image and selecting the option to save. Be sure to save the image as "bear.png".
 
 <p align="center">
 
@@ -106,7 +106,7 @@ bear.putpixel( (100, 200), (0, 0, 0) )
 
 The `putpixel` function modifies one pixel at a time and takes two arguments: (1) a pixel coordinate  represented by an (x, y) tuple, in this case (100,200); and (2) a tuple representing the RGB color to set the pixel to, in this case color (0, 0, 0), i.e. black.
 
-Add the `putpixel` command above to your code and check the bear image. Can you find the modified pixel at (100,200)? If you have a hard time seeing the modified pixel, try instead the following code to turn a range of pixels black. Make sure you understand what this code is doing.
+Add the `putpixel` command above to your code and check the bear image. Can you find the modified pixel at (100,200)? If you have a hard time seeing the modified pixel, try the following code instead to turn a range of pixels black. Make sure you understand what this code is doing.
 
 ```
 for i in range(100):
@@ -208,7 +208,7 @@ Write a new function called greyscale that takes an image as a parameter and mod
 </p>
 
 
-Hint: Getting an OverflowError: unsigned byte integer is greater than maximum? This might be because your luminance calculation results in RGB values higher than 255. Make sure that all of your percentages add up to 1. Also, if you get "integer argument expected, got float", it may mean you are trying to assign red, green or blue a floating point value. You may solve this by using a typecast c = int(a/b) or doing an integer division c = a//b versus the floating point one c = a/b (See also http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#integer-division).
+Hint: Getting an OverflowError: unsigned byte integer is greater than maximum? This might be because your luminance calculation results in RGB values higher than 255. Make sure that all of your percentages add up to 1. Also, if you get "integer argument expected, got float", it may mean you are trying to assign red, green or blue a floating point value. You may solve this by using a typecast c = int(a/b) or doing an integer division c = a//b versus the floating point one c = a/b (See also [integer division](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#integer-division)).
 
 ### Binarize
 
@@ -221,7 +221,7 @@ Now, write a function called `binarize(im, thresh,  startx, starty, endx, endy)`
 </p>
 
 
-Did you push your code to github?
+Did you push your code to github? It is a good idea to do this regularly.
 
 
 ## Geometric transformations
@@ -293,9 +293,9 @@ Submit the pair programming portion of your code, which should all be in the `im
 # Challenge Problem 1 - Hiding images in plain sight
 Steganography is a way to hide a secret message inside an ordinary file. There is a great [article](https://www.bbc.com/news/technology-19370581) on BBC.com about this idea and how criminals may be using it. 
 
-For this challenge, you will hide a secret black-and-white image inside a standard image. The idea is to pick a color channel (R, G or B; the choice is yours) in the standard image. Let's assume you chose to work with R. Each pixel has a value for R, which is between 0 and 255. The reason of this range is that it is represented by an 8-bit number. With 8-bits, we can represent numbers from binary 00000000<sub>2</sub> (0 in decimal) to 11111111<sub>2</sub> (255 in decimal). Now, imagine we have a pixel with an R value of 01011101<sub>2</sub> (93 decimal). Would you be able to tell the difference if I change that value to 01011100<sub>2</sub> (92 decimal)? Probably not. This is what we will use to hide our secret black-and-white image. We will take the R value of each pixel in the standard image and replace its least significant bit (i.e., the right-most bit if I were to write the value in binary) to either 0 or 1 based on whether the correspoding image in the secret message is black or white. 
+For this challenge, you will hide a secret black-and-white image inside a standard image. The idea is to pick a color channel (R, G or B; the choice is yours) in the standard image. Let's assume you chose to work with R. Each pixel has a value for R, which is between 0 and 255. The reason of this range is that it is represented by an 8-bit number. With 8-bits, we can represent numbers from binary 00000000<sub>2</sub> (0 in decimal) to 11111111<sub>2</sub> (255 in decimal). Now, imagine we have a pixel with an R value of 01011101<sub>2</sub> (93 decimal). Would you be able to tell the difference if I change that value to 01011100<sub>2</sub> (92 decimal)? Probably not. This is what we will use to hide our secret black-and-white image. We will take the R value of each pixel in the standard image and replace its least significant bit (i.e., the right-most bit if I were to write the value in binary) to either 0 or 1 based on whether the correspoding image in the secret message is black or white.
 
-Basically, we are hiding the black-and-white image in the least significant bit of one of our color channels. To get the hidden message back, you simply need to check the least significant bit. A value of 0 means the hidden message has a black pixel there, while a 1 means it has a white pixel.
+Basically, we are hiding the black-and-white image in the least significant bit of one of our color channels. To get the hidden message back, you simply need to check the least significant bit. A value of 0 means the hidden message has a black pixel there, while a 1 means it has a white pixel. Also note that having a least significant bit (LSB) of 0 means the number is even, and an LSB of 1 means the number is odd.
 
 For the first part of this challenge, download the image below ("hiddenbear.png"). It has a secret message embedded inside its red color channel in the manner described above. Decode this message!
 
