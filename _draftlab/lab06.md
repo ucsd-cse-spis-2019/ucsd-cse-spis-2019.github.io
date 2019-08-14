@@ -125,12 +125,9 @@ All the unix commands that you have learned so far can be used to navigate throu
 
 
 ### WiFi
-You need to configure the on-board WiFi module with your credentials to be able to use the UCSD-Protected network. Open a Terminal window. Type the following command (this executes a script to set up the WiFi with your credentials; make sure you don't forget the `./`):
+To see if your RPi is connected to the WiFi already or not, click the WiFi icon in the top right corner. Check if it indicates that you are connected to the UCSD-Protected network. If it does not, follow the steps below.
 
-`./wifisetup.sh`
-
-You should be prompted for your **wifi** username and password. Your RPi will automatically reboot. 
-When it is done rebooting and you are back to your desktop environment, click the WiFi icon in the top right corner. It should indicate that you are now connected to the UCSD-Protected network.
+To connect to the WiFi network, click on the program "wifisetup.sh" on the desktop. In the window that pops up, select "Execute in Terminal". This will open a terminal window that prompts you for your **wifi** username and password (the one you use for UCSD-Protected). After you enter this information, your RPi will automatically reboot. When it is done rebooting and you are back to your desktop environment, check the WiFi icon again and verify that you are now connected to UCSD-Protected (it may take a few minutes).
 
 While not necessary for this lab, if you want to know the IP address of your RPi, open a Terminal window and type:
 
@@ -142,7 +139,7 @@ It will show you a bunch of information, organized in three sections. In the bot
 ## Create a git repo and get the starter code
 Use a web browser on your laptop or the RPi to create a new repo on github.com called `spis19-lab06-Name-Name`, for example using [Method 1](http://ucsd-cse-spis-2019.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}).
 
-**Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the RPi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group. So don't forget to push your code to the online repo at the end of the lab, and preferably also a few times during the lab (as accidentally resetting the RPi may cause you to corrupt the SD card, which destroys all your data).**
+**Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the RPi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group. So don't forget to push your code to the online repo at the end of the lab. However, you should push your code repeatedly during the lab. If you accidentally wire things up wrong, you may reset the RPi. This could result in a corrupted SD card, meaning all your data was lost. So back up to github frequently.**
 
 
 
@@ -160,15 +157,17 @@ Use a web browser on your laptop or the RPi to create a new repo on github.com c
 
 Make sure you have the starter code in your repo. If you did not import the starter code when creating the repo, ask the mentors for help.
 
-In the terminal, navigate to the your local git repo (~/spis19-lab06-Name-Name/ and open up gVim by typing the following command
-
-` sudo gVim`
+In the terminal, navigate to the your local git repo (~/spis19-lab06-Name-Name/ and open up gVim. To execute your python code, you will need to use:
+```
+sudo python3 <filename>
+```
+Here, replace <filename> by the actual filename you want to execute.
 
  
  
 *A word on sudo*
 
-You might be wondering why we use the word sudo to open idle. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, 'OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.' This command to the operating system is 'sudo'. It stands for 'super user do'.  It is a command to Raspbian to go ahead and run a command that you don't really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We use the word `sudo` to open idle3 because we will be soon running programs that use the Python GPIO library
+You might be wondering why we use the word sudo here. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, 'OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.' This command to the operating system is 'sudo'. It stands for 'super user do'.  It is a command to Raspbian to go ahead and run a command that you don't really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We need the word `sudo` to run python3 as our programs use this Python GPIO library.
 
 You are now ready to start working on your first exercise where you will create your own circuit and control it using the starter code given to you. 
 
@@ -178,12 +177,12 @@ You are now ready to start working on your first exercise where you will create 
 
 In this exercise you will create a circuit consisting of an LED and a resistor connected to the RPi. You will then periodically blink the LED using the example program provided to you in the starter code.
 
-**For all your work with Raspberry Pi, it is extremely important you do not make short circuit connections on the GPIO pins. A short circuit is when a supply or GPIO pin set to HIGH is directly connected to a GND or GPIO pin set to LOW. If you are unsure, ask a mentor or instructor to check your circuit before running your program. Always be extremely careful to avoid short circuits. It may corrupt the SD card or possibly even destroy the RPi.**
+**For all your work with Raspberry Pi, it is extremely important you do not make short circuit connections on the GPIO pins. A short circuit is when a supply or GPIO pin set to HIGH is directly connected to a GND or GPIO pin set to LOW. If you are unsure, ask a mentor or instructor to check your circuit before running your program. Always be extremely careful to avoid short circuits. It may reset the RPi, which can corrupt the SD card or possibly even destroy the RPi.**
 
 
 ### Understanding the code
 
-In IDLE3 open the file `01_blinking_LED.py`. Let's begin by trying to understand the given code.
+In gVim open the file `01_blinking_LED.py`. Let's begin by trying to understand the given code.
 
 
 The first two statements import the modules needed for this exercise:
@@ -196,7 +195,7 @@ import time
 
 The `RPi.GPIO` module provides routines for configuring the GPIO pins on the RPi and for sending and receiving signals on these pins. Since the GPIO pins are digital we can only send high or low voltages. 
 
-The `time` module provides routines that make use of the clock on the RPi. Using the time module you can make the RPi wait for some time before executing the next python command in your program. For exmample, `time.sleep(0.5)` makes your program wait for half a second before moving on to the next line of code. 
+The `time` module provides routines that make use of the clock on the RPi. Using the time module you can make the RPi wait for some time before executing the next python command in your program. For example, `time.sleep(0.5)` makes your program wait for half a second before moving on to the next line of code. 
 
 The lines immediately after the import statements take care of configurations related to using the GPIO pins. The first one specifies that we are using the physical numbering scheme. 
 
@@ -272,13 +271,13 @@ Now, let's start wiring the circuit. You should keep the LED circuit from the pr
 </p>
 
 
-Next, open the program `02_buttonLED.py` in IDLE3. One of the key differences in this exercise compared to the previous one is that you will configure the pin connected to the button as an INPUT pin. Here is a nice excerpt from [a website](http://blmrgnn.blogspot.com/2016/02/gpio-general-purpose-inputoutput-inputs.html) explaining such a configuration:
+Next, open the program `02_buttonLED.py` in gVim. One of the key differences in this exercise compared to the previous one is that you will configure the pin connected to the button as an INPUT pin. Here is a nice excerpt from [a website](http://blmrgnn.blogspot.com/2016/02/gpio-general-purpose-inputoutput-inputs.html) explaining such a configuration:
 
-*A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is 'high' (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is 'low' (near GND), reading the pin will result in reading a logic 0.*
+*A GPIO pin configured as an input is used to read (to input) the value of one digital signal.  In this case the pin is converting the voltage being delivered to the pin into a logical value of 0 or 1 for subsequent use in the program.  By convention, when the voltage on the pin is 'high' (near Vcc), reading the pin will result in reading a logic 1, while when the voltage is 'low' (near GND), reading the pin will result in reading a logic 0.*
 
 So, the bottom line is that when we configure a GPIO pin as an input, we can read the voltage at that pin in our Python program. 
 
-But, what is the expected voltage if the pin is not connected to anything at all? This would occur in the button circuit we just built and the button is not pressed. The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is 'floating' and has no defined voltage level. For us to be able to reliably detect whether the input is high or low, we need to tie it so that it is always connected to something and either reads high or low. This can be done by using a pullup resistor, as shown in the diagram below. (If you are interested in exactly how this work, you can ask the instructors).
+But, what is the expected voltage if the pin is not connected to anything at all? This would occur in the button circuit we just built and the button is not pressed. The answer is that we really can't say. When a GPIO pin is set as an input but is not connected to anything it is 'floating' and has no defined voltage level. For us to be able to reliably detect whether the input is high or low, we need to tie it so that it is always connected to something and either reads high or low. This can be done by using a pullup resistor, as shown in the diagram below. (If you are interested in exactly how this work, you can ask the instructors).
 
 <p align="center">
 ![buttonpullup_schematic](/images/labs/images/RPi/schematic_button_pullup.jpg){:height="200px"} 
@@ -296,7 +295,7 @@ This makes the BtnPin an input AND internally attaches the pullup resistor. Note
 GPIO.setup(Pin, GPIO.IN) 
 ```
 
-Now, let's have a closer look at the starter code. This program polls pin 15 (the pin connected to the button) and prints the status of that pin (1 indicates True or high voltage, 0 indicates False or a low voltage). It doesn't do much more than that at the moment. You will need to modify the code so that the button presses control the led. However, before you do this, try to understand the starter code first. What do you expect the output to be?
+Now, let's have a closer look at the starter code. This program checks pin 15 (the pin connected to the button) and prints the status of that pin (1 indicates True or high voltage, 0 indicates False or a low voltage). It doesn't do much more than that at the moment. You will need to modify the code so that the button presses control the led. However, before you do this, try to understand the starter code first. What do you expect the output to be?
 
 Run the code. What do you get? Come up with a simple test to check the correctness of the program. 
 
@@ -304,7 +303,7 @@ Run the code. What do you get? Come up with a simple test to check the correctne
 
 Now, it's time to write some code of your own.
 
-(1) Modify the program such that the LED is ON when you press the button and OFF when you don't press the button. Name it `02_buttonLED_sol1.py` and commit it to the github repo.
+(1) Modify the program such that the LED is ON when the button is pressed and OFF when the button is not pressed. Name it `02_buttonLED_sol1.py` and commit it to the github repo.
 
 (2) Now change the functionality: toggle the LED every time the button is pressed. So, if the LED is ON and the button is pressed, it should turn OFF. If the LED is OFF and the button is pressed, it should turn ON. So pressing the button changes the state of the LED, from ON to OFF to ON to OFF etc. This functionality is trickier to obtain. You will need to think carefully how you can accomplish this. Name this version of your code `02_buttonLED_sol2.py` and commit it to the github repo.
 
@@ -369,7 +368,7 @@ Save this code as `05_ultrasound_sol2.py` and commit it to the github repo.
 
 **Very important: When you attach or remove the picam, your RPi needs to be shut down!!! Otherwise, you may damage the device.**
 
-We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. **Remember, do not attach or remove the picam when the RPi is powered on.** Ask the mentors or instructors for help with this.
+We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. **Remember, do not attach or remove the picam when the RPi is powered on. Shut it down first.** Ask the mentors or instructors for help with this.
 
 <p align="center">
 ![picam](/images/labs/images/RPi/picam.jpg){:height="200px"} 
@@ -379,7 +378,7 @@ Once you have the picam attached, try out the program `06_picam_preview.py`. Thi
 
 Next, run the program `06_picam_video.py`. It will open two video windows. One with the original video, and one where the center part has inverted colors. Basically, this example shows how we can apply what we have learned about image processing to the RPi. All the image manipulations we did in that lab, we could implement here as well, but now on video streams. Note that for efficiency reasons, we are no longer using the PIL library here. Instead, we use the very powerful OpenCV (which stands for Open Computer Vision) library cv2. To store images, we will not do this in Image objects anymore (as PIL does), but instead we will be using numpy array objects. Calculations on these numpy arrays are much faster. Essentially, a numpy array is a 3-dimensional array of pixels: the first two dimensions are the x and y of the pixel and the third dimension is of size 3, containing the values of R, G, and B for that pixel. For example, if img_np is a numpy array containing an image, then img_np(2,5,0) is the R value of the pixel at location x = 2, y = 5. Similarly, img_np(2,5,1) is the G value for the pixel at (2,5) and img_np(2,5,2) is the B value. For detailed information on numpy and how to manipulate these arrays, you can check out this [website] (https://docs.scipy.org/doc/numpy/user/quickstart.html). 
 
-Now you can try to modify the picam video starter code. What you decide is totally up to you. You could convert to grayscale, black our certain regions, mirror the image, look for a particular color, etc. Save your code as `06_picam_video_sol1.py` and make sure you add comments to explain what it does. Upload to github.
+Now you can try to modify the picam video starter code. What you decide to do is totally up to you. You could convert to grayscale, black our certain regions, mirror the image, look for a particular color, etc. Save your code as `06_picam_video_sol1.py` and make sure you add comments to explain what it does. Upload to github.
 
 We hope you enjoyed this lab and got a bit of a taster of what is possible with RPis and robotics ...
 
