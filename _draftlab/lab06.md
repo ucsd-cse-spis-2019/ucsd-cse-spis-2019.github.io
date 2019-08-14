@@ -140,9 +140,9 @@ It will show you a bunch of information, organized in three sections. In the bot
 
 
 ## Create a git repo and get the starter code
-Use your laptop or the RPi to create a new repo called `spis19-lab06-Name-Name`, for example using [Method 1](http://ucsd-cse-spis-2019.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}).
+Use a web browser on your laptop or the RPi to create a new repo on github.com called `spis19-lab06-Name-Name`, for example using [Method 1](http://ucsd-cse-spis-2019.github.io/topics/github_create_repo/#method1). When creating the repo import the starter code from this git repo:  [{{ page.starter-code-url }}]({{ page.starter-code-url }}).
 
-**Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the RPi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group. So don't forget to push your code to the online repo at the end of the lab, and preferably also a few times during the lab.**
+**Note that you must keep your git repo updated with the latest version of your code because your code will be erased from the RPi at the end of the lab session. This is to ensure that the hardware is ready for use by the next group. So don't forget to push your code to the online repo at the end of the lab, and preferably also a few times during the lab (as accidentally resetting the RPi may cause you to corrupt the SD card, which destroys all your data).**
 
 
 
@@ -160,11 +160,11 @@ Use your laptop or the RPi to create a new repo called `spis19-lab06-Name-Name`,
 
 Make sure you have the starter code in your repo. If you did not import the starter code when creating the repo, ask the mentors for help.
 
-In the terminal navigate to the your local git repo (~/spis19-lab06-Name-Name/ and open up idle by typing the following command
+In the terminal, navigate to the your local git repo (~/spis19-lab06-Name-Name/ and open up gVim by typing the following command
 
-` sudo idle3 &`
+` sudo gVim`
 
-As an alternative, you can also navigate to the repo using the file browser, right-click one of the .py files and select `Python 3 (IDLE)`. 
+ 
  
 *A word on sudo*
 
