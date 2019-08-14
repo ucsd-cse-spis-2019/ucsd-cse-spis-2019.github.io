@@ -34,7 +34,7 @@ We will focus on a few important components on the diagram:
 
 1. Internet connectivity: The RPi can get Internet connectivity through the LAN port (Ehternet), or throught the built-in WiFi chip. In our setup, we will use the WiFi. 
 
-2. USB ports: The RPi3 comes with four USB ports (older versions had fewer of these ports). We will use them to connect a mouse and keyboard. 
+2. USB ports: The RPi3 comes with four USB ports. We will use them to connect a mouse and keyboard. 
 
 3. HDMI (High Definition Multimedia Interface) Video Output: This is an interface that connects your RPi to a monitor.
 
@@ -54,7 +54,7 @@ For the robotics projects, we will operate the RPi in an untethered fashion (so 
 * The RPi is powered up using a charger that is plugged into the wall.
 * The GPIO pins on the RPi are routed to a breadboard via a ribbon cable.
 
-**Very important note: If you want to unplug anything from your RPi (keyboard, mouse, power cable, etc.) or plug anything into it, your RPi needs to be shut down (an exception is a USB thumb drive). Otherwise, you may damage the device. So when you start, you first connect all the peripherals and as a last step you plug in the power. When you want to unplug things, first shut the RPi down in software (select Shutdown under the raspberry icon in the menu bar) before removing anything.**
+**Note: It is best to plug or unplug peripherals when the RPi is shut down. This minimizes the risk of the device resetting, which in turn could causes corrupting the SD card**
 
 Now let's take a closer look at the breadboard and the GPIO breakout board that sits on it. You will need this information to complete the later exercises in this lab.
 
@@ -366,7 +366,10 @@ Save this code as `05_ultrasound_sol2.py` and commit it to the github repo.
 
 
 # Trying out the picam camera
-We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. **Very Important: Do not attach or remove the picam when the RPi is powered on. Always turn it off first.** Ask the mentors or instructors for help with this.
+
+**Very important: When you attach or remove the picam, your RPi needs to be shut down!!! Otherwise, you may damage the device.**
+
+We can attach a miniature camera that was specifically designed for the RPi, called the picam. You need to connect it to a dedicated port on the RPi with a flex cable. **Remember, do not attach or remove the picam when the RPi is powered on.** Ask the mentors or instructors for help with this.
 
 <p align="center">
 ![picam](/images/labs/images/RPi/picam.jpg){:height="200px"} 
