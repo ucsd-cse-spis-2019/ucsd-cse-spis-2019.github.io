@@ -275,7 +275,7 @@ Here's `ftoc.html`:
 {% raw %}{%  endblock %}{% endraw %}
 ```
 
-You'll also need a file in `templates` called `mtokm.html`.  For now, just enter the following html code as a placeholder&mdash;getting that one to work is left as an exercise for you.
+You'll also need a file in `templates` called `mtokm.html`.  For now, just enter the following html code as a placeholder&mdash;**getting that one to work is left as an exercise for you.**
 
 Here's `mtokm.html`:
 
@@ -322,7 +322,7 @@ Here's `ctof_result.html`:
 {% raw %}{%  endblock %}{% endraw %}
 ```
 
-Finally, you'll also need a `mtokm_result.html` file.    Here's a placeholder for it.  The final content is up to you to fill in:
+Finally, you'll also need a `mtokm_result.html` file.    Here's a placeholder for it.  **The final content is up to you to fill in:**
 
 ```html
 {% raw %}{%  extends "layout.html" %}{% endraw %}
