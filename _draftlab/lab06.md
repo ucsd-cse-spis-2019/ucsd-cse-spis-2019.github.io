@@ -155,19 +155,15 @@ Use a web browser on your laptop or the RPi to create a new repo on github.com c
 
 * Clone your git repo **over https** into your home directory on the RPi. DO NOT log into the ieng6 machines and try to do this step there. To clone your repo first open a browser on the RPi (or your laptop), and navigate to your repo on github which should be called `spis19-lab06-Name-Name`. Go to the green button that says 'clone or download' and get the https address of your repo. The **https address** should be something like `https://github.com/ucsd-cse-spis-2019/spis19-lab06-Name-Name.git`. Do not use the ssh address as you have in the past.
 
-Make sure you have the starter code in your repo. If you did not import the starter code when creating the repo, ask the mentors for help.
+Make sure you have the starter code in your repo. If you did not import the starter code when creating the repo, ask the mentors for help. 
 
-In the terminal, navigate to the your local git repo (~/spis19-lab06-Name-Name/ and open up gVim. To execute your python code, you will need to use:
+
+On RPi, you can edit Python code using gVim just like you did before. To execute your code, use:
 ```
-sudo python3 <filename>
+python3 <filename>
 ```
 Here, replace <filename> by the actual filename you want to execute.
 
- 
- 
-*A word on sudo*
-
-You might be wondering why we use the word sudo here. Unix / Raspbian has something known as *privileges*. This allows the operating system to prevent users from doing very powerful things (like destroying the operating system or attached devices) that could damage the system or compromise the security of other users.  It turns out that using the Python GPIO library is one such powerful thing.  You have to be a special user to run the library.  In order to get around this (in some cases) you can just tell the operating system, essentially, 'OK.  Look.  I know what I am trying to do here is very powerful and I need to be careful, so just let me do it.' This command to the operating system is 'sudo'. It stands for 'super user do'.  It is a command to Raspbian to go ahead and run a command that you don't really have privileges for, because you understand that it is very powerful, and you want to run it anyway. We need the word `sudo` to run python3 as our programs use this Python GPIO library.
 
 You are now ready to start working on your first exercise where you will create your own circuit and control it using the starter code given to you. 
 
@@ -175,7 +171,7 @@ You are now ready to start working on your first exercise where you will create 
 
 # Making an LED blink
 
-In this exercise you will create a circuit consisting of an LED and a resistor connected to the RPi. You will then periodically blink the LED using the example program provided to you in the starter code.
+In this exercise you will create a circuit consisting of an LED and a resistor connected to the RPi. You will then periodically blink the LED using the example program provided to you in the starter code. 
 
 **For all your work with Raspberry Pi, it is extremely important you do not make short circuit connections on the GPIO pins. A short circuit is when a supply or GPIO pin set to HIGH is directly connected to a GND or GPIO pin set to LOW. If you are unsure, ask a mentor or instructor to check your circuit before running your program. Always be extremely careful to avoid short circuits. It may reset the RPi, which can corrupt the SD card or possibly even destroy the RPi.**
 
