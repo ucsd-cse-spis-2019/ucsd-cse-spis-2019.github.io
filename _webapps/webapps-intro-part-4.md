@@ -60,13 +60,13 @@ pip3 freeze > requirements.txt
 **Instead**, go ahead and create a file called "requirements.txt" `(hint: you can do this by typing "gvim requirements.txt" into the command line)`, and paste this into the file:
 
 ```
-Flask==0.10.1
-itsdangerous==0.24
-Jinja2==2.8
-MarkupSafe==0.23
-Werkzeug==0.10.4
+Flask==1.1.1
+itsdangerous==1.1.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+Werkzeug==0.15.5
 wheel==0.24.0
-gunicorn==19.3.0
+gunicorn==19.9.0
 ```
 
 We now have a list of packages our program needs to run. 
