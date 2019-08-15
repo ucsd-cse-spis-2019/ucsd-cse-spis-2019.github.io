@@ -84,7 +84,7 @@ Make sure that works.  If so, you are ready to try running on Heroku.
 You should be able to type the command heroku login at the ETS Unix prompt and enter your heroku login credentials.  Try that now:
 
 ```
-[spis15t7@ieng6-240]$ heroku login
+[spis15t7@ieng6-240]$ heroku login --interactive
 Enter your Heroku credentials.
 Email: pconrad.cis@gmail.com
 Password (typing will be hidden): 
@@ -144,8 +144,10 @@ After you press "enter" on the git push heroku master command, you'll see a LOT 
 
 Near the end of the output, what you hope to see is something such as this:
 ```
-remote: -----> Compressing... done, 39.2MB
-remote: -----> Launching... done, v3
+remote: -----> Compressing... 
+remote:        Done: 47.9MB
+remote: -----> Launching... 
+remote:        Released v3
 remote:        https://pure-peak-4027.herokuapp.com/ deployed to Heroku
 remote: 
 remote: Verifying deploy.... done.
