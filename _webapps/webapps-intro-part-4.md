@@ -117,5 +117,5 @@ I read the documentation for the itsdangerous module and realized that that the 
 
 # Extra information to build a better web app
 
-To be able to learn how to better develop your webapp read onto the next lesson, [Web Apps Intro (part 5)](/webapps/webapps-intro-part-5/)
+To be able to learn how to better develop your webapps read onto the next lesson, [Web Apps Intro (part 5)](/webapps/webapps-intro-part-5/)
 
