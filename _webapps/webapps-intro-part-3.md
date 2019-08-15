@@ -49,13 +49,13 @@ git@github.com:pconrad/heroku-flask-try-one.git
 
 That should look like this:
 ```
-[spis15t7@ieng6-240]:tryHeroku:528$ git clone git@github.com:pconrad/heroku-flask-try-one.git
+[spis19t14@ieng6-247]:lab08-part1:692$ git clone git@github.com:pconrad/heroku-flask-try-one.git
 Cloning into 'heroku-flask-try-one'...
-remote: Counting objects: 100, done.
-remote: Compressing objects: 100% (89/89), done.
-remote: Total 100 (delta 53), reused 7 (delta 2), pack-reused 0
-Receiving objects: 100% (100/100), 9.54 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (53/53), done.
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 103 (delta 0), reused 0 (delta 0), pack-reused 102
+Receiving objects: 100% (103/103), 9.87 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (54/54), done.
 Checking connectivity... done.
 [spis15t7@ieng6-240]:tryHeroku:529$ 
 ```
@@ -120,10 +120,9 @@ A random name consisting of two words followed by a 4-digit number will be gener
 It should look like this:
 
 ```
-[spis15t7@ieng6-240]:heroku-flask-try-one:532$ heroku create
-Creating pure-peak-4027... done, stack is cedar-14
-https://pure-peak-4027.herokuapp.com/ | https://git.heroku.com/pure-peak-4027.git
-Git remote heroku added
+[spis19t14@ieng6-247]:heroku-flask-try-one:696$ heroku create
+Creating app... done, ⬢ mighty-island-86260
+https://mighty-island-86260.herokuapp.com/ | https://git.heroku.com/mighty-island-86260.git
 [spis15t7@ieng6-240]:heroku-flask-try-one:533$ 
 ```
 
@@ -140,30 +139,30 @@ Now you can deploy your code by doing:
 * When we type  `git push origin master`, we are pushing our code to github
     * On github, it is just sitting there, being stored so we have a record of our code changes over time.
 
-After you press "enter" on the git push heroku master command, you'll see a LOT of output.  This is the log of heroku doing everything necessary to put your application on the web.  You might get errors, and if so, you'll need to figure out what's wrong.  But, you will likely get some "warnings" that can be safely ignored (e.g. stuff about upgrading pip, etc.).
+After you press "enter" on the git push heroku master command, you'll see a LOT of output and may take around 6 minutes.  This is the log of heroku doing everything necessary to put your application on the web.  You might get errors, and if so, you'll need to figure out what's wrong.  But, you will likely get some "warnings" that can be safely ignored (e.g. stuff about upgrading pip, etc.).
 
 Near the end of the output, what you hope to see is something such as this:
 ```
-remote: -----> Compressing... 
-remote:        Done: 47.9MB
-remote: -----> Launching... 
+remote: -----> Compressing...
+remote:        Done: 47.9M
+remote: -----> Launching...
 remote:        Released v3
-remote:        https://pure-peak-4027.herokuapp.com/ deployed to Heroku
-remote: 
-remote: Verifying deploy.... done.
-To https://git.heroku.com/pure-peak-4027.git
+remote:        https://mighty-island-86260.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/mighty-island-86260.git
  * [new branch]      master -> master
-[spis15zz@ieng6-240]:heroku-flask-try-one:55$ 
+[spis19t14@ieng6-247]:heroku-flask-try-one:698$
 ```
 
 Once we push, we can visit our application by going to the URL for it.  
 
-For example, if our application is `pure-peak-4027`, the URL is `https://pure-peak-4027.herokuapp.com`
+For example, if our application is `mighty-island-86260`, the URL is `https://mighty-island-86260.herokuapp.com/`
 
 You'll find this in the output above, in the part that reads:
 
 ```
-remote:        https://pure-peak-4027.herokuapp.com/ deployed to Heroku
+remote:        https://mighty-island-86260.herokuapp.com/ deployed to Heroku
 ```
 
 So, visit that URL and see if the web app is there.
