@@ -156,7 +156,7 @@ This block of code does a lot of cool things whenever the browser window gets sm
 
 ### Block 3
 
-Block 3 is where you include the actual links to the pages you created in the previous part! Using an unordered list tag (`<ul>`), we create a list item (`<li>`) for each of the pages we want to include. Here, replace all the '#' in the references to direct the user to the correct webpage. 
+Block 3 is where you include the actual links to the pages you created in the previous part! Using an unordered list tag (`<ul>`), we create a list item (`<li>`) for each of the pages we want to include. **Here, replace all the '#' in the references to direct the user to the correct webpage.** 
 
 ## Time to test it
 
