@@ -1,6 +1,6 @@
 ---
 lecture_date: 2019-08-15 09:00:00.00-7:00
-topic: ""
+topic: "APS, references and mutability"
 desc: ""
 week: "2"
 ready: true
@@ -13,4 +13,6 @@ ready: true
 
 # FOCS 10:15am - 11:30am ()
 
-Lecture slides: 
+References and mutability
+
+Lecture slides: [Mutable References - part 1](/lectures/week2/SPIS Lecture 20-21 - Mutable References1.pdf)
