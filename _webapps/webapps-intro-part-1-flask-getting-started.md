@@ -50,64 +50,6 @@ To get this working, all you have to do is type:
 python3 hello.py
 ```
 
-Sadly, it probably won't work the first time you try it.  You'll probably get a message like this one:
-
-```
-[spis15t7@ieng6-240]:~:107$ python3 hello.py
-Traceback (most recent call last):
-  File "hello.py", line 1, in 
-    from flask import Flask
-ImportError: No module named flask
-[spis15t7@ieng6-240]:~:108$ 
-```
-
-# Why do we have to install Flask?  Why isn't it already there for us to use?
-
-By default, the Flask module is not part of the Python setup.    It is fairly common occurrence to need a module that is not part of the default Python installation.  There are so many modules out there that extend Python's capabilities in various ways, that it isn't a good use of disk space or time to install all of them in advance.   Typically, they get installed only "as needed".
-
-There are many ways to install a Python module, but two of the most common are: (1) Install the module for all users on the system (2) Install it only for a specific user.     We are going to choose the second option.   The reason is that for some of you that may choose to pursue building a web app as your final SPIS project, you may find that you need a variety of modules that we didn't anticipate.    Doing it this way allows each of you to have your own customized set of add-on modules for Python.
-
-Here's how to do it.
-
-```
-pip3 install --user flask
-```
-
-Here is an example of what that would look like.    The reason the output is so long is that Flask depends on other pieces of software to work properly.  The pip command figures out what those pieces are, and installs them as well along with everything else.
- 
-``` 
-[spis19t3@ieng6-240]:test:185$ pip install --user flask
-Collecting flask
-  Downloading Flask-0.11.1-py2.py3-none-any.whl (80kB)
-    100% |################################| 81kB 1.2MB/s 
-Requirement already satisfied (use --upgrade to upgrade): click>=2.0 in /software/common64/python-2.7.10/lib/python2.7/site-packages (from flask)
-Collecting itsdangerous>=0.21 (from flask)
-  Downloading itsdangerous-0.24.tar.gz (46kB)
-    100% |################################| 49kB 1.5MB/s 
-Collecting Werkzeug>=0.7 (from flask)
-  Downloading Werkzeug-0.11.10-py2.py3-none-any.whl (306kB)
-    100% |################################| 307kB 506kB/s 
-Requirement already satisfied (use --upgrade to upgrade): Jinja2>=2.4 in /software/common64/python-2.7.10/lib/python2.7/site-packages (from flask)
-Requirement already satisfied (use --upgrade to upgrade): MarkupSafe in /software/common64/python-2.7.10/lib/python2.7/site-packages (from Jinja2>=2.4->flask)
-Building wheels for collected packages: itsdangerous
-  Running setup.py bdist_wheel for itsdangerous
-  Stored in directory: /home/linux/ieng6/spis19/spis19t3/.cache/pip/wheels/fc/a8/66/24d655233c757e178d45dea2de22a04c6d92766abfb741129a
-Successfully built itsdangerous
-Installing collected packages: itsdangerous, Werkzeug, flask
-Successfully installed Werkzeug flask itsdangerous
-You are using pip version 7.1.2, however version 8.1.2 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
-[spis19t3@ieng6-240]:test:186$
-```
-
-* A note about that `itsdangerous` stuff: don't worry.  It isn't "dangerous" to install `itsdangerous`.   
-    * On the contrary&mdash;the `itsdangerous` python module is designed to help you avoid danger from various security vulnerabilities that webapps can open up.  But more on that another time.
-
-Once the Flask module is added to your individual user's Python installation, you can run the file again by typing:
-
-```
-python3 hello.py
-```
 Here is what that should look like:
 
 ```
