@@ -371,7 +371,7 @@ Here's a complete example of the code that we'll want to put into our hello.py f
 
 ### There are a LOT of changes
 
-Go slowly with your partner to ensure that your `hello.py` matches the complete example. Take note of all the changes that are made and follow the comments. Explain to your partner what is going in the `render_ftoc_result()` to ensure both of you understand what the function does. Ask a mentor if you're unsure.
+**Go slowly with your partner to ensure that your `hello.py` matches the complete example.** Take note of all the changes that are made and follow the comments. Explain to your partner what is going in the `render_ftoc_result()` to ensure both of you understand what the function does. Ask a mentor if you're unsure.
 
 Note the the additional `import` statements that are needed:
 
@@ -435,11 +435,6 @@ if __name__=="__main__":
     app.run(debug=False, port=54321)
 ```
 
-# All the code in this example
-
-All of the code in this example can be found in the following repo:
-
-* [https://github.com/ucsd-cse-spis-2016/spis16-webapp-example](https://github.com/ucsd-cse-spis-2016/spis16-webapp-example)
 
 # Be sure to test your web app
 
