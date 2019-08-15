@@ -115,3 +115,7 @@ If you are worried about having something called "itsdangerous" in your account,
 
 I read the documentation for the itsdangerous module and realized that that the only thing dangerous here was the name.   The name refers to the fact that sometimes data has to be passed from a "trusted environment" to an "untrusted environment" or vice-versa, and when that happens, you want to "sign" the data—that is, do some cryptography with it—to ensure that it isn't modified enroute.  There isn't anything "dangerous" about the software itself.  On the contrary—not using it would be dangerous.
 
+# Extra information to build a better web app
+
+To be able to learn how to better develop your webapp read onto the next lesson, [Web Apps Intro (part 5)](/webapps/webapps-intro-part-5/)
+
