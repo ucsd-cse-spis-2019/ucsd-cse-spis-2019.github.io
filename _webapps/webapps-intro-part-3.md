@@ -27,7 +27,7 @@ Once you've created your account, there will be "getting started" options.
     * Those are appropriate for using Heroku on your own machine, and they are appropriate for using Heroku with Django on Python.  WE AREN'T DOING EITHER OF THOSE YET!
     
 * But if you are doing the lab *directly* on your own machine:
-    * Then you will want to install the Heroku toolbelt for [Windows](https://toolbelt.heroku.com/windows), [Mac](https://toolbelt.heroku.com/osx) or [Linux](https://toolbelt.heroku.com/), as appropriate
+    * Then you will want to install the Heroku CLI for [Windows](https://devcenter.heroku.com/articles/heroku-cli#download-and-install), [Mac](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) or [Linux](https://devcenter.heroku.com/articles/heroku-cli#download-and-install), as appropriate
     * You'll also need to make sure you have [Python 3.7 on your Windows, Mac or Linux box](https://www.python.org/downloads/), and
     * Also install git (for [Windows](https://git-scm.com/download/win), [Mac](https://git-scm.com/download/mac) or [Linux](https://git-scm.com/download/linux).
     * Finally, be sure that you have set up an ssh key *for your laptop* (this is separate from when you did it for your
