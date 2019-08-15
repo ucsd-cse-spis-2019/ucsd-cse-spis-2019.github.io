@@ -17,7 +17,7 @@ If you already have a Flask app running locally by just running it at the comman
 (Note to instructors: The heroku create and heroku logs commands are provided by the "Heroku toolbelt", 
 and it was installed especially for SPIS.  It requires installation of Ruby, then it is a simple download.)
 
-Let's try this now with the webapp you created with the conversions. cd into your lab 7 directory.
+**Let's try this now with the webapp you created with the conversions. cd into your lab 8 part 1 and part 2 named "web-app-intro" directory.**
 
 First, to deploy on Heroku, we need to create two extra files.
 We need a file called Procfile in our git repo.  This file tells Heroku what to do with our github repo when we push it to github.  It should contain the following:
