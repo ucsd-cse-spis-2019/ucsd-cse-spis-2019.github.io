@@ -248,7 +248,7 @@ If you were unsuccessful, the problem is most likely with your wiring. If you we
 
 Now, modify the program (and rename it to `01_blinking_LED_sol.py`) to double the frequency at which the LED blinks. Make sure you commit this code to your github repo.
 
-Note: If you ever get an error about the GPIO resources being occupied, the reason is that a program was exited at some point without executing the `GPIO.cleanup()` line in the `KeyboardInterrupt` portion. To resolve this issue, just execute `GPIO.cleanup()` in the Python shell, and you can try your program again. 
+Note: It may happen at some point that you get an error or warning that says "This channel is already in use". This is Python telling you that one of the GPIO pins you are trying to use is already assigned to another program. This can happen when you ran your code before and it was exited without executing the `GPIO.cleanup()` line in the `KeyboardInterrupt` portion (e.g., it stopped because there was an error in the code). If it doesn't execute `GPIO.cleanup()`, it never gives up control of the GPIO pins, and so when the next program tries to use it, there may be a conflict. If all you get is a warning, you can ignore it. If you get an error and your code cannot be executed, put `GPIO.cleanup()` in your code immediately after importing the libraries. This should resolve the issue, and you can then comment out this line going forward.
 
 
 # Controlling an LED using a button
