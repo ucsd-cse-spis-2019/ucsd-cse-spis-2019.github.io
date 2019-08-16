@@ -8,8 +8,7 @@ link_topic_desc_only: true
 ready: true
 ---
 
-# Breadth Lecture (Igor)
-How to build your own grass-powered submarine
+# Breadth Lecture (Niema)
+Overview of Bioinformatics
 
-Lecture slides:
-
+Lecture slides: [Overview of Bioinformatics](/lectures/week2/FoCS Breadth - Overview of Bioinformatics.pdf)
