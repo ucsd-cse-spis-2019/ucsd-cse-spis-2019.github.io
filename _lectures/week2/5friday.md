@@ -1,15 +1,15 @@
 ---
 lecture_date: 2019-08-16 09:00:00.00-7:00
-topic: ""
+topic: "References and mutability (part 2)"
 desc: ""
 week: "2"
 ready: true
 ---
 
-# FOCS 8:45am - 10:00am ()
- 
-Lecture slides: 
+# FOCS 8:45am - 10:00am (Curt) 
+References and mutability
 
+Lecture slides: [Mutable References - part 2](/lectures/week2/SPIS Lecture 20-21 - Mutable References2.pdf)
 
 
 # About Breadth/Depth
