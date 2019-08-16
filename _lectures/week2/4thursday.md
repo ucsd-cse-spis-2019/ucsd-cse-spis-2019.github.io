@@ -15,4 +15,4 @@ ready: true
 
 References and mutability
 
-Lecture slides: [Mutable References - part 1](/lectures/week2/SPIS Lecture 20-21 - Mutable References1.pdf)
+Lecture slides: [Mutable References - part 1](/lectures/week2/SPIS Lecture 20-21 - Mutable References.pdf)
