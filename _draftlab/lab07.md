@@ -174,7 +174,7 @@ First, let's talk about how we will represent the data in this part.  Our data s
 
 | Document text | Sentiment |
 | ------------- |-----------|
-| "One of the most highly-praised disappointments I've had the misfortune to watch in quite some time ." | negative |
+| "One of the most highly-praised disappointments I 've had the misfortune to watch in quite some time ." | negative |
 | "The movie resolutely avoids all the comic possibilities of its situation , and becomes one more dumb high school comedy about sex gags and prom dates ." | negative |
 | "Very well written and directed with brutal honesty and respect for its audience ." | positive |
 | "Leguizamo and Jones are both excellent and the rest of the cast is uniformly superb ." | positive |
