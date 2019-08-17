@@ -19,14 +19,12 @@ You will complete this entire lab using *pair programming*.  Of course, you are 
 
 Go to [GitHub](https://github.com) and create a repo called `spis19-lab07-Name1-Name2`. When creating the repo, instead of clicking "New repository," click "Import repository" and import (via the "Your old repository’s clone URL" textbox) from this git repo: `https://github.com/ucsd-cse-spis-2019/lab07starter.git`
 
-Then use `git clone` to clone this into your `~/github` directory.
-
 # Lab outline 
  * Part 1: Reading from files, working with dictionaries and building Markov chains to predict text
  * Part 2: Training and using a classifier using the `nltk` library
  
 # Machine Learning: Very Basic Overview
-The basic idea behind machine learning (ML) is to use data to build a "model".  You can think of a model as a computer program that "knows" something about the world. In our case, the model knows how to respond to data in some kind of a human-like way.  
+The basic idea behind machine learning (ML) is to use data to build a *model*.  You can think of a model as a computer program that "knows" something about the world. In our case, the model knows how to respond to data in some kind of a human-like way.  
 
 There are three basic steps to any ML task:
 1. Select an appropriate model and an appropriate data representation
@@ -39,7 +37,7 @@ There are three basic steps to any ML task:
 In the first part of lab07, we will build a model that is capable of writing text.  It will be able to write tweets, song lyrics, or an English essay!  And they will seem (almost) like a human could have written them.
 
 ## Step 1 (nothing to do, but do read): Model selection and data representation
-In this part, we will use a model called a Markov Chain.  The basic idea behind the Markov Chain we will build is that the probability of a word in a sentence is based only on the word(s) that immediately precede(s) it.  The number of preceding words (or generally, data items) that we consider defines the "order" of the Markov chain.  A first-order Markov chain considers only the word immediately preceding the next, a second-order chain would use the two words immediately preceding, etc.  In this lab we will work with first-order Markov chains, which themselves can be quite powerful when applied to words.  For example, if I see the word "sunny" then there is a relatively high probability that the word "day," "disposition," or "side" (as in "sunny side up") will come next, but a much lower probability that I will next see the word "the", "down" or "shark".  So just by hearing the word "sunny", you have a pretty good idea of the words that might come next.  We will build a Markov chain that has this same knowldege.  Of course, if you heard "It's going to be a sunny..." you'd be almost certain that the next word is "day".  This certainty would require a higher-order Markov chain.
+In this part, we will use a model called a Markov Chain.  The basic idea behind the Markov Chain we will build is that the probability of a word in a sentence is based only on the word(s) that immediately precede(s) it.  The number of preceding words (or generally, data items) that we consider defines the "order" of the Markov chain.  A first-order Markov chain considers only the word immediately preceding the next, a second-order chain would use the two words immediately preceding, etc.  In this lab we will work with first-order Markov chains, which themselves can be quite powerful when applied to words.  For example, if I see the word "sunny," then there is a relatively high probability that the word "day," "disposition," or "side" (as in "sunny side up") will come next, but a much lower probability that I will next see the word "the", "down," or "shark".  So just by hearing the word "sunny," you have a pretty good idea of the words that might come next.  We will build a Markov chain that has this same knowldege.  Of course, if you heard "It's going to be a sunny..." you'd be almost certain that the next word is "day".  This certainty would require a higher-order Markov chain.
 
 The data representation we will use here is simple: we will represent text as a sequence of words.
 
