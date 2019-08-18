@@ -6,9 +6,9 @@ week: "3"
 ready: true
 ---
 
-# FoCS class 8:45 (Christine)
-Slides:
-* [Before](/lectures/week3/W3Fri845_ProbAndNB.pdf)
+# FoCS class 8:45 (Niema)
+Lecture slides: 
+
 
 # About Breadth/Depth
 
