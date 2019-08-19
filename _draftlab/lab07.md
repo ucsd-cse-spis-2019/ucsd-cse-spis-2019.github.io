@@ -246,7 +246,7 @@ and on negative examples, separately.**  There are some hints in the comments of
 
 Compare these numbers to the overall classification accuracy.  Is your classifier better at classifying positive or negative documents?  Why do you think this is?
 
-Finally, again next the bottom of the `classifyReviews` function, **write code that displays the misclassified reviews**.  This can help you understand how your classifier is performing and give you some hints about what it might be getting wrong and how to improve it. 
+Finally, at the bottom of the `classifyReviews` function, **write code that displays the misclassified reviews**.  This can help you understand how your classifier is performing and give you some hints about what it might be getting wrong and how to improve it. 
 Once you have done this look at the misclassified examples.  Does it make sense why these were misclassified?  Discuss this with your partner.
 
 # Add, commit, push
