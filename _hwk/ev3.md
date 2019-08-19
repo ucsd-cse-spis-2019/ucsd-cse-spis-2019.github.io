@@ -12,7 +12,6 @@ layout: default
 The enrichment video this week talks about bias in machine learning.  It's a lighter assignment as you start transitioning into heavier labs to prepare you for the project.
 
 [Bias in Machine Learning](https://youtu.be/59bMh59JQDo)
-# UPDATE THESE
 
 After watching this video, respond to the questions in [this Google form](https://forms.gle/ZBveWQ8hcVjVecmB8).
 
