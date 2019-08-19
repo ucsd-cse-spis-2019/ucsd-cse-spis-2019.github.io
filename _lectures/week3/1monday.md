@@ -9,7 +9,7 @@ ready: true
 # FOCS 8:45am - 10:00am (Curt)
 Intro to Electronics: analyzing circuits
 
-Lecture slides: [Electronics](/lectures/week2/SPIS Lecture 27 - Intro to Electronics.pdf)
+Lecture slides: [Electronics](/lectures/week3/SPIS Lecture 27 - Intro to Electronics.pdf)
 
 
 
