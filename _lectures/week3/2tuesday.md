@@ -8,7 +8,7 @@ ready: true
 
 # APS Lecture 8:45am - 10:00am
 
-Lecture slides: [Sorting](/lectures/week2/APS Lecture 3 - Sorting.pdf)
+Lecture slides: [Sorting](/lectures/week3/APS Lecture 3 - Sorting.pdf)
 
 
 

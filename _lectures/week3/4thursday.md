@@ -1,6 +1,6 @@
 ---
 lecture_date: 2019-08-22 09:00:00.00-7:00
-topic: "Markov chains, Dictionaries and Files"
+topic: "Markov Chains, Dictionaries, and Files"
 desc: ""
 week: "3"
 ready: true
@@ -16,6 +16,4 @@ ready: true
 
 # FOCS 10:15am - 11:30am (Niema)
 
-Lecture slides: 
-
-
+Lecture slides: [Markov Chains, Dictionaries, and Files](/lectures/week3/FoCS - Markov Chains, Dictionaries, and Files.pdf)
