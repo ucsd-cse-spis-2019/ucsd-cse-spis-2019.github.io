@@ -79,7 +79,6 @@ In a new file named `markov.py`, write a python function `train(s)` that takes a
 ```
 
 Note the following:
- * You are not given starter code for train or generate so make a file titled `markov.py` and write both part 1 functions here. You should also write a main method and test the two functions as well as see your hard work in action! 
  * You can preserve capitalization, treating capitalized words as different from lowercase words.  Notice in the dictionary above "You" is different from "you".
  * You should imagine that your string wraps around, and that the last word is followed by the first word.  Notice that in the dictory above, "Yeah" (the last word) follows "that" (the first word).
  * You can keep punctuation attached to the word it is associated with, and treat a word with punctuation as different from a word without punctuation.  For example, if the text were:
@@ -95,7 +94,7 @@ Then the word "that." (with a period) would be treated separately from the word 
 Make sure you test your function on a few simple strings to make sure it's giving you the dictionary you expect!  You can use the example above as one test case, but also come up with a few more.  
 
 ## Step 3: The Human-like task: Generating Text
-Write a python function `generate(model, firstWord, numWords)`.  This method takes the following parameters:
+Write a Python function `generate(model, firstWord, numWords)`.  This method takes the following parameters:
 * `model` -- a dictionary representing the trained model as output from the `train` method.
 * `firstWord` -- the word to use as the first word in the generated text.  This word *must* be a key in the model.
 * `numWords` -- the number of words in the returned generated string.
@@ -115,7 +114,7 @@ For our model above, here are the results of several calls to `generate`:
 'Yeah baby I like it like that You gotta believe me when I like that'
 ```
 
-Notice that it will generate different strings with the same input.  You will need to use the `random.randrange` function to select your next word (make sure to 'import random' in order to use random.randrange).  We will go over some examples in class, or you can look at the [documentation here](https://docs.python.org/3/library/random.html).
+Notice that it will generate different strings with the same input.  You will need to use the `random.choice` function to select your next word (make sure to 'import random' in order to use `random.choice`).  We will go over some examples in class, or you can look at the [documentation here](https://docs.python.org/3/library/random.html#random.choice).
 
 ### How do you test code with randomness?
 It can be tough to test your code when it relies on randomness to function.  There are ways to do it, but for now, just try running your code several times, and make sure you eventually get different strings, and that all of the words that should be represented seem to be represented.
