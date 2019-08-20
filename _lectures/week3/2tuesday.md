@@ -13,8 +13,10 @@ Lecture slides: [Sorting](/lectures/week3/APS Lecture 3 - Sorting.pdf)
 
 
 # FOCS 10:15am - 11:30am (Curt)
+From bits to processors -- logic, boolean algebra, digital circuits, gates, computer architecture, machine code
 
-Lecture slides: 
+Lecture slides: [Logic and Architecture](/lectures/week3/SPIS Lecture 27b - Logic and Architecture.pdf)
+
 
 
 
