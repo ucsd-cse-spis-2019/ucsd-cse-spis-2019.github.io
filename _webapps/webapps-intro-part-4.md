@@ -123,5 +123,5 @@ To be able to learn how to better develop your webapps read onto the next lesson
 
 * Create a bot for the web - A way to interact with the websites and automate tasks 
 * Webapp - Any website idea that you have (almost endless opportunities) that uses python (No Javascript)
-* Web Scraping - Can extract information from webpages using something like [BeautifulSoup] (https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+* Web Scraping - Can extract information from webpages using something like BeautifulSoup library in python.
 * Any other idea that you can come up with that interacts with the web and uses python. 
