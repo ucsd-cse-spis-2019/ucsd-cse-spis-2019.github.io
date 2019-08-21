@@ -176,8 +176,9 @@ Now that we know a bit about HTML, we can try building a multi page application 
 on each page.
 
 Here is an example of how that would look.  You need to create a subdirectory called `templates`.
+``mkdir templates``
 
-Into that directory, the first file you should create and store is one called `layout.html`
+``cd`` Into that directory, the first file you should create and store is one called `layout.html`
 
 That file should look like this.   You can use gvim to create a new file, copy/paste the following HTML code into the
 file, and then save it in your templates directory with the name `layout.html`.
