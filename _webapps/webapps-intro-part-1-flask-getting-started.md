@@ -7,6 +7,11 @@ This page describes how to get started with Flask, a "Python Microframework" for
 
 More specifically, this page describes how to get started with Flask on your ETS accounts, which requires a few adjustments to the standard tutorial.
 
+
+# Individual Programming
+
+The beginning of this lab is individual work so make sure that you are on your own computer to do the assignment and read through the content thoroughly. Continue to work on this lab individualy until you hit a section entitled "Pair Programming," but make sure to read the interaction you should have with your partner before that in the section entitled "HTML and CSS."
+
 # About Flask
 
 Flask is a Python module that provides an easy way to get started with web programming.
