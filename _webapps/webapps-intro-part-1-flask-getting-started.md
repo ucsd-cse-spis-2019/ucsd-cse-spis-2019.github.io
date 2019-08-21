@@ -7,18 +7,6 @@ This page describes how to get started with Flask, a "Python Microframework" for
 
 More specifically, this page describes how to get started with Flask on your ETS accounts, which requires a few adjustments to the standard tutorial.
 
-# Audience
-
-These notes were written for students in the CSE SPIS program at UC San Diego that want to learn about how to do basic web programming in Python using Flask.    
-
-We will do this using the student's ETS account, i.e. by logging into the systems on the server ieng6-240.ucsd.edu
-
-For students in the SPIS academy program, we don't assume any prior background in Python or Unix.   However, these notes will probably be used a few days into the program, when students have already gained some familiarity with at least a few simple concepts such as:
-
-* Simple function definitions in Python
-* Executing a Python file at the Unix command line
-* Using the cd, ls and mkdir Unix commands.
-
 # About Flask
 
 Flask is a Python module that provides an easy way to get started with web programming.
