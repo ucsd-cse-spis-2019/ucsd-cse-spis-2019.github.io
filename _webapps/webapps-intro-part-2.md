@@ -20,7 +20,7 @@ So, trying to teach web development in an academic computing environment such as
 
 This is not a show-stopper of a problem.  There are some reasonable things you can do to mitigate the risk.   You should definitely do these things. 
 
-To use Flask safely on ETS, do NOT enable debug mode:
+To use Flask safely on ETS, do **NOT** enable debug mode:
 
 ```python
 app.run(port=5000,debug=True)  # DO NOT do this on your ETS ACCOUNT
@@ -133,7 +133,7 @@ One of the keys to understanding how Flask works is to focus first on these line
 @app.route('/ftoc/<ftempString>')
 ```
 
-The parts of our code that start with the `@` sign are called decorators.  In this case, they come right before a function definition, and they tell Python to do something special with the function definition that follows.  
+The parts of our code that start with the `@` sign are called ***decorators***.  In this case, they come right before a function definition, and they tell Python to do something special with the function definition that follows.  
 
 In this case, the `@app.route(path)` decorator indicates that URLs that end in path should be routed to the function that follows.    
 
@@ -159,12 +159,16 @@ Our next steps will be to learn a bit about:
 
 # HTML and CSS
 
-So, at the moment, the values we are returning from our functions are plain text that shows up in the browser.  That's fine for getting started, but eventually we'd like something that looks like a "real web page". For that, we'll need to learn a little bit about HTML and CSS.   That's for our next lesson.
+So, at the moment, the values we are returning from our functions are plain text that shows up in the browser.  That's fine for getting started, but eventually we'd like something that looks like a "real web page". For that, we'll need to learn a little bit about HTML and CSS.
 
-If you want to get started on learning HTML and CSS now though, one of the best resources on the web for that is the site: [w3schools.com](http://w3schools.com)
+Get started on learning HTML and CSS now using one of the best resources on the web, the site: 
+[w3schools.com](http://w3schools.com)
 
-* Visit their HTML tutorial to get started
-* After learning some HTML, learn a bit of CSS
+And do the following:
+* Visit their HTML tutorial and read/skim over the first seven lessons
+* After learning some HTML, learn a bit of CSS by reading over the first four lessons
+
+**If you want to learn more about HTML/CSS you can spend more time on the website.**
 
 # Using Templates
 
