@@ -55,4 +55,4 @@ Read this short write-up on working with the idea of sessions. Click the link to
 
 [Webapps Part 5, Working with Sessions in Flask](/webapps/webapps-intro-part-5/)
 
-When you've done that, you are finished with lab08---let your mentor know and ask them for some feedback.
+When you've done that, you are finished with lab08
