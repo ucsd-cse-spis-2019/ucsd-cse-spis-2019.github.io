@@ -12,7 +12,7 @@ application.
 
 Here is an example of a running application on Heroku that uses sessions:
 
-* [https://spis19-lab8.herokuapp.com/](https://spis19-lab8.herokuapp.com/) *Note: The Github repo was cloned and rehosted for this year.*
+* [https://spis19-lab8.herokuapp.com/](https://spis19-lab8.herokuapp.com/)
 * The code for that app is here: [https://github.com/ucsd-cse-spis-2019/spis19-webapps-flask-sessions](https://github.com/ucsd-cse-spis-2019/spis19-webapps-flask-sessions)
 * In this lesson we'll go through the code that makes this example work.
 
