@@ -3,7 +3,7 @@ topic: "Webapps Intro, Part 2.5"
 desc: "Better Navigation on your Web App - Nav Bars"
 ---
 
-In the part 3 of your lab, we created a simple web app that had 3 functions, allowing a user to convert temperatures (Celsius to Fahrenheit, Fahrenheit to Celsius) and distance (miles to kilometers).
+In the part 2 of your lab, we created a simple web app that had 3 functions, allowing a user to convert temperatures (Celsius to Fahrenheit, Fahrenheit to Celsius) and distance (miles to kilometers).
 
 You might have noticed that after you submitted a value to convert, you couldn't get to the home page or reach any of the other forms to convert different things. 
 
