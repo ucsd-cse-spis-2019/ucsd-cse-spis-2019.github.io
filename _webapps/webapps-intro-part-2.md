@@ -123,6 +123,7 @@ Also try some URLs where the last part is not valid, e.g.
 
 If you've gotten this far, you've gotten a great start.
 
+**Check in with your partner to make sure that both of you have succeeded up to this point.**
 
 # How does it work?
 
