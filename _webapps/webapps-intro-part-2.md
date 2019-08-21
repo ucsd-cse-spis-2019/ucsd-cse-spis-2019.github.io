@@ -167,8 +167,14 @@ Get started on learning HTML and CSS now using one of the best resources on the 
 And do the following:
 * Visit their HTML tutorial and read/skim over the first seven lessons
 * After learning some HTML, learn a bit of CSS by reading over the first four lessons
+* **After each lesson check in with your pair partner to make sure both of you are understanding the content.**
 
-**If you want to learn more about HTML/CSS you can spend more time on the website.**
+**If you and your partner want to learn more about HTML/CSS you can spend more time on the website.**
+
+
+# Pair Programming
+
+At this point in the lab there is about to be a deeper dive into webapps content. Begin working with your partner on one computer for the rest of the lab and before continuing make sure that both of you have a solid understanding of the beginning content of this lab. After both of you feel that you have a good understanding of the beginning content of the lab, continue through the rest of the lab and making sure both of you have a good understanding of the material.
 
 # Using Templates
 
