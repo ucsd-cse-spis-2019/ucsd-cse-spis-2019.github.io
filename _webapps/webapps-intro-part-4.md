@@ -119,3 +119,10 @@ I read the documentation for the itsdangerous module and realized that that the 
 
 To be able to learn how to better develop your webapps read onto the next lesson, [Web Apps Intro (part 5)](/webapps/webapps-intro-part-5/)
 
+# Potential project ideas
+
+* Create a bot for the web - A way to interact with the websites and automate tasks 
+* Webapp - Any website idea that you have (almost endless opportunities) that uses python (No Javascript)
+* Web Scraping - Can extract information from webpages using something like [BeautifulSoup]
+(https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+* Any other idea that you can come up with that interacts with the web and uses python. 
