@@ -10,7 +10,7 @@ More specifically, this page describes how to get started with Flask on your ETS
 
 # Individual Programming
 
-The beginning of this lab is individual work so make sure that you are on your own computer to do the assignment and read through the content thoroughly. Continue to work on this lab individually until you hit a section titled "Pair Programming" in part 2, but make sure to read the interaction you should have with your partner before that in the section titled "HTML and CSS" in part 2 as well.
+The beginning of this lab is individual work so make sure that you are on your own computer to do the assignment and read through the content thoroughly. Continue to work on this lab individually until you hit a section titled "Pair Programming" in part 2, but make sure to read the interactions you should have with your partner before that part which those instructions will be in bold. 
 
 # About Flask
 
@@ -95,7 +95,9 @@ If instead, you are using a terminal program to remotely access the ieng6-240.uc
 
 Once you have your browser up, enter the web address `http://localhost:5000` or `http://127.0.0.1:5000` 
 
-This is the web address where your server is located.   If you enter this in your browser, you should see the message "Hello World" come up in the browser, as shown here:
+This is the web address where your server is located.   If you enter this in your browser, you should see the message "Hello World" come up in the browser.
+
+**Now Check in with your partner and verify that both of you have the web server running before moving on.**
 
 
 # What next?
