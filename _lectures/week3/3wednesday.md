@@ -1,14 +1,15 @@
 ---
 lecture_date: 2019-08-21 09:00:00.00-7:00
-topic: ""
+topic: "Intro RPi"
 desc: ""
 week: "3"
 ready: true
 ---
 
 # FOCS 8:45am - 10:00am (Curt)
+Introduction to Raspberry Pi
 
-Lecture slides: 
+Lecture slides: [Intro to RPi](/lectures/week3/SPIS Lecture 28 - Intro to RPi.pdf)
 
 
 
