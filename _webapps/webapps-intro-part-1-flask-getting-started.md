@@ -115,15 +115,6 @@ Before you start, arrange the windows on your screen so that you have the window
 * In the window where you originally typed python3 hello.py, type a CTRL+C (that is, "Control-C"). Then try hitting "refresh" in the browser where you typed localhost:5000, and see what happens. Then, type the python3 hello.py command again, and try hitting refresh in the browser again.
 * Use CTRL+C on the server side to stop the server, edit the hello.py file to change the string "Hello World" to something else, for example, if your name is Cory, make it say: "Hello from Cory's server".  Start the server up again and then hit refresh in your browser a few times.
 
-# What to do next?   
-
-There are two choices.
-
-The next page of this tutorial suggest a few things we can do next to make our first Flask web app a bit more interesting.   If you are content to move ahead, and figure things out as you go, just skip the rest of this page, and click to go to 
-[Web Apps Intro Part 2](/webapps/webapps-intro-part-2)
-
-If you are the type that wants to understand everything before moving on, the section below explains each line of code in our `hello.py` file, one at a time.  If you prefer, read through that first, before moving on.
-
 # Explaining all the lines of code
 
 Ok, here is an explanation of each of the lines of code.   Then, we'll walk through how to do a few things that are a bit more interesting.
@@ -163,4 +154,7 @@ div.nicer-table table * td { padding: 4px; }
 
 </div>
 
-Click to access:  [Web Apps Intro, Part 2](/webapps/webapps-intro-part-2/).
+# What to do next?   
+
+The next page of this tutorial suggest a few things we can do next to make our first Flask web app a bit more interesting.   
+[Web Apps Intro Part 2](/webapps/webapps-intro-part-2)
