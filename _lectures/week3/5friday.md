@@ -7,7 +7,7 @@ ready: true
 ---
 
 # FoCS class 8:45 (Niema)
-Lecture slides: 
+Lecture slides: [Probability and Naive Bayes Classification](/lectures/week3/FoCS - Probability and Naive Bayes Classification.pdf)
 
 
 # About Breadth/Depth
