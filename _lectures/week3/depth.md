@@ -9,8 +9,7 @@ ready: false
 ---
 
 
-# Depth Lecture (Christine)
+# Depth Lecture
 
-Lectures slides:
-* [Before](/lectures/week3/Depth3_Loops_Images.pdf)
+Lectures slides: [Mutable data, Images, Nested Loops, and If-Statements](/lectures/week3/Depth3_Loops_Images.pdf)
 
