@@ -16,4 +16,8 @@ Lecture slides: [Intro to RPi](/lectures/week3/SPIS Lecture 28 - Intro to RPi.pd
 
 # FOCS 10:15am - 11:30am (Gary)
 
-Lecture slides: 
+Lecture slides: [WebApps1](/lectures/week3/lec4.pdf)
+Lecture slides: [WebApps2](/lectures/week3/lec5.pdf)
+Lecture slides: [WebApps3](/lectures/week3/lec6.pdf)
+Lecture slides: [WebApps4](/lectures/week3/lec7.pdf)
+
