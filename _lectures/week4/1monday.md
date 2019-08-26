@@ -16,4 +16,4 @@ Lecture Slides: [Clustering](/lectures/week4/FoCS - Clustering.pdf)
 
 # FOCS 10:15am - 11:30am (Gary)
 
-Resume Workshop
+Resume Workshop: (/lectures/week4/Resumes And Interviews.pdf)
