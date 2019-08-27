@@ -6,21 +6,21 @@ week: "4"
 ready: false
 ---
 
-# FOCS 8:45am - 10:00am (Christine, Curt and Gary)
+# FOCS 8:45am - 10:00am (Niema, Curt and Gary)
 
-* Depth: Robotics (CSE 2154)
+* Depth: Robotics (CSE 4258)
     * [Overview of Robotics](/lectures/week4/SPIS Lecture 32a - Overview of Robotics.pdf)
     * [Intro to Robotics Projects](/lectures/week4/SPIS Lecture 32b - Intro to Robotics Projects.pdf)
-* Depth: Web Apps (CSE 4140)
+* Depth: Web Apps (CSE 2154)
     * [Overview of Machine Learning video](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
     * [How do self driving cars work video](https://www.youtube.com/watch?v=yt015gM-ync)
-* Depth: Machine Learning (CSE 4258)
+* Depth: Machine Learning (CSE 4140)
 
 We will give a bit more information about each area and brainstorm topics for projects.  
 
 # FOCS 10:15am - 11:30am (Open office hours)
 
-Come visit any of us to ask quesitons or get more information about possible project ideas or topics in each area.
-* Christine (ML): 2110
-* Curt (Robotics): 4134
+Come visit any of us to ask questions or get more information about possible project ideas or topics in each area.
+* Niema (ML): 4224
+* Curt (Robotics): 3246
 * Gary (WebApps): 2204
