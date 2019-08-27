@@ -9,3 +9,4 @@ layout: default
 
 Homework Assignment: [Dynamic Programming](/hwk/aps4/APS Homework 4 - Dynamic Programming.pdf)
 
+[Optional Challenge Problems](/hwk/aps4/APS Homework 4 - Dynamic Programming (Optional Challenge Problems).pdf)
