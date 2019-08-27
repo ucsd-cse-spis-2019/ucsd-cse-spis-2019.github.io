@@ -8,6 +8,7 @@ ready: true
 
 # APS Lecture 8:45am - 10:00am
 
+Lecture slides: [Dynamic Programming](/lectures/week4/APS Lecture 4 - Dynamic Programming.pdf)
 
 
 
