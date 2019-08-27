@@ -1,7 +1,7 @@
 ---
 lecture_date: 2019-08-27 09:00:00.00-7:00
-topic: "Finite State Machines"
-desc: "Mealy and Moore FSM"
+topic: "FSMs, embedded systems"
+desc: ""
 week: "4"
 ready: true
 ---
@@ -14,7 +14,7 @@ Lecture slides: [Dynamic Programming](/lectures/week4/APS Lecture 4 - Dynamic Pr
 
 # FOCS 10:15am - 11:30am (Curt)
 
-Lecture slides: [Overview of Embedded Systems](/lectures/week4/SPIS Lecture 31b - Overview of Embedded Systems.pdf), [Finite State Machines](/lectures/week4/SPIS Lecture 31c - FSM.pdf)
+Lecture slides: [Project Areas](/lectures/week4/SPIS Lecture 38a - Project Areas.pdf), [Overview of Embedded Systems](/lectures/week4/SPIS Lecture 38b - Overview of Embedded Systems.pdf), [Finite State Machines](/lectures/week4/SPIS Lecture 38c - FSM.pdf)
 
 
 
