@@ -44,12 +44,12 @@ Once you've created your account, there will be "getting started" options.
 `cd` into the `~/github` directory of your ETS account and clone this repo:
 
 ```
-git@github.com:pconrad/heroku-flask-try-one.git
+git clone http://github.com/pconrad/heroku-flask-try-one.git
 ```
 
 That should look like this:
 ```
-[spis19t14@ieng6-247]:lab08-part1:692$ git clone git@github.com:pconrad/heroku-flask-try-one.git
+[spis19t14@ieng6-247]:lab08-part1:692$ git clone http://github.com/pconrad/heroku-flask-try-one.git
 Cloning into 'heroku-flask-try-one'...
 remote: Enumerating objects: 1, done.
 remote: Counting objects: 100% (1/1), done.
